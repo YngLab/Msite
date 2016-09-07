@@ -1,14 +1,12 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
 html{
-  background-color: $g__bgc;
   color: $g__fontColor;
   font:{
     family: 'Noto Sans Japanese', sans-serif;
     size: $g__fontSize;
-    weight: 200;
+    weight: 300;
   }
-  letter-spacing: .2em;
 }
 
 header{
@@ -17,18 +15,25 @@ header{
 }
 
 h2{
-  border-bottom: 1px solid $h2__bbColor;
   font-size: $h2__fontSize;
-  margin: 0 auto 50px auto;
-  padding-bottom: 15px;
-  text-align: center;
-  width: $pc__w;
+  color: $h2__bbColor;
+  font-weight: 300;
+  padding: 50px 0 40px 0;
   @include smallW;
   @media #{$small} {
     font-size: $h2__fontSize * .75;
   }
 }
 
-h4{
-  margin: 0;
+h3{
+  font-size: $h3__fontSize;
+}
+
+.caption{
+  font-size: $cap__fontSize;
+  font-weight: 300;
+  @include smallW;
+  @media #{$small} {
+    font-size: $h2__fontSize * .75;
+  }
 }

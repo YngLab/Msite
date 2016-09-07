@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+
+//以下、@importのみを並べる。
+
+/* setting */
+@import "setting";
+
+/* base */
+@import "base/sanitize";
+@import "base/util";
+
+/* layout */
+@import "layout/main";
+
+/* module */
+@import "module/main";
+
+/* state */
+@import "state/main";

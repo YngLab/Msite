@@ -2,17 +2,22 @@ $small: "screen and (max-width: 768px)";
 $normal: "screen and (min-width: 769px)";
 
 $h2__fontSize: 24px;
-$h2__bbColor: #4D4D4D;
+$h2__bbColor: #727171;
 $h3__fontSize: 21px;
 
+$cap__fontSize: 13px;
+
+$h3__fontSize: 16px;
+
 $pc__w: 1080px;
-$g__fontSize: 16px;
+$g__fontSize: 14px;
 
-$g__bgc: #fdfdfd;
-$g__fontColor: #020202;
+$g__bgc: #f7f7f7;
+$g__fontColor: #9FA0A0;
+$dark__fontColor: #727171;
 
-$g__color-kids: #88C23F;
-$g__color-future: #E48E13;
+$g__color-kids: #8DC21F;
+$g__color-future: #F29600;
 
 $header_comming__h: 80px;
 
@@ -36,6 +41,7 @@ $about_intro__w: $pc__w / 2;
 $about_intro__fontColor: #fdfdfd;
 $about_intro-black__fontColor: #020202;
 
+$boxcolor: #ffffff;
 
 $event_image__w: 400px;
 

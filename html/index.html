@@ -5,28 +5,108 @@
   今のところCSSを組み込むことは度外視してます。まだよくわかっていないので。
 -->
 <!DOCTYPE html>
-    <meta charset="utf-8">
-    <title>はこだてみらいプロジェクト</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/hmp.ico">  <!-- ファビコンって新しく作るんすかね？ -->
-    <!-- カンプのような画像の置き方わからないマンなのでほうったらかしにしています。 -->
-    <header>
-      <p><img src="images/hmp.jpg" alt="はこだてみらいプロジェクト"></p>  <!-- これヘッダーなのか？ -->
-    </header>
-    <h2>直近のイベント・ワークショップ</h2>  <!-- h系の見出しタグはなるべく使わないほうがいいって聞いたけど仮に置いときますね -->
-    <p>
-      <a href="http://hakodate-miraiproject.jp/">
-        <img src="i1.jpg" alt="イベント1" width="226" height="226">
-      </a>
-      <a href="http://hakodate-miraiproject.jp/">
-        <img src="i2.jpg" alt="イベント2" width="226" height="226">
-      </a>
-      <a href="http://hakodate-miraiproject.jp/">
-        <img src="i3.jpg" alt="イベント3" width="226" height="226">
-      </a>
-      <a href="http://hakodate-miraiproject.jp/">
-        <img src="i4.jpg" alt="イベント4" width="226" height="226">
-      </a>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="keywords" content="はこだてみらいプロジェクト,はこだてみらい館,はこだてキッズプラザ,函館,未来館,future center,kids plaza,施設">
+<meta name="description" content="2016年10月15日に函館駅前にOPENするはこだてみらい館・はこだてキッズプラザの告知サイトです。">
+<title>はこだてみらいプロジェクト</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="shortcut icon" href="../images/hmp.ico">  <!-- ファビコンって新しく作るんすかね？ -->
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src = "../js/myscript.js"></script>
+<div class = "instaPic">
+</div>
+<div class = "bgcolor">
+  <div class = "wrap">
+    <div class = "latestEvent">
+    <h2 class = "topcap">
+      直近のイベント・ワークショップ
+    </h2>
+    <!-- h系の見出しタグはなるべく使わないほうがいいって聞いたけど仮に置いときますね -->
+    <a href="http://hakodate-miraiproject.jp/">
+      <div class = "latestBox_future">
+        <div class = "remaindays_future">
+          <div class = "caption">
+            あと5日
+          </div>
+        </div>
+        <img src="../images/sample_relatestimg.jpg" alt="イベント1">
+        <div class = "eventText">
+          <p class = "eventsch_future caption">
+            10/15(土)
+          </p>
+          <p class = "eventtitle_future">
+            オープニングイベント
+          </p>
+          <p class = "eventplace_future caption">
+            みらい館
+          </p>
+        </div>
+      </div>
+    </a>
+    <a href="http://hakodate-miraiproject.jp/">
+      <div class = "latestBox_future">
+        <div class = "remaindays_future">
+          <div class = "caption">
+            あと5日
+          </div>
+        </div>
+        <img src="../images/sample_relatestimg.jpg" alt="イベント2">
+        <div class = "eventText">
+          <p class = "eventsch_future caption">
+            10/15(土)
+          </p>
+          <p class = "eventtitle_future">
+            オープニングイベント
+          </p>
+          <p class = "eventplace_future caption">
+            みらい館
+          </p>
+        </div>
+      </div>
+    </a>
+    <a href="http://hakodate-miraiproject.jp/">
+      <div class = "latestBox_future">
+        <div class = "remaindays_future">
+          <div class = "caption">
+            あと5日
+          </div>
+        </div>
+        <img src="../images/sample_relatestimg.jpg" alt="イベント3">
+        <div class = "eventText">
+          <p class = "eventsch_future caption">
+            10/15(土)
+          </p>
+          <p class = "eventtitle_future">
+            オープニングイベント
+          </p>
+          <p class = "eventplace_future caption">
+            みらい館
+          </p>
+        </div>
+      </div>
+    </a>
+    <a href="http://hakodate-miraiproject.jp/">
+      <div class = "latestBox_future">
+        <div class = "remaindays_future">
+          <div class = "caption">
+            あと5日
+          </div>
+        </div>
+        <img src="../images/sample_relatestimg.jpg" alt="イベント4">
+        <div class = "eventText">
+          <p class = "eventsch_future caption">
+            10/15(土)
+          </p>
+          <p class = "eventtitle_future">
+            オープニングイベント
+          </p>
+          <p class = "eventplace_future caption">
+            みらい館
+          </p>
+        </div>
+      </div>
+    </a>
       <!-- やり方全くわからなかったので存在しない画像をpx指定して無理やり配置しようとすることで誤魔化してます。
            恐らく仕様上画像と日付と施設情報を自動取得して配置するのでしょうが、これ多分サーバー要りますよね？
            あと左上にスペース確保した上でテキスト置くのってどないするんや・・・。
@@ -72,19 +152,21 @@
       ｜<a href="http://hakodate-miraiproject.jp/">はこだてキッズプラザ</a>｜
       <!-- 縦棒の入れ方がわからないからってテキストでごまかすという酷さ -->
     </p>
-    <footer>
-      <p>
-        <a href="http://hakodate-miraiproject.jp/">お知らせ</a>
-        <a href="http://hakodate-miraiproject.jp/">求人情報</a>
-        <a href="http://hakodate-miraiproject.jp/">よくあるご質問</a>
-        <a href="http://hakodate-miraiproject.jp/">関連リンク</a>
-        <a href="http://hakodate-miraiproject.jp/">サイトマップ</a>
-        <a href="https://www.facebook.com/hakodatemiraiproject/">
-          <img src="images/fb.jpg" alt="公式Facebook" width="50" height="50">
-        </a>
-        <a href="https://www.instagram.com/instagramjapan/?hl=ja">
-          <img src="images/ig.jpg" alt="Instagram" width="50" height="50">
-        </a>
-      </p>
-      <p>@2016 Hakodate Mirai Project</p>
-    </footer>
+  </div>
+</div>
+<footer>
+  <p>
+    <a href="http://hakodate-miraiproject.jp/">お知らせ</a>
+    <a href="http://hakodate-miraiproject.jp/">求人情報</a>
+    <a href="http://hakodate-miraiproject.jp/">よくあるご質問</a>
+    <a href="http://hakodate-miraiproject.jp/">関連リンク</a>
+    <a href="http://hakodate-miraiproject.jp/">サイトマップ</a>
+    <a href="https://www.facebook.com/hakodatemiraiproject/">
+      <img src="images/fb.jpg" alt="公式Facebook" width="50" height="50">
+    </a>
+    <a href="https://www.instagram.com/instagramjapan/?hl=ja">
+      <img src="images/ig.jpg" alt="Instagram" width="50" height="50">
+    </a>
+  </p>
+  <p>@2016 Hakodate Mirai Project</p>
+</footer>
