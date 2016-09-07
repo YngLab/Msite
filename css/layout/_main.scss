@@ -1,0 +1,46 @@
+.instaPic{
+  background-color: #444444;//sample
+  height: $pc__w / 8 * 5;
+  width: $pc__w;  
+}
+
+.wrap{
+  margin: 0 auto;
+  width: 92.5925%;
+}
+
+.bgcolor{
+  background-color: $g__bgc;
+}
+
+.latestEvent{
+  margin-right: -3.2%;
+  .topcap{
+    margin: 50px auto 40px auto;
+    text-align: center;
+  }
+  .latestBox{
+    background-color: $boxcolor;
+    width: $latestBox__w;
+    height: $latestBox__w;
+    margin-right: 2.8%;
+    border: solid 1px $g__color-kids;
+    display: inline-block;
+    position: relative;
+    .remaindays_future{
+      background-color: #F29600;
+      width: 86px;
+      height: 26px;
+      position: absolute;
+      top: 30px;
+      left: 0px;
+      .caption{
+        z-index: 10;
+      }
+    }
+    img{
+      width: 100%;
+      height: 55.7522%;
+    }
+  }
+}
