@@ -628,7 +628,7 @@ h3 {
 /* line 32, base/_util.scss */
 .caption {
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 200;
 }
 @media screen and (max-width: 768px) {
   /* line 32, base/_util.scss */
@@ -643,34 +643,63 @@ h3 {
   }
 }
 
+/* line 41, base/_util.scss */
+.futureColor {
+  color: #F29600;
+}
+
+/* line 45, base/_util.scss */
+.kidsColor {
+  color: #8DC21F;
+}
+
+/* line 49, base/_util.scss */
+li {
+  list-style: none;
+}
+
+/* line 53, base/_util.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 57, base/_util.scss */
+.linkText {
+  font-size: 15px;
+  color: #595757;
+  border-bottom: solid 1px #595757;
+  font-weight: 500;
+}
+
 /* layout */
-/* line 1, layout/_main.scss */
+/* line 3, layout/_main.scss */
 .instaPic {
   background-color: #CCCCCC;
   height: 400px;
   width: 100%;
 }
 
-/* line 7, layout/_main.scss */
+/* line 9, layout/_main.scss */
 .wrap {
   margin: 0 auto;
   width: 92.5925%;
 }
 
-/* line 12, layout/_main.scss */
+/* line 14, layout/_main.scss */
 .bgcolor {
   background-color: #f7f7f7;
 }
 
-/* line 16, layout/_main.scss */
+/* line 18, layout/_main.scss */
 .latestEvent {
   margin-right: -3.2%;
 }
-/* line 18, layout/_main.scss */
+/* line 20, layout/_main.scss */
 .latestEvent .topcap {
   text-align: center;
+  margin: 0;
 }
-/* line 21, layout/_main.scss */
+/* line 24, layout/_main.scss */
 .latestEvent .latestBox_future {
   background-color: #ffffff;
   width: 400px;
@@ -680,7 +709,7 @@ h3 {
   display: inline-block;
   position: relative;
 }
-/* line 29, layout/_main.scss */
+/* line 32, layout/_main.scss */
 .latestEvent .latestBox_future .remaindays_future {
   background-color: #F29600;
   width: 86px;
@@ -689,36 +718,63 @@ h3 {
   top: 0px;
   left: 0px;
 }
-/* line 36, layout/_main.scss */
+/* line 39, layout/_main.scss */
 .latestEvent .latestBox_future .remaindays_future .caption {
   color: #ffffff;
   z-index: 10;
   padding: 3px 0 0 18px;
 }
-/* line 42, layout/_main.scss */
+/* line 45, layout/_main.scss */
 .latestEvent .latestBox_future img {
   width: 100%;
   height: 55.7522%;
 }
-/* line 46, layout/_main.scss */
+/* line 49, layout/_main.scss */
 .latestEvent .latestBox_future .eventText {
   margin-left: 18px;
 }
-/* line 48, layout/_main.scss */
+/* line 51, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventsch_future {
   margin: 23px 0 0 0;
   color: #F29600;
 }
-/* line 52, layout/_main.scss */
+/* line 55, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventtitle_future {
   font-size: 16px;
   margin: 3px 0 0 0;
   color: #727171;
 }
-/* line 57, layout/_main.scss */
+/* line 60, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventplace_future {
   margin: 10px 0 0 0;
   color: #9FA0A0;
+}
+/* line 66, layout/_main.scss */
+.latestEvent .moreview {
+  margin: 40px 3.2% 50px auto;
+  width: 75px;
+}
+
+/* line 72, layout/_main.scss */
+.gNav {
+  border-right: solid 1px #9FA0A0;
+  margin: 0px -1px 40px 0;
+  width: 100%;
+  color: #9FA0A0;
+}
+/* line 66, _setting.scss */
+.gNav:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 78, layout/_main.scss */
+.gNav .gNavli {
+  float: left;
+  width: 20%;
+  text-align: center;
+  border-left: solid 1px #9FA0A0;
+  font-weight: 400;
 }
 
 /* module */

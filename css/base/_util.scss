@@ -31,9 +31,32 @@ h3{
 
 .caption{
   font-size: $cap__fontSize;
-  font-weight: 300;
+  font-weight: 200;
   @include smallW;
   @media #{$small} {
     font-size: $h2__fontSize * .75;
   }
+}
+
+.futureColor{
+  color: $g__color-future;
+}
+
+.kidsColor{
+  color: $g__color-kids;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.linkText{
+  font-size: 15px;
+  color: $link__fontColor;
+  border-bottom: solid 1px $link__fontColor;
+  font-weight: 500;
 }

@@ -1,3 +1,5 @@
+//We cannot type Japanese, maybe using japanese make error.
+
 .instaPic{
   background-color: #CCCCCC;//sample
   height: 400px;
@@ -17,6 +19,7 @@
   margin-right: -3.2%;
   .topcap{
     text-align: center;
+    margin: 0; //If there is not this margin, created margin, why??
   }
   .latestBox_future{
     background-color: $boxcolor;
@@ -60,5 +63,23 @@
       }
     }
   }
-  
+  .moreview{
+    margin: 40px 3.2% 50px auto;
+    width: 75px;
+  }
+}
+
+.gNav{
+  border-right: solid 1px $g__fontColor;
+  margin: 0px -1px 40px 0;
+  width: 100%;
+  color: $g__fontColor;
+  @include clearfix;
+  .gNavli{
+    float: left;
+    width: 20%;
+    text-align: center;
+    border-left: solid 1px $g__fontColor;
+    font-weight: 400;
+  }
 }
