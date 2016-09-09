@@ -895,44 +895,64 @@ a {
 .future_logoapp {
   float: left;
   width: 48.4%;
-  height: 242px;
-  background-color: #F29600;
+  height: auto;
   text-align: center;
   color: white;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+  background-color: #F29600;
+  position: relative;
 }
-/* line 187, layout/_main.scss */
-.future_logoapp p {
-  font-size: 24px;
-  font-weight: 400;
+/* line 188, layout/_main.scss */
+.future_logoapp td {
+  width: 25%;
   margin: 0;
-  margin-top: 15%;
 }
-/* line 193, layout/_main.scss */
-.future_logoapp .logoapp_font {
-  font-size: 36px;
-  margin-top: 20px;
+/* line 191, layout/_main.scss */
+.future_logoapp td img {
+  width: 100%;
 }
 
-/* line 199, layout/_main.scss */
+/* line 197, layout/_main.scss */
 .kids_logoapp {
   float: right;
   width: 48.4%;
-  height: 242px;
+  height: auto;
   background-color: #8DC21F;
   text-align: center;
   color: white;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+  position: relative;
 }
-/* line 207, layout/_main.scss */
-.kids_logoapp p {
+/* line 206, layout/_main.scss */
+.kids_logoapp td {
+  width: 25%;
+  margin: 0;
+}
+/* line 209, layout/_main.scss */
+.kids_logoapp td img {
+  width: 100%;
+}
+
+/* line 215, layout/_main.scss */
+.logoapp_textBox {
+  width: 350px;
+  height: 70px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+/* line 225, layout/_main.scss */
+.logoapp_textBox p {
   font-size: 24px;
   font-weight: 400;
   margin: 0;
-  margin-top: 15%;
 }
-/* line 213, layout/_main.scss */
-.kids_logoapp .logoapp_font {
+/* line 230, layout/_main.scss */
+.logoapp_textBox .logoapp_font {
   font-size: 36px;
   margin-top: 20px;
 }

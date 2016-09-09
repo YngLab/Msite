@@ -179,39 +179,60 @@
 .future_logoapp{
   float: left;
   width: 48.4%;
-  height: 242px;
-  background-color: $g__color-future;
+  height: auto;
   text-align: center;
   color: white;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
-  p{
-    font-size: 24px;
-    font-weight: 400;
+  background-color: $g__color-future;
+  position: relative;
+  td{
+    width: 25%;
     margin: 0;
-    margin-top: 15%;
-  }
-  .logoapp_font{
-      font-size: 36px;
-      margin-top: 20px;
+    img{
+      width: 100%;
+    }
   }
 }
 
 .kids_logoapp{
   float: right;
   width: 48.4%;
-  height: 242px;
+  height: auto;
   background-color: $g__color-kids;
   text-align: center;
   color: white;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
-  p{
-    font-size: 24px;
-    font-weight: 400;
+  position: relative;
+  td{
+    width: 25%;
     margin: 0;
-    margin-top: 15%;
-  }
-  .logoapp_font{
-      font-size: 36px;
-      margin-top: 20px;
+    img{
+      width: 100%;
+    }
   }
 }
+
+.logoapp_textBox{
+  width: 350px;
+  height: 70px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  p{
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+  }
+  .logoapp_font{
+    font-size: 36px;
+    margin-top: 20px;
+  }
+}
+  
+
+
+
