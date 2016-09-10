@@ -20,13 +20,10 @@
   margin-right: -3.2%;
   .topcap{
     text-align: center;
-    margin: 0; //If there is not this margin, created margin, why??
   }
   .latestBox_future{
     background-color: $boxcolor;
-    width: 400px;
-    height: 400px;
-    margin-right: 2.8%;
+    margin-right: 2.7466%;
     border: solid 1px $g__color-future;
     display: inline-block;
     position: relative;
@@ -78,7 +75,7 @@
   @include clearfix;
   .gNavli{
     float: left;
-    width: 20%;
+    width: 19.9166%;
     text-align: center;
     border-left: solid 1px $g__fontColor;
     font-weight: 400;
@@ -92,7 +89,6 @@
   float:left;
   .openclose{
     background-color: $g__color-future;
-    margin: 0; //If there is not this margin, created margin, why??
     text-align: center;
     color: #ffffff;
     height: 26px;
@@ -117,9 +113,14 @@
     float: left;
     width: 50%;
     margin-top: 15%;
-    h2{
-      margin: 0;
-      padding: 0;
+    .h2-top{
+      font-size: $h2__fontSize;
+      color: $h2__bbColor;
+      font-weight: 300;
+    }
+    p{
+      margin-top: 20px;
+      line-height: 1.75;
     }
   }
   .future_information{
@@ -137,7 +138,6 @@
   float: right;
   .openclose{
     background-color: $g__color-kids;
-    margin: 0; //If there is not this margin, created margin, why??
     text-align: center;
     color: #ffffff;
     height: 26px;
@@ -161,12 +161,17 @@
   }
   .kids_textbox{
     text-align: center;
-    width: 50%;
     float: left;
+    width: 50%;
     margin-top: 15%;
-    h2{
-      margin: 0;
-      padding: 0;
+    .h2-top{
+      font-size: $h2__fontSize;
+      color: $h2__bbColor;
+      font-weight: 300;
+    }
+    p{
+      margin-top: 20px;
+      line-height: 1.75;
     }
   }
   .kids_information{
