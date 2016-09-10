@@ -957,7 +957,31 @@ a {
   margin-top: 20px;
 }
 
-/* module */
+/* line 238, layout/_main.scss */
+footer .foot .footerelements {
+  text-decoration: none;
+  font-size: 14px;
+  color: #9FA0A0;
+  margin-right: 4.8148%;
+  margin-left: 4.8148%;
+  height: 100px;
+}
+/* line 246, layout/_main.scss */
+footer .foot img {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+}
+/* line 252, layout/_main.scss */
+footer p {
+  font-size: 13px;
+  color: #FFFFFF;
+  text-align: center;
+  background: #7F7F7F;
+  width: 100%;
+  height: 30px;
+}
+
 /* state */
 
 /*# sourceMappingURL=style.css.map */
