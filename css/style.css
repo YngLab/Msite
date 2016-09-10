@@ -1,6 +1,6 @@
 /* setting */
 /* base */
-/* http://meyerweb.com/eric/tools/css/reset/
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -143,12 +143,9 @@ a {
 .latestEvent {
   margin-right: -3.2%;
 }
-
 .latestEvent .topcap {
   text-align: center;
 }
-
-/* line 24, layout/_main.scss */
 .latestEvent .latestBox_future {
   background-color: #ffffff;
   margin-right: 2.7466%;
@@ -156,8 +153,6 @@ a {
   display: inline-block;
   position: relative;
 }
-
-/* line 30, layout/_main.scss */
 .latestEvent .latestBox_future .remaindays_future {
   background-color: #F29600;
   width: 86px;
@@ -166,55 +161,36 @@ a {
   top: 0px;
   left: 0px;
 }
-
-/* line 37, layout/_main.scss */
 .latestEvent .latestBox_future .remaindays_future .caption {
   color: #ffffff;
   z-index: 10;
   padding: 3px 0 0 18px;
 }
-
-/* line 43, layout/_main.scss */
 .latestEvent .latestBox_future img {
   width: 100%;
   height: 55.7522%;
 }
-
 .latestEvent .latestBox_future .eventText {
   margin-left: 18px;
 }
-
-/* line 47, layout/_main.scss */
-.latestEvent .latestBox_future .eventText {
-  margin-left: 18px;
-}
-
-/* line 49, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventsch_future {
   margin: 23px 0 0 0;
   color: #F29600;
 }
-
-/* line 53, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventtitle_future {
   font-size: 16px;
   margin: 3px 0 0 0;
   color: #727171;
 }
-
-/* line 58, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventplace_future {
   margin: 10px 0 0 0;
   color: #9FA0A0;
 }
-
-/* line 64, layout/_main.scss */
 .latestEvent .moreview {
   margin: 40px 3.2% 50px auto;
   width: 75px;
 }
 
-/* line 70, layout/_main.scss */
 .gNav {
   border-right: solid 1px #9FA0A0;
   margin: 0px -1px 40px 0;
@@ -226,8 +202,6 @@ a {
   content: "";
   display: block;
 }
-
-/* line 76, layout/_main.scss */
 .gNav .gNavli {
   float: left;
   width: 19.9166%;
@@ -236,15 +210,12 @@ a {
   font-weight: 400;
 }
 
-/* line 85, layout/_main.scss */
 .future_entrance {
   background-color: #ffffff;
   border: solid 1px #F29600;
   width: 48.4%;
   float: left;
 }
-
-/* line 90, layout/_main.scss */
 .future_entrance .openclose {
   background-color: #F29600;
   text-align: center;
@@ -252,77 +223,46 @@ a {
   height: 26px;
   padding-top: 3px;
 }
-
-/* line 97, layout/_main.scss */
 .future_entrance .future_logo {
   border-bottom: solid 1px #F29600;
   text-align: center;
 }
-
 .future_entrance .future_logo img {
   width: 43.3884%;
 }
-
 .future_entrance .future_contents {
   border-bottom: solid 1px #F29600;
 }
-
-/* line 100, layout/_main.scss */
-.future_entrance .future_logo img {
-  width: 43.3884%;
-}
-
-/* line 104, layout/_main.scss */
-.future_entrance .future_contents {
-  border-bottom: solid 1px #F29600;
-}
-
-/* line 106, layout/_main.scss */
 .future_entrance .future_contents img {
   width: 50%;
   float: left;
 }
-
-/* line 111, layout/_main.scss */
 .future_entrance .future_textbox {
   text-align: center;
   float: left;
   width: 50%;
   margin-top: 15%;
 }
-
-.future_entrance .future_textbox h2 {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 116, layout/_main.scss */
 .future_entrance .future_textbox .h2-top {
   font-size: 24px;
   color: #727171;
   font-weight: 300;
 }
-/* line 121, layout/_main.scss */
 .future_entrance .future_textbox p {
   margin-top: 20px;
   line-height: 1.75;
 }
-
-/* line 127, layout/_main.scss */
 .future_entrance .future_information img {
   width: 50%;
   float: left;
 }
 
-/* line 134, layout/_main.scss */
 .kids_entrance {
   background-color: #ffffff;
   border: solid 1px #8DC21F;
   width: 48.4%;
   float: right;
 }
-
-/* line 139, layout/_main.scss */
 .kids_entrance .openclose {
   background-color: #8DC21F;
   text-align: center;
@@ -330,57 +270,42 @@ a {
   height: 26px;
   padding-top: 3px;
 }
-
 .kids_entrance .kids_logo {
   border-bottom: solid 1px #8DC21F;
   height: 200px;
   text-align: center;
 }
-
 .kids_entrance .kids_logo img {
   width: 51.6528%;
 }
-
 .kids_entrance .kids_contents {
   height: 200px;
   border-bottom: solid 1px #8DC21F;
 }
-
 .kids_entrance .kids_contents img {
   width: 50%;
   float: left;
 }
-
 .kids_entrance .kids_textbox {
   text-align: center;
   float: left;
   width: 50%;
   margin-top: 15%;
 }
-
-.kids_entrance .kids_textbox h2 {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 167, layout/_main.scss */
 .kids_entrance .kids_textbox .h2-top {
   font-size: 24px;
   color: #727171;
   font-weight: 300;
 }
-/* line 172, layout/_main.scss */
 .kids_entrance .kids_textbox p {
   margin-top: 20px;
   line-height: 1.75;
 }
-/* line 178, layout/_main.scss */
 .kids_entrance .kids_information img {
   width: 50%;
   float: left;
 }
 
-/* line 184, layout/_main.scss */
 .future_logoapp {
   float: left;
   width: 48.4%;
@@ -391,19 +316,14 @@ a {
   background-color: #F29600;
   position: relative;
 }
-
-/* line 193, layout/_main.scss */
 .future_logoapp td {
   width: 25%;
   margin: 0;
 }
-
-/* line 196, layout/_main.scss */
 .future_logoapp td img {
   width: 100%;
 }
 
-/* line 202, layout/_main.scss */
 .kids_logoapp {
   float: right;
   width: 48.4%;
@@ -414,19 +334,14 @@ a {
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
   position: relative;
 }
-
-/* line 211, layout/_main.scss */
 .kids_logoapp td {
   width: 25%;
   margin: 0;
 }
-
-/* line 214, layout/_main.scss */
 .kids_logoapp td img {
   width: 100%;
 }
 
-/* line 220, layout/_main.scss */
 .logoapp_textBox {
   width: 350px;
   height: 70px;
@@ -438,15 +353,11 @@ a {
   left: 0;
   margin: auto;
 }
-
-/* line 230, layout/_main.scss */
 .logoapp_textBox p {
   font-size: 24px;
   font-weight: 400;
   margin: 0;
 }
-
-/* line 235, layout/_main.scss */
 .logoapp_textBox .logoapp_font {
   font-size: 36px;
   margin-top: 20px;
@@ -457,24 +368,19 @@ footer .foot {
   height: 100px;
   background: #EFEFEF;
 }
-
 footer .foot .footerlinks {
   line-height: 100px;
 }
-
 footer .foot .footerlinks .links {
-/* line 243, layout/_main.scss */
   text-decoration: none;
   font-size: 14px;
   color: #9FA0A0;
   margin-right: 52px;
   float: left;
 }
-
 footer .foot .SNSbutton {
   float: right;
 }
-
 footer .foot .SNSbutton img {
   float: left;
   margin-top: 25px;
@@ -482,23 +388,13 @@ footer .foot .SNSbutton img {
   width: 50px;
   height: 50px;
 }
-
 footer .copyright {
   background: #595757;
   width: 100%;
   height: 30px;
 }
-
 footer .copyright p {
   line-height: 30px;
-/* line 251, layout/_main.scss */
-  vertical-align: middle;
-  width: 50px;
-  height: 50px;
-}
-
-/* line 257, layout/_main.scss */
-footer p {
   font-size: 13px;
   color: #FFFFFF;
   text-align: center;
