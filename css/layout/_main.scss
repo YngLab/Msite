@@ -239,8 +239,7 @@ footer{
       text-decoration: none;
       font-size: 14px;
       color: #9FA0A0;
-      margin-right: 4.8148%;
-      margin-left: 4.8148%;
+      margin-right: 52px;
       height: 100px;
     }
     img{
@@ -249,12 +248,16 @@ footer{
       height: 50px;
     }
   }
-  p{
-    font-size: 13px;
-    color: #FFFFFF;
-    text-align: center;
-    background: #7F7F7F;
+  .copyright{
+    background: $footer__copyright;
     width: 100%;
     height: 30px;
+    p {
+      margin: 0;
+      font-size: 13px;
+      color: #FFFFFF;
+      text-align: center;
+      vertical-align: middle;
+    }
   }
 }
