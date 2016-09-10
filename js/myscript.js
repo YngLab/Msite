@@ -1,12 +1,32 @@
 $(function(){
   w_size = $(window).width();
-  w_size = w_size * .209259;
-  $(".latestBox_future").css("width", w_size + "px");
-  $(".latestBox_future").css("height", w_size + "px");
+  latestBox_size = w_size * .209259;
+  logoBox_size = w_size * .126851;
+  logoBox_margin = w_size * .035185;
+  institution_size = w_size * .224074;
+  logoapp_margin = w_size * .029629;
+  $(".latestBox_future").css("width", latestBox_size + "px");
+  $(".latestBox_future").css("height", latestBox_size + "px");
+  $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
+  $(".future_logo img, .kids_logo img").css("margin-top", logoBox_margin + "px");
+  $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
+  // $(".future_textbox").css("margin-top", future_textbox_margin + "px");
+  $(".future_logoapp, .kids_logoapp").css("margin-top", logoapp_margin + "px");
+  $(".future_logoapp, .kids_logoapp").css("margin-bottom", logoapp_margin + "px");
   $(window).resize(function () {
     w_size = $(window).width();
-    w_size = w_size * .209259;
-    $(".latestBox_future").css("width", w_size + "px");
-    $(".latestBox_future").css("height", w_size + "px");
+    latestBox_size = w_size * .209259;
+    logoBox_size = w_size * .126851;
+    logoBox_margin = w_size * .035185;
+    institution_size = w_size * .224074;
+    logoapp_margin = w_size * .029629;
+    $(".latestBox_future").css("width", latestBox_size + "px");
+    $(".latestBox_future").css("height", latestBox_size + "px");
+    $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
+    $(".future_logo img, .kids_logo img").css("margin-top", logoBox_margin + "px");
+    $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
+    // $(".future_textbox").css("margin-top", future_textbox_margin + "px");
+    $(".future_logoapp, .kids_logoapp").css("margin-top", logoapp_margin + "px");
+    $(".future_logoapp, .kids_logoapp").css("margin-bottom", logoapp_margin + "px");
   });
 });
