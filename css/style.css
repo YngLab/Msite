@@ -5,7 +5,6 @@
    License: none (public domain)
 */
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
-/* line 6, base/_reset.scss */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -16,45 +15,37 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 16, base/_reset.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 19, base/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, base/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 25, base/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 29, base/_reset.scss */
 blockquote:before, blockquote:after {
   content: '';
   content: none;
 }
 
-/* line 34, base/_reset.scss */
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 38, base/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 3, base/_util.scss */
 html {
   color: #9FA0A0;
   font-family: 'Noto Sans Japanese', sans-serif;
@@ -367,15 +358,28 @@ a {
   margin-top: 20px;
 }
 
-footer .foot .footerelements {
+footer .foot {
+  width: 100%;
+  height: 100px;
+  background: #EFEFEF;
+}
+footer .foot .footerlinks {
+  line-height: 100px;
+}
+footer .foot .footerlinks .links {
   text-decoration: none;
   font-size: 14px;
   color: #9FA0A0;
   margin-right: 52px;
-  height: 100px;
+  float: left;
 }
-footer .foot img {
-  vertical-align: middle;
+footer .foot .SNSbutton {
+  float: right;
+}
+footer .foot .SNSbutton img {
+  float: left;
+  margin-top: 25px;
+  margin-left: 30px;
   width: 50px;
   height: 50px;
 }
@@ -385,12 +389,13 @@ footer .copyright {
   height: 30px;
 }
 footer .copyright p {
-  margin: 0;
+  line-height: 30px;
   font-size: 13px;
   color: #FFFFFF;
   text-align: center;
-  vertical-align: middle;
 }
 
 /* module */
 /* state */
+
+/*# sourceMappingURL=style.css.map */
