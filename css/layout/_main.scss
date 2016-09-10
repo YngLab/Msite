@@ -1,3 +1,5 @@
+//We cannot type Japanese, maybe using japanese make error.
+
 .instaPic{
   background-color: #CCCCCC;//sample
   height: 400px;
@@ -7,6 +9,7 @@
 .wrap{
   margin: 0 auto;
   width: 92.5925%;
+  @include clearfix;
 }
 
 .bgcolor{
@@ -17,6 +20,7 @@
   margin-right: -3.2%;
   .topcap{
     text-align: center;
+    margin: 0; //If there is not this margin, created margin, why??
   }
   .latestBox_future{
     background-color: $boxcolor;
@@ -59,6 +63,173 @@
         color: $g__fontColor;
       }
     }
+  }
+  .moreview{
+    margin: 40px 3.2% 50px auto;
+    width: 75px;
+  }
+}
+
+.gNav{
+  border-right: solid 1px $g__fontColor;
+  margin: 0px -1px 40px 0;
+  width: 100%;
+  color: $g__fontColor;
+  @include clearfix;
+  .gNavli{
+    float: left;
+    width: 20%;
+    text-align: center;
+    border-left: solid 1px $g__fontColor;
+    font-weight: 400;
+  }
+}
+
+.future_entrance{
+  background-color: $boxcolor;
+  border: solid 1px $g__color-future;
+  width: 48.4%;
+  float:left;
+  .openclose{
+    background-color: $g__color-future;
+    margin: 0; //If there is not this margin, created margin, why??
+    text-align: center;
+    color: #ffffff;
+    height: 26px;
+    padding-top: 3px;
+  }
+  .future_logo{
+    border-bottom: solid 1px $g__color-future;
+    text-align: center;
+    img{
+      width: 43.3884%;
+    }
+  }
+  .future_contents{
+    border-bottom: solid 1px $g__color-future;
+    img{
+    width: 50%;
+    float: left;
+    }
+  }
+  .future_textbox{
+    text-align: center;
+    float: left;
+    width: 50%;
+    margin-top: 15%;
+    h2{
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .future_information{
+    img{
+    width: 50%;
+    float: left;
+    }
+  }
+}
+
+.kids_entrance{
+  background-color: $boxcolor;
+  border: solid 1px $g__color-kids;
+  width: 48.4%;
+  float: right;
+  .openclose{
+    background-color: $g__color-kids;
+    margin: 0; //If there is not this margin, created margin, why??
+    text-align: center;
+    color: #ffffff;
+    height: 26px;
+    padding-top: 3px;
+  }
+  .kids_logo{
+    border-bottom: solid 1px $g__color-kids;
+    height: 200px;
+    text-align: center;
+    img{
+      width: 51.6528%;
+    }
+  }
+  .kids_contents{
+    height: 200px;
+    border-bottom: solid 1px $g__color-kids;
+    img{
+    width: 50%;
+    float: left;
+    }
+  }
+  .kids_textbox{
+    text-align: center;
+    width: 50%;
+    float: left;
+    margin-top: 15%;
+    h2{
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .kids_information{
+    img{
+    width: 50%;
+    float: left;
+    }
+  }
+}
+.future_logoapp{
+  float: left;
+  width: 48.4%;
+  height: auto;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
+  background-color: $g__color-future;
+  position: relative;
+  td{
+    width: 25%;
+    margin: 0;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.kids_logoapp{
+  float: right;
+  width: 48.4%;
+  height: auto;
+  background-color: $g__color-kids;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
+  position: relative;
+  td{
+    width: 25%;
+    margin: 0;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.logoapp_textBox{
+  width: 350px;
+  height: 70px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  p{
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+  }
+  .logoapp_font{
+    font-size: 36px;
+    margin-top: 20px;
   }
 }
 

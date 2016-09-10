@@ -592,15 +592,16 @@ html {
   font-family: 'Noto Sans Japanese', sans-serif;
   font-size: 14px;
   font-weight: 300;
+  line-height: 1.75em;
 }
 
-/* line 12, base/_util.scss */
+/* line 13, base/_util.scss */
 header {
   background-color: #959595;
   color: #fdfdfd;
 }
 
-/* line 17, base/_util.scss */
+/* line 18, base/_util.scss */
 h2 {
   font-size: 24px;
   color: #727171;
@@ -608,69 +609,105 @@ h2 {
   padding: 50px 0 40px 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 17, base/_util.scss */
+  /* line 18, base/_util.scss */
   h2 {
     width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 17, base/_util.scss */
+  /* line 18, base/_util.scss */
   h2 {
     font-size: 18px;
   }
 }
 
-/* line 28, base/_util.scss */
+/* line 29, base/_util.scss */
 h3 {
   font-size: 16px;
 }
 
-/* line 32, base/_util.scss */
+/* line 33, base/_util.scss */
 .caption {
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 200;
 }
 @media screen and (max-width: 768px) {
-  /* line 32, base/_util.scss */
+  /* line 33, base/_util.scss */
   .caption {
     width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 32, base/_util.scss */
+  /* line 33, base/_util.scss */
   .caption {
     font-size: 18px;
   }
 }
 
+/* line 42, base/_util.scss */
+.futureColor {
+  color: #F29600;
+}
+
+/* line 46, base/_util.scss */
+.kidsColor {
+  color: #8DC21F;
+}
+
+/* line 50, base/_util.scss */
+li {
+  list-style: none;
+}
+
+/* line 54, base/_util.scss */
+a {
+  text-decoration: none;
+  color: #9FA0A0;
+}
+
+/* line 59, base/_util.scss */
+.linkText {
+  font-size: 15px;
+  color: #595757;
+  border-bottom: solid 1px #595757;
+  font-weight: 500;
+}
+
 /* layout */
-/* line 1, layout/_main.scss */
+/* line 3, layout/_main.scss */
 .instaPic {
   background-color: #CCCCCC;
   height: 400px;
   width: 100%;
 }
 
-/* line 7, layout/_main.scss */
+/* line 9, layout/_main.scss */
 .wrap {
   margin: 0 auto;
   width: 92.5925%;
 }
+/* line 66, _setting.scss */
+.wrap:after {
+  clear: both;
+  content: "";
+  display: block;
+}
 
-/* line 12, layout/_main.scss */
+/* line 15, layout/_main.scss */
 .bgcolor {
   background-color: #f7f7f7;
 }
 
-/* line 16, layout/_main.scss */
+/* line 19, layout/_main.scss */
 .latestEvent {
   margin-right: -3.2%;
 }
-/* line 18, layout/_main.scss */
+/* line 21, layout/_main.scss */
 .latestEvent .topcap {
   text-align: center;
+  margin: 0;
 }
-/* line 21, layout/_main.scss */
+/* line 25, layout/_main.scss */
 .latestEvent .latestBox_future {
   background-color: #ffffff;
   width: 400px;
@@ -680,7 +717,7 @@ h3 {
   display: inline-block;
   position: relative;
 }
-/* line 29, layout/_main.scss */
+/* line 33, layout/_main.scss */
 .latestEvent .latestBox_future .remaindays_future {
   background-color: #F29600;
   width: 86px;
@@ -689,39 +726,262 @@ h3 {
   top: 0px;
   left: 0px;
 }
-/* line 36, layout/_main.scss */
+/* line 40, layout/_main.scss */
 .latestEvent .latestBox_future .remaindays_future .caption {
   color: #ffffff;
   z-index: 10;
   padding: 3px 0 0 18px;
 }
-/* line 42, layout/_main.scss */
+/* line 46, layout/_main.scss */
 .latestEvent .latestBox_future img {
   width: 100%;
   height: 55.7522%;
 }
-/* line 46, layout/_main.scss */
+/* line 50, layout/_main.scss */
 .latestEvent .latestBox_future .eventText {
   margin-left: 18px;
 }
-/* line 48, layout/_main.scss */
+/* line 52, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventsch_future {
   margin: 23px 0 0 0;
   color: #F29600;
 }
-/* line 52, layout/_main.scss */
+/* line 56, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventtitle_future {
   font-size: 16px;
   margin: 3px 0 0 0;
   color: #727171;
 }
-/* line 57, layout/_main.scss */
+/* line 61, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventplace_future {
   margin: 10px 0 0 0;
   color: #9FA0A0;
 }
+/* line 67, layout/_main.scss */
+.latestEvent .moreview {
+  margin: 40px 3.2% 50px auto;
+  width: 75px;
+}
 
-/* module */
+/* line 73, layout/_main.scss */
+.gNav {
+  border-right: solid 1px #9FA0A0;
+  margin: 0px -1px 40px 0;
+  width: 100%;
+  color: #9FA0A0;
+}
+/* line 66, _setting.scss */
+.gNav:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 79, layout/_main.scss */
+.gNav .gNavli {
+  float: left;
+  width: 20%;
+  text-align: center;
+  border-left: solid 1px #9FA0A0;
+  font-weight: 400;
+}
+
+/* line 88, layout/_main.scss */
+.future_entrance {
+  background-color: #ffffff;
+  border: solid 1px #F29600;
+  width: 48.4%;
+  float: left;
+}
+/* line 93, layout/_main.scss */
+.future_entrance .openclose {
+  background-color: #F29600;
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+  height: 26px;
+  padding-top: 3px;
+}
+/* line 101, layout/_main.scss */
+.future_entrance .future_logo {
+  border-bottom: solid 1px #F29600;
+  text-align: center;
+}
+/* line 104, layout/_main.scss */
+.future_entrance .future_logo img {
+  width: 43.3884%;
+}
+/* line 108, layout/_main.scss */
+.future_entrance .future_contents {
+  border-bottom: solid 1px #F29600;
+}
+/* line 110, layout/_main.scss */
+.future_entrance .future_contents img {
+  width: 50%;
+  float: left;
+}
+/* line 115, layout/_main.scss */
+.future_entrance .future_textbox {
+  text-align: center;
+  float: left;
+  width: 50%;
+  margin-top: 15%;
+}
+/* line 120, layout/_main.scss */
+.future_entrance .future_textbox h2 {
+  margin: 0;
+  padding: 0;
+}
+/* line 126, layout/_main.scss */
+.future_entrance .future_information img {
+  width: 50%;
+  float: left;
+}
+
+/* line 133, layout/_main.scss */
+.kids_entrance {
+  background-color: #ffffff;
+  border: solid 1px #8DC21F;
+  width: 48.4%;
+  float: right;
+}
+/* line 138, layout/_main.scss */
+.kids_entrance .openclose {
+  background-color: #8DC21F;
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+  height: 26px;
+  padding-top: 3px;
+}
+/* line 146, layout/_main.scss */
+.kids_entrance .kids_logo {
+  border-bottom: solid 1px #8DC21F;
+  height: 200px;
+  text-align: center;
+}
+/* line 150, layout/_main.scss */
+.kids_entrance .kids_logo img {
+  width: 51.6528%;
+}
+/* line 154, layout/_main.scss */
+.kids_entrance .kids_contents {
+  height: 200px;
+  border-bottom: solid 1px #8DC21F;
+}
+/* line 157, layout/_main.scss */
+.kids_entrance .kids_contents img {
+  width: 50%;
+  float: left;
+}
+/* line 162, layout/_main.scss */
+.kids_entrance .kids_textbox {
+  text-align: center;
+  width: 50%;
+  float: left;
+  margin-top: 15%;
+}
+/* line 167, layout/_main.scss */
+.kids_entrance .kids_textbox h2 {
+  margin: 0;
+  padding: 0;
+}
+/* line 173, layout/_main.scss */
+.kids_entrance .kids_information img {
+  width: 50%;
+  float: left;
+}
+
+/* line 179, layout/_main.scss */
+.future_logoapp {
+  float: left;
+  width: 48.4%;
+  height: auto;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+  background-color: #F29600;
+  position: relative;
+}
+/* line 188, layout/_main.scss */
+.future_logoapp td {
+  width: 25%;
+  margin: 0;
+}
+/* line 191, layout/_main.scss */
+.future_logoapp td img {
+  width: 100%;
+}
+
+/* line 197, layout/_main.scss */
+.kids_logoapp {
+  float: right;
+  width: 48.4%;
+  height: auto;
+  background-color: #8DC21F;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+  position: relative;
+}
+/* line 206, layout/_main.scss */
+.kids_logoapp td {
+  width: 25%;
+  margin: 0;
+}
+/* line 209, layout/_main.scss */
+.kids_logoapp td img {
+  width: 100%;
+}
+
+/* line 215, layout/_main.scss */
+.logoapp_textBox {
+  width: 350px;
+  height: 70px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+/* line 225, layout/_main.scss */
+.logoapp_textBox p {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+/* line 230, layout/_main.scss */
+.logoapp_textBox .logoapp_font {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+/* line 238, layout/_main.scss */
+footer .foot .footerelements {
+  text-decoration: none;
+  font-size: 14px;
+  color: #9FA0A0;
+  margin-right: 4.8148%;
+  margin-left: 4.8148%;
+  height: 100px;
+}
+/* line 246, layout/_main.scss */
+footer .foot img {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+}
+/* line 252, layout/_main.scss */
+footer p {
+  font-size: 13px;
+  color: #FFFFFF;
+  text-align: center;
+  background: #7F7F7F;
+  width: 100%;
+  height: 30px;
+}
+
 /* state */
 
 /*# sourceMappingURL=style.css.map */
