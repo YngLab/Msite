@@ -173,19 +173,16 @@ a {
 /* line 21, layout/_main.scss */
 .latestEvent .topcap {
   text-align: center;
-  margin: 0;
 }
-/* line 25, layout/_main.scss */
+/* line 24, layout/_main.scss */
 .latestEvent .latestBox_future {
   background-color: #ffffff;
-  width: 400px;
-  height: 400px;
-  margin-right: 2.8%;
+  margin-right: 2.7466%;
   border: solid 1px #F29600;
   display: inline-block;
   position: relative;
 }
-/* line 33, layout/_main.scss */
+/* line 30, layout/_main.scss */
 .latestEvent .latestBox_future .remaindays_future {
   background-color: #F29600;
   width: 86px;
@@ -194,44 +191,44 @@ a {
   top: 0px;
   left: 0px;
 }
-/* line 40, layout/_main.scss */
+/* line 37, layout/_main.scss */
 .latestEvent .latestBox_future .remaindays_future .caption {
   color: #ffffff;
   z-index: 10;
   padding: 3px 0 0 18px;
 }
-/* line 46, layout/_main.scss */
+/* line 43, layout/_main.scss */
 .latestEvent .latestBox_future img {
   width: 100%;
   height: 55.7522%;
 }
-/* line 50, layout/_main.scss */
+/* line 47, layout/_main.scss */
 .latestEvent .latestBox_future .eventText {
   margin-left: 18px;
 }
-/* line 52, layout/_main.scss */
+/* line 49, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventsch_future {
   margin: 23px 0 0 0;
   color: #F29600;
 }
-/* line 56, layout/_main.scss */
+/* line 53, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventtitle_future {
   font-size: 16px;
   margin: 3px 0 0 0;
   color: #727171;
 }
-/* line 61, layout/_main.scss */
+/* line 58, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventplace_future {
   margin: 10px 0 0 0;
   color: #9FA0A0;
 }
-/* line 67, layout/_main.scss */
+/* line 64, layout/_main.scss */
 .latestEvent .moreview {
   margin: 40px 3.2% 50px auto;
   width: 75px;
 }
 
-/* line 73, layout/_main.scss */
+/* line 70, layout/_main.scss */
 .gNav {
   border-right: solid 1px #9FA0A0;
   margin: 0px -1px 40px 0;
@@ -244,78 +241,82 @@ a {
   content: "";
   display: block;
 }
-/* line 79, layout/_main.scss */
+/* line 76, layout/_main.scss */
 .gNav .gNavli {
   float: left;
-  width: 20%;
+  width: 19.9166%;
   text-align: center;
   border-left: solid 1px #9FA0A0;
   font-weight: 400;
 }
 
-/* line 88, layout/_main.scss */
+/* line 85, layout/_main.scss */
 .future_entrance {
   background-color: #ffffff;
   border: solid 1px #F29600;
   width: 48.4%;
   float: left;
 }
-/* line 93, layout/_main.scss */
+/* line 90, layout/_main.scss */
 .future_entrance .openclose {
   background-color: #F29600;
-  margin: 0;
   text-align: center;
   color: #ffffff;
   height: 26px;
   padding-top: 3px;
 }
-/* line 101, layout/_main.scss */
+/* line 97, layout/_main.scss */
 .future_entrance .future_logo {
   border-bottom: solid 1px #F29600;
   text-align: center;
 }
-/* line 104, layout/_main.scss */
+/* line 100, layout/_main.scss */
 .future_entrance .future_logo img {
   width: 43.3884%;
 }
-/* line 108, layout/_main.scss */
+/* line 104, layout/_main.scss */
 .future_entrance .future_contents {
   border-bottom: solid 1px #F29600;
 }
-/* line 110, layout/_main.scss */
+/* line 106, layout/_main.scss */
 .future_entrance .future_contents img {
   width: 50%;
   float: left;
 }
-/* line 115, layout/_main.scss */
+/* line 111, layout/_main.scss */
 .future_entrance .future_textbox {
   text-align: center;
   float: left;
   width: 50%;
   margin-top: 15%;
 }
-/* line 120, layout/_main.scss */
-.future_entrance .future_textbox h2 {
-  margin: 0;
-  padding: 0;
+/* line 116, layout/_main.scss */
+.future_entrance .future_textbox .h2-top {
+  font-size: 24px;
+  color: #727171;
+  font-weight: 300;
 }
-/* line 126, layout/_main.scss */
+/* line 121, layout/_main.scss */
+.future_entrance .future_textbox p {
+  margin-top: 20px;
+  line-height: 1.75;
+}
+/* line 127, layout/_main.scss */
 .future_entrance .future_information img {
   width: 50%;
   float: left;
 }
 
-/* line 133, layout/_main.scss */
+/* line 134, layout/_main.scss */
 .kids_entrance {
   background-color: #ffffff;
   border: solid 1px #8DC21F;
   width: 48.4%;
   float: right;
 }
-/* line 138, layout/_main.scss */
+/* line 139, layout/_main.scss */
 .kids_entrance .openclose {
   background-color: #8DC21F;
-  margin: 0;
   text-align: center;
   color: #ffffff;
   height: 26px;
@@ -344,22 +345,28 @@ a {
 /* line 162, layout/_main.scss */
 .kids_entrance .kids_textbox {
   text-align: center;
-  width: 50%;
   float: left;
+  width: 50%;
   margin-top: 15%;
 }
 /* line 167, layout/_main.scss */
-.kids_entrance .kids_textbox h2 {
-  margin: 0;
-  padding: 0;
+.kids_entrance .kids_textbox .h2-top {
+  font-size: 24px;
+  color: #727171;
+  font-weight: 300;
 }
-/* line 173, layout/_main.scss */
+/* line 172, layout/_main.scss */
+.kids_entrance .kids_textbox p {
+  margin-top: 20px;
+  line-height: 1.75;
+}
+/* line 178, layout/_main.scss */
 .kids_entrance .kids_information img {
   width: 50%;
   float: left;
 }
 
-/* line 179, layout/_main.scss */
+/* line 184, layout/_main.scss */
 .future_logoapp {
   float: left;
   width: 48.4%;
@@ -370,17 +377,17 @@ a {
   background-color: #F29600;
   position: relative;
 }
-/* line 188, layout/_main.scss */
+/* line 193, layout/_main.scss */
 .future_logoapp td {
   width: 25%;
   margin: 0;
 }
-/* line 191, layout/_main.scss */
+/* line 196, layout/_main.scss */
 .future_logoapp td img {
   width: 100%;
 }
 
-/* line 197, layout/_main.scss */
+/* line 202, layout/_main.scss */
 .kids_logoapp {
   float: right;
   width: 48.4%;
@@ -391,17 +398,17 @@ a {
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
   position: relative;
 }
-/* line 206, layout/_main.scss */
+/* line 211, layout/_main.scss */
 .kids_logoapp td {
   width: 25%;
   margin: 0;
 }
-/* line 209, layout/_main.scss */
+/* line 214, layout/_main.scss */
 .kids_logoapp td img {
   width: 100%;
 }
 
-/* line 215, layout/_main.scss */
+/* line 220, layout/_main.scss */
 .logoapp_textBox {
   width: 350px;
   height: 70px;
@@ -413,19 +420,19 @@ a {
   left: 0;
   margin: auto;
 }
-/* line 225, layout/_main.scss */
+/* line 230, layout/_main.scss */
 .logoapp_textBox p {
   font-size: 24px;
   font-weight: 400;
   margin: 0;
 }
-/* line 230, layout/_main.scss */
+/* line 235, layout/_main.scss */
 .logoapp_textBox .logoapp_font {
   font-size: 36px;
   margin-top: 20px;
 }
 
-/* line 238, layout/_main.scss */
+/* line 243, layout/_main.scss */
 footer .foot .footerelements {
   text-decoration: none;
   font-size: 14px;
@@ -434,13 +441,13 @@ footer .foot .footerelements {
   margin-left: 4.8148%;
   height: 100px;
 }
-/* line 246, layout/_main.scss */
+/* line 251, layout/_main.scss */
 footer .foot img {
   vertical-align: middle;
   width: 50px;
   height: 50px;
 }
-/* line 252, layout/_main.scss */
+/* line 257, layout/_main.scss */
 footer p {
   font-size: 13px;
   color: #FFFFFF;
