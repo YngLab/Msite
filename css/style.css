@@ -1,589 +1,57 @@
 /* setting */
 /* base */
-/*! sanitize.css v4.0.0 | CC0 License | github.com/10up/sanitize.css */
-/* Display definitions
-   ========================================================================== */
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
- * 2. Add the correct display in IE.
- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
-/* line 12, base/_sanitize.scss */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  /* 1 */
+/* line 6, base/_reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 16, base/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/**
- * Add the correct display in IE 9-.
- */
-/* line 31, base/_sanitize.scss */
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-
-/**
- * Add the correct display in iOS 4-7.
- */
-/* line 42, base/_sanitize.scss */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Add the correct display in IE 10-.
- * 1. Add the correct display in IE.
- */
-/* line 52, base/_sanitize.scss */
-template,
-[hidden] {
-  display: none;
-}
-
-/* Elements of HTML (https://www.w3.org/TR/html5/semantics.html)
-   ========================================================================== */
-/**
- * 1. Remove repeating backgrounds in all browsers (opinionated).
- * 2. Add box sizing inheritence in all browsers (opinionated).
- */
-/* line 65, base/_sanitize.scss */
-*,
-::before,
-::after {
-  background-repeat: no-repeat;
-  /* 1 */
-  box-sizing: inherit;
-  /* 2 */
-}
-
-/**
- * 1. Add text decoration inheritance in all browsers (opinionated).
- * 2. Add vertical alignment inheritence in all browsers (opinionated).
- */
-/* line 77, base/_sanitize.scss */
-::before,
-::after {
-  text-decoration: inherit;
-  /* 1 */
-  vertical-align: inherit;
-  /* 2 */
-}
-
-/**
- * 1. Add border box sizing in all browsers (opinionated).
- * 2. Add the default cursor in all browsers (opinionated).
- * 3. Add a flattened line height in all browsers (opinionated).
- * 4. Prevent font size adjustments after orientation changes in IE and iOS.
- */
-/* line 90, base/_sanitize.scss */
-html {
-  box-sizing: border-box;
-  /* 1 */
-  cursor: default;
-  /* 2 */
-  font-family: sans-serif;
-  /* 3 */
-  line-height: 1.5;
-  /* 3 */
-  -ms-text-size-adjust: 100%;
-  /* 4 */
-  -webkit-text-size-adjust: 100%;
-  /* 5 */
-}
-
-/* Sections (https://www.w3.org/TR/html5/sections.html)
-   ========================================================================== */
-/**
- * Remove the margin in all browsers (opinionated).
- */
-/* line 106, base/_sanitize.scss */
+/* line 19, base/_reset.scss */
 body {
-  margin: 0;
+  line-height: 1;
 }
 
-/**
- * Correct the font sizes and margins on `h1` elements within
- * `section` and `article` contexts in Chrome, Firefox, and Safari.
- */
-/* line 115, base/_sanitize.scss */
-h1 {
-  font-size: 2em;
-  margin: .67em 0;
-}
-
-/* Grouping content (https://www.w3.org/TR/html5/grouping-content.html)
-   ========================================================================== */
-/**
- * 1. Correct font sizing inheritance and scaling in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-/* line 128, base/_sanitize.scss */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
-}
-
-/**
- * 1. Correct the height in Firefox.
- * 2. Add visible overflow in Edge and IE.
- */
-/* line 141, base/_sanitize.scss */
-hr {
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
-}
-
-/**
- * Remove the list style on navigation lists in all browsers (opinionated).
- */
-/* line 150, base/_sanitize.scss */
-nav ol,
-nav ul {
+/* line 22, base/_reset.scss */
+ol, ul {
   list-style: none;
 }
 
-/* Text-level semantics
-   ========================================================================== */
-/**
- * 1. Add a bordered underline effect in all browsers.
- * 2. Remove text decoration in Firefox 40+.
- */
-/* line 163, base/_sanitize.scss */
-abbr[title] {
-  border-bottom: 1px dotted;
-  /* 1 */
-  text-decoration: none;
-  /* 2 */
+/* line 25, base/_reset.scss */
+blockquote, q {
+  quotes: none;
 }
 
-/**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
- */
-/* line 172, base/_sanitize.scss */
-b,
-strong {
-  font-weight: inherit;
+/* line 29, base/_reset.scss */
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
 }
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-/* line 181, base/_sanitize.scss */
-b,
-strong {
-  font-weight: bolder;
+/* line 34, base/_reset.scss */
+q:before, q:after {
+  content: '';
+  content: none;
 }
 
-/**
- * Add the correct font style in Android 4.3-.
- */
-/* line 190, base/_sanitize.scss */
-dfn {
-  font-style: italic;
-}
-
-/**
- * Add the correct colors in IE 9-.
- */
-/* line 198, base/_sanitize.scss */
-mark {
-  background-color: #ffff00;
-  color: #000000;
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-/* line 207, base/_sanitize.scss */
-progress {
-  vertical-align: baseline;
-}
-
-/**
- * Correct the font size in all browsers.
- */
-/* line 215, base/_sanitize.scss */
-small {
-  font-size: 83.3333%;
-}
-
-/**
- * Change the positioning on superscript and subscript elements
- * in all browsers (opinionated).
- * 1. Correct the font size in all browsers.
- */
-/* line 225, base/_sanitize.scss */
-sub,
-sup {
-  font-size: 83.3333%;
-  /* 1 */
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-/* line 233, base/_sanitize.scss */
-sub {
-  bottom: -.25em;
-}
-
-/* line 237, base/_sanitize.scss */
-sup {
-  top: -.5em;
-}
-
-/*
- * Remove the text shadow on text selections (opinionated).
- * 1. Restore the coloring undone by defining the text shadow (opinionated).
- */
-/* line 246, base/_sanitize.scss */
-::-moz-selection {
-  background-color: #b3d4fc;
-  /* 1 */
-  color: #000000;
-  /* 1 */
-  text-shadow: none;
-}
-
-/* line 252, base/_sanitize.scss */
-::selection {
-  background-color: #b3d4fc;
-  /* 1 */
-  color: #000000;
-  /* 1 */
-  text-shadow: none;
-}
-
-/* Embedded content (https://www.w3.org/TR/html5/embedded-content-0.html)
-   ========================================================================== */
-/*
- * Change the alignment on media elements in all browers (opinionated).
- */
-/* line 265, base/_sanitize.scss */
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/**
- * Remove the border on images inside links in IE 10-.
- */
-/* line 278, base/_sanitize.scss */
-img {
-  border-style: none;
-}
-
-/**
- * Change the fill color to match the text color in all browsers (opinionated).
- */
-/* line 286, base/_sanitize.scss */
-svg {
-  fill: currentColor;
-}
-
-/**
- * Hide the overflow in IE.
- */
-/* line 294, base/_sanitize.scss */
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/* Links (https://www.w3.org/TR/html5/links.html#links)
-   ========================================================================== */
-/**
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove the gaps in underlines in iOS 8+ and Safari 8+.
- */
-/* line 306, base/_sanitize.scss */
-a {
-  background-color: transparent;
-  /* 1 */
-  -webkit-text-decoration-skip: objects;
-  /* 2 */
-}
-
-/**
- * Remove the outline when hovering in all browsers (opinionated.
- */
-/* line 315, base/_sanitize.scss */
-:hover {
-  outline-width: 0;
-}
-
-/* Tabular data (https://www.w3.org/TR/html5/tabular-data.html)
-   ========================================================================== */
-/*
- * Remove border spacing in all browsers (opinionated).
- */
-/* line 326, base/_sanitize.scss */
+/* line 38, base/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-/* transform-style:  (https://www.w3.org/TR/html5/forms.html)
-   ========================================================================== */
-/**
- * 1. Remove the default styling in all browsers (opinionated).
- * 3. Remove the margin in Firefox and Safari.
- */
-/* line 339, base/_sanitize.scss */
-button,
-input,
-select,
-textarea {
-  background-color: transparent;
-  /* 1 */
-  border-style: none;
-  /* 1 */
-  color: inherit;
-  /* 1 */
-  font-size: 1em;
-  /* 1 */
-  margin: 0;
-  /* 3 */
-}
-
-/**
- * Correct the overflow in IE.
- * 1. Correct the overflow in Edge.
- */
-/* line 355, base/_sanitize.scss */
-button,
-input {
-  /* 1 */
-  overflow: visible;
-}
-
-/**
- * Remove the inheritance in Edge, Firefox, and IE.
- * 1. Remove the inheritance in Firefox.
- */
-/* line 365, base/_sanitize.scss */
-button,
-select {
-  /* 1 */
-  text-transform: none;
-}
-
-/**
- * 1. Prevent the WebKit bug where (2) destroys native `audio` and `video`
- *    controls in Android 4.
- * 2. Correct the inability to style clickable types in iOS and Safari.
- */
-/* line 376, base/_sanitize.scss */
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-}
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-/* line 387, base/_sanitize.scss */
-::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-/**
- * Correct the focus styles unset by the previous rule.
- */
-/* line 396, base/_sanitize.scss */
-:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-/**
- * Correct the border, margin, and padding in all browsers.
- */
-/* line 404, base/_sanitize.scss */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: .35em .625em .75em;
-}
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-/* line 416, base/_sanitize.scss */
-legend {
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-  white-space: normal;
-  /* 1 */
-}
-
-/**
- * 1. Remove the vertical scrollbar in IE.
- * 2. Change the resize direction on textareas in all browsers (opinionated).
- */
-/* line 428, base/_sanitize.scss */
-textarea {
-  overflow: auto;
-  /* 1 */
-  resize: vertical;
-  /* 2 */
-}
-
-/**
- * Remove the padding in IE 10-.
- */
-/* line 437, base/_sanitize.scss */
-[type="checkbox"],
-[type="radio"] {
-  padding: 0;
-}
-
-/**
- * Correct the cursor style on increment and decrement buttons in Chrome.
- */
-/* line 446, base/_sanitize.scss */
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-/* line 456, base/_sanitize.scss */
-[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
-}
-
-/**
- * Remove the inner padding and cancel buttons in Chrome and Safari for OS X.
- */
-/* line 465, base/_sanitize.scss */
-::-webkit-search-cancel-button,
-::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * Correct the text style on placeholders in Chrome, Edge, and Safari.
- */
-/* line 474, base/_sanitize.scss */
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: .54;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-/* line 484, base/_sanitize.scss */
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-}
-
-/* WAI-ARIA (https://www.w3.org/TR/html5/dom.html#wai-aria)
-   ========================================================================== */
-/**
- * Change the cursor on busy elements (opinionated).
- */
-/* line 496, base/_sanitize.scss */
-[aria-busy="true"] {
-  cursor: progress;
-}
-
-/*
- * Change the cursor on control elements (opinionated).
- */
-/* line 504, base/_sanitize.scss */
-[aria-controls] {
-  cursor: pointer;
-}
-
-/*
- * Change the cursor on disabled, not-editable, or otherwise
- * inoperable elements (opinionated).
- */
-/* line 513, base/_sanitize.scss */
-[aria-disabled] {
-  cursor: default;
-}
-
-/* User interaction (https://www.w3.org/TR/html5/editing.html)
-   ========================================================================== */
-/*
- * Remove the tapping delay on clickable elements (opinionated).
- * 1. Remove the tapping delay in IE 10.
- */
-/* line 525, base/_sanitize.scss */
-a,
-area,
-button,
-input,
-label,
-select,
-textarea,
-[tabindex] {
-  -ms-touch-action: manipulation;
-  /* 1 */
-  touch-action: manipulation;
-}
-
-/*
- * Change the display on visually hidden accessible elements (opinionated).
- */
-/* line 541, base/_sanitize.scss */
-[hidden][aria-hidden="false"] {
-  clip: rect(0, 0, 0, 0);
-  display: inherit;
-  position: absolute;
-}
-
-/* line 547, base/_sanitize.scss */
-[hidden][aria-hidden="false"]:focus {
-  clip: auto;
 }
 
 /* line 3, base/_util.scss */
@@ -982,6 +450,7 @@ footer p {
   height: 30px;
 }
 
+/* module */
 /* state */
 
 /*# sourceMappingURL=style.css.map */
