@@ -23,8 +23,8 @@
   }
   .latestBox_future{
     background-color: $boxcolor;
-    margin-right: 2.7466%;
     border: solid 1px $g__color-future;
+    margin: -1px 2.75% -1px -1px;
     display: inline-block;
     position: relative;
     .remaindays_future{
@@ -37,7 +37,9 @@
       .caption{
         color: #ffffff;
         z-index: 10;
-        padding: 3px 0 0 18px;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 18px;
       }
     }
     img{
@@ -75,9 +77,10 @@
   @include clearfix;
   .gNavli{
     float: left;
-    width: 19.9166%;
+    width: 20%;
     text-align: center;
     border-left: solid 1px $g__fontColor;
+    margin-left: -1px;
     font-weight: 400;
   }
 }
@@ -85,6 +88,7 @@
 .future_entrance{
   background-color: $boxcolor;
   border: solid 1px $g__color-future;
+  margin: -1px;
   width: 48.4%;
   float:left;
   .openclose{
@@ -92,7 +96,7 @@
     text-align: center;
     color: #ffffff;
     height: 26px;
-    padding-top: 3px;
+    line-height: 26px;
   }
   .future_logo{
     border-bottom: solid 1px $g__color-future;
@@ -103,16 +107,20 @@
   }
   .future_contents{
     border-bottom: solid 1px $g__color-future;
+    position: relative;
     img{
-    width: 50%;
-    float: left;
+      width: 50%;
+      float: left;
     }
   }
   .future_textbox{
     text-align: center;
     float: left;
-    width: 50%;
-    margin-top: 15%;
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -58px;
     .h2-top{
       font-size: $h2__fontSize;
       color: $h2__bbColor;
@@ -121,12 +129,20 @@
     p{
       margin-top: 20px;
       line-height: 1.75;
-    }
+    } 
   }
+  .left_textbox{
+      left: 25%
+  }
+  .right_textbox{
+      left: 75%
+  } 
   .future_information{
+    position: relative;
+    @include clearfix;
     img{
-    width: 50%;
-    float: left;
+      width: 50%;
+      float: right;
     }
   }
 }
@@ -134,6 +150,7 @@
 .kids_entrance{
   background-color: $boxcolor;
   border: solid 1px $g__color-kids;
+  margin: -1px;
   width: 48.4%;
   float: right;
   .openclose{
@@ -141,7 +158,7 @@
     text-align: center;
     color: #ffffff;
     height: 26px;
-    padding-top: 3px;
+    line-height: 26px;
   }
   .kids_logo{
     border-bottom: solid 1px $g__color-kids;
@@ -152,8 +169,8 @@
     }
   }
   .kids_contents{
-    height: 200px;
     border-bottom: solid 1px $g__color-kids;
+    position: relative;
     img{
     width: 50%;
     float: left;
@@ -162,8 +179,11 @@
   .kids_textbox{
     text-align: center;
     float: left;
-    width: 50%;
-    margin-top: 15%;
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -58px;
     .h2-top{
       font-size: $h2__fontSize;
       color: $h2__bbColor;
@@ -172,12 +192,20 @@
     p{
       margin-top: 20px;
       line-height: 1.75;
-    }
+    } 
   }
+  .left_textbox{
+      left: 25%
+  }
+  .right_textbox{
+      left: 75%
+  } 
   .kids_information{
+    position: relative;
+    @include clearfix;
     img{
-    width: 50%;
-    float: left;
+      width: 50%;
+      float: right;
     }
   }
 }
