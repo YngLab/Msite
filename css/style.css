@@ -148,8 +148,8 @@ a {
 }
 .latestEvent .latestBox_future {
   background-color: #ffffff;
-  margin-right: 2.7466%;
   border: solid 1px #F29600;
+  margin: -1px 2.75% -1px -1px;
   display: inline-block;
   position: relative;
 }
@@ -164,7 +164,9 @@ a {
 .latestEvent .latestBox_future .remaindays_future .caption {
   color: #ffffff;
   z-index: 10;
-  padding: 3px 0 0 18px;
+  height: 26px;
+  line-height: 26px;
+  padding-left: 18px;
 }
 .latestEvent .latestBox_future img {
   width: 100%;
@@ -204,15 +206,17 @@ a {
 }
 .gNav .gNavli {
   float: left;
-  width: 19.9166%;
+  width: 20%;
   text-align: center;
   border-left: solid 1px #9FA0A0;
+  margin-left: -1px;
   font-weight: 400;
 }
 
 .future_entrance {
   background-color: #ffffff;
   border: solid 1px #F29600;
+  margin: -1px;
   width: 48.4%;
   float: left;
 }
@@ -221,7 +225,7 @@ a {
   text-align: center;
   color: #ffffff;
   height: 26px;
-  padding-top: 3px;
+  line-height: 26px;
 }
 .future_entrance .future_logo {
   border-bottom: solid 1px #F29600;
@@ -232,6 +236,7 @@ a {
 }
 .future_entrance .future_contents {
   border-bottom: solid 1px #F29600;
+  position: relative;
 }
 .future_entrance .future_contents img {
   width: 50%;
@@ -240,8 +245,11 @@ a {
 .future_entrance .future_textbox {
   text-align: center;
   float: left;
-  width: 50%;
-  margin-top: 15%;
+  position: absolute;
+  width: 200px;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -58px;
 }
 .future_entrance .future_textbox .h2-top {
   font-size: 24px;
@@ -252,14 +260,29 @@ a {
   margin-top: 20px;
   line-height: 1.75;
 }
+.future_entrance .left_textbox {
+  left: 25%;
+}
+.future_entrance .right_textbox {
+  left: 75%;
+}
+.future_entrance .future_information {
+  position: relative;
+}
+.future_entrance .future_information:after {
+  clear: both;
+  content: "";
+  display: block;
+}
 .future_entrance .future_information img {
   width: 50%;
-  float: left;
+  float: right;
 }
 
 .kids_entrance {
   background-color: #ffffff;
   border: solid 1px #8DC21F;
+  margin: -1px;
   width: 48.4%;
   float: right;
 }
@@ -268,7 +291,7 @@ a {
   text-align: center;
   color: #ffffff;
   height: 26px;
-  padding-top: 3px;
+  line-height: 26px;
 }
 .kids_entrance .kids_logo {
   border-bottom: solid 1px #8DC21F;
@@ -279,8 +302,8 @@ a {
   width: 51.6528%;
 }
 .kids_entrance .kids_contents {
-  height: 200px;
   border-bottom: solid 1px #8DC21F;
+  position: relative;
 }
 .kids_entrance .kids_contents img {
   width: 50%;
@@ -289,8 +312,11 @@ a {
 .kids_entrance .kids_textbox {
   text-align: center;
   float: left;
-  width: 50%;
-  margin-top: 15%;
+  position: absolute;
+  width: 200px;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -58px;
 }
 .kids_entrance .kids_textbox .h2-top {
   font-size: 24px;
@@ -301,9 +327,23 @@ a {
   margin-top: 20px;
   line-height: 1.75;
 }
+.kids_entrance .left_textbox {
+  left: 25%;
+}
+.kids_entrance .right_textbox {
+  left: 75%;
+}
+.kids_entrance .kids_information {
+  position: relative;
+}
+.kids_entrance .kids_information:after {
+  clear: both;
+  content: "";
+  display: block;
+}
 .kids_entrance .kids_information img {
   width: 50%;
-  float: left;
+  float: right;
 }
 
 .future_logoapp {
