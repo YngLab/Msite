@@ -1,0 +1,243 @@
+//We cannot type Japanese, maybe using japanese make error.
+.latestEvent{
+  .topcap{
+    text-align: center;
+  }
+  .latestBox_future{
+    background-color: $boxcolor;
+    border: solid 1px $g__color-future;
+    margin: -1px 2.75% -1px -1px;
+    display: inline-block;
+    position: relative;
+    .remaindays_future{
+      background-color: #F29600;
+      width: 86px;
+      height: 26px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      .caption{
+        color: #ffffff;
+        z-index: 10;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 18px;
+      }
+    }
+    img{
+      width: 100%;
+      height: 55.7522%;
+    }
+    .eventText{
+      margin-left: 18px;
+      .eventsch_future{
+        margin: 23px 0 0 0;
+        color: $g__color-future;
+      }
+      .eventtitle_future{
+        font-size: $h3__fontSize;
+        margin: 3px 0 0 0;
+        color: $dark__fontColor;
+      }
+      .eventplace_future{
+        margin: 10px 0 0 0;
+        color: $g__fontColor;
+      }
+    }
+  }
+  .moreview{
+    margin: 40px 3.2% 50px auto;
+    width: 75px;
+  }
+}
+
+.gNav{
+  .gNavli{
+    float: left;
+    width: 20%;
+    text-align: center;
+    border-left: solid 1px $g__fontColor;
+    margin-left: -1px;
+    font-weight: 400;
+  }
+}
+
+.future_entrance{
+  .openclose{
+    background-color: $g__color-future;
+    text-align: center;
+    color: #ffffff;
+    height: 26px;
+    line-height: 26px;
+  }
+  .future_logo{
+    border-bottom: solid 1px $g__color-future;
+    text-align: center;
+    img{
+      width: 43.3884%;
+    }
+  }
+  .future_contents{
+    border-bottom: solid 1px $g__color-future;
+    position: relative;
+    img{
+      width: 50%;
+      float: left;
+    }
+  }
+  .future_textbox{
+    text-align: center;
+    float: left;
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -58px;
+    .h2-top{
+      font-size: $h2__fontSize;
+      color: $h2__bbColor;
+      font-weight: 300;
+    }
+    p{
+      margin-top: 20px;
+      line-height: 1.75;
+    }
+  }
+  .left_textbox{
+      left: 25%
+  }
+  .right_textbox{
+      left: 75%
+  }
+  .future_information{
+    position: relative;
+    @include clearfix;
+    img{
+      width: 50%;
+      float: right;
+    }
+  }
+}
+
+.kids_entrance{
+  .openclose{
+    background-color: $g__color-kids;
+    text-align: center;
+    color: #ffffff;
+    height: 26px;
+    line-height: 26px;
+  }
+  .kids_logo{
+    border-bottom: solid 1px $g__color-kids;
+    height: 200px;
+    text-align: center;
+    img{
+      width: 51.6528%;
+    }
+  }
+  .kids_contents{
+    border-bottom: solid 1px $g__color-kids;
+    position: relative;
+    img{
+    width: 50%;
+    float: left;
+    }
+  }
+  .kids_textbox{
+    text-align: center;
+    float: left;
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -58px;
+    .h2-top{
+      font-size: $h2__fontSize;
+      color: $h2__bbColor;
+      font-weight: 300;
+    }
+    p{
+      margin-top: 20px;
+      line-height: 1.75;
+    }
+  }
+  .left_textbox{
+      left: 25%
+  }
+  .right_textbox{
+      left: 75%
+  }
+  .kids_information{
+    position: relative;
+    @include clearfix;
+    img{
+      width: 50%;
+      float: right;
+    }
+  }
+}
+
+.future_logoapp{
+  td{
+    width: 25%;
+    margin: 0;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.kids_logoapp{
+  td{
+    width: 25%;
+    margin: 0;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.logoapp_textBox{
+  p{
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+  }
+  .logoapp_font{
+    font-size: 36px;
+    margin-top: 20px;
+  }
+}
+
+footer{
+  .foot{
+    .footerlinks{
+      line-height: 100px;
+      .links{
+        text-decoration: none;
+        font-size: $g__fontSize;
+        color: $g__fontColor;
+        margin-right: 52px;
+        float: left;
+      }
+    }
+    .SNSbutton{
+      float: right;
+      img{
+        float: left;
+        margin-top: 25px;
+        margin-left: 30px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  .copyright{
+    p {
+      line-height: 30px;
+      font-size: 13px;
+      color: #FFFFFF;
+      text-align: center;
+    }
+  }
+}
