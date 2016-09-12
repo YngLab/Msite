@@ -12,10 +12,6 @@
   @include clearfix;
 }
 
-.bgcolor{
-  background-color: $g__bgc;
-}
-
 .latestEvent{
   margin-right: -3.2%;
   .topcap{
@@ -136,7 +132,7 @@
   }
   .right_textbox{
       left: 75%
-  } 
+  }
   .future_information{
     position: relative;
     @include clearfix;
@@ -192,14 +188,14 @@
     p{
       margin-top: 20px;
       line-height: 1.75;
-    } 
+    }
   }
   .left_textbox{
       left: 25%
   }
   .right_textbox{
       left: 75%
-  } 
+  }
   .kids_information{
     position: relative;
     @include clearfix;
