@@ -1,5 +1,6 @@
 //We cannot type Japanese, maybe using japanese make error.
 .latestEvent{
+  font-size: 0;
   .topcap{
     text-align: center;
   }
@@ -7,7 +8,8 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
     display: inline-block;
-    margin: -1px 2.75% -1px -1px;
+    margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
+    //margin: -1px 2.75% -1px -1px;
     position: relative;
     .remaindays_future{
       background-color: #F29600;
@@ -29,9 +31,10 @@
       width: 100%;
     }
     .eventText{
-      margin-left: 18px;
+      margin-left: calc(100% * (18 / 280.616));
+      //margin-left: 18px;
       .eventsch_future{
-        margin: 23px 0 0 0;
+        margin: calc(100% * (23 / 280.616)) 0 0 0;
         //color: $g__color-future;
       }
       .eventtitle_future{
