@@ -5,6 +5,7 @@
    License: none (public domain)
 */
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+/* line 6, base/_reset.scss */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -15,37 +16,45 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 /* HTML5 display-role reset for older browsers */
+/* line 16, base/_reset.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
+/* line 19, base/_reset.scss */
 body {
   line-height: 1;
 }
 
+/* line 22, base/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
+/* line 25, base/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
+/* line 29, base/_reset.scss */
 blockquote:before, blockquote:after {
   content: '';
   content: none;
 }
 
+/* line 34, base/_reset.scss */
 q:before, q:after {
   content: '';
   content: none;
 }
 
+/* line 38, base/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+/* line 3, base/_util.scss */
 html {
   color: #9fa0a0;
   font-family: 'Noto Sans Japanese', sans-serif;
@@ -54,11 +63,13 @@ html {
   line-height: 1.75em;
 }
 
+/* line 13, base/_util.scss */
 header {
   background-color: #959595;
   color: #fdfdfd;
 }
 
+/* line 18, base/_util.scss */
 h2 {
   font-size: 24px;
   color: #727171;
@@ -66,47 +77,57 @@ h2 {
   padding: 50px 0 40px 0;
 }
 @media screen and (max-width: 768px) {
+  /* line 18, base/_util.scss */
   h2 {
     width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
+  /* line 18, base/_util.scss */
   h2 {
     font-size: 18px;
   }
 }
 
+/* line 29, base/_util.scss */
 h3 {
   font-size: 16px;
 }
 
+/* line 33, base/_util.scss */
 .caption {
   font-size: 13px;
   font-weight: 200;
 }
 @media screen and (max-width: 768px) {
+  /* line 33, base/_util.scss */
   .caption {
     width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
+  /* line 33, base/_util.scss */
   .caption {
     font-size: 18px;
   }
 }
 
+/* line 42, base/_util.scss */
 .futureColor {
   color: #F29600;
 }
 
+/* line 46, base/_util.scss */
 .kidsColor {
   color: #8DC21F;
 }
 
+/* line 50, base/_util.scss */
 li {
   list-style: none;
 }
 
+/* line 54, base/_util.scss */
 a {
   text-decoration: none;
   color: #9fa0a0;
@@ -116,6 +137,7 @@ a {
   background-color: #f7f7f7;
 }
 
+/* line 59, base/_util.scss */
 .linkText {
   font-size: 15px;
   color: #595757;
@@ -124,22 +146,26 @@ a {
 }
 
 /* layout */
+/* line 3, layout/_main.scss */
 .instaPic {
   background-color: #CCCCCC;
   height: 400px;
   width: 100%;
 }
 
+/* line 9, layout/_main.scss */
 .wrap {
   margin: 0 auto;
   width: 92.5925%;
 }
+/* line 68, _setting.scss */
 .wrap:after {
   clear: both;
   content: "";
   display: block;
 }
 
+<<<<<<< Updated upstream
 .latestEvent {
   margin-right: -3.2%;
 }
@@ -218,9 +244,22 @@ footer .copyright {
 }
 
 /* module */
+=======
+/* line 15, layout/_main.scss */
+.bgcolor {
+  background-color: #f7f7f7;
+}
+
+/* line 19, layout/_main.scss */
+.latestEvent {
+  margin-right: -3.2%;
+}
+/* line 21, layout/_main.scss */
+>>>>>>> Stashed changes
 .latestEvent .topcap {
   text-align: center;
 }
+/* line 24, layout/_main.scss */
 .latestEvent .latestBox_future {
   background-color: #ffffff;
   border: solid 1px #F29600;
@@ -228,6 +267,7 @@ footer .copyright {
   display: inline-block;
   position: relative;
 }
+/* line 30, layout/_main.scss */
 .latestEvent .latestBox_future .remaindays_future {
   background-color: #F29600;
   width: 86px;
@@ -236,6 +276,7 @@ footer .copyright {
   top: 0px;
   left: 0px;
 }
+/* line 37, layout/_main.scss */
 .latestEvent .latestBox_future .remaindays_future .caption {
   color: #ffffff;
   z-index: 10;
@@ -243,31 +284,54 @@ footer .copyright {
   line-height: 26px;
   padding-left: 18px;
 }
+/* line 45, layout/_main.scss */
 .latestEvent .latestBox_future img {
   width: 100%;
   height: 55.7522%;
 }
+/* line 49, layout/_main.scss */
 .latestEvent .latestBox_future .eventText {
   margin-left: 18px;
 }
+/* line 51, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventsch_future {
   margin: 23px 0 0 0;
   color: #F29600;
 }
+/* line 55, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventtitle_future {
   font-size: 16px;
   margin: 3px 0 0 0;
   color: #727171;
 }
+/* line 60, layout/_main.scss */
 .latestEvent .latestBox_future .eventText .eventplace_future {
   margin: 10px 0 0 0;
   color: #9fa0a0;
 }
+/* line 66, layout/_main.scss */
 .latestEvent .moreview {
   margin: 40px 3.2% 50px auto;
   width: 75px;
 }
 
+<<<<<<< Updated upstream
+=======
+/* line 72, layout/_main.scss */
+.gNav {
+  border-right: solid 1px #9FA0A0;
+  margin: 0px -1px 40px 0;
+  width: 100%;
+  color: #9FA0A0;
+}
+/* line 68, _setting.scss */
+.gNav:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* line 78, layout/_main.scss */
+>>>>>>> Stashed changes
 .gNav .gNavli {
   float: left;
   width: 20%;
@@ -277,6 +341,18 @@ footer .copyright {
   font-weight: 400;
 }
 
+<<<<<<< Updated upstream
+=======
+/* line 88, layout/_main.scss */
+.future_entrance {
+  background-color: #ffffff;
+  border: solid 1px #F29600;
+  margin: -1px;
+  width: 48.4%;
+  float: left;
+}
+/* line 94, layout/_main.scss */
+>>>>>>> Stashed changes
 .future_entrance .openclose {
   background-color: #F29600;
   text-align: center;
@@ -284,21 +360,26 @@ footer .copyright {
   height: 26px;
   line-height: 26px;
 }
+/* line 101, layout/_main.scss */
 .future_entrance .future_logo {
   border-bottom: solid 1px #F29600;
   text-align: center;
 }
+/* line 104, layout/_main.scss */
 .future_entrance .future_logo img {
   width: 43.3884%;
 }
+/* line 108, layout/_main.scss */
 .future_entrance .future_contents {
   border-bottom: solid 1px #F29600;
   position: relative;
 }
+/* line 111, layout/_main.scss */
 .future_entrance .future_contents img {
   width: 50%;
   float: left;
 }
+/* line 116, layout/_main.scss */
 .future_entrance .future_textbox {
   text-align: center;
   float: left;
@@ -308,34 +389,53 @@ footer .copyright {
   margin-left: -100px;
   margin-top: -58px;
 }
+/* line 124, layout/_main.scss */
 .future_entrance .future_textbox .h2-top {
   font-size: 24px;
   color: #727171;
   font-weight: 300;
 }
+/* line 129, layout/_main.scss */
 .future_entrance .future_textbox p {
   margin-top: 20px;
   line-height: 1.75;
 }
+/* line 134, layout/_main.scss */
 .future_entrance .left_textbox {
   left: 25%;
 }
+/* line 137, layout/_main.scss */
 .future_entrance .right_textbox {
   left: 75%;
 }
+/* line 140, layout/_main.scss */
 .future_entrance .future_information {
   position: relative;
 }
+/* line 68, _setting.scss */
 .future_entrance .future_information:after {
   clear: both;
   content: "";
   display: block;
 }
+/* line 143, layout/_main.scss */
 .future_entrance .future_information img {
   width: 50%;
   float: right;
 }
 
+<<<<<<< Updated upstream
+=======
+/* line 150, layout/_main.scss */
+.kids_entrance {
+  background-color: #ffffff;
+  border: solid 1px #8DC21F;
+  margin: -1px;
+  width: 48.4%;
+  float: right;
+}
+/* line 156, layout/_main.scss */
+>>>>>>> Stashed changes
 .kids_entrance .openclose {
   background-color: #8DC21F;
   text-align: center;
@@ -343,22 +443,27 @@ footer .copyright {
   height: 26px;
   line-height: 26px;
 }
+/* line 163, layout/_main.scss */
 .kids_entrance .kids_logo {
   border-bottom: solid 1px #8DC21F;
   height: 200px;
   text-align: center;
 }
+/* line 167, layout/_main.scss */
 .kids_entrance .kids_logo img {
   width: 51.6528%;
 }
+/* line 171, layout/_main.scss */
 .kids_entrance .kids_contents {
   border-bottom: solid 1px #8DC21F;
   position: relative;
 }
+/* line 174, layout/_main.scss */
 .kids_entrance .kids_contents img {
   width: 50%;
   float: left;
 }
+/* line 179, layout/_main.scss */
 .kids_entrance .kids_textbox {
   text-align: center;
   float: left;
@@ -368,63 +473,130 @@ footer .copyright {
   margin-left: -100px;
   margin-top: -58px;
 }
+/* line 187, layout/_main.scss */
 .kids_entrance .kids_textbox .h2-top {
   font-size: 24px;
   color: #727171;
   font-weight: 300;
 }
+/* line 192, layout/_main.scss */
 .kids_entrance .kids_textbox p {
   margin-top: 20px;
   line-height: 1.75;
 }
+/* line 197, layout/_main.scss */
 .kids_entrance .left_textbox {
   left: 25%;
 }
+/* line 200, layout/_main.scss */
 .kids_entrance .right_textbox {
   left: 75%;
 }
+/* line 203, layout/_main.scss */
 .kids_entrance .kids_information {
   position: relative;
 }
+/* line 68, _setting.scss */
 .kids_entrance .kids_information:after {
   clear: both;
   content: "";
   display: block;
 }
+/* line 206, layout/_main.scss */
 .kids_entrance .kids_information img {
   width: 50%;
   float: right;
 }
 
+<<<<<<< Updated upstream
+=======
+/* line 212, layout/_main.scss */
+.future_logoapp {
+  float: left;
+  width: 48.4%;
+  height: auto;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+  background-color: #F29600;
+  position: relative;
+}
+/* line 221, layout/_main.scss */
+>>>>>>> Stashed changes
 .future_logoapp td {
   width: 25%;
   margin: 0;
 }
+/* line 224, layout/_main.scss */
 .future_logoapp td img {
   width: 100%;
 }
 
+<<<<<<< Updated upstream
+=======
+/* line 230, layout/_main.scss */
+.kids_logoapp {
+  float: right;
+  width: 48.4%;
+  height: auto;
+  background-color: #8DC21F;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+  position: relative;
+}
+/* line 239, layout/_main.scss */
+>>>>>>> Stashed changes
 .kids_logoapp td {
   width: 25%;
   margin: 0;
 }
+/* line 242, layout/_main.scss */
 .kids_logoapp td img {
   width: 100%;
 }
 
+<<<<<<< Updated upstream
+=======
+/* line 248, layout/_main.scss */
+.logoapp_textBox {
+  width: 350px;
+  height: 70px;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+/* line 258, layout/_main.scss */
+>>>>>>> Stashed changes
 .logoapp_textBox p {
   font-size: 24px;
   font-weight: 400;
   margin: 0;
 }
+/* line 263, layout/_main.scss */
 .logoapp_textBox .logoapp_font {
   font-size: 36px;
   margin-top: 20px;
 }
 
+<<<<<<< Updated upstream
+=======
+/* line 270, layout/_main.scss */
+footer .foot {
+  width: 100%;
+  height: 100px;
+  background: #EFEFEF;
+}
+/* line 274, layout/_main.scss */
+>>>>>>> Stashed changes
 footer .foot .footerlinks {
   line-height: 100px;
 }
+/* line 276, layout/_main.scss */
 footer .foot .footerlinks .links {
   text-decoration: none;
   font-size: 14px;
@@ -432,9 +604,11 @@ footer .foot .footerlinks .links {
   margin-right: 52px;
   float: left;
 }
+/* line 284, layout/_main.scss */
 footer .foot .SNSbutton {
   float: right;
 }
+/* line 286, layout/_main.scss */
 footer .foot .SNSbutton img {
   float: left;
   margin-top: 25px;
@@ -442,6 +616,16 @@ footer .foot .SNSbutton img {
   width: 50px;
   height: 50px;
 }
+<<<<<<< Updated upstream
+=======
+/* line 295, layout/_main.scss */
+footer .copyright {
+  background: #595757;
+  width: 100%;
+  height: 30px;
+}
+/* line 299, layout/_main.scss */
+>>>>>>> Stashed changes
 footer .copyright p {
   line-height: 30px;
   font-size: 13px;
@@ -450,5 +634,3 @@ footer .copyright p {
 }
 
 /* state */
-
-/*# sourceMappingURL=style.css.map */
