@@ -16,8 +16,8 @@ header{
 }
 
 h2{
-  font-size: $h2__fontSize;
   color: $h2__bbColor;
+  font-size: $h2__fontSize;
   font-weight: 300;
   padding: 50px 0 40px 0;
   @include smallW;
@@ -39,6 +39,15 @@ h3{
   }
 }
 
+li{
+  list-style: none;
+}
+
+a{
+  color: $g__fontColor;
+  text-decoration: none;
+}
+
 .futureColor{
   color: $g__color-future;
 }
@@ -47,22 +56,13 @@ h3{
   color: $g__color-kids;
 }
 
-li{
-  list-style: none;
-}
-
-a{
-  text-decoration: none;
-  color: $g__fontColor;
-}
-
 .bgcolor{
   background-color: $g__bgc;
 }
 
 .linkText{
-  font-size: 15px;
-  color: $link__fontColor;
   border-bottom: solid 1px $link__fontColor;
+  color: $link__fontColor;
+  font-size: 15px;
   font-weight: 500;
 }
