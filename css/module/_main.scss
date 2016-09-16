@@ -1,38 +1,41 @@
 //We cannot type Japanese, maybe using japanese make error.
 .latestEvent{
+  font-size: 0;
   .topcap{
     text-align: center;
   }
   .latestBox_future{
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
-    margin: -1px 2.75% -1px -1px;
     display: inline-block;
+    margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
+    //margin: -1px 2.75% -1px -1px;
     position: relative;
     .remaindays_future{
       background-color: #F29600;
-      width: 86px;
       height: 26px;
+      left: 0px;
       position: absolute;
       top: 0px;
-      left: 0px;
+      width: 86px;
       .caption{
         color: #ffffff;
-        z-index: 10;
         height: 26px;
         line-height: 26px;
         padding-left: 18px;
+        z-index: 10;
       }
     }
     img{
-      width: 100%;
       height: 55.7522%;
+      width: 100%;
     }
     .eventText{
-      margin-left: 18px;
+      margin-left: calc(100% * (18 / 280.616));
+      //margin-left: 18px;
       .eventsch_future{
-        margin: 23px 0 0 0;
-        color: $g__color-future;
+        margin: calc(100% * (23 / 280.616)) 0 0 0;
+        //color: $g__color-future;
       }
       .eventtitle_future{
         font-size: $h3__fontSize;
@@ -53,22 +56,22 @@
 
 .gNav{
   .gNavli{
-    float: left;
-    width: 20%;
-    text-align: center;
     border-left: solid 1px $g__fontColor;
-    margin-left: -1px;
+    float: left;
     font-weight: 400;
+    margin-left: -1px;
+    text-align: center;
+    width: 20%;
   }
 }
 
 .future_entrance{
   .openclose{
     background-color: $g__color-future;
-    text-align: center;
     color: #ffffff;
     height: 26px;
     line-height: 26px;
+    text-align: center;
   }
   .future_logo{
     border-bottom: solid 1px $g__color-future;
@@ -81,26 +84,27 @@
     border-bottom: solid 1px $g__color-future;
     position: relative;
     img{
-      width: 50%;
       float: left;
+      width: 50%;
     }
   }
   .future_textbox{
-    text-align: center;
     float: left;
+    margin: -58px 0 0 -100px;
+    //margin-left: -100px;
+    //margin-top: -58px;
     position: absolute;
-    width: 200px;
+    text-align: center;
     top: 50%;
-    margin-left: -100px;
-    margin-top: -58px;
+    width: 200px;
     .h2-top{
-      font-size: $h2__fontSize;
       color: $h2__bbColor;
+      font-size: $h2__fontSize;
       font-weight: 300;
     }
     p{
-      margin-top: 20px;
       line-height: 1.75;
+      margin-top: 20px;
     }
   }
   .left_textbox{
@@ -113,8 +117,8 @@
     position: relative;
     @include clearfix;
     img{
-      width: 50%;
       float: right;
+      width: 50%;
     }
   }
 }
@@ -144,21 +148,22 @@
     }
   }
   .kids_textbox{
-    text-align: center;
     float: left;
+    margin: -58px 0 0 -100px;
+    //margin-left: -100px;
+    //margin-top: -58px;
     position: absolute;
-    width: 200px;
+    text-align: center;
     top: 50%;
-    margin-left: -100px;
-    margin-top: -58px;
+    width: 200px;
     .h2-top{
-      font-size: $h2__fontSize;
       color: $h2__bbColor;
+      font-size: $h2__fontSize;
       font-weight: 300;
     }
     p{
-      margin-top: 20px;
       line-height: 1.75;
+      margin-top: 20px;
     }
   }
   .left_textbox{
@@ -171,16 +176,16 @@
     position: relative;
     @include clearfix;
     img{
-      width: 50%;
       float: right;
+      width: 50%;
     }
   }
 }
 
 .future_logoapp{
   td{
-    width: 25%;
     margin: 0;
+    width: 25%;
     img{
       width: 100%;
     }
@@ -189,8 +194,8 @@
 
 .kids_logoapp{
   td{
-    width: 25%;
     margin: 0;
+    width: 25%;
     img{
       width: 100%;
     }
@@ -214,29 +219,30 @@ footer{
     .footerlinks{
       line-height: 100px;
       .links{
-        text-decoration: none;
-        font-size: $g__fontSize;
         color: $g__fontColor;
-        margin-right: 52px;
         float: left;
+        font-size: $g__fontSize;
+        margin-right: 52px;
+        text-decoration: none;
       }
     }
     .SNSbutton{
       float: right;
       img{
         float: left;
-        margin-top: 25px;
-        margin-left: 30px;
-        width: 50px;
         height: 50px;
+        margin: 25px 0 0 30px;
+        //margin-left: 30px;
+        //margin-top: 25px;
+        width: 50px;
       }
     }
   }
   .copyright{
     p {
-      line-height: 30px;
-      font-size: 13px;
       color: #FFFFFF;
+      font-size: 13px;
+      line-height: 30px;
       text-align: center;
     }
   }
