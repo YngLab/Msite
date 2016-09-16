@@ -54,6 +54,15 @@
   }
 }
 
+header{
+  .links{
+    margin-right: auto;
+    font-size: 13px;
+    line-height: 30px;
+    text-decoration: none;
+  }
+}
+
 .gNav{
   .gNavli{
     border-left: solid 1px $g__fontColor;
@@ -216,7 +225,7 @@
 
 footer{
   .foot{
-    .footerlinks{
+    .footerLinks{
       line-height: 100px;
       .links{
         color: $g__fontColor;

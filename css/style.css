@@ -55,8 +55,8 @@ html {
 }
 
 header {
-  background-color: #959595;
-  color: #fdfdfd;
+  background: #595757;
+  color: #9fa0a0;
 }
 
 h2 {
@@ -142,6 +142,11 @@ a {
 
 .latestEvent {
   margin-right: -3.2%;
+}
+
+header .gHeader {
+  height: 30px;
+  width: 100%;
 }
 
 .gNav {
@@ -268,6 +273,13 @@ footer .copyright {
 .latestEvent .moreview {
   margin: 40px 3.2% 50px auto;
   width: 75px;
+}
+
+header .links {
+  margin-right: auto;
+  font-size: 13px;
+  line-height: 30px;
+  text-decoration: none;
 }
 
 .gNav .gNavli {
@@ -422,10 +434,10 @@ footer .copyright {
   margin-top: 20px;
 }
 
-footer .foot .footerlinks {
+footer .foot .footerLinks {
   line-height: 100px;
 }
-footer .foot .footerlinks .links {
+footer .foot .footerLinks .links {
   color: #9fa0a0;
   float: left;
   font-size: 14px;

@@ -11,8 +11,10 @@ html{
 }
 
 header{
-  background-color: $header_comming__bgc;
-  color: $header_comming__fontColor;
+  background: $footer__copyright;
+  color: $g__fontColor;
+  //background-color: $header_comming__bgc;
+  //color: $header_comming__fontColor;
 }
 
 h2{

@@ -16,6 +16,13 @@
   margin-right: -3.2%;
 }
 
+header{
+  .gHeader{
+    height: 30px;
+    width: 100%;
+  }
+}
+
 .gNav{
   border-right: solid 1px $g__fontColor;
   color: $g__fontColor;
