@@ -6,8 +6,8 @@
   .latestBox_future{
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
-    margin: -1px 2.75% -1px -1px;
     display: inline-block;
+    margin: -1px 2.75% -1px -1px;
     position: relative;
     .remaindays_future{
       background-color: #F29600;
@@ -48,6 +48,15 @@
   .moreview{
     margin: 40px 3.2% 50px auto;
     width: 75px;
+  }
+}
+
+header{
+  .headerLinks{
+    background: $footer__bgc;
+    color: $g__fontColor;
+    font-size: $g__fontSize;
+    text-decoration: none;
   }
 }
 
@@ -211,32 +220,33 @@
 
 footer{
   .foot{
-    .footerlinks{
+    .footerLinks{
       line-height: 100px;
       .links{
-        text-decoration: none;
-        font-size: $g__fontSize;
         color: $g__fontColor;
-        margin-right: 52px;
         float: left;
+        font-size: $g__fontSize;
+        margin-right: 52px;
+        text-decoration: none;
       }
     }
     .SNSbutton{
       float: right;
       img{
         float: left;
-        margin-top: 25px;
-        margin-left: 30px;
-        width: 50px;
         height: 50px;
+        margin: 25px 0 0 30px;
+        //margin-left: 30px;
+        //margin-top: 25px;
+        width: 50px;
       }
     }
   }
   .copyright{
     p {
-      line-height: 30px;
-      font-size: 13px;
       color: #FFFFFF;
+      font-size: 13px;
+      line-height: 30px;
       text-align: center;
     }
   }
