@@ -1,0 +1,68 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+html{
+  color: $g__fontColor;
+  font:{
+    family: 'Noto Sans Japanese', sans-serif;
+    size: $g__fontSize;
+    weight: 300;
+  }
+  line-height: 1.75em;
+}
+
+header{
+  background-color: $header_comming__bgc;
+  color: $header_comming__fontColor;
+}
+
+h2{
+  color: $h2__bbColor;
+  font-size: $h2__fontSize;
+  font-weight: 300;
+  padding: 50px 0 40px 0;
+  @include smallW;
+  @media #{$small} {
+    font-size: $h2__fontSize * .75;
+  }
+}
+
+h3{
+  font-size: $h3__fontSize;
+}
+
+.caption{
+  font-size: $cap__fontSize;
+  font-weight: 200;
+  @include smallW;
+  @media #{$small} {
+    font-size: $h2__fontSize * .75;
+  }
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  color: $g__fontColor;
+  text-decoration: none;
+}
+
+.futureColor{
+  color: $g__color-future;
+}
+
+.kidsColor{
+  color: $g__color-kids;
+}
+
+.bgcolor{
+  background-color: $g__bgc;
+}
+
+.linkText{
+  border-bottom: solid 1px $link__fontColor;
+  color: $link__fontColor;
+  font-size: 15px;
+  font-weight: 500;
+}
