@@ -55,11 +55,13 @@
 }
 
 header{
-  .links{
-    margin-right: auto;
-    font-size: 13px;
-    line-height: 30px;
-    text-decoration: none;
+  .gHeader{
+    text-align: right;
+    .links{
+      font-size: 13px;
+      line-height: 30px;
+      text-decoration: none;
+    }
   }
 }
 
@@ -220,6 +222,23 @@ header{
   .logoapp_font{
     font-size: 36px;
     margin-top: 20px;
+  }
+}
+
+.siteMap{
+  .headerElements{
+    float: left;
+    font-weight: 400;
+    //margin-left: -1px;
+    //text-align: center;
+    width: calc((100%-80px) / 6);
+  }
+  .footerElements{
+    float: left;
+    font-weight: 400;
+    //margin-left: -1px;
+    //text-align: center;
+    width: calc((100%-80px) / 6);
   }
 }
 

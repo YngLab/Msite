@@ -63,17 +63,6 @@ h2 {
   color: #727171;
   font-size: 24px;
   font-weight: 300;
-  padding: 50px 0 40px 0;
-}
-@media screen and (max-width: 768px) {
-  h2 {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  h2 {
-    font-size: 18px;
-  }
 }
 
 h3 {
@@ -149,6 +138,20 @@ header .gHeader {
   width: 100%;
 }
 
+.topcap {
+  padding: 50px 0 40px 0;
+}
+@media screen and (max-width: 768px) {
+  .topcap {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .topcap {
+    font-size: 18px;
+  }
+}
+
 .gNav {
   border-right: solid 1px #9fa0a0;
   color: #9fa0a0;
@@ -159,6 +162,10 @@ header .gHeader {
   clear: both;
   content: "";
   display: block;
+}
+
+.pageTitle {
+  margin: 20px 0 20px 0;
 }
 
 .future_entrance {
@@ -275,8 +282,10 @@ footer .copyright {
   width: 75px;
 }
 
-header .links {
-  margin-right: auto;
+header .gHeader {
+  text-align: right;
+}
+header .gHeader .links {
   font-size: 13px;
   line-height: 30px;
   text-decoration: none;
@@ -432,6 +441,17 @@ header .links {
 .logoapp_textBox .logoapp_font {
   font-size: 36px;
   margin-top: 20px;
+}
+
+.siteMap .headerElements {
+  float: left;
+  font-weight: 400;
+  width: calc((100%-80px) / 6);
+}
+.siteMap .footerElements {
+  float: left;
+  font-weight: 400;
+  width: calc((100%-80px) / 6);
 }
 
 footer .foot .footerLinks {
