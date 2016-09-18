@@ -55,7 +55,7 @@ html {
 }
 
 header {
-  background: #595757;
+  background: #9FA0A0;
   color: #9fa0a0;
 }
 
@@ -224,8 +224,8 @@ footer .foot {
   width: 100%;
 }
 footer .copyright {
-  background: #595757;
-  height: 30px;
+  background: #9FA0A0;
+  height: 26px;
   width: 100%;
 }
 
@@ -485,8 +485,7 @@ footer .foot .SNSbutton img {
 footer .copyright p {
   color: #FFFFFF;
   font-size: 13px;
-  line-height: 30px;
-  text-align: center;
+  line-height: 26px;
 }
 
 /* state */
