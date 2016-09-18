@@ -54,6 +54,17 @@
   }
 }
 
+header{
+  .gHeader{
+    text-align: right;
+    .links{
+      font-size: 13px;
+      line-height: 30px;
+      text-decoration: none;
+    }
+  }
+}
+
 .gNav{
   .gNavli{
     border-left: solid 1px $g__fontColor;
@@ -214,9 +225,37 @@
   }
 }
 
+.siteMap{
+  .top{
+    text-align: left;
+    font-weight: 400;
+    margin: 20px 0 20px 0;
+  }
+  .headerElements{
+    text-align: left;
+    font-weight: 400;
+    margin: 20px 0 20px 0;
+    //margin-left: -1px;
+    //text-align: center;
+    //width: calc((100%-80px) / 6);
+  }
+  .footerElements{
+    text-align: left;
+    font-weight: 400;
+    margin: 20px 0 20px 0;
+    //margin-left: -1px;
+    //text-align: center;
+    //width: calc((100%-80px) / 6);
+  }
+}
+
+.textMargin{
+  margin-right: 20px;
+}
+
 footer{
   .foot{
-    .footerlinks{
+    .footerLinks{
       line-height: 100px;
       .links{
         color: $g__fontColor;

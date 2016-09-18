@@ -16,12 +16,31 @@
   margin-right: -3.2%;
 }
 
+header{
+  .gHeader{
+    height: 30px;
+    width: 100%;
+  }
+}
+
+.topcap{
+  padding: 50px 0 40px 0;
+  @include smallW;
+  @media #{$small} {
+    font-size: $h2__fontSize * .75;
+  }
+}
+
 .gNav{
   border-right: solid 1px $g__fontColor;
   color: $g__fontColor;
   margin: 0px -1px 40px 0;
   width: 100%;
   @include clearfix;
+}
+
+.pageTitle{
+  margin: 20px 0 20px 0;
 }
 
 .future_entrance{

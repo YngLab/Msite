@@ -11,19 +11,16 @@ html{
 }
 
 header{
-  background-color: $header_comming__bgc;
-  color: $header_comming__fontColor;
+  background: $footer__copyright;
+  color: $g__fontColor;
+  //background-color: $header_comming__bgc;
+  //color: $header_comming__fontColor;
 }
 
 h2{
   color: $h2__bbColor;
   font-size: $h2__fontSize;
   font-weight: 300;
-  padding: 50px 0 40px 0;
-  @include smallW;
-  @media #{$small} {
-    font-size: $h2__fontSize * .75;
-  }
 }
 
 h3{

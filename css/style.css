@@ -55,25 +55,14 @@ html {
 }
 
 header {
-  background-color: #959595;
-  color: #fdfdfd;
+  background: #595757;
+  color: #9fa0a0;
 }
 
 h2 {
   color: #727171;
   font-size: 24px;
   font-weight: 300;
-  padding: 50px 0 40px 0;
-}
-@media screen and (max-width: 768px) {
-  h2 {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  h2 {
-    font-size: 18px;
-  }
 }
 
 h3 {
@@ -105,11 +94,11 @@ a {
 }
 
 .futureColor {
-  color: #F29600;
+  color: #F39800;
 }
 
 .kidsColor {
-  color: #8DC21F;
+  color: #8FC31F;
 }
 
 .bgcolor {
@@ -144,6 +133,25 @@ a {
   margin-right: -3.2%;
 }
 
+header .gHeader {
+  height: 30px;
+  width: 100%;
+}
+
+.topcap {
+  padding: 50px 0 40px 0;
+}
+@media screen and (max-width: 768px) {
+  .topcap {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .topcap {
+    font-size: 18px;
+  }
+}
+
 .gNav {
   border-right: solid 1px #9fa0a0;
   color: #9fa0a0;
@@ -156,9 +164,13 @@ a {
   display: block;
 }
 
+.pageTitle {
+  margin: 20px 0 20px 0;
+}
+
 .future_entrance {
   background-color: #ffffff;
-  border: solid 1px #F29600;
+  border: solid 1px #F39800;
   float: left;
   margin: -1px;
   width: 48.4%;
@@ -166,14 +178,14 @@ a {
 
 .kids_entrance {
   background-color: #ffffff;
-  border: solid 1px #8DC21F;
+  border: solid 1px #8FC31F;
   float: right;
   margin: -1px;
   width: 48.4%;
 }
 
 .future_logoapp {
-  background-color: #F29600;
+  background-color: #F39800;
   color: white;
   float: left;
   height: auto;
@@ -184,7 +196,7 @@ a {
 }
 
 .kids_logoapp {
-  background-color: #8DC21F;
+  background-color: #8FC31F;
   color: white;
   float: right;
   height: auto;
@@ -226,7 +238,7 @@ footer .copyright {
 }
 .latestEvent .latestBox_future {
   background-color: #ffffff;
-  border: solid 1px #F29600;
+  border: solid 1px #F39800;
   display: inline-block;
   margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
   position: relative;
@@ -270,6 +282,15 @@ footer .copyright {
   width: 75px;
 }
 
+header .gHeader {
+  text-align: right;
+}
+header .gHeader .links {
+  font-size: 13px;
+  line-height: 30px;
+  text-decoration: none;
+}
+
 .gNav .gNavli {
   border-left: solid 1px #9fa0a0;
   float: left;
@@ -280,21 +301,21 @@ footer .copyright {
 }
 
 .future_entrance .openclose {
-  background-color: #F29600;
+  background-color: #F39800;
   color: #ffffff;
   height: 26px;
   line-height: 26px;
   text-align: center;
 }
 .future_entrance .future_logo {
-  border-bottom: solid 1px #F29600;
+  border-bottom: solid 1px #F39800;
   text-align: center;
 }
 .future_entrance .future_logo img {
   width: 43.3884%;
 }
 .future_entrance .future_contents {
-  border-bottom: solid 1px #F29600;
+  border-bottom: solid 1px #F39800;
   position: relative;
 }
 .future_entrance .future_contents img {
@@ -338,14 +359,14 @@ footer .copyright {
 }
 
 .kids_entrance .openclose {
-  background-color: #8DC21F;
+  background-color: #8FC31F;
   text-align: center;
   color: #ffffff;
   height: 26px;
   line-height: 26px;
 }
 .kids_entrance .kids_logo {
-  border-bottom: solid 1px #8DC21F;
+  border-bottom: solid 1px #8FC31F;
   height: 200px;
   text-align: center;
 }
@@ -353,7 +374,7 @@ footer .copyright {
   width: 51.6528%;
 }
 .kids_entrance .kids_contents {
-  border-bottom: solid 1px #8DC21F;
+  border-bottom: solid 1px #8FC31F;
   position: relative;
 }
 .kids_entrance .kids_contents img {
@@ -422,10 +443,30 @@ footer .copyright {
   margin-top: 20px;
 }
 
-footer .foot .footerlinks {
+.siteMap .top {
+  text-align: left;
+  font-weight: 400;
+  margin: 20px 0 20px 0;
+}
+.siteMap .headerElements {
+  text-align: left;
+  font-weight: 400;
+  margin: 20px 0 20px 0;
+}
+.siteMap .footerElements {
+  text-align: left;
+  font-weight: 400;
+  margin: 20px 0 20px 0;
+}
+
+.textMargin {
+  margin-right: 20px;
+}
+
+footer .foot .footerLinks {
   line-height: 100px;
 }
-footer .foot .footerlinks .links {
+footer .foot .footerLinks .links {
   color: #9fa0a0;
   float: left;
   font-size: 14px;
