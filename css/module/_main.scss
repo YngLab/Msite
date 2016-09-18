@@ -226,20 +226,31 @@ header{
 }
 
 .siteMap{
-  .headerElements{
-    float: left;
+  .top{
+    text-align: left;
     font-weight: 400;
+    margin: 20px 0 20px 0;
+  }
+  .headerElements{
+    text-align: left;
+    font-weight: 400;
+    margin: 20px 0 20px 0;
     //margin-left: -1px;
     //text-align: center;
-    width: calc((100%-80px) / 6);
+    //width: calc((100%-80px) / 6);
   }
   .footerElements{
-    float: left;
+    text-align: left;
     font-weight: 400;
+    margin: 20px 0 20px 0;
     //margin-left: -1px;
     //text-align: center;
-    width: calc((100%-80px) / 6);
+    //width: calc((100%-80px) / 6);
   }
+}
+
+.textMargin{
+  margin-right: 20px;
 }
 
 footer{
