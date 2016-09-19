@@ -9,7 +9,16 @@
 <!-- たぶんここまで -->
 
 <link rel = "stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/module/flexslider.css">
 <link rel = "shortcut icon" href="../images/hmp.ico">
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src = "../js/myscript.js"></script>
+<script src="../js/jquery.flexslider.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $(".flexslider").flexslider();
+  });
+</script>
 <header>
   <div class = "gHeader">
     <div class = "headrLinks wrap">
@@ -41,7 +50,27 @@
   </div>
 </div>
 <!-- 以下body -->
+<!-- 1つ目のコンテンツ [開始] -->
+<div id = "modal-content-01" class = "modal-content">
+  <div class = "flexslider">
+    <ul class = "slides">
+      <li><img src = "../images/sample_relatestimg.jpg" class = "exmenu_slide"></li>
+      <li><img src = "../images/sample_relatestimg2.jpg" class = "exmenu_slide"></li>
+      <li><img src = "../images/sample_relatestimg.jpg" class = "exmenu_slide"></li>
+      <li><img src = "../images/sample_relatestimg.jpg" class = "exmenu_slide"></li>
+    </ul>
+  </div>
+  <div class = "exmenu_title_future">
+    <p>ハコダテミュージカル</p>
+  </div>
+  <a id = "modal-close">
+    <img src = "../images/close.png" class = "close" alt = "閉じる">
+  </a>
+</div>
+<!-- 1つ目のコンテンツ [終了] -->
+
 <div class = "FCH_logo">
+  <img src = "../images/FCHlogo_vertical.svg" class = "FCHlogo_vertical" alt = "はこだてみらい館ロゴ">
 </div>
 <div class = "wrap">
   <div class = "FCH_explain">
@@ -60,7 +89,7 @@
   </div>
 </div>
 <div id = "all_experiencemenu">
-  <div class = "experiencemenu exmenu_leftText">
+  <div class = "experiencemenu exmenu_leftText modal-syncer" data-target = "modal-content-01">
     <div class = "exmenu_textBox_wrap">
       <div class = "exmenu_textBox">
         <div class = "exmenu_device">
