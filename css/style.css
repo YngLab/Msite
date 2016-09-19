@@ -204,6 +204,11 @@ footer .copyright {
   width: 100%;
 }
 
+.FCH_logo {
+  width: 100%;
+  height: calc(100vh - 174px);
+}
+
 .FCH_explain {
   margin-top: 50px;
 }
@@ -511,8 +516,7 @@ footer .copyright p {
 }
 
 .FCH_logo {
-  width: 100%;
-  height: calc(100% - 174px);
+  background-color: #F39800;
 }
 
 .FCH_explain {
