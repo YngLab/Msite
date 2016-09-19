@@ -36,10 +36,6 @@ header{
   @include clearfix;
 }
 
-.pageTitle{
-  margin: 20px 0 20px 0;
-}
-
 .future_entrance{
   background-color: $boxcolor;
   border: solid 1px $g__color-future;
@@ -141,3 +137,11 @@ footer{
 }
 
 //↑加納↓高居
+
+.pageTitle{
+  margin-top: 12px;
+  .titleText{
+    padding-left: 24px;
+  }
+}
+

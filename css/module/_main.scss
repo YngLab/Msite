@@ -382,3 +382,15 @@ footer{
 
 
 //↑加納↓高居
+
+.pageTitle{
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+  color: $title__color;
+  font-size: $title__fontSize;
+  font-weight: 500;
+  .titleText{
+    border-left: solid 1px;
+    line-height: 63px;
+  }
+}
