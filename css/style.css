@@ -83,11 +83,11 @@ a {
 }
 
 .futureColor {
-  color: #F39800;
+  color: #f39800;
 }
 
 .kidsColor {
-  color: #8FC31F;
+  color: #8fc31f;
 }
 
 .bgcolor {
@@ -145,7 +145,7 @@ header .gHeader {
 
 .future_entrance {
   background-color: #ffffff;
-  border: solid 1px #F39800;
+  border: solid 1px #f39800;
   float: left;
   margin: -1px;
   width: 48.4%;
@@ -153,14 +153,14 @@ header .gHeader {
 
 .kids_entrance {
   background-color: #ffffff;
-  border: solid 1px #8FC31F;
+  border: solid 1px #8fc31f;
   float: right;
   margin: -1px;
   width: 48.4%;
 }
 
 .future_logoapp {
-  background-color: #F39800;
+  background-color: #f39800;
   color: white;
   float: left;
   height: auto;
@@ -171,7 +171,7 @@ header .gHeader {
 }
 
 .kids_logoapp {
-  background-color: #8FC31F;
+  background-color: #8fc31f;
   color: white;
   float: right;
   height: auto;
@@ -262,13 +262,13 @@ footer .copyright {
 }
 .latestEvent .latestBox_future {
   background-color: #ffffff;
-  border: solid 1px #F39800;
+  border: solid 1px #f39800;
   display: inline-block;
   margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
   position: relative;
 }
 .latestEvent .latestBox_future .remaindays_future {
-  background-color: #F39800;
+  background-color: #f39800;
   height: 26px;
   left: 0px;
   position: absolute;
@@ -325,21 +325,21 @@ header .gHeader .links {
 }
 
 .future_entrance .openclose {
-  background-color: #F39800;
+  background-color: #f39800;
   color: #ffffff;
   height: 26px;
   line-height: 26px;
   text-align: center;
 }
 .future_entrance .future_logo {
-  border-bottom: solid 1px #F39800;
+  border-bottom: solid 1px #f39800;
   text-align: center;
 }
 .future_entrance .future_logo img {
   width: 43.3884%;
 }
 .future_entrance .future_contents {
-  border-bottom: solid 1px #F39800;
+  border-bottom: solid 1px #f39800;
   position: relative;
 }
 .future_entrance .future_contents img {
@@ -383,14 +383,14 @@ header .gHeader .links {
 }
 
 .kids_entrance .openclose {
-  background-color: #8FC31F;
+  background-color: #8fc31f;
   text-align: center;
   color: #ffffff;
   height: 26px;
   line-height: 26px;
 }
 .kids_entrance .kids_logo {
-  border-bottom: solid 1px #8FC31F;
+  border-bottom: solid 1px #8fc31f;
   height: 200px;
   text-align: center;
 }
@@ -398,7 +398,7 @@ header .gHeader .links {
   width: 51.6528%;
 }
 .kids_entrance .kids_contents {
-  border-bottom: solid 1px #8FC31F;
+  border-bottom: solid 1px #8fc31f;
   position: relative;
 }
 .kids_entrance .kids_contents img {
@@ -516,11 +516,11 @@ footer .copyright p {
 }
 
 .FCH_logo {
-  background-color: #F39800;
+  background-color: #f39800;
 }
 
 .FCH_explain {
-  color: #F39800;
+  color: #f39800;
   font-size: 24px;
   line-height: 1.75em;
   text-align: center;
@@ -576,7 +576,7 @@ footer .copyright p {
 }
 .exmenu_textBox .exmenu_title {
   font-size: 21px;
-  color: #F39800;
+  color: #f39800;
   font-weight: 400;
   margin-top: 19px;
 }
@@ -590,13 +590,13 @@ footer .copyright p {
 
 .info_table {
   text-align: left;
-  border-top: solid 1px #F39800;
+  border-top: solid 1px #f39800;
   width: 100%;
 }
 .info_table tr {
   height: 50px;
   width: 100%;
-  border-bottom: solid 1px #F39800;
+  border-bottom: solid 1px #f39800;
   border-style: dotted;
 }
 .info_table .adFee {
@@ -607,7 +607,7 @@ footer .copyright p {
   padding-left: 14px;
   padding-top: 17px;
   background-color: #f7f8f8;
-  color: #F39800;
+  color: #f39800;
   font-size: 13px;
   font-weight: 400;
 }
@@ -626,6 +626,41 @@ footer .copyright p {
 .pageTitle .titleText {
   border-left: solid 1px;
   line-height: 63px;
+}
+
+label {
+  background: green;
+  color: #fff;
+  padding: 10px;
+  display: block;
+  margin: 0;
+  border: 1px solid #fff;
+}
+
+input[type="checkbox"].on-off {
+  display: none;
+}
+input[type="checkbox"].on-off + ul {
+  height: 0;
+  overflow: hidden;
+}
+
+input[type="checkbox"].on-off:checked + ul {
+  height: 200px;
+}
+
+.menu ul {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu li {
+  padding: 5px;
 }
 
 /* state */
