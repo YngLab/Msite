@@ -143,10 +143,6 @@ header .gHeader {
   display: block;
 }
 
-.pageTitle {
-  margin: 20px 0 20px 0;
-}
-
 .future_entrance {
   background-color: #ffffff;
   border: solid 1px #F39800;
@@ -243,6 +239,13 @@ footer .copyright {
 .exmenu_pic {
   width: 75%;
   height: 25vw;
+}
+
+.pageTitle {
+  margin-top: 12px;
+}
+.pageTitle .titleText {
+  padding-left: 24px;
 }
 
 /* module */
@@ -459,6 +462,9 @@ header .gHeader .links {
   margin-top: 20px;
 }
 
+.siteMap {
+  line-height: 1.75em;
+}
 .siteMap .top {
   text-align: left;
   font-weight: 400;
@@ -592,6 +598,18 @@ footer .copyright p {
 }
 .info_table td {
   padding-left: 14px;
+}
+
+.pageTitle {
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+  color: #3e3a39;
+  font-size: 21px;
+  font-weight: 500;
+}
+.pageTitle .titleText {
+  border-left: solid 1px;
+  line-height: 63px;
 }
 
 /* state */
