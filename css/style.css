@@ -510,6 +510,11 @@ footer .copyright p {
   line-height: 26px;
 }
 
+.FCH_logo {
+  width: 100%;
+  height: calc(100% - 174px);
+}
+
 .FCH_explain {
   color: #F39800;
   font-size: 24px;
@@ -518,16 +523,19 @@ footer .copyright p {
 }
 
 .heading {
-  margin: 50px 0 40px 0px;
+  margin: 50px 0 40px 0;
   float: left;
 }
 .heading p {
   color: #727171;
+  font-size: 24px;
+  margin-left: 24px;
 }
 
 .headmark {
   width: 6px;
   height: 6px;
+  margin-top: 7px;
   border: 3px solid #727171;
   float: left;
   display: inline-block;
@@ -587,6 +595,9 @@ footer .copyright p {
   border-bottom: solid 1px #F39800;
   border-style: dotted;
 }
+.info_table .adFee {
+  height: 71px;
+}
 .info_table th {
   width: 21.5%;
   padding-left: 14px;
@@ -598,6 +609,7 @@ footer .copyright p {
 }
 .info_table td {
   padding-left: 14px;
+  line-height: 1.75em;
 }
 
 .pageTitle {
