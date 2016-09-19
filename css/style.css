@@ -459,6 +459,9 @@ header .gHeader .links {
   margin-top: 20px;
 }
 
+.siteMap {
+  line-height: 1.75em;
+}
 .siteMap .top {
   text-align: left;
   font-weight: 400;
