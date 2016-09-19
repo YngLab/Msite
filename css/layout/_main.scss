@@ -26,10 +26,6 @@ header{
 
 .topcap{
   padding: 50px 0 40px 0;
-  @include smallW;
-  @media #{$small} {
-    font-size: $h2__fontSize * .75;
-  }
 }
 
 .gNav{
@@ -96,12 +92,12 @@ header{
 
 footer{
   .foot{
-    background: $footer__bgc;
+    background: #efefef;
     height: 100px;
     width: 100%;
   }
   .copyright{
-    background: $footer__copyright;
+    background: #9fa0a0;
     height: 26px;
     width: 100%;
   }

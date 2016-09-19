@@ -6,20 +6,17 @@ html{
   font:{
     family: 'Noto Sans Japanese', sans-serif;
     size: $g__fontSize;
-    weight: 300;
+    weight: 200;
   }
   line-height: 1.75em;
 }
 
 header{
-  background: $footer__copyright;
   color: $g__fontColor;
-  //background-color: $header_comming__bgc;
-  //color: $header_comming__fontColor;
 }
 
 h2{
-  color: $h2__bbColor;
+  color: $h2__color;
   font-size: $h2__fontSize;
   font-weight: 300;
 }
@@ -30,11 +27,7 @@ h3{
 
 .caption{
   font-size: $cap__fontSize;
-  font-weight: 200;
-  @include smallW;
-  @media #{$small} {
-    font-size: $h2__fontSize * .75;
-  }
+  font-weight: 400;
 }
 
 li{
@@ -55,7 +48,7 @@ a{
 }
 
 .bgcolor{
-  background-color: $g__bgc;
+  background-color: $bg__color;
 }
 
 .linkText{
