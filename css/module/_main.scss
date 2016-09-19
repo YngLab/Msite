@@ -227,6 +227,7 @@ header{
 }
 
 .siteMap{
+  line-height: 1.75em;
   .top{
     text-align: left;
     font-weight: 400;
@@ -288,6 +289,10 @@ footer{
   }
 }
 
+.FCH_logo{
+  background-color: $g__color-future;
+}
+
 .FCH_explain{
   color: $g__color-future;
   font-size: $h2__fontSize;
@@ -296,15 +301,18 @@ footer{
 }
 
 .heading{
-  margin: 50px 0 40px 0px;
+  margin: 50px 0 40px 0;
   float: left;
   p{
     color: $h2__color;
+    font-size: $h2__fontSize;
+    margin-left: 24px;
   }
 }
 .headmark{
   width: 6px;
   height: 6px;
+  margin-top: 7px;
   border: 3px solid $h2__color;
   float: left;
   display: inline-block;
@@ -363,6 +371,9 @@ footer{
     border-bottom: solid 1px $g__color-future;
     border-style: dotted;
   }
+  .adFee{
+    height: 71px;
+  }
   th{
     width: 21.5%;
     padding-left: 14px;
@@ -374,6 +385,7 @@ footer{
   }
   td{
     padding-left: 14px;
+    line-height: 1.75em;
   }
 }
 
@@ -381,3 +393,15 @@ footer{
 
 
 //↑加納↓高居
+
+.pageTitle{
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+  color: $title__color;
+  font-size: $title__fontSize;
+  font-weight: 500;
+  .titleText{
+    border-left: solid 1px;
+    line-height: 63px;
+  }
+}
