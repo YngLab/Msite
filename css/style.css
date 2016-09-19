@@ -50,12 +50,11 @@ html {
   color: #9fa0a0;
   font-family: 'Noto Sans Japanese', sans-serif;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.75em;
 }
 
 header {
-  background: #9FA0A0;
   color: #9fa0a0;
 }
 
@@ -71,17 +70,7 @@ h3 {
 
 .caption {
   font-size: 13px;
-  font-weight: 200;
-}
-@media screen and (max-width: 768px) {
-  .caption {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .caption {
-    font-size: 18px;
-  }
+  font-weight: 400;
 }
 
 li {
@@ -102,7 +91,7 @@ a {
 }
 
 .bgcolor {
-  background-color: #f7f7f7;
+  background-color: #f7f8f8;
 }
 
 .linkText {
@@ -140,16 +129,6 @@ header .gHeader {
 
 .topcap {
   padding: 50px 0 40px 0;
-}
-@media screen and (max-width: 768px) {
-  .topcap {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .topcap {
-    font-size: 18px;
-  }
 }
 
 .gNav {
@@ -224,7 +203,7 @@ footer .foot {
   width: 100%;
 }
 footer .copyright {
-  background: #9FA0A0;
+  background: #9fa0a0;
   height: 26px;
   width: 100%;
 }
@@ -594,6 +573,7 @@ footer .copyright p {
 .info_table {
   text-align: left;
   border-top: solid 1px #F39800;
+  width: 100%;
 }
 .info_table tr {
   height: 50px;
@@ -605,7 +585,7 @@ footer .copyright p {
   width: 21.5%;
   padding-left: 14px;
   padding-top: 17px;
-  background-color: #f7f7f7;
+  background-color: #f7f8f8;
   color: #F39800;
   font-size: 13px;
   font-weight: 400;
