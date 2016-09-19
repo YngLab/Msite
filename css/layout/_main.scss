@@ -1,3 +1,4 @@
+@charset "UTF-8";
 //We cannot type Japanese, maybe using japanese make error.
 
 .instaPic{
@@ -104,6 +105,43 @@ footer{
     height: 26px;
     width: 100%;
   }
+}
+
+.FCH_explain{
+  margin-top: 50px;
+}
+
+.experiencemenu{
+  @include clearfix;
+  border-bottom: solid 1px #9FA0A0;
+}
+
+.exmenu_leftText{
+  .exmenu_textBox_wrap{
+    float: left;
+  }
+  .exmenu_pic{
+    float: right;
+  }
+}
+
+.exmenu_rightText{
+  .exmenu_textBox_wrap{
+    float: right;
+  }
+  .exmenu_pic{
+    float: left;
+  }
+}
+
+.exmenu_textBox_wrap{
+  width: 25%;
+  height: 25vw;
+}
+
+.exmenu_pic{
+  width: 75%;
+  height: 25vw;
 }
 
 //↑加納↓高居

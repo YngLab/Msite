@@ -7,8 +7,6 @@ $h3__fontSize: 21px;
 
 $cap__fontSize: 13px;
 
-$h3__fontSize: 16px;
-
 $pc__w: 1080px;
 $g__fontSize: 14px;
 
@@ -83,4 +81,8 @@ $footer__copyright: #9FA0A0;
   @media #{$small} {
     width: 100%;
   }
+}
+
+@mixin headingMark{
+
 }
