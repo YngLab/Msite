@@ -628,13 +628,28 @@ footer .copyright p {
   line-height: 63px;
 }
 
-label {
-  background: green;
-  color: #fff;
-  padding: 10px;
+.menu {
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 40px;
+}
+.menu ul {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  padding: 5px;
+}
+.menu label {
+  border-top: 1px solid #dddddd;
   display: block;
   margin: 0;
-  border: 1px solid #fff;
+  padding: 24px 0 24px 0;
 }
 
 input[type="checkbox"].on-off {
@@ -646,21 +661,7 @@ input[type="checkbox"].on-off + ul {
 }
 
 input[type="checkbox"].on-off:checked + ul {
-  height: 200px;
-}
-
-.menu ul {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.menu li {
-  padding: 5px;
+  height: 100px;
 }
 
 /* state */
