@@ -1,3 +1,4 @@
+@charset "UTF-8";
 //We cannot type Japanese, maybe using japanese make error.
 .latestEvent{
   font-size: 0;
@@ -12,7 +13,7 @@
     //margin: -1px 2.75% -1px -1px;
     position: relative;
     .remaindays_future{
-      background-color: #F29600;
+      background-color: $g__color-future;
       height: 26px;
       left: 0px;
       position: absolute;
@@ -286,5 +287,96 @@ footer{
     }
   }
 }
+
+.FCH_explain{
+  color: $g__color-future;
+  font-size: $h2__fontSize;
+  line-height: 1.75em;
+  text-align: center;
+}
+
+.heading{
+  margin: 50px 0 40px 0px;
+  float: left;
+  p{
+    color: $h2__bbColor;
+  }
+}
+.headmark{
+  width: 6px;
+  height: 6px;
+  border: 3px solid $h2__bbColor;
+  float: left;
+  display: inline-block;
+}
+
+#all_experiencemenu{
+  border-top: solid 1px #9FA0A0;
+}
+
+.experiencemenu{
+  border-bottom: solid 1px #9FA0A0;
+}
+
+.exmenu_textBox_wrap{
+  position: relative;
+}
+
+.exmenu_textBox{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 210px;
+  height: 150px;
+  vertical-align: middle;
+  text-align: center;
+  .exmenu_device{
+    font-size: $cap__fontSize;
+    color: $dark__fontColor;
+    font-weight: 400;
+  }
+  .exmenu_title{
+    font-size: $h3__fontSize;
+    color: $g__color-future;
+    font-weight: 400;
+    margin-top: 19px;
+  }
+  .exmenu_detail{
+    font-size: $g__fontSize;
+    color: $g__fontColor;
+    font-weight: 200;
+    margin-top: 30px;
+    line-height: 1.75em;
+  }
+}
+
+.info_table{
+  text-align: left;
+  border-top: solid 1px $g__color-future;
+  tr{
+    height: 50px;
+    width: 100%;
+    border-bottom: solid 1px $g__color-future;
+    border-style: dotted;
+  }
+  th{
+    width: 21.5%;
+    padding-left: 14px;
+    padding-top: 17px;
+    background-color: $g__bgc;
+    color: $g__color-future;
+    font-size: $cap__fontSize;
+    font-weight: 400;
+  }
+  td{
+    padding-left: 14px;
+  }
+}
+
+
+
 
 //↑加納↓高居
