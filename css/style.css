@@ -247,7 +247,7 @@ footer .copyright {
 }
 
 .pageTitle {
-  margin-top: 12px;
+  margin: 12px 0 50px 0;
 }
 .pageTitle .titleText {
   padding-left: 24px;
@@ -473,17 +473,17 @@ header .gHeader .links {
 .siteMap .top {
   text-align: left;
   font-weight: 400;
-  margin: 15px 0 15px 0;
+  margin-bottom: 30px;
 }
 .siteMap .headerElements {
   text-align: left;
   font-weight: 400;
-  margin: 15px 0 15px 0;
+  margin-bottom: 30px;
 }
 .siteMap .footerElements {
   text-align: left;
   font-weight: 400;
-  margin: 15px 0 15px 0;
+  margin-bottom: 30px;
 }
 
 .textMargin {
