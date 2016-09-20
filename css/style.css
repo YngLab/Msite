@@ -631,6 +631,7 @@ footer .copyright p {
 .menu {
   border-bottom: 1px solid #dddddd;
   margin-bottom: 40px;
+  width: 70%;
 }
 .menu ul {
   -webkit-transition: all 0.5s;
@@ -638,6 +639,7 @@ footer .copyright p {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
+  line-height: 1.75em;
   list-style: none;
   margin: 0;
   padding: 0;
