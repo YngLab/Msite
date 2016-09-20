@@ -394,6 +394,14 @@ footer{
 
 //↑加納↓高居
 
+.lineSpace{
+  line-height: 1.75em;
+}
+/*
+.space-f-text{
+  margin-bottom: 24px;
+}
+*/
 .pageTitle{
   border-bottom: solid 1px;
   border-top: solid 1px;
@@ -403,5 +411,11 @@ footer{
   .titleText{
     border-left: solid 1px;
     line-height: 63px;
+  }
+}
+
+.archives{
+  .headmarkMargin{
+    margin: 0 0 24px 24px;
   }
 }
