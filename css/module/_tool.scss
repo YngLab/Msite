@@ -13,30 +13,36 @@
     transition: all 0.5s;
     line-height: 1.75em;
     list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  li{
-    padding: 5px;
+    //margin: 0;
+    //padding: 0;
   }
   label{
     border-top: 1px solid $accordion__border;
     display: block;
-    margin: 0;
+    //margin: 0;
     padding: $h2__fontSize 0 $h2__fontSize 0;
   }
-}
-
-input[type = "checkbox"].on-off{
-  display: none;
-  +ul{
-    height: 0;
-    overflow: hidden;
+  input[type = "checkbox"].on-off{
+    display: none;
+    +ul{
+      height: 0;
+      overflow: hidden;
+    }
   }
-}
-
-input[type = "checkbox"].on-off:checked{
-  +ul{
-    height: 100px;
+  input[type = "checkbox"].on-off:checked{
+    +ul{
+      height: 100px;
+    }
   }
+  .btn{
+    float: right;
+    margin-right: 20px;
+    //transition: all 0.5s ease;
+    //-webkit-transition: all 0.5s ease;
+  }/*
+  .btn01:hover{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+  }
+  */
 }
