@@ -272,14 +272,17 @@ footer .copyright {
 }
 
 .p-layout {
-  height: 1080px;
+  height: calc(100vh - 30px - 54px - (65px + 50px) - 126px);
+  position: relative;
   width: 100%;
 }
 
 .p-centering {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
 }
 
 .p-margin {
