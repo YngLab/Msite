@@ -119,7 +119,7 @@ html[xmlns] .flexslider .slides {
   display: block;
   width: 12px;
   height: 20px;
-  margin: 40px 40px 0;
+  margin: 0 40px 0;
   padding: 10px 10px 10px 10px;
   position: absolute;
   top: 50%;
@@ -238,7 +238,6 @@ html[xmlns] .flexslider .slides {
   /*background: rgba(0, 0, 0, 0.9);*/
   cursor: default;
 }
-
 .flexslider .flex-prev{
   opacity: 1; 
   left: -10px; 
