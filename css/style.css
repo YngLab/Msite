@@ -237,6 +237,30 @@ footer .copyright {
   height: 25vw;
 }
 
+.eventArchive_textBox_wrap {
+  width: 50%;
+  height: 25vw;
+}
+
+.eventArchive_pic {
+  width: 50%;
+  height: 25vw;
+}
+
+.eventArchive_leftText .eventArchive_textBox_wrap {
+  float: left;
+}
+.eventArchive_leftText .eventArchive_pic {
+  float: right;
+}
+
+.eventArchive_rightText .eventArchive_textBox_wrap {
+  float: right;
+}
+.eventArchive_rightText .eventArchive_pic {
+  float: left;
+}
+
 .exmenu_leftText .exmenu_textBox_wrap {
   float: left;
 }
@@ -694,6 +718,11 @@ footer .copyright p {
 .eventmenu {
   border-bottom: solid 1px #9fa0a0;
 }
+.eventmenu:after {
+  clear: both;
+  content: "";
+  display: block;
+}
 
 .event_textBox_wrap {
   position: relative;
@@ -714,6 +743,7 @@ footer .copyright p {
   line-height: 1.75em;
   color: #727171;
   float: left;
+  margin-bottom: 7px;
 }
 .event_textBox .event_point .event_point_cap {
   float: left;
@@ -721,7 +751,7 @@ footer .copyright p {
 }
 .event_textBox .event_point .event_point_contents {
   float: left;
-  margin-left: 14px;
+  margin: 0 42px 0 14px;
 }
 .event_textBox .event_detail {
   font-size: 14px;
@@ -731,6 +761,18 @@ footer .copyright p {
   float: right;
   margin-right: 40px;
   width: calc(100% - 300px);
+}
+
+.eventArchive_textBox_wrap {
+  position: relative;
+}
+.eventArchive_textBox_wrap .eventArchive_detail {
+  font-size: 14px;
+  color: #9fa0a0;
+  font-weight: 200;
+  line-height: 1.75em;
+  float: left;
+  width: calc(100% - 40px);
 }
 
 .button {

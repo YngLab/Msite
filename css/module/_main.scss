@@ -416,6 +416,7 @@ footer{
 
 .eventmenu{
   border-bottom: solid 1px $g__fontColor;
+  @include clearfix;
 }
 
 .event_textBox_wrap{
@@ -436,13 +437,14 @@ footer{
     line-height: 1.75em;
     color: $dark__fontColor;
     float: left;
+    margin-bottom: 7px;
     .event_point_cap{
       float: left;
       font-weight: 400;
     }
     .event_point_contents{
       float: left;
-      margin-left: 14px;
+      margin: 0 42px 0 14px;
     }
   }
   .event_detail{
@@ -455,6 +457,19 @@ footer{
     width: calc(100% - 300px);
   }
 }
+
+.eventArchive_textBox_wrap{
+  position: relative;
+  .eventArchive_detail{
+    font-size: $g__fontSize;
+    color: $g__fontColor;
+    font-weight: 200;
+    line-height: 1.75em;
+    float: left;
+    width: calc(100% - 40px);
+  }
+}
+
 .button{
   position: absolute;
   width: 88px;
