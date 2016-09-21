@@ -210,7 +210,16 @@ footer .copyright {
   height: calc(100vh - 174px);
 }
 
+.KPH_logo {
+  width: 100%;
+  height: calc(100vh - 174px);
+}
+
 .FCH_explain {
+  margin-top: 50px;
+}
+
+.KPH_explain {
   margin-top: 50px;
 }
 
@@ -530,8 +539,29 @@ footer .copyright p {
   margin: auto;
 }
 
+.KPH_logo {
+  background-color: #8FC31F;
+  position: relative;
+}
+.KPH_logo .KPHlogo_vertical {
+  position: absolute;
+  height: 60%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
 .FCH_explain {
   color: #F39800;
+  font-size: 24px;
+  line-height: 1.75em;
+  text-align: center;
+}
+
+.KPH_explain {
+  color: #8FC31F;
   font-size: 24px;
   line-height: 1.75em;
   text-align: center;
@@ -557,11 +587,11 @@ footer .copyright p {
 }
 
 #all_experiencemenu {
-  border-top: solid 1px #9FA0A0;
+  border-top: solid 1px #9fa0a0;
 }
 
 .experiencemenu {
-  border-bottom: solid 1px #9FA0A0;
+  border-bottom: solid 1px #9fa0a0;
 }
 
 .exmenu_textBox_wrap {
@@ -587,9 +617,14 @@ footer .copyright p {
 }
 .exmenu_textBox .exmenu_title {
   font-size: 21px;
-  color: #F39800;
   font-weight: 400;
   margin-top: 19px;
+}
+.exmenu_textBox .FCHcolor {
+  color: #F39800;
+}
+.exmenu_textBox .KPHcolor {
+  color: #8FC31F;
 }
 .exmenu_textBox .exmenu_detail {
   font-size: 14px;
@@ -599,32 +634,50 @@ footer .copyright p {
   line-height: 1.75em;
 }
 
-.info_table {
+.info_table_FCH, .info_table_KPH {
   text-align: left;
-  border-top: solid 1px #F39800;
   width: 100%;
 }
-.info_table tr {
+.info_table_FCH tr, .info_table_KPH tr {
   height: 50px;
   width: 100%;
-  border-bottom: solid 1px #F39800;
-  border-style: dotted;
 }
-.info_table .adFee {
+.info_table_FCH .adFee, .info_table_KPH .adFee {
   height: 71px;
 }
-.info_table th {
+.info_table_FCH th, .info_table_KPH th {
   width: 21.5%;
   padding-left: 14px;
   padding-top: 17px;
   background-color: #f7f8f8;
-  color: #F39800;
   font-size: 13px;
   font-weight: 400;
 }
-.info_table td {
+.info_table_FCH td, .info_table_KPH td {
   padding-left: 14px;
   line-height: 1.75em;
+}
+
+.info_table_FCH {
+  border-top: solid 1px #F39800;
+}
+.info_table_FCH tr {
+  border-bottom: solid 1px #F39800;
+  border-style: dotted;
+}
+.info_table_FCH th {
+  color: #F39800;
+}
+
+.info_table_KPH {
+  border-top: solid 1px #8FC31F;
+}
+.info_table_KPH tr {
+  border-bottom: solid 1px #8FC31F;
+  border-style: dotted;
+}
+.info_table_KPH th {
+  color: #8FC31F;
 }
 
 /* modal-contentのCSS */
