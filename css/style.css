@@ -267,6 +267,13 @@ footer .copyright {
   display: block;
 }
 
+.pageTitle_event {
+  margin: 12px 0 0 0;
+}
+.pageTitle_event .titleText {
+  padding-left: 24px;
+}
+
 .pageTitle {
   margin: 12px 0 50px 0;
 }
@@ -635,12 +642,14 @@ footer .copyright p {
   font-size: 15px;
   font-weight: 400;
   color: #9fa0a0;
+  border-bottom: solid 1px #9fa0a0;
 }
 .monthSort .active {
   font-size: 17px;
   font-weight: 400;
   margin-top: -1px;
   color: #727171;
+  border: none;
 }
 
 .archive {
@@ -656,11 +665,17 @@ footer .copyright p {
   font-size: 15px;
   font-weight: 400;
   color: #9fa0a0;
+  border-bottom: solid 1px #9fa0a0;
+}
+.archive .archive_year {
+  font-size: 13px;
+  border: none;
 }
 .archive .active {
   font-size: 17px;
   font-weight: 400;
   color: #727171;
+  border: none;
 }
 
 .headmark {
@@ -685,23 +700,65 @@ footer .copyright p {
   float: right;
 }
 
-.event_textBox .event_device {
-  font-size: 13px;
-  color: #727171;
-  font-weight: 400;
+.event_textBox {
+  margin: 24px 0 0 50px;
+  position: relative;
 }
 .event_textBox .event_title {
-  font-size: 21px;
-  color: #F39800;
+  font-size: 24px;
+  color: #f39800;
   font-weight: 400;
-  margin-top: 19px;
+  margin-bottom: 24px;
+}
+.event_textBox .event_point {
+  line-height: 1.75em;
+  color: #727171;
+  float: left;
+}
+.event_textBox .event_point .event_point_cap {
+  float: left;
+  font-weight: 400;
+}
+.event_textBox .event_point .event_point_contents {
+  float: left;
+  margin-left: 14px;
 }
 .event_textBox .event_detail {
   font-size: 14px;
   color: #9fa0a0;
   font-weight: 200;
-  margin-top: 30px;
   line-height: 1.75em;
+  float: right;
+  margin-right: 40px;
+  width: calc(100% - 300px);
+}
+
+.button {
+  position: absolute;
+  width: 88px;
+  height: 36px;
+  border: 1px solid #727171;
+  color: #727171;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+}
+.button p {
+  display: inline;
+  line-height: 36px;
+}
+
+.subscriptionButton {
+  bottom: 24px;
+  left: 50px;
+}
+
+.collectevent {
+  margin-top: 40px;
+  line-height: 1.75em;
+}
+.collectevent .form_guide {
+  margin-top: 24px;
 }
 
 #all_experiencemenu {
@@ -836,6 +893,18 @@ footer .copyright p {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.pageTitle_event {
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+  color: #3e3a39;
+  font-size: 21px;
+  font-weight: 500;
+}
+.pageTitle_event .titleText {
+  border-left: solid 1px;
+  line-height: 63px;
+}
+
 .lineSpace {
   line-height: 1.75em;
 }
@@ -867,9 +936,6 @@ footer .copyright p {
 }
 .menu ul {
   -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
   line-height: 1.75em;
   list-style: none;
@@ -908,7 +974,8 @@ input[type="checkbox"].on-off:checked + .element ul {
   margin-bottom: 24px;
 }
 input[type="checkbox"].on-off:checked + .element .btn {
-  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
 

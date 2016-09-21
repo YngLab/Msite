@@ -364,12 +364,14 @@ footer{
     font-size: 15px;
     font-weight: 400;
     color: $g__fontColor;
+    border-bottom: solid 1px $g__fontColor;
   }
   .active{
-      font-size: 17px;
-      font-weight: 400;
-      margin-top: -1px;
-      color: $dark__fontColor;
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: -1px;
+    color: $dark__fontColor;
+    border: none;
   }
 }
 
@@ -385,14 +387,19 @@ footer{
     font-size: 15px;
     font-weight: 400;
     color: $g__fontColor;
+    border-bottom: solid 1px $g__fontColor;
+  }
+  .archive_year{
+    font-size: $cap__fontSize;
+    border: none;
   }
   .active{
     font-size: 17px;
     font-weight: 400;
     color: $dark__fontColor;
+    border: none;
   }
 }
-
 
 .headmark{
   width: 6px;
@@ -417,23 +424,61 @@ footer{
 }
 
 .event_textBox{
-  .event_device{
-    font-size: $cap__fontSize;
-    color: $dark__fontColor;
-    font-weight: 400;
-  }
+  margin: 24px 0 0 50px ;
+  position: relative;
   .event_title{
-    font-size: $h3__fontSize;
+    font-size: $h2__fontSize;
     color: $g__color-future;
     font-weight: 400;
-    margin-top: 19px;
+    margin-bottom: 24px;
+  }
+  .event_point{
+    line-height: 1.75em;
+    color: $dark__fontColor;
+    float: left;
+    .event_point_cap{
+      float: left;
+      font-weight: 400;
+    }
+    .event_point_contents{
+      float: left;
+      margin-left: 14px;
+    }
   }
   .event_detail{
     font-size: $g__fontSize;
     color: $g__fontColor;
     font-weight: 200;
-    margin-top: 30px;
     line-height: 1.75em;
+    float: right;
+    margin-right: 40px;
+    width: calc(100% - 300px);
+  }
+}
+.button{
+  position: absolute;
+  width: 88px;
+  height: 36px;
+  border: 1px solid $dark__fontColor;
+  color: $dark__fontColor;
+  font-weight: 400;
+  font-size: $link__fontSize;
+  text-align: center;
+  p{
+    display: inline;
+    line-height: 36px;
+  }
+}
+.subscriptionButton{
+    bottom: 24px;
+    left: 50px;
+}
+
+.collectevent{
+  margin-top: 40px;
+  line-height: 1.75em;
+  .form_guide{
+    margin-top: 24px;
   }
 }
 
@@ -581,6 +626,18 @@ footer{
   width: 100%;
   height: 120%;
   background-color: rgba( 0, 0, 0, 0.6);
+}
+
+.pageTitle_event{
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+  color: $title__color;
+  font-size: $title__fontSize;
+  font-weight: 500;
+  .titleText{
+    border-left: solid 1px;
+    line-height: 63px;
+  }
 }
 
 
