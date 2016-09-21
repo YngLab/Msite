@@ -261,6 +261,21 @@ footer .copyright {
   margin-left: 75px;
 }
 
+.p-layout {
+  height: 1080px;
+  width: 100%;
+}
+
+.p-centering {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.p-margin {
+  margin-top: 41px;
+}
+
 /* module */
 .latestEvent {
   font-size: 0;
@@ -673,12 +688,12 @@ label {
 label .btn {
   bottom: 0;
   display: block;
-  height: auto;
+  height: 12px;
   margin: auto;
   position: absolute;
   right: 20px;
   top: 0;
-  width: 40px;
+  width: 20px;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
 }
