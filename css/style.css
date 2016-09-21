@@ -83,11 +83,11 @@ a {
 }
 
 .futureColor {
-  color: #F39800;
+  color: #f39800;
 }
 
 .kidsColor {
-  color: #8FC31F;
+  color: #8fc31f;
 }
 
 .bgcolor {
@@ -145,7 +145,7 @@ header .gHeader {
 
 .future_entrance {
   background-color: #ffffff;
-  border: solid 1px #F39800;
+  border: solid 1px #f39800;
   float: left;
   margin: -1px;
   width: 48.4%;
@@ -153,14 +153,14 @@ header .gHeader {
 
 .kids_entrance {
   background-color: #ffffff;
-  border: solid 1px #8FC31F;
+  border: solid 1px #8fc31f;
   float: right;
   margin: -1px;
   width: 48.4%;
 }
 
 .future_logoapp {
-  background-color: #F39800;
+  background-color: #f39800;
   color: white;
   float: left;
   height: auto;
@@ -171,7 +171,7 @@ header .gHeader {
 }
 
 .kids_logoapp {
-  background-color: #8FC31F;
+  background-color: #8fc31f;
   color: white;
   float: right;
   height: auto;
@@ -247,10 +247,33 @@ footer .copyright {
 }
 
 .pageTitle {
-  margin-top: 12px;
+  margin: 12px 0 50px 0;
 }
 .pageTitle .titleText {
   padding-left: 24px;
+}
+
+.archives {
+  float: right;
+  width: 30%;
+}
+.archives .archiveLayout {
+  margin-left: 75px;
+}
+
+.p-layout {
+  height: 1080px;
+  width: 100%;
+}
+
+.p-centering {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.p-margin {
+  margin-top: 41px;
 }
 
 /* module */
@@ -262,13 +285,13 @@ footer .copyright {
 }
 .latestEvent .latestBox_future {
   background-color: #ffffff;
-  border: solid 1px #F39800;
+  border: solid 1px #f39800;
   display: inline-block;
   margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
   position: relative;
 }
 .latestEvent .latestBox_future .remaindays_future {
-  background-color: #F39800;
+  background-color: #f39800;
   height: 26px;
   left: 0px;
   position: absolute;
@@ -325,21 +348,21 @@ header .gHeader .links {
 }
 
 .future_entrance .openclose {
-  background-color: #F39800;
+  background-color: #f39800;
   color: #ffffff;
   height: 26px;
   line-height: 26px;
   text-align: center;
 }
 .future_entrance .future_logo {
-  border-bottom: solid 1px #F39800;
+  border-bottom: solid 1px #f39800;
   text-align: center;
 }
 .future_entrance .future_logo img {
   width: 43.3884%;
 }
 .future_entrance .future_contents {
-  border-bottom: solid 1px #F39800;
+  border-bottom: solid 1px #f39800;
   position: relative;
 }
 .future_entrance .future_contents img {
@@ -383,14 +406,14 @@ header .gHeader .links {
 }
 
 .kids_entrance .openclose {
-  background-color: #8FC31F;
+  background-color: #8fc31f;
   text-align: center;
   color: #ffffff;
   height: 26px;
   line-height: 26px;
 }
 .kids_entrance .kids_logo {
-  border-bottom: solid 1px #8FC31F;
+  border-bottom: solid 1px #8fc31f;
   height: 200px;
   text-align: center;
 }
@@ -398,7 +421,7 @@ header .gHeader .links {
   width: 51.6528%;
 }
 .kids_entrance .kids_contents {
-  border-bottom: solid 1px #8FC31F;
+  border-bottom: solid 1px #8fc31f;
   position: relative;
 }
 .kids_entrance .kids_contents img {
@@ -473,17 +496,17 @@ header .gHeader .links {
 .siteMap .top {
   text-align: left;
   font-weight: 400;
-  margin: 15px 0 15px 0;
+  margin-bottom: 30px;
 }
 .siteMap .headerElements {
   text-align: left;
   font-weight: 400;
-  margin: 15px 0 15px 0;
+  margin-bottom: 30px;
 }
 .siteMap .footerElements {
   text-align: left;
   font-weight: 400;
-  margin: 15px 0 15px 0;
+  margin-bottom: 30px;
 }
 
 .textMargin {
@@ -516,11 +539,11 @@ footer .copyright p {
 }
 
 .FCH_logo {
-  background-color: #F39800;
+  background-color: #f39800;
 }
 
 .FCH_explain {
-  color: #F39800;
+  color: #f39800;
   font-size: 24px;
   line-height: 1.75em;
   text-align: center;
@@ -576,7 +599,7 @@ footer .copyright p {
 }
 .exmenu_textBox .exmenu_title {
   font-size: 21px;
-  color: #F39800;
+  color: #f39800;
   font-weight: 400;
   margin-top: 19px;
 }
@@ -590,13 +613,13 @@ footer .copyright p {
 
 .info_table {
   text-align: left;
-  border-top: solid 1px #F39800;
+  border-top: solid 1px #f39800;
   width: 100%;
 }
 .info_table tr {
   height: 50px;
   width: 100%;
-  border-bottom: solid 1px #F39800;
+  border-bottom: solid 1px #f39800;
   border-style: dotted;
 }
 .info_table .adFee {
@@ -607,7 +630,7 @@ footer .copyright p {
   padding-left: 14px;
   padding-top: 17px;
   background-color: #f7f8f8;
-  color: #F39800;
+  color: #f39800;
   font-size: 13px;
   font-weight: 400;
 }
@@ -616,6 +639,15 @@ footer .copyright p {
   line-height: 1.75em;
 }
 
+.lineSpace {
+  line-height: 1.75em;
+}
+
+/*
+.space-f-text{
+  margin-bottom: 24px;
+}
+*/
 .pageTitle {
   border-bottom: solid 1px;
   border-top: solid 1px;
@@ -626,6 +658,66 @@ footer .copyright p {
 .pageTitle .titleText {
   border-left: solid 1px;
   line-height: 63px;
+}
+
+.archives .headmarkMargin {
+  margin: 0 0 24px 24px;
+}
+
+.menu {
+  float: left;
+  width: 70%;
+}
+.menu ul {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  line-height: 1.75em;
+  list-style: none;
+}
+
+label {
+  border-top: 1px solid #dddddd;
+  color: #727171;
+  display: block;
+  position: relative;
+  padding: 24px 0 24px 0;
+}
+label .btn {
+  bottom: 0;
+  display: block;
+  height: 12px;
+  margin: auto;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 20px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+input[type="checkbox"].on-off {
+  display: none;
+}
+input[type="checkbox"].on-off + .element ul {
+  height: 0;
+  overflow: hidden;
+}
+
+input[type="checkbox"].on-off:checked + .element ul {
+  height: 200px;
+  margin-bottom: 24px;
+}
+input[type="checkbox"].on-off:checked + .element .btn {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+.borderLine {
+  border-top: 1px solid #dddddd;
+  padding-bottom: 40px;
 }
 
 /* state */

@@ -14,10 +14,12 @@ $link__fontColor: #595757;
 
 $bg__color: #f7f8f8;
 
-$g__color-kids: #8FC31F;
-$g__color-future: #F39800;
+$g__color-kids: #8fc31f;
+$g__color-future: #f39800;
 
 $boxcolor: #ffffff;
+
+$accordion__border: #dddddd;
 
 @mixin clearfix{
   &:after{
