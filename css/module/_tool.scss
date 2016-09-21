@@ -1,0 +1,64 @@
+@charset "UTF-8";
+//We cannot type Japanese, maybe using japanese make error.を殺す
+
+.menu{
+  float: left;
+  width: 70%;
+  ul{
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    line-height: 1.75em;
+    list-style: none;
+    //padding: 0;
+  }
+}
+
+label{
+  border-top: 1px solid $accordion__border;
+  color: $h2__color;
+  display: block;
+  //margin: 0;
+  position: relative;
+  padding: $h2__fontSize 0 $h2__fontSize 0;
+  .btn{
+    bottom: 0;
+    display: block;
+    height: 12px;
+    //left: 0;
+    margin: auto;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    width: 20px;
+    //float: right;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+  }
+}
+
+input[type = "checkbox"].on-off{
+  display: none;
+  +.element ul{
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+input[type = "checkbox"].on-off:checked{
+  +.element ul{
+    height: 200px;
+    margin-bottom: 24px;
+  }
+  +.element .btn{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+  }
+}
+
+.borderLine{
+  border-top: 1px solid $accordion__border;
+  padding-bottom: 40px;
+}

@@ -84,11 +84,11 @@ a {
 }
 
 .futureColor {
-  color: #F39800;
+  color: #f39800;
 }
 
 .kidsColor {
-  color: #8FC31F;
+  color: #8fc31f;
 }
 
 .bgcolor {
@@ -146,7 +146,7 @@ header .gHeader {
 
 .future_entrance {
   background-color: #ffffff;
-  border: solid 1px #F39800;
+  border: solid 1px #f39800;
   float: left;
   margin: -1px;
   width: 48.4%;
@@ -154,14 +154,14 @@ header .gHeader {
 
 .kids_entrance {
   background-color: #ffffff;
-  border: solid 1px #8FC31F;
+  border: solid 1px #8fc31f;
   float: right;
   margin: -1px;
   width: 48.4%;
 }
 
 .future_logoapp {
-  background-color: #F39800;
+  background-color: #f39800;
   color: white;
   float: left;
   height: auto;
@@ -172,7 +172,7 @@ header .gHeader {
 }
 
 .kids_logoapp {
-  background-color: #8FC31F;
+  background-color: #8fc31f;
   color: white;
   float: right;
   height: auto;
@@ -257,10 +257,33 @@ footer .copyright {
 }
 
 .pageTitle {
-  margin-top: 12px;
+  margin: 12px 0 50px 0;
 }
 .pageTitle .titleText {
   padding-left: 24px;
+}
+
+.archives {
+  float: right;
+  width: 30%;
+}
+.archives .archiveLayout {
+  margin-left: 75px;
+}
+
+.p-layout {
+  height: 1080px;
+  width: 100%;
+}
+
+.p-centering {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.p-margin {
+  margin-top: 41px;
 }
 
 /* module */
@@ -272,13 +295,13 @@ footer .copyright {
 }
 .latestEvent .latestBox_future {
   background-color: #ffffff;
-  border: solid 1px #F39800;
+  border: solid 1px #f39800;
   display: inline-block;
   margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
   position: relative;
 }
 .latestEvent .latestBox_future .remaindays_future {
-  background-color: #F39800;
+  background-color: #f39800;
   height: 26px;
   left: 0px;
   position: absolute;
@@ -335,21 +358,21 @@ header .gHeader .links {
 }
 
 .future_entrance .openclose {
-  background-color: #F39800;
+  background-color: #f39800;
   color: #ffffff;
   height: 26px;
   line-height: 26px;
   text-align: center;
 }
 .future_entrance .future_logo {
-  border-bottom: solid 1px #F39800;
+  border-bottom: solid 1px #f39800;
   text-align: center;
 }
 .future_entrance .future_logo img {
   width: 43.3884%;
 }
 .future_entrance .future_contents {
-  border-bottom: solid 1px #F39800;
+  border-bottom: solid 1px #f39800;
   position: relative;
 }
 .future_entrance .future_contents img {
@@ -393,14 +416,14 @@ header .gHeader .links {
 }
 
 .kids_entrance .openclose {
-  background-color: #8FC31F;
+  background-color: #8fc31f;
   text-align: center;
   color: #ffffff;
   height: 26px;
   line-height: 26px;
 }
 .kids_entrance .kids_logo {
-  border-bottom: solid 1px #8FC31F;
+  border-bottom: solid 1px #8fc31f;
   height: 200px;
   text-align: center;
 }
@@ -408,7 +431,7 @@ header .gHeader .links {
   width: 51.6528%;
 }
 .kids_entrance .kids_contents {
-  border-bottom: solid 1px #8FC31F;
+  border-bottom: solid 1px #8fc31f;
   position: relative;
 }
 .kids_entrance .kids_contents img {
@@ -483,17 +506,17 @@ header .gHeader .links {
 .siteMap .top {
   text-align: left;
   font-weight: 400;
-  margin: 15px 0 15px 0;
+  margin-bottom: 30px;
 }
 .siteMap .headerElements {
   text-align: left;
   font-weight: 400;
-  margin: 15px 0 15px 0;
+  margin-bottom: 30px;
 }
 .siteMap .footerElements {
   text-align: left;
   font-weight: 400;
-  margin: 15px 0 15px 0;
+  margin-bottom: 30px;
 }
 
 .textMargin {
@@ -526,7 +549,7 @@ footer .copyright p {
 }
 
 .FCH_logo {
-  background-color: #F39800;
+  background-color: #f39800;
   position: relative;
 }
 .FCH_logo .FCHlogo_vertical {
@@ -540,7 +563,7 @@ footer .copyright p {
 }
 
 .KPH_logo {
-  background-color: #8FC31F;
+  background-color: #8fc31f;
   position: relative;
 }
 .KPH_logo .KPHlogo_vertical {
@@ -554,14 +577,14 @@ footer .copyright p {
 }
 
 .FCH_explain {
-  color: #F39800;
+  color: #f39800;
   font-size: 24px;
   line-height: 1.75em;
   text-align: center;
 }
 
 .KPH_explain {
-  color: #8FC31F;
+  color: #8fc31f;
   font-size: 24px;
   line-height: 1.75em;
   text-align: center;
@@ -621,10 +644,10 @@ footer .copyright p {
   margin-top: 19px;
 }
 .exmenu_textBox .FCHcolor {
-  color: #F39800;
+  color: #f39800;
 }
 .exmenu_textBox .KPHcolor {
-  color: #8FC31F;
+  color: #8fc31f;
 }
 .exmenu_textBox .exmenu_detail {
   font-size: 14px;
@@ -659,25 +682,25 @@ footer .copyright p {
 }
 
 .info_table_FCH {
-  border-top: solid 1px #F39800;
+  border-top: solid 1px #f39800;
 }
 .info_table_FCH tr {
-  border-bottom: solid 1px #F39800;
+  border-bottom: solid 1px #f39800;
   border-style: dotted;
 }
 .info_table_FCH th {
-  color: #F39800;
+  color: #f39800;
 }
 
 .info_table_KPH {
-  border-top: solid 1px #8FC31F;
+  border-top: solid 1px #8fc31f;
 }
 .info_table_KPH tr {
-  border-bottom: solid 1px #8FC31F;
+  border-bottom: solid 1px #8fc31f;
   border-style: dotted;
 }
 .info_table_KPH th {
-  color: #8FC31F;
+  color: #8fc31f;
 }
 
 /* modal-contentのCSS */
@@ -685,7 +708,7 @@ footer .copyright p {
   width: calc(90vh + 400px);
   margin: 0;
   background: #fff;
-  border: solid 1px #F39800;
+  border: solid 1px #f39800;
   position: fixed;
   display: none;
   z-index: 2;
@@ -694,7 +717,7 @@ footer .copyright p {
 .modal-content .exmenu_title_future {
   position: absolute;
   font-size: 21px;
-  color: #F39800;
+  color: #f39800;
   font-weight: 400;
   top: 4%;
   left: 50%;
@@ -718,6 +741,15 @@ footer .copyright p {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.lineSpace {
+  line-height: 1.75em;
+}
+
+/*
+.space-f-text{
+  margin-bottom: 24px;
+}
+*/
 .pageTitle {
   border-bottom: solid 1px;
   border-top: solid 1px;
@@ -728,6 +760,66 @@ footer .copyright p {
 .pageTitle .titleText {
   border-left: solid 1px;
   line-height: 63px;
+}
+
+.archives .headmarkMargin {
+  margin: 0 0 24px 24px;
+}
+
+.menu {
+  float: left;
+  width: 70%;
+}
+.menu ul {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  line-height: 1.75em;
+  list-style: none;
+}
+
+label {
+  border-top: 1px solid #dddddd;
+  color: #727171;
+  display: block;
+  position: relative;
+  padding: 24px 0 24px 0;
+}
+label .btn {
+  bottom: 0;
+  display: block;
+  height: 12px;
+  margin: auto;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  width: 20px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+input[type="checkbox"].on-off {
+  display: none;
+}
+input[type="checkbox"].on-off + .element ul {
+  height: 0;
+  overflow: hidden;
+}
+
+input[type="checkbox"].on-off:checked + .element ul {
+  height: 200px;
+  margin-bottom: 24px;
+}
+input[type="checkbox"].on-off:checked + .element .btn {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+.borderLine {
+  border-top: 1px solid #dddddd;
+  padding-bottom: 40px;
 }
 
 /* state */
