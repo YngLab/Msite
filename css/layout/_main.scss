@@ -109,8 +109,17 @@ footer{
 }
 
 .experiencemenu{
-  @include clearfix;
   border-bottom: solid 1px #9FA0A0;
+}
+
+.event_textBox_wrap{
+  width: 75%;
+  height: 25vw;
+}
+
+.event_pic{
+  width: 25%;
+  height: 25vw;
 }
 
 .exmenu_leftText{
@@ -139,6 +148,10 @@ footer{
 .exmenu_pic{
   width: 75%;
   height: 25vw;
+}
+
+.heading{
+  @include clearfix;
 }
 
 //↑加納↓高居
