@@ -232,12 +232,12 @@ header{
   .top{
     text-align: left;
     font-weight: 400;
-    margin: 15px 0 15px 0;
+    margin-bottom: 30px;
   }
   .headerElements{
     text-align: left;
     font-weight: 400;
-    margin: 15px 0 15px 0;
+    margin-bottom: 30px;
     //margin-left: -1px;
     //text-align: center;
     //width: calc((100%-80px) / 6);
@@ -245,7 +245,7 @@ header{
   .footerElements{
     text-align: left;
     font-weight: 400;
-    margin: 15px 0 15px 0;
+    margin-bottom: 30px;
     //margin-left: -1px;
     //text-align: center;
     //width: calc((100%-80px) / 6);
@@ -292,10 +292,41 @@ footer{
 
 .FCH_logo{
   background-color: $g__color-future;
+  position: relative;
+  .FCHlogo_vertical{
+    position: absolute;
+    height: 60%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+.KPH_logo{
+  background-color: $g__color-kids;
+  position: relative;
+  .KPHlogo_vertical{
+    position: absolute;
+    height: 60%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
 }
 
 .FCH_explain{
   color: $g__color-future;
+  font-size: $h2__fontSize;
+  line-height: 1.75em;
+  text-align: center;
+}
+
+.KPH_explain{
+  color: $g__color-kids;
   font-size: $h2__fontSize;
   line-height: 1.75em;
   text-align: center;
@@ -407,11 +438,11 @@ footer{
 }
 
 #all_experiencemenu{
-  border-top: solid 1px #9FA0A0;
+  border-top: solid 1px $g__fontColor;
 }
 
 .experiencemenu{
-  border-bottom: solid 1px #9FA0A0;
+  border-bottom: solid 1px $g__fontColor;
 }
 
 .exmenu_textBox_wrap{
@@ -436,10 +467,18 @@ footer{
   }
   .exmenu_title{
     font-size: $h3__fontSize;
-    color: $g__color-future;
     font-weight: 400;
     margin-top: 19px;
   }
+
+  .FCHcolor{
+    color: $g__color-future;
+  }
+
+  .KPHcolor{
+    color: $g__color-kids;
+  }
+  
   .exmenu_detail{
     font-size: $g__fontSize;
     color: $g__fontColor;
@@ -449,15 +488,12 @@ footer{
   }
 }
 
-.info_table{
+.info_table_FCH, .info_table_KPH{
   text-align: left;
-  border-top: solid 1px $g__color-future;
   width: 100%;
   tr{
     height: 50px;
     width: 100%;
-    border-bottom: solid 1px $g__color-future;
-    border-style: dotted;
   }
   .adFee{
     height: 71px;
@@ -467,7 +503,6 @@ footer{
     padding-left: 14px;
     padding-top: 17px;
     background-color: $bg__color;
-    color: $g__color-future;
     font-size: $cap__fontSize;
     font-weight: 400;
   }
@@ -477,11 +512,88 @@ footer{
   }
 }
 
+.info_table_FCH{
+  border-top: solid 1px $g__color-future;
+  tr{
+    border-bottom: solid 1px $g__color-future;
+    border-style: dotted;
+  }
+  th{
+    color: $g__color-future;
+  }
+}
 
+.info_table_KPH{
+  border-top: solid 1px $g__color-kids;
+  tr{
+    border-bottom: solid 1px $g__color-kids;
+    border-style: dotted;
+  }
+  th{
+    color: $g__color-kids;
+  }
+}
+
+
+/* modal-contentのCSS */
+.modal-content {
+  width: calc(90vh + 400px);
+  margin: 0 ;
+  background: #fff;
+  border: solid 1px $g__color-future;
+  position: fixed;
+  display: none;
+  z-index: 2;
+  overflow: scroll;
+  .exmenu_title_future{
+    position: absolute;
+    font-size: $h3__fontSize;
+    color: $g__color-future;
+    font-weight: 400;
+    top: 4%;
+    left: 50%;
+    margin-left: -105px;
+  }
+  #modal-close img{
+    width: 20px;
+    position: absolute;
+    top: 4%;
+    right: calc(5% - 10px);
+  }
+  .exmenu_slide{
+    //height: calc(100% - 115px);
+    // width: 80%;
+    // top: 0;
+    // right: 0px;
+    // bottom: 0px;
+    // left: 0px;
+    // position: absolute;
+    // margin: calc(4% + 31px) auto auto auto;
+  }
+}
+  
+#modal-overlay {
+  z-index: 1;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: rgba( 0, 0, 0, 0.6);
+}
 
 
 //↑加納↓高居
 
+.lineSpace{
+  line-height: 1.75em;
+}
+/*
+.space-f-text{
+  margin-bottom: 24px;
+}
+*/
 .pageTitle{
   border-bottom: solid 1px;
   border-top: solid 1px;
@@ -491,5 +603,11 @@ footer{
   .titleText{
     border-left: solid 1px;
     line-height: 63px;
+  }
+}
+
+.archives{
+  .headmarkMargin{
+    margin: 0 0 24px 24px;
   }
 }
