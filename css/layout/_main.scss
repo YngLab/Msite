@@ -99,6 +99,11 @@ footer{
   }
 }
 
+.HMP_logo{
+  width: 100%;
+  height: calc(100vh - 174px);
+}
+
 .FCH_logo{
   width: 100%;
   height: calc(100vh - 174px);
@@ -109,16 +114,8 @@ footer{
   height: calc(100vh - 174px);
 }
 
-.FCH_explain{
+.facility_explain{
   margin-top: 50px;
-}
-
-.KPH_explain{
-  margin-top: 50px;
-}
-
-.experiencemenu{
-  border-bottom: solid 1px #9FA0A0;
 }
 
 .event_textBox_wrap{
@@ -209,6 +206,44 @@ footer{
   left: 0;
   width: 100%;
   height: 60vh;
+}
+
+.adress{
+  width: 50%;
+  float: left;
+  .heading{
+    >p{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.parking{
+  width: 50%;
+  float: left;
+  .heading{
+    >p{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.access{
+  width: 100%;
+  float: left;
+  .heading{
+    >p{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.accessProcess{
+  width: 100%;
+  float: left;
+  img{
+    width: 100%;
+  }
 }
 
 //↑加納↓高居

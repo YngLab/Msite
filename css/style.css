@@ -205,6 +205,11 @@ footer .copyright {
   width: 100%;
 }
 
+.HMP_logo {
+  width: 100%;
+  height: calc(100vh - 174px);
+}
+
 .FCH_logo {
   width: 100%;
   height: calc(100vh - 174px);
@@ -215,16 +220,8 @@ footer .copyright {
   height: calc(100vh - 174px);
 }
 
-.FCH_explain {
+.facility_explain {
   margin-top: 50px;
-}
-
-.KPH_explain {
-  margin-top: 50px;
-}
-
-.experiencemenu {
-  border-bottom: solid 1px #9FA0A0;
 }
 
 .event_textBox_wrap {
@@ -309,6 +306,38 @@ footer .copyright {
   left: 0;
   width: 100%;
   height: 60vh;
+}
+
+.adress {
+  width: 50%;
+  float: left;
+}
+.adress .heading > p {
+  margin-bottom: 24px;
+}
+
+.parking {
+  width: 50%;
+  float: left;
+}
+.parking .heading > p {
+  margin-bottom: 24px;
+}
+
+.access {
+  width: 100%;
+  float: left;
+}
+.access .heading > p {
+  margin-bottom: 24px;
+}
+
+.accessProcess {
+  width: 100%;
+  float: left;
+}
+.accessProcess img {
+  width: 100%;
 }
 
 .pageTitle {
@@ -631,13 +660,21 @@ footer .copyright p {
   line-height: 26px;
 }
 
-.FCH_logo {
-  background-color: #f39800;
+.logoContainer {
   position: relative;
 }
-.FCH_logo .FCHlogo_vertical {
+.logoContainer .logo_vertical {
   position: absolute;
   height: 60%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.logoContainer .HMP_logo_vertical {
+  position: absolute;
+  height: 67%;
   top: 0;
   right: 0;
   bottom: 0;
@@ -645,18 +682,26 @@ footer .copyright p {
   margin: auto;
 }
 
+.HMP_logo {
+  background-color: #9fa0a0;
+}
+
+.FCH_logo {
+  background-color: #f39800;
+}
+
 .KPH_logo {
   background-color: #8fc31f;
-  position: relative;
 }
-.KPH_logo .KPHlogo_vertical {
-  position: absolute;
-  height: 60%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+
+.facility_explain {
+  font-size: 24px;
+  line-height: 1.75em;
+  text-align: center;
+}
+
+.HMP_explain {
+  color: #9fa0a0;
 }
 
 .FCH_explain {
@@ -691,6 +736,15 @@ footer .copyright p {
   font-size: 24px;
   margin-left: 12px;
   float: left;
+}
+
+.heading-paragraph {
+  padding: 50px 0 24px 0;
+}
+.heading-paragraph p {
+  color: #727171;
+  font-size: 24px;
+  margin-left: 24px;
 }
 
 .monthSort {
@@ -850,6 +904,11 @@ footer .copyright p {
 .experiencemenu {
   border-bottom: solid 1px #9fa0a0;
 }
+.experiencemenu:after {
+  clear: both;
+  content: "";
+  display: block;
+}
 
 .exmenu_textBox_wrap {
   position: relative;
@@ -877,18 +936,20 @@ footer .copyright p {
   font-weight: 400;
   margin-top: 19px;
 }
-.exmenu_textBox .FCHcolor {
-  color: #f39800;
-}
-.exmenu_textBox .KPHcolor {
-  color: #8fc31f;
-}
 .exmenu_textBox .exmenu_detail {
   font-size: 14px;
   color: #9fa0a0;
   font-weight: 200;
   margin-top: 30px;
   line-height: 1.75em;
+}
+
+.FCHcolor {
+  color: #f39800;
+}
+
+.KPHcolor {
+  color: #8fc31f;
 }
 
 .info_table_FCH, .info_table_KPH {
@@ -995,6 +1056,37 @@ footer .copyright p {
 #map_canvas .future_map {
   margin-left: 14px;
   color: #f39800;
+}
+
+.adress > p {
+  font-size: 14px;
+}
+.adress .lineSpace {
+  color: #9fa0a0;
+}
+.adress .KPHaddress {
+  margin: 0 0 10px 24px;
+}
+.adress .FCHaddress {
+  margin-left: 24px;
+}
+
+.parking .lineSpace {
+  color: #9fa0a0;
+  font-size: 14px;
+  margin-left: 24px;
+}
+
+.movie_wrap {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.movie_wrap p {
+  font-size: 21px;
+  color: #9fa0a0;
+  font-weight: 400;
+  margin: 50px 0 30px 0;
 }
 
 .lineSpace {
