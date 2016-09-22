@@ -311,6 +311,38 @@ footer .copyright {
   height: 60vh;
 }
 
+.adress {
+  width: 50%;
+  float: left;
+}
+.adress .heading > p {
+  margin-bottom: 24px;
+}
+
+.parking {
+  width: 50%;
+  float: left;
+}
+.parking .heading > p {
+  margin-bottom: 24px;
+}
+
+.access {
+  width: 100%;
+  float: left;
+}
+.access .heading > p {
+  margin-bottom: 24px;
+}
+
+.accessProcess {
+  width: 100%;
+  float: left;
+}
+.accessProcess img {
+  width: 100%;
+}
+
 .pageTitle {
   margin: 12px 0 50px 0;
 }
@@ -693,6 +725,15 @@ footer .copyright p {
   float: left;
 }
 
+.heading-paragraph {
+  padding: 50px 0 24px 0;
+}
+.heading-paragraph p {
+  color: #727171;
+  font-size: 24px;
+  margin-left: 24px;
+}
+
 .monthSort {
   float: left;
   margin: 50px 0 40px 100px;
@@ -877,18 +918,20 @@ footer .copyright p {
   font-weight: 400;
   margin-top: 19px;
 }
-.exmenu_textBox .FCHcolor {
-  color: #f39800;
-}
-.exmenu_textBox .KPHcolor {
-  color: #8fc31f;
-}
 .exmenu_textBox .exmenu_detail {
   font-size: 14px;
   color: #9fa0a0;
   font-weight: 200;
   margin-top: 30px;
   line-height: 1.75em;
+}
+
+.FCHcolor {
+  color: #f39800;
+}
+
+.KPHcolor {
+  color: #8fc31f;
 }
 
 .info_table_FCH, .info_table_KPH {
@@ -995,6 +1038,25 @@ footer .copyright p {
 #map_canvas .future_map {
   margin-left: 14px;
   color: #f39800;
+}
+
+.adress > p {
+  font-size: 14px;
+}
+.adress .lineSpace {
+  color: #9fa0a0;
+}
+.adress .KPHaddress {
+  margin: 0 0 10px 24px;
+}
+.adress .FCHaddress {
+  margin-left: 24px;
+}
+
+.parking .lineSpace {
+  color: #9fa0a0;
+  font-size: 14px;
+  margin-left: 24px;
 }
 
 .lineSpace {

@@ -211,6 +211,44 @@ footer{
   height: 60vh;
 }
 
+.adress{
+  width: 50%;
+  float: left;
+  .heading{
+    >p{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.parking{
+  width: 50%;
+  float: left;
+  .heading{
+    >p{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.access{
+  width: 100%;
+  float: left;
+  .heading{
+    >p{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.accessProcess{
+  width: 100%;
+  float: left;
+  img{
+    width: 100%;
+  }
+}
+
 //↑加納↓高居
 
 .pageTitle{
