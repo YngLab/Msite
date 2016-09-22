@@ -327,18 +327,45 @@ footer .copyright {
 }
 
 .p-layout {
-  height: 1080px;
+  height: calc(100vh - 30px - 54px - (65px + 50px) - 126px);
+  position: relative;
   width: 100%;
 }
 
 .p-centering {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
+  left: 50%;
+  position: absolute;
+  top: calc(50% - 50px);
+  transform: translate(-50%, -50%);
+  text-align: left;
 }
 
 .p-margin {
   margin-top: 41px;
+}
+
+.sponsor .heading {
+  margin-top: 0;
+  width: 100%;
+}
+.sponsor p {
+  margin-bottom: 40px;
+}
+
+.touristOffice .heading {
+  margin-top: 0;
+  width: 50%;
+}
+.touristOffice .heading > p {
+  margin-bottom: 24px;
+}
+
+.touristGuide .heading {
+  margin-top: 0;
+  width: 50%;
+}
+.touristGuide .heading > p {
+  margin-bottom: 24px;
 }
 
 /* module */
@@ -974,11 +1001,6 @@ footer .copyright p {
   line-height: 1.75em;
 }
 
-/*
-.space-f-text{
-  margin-bottom: 24px;
-}
-*/
 .pageTitle {
   border-bottom: solid 1px;
   border-top: solid 1px;
@@ -995,6 +1017,41 @@ footer .copyright p {
   margin: 0 0 24px 24px;
 }
 
+.success {
+  color: #727171;
+  font-size: 16px;
+}
+
+.touristOffice .lineSpace {
+  color: #9fa0a0;
+  font-size: 14px;
+}
+
+.touristGuide .lineSpace {
+  color: #9fa0a0;
+  font-size: 14px;
+}
+
+.inputForm p {
+  margin: 10px 0 10px 0;
+}
+.inputForm input {
+  border: none;
+  background-color: #efefef;
+}
+.inputForm textarea {
+  border: none;
+  background-color: #efefef;
+}
+.inputForm label {
+  vertical-align: top;
+}
+
+.formFont {
+  color: #727171;
+  font-size: 13px;
+}
+
 .menu {
   float: left;
   width: 70%;
@@ -1009,14 +1066,14 @@ footer .copyright p {
   list-style: none;
 }
 
-label {
+.menu label {
   border-top: 1px solid #dddddd;
   color: #727171;
   display: block;
   position: relative;
   padding: 24px 0 24px 0;
 }
-label .btn {
+.menu label .btn {
   bottom: 0;
   display: block;
   height: 12px;

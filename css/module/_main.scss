@@ -538,7 +538,7 @@ footer{
   .KPHcolor{
     color: $g__color-kids;
   }
-  
+
   .exmenu_detail{
     font-size: $g__fontSize;
     color: $g__fontColor;
@@ -631,7 +631,7 @@ footer{
     // margin: calc(4% + 31px) auto auto auto;
   }
 }
-  
+
 #modal-overlay {
   z-index: 1;
   display: none;
@@ -672,11 +672,7 @@ footer{
 .lineSpace{
   line-height: 1.75em;
 }
-/*
-.space-f-text{
-  margin-bottom: 24px;
-}
-*/
+
 .pageTitle{
   border-bottom: solid 1px;
   border-top: solid 1px;
@@ -693,4 +689,45 @@ footer{
   .headmarkMargin{
     margin: 0 0 24px 24px;
   }
+}
+
+.success{
+  color: $dark__fontColor;
+  font-size: 16px;
+}
+
+.touristOffice{
+  .lineSpace{
+    color: $g__fontColor;
+    font-size: $g__fontSize;
+  }
+}
+
+.touristGuide{
+  .lineSpace{
+    color: $g__fontColor;
+    font-size: $g__fontSize;
+  }
+}
+
+.inputForm{
+  p{
+    margin: 10px 0 10px 0;
+  }
+  input{
+    border: none;
+    background-color: #efefef;
+  }
+  textarea{
+    border: none;
+    background-color: #efefef;
+  }
+  label{
+    vertical-align: top;
+  }
+}
+
+.formFont{
+  color: $dark__fontColor;
+  font-size: 13px;
 }
