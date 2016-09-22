@@ -290,12 +290,20 @@ footer{
   }
 }
 
-.FCH_logo{
-  background-color: $g__color-future;
+.logoContainer{
   position: relative;
-  .FCHlogo_vertical{
+  .logo_vertical{
     position: absolute;
     height: 60%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .HMP_logo_vertical{
+    position: absolute;
+    height: 67%;
     top: 0;
     right: 0;
     bottom: 0;
@@ -304,18 +312,26 @@ footer{
   }
 }
 
+.HMP_logo{
+  background-color: $g__fontColor;
+}
+
+.FCH_logo{
+  background-color: $g__color-future;
+}
+
 .KPH_logo{
   background-color: $g__color-kids;
-  position: relative;
-  .KPHlogo_vertical{
-    position: absolute;
-    height: 60%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-  }
+}
+
+.facility_explain{
+  font-size: $h2__fontSize;
+  line-height: 1.75em;
+  text-align: center;
+}
+
+.HMP_explain{
+  color: $g__fontColor;
 }
 
 .FCH_explain{
@@ -512,6 +528,7 @@ footer{
 
 .experiencemenu{
   border-bottom: solid 1px $g__fontColor;
+  @include clearfix;
 }
 
 .exmenu_textBox_wrap{
@@ -697,7 +714,18 @@ footer{
     margin-left: 24px;
   }
 }
-
+.movie_wrap{
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  p{
+    font-size: $h3__fontSize;
+    color: $g__fontColor;
+    font-weight: 400;
+    margin: 50px 0 30px 0;
+    
+  }
+}
 //↑加納↓高居
 
 .lineSpace{

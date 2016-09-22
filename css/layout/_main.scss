@@ -99,6 +99,11 @@ footer{
   }
 }
 
+.HMP_logo{
+  width: 100%;
+  height: calc(100vh - 174px);
+}
+
 .FCH_logo{
   width: 100%;
   height: calc(100vh - 174px);
@@ -109,16 +114,8 @@ footer{
   height: calc(100vh - 174px);
 }
 
-.FCH_explain{
+.facility_explain{
   margin-top: 50px;
-}
-
-.KPH_explain{
-  margin-top: 50px;
-}
-
-.experiencemenu{
-  border-bottom: solid 1px #9FA0A0;
 }
 
 .event_textBox_wrap{
