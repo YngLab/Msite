@@ -806,7 +806,11 @@ footer .copyright p {
 .inputForm p {
   margin: 10px 0 10px 0;
 }
-.inputForm .inputBox {
+.inputForm input {
+  border: none;
+  background-color: #efefef;
+}
+.inputForm textarea {
   border: none;
   background-color: #efefef;
 }

@@ -543,7 +543,11 @@ footer{
   p{
     margin: 10px 0 10px 0;
   }
-  .inputBox{
+  input{
+    border: none;
+    background-color: #efefef;
+  }
+  textarea{
     border: none;
     background-color: #efefef;
   }
