@@ -352,6 +352,15 @@ footer{
   }
 }
 
+.heading-paragraph{
+  padding: 50px 0 24px 0;
+  p{
+    color: $h2__color;
+    font-size: $h2__fontSize;
+    margin-left: 24px;
+  }
+}
+
 .monthSort{
   float: left;
   margin: 50px 0 40px 100px;
@@ -530,15 +539,6 @@ footer{
     font-weight: 400;
     margin-top: 19px;
   }
-
-  .FCHcolor{
-    color: $g__color-future;
-  }
-
-  .KPHcolor{
-    color: $g__color-kids;
-  }
-
   .exmenu_detail{
     font-size: $g__fontSize;
     color: $g__fontColor;
@@ -546,6 +546,14 @@ footer{
     margin-top: 30px;
     line-height: 1.75em;
   }
+}
+
+.FCHcolor{
+  color: $g__color-future;
+}
+
+.KPHcolor{
+  color: $g__color-kids;
 }
 
 .info_table_FCH, .info_table_KPH{
@@ -664,6 +672,29 @@ footer{
   .future_map{
     margin-left: 14px;
     color: $g__color-future;
+  }
+}
+
+.adress{
+  >p{
+    font-size: $g__fontSize;
+  }
+  .lineSpace{
+    color: $g__fontColor;
+  }
+  .KPHaddress{
+    margin: 0 0 10px 24px;
+  }
+  .FCHaddress{
+    margin-left: 24px;
+  }
+}
+
+.parking{
+  .lineSpace{
+    color: $g__fontColor;
+    font-size: $g__fontSize;
+    margin-left: 24px;
   }
 }
 
