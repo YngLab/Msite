@@ -20,7 +20,7 @@
 header{
   .gHeader{
     height: 30px;
-    width: 100%;
+    width: 80vh;
   }
 }
 
@@ -231,4 +231,17 @@ footer{
 
 .p-margin{
   margin-top: 41px;
+}
+
+.map_container{
+  position: relative;
+  padding-top: 60vh;
+}
+
+#map_canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
 }

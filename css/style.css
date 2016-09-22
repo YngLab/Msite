@@ -125,7 +125,7 @@ a {
 
 header .gHeader {
   height: 30px;
-  width: 100%;
+  width: 80vh;
 }
 
 .topcap {
@@ -326,6 +326,19 @@ footer .copyright {
 
 .p-margin {
   margin-top: 41px;
+}
+
+.map_container {
+  position: relative;
+  padding-top: 60vh;
+}
+
+#map_canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
 }
 
 /* module */
@@ -945,6 +958,16 @@ footer .copyright p {
 .pageTitle_event .titleText {
   border-left: solid 1px;
   line-height: 63px;
+}
+
+#map_canvas .kids_map {
+  margin-left: 14px;
+  color: #8fc31f;
+  line-height: 1.75em;
+}
+#map_canvas .future_map {
+  margin-left: 14px;
+  color: #f39800;
 }
 
 .lineSpace {

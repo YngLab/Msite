@@ -655,6 +655,17 @@ footer{
   }
 }
 
+#map_canvas{
+  .kids_map{
+    margin-left: 14px;
+    color: $g__color-kids;
+    line-height: 1.75em;
+  }
+  .future_map{
+    margin-left: 14px;
+    color: $g__color-future;
+  }
+}
 
 //↑加納↓高居
 
