@@ -123,25 +123,12 @@ a {
   margin-right: -3.2%;
 }
 
-header .gHeader {
-  height: 30px;
-  width: 100%;
+.gHeader {
+  height: 70px;
 }
 
 .topcap {
   padding: 50px 0 40px 0;
-}
-
-.gNav {
-  border-right: solid 1px #9fa0a0;
-  color: #9fa0a0;
-  margin: 0px -1px 40px 0;
-  width: 100%;
-}
-.gNav:after {
-  clear: both;
-  content: "";
-  display: block;
 }
 
 .future_entrance {
@@ -196,12 +183,12 @@ header .gHeader {
 
 footer .foot {
   background: #efefef;
-  height: 100px;
+  height: 96px;
   width: 100%;
 }
 footer .copyright {
   background: #9fa0a0;
-  height: 26px;
+  height: 24px;
   width: 100%;
 }
 
@@ -451,22 +438,39 @@ footer .copyright {
   width: 75px;
 }
 
-header .gHeader {
-  text-align: right;
-}
-header .gHeader .links {
-  font-size: 13px;
-  line-height: 30px;
-  text-decoration: none;
+.gHeader {
+  border-bottom: 1px solid #9fa0a0;
 }
 
+.gNav {
+  float: left;
+  color: #9fa0a0;
+  margin-top: 42px;
+}
+.gNav:after {
+  clear: both;
+  content: "";
+  display: block;
+}
 .gNav .gNavli {
-  border-left: solid 1px #9fa0a0;
   float: left;
   font-weight: 400;
-  margin-left: -1px;
-  text-align: center;
-  width: 20%;
+  margin-right: 28px;
+}
+
+.pNav {
+  float: right;
+  font-size: 12px;
+  font-weight: 200;
+  margin: 44px -12px 0 0;
+}
+.pNav .pNavli {
+  float: left;
+  padding: 0 12px;
+  border-right: 1px solid #9fa0a0;
+}
+.pNav .language {
+  border: none;
 }
 
 .future_entrance .openclose {
@@ -636,13 +640,13 @@ header .gHeader .links {
 }
 
 footer .foot .footerLinks {
-  line-height: 100px;
+  line-height: 96px;
 }
 footer .foot .footerLinks .links {
   color: #9fa0a0;
   float: left;
   font-size: 14px;
-  margin-right: 52px;
+  margin-right: 28px;
   text-decoration: none;
 }
 footer .foot .SNSbutton {
@@ -650,14 +654,14 @@ footer .foot .SNSbutton {
 }
 footer .foot .SNSbutton img {
   float: left;
-  height: 50px;
-  margin: 25px 0 0 30px;
-  width: 50px;
+  height: 32px;
+  margin: 32px 0 0 16px;
+  width: 32px;
 }
 footer .copyright p {
   color: #FFFFFF;
-  font-size: 13px;
-  line-height: 26px;
+  font-size: 10px;
+  line-height: 24px;
 }
 
 .logoContainer {
