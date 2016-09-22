@@ -8,8 +8,8 @@
 <title>はこだてみらいプロジェクト</title>
 <!-- たぶんここまで -->
 
-<link rel = "stylesheet" href="../css/style.css">
-<link rel = "shortcut icon" href="../images/hmp.ico">
+<link rel = "stylesheet" href="css/style.css">
+<link rel = "shortcut icon" href="images/hmp.ico">
 <header>
   <div class = "gHeader">
     <div class = "headrLinks wrap">
@@ -23,7 +23,7 @@
   <div class = "wrap">
     <div class = "gNav">
       <li class = "gNavli">
-        <a href = "index.html">ホーム</a>
+        <a href="index.html">ホーム</a>
       </li>
       <li class = "gNavli">
         <a href="concept.html">コンセプト</a>
@@ -40,49 +40,64 @@
     </div>
   </div>
 </div>
-<!-- 以下body -->
+
 <div class = "pageTitle">
   <div class = "wrap">
-    <p class = "titleText">サイトマップ</p>
+    <p class = "titleText">お問い合わせ</p>
   </div>
 </div>
 <div class = "wrap">
-  <div class = "siteMap">
-    <p class = "top"><a href = "index.html" class = "linkText">TOPページ(ホーム)</a></p>
-    <p class = "headerElements">
-      <a href = "concept.html" class = "linkText textMargin">はこだてみらいプロジェクト</a>
-      <a href = "http://hakodate-miraiproject.jp/" class = "linkText textMargin">イベント・ワークショップ</a>
-      <a href = "FCH.html" class = "linkText textMargin">はこだてみらい館</a>
-      <a href = "http://hakodate-miraiproject.jp/" class = "linkText textMargin">はこだてキッズプラザ</a>
-      <a href = "http://hakodate-miraiproject.jp/" class = "linkText textMargin">アクセス</a>
-      <a href = "contact.html" class = "linkText textMargin">お問い合わせ</a>
-    </p>
-    <p class = "footerElements">
-      <a href = "notice.html" class = "linkText textMargin">お知らせ</a>
-      <a href = "http://hakodate-miraiproject.jp/" class = "linkText textMargin">求人情報</a>
-      <a href = "FAQ.html" class = "linkText textMargin">よくあるご質問</a>
-      <a href = "relatedlinks.html" class = "linkText textMargin">関連リンク</a>
-      <a href = "sitemap.html" class = "linkText textMargin">サイトマップ</a>
-      <a href = "sitepolicy.html" class = "linkText textMargin">サイトポリシー</a>
-    </p>
+<!-- 以下body -->
+  <div class = "inputForm">
+    <form action = ".php" method = "post">
+      <p>
+        <input type = "radio" name = "radio" id = "fch" value = "fch">
+          <label for = "fch">
+            <span class = "formFont">はこだてみらい館</span>
+          </label>
+        <input type = "radio" name = "radio" id = "hkp" value = "hkp">
+          <label for = "hkp">
+            <span class = "formFont">はこだてキッズプラザ</span>
+          </label>
+        <input type = "radio" name = "radio" id = "both" value = "both">
+          <label for = "both">
+            <span class = "formFont">どちらとも</span>
+          </label>
+      </p>
+      <p>
+        <span class = "formFont">お名前</span>
+        <input type="text" name ="name" size = "50" maxlength = "255" placeholder = "未来太郎">
+      </p>
+      <p>
+        <span class = "formFont">メールアドレス</span>
+        <input type = "email" name ="email" size = "50" maxlength = "255" placeholder="sample@gmail.com">
+      </p>
+      <p>
+        <label for = "comment" class = "formFont">
+          問い合わせ内容
+        </label>
+        <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
+      </p>
+      <p><button type="submit">確認</button></p>
+    </form>
   </div>
-</div>
 <!-- ここまで -->
+</div>
 <footer>
   <div class = "foot">
     <div class ="footerLinks wrap">
       <a href = "notice.html" class="links">お知らせ</a>
-      <a href = "recruit.html" class="links">求人情報</a>
+      <a href = "http://hakodate-miraiproject.jp/" class="links">求人情報</a>
       <a href = "FAQ.html" class="links">よくあるご質問</a>
       <a href = "relatedlinks.html" class="links">関連リンク</a>
       <a href = "sitemap.html" class="links">サイトマップ</a>
       <a href = "sitepolicy.html" class="links">サイトポリシー</a>
       <div class = "SNSbutton">
         <a href = "https://www.facebook.com/hakodatemiraiproject/">
-          <img src = "../images/fb.png" alt="公式Facebook" class = "SNS">
+          <img src = "images/fb.png" alt="公式Facebook" class = "SNS">
         </a>
         <a href = "https://www.instagram.com/instagramjapan/?hl=ja">
-          <img src = "../images/ig.png" alt="Instagram" class = "SNS">
+          <img src = "images/ig.png" alt="Instagram" class = "SNS">
         </a>
       </div>
     </div>
