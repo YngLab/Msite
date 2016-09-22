@@ -2,6 +2,7 @@
 //We cannot type Japanese, maybe using japanese make error.
 .latestEvent{
   font-size: 0;
+  padding-bottom: 40px;
   .topcap{
     text-align: center;
   }
@@ -50,7 +51,7 @@
     }
   }
   .moreview{
-    margin: 40px 3.2% 50px auto;
+    margin: 40px 3.2% 10px auto;
     width: 75px;
   }
 }
@@ -332,14 +333,74 @@ footer{
 }
 
 .heading{
-  margin: 50px 0 40px 0;
-  float: left;
+  padding: 50px 0 40px 0;
   p{
     color: $h2__color;
     font-size: $h2__fontSize;
     margin-left: 24px;
   }
 }
+
+.heading-lineup{
+  padding: 50px 0 40px 0;
+  float: left;
+  .headingTitle{
+    color: $h2__color;
+    font-size: $h2__fontSize;
+    margin-left: 12px;
+    float: left;
+  }
+}
+
+.monthSort{
+  float: left;
+  margin: 50px 0 40px 100px;
+  color: $h2__color;
+  font-size: $cap__fontSize;
+  line-height: 1.75em;
+  li{
+    display: inline;
+    margin-right: 26px;
+    font-size: 15px;
+    font-weight: 400;
+    color: $g__fontColor;
+    border-bottom: solid 1px $g__fontColor;
+  }
+  .active{
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: -1px;
+    color: $dark__fontColor;
+    border: none;
+  }
+}
+
+.archive{
+  float: left;
+  margin: 50px 0 40px 50px;
+  color: $h2__color;
+  font-size: $cap__fontSize;
+  line-height: 1.75em;
+  li{
+    display: inline;
+    margin-right: 26px;
+    font-size: 15px;
+    font-weight: 400;
+    color: $g__fontColor;
+    border-bottom: solid 1px $g__fontColor;
+  }
+  .archive_year{
+    font-size: $cap__fontSize;
+    border: none;
+  }
+  .active{
+    font-size: 17px;
+    font-weight: 400;
+    color: $dark__fontColor;
+    border: none;
+  }
+}
+
 .headmark{
   width: 6px;
   height: 6px;
@@ -347,6 +408,93 @@ footer{
   border: 3px solid $h2__color;
   float: left;
   display: inline-block;
+}
+
+#all_eventmenu{
+  border-top: solid 1px $g__fontColor;
+}
+
+.eventmenu{
+  border-bottom: solid 1px $g__fontColor;
+  @include clearfix;
+}
+
+.event_textBox_wrap{
+  position: relative;
+  float: right;
+}
+
+.event_textBox{
+  margin: 24px 0 0 50px ;
+  position: relative;
+  .event_title{
+    font-size: $h2__fontSize;
+    color: $g__color-future;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+  .event_point{
+    line-height: 1.75em;
+    color: $dark__fontColor;
+    float: left;
+    margin-bottom: 7px;
+    .event_point_cap{
+      float: left;
+      font-weight: 400;
+    }
+    .event_point_contents{
+      float: left;
+      margin: 0 42px 0 14px;
+    }
+  }
+  .event_detail{
+    font-size: $g__fontSize;
+    color: $g__fontColor;
+    font-weight: 200;
+    line-height: 1.75em;
+    float: right;
+    margin-right: 40px;
+    width: calc(100% - 300px);
+  }
+}
+
+.eventArchive_textBox_wrap{
+  position: relative;
+  .eventArchive_detail{
+    font-size: $g__fontSize;
+    color: $g__fontColor;
+    font-weight: 200;
+    line-height: 1.75em;
+    float: left;
+    width: calc(100% - 40px);
+  }
+}
+
+.button{
+  position: absolute;
+  width: 88px;
+  height: 36px;
+  border: 1px solid $dark__fontColor;
+  color: $dark__fontColor;
+  font-weight: 400;
+  font-size: $link__fontSize;
+  text-align: center;
+  p{
+    display: inline;
+    line-height: 36px;
+  }
+}
+.subscriptionButton{
+    bottom: 24px;
+    left: 50px;
+}
+
+.collectevent{
+  margin-top: 40px;
+  line-height: 1.75em;
+  .form_guide{
+    margin-top: 24px;
+  }
 }
 
 #all_experiencemenu{
@@ -495,6 +643,29 @@ footer{
   background-color: rgba( 0, 0, 0, 0.6);
 }
 
+.pageTitle_event{
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+  color: $title__color;
+  font-size: $title__fontSize;
+  font-weight: 500;
+  .titleText{
+    border-left: solid 1px;
+    line-height: 63px;
+  }
+}
+
+#map_canvas{
+  .kids_map{
+    margin-left: 14px;
+    color: $g__color-kids;
+    line-height: 1.75em;
+  }
+  .future_map{
+    margin-left: 14px;
+    color: $g__color-future;
+  }
+}
 
 //↑加納↓高居
 

@@ -226,10 +226,39 @@ footer .copyright {
 .experiencemenu {
   border-bottom: solid 1px #9FA0A0;
 }
-.experiencemenu:after {
-  clear: both;
-  content: "";
-  display: block;
+
+.event_textBox_wrap {
+  width: 75%;
+  height: 25vw;
+}
+
+.event_pic {
+  width: 25%;
+  height: 25vw;
+}
+
+.eventArchive_textBox_wrap {
+  width: 50%;
+  height: 25vw;
+}
+
+.eventArchive_pic {
+  width: 50%;
+  height: 25vw;
+}
+
+.eventArchive_leftText .eventArchive_textBox_wrap {
+  float: left;
+}
+.eventArchive_leftText .eventArchive_pic {
+  float: right;
+}
+
+.eventArchive_rightText .eventArchive_textBox_wrap {
+  float: right;
+}
+.eventArchive_rightText .eventArchive_pic {
+  float: left;
 }
 
 .exmenu_leftText .exmenu_textBox_wrap {
@@ -254,6 +283,32 @@ footer .copyright {
 .exmenu_pic {
   width: 75%;
   height: 25vw;
+}
+
+.heading:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.pageTitle_event {
+  margin: 12px 0 0 0;
+}
+.pageTitle_event .titleText {
+  padding-left: 24px;
+}
+
+.map_container {
+  position: relative;
+  padding-top: 60vh;
+}
+
+#map_canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
 }
 
 .pageTitle {
@@ -316,6 +371,7 @@ footer .copyright {
 /* module */
 .latestEvent {
   font-size: 0;
+  padding-bottom: 40px;
 }
 .latestEvent .topcap {
   text-align: center;
@@ -362,7 +418,7 @@ footer .copyright {
   color: #9fa0a0;
 }
 .latestEvent .moreview {
-  margin: 40px 3.2% 50px auto;
+  margin: 40px 3.2% 10px auto;
   width: 75px;
 }
 
@@ -618,13 +674,72 @@ footer .copyright p {
 }
 
 .heading {
-  margin: 50px 0 40px 0;
-  float: left;
+  padding: 50px 0 40px 0;
 }
 .heading p {
   color: #727171;
   font-size: 24px;
   margin-left: 24px;
+}
+
+.heading-lineup {
+  padding: 50px 0 40px 0;
+  float: left;
+}
+.heading-lineup .headingTitle {
+  color: #727171;
+  font-size: 24px;
+  margin-left: 12px;
+  float: left;
+}
+
+.monthSort {
+  float: left;
+  margin: 50px 0 40px 100px;
+  color: #727171;
+  font-size: 13px;
+  line-height: 1.75em;
+}
+.monthSort li {
+  display: inline;
+  margin-right: 26px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #9fa0a0;
+  border-bottom: solid 1px #9fa0a0;
+}
+.monthSort .active {
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: -1px;
+  color: #727171;
+  border: none;
+}
+
+.archive {
+  float: left;
+  margin: 50px 0 40px 50px;
+  color: #727171;
+  font-size: 13px;
+  line-height: 1.75em;
+}
+.archive li {
+  display: inline;
+  margin-right: 26px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #9fa0a0;
+  border-bottom: solid 1px #9fa0a0;
+}
+.archive .archive_year {
+  font-size: 13px;
+  border: none;
+}
+.archive .active {
+  font-size: 17px;
+  font-weight: 400;
+  color: #727171;
+  border: none;
 }
 
 .headmark {
@@ -634,6 +749,98 @@ footer .copyright p {
   border: 3px solid #727171;
   float: left;
   display: inline-block;
+}
+
+#all_eventmenu {
+  border-top: solid 1px #9fa0a0;
+}
+
+.eventmenu {
+  border-bottom: solid 1px #9fa0a0;
+}
+.eventmenu:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.event_textBox_wrap {
+  position: relative;
+  float: right;
+}
+
+.event_textBox {
+  margin: 24px 0 0 50px;
+  position: relative;
+}
+.event_textBox .event_title {
+  font-size: 24px;
+  color: #f39800;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.event_textBox .event_point {
+  line-height: 1.75em;
+  color: #727171;
+  float: left;
+  margin-bottom: 7px;
+}
+.event_textBox .event_point .event_point_cap {
+  float: left;
+  font-weight: 400;
+}
+.event_textBox .event_point .event_point_contents {
+  float: left;
+  margin: 0 42px 0 14px;
+}
+.event_textBox .event_detail {
+  font-size: 14px;
+  color: #9fa0a0;
+  font-weight: 200;
+  line-height: 1.75em;
+  float: right;
+  margin-right: 40px;
+  width: calc(100% - 300px);
+}
+
+.eventArchive_textBox_wrap {
+  position: relative;
+}
+.eventArchive_textBox_wrap .eventArchive_detail {
+  font-size: 14px;
+  color: #9fa0a0;
+  font-weight: 200;
+  line-height: 1.75em;
+  float: left;
+  width: calc(100% - 40px);
+}
+
+.button {
+  position: absolute;
+  width: 88px;
+  height: 36px;
+  border: 1px solid #727171;
+  color: #727171;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+}
+.button p {
+  display: inline;
+  line-height: 36px;
+}
+
+.subscriptionButton {
+  bottom: 24px;
+  left: 50px;
+}
+
+.collectevent {
+  margin-top: 40px;
+  line-height: 1.75em;
+}
+.collectevent .form_guide {
+  margin-top: 24px;
 }
 
 #all_experiencemenu {
@@ -766,6 +973,28 @@ footer .copyright p {
   width: 100%;
   height: 120%;
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.pageTitle_event {
+  border-bottom: solid 1px;
+  border-top: solid 1px;
+  color: #3e3a39;
+  font-size: 21px;
+  font-weight: 500;
+}
+.pageTitle_event .titleText {
+  border-left: solid 1px;
+  line-height: 63px;
+}
+
+#map_canvas .kids_map {
+  margin-left: 14px;
+  color: #8fc31f;
+  line-height: 1.75em;
+}
+#map_canvas .future_map {
+  margin-left: 14px;
+  color: #f39800;
 }
 
 .lineSpace {

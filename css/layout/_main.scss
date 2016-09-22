@@ -118,8 +118,45 @@ footer{
 }
 
 .experiencemenu{
-  @include clearfix;
   border-bottom: solid 1px #9FA0A0;
+}
+
+.event_textBox_wrap{
+  width: 75%;
+  height: 25vw;
+}
+
+.event_pic{
+  width: 25%;
+  height: 25vw;
+}
+
+.eventArchive_textBox_wrap{
+  width: 50%;
+  height: 25vw;
+}
+
+.eventArchive_pic{
+  width: 50%;
+  height: 25vw;
+}
+
+.eventArchive_leftText{
+  .eventArchive_textBox_wrap{
+    float: left;
+  }
+  .eventArchive_pic{
+    float: right;
+  }
+}
+
+.eventArchive_rightText{
+  .eventArchive_textBox_wrap{
+    float: right;
+  }
+  .eventArchive_pic{
+    float: left;
+  }
 }
 
 .exmenu_leftText{
@@ -148,6 +185,30 @@ footer{
 .exmenu_pic{
   width: 75%;
   height: 25vw;
+}
+
+.heading{
+  @include clearfix;
+}
+
+.pageTitle_event{
+  margin: 12px 0 0 0;
+  .titleText{
+    padding-left: 24px;
+  }
+}
+
+.map_container{
+  position: relative;
+  padding-top: 60vh;
+}
+
+#map_canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
 }
 
 //↑加納↓高居
