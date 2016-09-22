@@ -1,5 +1,5 @@
 @charset "UTF-8";
-//We cannot type Japanese, maybe using japanese make error.
+
 .latestEvent{
   font-size: 0;
   padding-bottom: 40px;
@@ -56,27 +56,37 @@
   }
 }
 
-header{
-  .gHeader{
-    text-align: right;
-    .links{
-      font-size: 13px;
-      line-height: 30px;
-      text-decoration: none;
-    }
-  }
+.gHeader{
+  border-bottom: 1px solid $g__fontColor;
 }
 
 .gNav{
+  float: left;
+  color: $g__fontColor;
+  margin-top: 42px;
+  @include clearfix;
   .gNavli{
-    border-left: solid 1px $g__fontColor;
     float: left;
     font-weight: 400;
-    margin-left: -1px;
-    text-align: center;
-    width: 20%;
+    margin-right: 28px;
   }
 }
+
+.pNav{
+  float: right;
+  font-size: 12px;
+  font-weight: 200;
+  margin: 44px -12px 0 0;
+  .pNavli{
+    float: left;
+    padding: 0 12px;
+    border-right: 1px solid $g__fontColor;
+  }
+  .language{
+    border: none;
+  }
+}
+
 
 .future_entrance{
   .openclose{
@@ -259,12 +269,12 @@ header{
 footer{
   .foot{
     .footerLinks{
-      line-height: 100px;
+      line-height: 96px;
       .links{
         color: $g__fontColor;
         float: left;
         font-size: $g__fontSize;
-        margin-right: 52px;
+        margin-right: 28px;
         text-decoration: none;
       }
     }
@@ -272,20 +282,19 @@ footer{
       float: right;
       img{
         float: left;
-        height: 50px;
-        margin: 25px 0 0 30px;
+        height: 32px;
+        margin: 32px 0 0 16px;
         //margin-left: 30px;
         //margin-top: 25px;
-        width: 50px;
+        width: 32px;
       }
     }
   }
   .copyright{
     p {
       color: #FFFFFF;
-      font-size: 13px;
-      line-height: 26px;
-      //text-align: center;
+      font-size: 10px;
+      line-height: 24px;
     }
   }
 }
