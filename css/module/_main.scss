@@ -390,7 +390,7 @@ footer{
   .KPHcolor{
     color: $g__color-kids;
   }
-  
+
   .exmenu_detail{
     font-size: $g__fontSize;
     color: $g__fontColor;
@@ -483,7 +483,7 @@ footer{
     // margin: calc(4% + 31px) auto auto auto;
   }
 }
-  
+
 #modal-overlay {
   z-index: 1;
   display: none;
@@ -527,4 +527,18 @@ footer{
 .success{
   color: $dark__fontColor;
   font-size: 16px;
+}
+
+.touristOffice{
+  .lineSpace{
+    color: $g__fontColor;
+    font-size: $g__fontSize;
+  }
+}
+
+.touristGuide{
+  .lineSpace{
+    color: $g__fontColor;
+    font-size: $g__fontSize;
+  }
 }

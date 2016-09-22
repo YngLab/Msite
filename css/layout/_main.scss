@@ -184,3 +184,33 @@ footer{
 .p-margin{
   margin-top: 41px;
 }
+
+.sponsor{
+  .heading{
+    margin-top: 0;
+    width: 100%;
+  }
+  p{
+    margin-bottom: 40px;
+  }
+}
+
+.touristOffice{
+  .heading{
+    margin-top: 0;
+    width: 50%;
+    >p{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.touristGuide{
+  .heading{
+    margin-top: 0;
+    width: 50%;
+    >p{
+      margin-bottom: 24px;
+    }
+  }
+}

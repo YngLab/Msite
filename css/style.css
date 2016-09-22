@@ -289,6 +289,30 @@ footer .copyright {
   margin-top: 41px;
 }
 
+.sponsor .heading {
+  margin-top: 0;
+  width: 100%;
+}
+.sponsor p {
+  margin-bottom: 40px;
+}
+
+.touristOffice .heading {
+  margin-top: 0;
+  width: 50%;
+}
+.touristOffice .heading > p {
+  margin-bottom: 24px;
+}
+
+.touristGuide .heading {
+  margin-top: 0;
+  width: 50%;
+}
+.touristGuide .heading > p {
+  margin-bottom: 24px;
+}
+
 /* module */
 .latestEvent {
   font-size: 0;
@@ -772,6 +796,16 @@ footer .copyright p {
 .success {
   color: #727171;
   font-size: 16px;
+}
+
+.touristOffice .lineSpace {
+  color: #9fa0a0;
+  font-size: 14px;
+}
+
+.touristGuide .lineSpace {
+  color: #9fa0a0;
+  font-size: 14px;
 }
 
 .menu {
