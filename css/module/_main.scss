@@ -56,7 +56,25 @@
   }
 }
 
+.nav_TOP{
+  background-color: $boxcolor;
+}
+
+.gNav_container{
+  width: 618px;
+  margin: 0 auto;
+}
+
+.gNav_TOP{
+  color: $g__fontColor;
+  padding-top: 16px;
+  width: 644px;
+  margin: 0 auto;
+  @include clearfix;
+}
+
 .gHeader{
+  background-color: $boxcolor;
   border-bottom: 1px solid $g__fontColor;
 }
 
@@ -65,11 +83,12 @@
   color: $g__fontColor;
   margin-top: 42px;
   @include clearfix;
-  .gNavli{
-    float: left;
-    font-weight: 400;
-    margin-right: 28px;
-  }
+}
+
+.gNavli{
+  float: left;
+  font-weight: 400;
+  margin-right: 28px;
 }
 
 .pNav{
@@ -77,14 +96,15 @@
   font-size: 12px;
   font-weight: 200;
   margin: 44px -12px 0 0;
-  .pNavli{
-    float: left;
-    padding: 0 12px;
-    border-right: 1px solid $g__fontColor;
-  }
-  .language{
-    border: none;
-  }
+}
+
+.pNavli{
+  float: left;
+  padding: 0 12px;
+  border-right: 1px solid $g__fontColor;
+}
+.language{
+  border: none;
 }
 
 
@@ -267,6 +287,11 @@
 }
 
 footer{
+  .pagetop{
+    height: 40px;
+    margin: 0 auto;
+    display: block;
+  }
   .foot{
     .footerLinks{
       line-height: 96px;
