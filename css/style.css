@@ -384,6 +384,20 @@ footer .copyright {
   margin-bottom: 24px;
 }
 
+.radio {
+  margin-bottom: 8px;
+}
+
+.inputForm th {
+  padding-right: 30px;
+}
+.inputForm td {
+  padding: 8px 0 8px 0;
+}
+.inputForm .confirm {
+  margin: 40px 0 40px 0;
+}
+
 /* module */
 .latestEvent {
   font-size: 0;
@@ -1128,24 +1142,58 @@ footer .copyright p {
   font-size: 14px;
 }
 
-.inputForm p {
-  margin: 10px 0 10px 0;
+.radioFont {
+  color: #727171;
+  margin-right: 60px;
+}
+
+.inputForm th {
+  color: #727171;
+  font-size: 13px;
+  text-align: left;
 }
 .inputForm input {
   border: none;
-  background-color: #efefef;
+  color: #727171;
+  font-size: 14px;
+  padding: 11px 14px 11px 14px;
 }
 .inputForm textarea {
   border: none;
-  background-color: #efefef;
+  color: #727171;
+  font-size: 14px;
+  padding: 11px 14px 11px 14px;
 }
-.inputForm label {
+.inputForm .textareaLabel {
+  padding-top: 8px;
   vertical-align: top;
 }
-
-.formFont {
+.inputForm .confirm {
+  width: 88px;
+  height: 36px;
+  border: 1px solid #727171;
   color: #727171;
-  font-size: 13px;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+}
+.inputForm .confirm p {
+  display: inline;
+  line-height: 36px;
+}
+
+.inputBox input {
+  background-color: #efefef;
+}
+.inputBox textarea {
+  background-color: #efefef;
+}
+
+.revision {
+  background: #727171;
+}
+.revision p {
+  color: white;
 }
 
 .menu {

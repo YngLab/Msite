@@ -43,14 +43,14 @@
 </header>
 <div class = "pageTitle">
   <div class = "wrap">
-    <p class = "titleText">お知らせ</p>
+    <p class = "titleText">お問い合わせ</p>
   </div>
 </div>
 <div class = "wrap">
 <!-- 以下body -->
   <div>
     <div class = "radio">
-      <input type = "radio" name = "radio" id = "fch" value = "fch">
+      <input type = "radio" name = "radio" id = "fch" value = "fch" checked>
         <label for = "fch"><span class = "radioFont">はこだてみらい館</span></label>
       <input type = "radio" name = "radio" id = "hkp" value = "hkp">
         <label for = "hkp"><span class = "radioFont">はこだてキッズプラザ</span></label>
@@ -59,15 +59,15 @@
     </div>
     <table class = "inputForm">
       <tr>
-        <th class = "inputBox">お名前</th>
+        <th>お名前</th>
         <td>
-          <input type="text" name ="name" size = "50" maxlength = "255" placeholder = "未来太郎">
+          <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
         </td>
       </tr>
       <tr>
-        <th class = "inputBox">メールアドレス</th>
+        <th>メールアドレス</th>
         <td>
-          <input type = "email" name ="email" size = "50" maxlength = "255" placeholder="miraiproject@sample.com">
+          <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
         </td>
       </tr>
       <tr>
@@ -77,11 +77,17 @@
         </td>
       </tr>
       <tr>
-        <th class = "inputBox">　</th>
+        <th>
+          <a href = "contact.html">
+            <div class = "confirm revision">
+              <p>訂正</p>
+            </div>
+          </a>
+        </th>
         <td>
-          <a href = "#">
+          <a href = "recieve_contact.html">
             <div class = "confirm">
-              <p>確認</p>
+              <p>送信</p>
             </div>
           </a>
         </td>
