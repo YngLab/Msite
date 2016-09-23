@@ -385,14 +385,17 @@ footer .copyright {
 }
 
 .radio {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
-.inputForm .inputBox {
-  padding-bottom: 16px;
-}
 .inputForm th {
   padding-right: 30px;
+}
+.inputForm td {
+  padding: 8px 0 8px 0;
+}
+.inputForm .confirm {
+  margin: 40px 0 40px 0;
 }
 
 /* module */
@@ -1141,6 +1144,7 @@ footer .copyright p {
 
 .radioFont {
   color: #727171;
+  margin-right: 60px;
 }
 
 .inputForm th {
@@ -1151,13 +1155,33 @@ footer .copyright p {
 .inputForm input {
   border: none;
   background-color: #efefef;
+  color: #727171;
+  font-size: 14px;
+  padding: 11px 14px 11px 14px;
 }
 .inputForm textarea {
   border: none;
   background-color: #efefef;
+  color: #727171;
+  font-size: 14px;
+  padding: 11px 14px 11px 14px;
 }
 .inputForm .textareaLabel {
+  padding-top: 8px;
   vertical-align: top;
+}
+.inputForm .confirm {
+  width: 88px;
+  height: 36px;
+  border: 1px solid #727171;
+  color: #727171;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+}
+.inputForm .confirm p {
+  display: inline;
+  line-height: 36px;
 }
 
 /*
