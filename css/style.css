@@ -368,6 +368,17 @@ footer .copyright {
   margin-bottom: 24px;
 }
 
+.radio {
+  margin-bottom: 16px;
+}
+
+.inputForm .inputBox {
+  padding-bottom: 16px;
+}
+.inputForm th {
+  padding-right: 30px;
+}
+
 /* module */
 .latestEvent {
   font-size: 0;
@@ -1032,8 +1043,14 @@ footer .copyright p {
   font-size: 14px;
 }
 
-.inputForm p {
-  margin: 10px 0 10px 0;
+.radioFont {
+  color: #727171;
+}
+
+.inputForm th {
+  color: #727171;
+  font-size: 13px;
+  text-align: left;
 }
 .inputForm input {
   border: none;
@@ -1043,15 +1060,16 @@ footer .copyright p {
   border: none;
   background-color: #efefef;
 }
-.inputForm label {
+.inputForm .textareaLabel {
   vertical-align: top;
 }
 
-.formFont {
-  color: #727171;
+/*
+.formFont{
+  color: $dark__fontColor;
   font-size: 13px;
 }
-
+*/
 .menu {
   float: left;
   width: 70%;
