@@ -1,5 +1,5 @@
 @charset "UTF-8";
-//We cannot type Japanese, maybe using japanese make error.
+
 .latestEvent{
   font-size: 0;
   padding-bottom: 40px;
@@ -56,27 +56,37 @@
   }
 }
 
-header{
-  .gHeader{
-    text-align: right;
-    .links{
-      font-size: 13px;
-      line-height: 30px;
-      text-decoration: none;
-    }
-  }
+.gHeader{
+  border-bottom: 1px solid $g__fontColor;
 }
 
 .gNav{
+  float: left;
+  color: $g__fontColor;
+  margin-top: 42px;
+  @include clearfix;
   .gNavli{
-    border-left: solid 1px $g__fontColor;
     float: left;
     font-weight: 400;
-    margin-left: -1px;
-    text-align: center;
-    width: 20%;
+    margin-right: 28px;
   }
 }
+
+.pNav{
+  float: right;
+  font-size: 12px;
+  font-weight: 200;
+  margin: 44px -12px 0 0;
+  .pNavli{
+    float: left;
+    padding: 0 12px;
+    border-right: 1px solid $g__fontColor;
+  }
+  .language{
+    border: none;
+  }
+}
+
 
 .future_entrance{
   .openclose{
@@ -259,12 +269,12 @@ header{
 footer{
   .foot{
     .footerLinks{
-      line-height: 100px;
+      line-height: 96px;
       .links{
         color: $g__fontColor;
         float: left;
         font-size: $g__fontSize;
-        margin-right: 52px;
+        margin-right: 28px;
         text-decoration: none;
       }
     }
@@ -272,30 +282,37 @@ footer{
       float: right;
       img{
         float: left;
-        height: 50px;
-        margin: 25px 0 0 30px;
+        height: 32px;
+        margin: 32px 0 0 16px;
         //margin-left: 30px;
         //margin-top: 25px;
-        width: 50px;
+        width: 32px;
       }
     }
   }
   .copyright{
     p {
       color: #FFFFFF;
-      font-size: 13px;
-      line-height: 26px;
-      //text-align: center;
+      font-size: 10px;
+      line-height: 24px;
     }
   }
 }
 
-.FCH_logo{
-  background-color: $g__color-future;
+.logoContainer{
   position: relative;
-  .FCHlogo_vertical{
+  .logo_vertical{
     position: absolute;
     height: 60%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  .HMP_logo_vertical{
+    position: absolute;
+    height: 67%;
     top: 0;
     right: 0;
     bottom: 0;
@@ -304,18 +321,26 @@ footer{
   }
 }
 
+.HMP_logo{
+  background-color: $g__fontColor;
+}
+
+.FCH_logo{
+  background-color: $g__color-future;
+}
+
 .KPH_logo{
   background-color: $g__color-kids;
-  position: relative;
-  .KPHlogo_vertical{
-    position: absolute;
-    height: 60%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-  }
+}
+
+.facility_explain{
+  font-size: $h2__fontSize;
+  line-height: 1.75em;
+  text-align: center;
+}
+
+.HMP_explain{
+  color: $g__fontColor;
 }
 
 .FCH_explain{
@@ -349,6 +374,15 @@ footer{
     font-size: $h2__fontSize;
     margin-left: 12px;
     float: left;
+  }
+}
+
+.heading-paragraph{
+  padding: 50px 0 24px 0;
+  p{
+    color: $h2__color;
+    font-size: $h2__fontSize;
+    margin-left: 24px;
   }
 }
 
@@ -503,6 +537,7 @@ footer{
 
 .experiencemenu{
   border-bottom: solid 1px $g__fontColor;
+  @include clearfix;
 }
 
 .exmenu_textBox_wrap{
@@ -530,15 +565,6 @@ footer{
     font-weight: 400;
     margin-top: 19px;
   }
-
-  .FCHcolor{
-    color: $g__color-future;
-  }
-
-  .KPHcolor{
-    color: $g__color-kids;
-  }
-
   .exmenu_detail{
     font-size: $g__fontSize;
     color: $g__fontColor;
@@ -546,6 +572,14 @@ footer{
     margin-top: 30px;
     line-height: 1.75em;
   }
+}
+
+.FCHcolor{
+  color: $g__color-future;
+}
+
+.KPHcolor{
+  color: $g__color-kids;
 }
 
 .info_table_FCH, .info_table_KPH{
@@ -667,6 +701,40 @@ footer{
   }
 }
 
+.adress{
+  >p{
+    font-size: $g__fontSize;
+  }
+  .lineSpace{
+    color: $g__fontColor;
+  }
+  .KPHaddress{
+    margin: 0 0 10px 24px;
+  }
+  .FCHaddress{
+    margin-left: 24px;
+  }
+}
+
+.parking{
+  .lineSpace{
+    color: $g__fontColor;
+    font-size: $g__fontSize;
+    margin-left: 24px;
+  }
+}
+.movie_wrap{
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  p{
+    font-size: $h3__fontSize;
+    color: $g__fontColor;
+    font-weight: 400;
+    margin: 50px 0 30px 0;
+    
+  }
+}
 //↑加納↓高居
 
 .lineSpace{

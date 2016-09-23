@@ -1,5 +1,4 @@
 @charset "UTF-8";
-//We cannot type Japanese, maybe using japanese make error.
 
 .instaPic{
   background-color: #CCCCCC;//sample
@@ -17,23 +16,12 @@
   margin-right: -3.2%;
 }
 
-header{
-  .gHeader{
-    height: 30px;
-    width: 100%;
-  }
+.gHeader{
+  height: 70px;
 }
 
 .topcap{
   padding: 50px 0 40px 0;
-}
-
-.gNav{
-  border-right: solid 1px $g__fontColor;
-  color: $g__fontColor;
-  margin: 0px -1px 40px 0;
-  width: 100%;
-  @include clearfix;
 }
 
 .future_entrance{
@@ -89,14 +77,19 @@ header{
 footer{
   .foot{
     background: #efefef;
-    height: 100px;
+    height: 96px;
     width: 100%;
   }
   .copyright{
     background: #9fa0a0;
-    height: 26px;
+    height: 24px;
     width: 100%;
   }
+}
+
+.HMP_logo{
+  width: 100%;
+  height: calc(100vh - 174px);
 }
 
 .FCH_logo{
@@ -109,16 +102,8 @@ footer{
   height: calc(100vh - 174px);
 }
 
-.FCH_explain{
+.facility_explain{
   margin-top: 50px;
-}
-
-.KPH_explain{
-  margin-top: 50px;
-}
-
-.experiencemenu{
-  border-bottom: solid 1px #9FA0A0;
 }
 
 .event_textBox_wrap{
@@ -209,6 +194,44 @@ footer{
   left: 0;
   width: 100%;
   height: 60vh;
+}
+
+.adress{
+  width: 50%;
+  float: left;
+  .heading{
+    >p{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.parking{
+  width: 50%;
+  float: left;
+  .heading{
+    >p{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.access{
+  width: 100%;
+  float: left;
+  .heading{
+    >p{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.accessProcess{
+  width: 100%;
+  float: left;
+  img{
+    width: 100%;
+  }
 }
 
 //↑加納↓高居
