@@ -703,13 +703,13 @@ footer{
 }
 
 .pageTitle_event{
-  border-bottom: solid 1px;
-  border-top: solid 1px;
+  border-bottom: solid 1px $g__fontColor;
+  border-top: solid 1px $g__fontColor;
   color: $title__color;
   font-size: $title__fontSize;
   font-weight: 500;
   .titleText{
-    border-left: solid 1px;
+    border-left: solid 1px $g__fontColor;
     line-height: 63px;
   }
 }
@@ -766,13 +766,13 @@ footer{
 }
 
 .pageTitle{
-  border-bottom: solid 1px;
-  border-top: solid 1px;
+  border-bottom: solid 1px $g__fontColor;
+  border-top: solid 1px $g__fontColor;
   color: $title__color;
   font-size: $title__fontSize;
   font-weight: 500;
   .titleText{
-    border-left: solid 1px;
+    border-left: solid 1px $g__fontColor;
     line-height: 63px;
   }
 }
