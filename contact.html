@@ -41,53 +41,58 @@
     </div>
   </div>
 </header>
-
 <div class = "pageTitle">
   <div class = "wrap">
-    <p class = "titleText">お問い合わせ</p>
+    <p class = "titleText">お知らせ</p>
   </div>
 </div>
 <div class = "wrap">
 <!-- 以下body -->
-  <div class = "inputForm">
-    <form action = ".php" method = "post">
-      <p>
-        <input type = "radio" name = "radio" id = "fch" value = "fch">
-          <label for = "fch">
-            <span class = "formFont">はこだてみらい館</span>
-          </label>
-        <input type = "radio" name = "radio" id = "hkp" value = "hkp">
-          <label for = "hkp">
-            <span class = "formFont">はこだてキッズプラザ</span>
-          </label>
-        <input type = "radio" name = "radio" id = "both" value = "both">
-          <label for = "both">
-            <span class = "formFont">どちらとも</span>
-          </label>
-      </p>
-      <p>
-        <span class = "formFont">お名前</span>
-        <input type="text" name ="name" size = "50" maxlength = "255" placeholder = "未来太郎">
-      </p>
-      <p>
-        <span class = "formFont">メールアドレス</span>
-        <input type = "email" name ="email" size = "50" maxlength = "255" placeholder="sample@gmail.com">
-      </p>
-      <p>
-        <label for = "comment" class = "formFont">
-          問い合わせ内容
-        </label>
-        <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
-      </p>
-      <p><button type="submit">確認</button></p>
-    </form>
+  <div>
+    <div class = "radio">
+      <input type = "radio" name = "radio" id = "fch" value = "fch">
+        <label for = "fch"><span class = "radioFont">はこだてみらい館</span></label>
+      <input type = "radio" name = "radio" id = "hkp" value = "hkp">
+        <label for = "hkp"><span class = "radioFont">はこだてキッズプラザ</span></label>
+      <input type = "radio" name = "radio" id = "both" value = "both">
+        <label for = "both"><span class = "radioFont">どちらとも</span></label>
+    </div>
+    <table class = "inputForm">
+      <tr>
+        <th class = "inputBox">お名前</th>
+        <td>
+          <input type="text" name ="name" size = "50" maxlength = "255" placeholder = "未来太郎">
+        </td>
+      </tr>
+      <tr>
+        <th class = "inputBox">メールアドレス</th>
+        <td>
+          <input type = "email" name ="email" size = "50" maxlength = "255" placeholder="miraiproject@sample.com">
+        </td>
+      </tr>
+      <tr>
+        <th class = "textareaLabel">問い合わせ内容</th>
+        <td>
+          <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th class = "inputBox">　</th>
+        <td>
+          <a href = "#">
+            <div class = "confirm">
+              <p>確認</p>
+            </div>
+          </a>
+        </td>
+      </tr>
+    </table>
   </div>
 <!-- ここまで -->
 </div>
 <footer>
   <div class = "foot">
     <div class ="footerLinks wrap">
-      <a href = "notice.html" class="links">メンバー</a>
       <a href = "notice.html" class="links">お知らせ</a>
       <a href = "recruit.html" class="links">求人情報</a>
       <a href = "FAQ.html" class="links">よくあるご質問</a>
