@@ -790,14 +790,14 @@ footer{
   }
   input{
     border: none;
-    background-color: #efefef;
+    //background-color: #efefef;
     color: $dark__fontColor;
     font-size: $g__fontSize;
     padding: 11px 14px 11px 14px;
   }
   textarea{
     border: none;
-    background-color: #efefef;
+    //background-color: #efefef;
     color: $dark__fontColor;
     font-size: $g__fontSize;
     padding: 11px 14px 11px 14px;
@@ -820,9 +820,19 @@ footer{
     }
   }
 }
-/*
-.formFont{
-  color: $dark__fontColor;
-  font-size: 13px;
+
+.inputBox{
+  input{
+    background-color: #efefef;
+  }
+  textarea{
+    background-color: #efefef;
+  }
 }
-*/
+
+.revision{
+  background: $dark__fontColor;
+  p{
+    color: white;
+  }
+}

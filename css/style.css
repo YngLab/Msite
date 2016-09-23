@@ -1154,14 +1154,12 @@ footer .copyright p {
 }
 .inputForm input {
   border: none;
-  background-color: #efefef;
   color: #727171;
   font-size: 14px;
   padding: 11px 14px 11px 14px;
 }
 .inputForm textarea {
   border: none;
-  background-color: #efefef;
   color: #727171;
   font-size: 14px;
   padding: 11px 14px 11px 14px;
@@ -1184,12 +1182,20 @@ footer .copyright p {
   line-height: 36px;
 }
 
-/*
-.formFont{
-  color: $dark__fontColor;
-  font-size: 13px;
+.inputBox input {
+  background-color: #efefef;
 }
-*/
+.inputBox textarea {
+  background-color: #efefef;
+}
+
+.revision {
+  background: #727171;
+}
+.revision p {
+  color: white;
+}
+
 .menu {
   float: left;
   width: 70%;
