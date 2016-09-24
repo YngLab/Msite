@@ -382,20 +382,27 @@ footer .copyright {
   margin-bottom: 40px;
 }
 
+.touristOffice {
+  float: left;
+  width: 50%;
+}
 .touristOffice .heading {
   margin-top: 0;
-  width: 50%;
-}
-.touristOffice .heading > p {
-  margin-bottom: 24px;
+  padding-bottom: 24px;
+  /*
+  >p{
+    margin-bottom: 24px;
+  }
+  */
 }
 
-.touristGuide .heading {
-  margin-top: 0;
+.touristGuide {
+  float: right;
   width: 50%;
 }
-.touristGuide .heading > p {
-  margin-bottom: 24px;
+.touristGuide .heading {
+  margin-top: 0;
+  padding-bottom: 24px;
 }
 
 .radio {
@@ -1176,16 +1183,21 @@ footer .copyright p {
   font-size: 16px;
 }
 
-.touristOffice .lineSpace {
-  color: #9fa0a0;
-  font-size: 14px;
+/*
+.touristOffice{
+  .lineSpace{
+    color: $g__fontColor;
+    font-size: $g__fontSize;
+  }
 }
 
-.touristGuide .lineSpace {
-  color: #9fa0a0;
-  font-size: 14px;
+.touristGuide{
+  .lineSpace{
+    color: $g__fontColor;
+    font-size: $g__fontSize;
+  }
 }
-
+*/
 .radioFont {
   color: #727171;
   margin-right: 60px;

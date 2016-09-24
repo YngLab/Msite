@@ -292,22 +292,25 @@ footer{
 }
 
 .touristOffice{
+  float: left;
+  width: 50%;
   .heading{
     margin-top: 0;
-    width: 50%;
+    padding-bottom: 24px;
+    /*
     >p{
       margin-bottom: 24px;
     }
+    */
   }
 }
 
 .touristGuide{
+  float: right;
+  width: 50%;
   .heading{
     margin-top: 0;
-    width: 50%;
-    >p{
-      margin-bottom: 24px;
-    }
+    padding-bottom: 24px;
   }
 }
 
