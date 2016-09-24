@@ -260,8 +260,11 @@ footer{
   }
 }
 
+.autoHeight{
+  height: calc(100vh - (71px) - (65px + (12px + 50px)) - (2.9629vw + 96px + 24px));
+}
+
 .p-layout{
-  height: calc(100vh - 30px - 54px - (65px + 50px) - 126px);
   position: relative;
   width: 100%;
 }
