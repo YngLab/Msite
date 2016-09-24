@@ -276,9 +276,13 @@ footer{
 .p-centering{
   left: 50%;
   position: absolute;
-  top: calc(50% - 50px);
+  top: 50%;
   transform: translate(-50%, -50%);
   text-align: left;
+}
+
+.topMargin{
+  top: calc(50% - 50px);
 }
 
 .p-margin{
