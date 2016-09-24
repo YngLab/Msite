@@ -27,6 +27,22 @@ $(function(){
   $(".move-page-top").click(function(){
     $("html, body").animate({scrollTop:0},"slow");
   });
+  $(".Panel1").on('click',function(){
+    $(".Panel1 .menu_text").toggleClass("active").slideToggle(400);
+    $(".Panel1").toggleClass("active");
+  });
+  $(".Panel2").on('click',function(){
+    $(".Panel2 .menu_text").toggleClass("active").slideToggle(400);
+    $(".Panel2").toggleClass("active");
+  });
+  $(".Panel3").on('click',function(){
+    $(".Panel3 .menu_text").toggleClass("active").slideToggle(400);
+    $(".Panel3").toggleClass("active");
+  });
+  $(".Panel4").on('click',function(){
+    $(".Panel4 .menu_text").toggleClass("active").slideToggle(400);
+    $(".Panel4").toggleClass("active");
+  });
 
   var nowModalSyncer = null;//現在開かれているモーダルコンテンツ
   var modalClassSyncer = "modal-syncer";//モーダルを開くリンクに付けるクラス名
