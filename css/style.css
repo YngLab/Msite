@@ -354,7 +354,11 @@ footer .copyright {
 }
 
 .autoHeight {
-  height: calc(100vh - (71px) - (65px + (12px + 50px)) - (2.9629vw + 96px + 24px));
+  min-height: calc(100vh - (71px) - (65px + (12px + 50px)) - (2.9629vw + 96px + 24px));
+}
+
+.autoHeight-ac {
+  min-height: calc(100vh - (71px) - (65px + (12px + 50px)) - (2.9629vw + 40px + 96px + 24px));
 }
 
 .p-layout {
