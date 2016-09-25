@@ -582,7 +582,7 @@ footer{
   right: 0;
   bottom: 0;
   left: 0;
-  width: 210px;
+  width: 100%;
   height: 150px;
   vertical-align: middle;
   text-align: center;
@@ -624,16 +624,17 @@ footer{
     height: 71px;
   }
   th{
-    width: 21.5%;
-    padding-left: 14px;
-    padding-top: 17px;
     background-color: $bg__color;
     font-size: $cap__fontSize;
     font-weight: 400;
+    padding-left: 14px;
+    padding-top: 17px;
+    width: 21.5%;
   }
   td{
-    padding-left: 14px;
     line-height: 1.75em;
+    padding-bottom: 12px;
+    padding-left: 14px;
   }
 }
 

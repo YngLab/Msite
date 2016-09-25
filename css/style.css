@@ -1000,7 +1000,7 @@ footer .copyright p {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 210px;
+  width: 100%;
   height: 150px;
   vertical-align: middle;
   text-align: center;
@@ -1043,16 +1043,17 @@ footer .copyright p {
   height: 71px;
 }
 .info_table_FCH th, .info_table_KPH th {
-  width: 21.5%;
-  padding-left: 14px;
-  padding-top: 17px;
   background-color: #f7f8f8;
   font-size: 13px;
   font-weight: 400;
+  padding-left: 14px;
+  padding-top: 17px;
+  width: 21.5%;
 }
 .info_table_FCH td, .info_table_KPH td {
-  padding-left: 14px;
   line-height: 1.75em;
+  padding-bottom: 12px;
+  padding-left: 14px;
 }
 
 .info_table_FCH {
