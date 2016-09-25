@@ -1283,6 +1283,9 @@ footer .copyright p {
   position: relative;
   padding: 24px 0 24px 0;
 }
+.menu label .labelArea {
+  width: calc(100% - 60px);
+}
 .menu label .btn {
   bottom: 0;
   display: block;

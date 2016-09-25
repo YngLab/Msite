@@ -24,6 +24,9 @@
     //margin: 0;
     position: relative;
     padding: $h2__fontSize 0 $h2__fontSize 0;
+    .labelArea{
+      width: calc(100% - 60px);
+    }
     .btn{
       bottom: 0;
       display: block;
