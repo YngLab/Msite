@@ -152,7 +152,7 @@ a:hover {
 }
 
 .gHeader {
-  height: 70px;
+  height: 81px;
 }
 
 .topcap {
@@ -892,7 +892,6 @@ footer .foot:after {
   display: block;
 }
 footer .foot .footerLinks {
-  line-height: 136px;
   width: 714px;
   margin: 0 auto;
   text-align: center;
@@ -903,10 +902,11 @@ footer .foot .footerLinks:after {
   display: block;
 }
 footer .foot .footerLinks .links {
+  margin: 46px 0;
   color: #9fa0a0;
   float: left;
   font-size: 14px;
-  margin: 0 14px;
+  padding: 14px;
   text-decoration: none;
 }
 footer .foot .SNSbutton {
