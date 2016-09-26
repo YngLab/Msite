@@ -378,6 +378,11 @@ footer{
   text-align: center;
 }
 
+.facility_explain_sp{
+  font-size: $g__fontSize;
+  line-height: 1.75em;
+}
+
 .HMP_explain{
   color: $g__fontColor;
 }
@@ -766,12 +771,24 @@ footer{
 .movie_wrap{
   width: 800px;
   margin: 0 auto;
+  padding-bottom: 20px;
   text-align: center;
+  @include smallW;
   p{
     font-size: $h3__fontSize;
     color: $g__fontColor;
     font-weight: 400;
     margin: 50px 0 30px 0;
+    @media #{$small} {
+      margin: 20px 0 15px 0;
+    }
+  }
+  .movie_youtube{
+    width: 100%;
+    height: 450px;
+    @media #{$small} {
+      height: 56.25vw;
+    }
   }
 }
 //↑加納↓高居

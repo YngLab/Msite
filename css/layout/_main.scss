@@ -137,6 +137,16 @@ footer{
 
 .facility_explain{
   margin-top: 50px;
+  @media #{$small} {
+    display: none;
+  }
+}
+
+.facility_explain_sp{
+  padding: 16px 0 20px 0;
+  @media #{$normal} {
+    display: none;
+  }
 }
 
 .event_textBox_wrap{
