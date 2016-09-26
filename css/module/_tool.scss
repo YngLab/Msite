@@ -41,6 +41,13 @@
       -webkit-transition: all 0.5s ease;
     }
   }
+  label:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
+  }
 }
 
 // input[type = "checkbox"].on-off{
