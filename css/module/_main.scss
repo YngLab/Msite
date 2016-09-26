@@ -656,10 +656,12 @@ footer{
 
 /* modal-contentのCSS */
 .modal-content {
-  width: calc(90vh + 400px);
+  // width: calc(90vh + 400px);
+  height: 90%;
+  width: calc(90vh*1.4993);
   margin: 0 ;
   background: #fff;
-  border: solid 1px $g__color-future;
+  // border: solid 1px $g__color-future;
   position: fixed;
   display: none;
   z-index: 2;
@@ -672,12 +674,14 @@ footer{
     top: 4%;
     left: 50%;
     margin-left: -105px;
+    z-index: 10;
   }
   #modal-close img{
     width: 20px;
     position: absolute;
     top: 4%;
     right: calc(5% - 10px);
+    z-index: 10;
   }
   .exmenu_slide{
     //height: calc(100% - 115px);
