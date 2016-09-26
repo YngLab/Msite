@@ -129,7 +129,7 @@ a {
 }
 
 .gHeader {
-  height: 70px;
+  height: 93px;
 }
 
 .topcap {
@@ -190,11 +190,10 @@ a {
 
 footer {
   width: 100%;
-  margin-top: 2.9629vw;
+  margin-top: 60px;
 }
 footer .foot {
-  background: #efefef;
-  height: 96px;
+  height: 136px;
   width: 100%;
 }
 footer .copyright {
@@ -509,10 +508,32 @@ footer .copyright {
   border-bottom: 1px solid #9fa0a0;
 }
 
-.gNav {
+.pNav {
+  font-size: 12px;
+  font-weight: 200;
+  margin-top: 13px;
+  width: 100%;
+}
+.pNav:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.rightpNav {
+  float: right;
+  margin-left: 24px;
+}
+
+.language {
   float: left;
+}
+
+.gNav {
   color: #9fa0a0;
-  margin-top: 42px;
+  margin-top: 28px;
+  border-right: 1px solid #9fa0a0;
+  width: 100%;
 }
 .gNav:after {
   clear: both;
@@ -521,26 +542,11 @@ footer .copyright {
 }
 
 .gNavli {
+  border-left: 1px solid #9fa0a0;
   float: left;
   font-weight: 400;
-  margin-right: 28px;
-}
-
-.pNav {
-  float: right;
-  font-size: 12px;
-  font-weight: 200;
-  margin: 44px -12px 0 0;
-}
-
-.pNavli {
-  float: left;
-  padding: 0 12px;
-  border-right: 1px solid #9fa0a0;
-}
-
-.language {
-  border: none;
+  text-align: center;
+  width: calc(16.6667% - 1px);
 }
 
 .future_entrance .openclose {
@@ -710,33 +716,46 @@ footer .copyright {
 }
 
 footer .pagetop {
-  height: 40px;
+  height: 20px;
   margin: 0 auto;
   display: block;
 }
+footer .foot:after {
+  clear: both;
+  content: "";
+  display: block;
+}
 footer .foot .footerLinks {
-  line-height: 96px;
+  line-height: 136px;
+  width: 714px;
+  margin: 0 auto;
+  text-align: center;
+}
+footer .foot .footerLinks:after {
+  clear: both;
+  content: "";
+  display: block;
 }
 footer .foot .footerLinks .links {
   color: #9fa0a0;
   float: left;
   font-size: 14px;
-  margin-right: 28px;
+  margin: 0 14px;
   text-decoration: none;
 }
 footer .foot .SNSbutton {
-  float: right;
+  width: 116px;
+  margin: 0 auto 30px auto;
 }
 footer .foot .SNSbutton img {
-  float: left;
   height: 32px;
-  margin: 32px 0 0 16px;
-  width: 32px;
+  margin: 0 16px;
 }
 footer .copyright p {
   color: #FFFFFF;
   font-size: 10px;
   line-height: 24px;
+  text-align: center;
 }
 
 .logoContainer {
