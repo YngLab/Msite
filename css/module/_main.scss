@@ -394,16 +394,16 @@ footer{
   .foot{
     @include clearfix;
     .footerLinks{
-      line-height: 136px;
       width: 714px;
       margin: 0 auto;
       text-align: center;
       @include clearfix;
       .links{
+        margin: 46px 0;
         color: $g__fontColor;
         float: left;
         font-size: $g__fontSize;
-        margin: 0 14px;
+        padding: 14px;
         text-decoration: none;
       }
     }
