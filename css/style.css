@@ -501,6 +501,12 @@ footer .copyright {
   top: calc(55.7522% + (100% - 55.7522%) * 0.5);
   transform: translate(0%, -50%);
   text-align: left;
+  /*
+  .eventsch{
+    margin: calc(100% * (23 / 280.616)) 0 0 0;
+    color: $g__color-future;
+  }
+  */
 }
 .latestEvent .eventText .eventtitle {
   font-size: 21px;
