@@ -1099,10 +1099,10 @@ footer .copyright p {
 
 /* modal-contentのCSS */
 .modal-content {
-  width: calc(90vh + 400px);
+  height: 90%;
+  width: calc(90vh*1.4993);
   margin: 0;
   background: #fff;
-  border: solid 1px #f39800;
   position: fixed;
   display: none;
   z-index: 2;
@@ -1116,12 +1116,14 @@ footer .copyright p {
   top: 4%;
   left: 50%;
   margin-left: -105px;
+  z-index: 10;
 }
 .modal-content #modal-close img {
   width: 20px;
   position: absolute;
   top: 4%;
   right: calc(5% - 10px);
+  z-index: 10;
 }
 
 #modal-overlay {
