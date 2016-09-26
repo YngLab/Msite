@@ -69,10 +69,12 @@
     text-align: left;
     //margin-left: calc(100% * (18 / 280.616));
     //margin-left: 18px;
+    /*
     .eventsch{
-      //margin: calc(100% * (23 / 280.616)) 0 0 0;
-      //color: $g__color-future;
+      margin: calc(100% * (23 / 280.616)) 0 0 0;
+      color: $g__color-future;
     }
+    */
     .eventtitle{
       font-size: $h3__fontSize;
       margin: 3px 0 0 0;
@@ -83,9 +85,14 @@
       color: $g__fontColor;
     }
   }
-  .moreview{
-    margin: 40px 3.2% 10px auto;
-    width: 75px;
+}
+
+.moreview{
+  margin-bottom: 50px;
+  text-align: right;
+  width: 100%;
+  @media #{$small} {
+    margin-bottom: 40px;
   }
 }
 
@@ -373,6 +380,9 @@ footer{
     margin: 0 auto;
     display: block;
     cursor: pointer;
+    @media #{$small} {
+      height: 24px;
+    }
   }
   .pagetop:hover{
     opacity: 0.5;
@@ -382,7 +392,6 @@ footer{
     opacity:0.6;
   }
   .foot{
-    
     @include clearfix;
     .footerLinks{
       line-height: 136px;
@@ -459,6 +468,11 @@ footer{
   text-align: center;
 }
 
+.facility_explain_sp{
+  font-size: $g__fontSize;
+  line-height: 1.75em;
+}
+
 .HMP_explain{
   color: $g__fontColor;
 }
@@ -483,6 +497,14 @@ footer{
     color: $h2__color;
     font-size: $h2__fontSize;
     margin-left: 24px;
+    @media #{$small} {
+      font-size: 18px;
+      margin-left: 16px;
+    }
+  }
+  @media #{$small} {
+    font-size: 18px;
+    padding: 20px 0 27px 0;
   }
 }
 
@@ -562,6 +584,12 @@ footer{
   border: 3px solid $h2__color;
   float: left;
   display: inline-block;
+  @media #{$small} {
+    width: 4px;
+    height: 4px;
+    margin-top: 5px;
+    border: 2px solid $h2__color;
+  }
 }
 
 #all_eventmenu{
@@ -860,12 +888,24 @@ footer{
 .movie_wrap{
   width: 800px;
   margin: 0 auto;
+  padding-bottom: 20px;
   text-align: center;
+  @include smallW;
   p{
     font-size: $h3__fontSize;
     color: $g__fontColor;
     font-weight: 400;
     margin: 50px 0 30px 0;
+    @media #{$small} {
+      margin: 20px 0 15px 0;
+    }
+  }
+  .movie_youtube{
+    width: 100%;
+    height: 450px;
+    @media #{$small} {
+      height: 56.25vw;
+    }
   }
 }
 //↑加納↓高居
