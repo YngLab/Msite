@@ -56,9 +56,14 @@
       }
     }
   }
-  .moreview{
-    margin: 40px 3.2% 10px auto;
-    width: 75px;
+}
+
+.moreview{
+  margin-bottom: 50px;
+  text-align: right;
+  width: 100%;
+  @media #{$small} {
+    margin-bottom: 40px;
   }
 }
 
@@ -297,6 +302,9 @@ footer{
     height: 40px;
     margin: 0 auto;
     display: block;
+    @media #{$small} {
+      height: 48px;
+    }
   }
   .foot{
     .footerLinks{

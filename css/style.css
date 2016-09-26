@@ -101,6 +101,11 @@ a {
   font-size: 15px;
   font-weight: 500;
 }
+@media screen and (max-width: 768px) {
+  .linkText {
+    font-size: 16px;
+  }
+}
 
 /* layout */
 .instaPic {
@@ -118,6 +123,11 @@ a {
   content: "";
   display: block;
 }
+@media screen and (max-width: 768px) {
+  .wrap {
+    width: calc(100% * (728px / 768px));
+  }
+}
 
 .latestEvent {
   margin-right: -3.2%;
@@ -126,6 +136,11 @@ a {
 .nav_TOP {
   height: 48px;
   margin: 0 auto 50px auto;
+}
+@media screen and (max-width: 768px) {
+  .nav_TOP {
+    display: none;
+  }
 }
 
 .gHeader {
@@ -143,6 +158,16 @@ a {
   margin: -1px;
   width: 48.4%;
 }
+@media screen and (max-width: 768px) {
+  .future_entrance {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .future_entrance {
+    margin-bottom: 20px;
+  }
+}
 
 .kids_entrance {
   background-color: #ffffff;
@@ -150,6 +175,16 @@ a {
   float: right;
   margin: -1px;
   width: 48.4%;
+}
+@media screen and (max-width: 768px) {
+  .kids_entrance {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .kids_entrance {
+    margin-bottom: 20px;
+  }
 }
 
 .future_logoapp {
@@ -163,6 +198,16 @@ a {
   width: 48.4%;
   margin-top: 2.9629vw;
 }
+@media screen and (max-width: 768px) {
+  .future_logoapp {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .future_logoapp {
+    margin-bottom: 20px;
+  }
+}
 
 .kids_logoapp {
   background-color: #8fc31f;
@@ -174,6 +219,16 @@ a {
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
   width: 48.4%;
   margin-top: 2.9629vw;
+}
+@media screen and (max-width: 768px) {
+  .kids_logoapp {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .kids_logoapp {
+    margin-top: 0;
+  }
 }
 
 .logoapp_textBox {
@@ -478,9 +533,16 @@ footer .copyright {
   margin: 10px 0 0 0;
   color: #9fa0a0;
 }
-.latestEvent .moreview {
-  margin: 40px 3.2% 10px auto;
-  width: 75px;
+
+.moreview {
+  margin-bottom: 50px;
+  text-align: right;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .moreview {
+    margin-bottom: 40px;
+  }
 }
 
 .nav_TOP {
@@ -713,6 +775,11 @@ footer .pagetop {
   height: 40px;
   margin: 0 auto;
   display: block;
+}
+@media screen and (max-width: 768px) {
+  footer .pagetop {
+    height: 48px;
+  }
 }
 footer .foot .footerLinks {
   line-height: 96px;
