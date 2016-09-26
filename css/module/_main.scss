@@ -497,6 +497,14 @@ footer{
     color: $h2__color;
     font-size: $h2__fontSize;
     margin-left: 24px;
+    @media #{$small} {
+      font-size: 18px;
+      margin-left: 16px;
+    }
+  }
+  @media #{$small} {
+    font-size: 18px;
+    padding: 20px 0 27px 0;
   }
 }
 
@@ -576,6 +584,12 @@ footer{
   border: 3px solid $h2__color;
   float: left;
   display: inline-block;
+  @media #{$small} {
+    width: 4px;
+    height: 4px;
+    margin-top: 5px;
+    border: 2px solid $h2__color;
+  }
 }
 
 #all_eventmenu{
