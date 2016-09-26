@@ -33,3 +33,9 @@ $accordion__border: #dddddd;
 @mixin headingMark{
 
 }
+
+@mixin smallW{
+  @media #{$small} {
+    width: 100%;
+  }
+}
