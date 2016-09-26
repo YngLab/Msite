@@ -1267,15 +1267,6 @@ footer .copyright p {
   float: left;
   width: 70%;
 }
-.menu ul {
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  line-height: 1.75em;
-  list-style: none;
-}
 
 .menu label {
   border-top: 1px solid #dddddd;
@@ -1300,19 +1291,13 @@ footer .copyright p {
   -webkit-transition: all 0.5s ease;
 }
 
-input[type="checkbox"].on-off {
+.menu .menu_text {
   display: none;
-}
-input[type="checkbox"].on-off + .element ul {
-  height: 0;
-  overflow: hidden;
-}
-
-input[type="checkbox"].on-off:checked + .element ul {
-  height: 200px;
+  line-height: 1.75em;
   margin-bottom: 24px;
 }
-input[type="checkbox"].on-off:checked + .element .btn {
+
+.menu .active .btn {
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
