@@ -10,6 +10,8 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
     display: inline-block;
+    height: 20.9259vw;
+    width: 20.9259vw;
     margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
     //margin: -1px 2.75% -1px -1px;
     position: relative;
@@ -28,32 +30,57 @@
         z-index: 10;
       }
     }
-    img{
-      height: 55.7522%;
-      width: 100%;
+  }
+  .latestBox_kids{
+    background-color: $boxcolor;
+    border: solid 1px $g__color-kids;
+    display: inline-block;
+    height: 20.9259vw;
+    width: 20.9259vw;
+    margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
+    //margin: -1px 2.75% -1px -1px;
+    position: relative;
+    .remaindays_kids{
+      background-color: $g__color-kids;
+      height: 26px;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 86px;
+      .caption{
+        color: #ffffff;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 18px;
+        z-index: 10;
+      }
     }
-    .eventText{
-      position: absolute;
-      left: calc((100% - 231px) * 0.5);
-      position: absolute;
-      top: calc(55.7522% + (100% - 55.7522%) * 0.5);
-      transform: translate(0%, -50%);
-      text-align: left;
-      //margin-left: calc(100% * (18 / 280.616));
-      //margin-left: 18px;
-      .eventsch_future{
-        //margin: calc(100% * (23 / 280.616)) 0 0 0;
-        //color: $g__color-future;
-      }
-      .eventtitle_future{
-        font-size: $h3__fontSize;
-        margin: 3px 0 0 0;
-        color: $dark__fontColor;
-      }
-      .eventplace_future{
-        margin: 10px 0 0 0;
-        color: $g__fontColor;
-      }
+  }
+  img{
+    height: 55.7522%;
+    width: 100%;
+  }
+  .eventText{
+    position: absolute;
+    left: calc((100% - 231px) * 0.5);
+    position: absolute;
+    top: calc(55.7522% + (100% - 55.7522%) * 0.5);
+    transform: translate(0%, -50%);
+    text-align: left;
+    //margin-left: calc(100% * (18 / 280.616));
+    //margin-left: 18px;
+    .eventsch{
+      //margin: calc(100% * (23 / 280.616)) 0 0 0;
+      //color: $g__color-future;
+    }
+    .eventtitle{
+      font-size: $h3__fontSize;
+      margin: 3px 0 0 0;
+      color: $dark__fontColor;
+    }
+    .eventplace{
+      margin: 10px 0 0 0;
+      color: $g__fontColor;
     }
   }
   .moreview{
@@ -81,7 +108,6 @@
 
 .gHeader{
   background-color: $boxcolor;
-  border-bottom: 1px solid $g__fontColor;
 }
 
 .pNav{
@@ -115,6 +141,9 @@
   font-weight: 400;
   text-align: center;
   width: calc(16.6667% - 1px);
+  a{
+    display: block;
+  }
 }
 
 
@@ -133,6 +162,13 @@
       width: 43.3884%;
     }
   }
+  // .future_logo:hover{
+  //   opacity: 0.5;
+  //   filter: alpha(opacity=50);
+  //   -moz-opacity:0.6;
+  //   -khtml-opacity: 0.6;
+  //   opacity:0.6;
+  // }
   .future_contents{
     border-bottom: solid 1px $g__color-future;
     position: relative;
@@ -140,6 +176,13 @@
       float: left;
       width: 50%;
     }
+  }
+  .future_contents:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
   }
   .future_textbox{
     float: left;
@@ -174,6 +217,13 @@
       width: 50%;
     }
   }
+  .future_information:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
+  }
 }
 
 .kids_entrance{
@@ -192,6 +242,13 @@
       width: 51.6528%;
     }
   }
+  .kids_logo:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
+  }
   .kids_contents{
     border-bottom: solid 1px $g__color-kids;
     position: relative;
@@ -199,6 +256,13 @@
     width: 50%;
     float: left;
     }
+  }
+  .kids_contents:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
   }
   .kids_textbox{
     float: left;
@@ -232,6 +296,13 @@
       float: right;
       width: 50%;
     }
+  }
+  .kids_information:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
   }
 }
 
@@ -301,6 +372,14 @@ footer{
     height: 20px;
     margin: 0 auto;
     display: block;
+    cursor: pointer;
+  }
+  .pagetop:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
   }
   .foot{
     
@@ -578,7 +657,16 @@ footer{
 
 .experiencemenu{
   border-bottom: solid 1px $g__fontColor;
+  cursor: pointer;
   @include clearfix;
+}
+
+.experiencemenu:hover{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -moz-opacity:0.6;
+  -khtml-opacity: 0.6;
+  opacity:0.6;
 }
 
 .exmenu_textBox_wrap{
