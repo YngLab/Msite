@@ -10,6 +10,8 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
     display: inline-block;
+    height: 20.9259vw;
+    width: 20.9259vw;
     margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
     //margin: -1px 2.75% -1px -1px;
     position: relative;
@@ -28,37 +30,69 @@
         z-index: 10;
       }
     }
-    img{
-      height: 55.7522%;
-      width: 100%;
-    }
-    .eventText{
+  }
+  .latestBox_kids{
+    background-color: $boxcolor;
+    border: solid 1px $g__color-kids;
+    display: inline-block;
+    height: 20.9259vw;
+    width: 20.9259vw;
+    margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
+    //margin: -1px 2.75% -1px -1px;
+    position: relative;
+    .remaindays_kids{
+      background-color: $g__color-kids;
+      height: 26px;
+      left: 0px;
       position: absolute;
-      left: calc((100% - 231px) * 0.5);
-      position: absolute;
-      top: calc(55.7522% + (100% - 55.7522%) * 0.5);
-      transform: translate(0%, -50%);
-      text-align: left;
-      //margin-left: calc(100% * (18 / 280.616));
-      //margin-left: 18px;
-      .eventsch_future{
-        //margin: calc(100% * (23 / 280.616)) 0 0 0;
-        //color: $g__color-future;
-      }
-      .eventtitle_future{
-        font-size: $h3__fontSize;
-        margin: 3px 0 0 0;
-        color: $dark__fontColor;
-      }
-      .eventplace_future{
-        margin: 10px 0 0 0;
-        color: $g__fontColor;
+      top: 0px;
+      width: 86px;
+      .caption{
+        color: #ffffff;
+        height: 26px;
+        line-height: 26px;
+        padding-left: 18px;
+        z-index: 10;
       }
     }
   }
-  .moreview{
-    margin: 40px 3.2% 10px auto;
-    width: 75px;
+  img{
+    height: 55.7522%;
+    width: 100%;
+  }
+  .eventText{
+    position: absolute;
+    left: calc((100% - 231px) * 0.5);
+    position: absolute;
+    top: calc(55.7522% + (100% - 55.7522%) * 0.5);
+    transform: translate(0%, -50%);
+    text-align: left;
+    //margin-left: calc(100% * (18 / 280.616));
+    //margin-left: 18px;
+    /*
+    .eventsch{
+      margin: calc(100% * (23 / 280.616)) 0 0 0;
+      color: $g__color-future;
+    }
+    */
+    .eventtitle{
+      font-size: $h3__fontSize;
+      margin: 3px 0 0 0;
+      color: $dark__fontColor;
+    }
+    .eventplace{
+      margin: 10px 0 0 0;
+      color: $g__fontColor;
+    }
+  }
+}
+
+.moreview{
+  margin-bottom: 50px;
+  text-align: right;
+  width: 100%;
+  @media #{$small} {
+    margin-bottom: 40px;
   }
 }
 
@@ -81,7 +115,6 @@
 
 .gHeader{
   background-color: $boxcolor;
-  border-bottom: 1px solid $g__fontColor;
 }
 
 .pNav{
@@ -115,6 +148,9 @@
   font-weight: 400;
   text-align: center;
   width: calc(16.6667% - 1px);
+  a{
+    display: block;
+  }
 }
 
 
@@ -133,6 +169,13 @@
       width: 43.3884%;
     }
   }
+  // .future_logo:hover{
+  //   opacity: 0.5;
+  //   filter: alpha(opacity=50);
+  //   -moz-opacity:0.6;
+  //   -khtml-opacity: 0.6;
+  //   opacity:0.6;
+  // }
   .future_contents{
     border-bottom: solid 1px $g__color-future;
     position: relative;
@@ -140,6 +183,13 @@
       float: left;
       width: 50%;
     }
+  }
+  .future_contents:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
   }
   .future_textbox{
     float: left;
@@ -174,6 +224,13 @@
       width: 50%;
     }
   }
+  .future_information:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
+  }
 }
 
 .kids_entrance{
@@ -192,6 +249,13 @@
       width: 51.6528%;
     }
   }
+  .kids_logo:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
+  }
   .kids_contents{
     border-bottom: solid 1px $g__color-kids;
     position: relative;
@@ -199,6 +263,13 @@
     width: 50%;
     float: left;
     }
+  }
+  .kids_contents:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
   }
   .kids_textbox{
     float: left;
@@ -232,6 +303,13 @@
       float: right;
       width: 50%;
     }
+  }
+  .kids_information:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
   }
 }
 
@@ -301,9 +379,19 @@ footer{
     height: 20px;
     margin: 0 auto;
     display: block;
+    cursor: pointer;
+    @media #{$small} {
+      height: 24px;
+    }
+  }
+  .pagetop:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
   }
   .foot{
-    
     @include clearfix;
     .footerLinks{
       line-height: 136px;
@@ -380,6 +468,11 @@ footer{
   text-align: center;
 }
 
+.facility_explain_sp{
+  font-size: $g__fontSize;
+  line-height: 1.75em;
+}
+
 .HMP_explain{
   color: $g__fontColor;
 }
@@ -404,6 +497,14 @@ footer{
     color: $h2__color;
     font-size: $h2__fontSize;
     margin-left: 24px;
+    @media #{$small} {
+      font-size: 18px;
+      margin-left: 16px;
+    }
+  }
+  @media #{$small} {
+    font-size: 18px;
+    padding: 20px 0 27px 0;
   }
 }
 
@@ -483,6 +584,12 @@ footer{
   border: 3px solid $h2__color;
   float: left;
   display: inline-block;
+  @media #{$small} {
+    width: 4px;
+    height: 4px;
+    margin-top: 5px;
+    border: 2px solid $h2__color;
+  }
 }
 
 #all_eventmenu{
@@ -578,7 +685,16 @@ footer{
 
 .experiencemenu{
   border-bottom: solid 1px $g__fontColor;
+  cursor: pointer;
   @include clearfix;
+}
+
+.experiencemenu:hover{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -moz-opacity:0.6;
+  -khtml-opacity: 0.6;
+  opacity:0.6;
 }
 
 .exmenu_textBox_wrap{
@@ -673,10 +789,12 @@ footer{
 
 /* modal-contentのCSS */
 .modal-content {
-  width: calc(90vh + 400px);
+  // width: calc(90vh + 400px);
+  height: 90%;
+  width: calc(90vh*1.4993);
   margin: 0 ;
   background: #fff;
-  border: solid 1px $g__color-future;
+  // border: solid 1px $g__color-future;
   position: fixed;
   display: none;
   z-index: 2;
@@ -689,12 +807,14 @@ footer{
     top: 4%;
     left: 50%;
     margin-left: -105px;
+    z-index: 10;
   }
   #modal-close img{
     width: 20px;
     position: absolute;
     top: 4%;
     right: calc(5% - 10px);
+    z-index: 10;
   }
   .exmenu_slide{
     //height: calc(100% - 115px);
@@ -768,12 +888,24 @@ footer{
 .movie_wrap{
   width: 800px;
   margin: 0 auto;
+  padding-bottom: 20px;
   text-align: center;
+  @include smallW;
   p{
     font-size: $h3__fontSize;
     color: $g__fontColor;
     font-weight: 400;
     margin: 50px 0 30px 0;
+    @media #{$small} {
+      margin: 20px 0 15px 0;
+    }
+  }
+  .movie_youtube{
+    width: 100%;
+    height: 450px;
+    @media #{$small} {
+      height: 56.25vw;
+    }
   }
 }
 //↑加納↓高居
