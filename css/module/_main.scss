@@ -681,6 +681,16 @@ footer{
 
 #all_experiencemenu{
   border-top: solid 1px $g__fontColor;
+  @media #{$small} {
+    display: none;
+  }
+}
+
+#all_experiencemenu_sp{
+  border-top: solid 1px $g__fontColor;
+  @media #{$normal} {
+    display: none;
+  }
 }
 
 .experiencemenu{
