@@ -1,23 +1,22 @@
 $(function(){
   w_size = $(window).width();
-  latestBox_size = w_size * .209259;
+  latestBox_size =  w_size * .209259;
   logoBox_size = w_size * .126851;
   logoBox_margin = w_size * .035185;
   institution_size = w_size * .224074;
-  $(".latestBox_future").css("width", latestBox_size + "px");
-  $(".latestBox_future").css("height", latestBox_size + "px");
+  $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
+  $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
   $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
   $(".future_logo img, .kids_logo img").css("margin-top", logoBox_margin + "px");
   $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
   $(window).resize(function () {
     w_size = $(window).width();
-    latestBox_size = w_size * .209259;
+    latestBox_size =  w_size * .209259;
     logoBox_size = w_size * .126851;
     logoBox_margin = w_size * .035185;
     institution_size = w_size * .224074;
-    logoapp_margin = w_size * .029629;
-    $(".latestBox_future").css("width", latestBox_size + "px");
-    $(".latestBox_future").css("height", latestBox_size + "px");
+    $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
+    $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
     $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
     $(".future_logo img, .kids_logo img").css("margin-top", logoBox_margin + "px");
     $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
@@ -27,7 +26,35 @@ $(function(){
   $(".move-page-top").click(function(){
     $("html, body").animate({scrollTop:0},"slow");
   });
-
+  //アコーディオンの中身の縦幅を取得して開く長さを指定
+  $(".Panel1").on('click',function(){
+    $(".Panel1 .menu_text").toggleClass("active").slideToggle(400);
+    $(".Panel1").toggleClass("active");
+  });
+  $(".Panel2").on('click',function(){
+    $(".Panel2 .menu_text").toggleClass("active").slideToggle(400);
+    $(".Panel2").toggleClass("active");
+  });
+  $(".Panel3").on('click',function(){
+    $(".Panel3 .menu_text").toggleClass("active").slideToggle(400);
+    $(".Panel3").toggleClass("active");
+  });
+  $(".Panel4").on('click',function(){
+    $(".Panel4 .menu_text").toggleClass("active").slideToggle(400);
+    $(".Panel4").toggleClass("active");
+  });
+  $(".Panel5").on('click',function(){
+    $(".Panel5 .menu_text").toggleClass("active").slideToggle(400);
+    $(".Panel5").toggleClass("active");
+  });
+    $(".Panel6").on('click',function(){
+    $(".Panel6 .menu_text").toggleClass("active").slideToggle(400);
+    $(".Panel6").toggleClass("active");
+  });
+  $(".Panel7").on('click',function(){
+    $(".Panel7 .menu_text").toggleClass("active").slideToggle(400);
+    $(".Panel7").toggleClass("active");
+  });
   var nowModalSyncer = null;//現在開かれているモーダルコンテンツ
   var modalClassSyncer = "modal-syncer";//モーダルを開くリンクに付けるクラス名
   var current_scrollY;
@@ -74,7 +101,7 @@ $(function(){
       //コンテンツをフェードインする
       $(nowModalSyncer).fadeIn("slow");
       //[#modal-overlay]、または[#modal-close]をクリックしたら…
-      $("#modal-overlay,#modal-close").unbind().click( function(e){
+      $("#modal-overlay, #modal-close").unbind().click( function(e){
         //[#modal-content]と[#modal-overlay]をフェードアウトした後に…
         $("#" + target + ",#modal-overlay").fadeOut("fast", function(){
           //[#modal-overlay]を削除する

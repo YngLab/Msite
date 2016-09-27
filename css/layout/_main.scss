@@ -8,8 +8,13 @@
 
 .wrap{
   margin: 0 auto;
+  //max-width: 1440px;
+  //min-width: 1080px;
   width: 92.5925%;
   @include clearfix;
+  @media #{$small} {
+    width: calc(100% * (728px / 768px));
+  }
 }
 
 .latestEvent{
@@ -19,10 +24,13 @@
 .nav_TOP{
   height: 48px;
   margin: 0 auto 50px auto;
+  @media #{$small} {
+    display: none;
+  }
 }
 
 .gHeader{
-  height: 70px;
+  height: 81px;
 }
 
 .topcap{
@@ -35,6 +43,10 @@
   float:left;
   margin: -1px;
   width: 48.4%;
+  @include smallW;
+  @media #{$small} {
+    margin-bottom: 20px;
+  }
 }
 
 .kids_entrance{
@@ -43,6 +55,10 @@
   float: right;
   margin: -1px;
   width: 48.4%;
+  @include smallW;
+  @media #{$small} {
+    margin-bottom: 20px;
+  }
 }
 
 .future_logoapp{
@@ -55,6 +71,10 @@
   text-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
   width: 48.4%;
   margin-top: 2.9629vw;
+  @include smallW;
+  @media #{$small} {
+    margin-bottom: 20px;
+  }
 }
 
 .kids_logoapp{
@@ -67,6 +87,10 @@
   text-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
   width: 48.4%;
   margin-top: 2.9629vw;
+  @include smallW;
+  @media #{$small} {
+    margin-top: 0;
+  }
 }
 
 .logoapp_textBox{
@@ -83,9 +107,8 @@
 
 footer{
   width: 100%;
-  margin-top: 2.9629vw;
+  margin-top: 60px;
   .foot{
-    background: #efefef;
     height: 96px;
     width: 100%;
   }
@@ -113,6 +136,16 @@ footer{
 
 .facility_explain{
   margin-top: 50px;
+  @media #{$small} {
+    display: none;
+  }
+}
+
+.facility_explain_sp{
+  padding: 16px 0 20px 0;
+  @media #{$normal} {
+    display: none;
+  }
 }
 
 .event_textBox_wrap{
@@ -276,9 +309,13 @@ footer{
 .p-centering{
   left: 50%;
   position: absolute;
-  top: calc(50% - 50px);
+  top: 50%;
   transform: translate(-50%, -50%);
   text-align: left;
+}
+
+.topMargin{
+  top: calc(50% - 50px);
 }
 
 .p-margin{

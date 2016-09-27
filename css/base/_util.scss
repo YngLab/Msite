@@ -39,6 +39,14 @@ a{
   text-decoration: none;
 }
 
+a:hover{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -moz-opacity:0.6;
+  -khtml-opacity: 0.6;
+  opacity:0.6;
+}
+
 .futureColor{
   color: $g__color-future;
 }
@@ -54,8 +62,11 @@ a{
 .linkText{
   border-bottom: solid 1px $link__fontColor;
   color: $link__fontColor;
-  font-size: 15px;
+  font-size: $link__fontSize;
   font-weight: 500;
+  @media #{$small} {
+    font-size: 16px;
+  }
 }
 
 //↑加納↓高居
