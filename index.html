@@ -8,8 +8,49 @@
 <link rel = "shortcut icon" href="images/hmp.ico">
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
-<div class = "instaPic">
-  <!-- なんとかかんとか -->
+
+<!--ランダム画像のjs-->
+<script src="js/jquery.js"></script>
+<script src="js/imageview.js"></script>
+
+<!--ランダム画像のcss-->
+<style type="text/css">
+.imageContainer {
+  width: 100%;
+}
+#imageArea {
+  width: 100%;
+}
+#imageArea img {
+  display: block;
+  float: left;    
+  margin: 0 auto;
+  padding: 0;
+}
+#imageBox1,
+#imageBox2,
+#imageBox3,
+#imageBox4,
+#imageBox5,
+#imageBox6,
+#imageBox7,
+#imageBox8 {
+  width: 25%;
+  float: left;
+}
+</style>
+
+<div class="imageContainer">
+  <div id="imageArea">
+    <div id="imageBox1"></div>
+    <div id="imageBox2"></div>
+    <div id="imageBox3"></div>
+    <div id="imageBox4"></div>
+    <div id="imageBox5"></div>
+    <div id="imageBox6"></div>
+    <div id="imageBox7"></div>
+    <div id="imageBox8"></div>
+  </div>
 </div>
 <div class = "bgcolor">
   <div class = "wrap">
@@ -270,6 +311,8 @@
         </div>
       </div>
     </a>
+      <!-- 最後にこの関数を読み込む-->
+      <script>updateImageView();</script>
   </div><!-- ここまでがwrap -->
   <footer>
     <img src = "images/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
