@@ -324,28 +324,42 @@ footer .copyright {
   float: left;
 }
 
-.exmenu_leftText .exmenu_textBox_wrap {
-  float: left;
-}
-.exmenu_leftText .exmenu_pic {
-  float: right;
+@media screen and (min-width: 769px) {
+  .exmenu_leftText .exmenu_textBox_wrap {
+    float: left;
+  }
+  .exmenu_leftText .exmenu_pic {
+    float: right;
+  }
 }
 
-.exmenu_rightText .exmenu_textBox_wrap {
-  float: right;
-}
-.exmenu_rightText .exmenu_pic {
-  float: left;
+@media screen and (min-width: 769px) {
+  .exmenu_rightText .exmenu_textBox_wrap {
+    float: right;
+  }
+  .exmenu_rightText .exmenu_pic {
+    float: left;
+  }
 }
 
 .exmenu_textBox_wrap {
   width: 25%;
   height: 25vw;
 }
+@media screen and (max-width: 768px) {
+  .exmenu_textBox_wrap {
+    width: 100%;
+  }
+}
 
 .exmenu_pic {
   width: 75%;
   height: 25vw;
+}
+@media screen and (max-width: 768px) {
+  .exmenu_pic {
+    width: 100%;
+  }
 }
 
 .heading:after {
@@ -998,6 +1012,9 @@ footer .copyright p {
     font-size: 18px;
     padding: 20px 0 27px 0;
   }
+  .heading .addPadding {
+    padding-top: 20px;
+  }
 }
 
 .heading-lineup {
@@ -1181,20 +1198,6 @@ footer .copyright p {
 #all_experiencemenu {
   border-top: solid 1px #9fa0a0;
 }
-@media screen and (max-width: 768px) {
-  #all_experiencemenu {
-    display: none;
-  }
-}
-
-#all_experiencemenu_sp {
-  border-top: solid 1px #9fa0a0;
-}
-@media screen and (min-width: 769px) {
-  #all_experiencemenu_sp {
-    display: none;
-  }
-}
 
 .experiencemenu {
   border-bottom: solid 1px #9fa0a0;
@@ -1260,6 +1263,11 @@ footer .copyright p {
   text-align: left;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .info_table_FCH, .info_table_KPH {
+    display: none;
+  }
+}
 .info_table_FCH tr, .info_table_KPH tr {
   height: 50px;
   width: 100%;
@@ -1279,6 +1287,16 @@ footer .copyright p {
   line-height: 1.75em;
   padding-bottom: 12px;
   padding-left: 14px;
+}
+
+.info_table_FCH_sp, .info_table_KPH_sp {
+  text-align: left;
+  width: 100%;
+}
+@media screen and (min-width: 769px) {
+  .info_table_FCH_sp, .info_table_KPH_sp {
+    display: none;
+  }
 }
 
 .info_table_FCH {
@@ -1301,6 +1319,22 @@ footer .copyright p {
 }
 .info_table_KPH th {
   color: #8fc31f;
+}
+
+.info_table_FCH_label {
+  color: #f39800;
+  border-bottom: dashed 1px #f39800;
+  padding-bottom: 3px;
+}
+
+.info_table_KPH_label {
+  color: #8fc31f;
+  border-bottom: dashed 1px #8fc31f;
+  padding-bottom: 3px;
+}
+
+.info_table_data {
+  margin: 20px 0 36px 0;
 }
 
 /* modal-contentのCSS */

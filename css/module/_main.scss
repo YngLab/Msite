@@ -505,6 +505,9 @@ footer{
   @media #{$small} {
     font-size: 18px;
     padding: 20px 0 27px 0;
+    .addPadding{
+      padding-top: 20px;
+    }
   }
 }
 
@@ -681,16 +684,6 @@ footer{
 
 #all_experiencemenu{
   border-top: solid 1px $g__fontColor;
-  @media #{$small} {
-    display: none;
-  }
-}
-
-#all_experiencemenu_sp{
-  border-top: solid 1px $g__fontColor;
-  @media #{$normal} {
-    display: none;
-  }
 }
 
 .experiencemenu{
@@ -752,6 +745,9 @@ footer{
 .info_table_FCH, .info_table_KPH{
   text-align: left;
   width: 100%;
+  @media #{$small} {
+    display: none;
+  }
   tr{
     height: 50px;
     width: 100%;
@@ -771,6 +767,14 @@ footer{
     line-height: 1.75em;
     padding-bottom: 12px;
     padding-left: 14px;
+  }
+}
+
+.info_table_FCH_sp, .info_table_KPH_sp{
+  text-align: left;
+  width: 100%;
+  @media #{$normal} {
+    display: none;
   }
 }
 
@@ -796,6 +800,21 @@ footer{
   }
 }
 
+.info_table_FCH_label{
+  color: $g__color-future;
+  border-bottom: dashed 1px $g__color-future;
+  padding-bottom: 3px;
+}
+
+.info_table_KPH_label{
+  color: $g__color-kids;
+  border-bottom: dashed 1px $g__color-kids;
+  padding-bottom: 3px;
+}
+
+.info_table_data{
+  margin: 20px 0 36px 0;
+}
 
 /* modal-contentのCSS */
 .modal-content {

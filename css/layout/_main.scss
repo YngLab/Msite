@@ -187,31 +187,37 @@ footer{
 }
 
 .exmenu_leftText{
-  .exmenu_textBox_wrap{
-    float: left;
-  }
-  .exmenu_pic{
-    float: right;
+  @media #{$normal} {
+    .exmenu_textBox_wrap{
+      float: left;
+    }
+    .exmenu_pic{
+      float: right;
+    }
   }
 }
 
 .exmenu_rightText{
-  .exmenu_textBox_wrap{
-    float: right;
-  }
-  .exmenu_pic{
-    float: left;
+  @media #{$normal} {
+    .exmenu_textBox_wrap{
+      float: right;
+    }
+    .exmenu_pic{
+      float: left;
+    }
   }
 }
 
 .exmenu_textBox_wrap{
   width: 25%;
   height: 25vw;
+  @include smallW;
 }
 
 .exmenu_pic{
   width: 75%;
   height: 25vw;
+  @include smallW;
 }
 
 .heading{
