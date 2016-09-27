@@ -1040,6 +1040,28 @@ footer .copyright p {
   }
 }
 
+.concierge {
+  padding: 50px 0 40px 0;
+}
+.concierge p {
+  color: #8fc31f;
+  font-size: 21px;
+}
+@media screen and (max-width: 768px) {
+  .concierge p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .concierge {
+    font-size: 18px;
+    padding: 20px 0 27px 0;
+  }
+  .concierge .addPadding {
+    padding-top: 20px;
+  }
+}
+
 .heading-lineup {
   padding: 50px 0 40px 0;
   float: left;
@@ -1066,6 +1088,11 @@ footer .copyright p {
   color: #727171;
   font-size: 13px;
   line-height: 1.75em;
+}
+@media screen and (max-width: 768px) {
+  .monthSort {
+    width: 100%;
+  }
 }
 .monthSort li {
   display: inline;

@@ -519,6 +519,24 @@ footer{
   }
 }
 
+.concierge{
+  padding: 50px 0 40px 0;
+  p{
+    color: $g__color-kids;
+    font-size: $h3__fontSize;
+    @media #{$small} {
+      font-size: 18px;
+    }
+  }
+  @media #{$small} {
+    font-size: 18px;
+    padding: 20px 0 27px 0;
+    .addPadding{
+      padding-top: 20px;
+    }
+  }
+}
+
 .heading-lineup{
   padding: 50px 0 40px 0;
   float: left;
@@ -545,6 +563,7 @@ footer{
   color: $h2__color;
   font-size: $cap__fontSize;
   line-height: 1.75em;
+  @include smallW;
   li{
     display: inline;
     margin-right: 26px;
