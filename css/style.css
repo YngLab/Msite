@@ -447,12 +447,19 @@ footer .copyright {
   padding-left: 24px;
 }
 
-.archives {
-  float: right;
-  width: 30%;
+@media screen and (min-width: 769px) {
+  .archives {
+    float: right;
+    width: 30%;
+  }
+  .archives .archiveLayout {
+    margin-left: 75px;
+  }
 }
-.archives .archiveLayout {
-  margin-left: 75px;
+@media screen and (max-width: 768px) {
+  .archives {
+    margin-bottom: 41px;
+  }
 }
 
 .autoHeight {
@@ -1612,6 +1619,20 @@ footer .copyright p {
 
 .archives .headmarkMargin {
   margin: 0 0 24px 24px;
+}
+@media screen and (max-width: 768px) {
+  .archives .headmarkMargin {
+    font-size: 18px;
+    margin: 0 0 27px 16px;
+  }
+}
+.archives .linkText {
+  margin-left: 24px;
+}
+@media screen and (max-width: 768px) {
+  .archives .linkText {
+    margin-left: 16px;
+  }
 }
 
 .success {
