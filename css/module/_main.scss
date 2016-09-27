@@ -536,13 +536,24 @@ footer{
 }
 
 .heading-lineup{
-  padding: 50px 0 40px 0;
-  float: left;
-  .headingTitle{
-    color: $h2__color;
-    font-size: $h2__fontSize;
-    margin-left: 12px;
+  @media #{$normal} {
+    padding: 50px 0 40px 0;
     float: left;
+    .headingTitle{
+      color: $h2__color;
+      font-size: $h2__fontSize;
+      margin-left: 12px;
+      float: left;
+    }
+  }
+  @media #{$small} {
+    font-size: 18px;
+    padding: 40px 0 27px 0;
+    p{
+      color: $h2__color;
+      font-size: 18px;
+      margin-left: 16px;
+    }
   }
 }
 
@@ -562,6 +573,9 @@ footer{
   font-size: $cap__fontSize;
   line-height: 1.75em;
   @include smallW;
+  @media #{$small} {
+    margin: 0 0 20px 18px;
+  }
   li{
     display: inline;
     margin-right: 26px;
@@ -585,6 +599,10 @@ footer{
   color: $h2__color;
   font-size: $cap__fontSize;
   line-height: 1.75em;
+  @include smallW;
+  @media #{$small} {
+    margin: 0 0 20px 18px;
+  }
   li{
     display: inline;
     margin-right: 26px;
@@ -631,12 +649,18 @@ footer{
 
 .event_textBox_wrap{
   position: relative;
-  float: right;
+  @include smallW;
+  @media #{$normal}{
+    float: right;
+  }
 }
 
 .event_textBox{
-  margin: 24px 0 0 50px ;
+  margin: 24px 0 0 50px;
   position: relative;
+  @media #{$small} {
+    margin: 24px 20px 0px 20px;
+  }
   .event_title{
     font-size: $h2__fontSize;
     color: $g__color-future;
@@ -646,15 +670,16 @@ footer{
   .event_point{
     line-height: 1.75em;
     color: $dark__fontColor;
-    float: left;
     margin-bottom: 7px;
-    .event_point_cap{
+    text-align: left;
+    @media #{$normal} {
       float: left;
+    }
+    .event_point_cap{
       font-weight: 400;
     }
     .event_point_contents{
-      float: left;
-      margin: 0 42px 0 14px;
+      padding: 0 42px 0 14px;
     }
   }
   .event_detail{
@@ -662,9 +687,17 @@ footer{
     color: $g__fontColor;
     font-weight: 200;
     line-height: 1.75em;
-    float: right;
-    margin-right: 40px;
+    //float: right;
+    //margin-right: 40px;
     width: calc(100% - 300px);
+    @include smallW;
+    @media #{$normal} {
+      float: right;
+      margin-right: 40px;
+    }
+    @media #{$small} {
+      padding-bottom: calc(24px + 38px + 40px);
+    }
   }
 }
 
@@ -695,8 +728,12 @@ footer{
   }
 }
 .subscriptionButton{
-    bottom: 24px;
-    left: 50px;
+  bottom: 24px;
+  left: 50px;
+  @media #{$small} {
+    bottom: 40px;
+    left: 20px;
+  }
 }
 
 .collectevent{

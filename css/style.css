@@ -133,7 +133,7 @@ a:hover {
 }
 @media screen and (max-width: 768px) {
   .wrap {
-    width: calc(100% * (728px / 768px));
+    width: calc(100% * (728 / 768));
   }
 }
 
@@ -298,9 +298,11 @@ footer .copyright {
   }
 }
 
-.event_textBox_wrap {
-  width: 75%;
-  height: 25vw;
+@media screen and (min-width: 769px) {
+  .event_textBox_wrap {
+    width: 75%;
+    height: 25vw;
+  }
 }
 
 .event_pic {
@@ -1060,15 +1062,28 @@ footer .copyright p {
   }
 }
 
-.heading-lineup {
-  padding: 50px 0 40px 0;
-  float: left;
+@media screen and (min-width: 769px) {
+  .heading-lineup {
+    padding: 50px 0 40px 0;
+    float: left;
+  }
+  .heading-lineup .headingTitle {
+    color: #727171;
+    font-size: 24px;
+    margin-left: 12px;
+    float: left;
+  }
 }
-.heading-lineup .headingTitle {
-  color: #727171;
-  font-size: 24px;
-  margin-left: 12px;
-  float: left;
+@media screen and (max-width: 768px) {
+  .heading-lineup {
+    font-size: 18px;
+    padding: 40px 0 27px 0;
+  }
+  .heading-lineup p {
+    color: #727171;
+    font-size: 18px;
+    margin-left: 16px;
+  }
 }
 
 .heading-paragraph {
@@ -1090,6 +1105,11 @@ footer .copyright p {
 @media screen and (max-width: 768px) {
   .monthSort {
     width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .monthSort {
+    margin: 0 0 20px 18px;
   }
 }
 .monthSort li {
@@ -1114,6 +1134,16 @@ footer .copyright p {
   color: #727171;
   font-size: 13px;
   line-height: 1.75em;
+}
+@media screen and (max-width: 768px) {
+  .archive {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .archive {
+    margin: 0 0 20px 18px;
+  }
 }
 .archive li {
   display: inline;
@@ -1166,12 +1196,26 @@ footer .copyright p {
 
 .event_textBox_wrap {
   position: relative;
-  float: right;
+}
+@media screen and (max-width: 768px) {
+  .event_textBox_wrap {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .event_textBox_wrap {
+    float: right;
+  }
 }
 
 .event_textBox {
   margin: 24px 0 0 50px;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .event_textBox {
+    margin: 24px 20px 0px 20px;
+  }
 }
 .event_textBox .event_title {
   font-size: 24px;
@@ -1182,25 +1226,42 @@ footer .copyright p {
 .event_textBox .event_point {
   line-height: 1.75em;
   color: #727171;
-  float: left;
   margin-bottom: 7px;
+  text-align: left;
+}
+@media screen and (min-width: 769px) {
+  .event_textBox .event_point {
+    float: left;
+  }
 }
 .event_textBox .event_point .event_point_cap {
-  float: left;
   font-weight: 400;
 }
 .event_textBox .event_point .event_point_contents {
-  float: left;
-  margin: 0 42px 0 14px;
+  padding: 0 42px 0 14px;
 }
 .event_textBox .event_detail {
   font-size: 14px;
   color: #9fa0a0;
   font-weight: 200;
   line-height: 1.75em;
-  float: right;
-  margin-right: 40px;
   width: calc(100% - 300px);
+}
+@media screen and (max-width: 768px) {
+  .event_textBox .event_detail {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .event_textBox .event_detail {
+    float: right;
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .event_textBox .event_detail {
+    padding-bottom: calc(24px + 38px + 40px);
+  }
 }
 
 .eventArchive_textBox_wrap {
@@ -1233,6 +1294,12 @@ footer .copyright p {
 .subscriptionButton {
   bottom: 24px;
   left: 50px;
+}
+@media screen and (max-width: 768px) {
+  .subscriptionButton {
+    bottom: 40px;
+    left: 20px;
+  }
 }
 
 .collectevent {

@@ -13,7 +13,7 @@
   width: 92.5925%;
   @include clearfix;
   @media #{$small} {
-    width: calc(100% * (728px / 768px));
+    width: calc(100% * (728 / 768));
   }
 }
 
@@ -149,8 +149,10 @@ footer{
 }
 
 .event_textBox_wrap{
-  width: 75%;
-  height: 25vw;
+  @media #{$normal} {
+    width: 75%;
+    height: 25vw;
+  }
 }
 
 .event_pic{
