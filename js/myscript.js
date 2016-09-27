@@ -1,16 +1,22 @@
 $(function(){
   w_size = $(window).width();
+  latestBox_size =  w_size * .209259;
   logoBox_size = w_size * .126851;
   logoBox_margin = w_size * .035185;
   institution_size = w_size * .224074;
+  $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
+  $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
   $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
   $(".future_logo img, .kids_logo img").css("margin-top", logoBox_margin + "px");
   $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
   $(window).resize(function () {
     w_size = $(window).width();
+    latestBox_size =  w_size * .209259;
     logoBox_size = w_size * .126851;
     logoBox_margin = w_size * .035185;
     institution_size = w_size * .224074;
+    $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
+    $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
     $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
     $(".future_logo img, .kids_logo img").css("margin-top", logoBox_margin + "px");
     $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
@@ -95,7 +101,7 @@ $(function(){
       //コンテンツをフェードインする
       $(nowModalSyncer).fadeIn("slow");
       //[#modal-overlay]、または[#modal-close]をクリックしたら…
-      $("#modal-overlay,#modal-close").unbind().click( function(e){
+      $("#modal-overlay, #modal-close").unbind().click( function(e){
         //[#modal-content]と[#modal-overlay]をフェードアウトした後に…
         $("#" + target + ",#modal-overlay").fadeOut("fast", function(){
           //[#modal-overlay]を削除する
@@ -125,4 +131,33 @@ $(function(){
     //センタリングを実行する
     $(nowModalSyncer).css({"left": ((w - cw)/2) + "px", "top": 5 + "%"});
   }
+
+  var $content = $('#wrapper'),
+        $drawer = $('#drawer'),
+        $button = $('#drawer-toggle'),
+        isOpen = false;
+    
+  //ボタンをタップ、クリックした時
+  $button.on('touchstart click', function () {
+      if(isOpen) {
+          $drawer.removeClass('open');
+          $content.removeClass('open');
+          isOpen = false;
+      } else {
+          $drawer.addClass('open');
+          $content.addClass('open');
+          isOpen = true;
+      }
+      return false; //親要素へのイベント伝播、aタグのURLクリックによる画面遷移を防ぐ
+  });
+
+  //コンテンツ部分をタップ、クリックした時
+  $content.on('touchstart click', function (e) {
+      e.stopPropagation(); //イベント伝播のみ阻止
+      if(isOpen) {
+          $drawer.removeClass('open');
+          $content.removeClass('open');
+          isOpen = false;
+      }
+    });
 });

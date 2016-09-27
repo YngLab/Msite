@@ -17,6 +17,14 @@
   }
 }
 
+#wrapper{
+  #header{
+    @media #{$normal} {
+      display: none;
+    }
+  }
+}
+
 .latestEvent{
   margin-right: -3.2%;
 }
@@ -30,7 +38,10 @@
 }
 
 .gHeader{
-  height: 70px;
+  height: 81px;
+  @media #{$small} {
+    display: none;
+  }
 }
 
 .topcap{
@@ -107,7 +118,7 @@
 
 footer{
   width: 100%;
-  margin-top: 2.9629vw;
+  margin-top: 60px;
   .foot{
     height: 96px;
     width: 100%;
