@@ -13,38 +13,21 @@
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
 <script src="js/jquery.flexslider.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.1.0/js/drawer.min.js"></script>
 <script charset="utf-8">
   $(window).load(function() {
     $(".flexslider").flexslider();
     animation: "slide"
   });
-  $(document).ready(function() {
-   $('.drawer').drawer();
-});
 </script>
-<body class="drawer drawer--left">
-<header role="banner">
-    <button type="button" class="drawer-toggle drawer-hamburger">
-      <span class="sr-only">toggle navigation</span>
-      <span class="drawer-hamburger-icon"></span>
-    </button>
-    <nav class="drawer-nav" role="navigation">
-      <ul class="drawer-menu">
-        <li><a class="drawer-brand" href="#">English</a></li>
-        <li><a class="drawer-menu-item" href="#">ホーム</a></li>
-        <li><a class="drawer-menu-item" href="#">コンセプト</a></li>
-        <li><a class="drawer-menu-item" href="#">イベント</a></li>
-        <li><a class="drawer-menu-item" href="#">みらいプロジェクト</a></li>
-        <li><a class="drawer-menu-item" href="#">はこだてみらい館</a></li>
-        <li><a class="drawer-menu-item" href="#">はこだてキッズプラザ</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main role="main">
-    <!-- コンテンツ -->
-  </main>
+<body>
+<div id="wrapper">
+  <div id="header">
+      <div id="drawer-toggle">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
+  </div>
 <header>
   <div class = "gHeader">
     <div class = "wrap">
@@ -326,4 +309,26 @@
     </div>
   </div>
 </footer>
+<div class="overlay"></div>
+    </div>
+    <div id="drawer">
+        <!-- ドロワー部分。メニューとか配置 -->
+        <div class = "sp_language">
+          <p><a href = "#">English</p></a>
+        </div>
+        <div class = "navBox">
+          <ul class = "gNav_sp">
+            <a href = "index.html"><li>ホーム</li></a>
+            <a href = "concept.html"><li>コンセプト</li></a>
+            <a href = "event.html"><li>イベント</li></a>
+            <a href = "HMP.html"><li>みらいプロジェクト</li></a>
+            <a href = "FCH.html"><li>はこだてみらい館</li></a>
+            <a href = "KPH.html"><li>はこだてキッズプラザ</li></a>
+          </ul>
+          <ul class = "pNav_sp">
+            <a href = "access.html"><li>アクセス</li></a>
+            <a href = "FAQ.html"><li>お問い合わせ</li></a>
+          </ul>
+        </div>
+    </div>
 </body>

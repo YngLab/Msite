@@ -919,6 +919,139 @@ footer{
     }
   }
 }
+
+
+#wrapper {
+    //オーバーレイをabsolute指定するため必要
+    position: relative;
+    //アニメーションの指定
+    -webkit-transition: all .4s;
+       -moz-transition: all .4s;
+         -o-transition: all .4s;
+            transition: all .4s;
+  #drawer-toggle{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 23px;
+    padding-top: 17px;
+    background-color: $g__fontColor;
+    z-index: 1000;
+    span{
+      margin: 0 auto;
+      display: block;
+      height: 2px;
+      background-color: #FFFFFF;
+      width: 20px;
+      transition: all .4s;
+      transform: rotate(0deg);
+    }
+    .top {
+      transform: translateY(-4px);
+    }
+    .bottom {
+      transform: translateY(4px);
+    }
+  }
+} 
+ 
+#wrapper.open {
+    //クラス「open」が付いたら左に280px移動
+    -webkit-transform: translate3d(-75%, 0, 0);
+       -moz-transform: translate3d(-75%, 0, 0);
+            transform: translate3d(-75%, 0, 0);
+  #drawer-toggle{
+    .middle {
+    background: rgba(255, 255, 255, 0);
+    }
+    .top {
+      transform: rotate(-45deg) translateY(2px);
+    }
+    .bottom {
+      transform: rotate(45deg) translateY(-3px);
+    }
+  }
+}
+ 
+/* オーバーレイ表示をするためのCSS */
+.open .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    //親要素の上に表示するためz-indexを指定
+    z-index: 999;
+ 
+    //親要素一杯に広がるため縦横のサイズを100%に
+    width: 100%;
+    height: 100%;
+ 
+    //暗くするため黒の透明色を指定
+    background: rgba(0, 0, 0, .5);
+}
+
+#drawer {
+    position: fixed; //常に固定なのでfixed
+    top: 0;
+    right: -75%;  //初期状態では隠すため、横幅のサイズ分だけ画面外に移動する
+    width: 75%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; //スマホでのスクロールに慣性を付ける（デバイス限定
+ 
+    //アニメーション指定
+    -webkit-transition: all .4s;
+       -moz-transition: all .4s;
+         -o-transition: all .4s;
+            transition: all .4s;
+  .sp_language{
+    p{
+      line-height: 40px;
+      float: right;
+      margin-right: 21px;
+    }
+  }
+  .navBox{
+    height: calc((100% - 40px) - calc((100% - 40px) / 17));
+    margin-top: calc((100vh - 40px) /17);
+    li{
+      padding-left: 30px;
+      line-height: calc((100vh - 40px) / (17 / 2));
+      display: block;
+    }
+    .gNav_sp{
+      height: 75%;
+      li{
+        height: calc(100% * (1/6));
+      }
+    }
+    .pNav_sp{
+      height: 25%;
+      background-color: $bg__color;
+      li{
+        height: calc(100% * (1/2));
+      }
+    }
+  }
+}
+
+#drawer.open {
+    //クラス「open」が付いたら左へ280px移動（画面内へ移動し表示される）
+    -webkit-transform: translate3d(-100%, 0, 0);
+       -moz-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+}
+
+.sp_language{
+  width: 100%;
+  height: 40px;
+  background-color: $g__fontColor;
+  a{
+    color: #FFFFFF;
+  }
+}
+
 //↑加納↓高居
 
 .lineSpace{
