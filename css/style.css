@@ -891,27 +891,27 @@ footer .copyright {
   margin-top: 20px;
 }
 
-.siteMap {
-  line-height: 1.75em;
-}
-.siteMap .top {
+.siteMap .linkGroup {
   text-align: left;
   font-weight: 400;
   margin-bottom: 30px;
 }
-.siteMap .headerElements {
-  text-align: left;
-  font-weight: 400;
-  margin-bottom: 30px;
+.siteMap .linkGroup .linkText {
+  margin-right: 30px;
 }
-.siteMap .footerElements {
-  text-align: left;
-  font-weight: 400;
-  margin-bottom: 30px;
+@media screen and (max-width: 768px) {
+  .siteMap {
+    display: none;
+  }
 }
 
-.textMargin {
-  margin-right: 30px;
+.siteMap_sp p {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 769px) {
+  .siteMap_sp {
+    display: none;
+  }
 }
 
 footer .pagetop {

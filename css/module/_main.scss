@@ -352,32 +352,26 @@
 }
 
 .siteMap{
-  line-height: 1.75em;
-  .top{
+  .linkGroup{
     text-align: left;
     font-weight: 400;
     margin-bottom: 30px;
+    .linkText{
+      margin-right: 30px;
+    }
   }
-  .headerElements{
-    text-align: left;
-    font-weight: 400;
-    margin-bottom: 30px;
-    //margin-left: -1px;
-    //text-align: center;
-    //width: calc((100%-80px) / 6);
-  }
-  .footerElements{
-    text-align: left;
-    font-weight: 400;
-    margin-bottom: 30px;
-    //margin-left: -1px;
-    //text-align: center;
-    //width: calc((100%-80px) / 6);
+  @media #{$small} {
+    display: none;
   }
 }
 
-.textMargin{
-  margin-right: 30px;
+.siteMap_sp{
+  p{
+    margin-bottom: 30px;
+  }
+  @media #{$normal} {
+    display: none;
+  }
 }
 
 footer{
