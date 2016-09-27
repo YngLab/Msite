@@ -17,6 +17,14 @@
   }
 }
 
+#wrapper{
+  #header{
+    @media #{$normal} {
+      display: none;
+    }
+  }
+}
+
 .latestEvent{
   margin-right: -3.2%;
 }
@@ -31,6 +39,9 @@
 
 .gHeader{
   height: 81px;
+  @media #{$small} {
+    display: none;
+  }
 }
 
 .topcap{

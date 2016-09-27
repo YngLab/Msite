@@ -131,4 +131,33 @@ $(function(){
     //センタリングを実行する
     $(nowModalSyncer).css({"left": ((w - cw)/2) + "px", "top": 5 + "%"});
   }
+
+  var $content = $('#wrapper'),
+        $drawer = $('#drawer'),
+        $button = $('#drawer-toggle'),
+        isOpen = false;
+    
+  //ボタンをタップ、クリックした時
+  $button.on('touchstart click', function () {
+      if(isOpen) {
+          $drawer.removeClass('open');
+          $content.removeClass('open');
+          isOpen = false;
+      } else {
+          $drawer.addClass('open');
+          $content.addClass('open');
+          isOpen = true;
+      }
+      return false; //親要素へのイベント伝播、aタグのURLクリックによる画面遷移を防ぐ
+  });
+
+  //コンテンツ部分をタップ、クリックした時
+  $content.on('touchstart click', function (e) {
+      e.stopPropagation(); //イベント伝播のみ阻止
+      if(isOpen) {
+          $drawer.removeClass('open');
+          $content.removeClass('open');
+          isOpen = false;
+      }
+    });
 });
