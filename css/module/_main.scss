@@ -400,17 +400,31 @@ footer{
   .foot{
     @include clearfix;
     .footerLinks{
-      width: 714px;
       margin: 0 auto;
       text-align: center;
       @include clearfix;
+      @media #{$normal} {
+        width: 714px;
+      }
+      @media #{$small} {
+        margin: 14px 0 24px 0;
+      }
       .links{
-        margin: 46px 0;
         color: $g__fontColor;
-        float: left;
-        font-size: $g__fontSize;
-        padding: 14px;
         text-decoration: none;
+        @media #{$normal} {
+          font-size: $g__fontSize;
+          padding: 14px;
+          margin: 46px 0;
+          float: left;
+        }
+        @media #{$small} {
+          width: 320px;
+          font-size: 12px;
+          padding: 12px;
+          margin: 0 auto;
+          display: block;
+        }
       }
     }
     .SNSbutton{

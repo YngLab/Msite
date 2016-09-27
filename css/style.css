@@ -137,6 +137,12 @@ a:hover {
   }
 }
 
+@media screen and (min-width: 769px) {
+  #wrapper #header {
+    display: none;
+  }
+}
+
 .latestEvent {
   margin-right: -3.2%;
 }
@@ -910,7 +916,6 @@ footer .foot:after {
   display: block;
 }
 footer .foot .footerLinks {
-  width: 714px;
   margin: 0 auto;
   text-align: center;
 }
@@ -919,13 +924,36 @@ footer .foot .footerLinks:after {
   content: "";
   display: block;
 }
+@media screen and (min-width: 769px) {
+  footer .foot .footerLinks {
+    width: 714px;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer .foot .footerLinks {
+    margin: 14px 0 24px 0;
+  }
+}
 footer .foot .footerLinks .links {
-  margin: 46px 0;
   color: #9fa0a0;
-  float: left;
-  font-size: 14px;
-  padding: 14px;
   text-decoration: none;
+}
+@media screen and (min-width: 769px) {
+  footer .foot .footerLinks .links {
+    font-size: 14px;
+    padding: 14px;
+    margin: 46px 0;
+    float: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer .foot .footerLinks .links {
+    width: 320px;
+    font-size: 12px;
+    padding: 12px;
+    margin: 0 auto;
+    display: block;
+  }
 }
 footer .foot .SNSbutton {
   width: 116px;
