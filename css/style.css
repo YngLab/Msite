@@ -529,8 +529,6 @@ footer .copyright {
   background-color: #ffffff;
   border: solid 1px #f39800;
   display: inline-block;
-  height: 20.9259vw;
-  width: 20.9259vw;
   margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
   position: relative;
 }
