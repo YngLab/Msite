@@ -41,6 +41,12 @@ function resizeWindow() {
 			imageCount+=4;	
 		}
 	}
+	var indexTitle =$('#indexTitle');
+	document.getElementById('indexTitleText').style.marginTop = fullWidth*0.01 + 'px';
+	document.getElementById('indexTitleText').style.marginBottom = fullWidth*0.01 + 'px';
+	document.getElementById('indexTitle').style.fontSize = fullWidth/35.0 + 'px';
+	document.getElementById('indexTitle').style.left = fullWidth/2-indexTitle.width()/2 + 'px';
+	document.getElementById('indexTitle').style.top = fullWidth/4-indexTitle.height()/2 + 'px';
 
 }
 
