@@ -95,7 +95,7 @@ $(function(){
       //コンテンツをフェードインする
       $(nowModalSyncer).fadeIn("slow");
       //[#modal-overlay]、または[#modal-close]をクリックしたら…
-      $("#modal-overlay,#modal-close").unbind().click( function(e){
+      $("#modal-overlay, #modal-close").unbind().click( function(e){
         //[#modal-content]と[#modal-overlay]をフェードアウトした後に…
         $("#" + target + ",#modal-overlay").fadeOut("fast", function(){
           //[#modal-overlay]を削除する
