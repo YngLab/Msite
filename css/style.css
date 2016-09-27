@@ -148,7 +148,7 @@ a:hover {
 }
 
 .nav_TOP {
-  height: 48px;
+  height: 70px;
   margin: 0 auto 50px auto;
 }
 @media screen and (max-width: 768px) {
@@ -612,14 +612,14 @@ footer .copyright {
 }
 
 .gNav_container {
-  width: 618px;
-  margin: 0 auto;
+  padding-top: 28px;
 }
 
 .gNav_TOP {
   color: #9fa0a0;
-  padding-top: 16px;
-  width: 644px;
+  margin-top: 28px;
+  border-right: 1px solid #9fa0a0;
+  color: #9fa0a0;
   margin: 0 auto;
 }
 .gNav_TOP:after {

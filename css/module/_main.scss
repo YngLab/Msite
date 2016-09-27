@@ -99,14 +99,14 @@
 }
 
 .gNav_container{
-  width: 618px;
-  margin: 0 auto;
+  padding-top: 28px;
 }
 
 .gNav_TOP{
   color: $g__fontColor;
-  padding-top: 16px;
-  width: 644px;
+  margin-top: 28px;
+  border-right: 1px solid $g__fontColor;
+  color: $g__fontColor;
   margin: 0 auto;
   @include clearfix;
 }
