@@ -670,10 +670,11 @@ footer{
   .event_point{
     line-height: 1.75em;
     color: $dark__fontColor;
-    margin-bottom: 7px;
+    margin-bottom: 24px;
     text-align: left;
     @media #{$normal} {
       float: left;
+      margin-bottom: 7px;
     }
     .event_point_cap{
       font-weight: 400;
@@ -703,13 +704,19 @@ footer{
 
 .eventArchive_textBox_wrap{
   position: relative;
+  @include smallW;
   .eventArchive_detail{
     font-size: $g__fontSize;
     color: $g__fontColor;
     font-weight: 200;
     line-height: 1.75em;
-    float: left;
     width: calc(100% - 40px);
+    @media #{$normal} {
+      float: left;
+    }
+    @media #{$small} {
+      padding-bottom: 40px;
+    }
   }
 }
 

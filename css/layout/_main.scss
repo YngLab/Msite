@@ -156,35 +156,45 @@ footer{
 }
 
 .event_pic{
-  width: 25%;
-  height: 25vw;
+  @media #{$normal} {
+    width: 25%;
+    height: 25vw;
+  }
 }
 
 .eventArchive_textBox_wrap{
-  width: 50%;
-  height: 25vw;
+  @media #{$normal} {
+    width: 50%;
+    height: 25vw;
+  }
 }
 
 .eventArchive_pic{
-  width: 50%;
-  height: 25vw;
+  @media #{$normal} {
+    width: 50%;
+    height: 25vw;
+  }
 }
 
 .eventArchive_leftText{
-  .eventArchive_textBox_wrap{
-    float: left;
-  }
-  .eventArchive_pic{
-    float: right;
+  @media #{$normal} {
+    .eventArchive_textBox_wrap{
+      float: left;
+    }
+    .eventArchive_pic{
+      float: right;
+    }
   }
 }
 
 .eventArchive_rightText{
-  .eventArchive_textBox_wrap{
-    float: right;
-  }
-  .eventArchive_pic{
-    float: left;
+  @media #{$normal} {
+    .eventArchive_textBox_wrap{
+      float: right;
+    }
+    .eventArchive_pic{
+      float: left;
+    }
   }
 }
 
