@@ -17,12 +17,20 @@
   }
 }
 
+#wrapper{
+  #header{
+    @media #{$normal} {
+      display: none;
+    }
+  }
+}
+
 .latestEvent{
   margin-right: -3.2%;
 }
 
 .nav_TOP{
-  height: 48px;
+  height: 70px;
   margin: 0 auto 50px auto;
   @media #{$small} {
     display: none;
@@ -31,6 +39,9 @@
 
 .gHeader{
   height: 81px;
+  @media #{$small} {
+    display: none;
+  }
 }
 
 .topcap{
