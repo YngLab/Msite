@@ -355,22 +355,22 @@
   .linkGroup{
     text-align: left;
     font-weight: 400;
-    margin-bottom: 30px;
-    .linkText{
-      margin-right: 30px;
+    @media #{$normal} {
+      margin-bottom: 30px;
+      .linkText{
+        margin-right: 30px;
+      }
     }
   }
   @media #{$small} {
-    display: none;
-  }
-}
-
-.siteMap_sp{
-  p{
-    margin-bottom: 30px;
-  }
-  @media #{$normal} {
-    display: none;
+    span{
+      display: block;
+      margin-bottom: 30px;
+    }
+    span:after{
+      content: "\A";
+      white-space: pre;
+    }
   }
 }
 

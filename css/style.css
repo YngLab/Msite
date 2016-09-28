@@ -519,7 +519,7 @@ footer .copyright {
     margin-left: 16px;
   }
   .sponsor .companyLinks a:after {
-    content: "\a";
+    content: "\A";
     white-space: pre;
   }
 }
@@ -928,23 +928,23 @@ footer .copyright {
 .siteMap .linkGroup {
   text-align: left;
   font-weight: 400;
-  margin-bottom: 30px;
-}
-.siteMap .linkGroup .linkText {
-  margin-right: 30px;
-}
-@media screen and (max-width: 768px) {
-  .siteMap {
-    display: none;
-  }
-}
-
-.siteMap_sp p {
-  margin-bottom: 30px;
 }
 @media screen and (min-width: 769px) {
-  .siteMap_sp {
-    display: none;
+  .siteMap .linkGroup {
+    margin-bottom: 30px;
+  }
+  .siteMap .linkGroup .linkText {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .siteMap span {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .siteMap span:after {
+    content: "\A";
+    white-space: pre;
   }
 }
 
