@@ -115,6 +115,18 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .only_pc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .only_sp {
+    display: none;
+  }
+}
+
 /* layout */
 .instaPic {
   background-color: #CCCCCC;
@@ -643,12 +655,13 @@ footer .copyright {
 }
 
 /* module */
+.topcap {
+  text-align: center;
+}
+
 .latestEvent {
   font-size: 0;
   padding-bottom: 40px;
-}
-.latestEvent .topcap {
-  text-align: center;
 }
 .latestEvent .latestBox_future {
   background-color: #ffffff;
@@ -694,6 +707,9 @@ footer .copyright {
   padding-left: 18px;
   z-index: 10;
 }
+.latestEvent .latestBox_img {
+  height: 55.7522%;
+}
 .latestEvent img {
   height: 55.7522%;
   width: 100%;
@@ -724,6 +740,15 @@ footer .copyright {
   margin: 10px 0 0 0;
   color: #9fa0a0;
 }
+.latestEvent .flex-direction-nav {
+  display: none;
+}
+.latestEvent .flex-control-nav {
+  bottom: -30px;
+}
+.latestEvent .flex-control-paging li a {
+  background-color: #9fa0a0;
+}
 
 .moreview {
   margin-bottom: 50px;
@@ -732,7 +757,7 @@ footer .copyright {
 }
 @media screen and (max-width: 768px) {
   .moreview {
-    margin-bottom: 40px;
+    margin: 10px 0 40px 0;
   }
 }
 
@@ -2188,7 +2213,6 @@ html[xmlns] .flexslider .slides {
  * ====================================================================================================================*/
 .flexslider {
   height: 100%;
-  background: #fff;
   /*border: 4px solid #fff;*/
   position: relative;
   zoom: 1;
