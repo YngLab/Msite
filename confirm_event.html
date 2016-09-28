@@ -53,34 +53,38 @@
   </header>
   <div class = "pageTitle">
     <div class = "wrap">
-      <p class = "titleText">お問い合わせ</p>
+      <p class = "titleText">イベントの申し込み</p>
     </div>
   </div>
   <div class = "wrap">
   <!-- 以下body -->
     <div class = "autoHeight">
+      <div class = "eventabout">
+        <img src = "images/sample_relatestimg.jpg">
+        <p class = "FCHcolor eventabout_title">科学屋台 はこだてみらい館プレワークショップ</p>
+        <div class = "event_point">
+          <table>
+              <tr>
+                <th class = "event_point_cap">日時</th>
+                <td class = "event_point_contents">8月28日(日)　10:00-15:00</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">会場</th>
+                <td class = "event_point_contents">はこだてみらい館</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">参加費</th>
+                <td class = "event_point_contents">無料</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">対象</th>
+                <td class = "event_point_contents">子どもから大人まで</td>
+              </tr>
+            </table>
+          </div>
+      </div>
       <form class = "form" action = "php/hoge.php" method = "post">
-        <div class = "radio">
-          <span class = "radioElement">
-            <input type = "radio" name = "radio" id = "fch" value = "fch">
-            <label for = "fch">
-              <span class = "radioFont">はこだてみらい館</span>
-            </label>
-          </span>
-          <span class = "radioElement">
-            <input type = "radio" name = "radio" id = "hkp" value = "hkp">
-            <label for = "hkp">
-              <span class = "radioFont">はこだてキッズプラザ</span>
-            </label>
-          </span>
-          <span class = "radioElement">
-            <input type = "radio" name = "radio" id = "both" value = "both">
-            <label for = "both">
-              <span class = "radioFont">どちらとも</span>
-            </label>
-          </span>
-        </div>
-        <table class = "inputForm inputBox">
+        <table class = "inputForm">
           <tr>
             <th>お名前</th>
             <td>
@@ -94,43 +98,34 @@
             </td>
           </tr>
           <tr>
+            <th>参加者の年齢</th>
+            <td>
+              <input type="text" name ="name" maxlength = "255" placeholder = "10歳">
+            </td>
+          </tr>
+          <tr>
             <th class = "textareaLabel">問い合わせ内容</th>
             <td>
               <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
             </td>
           </tr>
           <tr>
-            <th>　</th>
+            <th>
+              <a href = "event_subscript.html">
+                <div class = "confirm revision">
+                  <p>訂正</p>
+                </div>
+              </a>
+            </th>
             <td>
-              <a href = "confirm_contact.html">
+              <a href = "recieve_join.html">
                 <div class = "confirm">
-                  <p>確認</p>
+                  <p>送信</p>
                 </div>
               </a>
             </td>
           </tr>
         </table>
-        <div class = "inputForm_sp">
-          <div class = "inputBox_sp">
-            <p>お名前</p>
-            <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
-          </div>
-          <div class = "inputBox_sp">
-            <p>メールアドレス</p>
-            <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
-          </div>
-          <div class = "inputBox_sp_b">
-            <p>問い合わせ内容</p>
-            <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
-          </div>
-          <div>
-            <a href = "confirm_contact.html">
-              <div class = "confirm">
-                <p>確認</p>
-              </div>
-            </a>
-          </div>
-        </div>
       </form>
     </div>
   <!-- ここまで -->

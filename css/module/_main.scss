@@ -683,22 +683,6 @@ footer{
     font-weight: 400;
     margin-bottom: 24px;
   }
-  .event_point{
-    line-height: 1.75em;
-    color: $dark__fontColor;
-    margin-bottom: 24px;
-    text-align: left;
-    @media #{$normal} {
-      float: left;
-      margin-bottom: 7px;
-    }
-    .event_point_cap{
-      font-weight: 400;
-    }
-    .event_point_contents{
-      padding: 0 42px 0 14px;
-    }
-  }
   .event_detail{
     font-size: $g__fontSize;
     color: $g__fontColor;
@@ -715,6 +699,22 @@ footer{
     @media #{$small} {
       padding-bottom: calc(24px + 38px + 40px);
     }
+  }
+}
+.event_point{
+  line-height: 1.75em;
+  color: $dark__fontColor;
+  margin-bottom: 24px;
+  text-align: left;
+  @media #{$normal} {
+    float: left;
+    margin-bottom: 7px;
+  }
+  .event_point_cap{
+    font-weight: 400;
+  }
+  .event_point_contents{
+    padding-left: 14px;
   }
 }
 
@@ -764,6 +764,20 @@ footer{
   line-height: 1.75em;
   .form_guide{
     margin-top: 24px;
+  }
+}
+
+.eventabout{
+  width: 25%;
+  float: left;
+  margin-right: calc(100% * (75 / 1000));
+  img{
+    width: 100%;
+  }
+  .eventabout_title{
+    line-height: 20px;
+    font-size: 16px;
+    margin-bottom: 6px;
   }
 }
 
@@ -1219,15 +1233,25 @@ footer{
   }
 }
 
+.form{
+  float: left;
+  width: calc(75% - (100% * (75 / 1000)));
+  @include clearfix;
+}
+
 .inputForm{
+  float: left;
+  width: 100%;
   th{
     color: $dark__fontColor;
     font-size: 13px;
     text-align: left;
+    width: 91px;
   }
   td{
+    width: calc(100% - 28px);
     input{
-      width: 100%;
+      width: calc(100% - 28px);
     }
   }
   input{
@@ -1243,10 +1267,10 @@ footer{
     color: $dark__fontColor;
     font-size: $g__fontSize;
     padding: 11px 14px 11px 14px;
-    width: 100%;
+    width: calc(100% - 28px);
   }
   .textareaLabel{
-    padding-top: 8px;
+    padding-top: 20px;
     vertical-align: top;
   }
   .confirm{
