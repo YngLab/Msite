@@ -33,8 +33,6 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-kids;
     display: inline-block;
-    height: 20.9259vw;
-    width: 20.9259vw;
     margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
     //margin: -1px 2.75% -1px -1px;
     position: relative;
@@ -60,11 +58,13 @@
   }
   .eventText{
     position: absolute;
-    left: calc((100% - 231px) * 0.5);
+    // left: calc((100% - 231px) * 0.5);
+    left: 16px;
     position: absolute;
     top: calc(55.7522% + (100% - 55.7522%) * 0.5);
     transform: translate(0%, -50%);
     text-align: left;
+    width: calc(100% - 32px);
     //margin-left: calc(100% * (18 / 280.616));
     //margin-left: 18px;
     /*
@@ -77,6 +77,8 @@
       font-size: $h3__fontSize;
       margin: 3px 0 0 0;
       color: $dark__fontColor;
+      height: 21px;
+      visibility: hidden;
     }
     .eventplace{
       margin: 10px 0 0 0;
@@ -99,14 +101,14 @@
 }
 
 .gNav_container{
-  width: 618px;
-  margin: 0 auto;
+  padding-top: 28px;
 }
 
 .gNav_TOP{
   color: $g__fontColor;
-  padding-top: 16px;
-  width: 644px;
+  margin-top: 28px;
+  border-right: 1px solid $g__fontColor;
+  color: $g__fontColor;
   margin: 0 auto;
   @include clearfix;
 }
@@ -352,32 +354,26 @@
 }
 
 .siteMap{
-  line-height: 1.75em;
-  .top{
+  .linkGroup{
     text-align: left;
     font-weight: 400;
-    margin-bottom: 30px;
+    @media #{$normal} {
+      margin-bottom: 30px;
+      .linkText{
+        margin-right: 30px;
+      }
+    }
   }
-  .headerElements{
-    text-align: left;
-    font-weight: 400;
-    margin-bottom: 30px;
-    //margin-left: -1px;
-    //text-align: center;
-    //width: calc((100%-80px) / 6);
+  @media #{$small} {
+    span{
+      display: block;
+      margin-bottom: 30px;
+    }
+    span:after{
+      content: "\A";
+      white-space: pre;
+    }
   }
-  .footerElements{
-    text-align: left;
-    font-weight: 400;
-    margin-bottom: 30px;
-    //margin-left: -1px;
-    //text-align: center;
-    //width: calc((100%-80px) / 6);
-  }
-}
-
-.textMargin{
-  margin-right: 30px;
 }
 
 footer{
@@ -525,17 +521,49 @@ footer{
   @media #{$small} {
     font-size: 18px;
     padding: 20px 0 27px 0;
+    .addPadding{
+      padding-top: 20px;
+    }
+  }
+}
+
+.concierge{
+  padding: 50px 0 40px 0;
+  p{
+    color: $g__color-kids;
+    font-size: $h3__fontSize;
+    @media #{$small} {
+      font-size: 18px;
+    }
+  }
+  @media #{$small} {
+    font-size: 18px;
+    padding: 20px 0 27px 0;
+    .addPadding{
+      padding-top: 20px;
+    }
   }
 }
 
 .heading-lineup{
-  padding: 50px 0 40px 0;
-  float: left;
-  .headingTitle{
-    color: $h2__color;
-    font-size: $h2__fontSize;
-    margin-left: 12px;
+  @media #{$normal} {
+    padding: 50px 0 40px 0;
     float: left;
+    .headingTitle{
+      color: $h2__color;
+      font-size: $h2__fontSize;
+      margin-left: 12px;
+      float: left;
+    }
+  }
+  @media #{$small} {
+    font-size: 18px;
+    padding: 40px 0 27px 0;
+    p{
+      color: $h2__color;
+      font-size: 18px;
+      margin-left: 16px;
+    }
   }
 }
 
@@ -554,6 +582,10 @@ footer{
   color: $h2__color;
   font-size: $cap__fontSize;
   line-height: 1.75em;
+  @include smallW;
+  @media #{$small} {
+    margin: 0 0 20px 18px;
+  }
   li{
     display: inline;
     margin-right: 26px;
@@ -577,6 +609,10 @@ footer{
   color: $h2__color;
   font-size: $cap__fontSize;
   line-height: 1.75em;
+  @include smallW;
+  @media #{$small} {
+    margin: 0 0 20px 18px;
+  }
   li{
     display: inline;
     margin-right: 26px;
@@ -623,12 +659,18 @@ footer{
 
 .event_textBox_wrap{
   position: relative;
-  float: right;
+  @include smallW;
+  @media #{$normal}{
+    float: right;
+  }
 }
 
 .event_textBox{
-  margin: 24px 0 0 50px ;
+  margin: 24px 0 0 50px;
   position: relative;
+  @media #{$small} {
+    margin: 24px 20px 0px 20px;
+  }
   .event_title{
     font-size: $h2__fontSize;
     color: $g__color-future;
@@ -638,15 +680,17 @@ footer{
   .event_point{
     line-height: 1.75em;
     color: $dark__fontColor;
-    float: left;
-    margin-bottom: 7px;
-    .event_point_cap{
+    margin-bottom: 24px;
+    text-align: left;
+    @media #{$normal} {
       float: left;
+      margin-bottom: 7px;
+    }
+    .event_point_cap{
       font-weight: 400;
     }
     .event_point_contents{
-      float: left;
-      margin: 0 42px 0 14px;
+      padding: 0 42px 0 14px;
     }
   }
   .event_detail{
@@ -654,21 +698,35 @@ footer{
     color: $g__fontColor;
     font-weight: 200;
     line-height: 1.75em;
-    float: right;
-    margin-right: 40px;
+    //float: right;
+    //margin-right: 40px;
     width: calc(100% - 300px);
+    @include smallW;
+    @media #{$normal} {
+      float: right;
+      margin-right: 40px;
+    }
+    @media #{$small} {
+      padding-bottom: calc(24px + 38px + 40px);
+    }
   }
 }
 
 .eventArchive_textBox_wrap{
   position: relative;
+  @include smallW;
   .eventArchive_detail{
     font-size: $g__fontSize;
     color: $g__fontColor;
     font-weight: 200;
     line-height: 1.75em;
-    float: left;
     width: calc(100% - 40px);
+    @media #{$normal} {
+      float: left;
+    }
+    @media #{$small} {
+      padding-bottom: 40px;
+    }
   }
 }
 
@@ -687,8 +745,12 @@ footer{
   }
 }
 .subscriptionButton{
-    bottom: 24px;
-    left: 50px;
+  bottom: 24px;
+  left: 50px;
+  @media #{$small} {
+    bottom: 40px;
+    left: 20px;
+  }
 }
 
 .collectevent{
@@ -762,6 +824,9 @@ footer{
 .info_table_FCH, .info_table_KPH{
   text-align: left;
   width: 100%;
+  @media #{$small} {
+    display: none;
+  }
   tr{
     height: 50px;
     width: 100%;
@@ -781,6 +846,14 @@ footer{
     line-height: 1.75em;
     padding-bottom: 12px;
     padding-left: 14px;
+  }
+}
+
+.info_table_FCH_sp, .info_table_KPH_sp{
+  text-align: left;
+  width: 100%;
+  @media #{$normal} {
+    display: none;
   }
 }
 
@@ -806,6 +879,21 @@ footer{
   }
 }
 
+.info_table_FCH_label{
+  color: $g__color-future;
+  border-bottom: dashed 1px $g__color-future;
+  padding-bottom: 3px;
+}
+
+.info_table_KPH_label{
+  color: $g__color-kids;
+  border-bottom: dashed 1px $g__color-kids;
+  padding-bottom: 3px;
+}
+
+.info_table_data{
+  margin: 20px 0 36px 0;
+}
 
 /* modal-contentのCSS */
 .modal-content {
@@ -1087,6 +1175,16 @@ footer{
 .archives{
   .headmarkMargin{
     margin: 0 0 24px 24px;
+    @media #{$small} {
+      font-size: 18px;
+      margin: 0 0 27px 16px;
+    }
+  }
+  .linkText{
+    margin-left: 24px;
+    @media #{$small} {
+      margin-left: 16px;
+    }
   }
 }
 
