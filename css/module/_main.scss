@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
+.topcap{
+    text-align: center;
+}
 .latestEvent{
   font-size: 0;
   padding-bottom: 40px;
-  .topcap{
-    text-align: center;
-  }
   .latestBox_future{
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
@@ -52,6 +52,9 @@
       }
     }
   }
+  .latestBox_img{
+    height: 55.7522%;
+  }
   img{
     height: 55.7522%;
     width: 100%;
@@ -85,6 +88,15 @@
       color: $g__fontColor;
     }
   }
+  .flex-direction-nav{
+    display: none;
+  }
+  .flex-control-nav{
+    bottom: -30px;
+  }
+  .flex-control-paging li a{
+    background-color: $g__fontColor;
+  }
 }
 
 .moreview{
@@ -92,7 +104,7 @@
   text-align: right;
   width: 100%;
   @media #{$small} {
-    margin-bottom: 40px;
+    margin: 10px 0 40px 0;
   }
 }
 
