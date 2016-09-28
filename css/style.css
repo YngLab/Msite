@@ -419,20 +419,24 @@ footer .copyright {
   height: 60vh;
 }
 
-.adress {
-  width: 50%;
-  float: left;
-}
-.adress .heading > p {
-  margin-bottom: 24px;
+@media screen and (min-width: 769px) {
+  .adress {
+    width: 50%;
+    float: left;
+  }
+  .adress .heading > p {
+    margin-bottom: 24px;
+  }
 }
 
-.parking {
-  width: 50%;
-  float: left;
-}
-.parking .heading > p {
-  margin-bottom: 24px;
+@media screen and (min-width: 769px) {
+  .parking {
+    width: 50%;
+    float: left;
+  }
+  .parking .heading > p {
+    margin-bottom: 24px;
+  }
 }
 
 .access {
@@ -445,10 +449,26 @@ footer .copyright {
 
 .accessProcess {
   width: 100%;
-  float: left;
 }
 .accessProcess img {
   width: 100%;
+}
+@media screen and (min-width: 769px) {
+  .accessProcess {
+    float: left;
+  }
+  .accessProcess .accessProcess_sp {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .accessProcess img {
+    display: none;
+  }
+  .accessProcess .accessProcess_sp {
+    margin-left: 16px;
+    text-align: left;
+  }
 }
 
 .pageTitle {
@@ -572,8 +592,16 @@ footer .copyright {
   padding-bottom: 24px;
 }
 
-.radio {
-  margin-bottom: 8px;
+@media screen and (min-width: 769px) {
+  .radio {
+    margin-bottom: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .radio .radioElement {
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 
 .inputForm th {
@@ -584,6 +612,34 @@ footer .copyright {
 }
 .inputForm .confirm {
   margin: 40px 0 40px 0;
+}
+@media screen and (max-width: 768px) {
+  .inputForm {
+    display: none;
+  }
+}
+
+.inputForm_sp .inputBox_sp, .inputForm_sp .inputBox_sp_b {
+  margin-bottom: 20px;
+}
+.inputForm_sp .inputBox_sp input, .inputForm_sp .inputBox_sp_b input {
+  height: 36px;
+  width: 100%;
+}
+.inputForm_sp .inputBox_sp p, .inputForm_sp .inputBox_sp_b p {
+  margin-bottom: 13px;
+}
+.inputForm_sp .inputBox_sp textarea, .inputForm_sp .inputBox_sp_b textarea {
+  height: 108px;
+  width: 100%;
+}
+.inputForm_sp .inputBox_sp_b {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 769px) {
+  .inputForm_sp {
+    display: none;
+  }
 }
 
 /* module */
@@ -1183,6 +1239,14 @@ footer .copyright p {
   color: #727171;
   font-size: 24px;
   margin-left: 24px;
+}
+@media screen and (max-width: 768px) {
+  .heading-paragraph {
+    padding: 40px 0 27px 0;
+  }
+  .heading-paragraph p {
+    font-size: 18px;
+  }
 }
 
 .monthSort {
@@ -1846,7 +1910,11 @@ footer .copyright p {
 */
 .radioFont {
   color: #727171;
-  margin-right: 60px;
+}
+@media screen and (min-width: 769px) {
+  .radioFont {
+    margin-right: 60px;
+  }
 }
 
 .inputForm th {
@@ -1900,6 +1968,45 @@ footer .copyright p {
 }
 .revision p {
   color: white;
+}
+
+.inputForm_sp input {
+  background-color: #efefef;
+  border: none;
+  color: #727171;
+  font-size: 14px;
+}
+.inputForm_sp p {
+  font-size: 13px;
+}
+.inputForm_sp textarea {
+  background-color: #efefef;
+  border: none;
+  color: #727171;
+  font-size: 14px;
+}
+.inputForm_sp .confirm {
+  width: 88px;
+  height: 36px;
+  border: 1px solid #727171;
+  color: #727171;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+}
+.inputForm_sp .confirm p {
+  display: inline;
+  line-height: 36px;
+}
+
+@media screen and (max-width: 768px) {
+  .accessProcess .accessProcess_sp .from {
+    border-bottom: dashed 1px #9fa0a0;
+    padding-bottom: 3px;
+  }
+  .accessProcess .accessProcess_sp .route {
+    margin: 20px 0 36px 0;
+  }
 }
 
 .menu {

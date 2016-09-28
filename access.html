@@ -17,7 +17,7 @@
     var latlng = new google.maps.LatLng(41.77283, 140.72864); //緯度・経度
     var myOptions = {
       zoom: 17, //拡大倍率
-      center: latlng, 
+      center: latlng,
       scrollwheel: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP //地図の種類
     };
@@ -43,7 +43,6 @@
             { "saturation": -100 },
             { "lightness": -10 }
           ]
-          
       }
     ];
     var mapType = new google.maps.StyledMapType(mapStyle);
@@ -129,10 +128,18 @@
     </div>
     <div class = "accessProcess">
       <div class = "heading">
-        <div class = "headmark"></div>
-        <p>施設までのアクセス</p>
+        <div class = "addPadding">
+          <div class = "headmark"></div>
+          <p>施設までのアクセス</p>
+        </div>
       </div>
       <img src = "images/access.png">
+      <div class = "accessProcess_sp">
+        <p class = "from">東京から</p>
+        <p class = "route">新幹線に乗車、新函館北斗駅に停車。JR特急に乗車、約15 分でJR 函館駅に停車。徒歩3 分で到着。飛行機に乗車、函館空港に停車。シャトルバスに乗車、約20 分で函館駅前バスターミナルに停車。徒歩1 分で到着。</p>
+        <p class = "from">函館市内から</p>
+        <p class = "route">市バスに乗車、函館駅前バスターミナルに停車。徒歩1 分で到着。市電に乗車、函館駅前電停に停車。徒歩1分で到着。</p>
+      </div>
     </div>
   </div>
   <!-- ここまで -->

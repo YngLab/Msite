@@ -574,6 +574,12 @@ footer{
     font-size: $h2__fontSize;
     margin-left: 24px;
   }
+  @media #{$small} {
+    padding: 40px 0 27px 0;
+    p{
+      font-size: 18px;
+    }
+  }
 }
 
 .monthSort{
@@ -924,7 +930,6 @@ footer{
     top: 4%;
     right: calc(5% - 10px);
     z-index: 10;
-    
   }
   #modal-close:hover{
     opacity: 1;
@@ -1056,8 +1061,8 @@ footer{
       transform: translateY(4px);
     }
   }
-} 
- 
+}
+
 #wrapper.open {
     //クラス「open」が付いたら左に280px移動
     -webkit-transform: translate3d(-75%, 0, 0);
@@ -1075,7 +1080,7 @@ footer{
     }
   }
 }
- 
+
 /* オーバーレイ表示をするためのCSS */
 .open .overlay {
     position: absolute;
@@ -1083,11 +1088,11 @@ footer{
     left: 0;
     //親要素の上に表示するためz-indexを指定
     z-index: 999;
- 
+
     //親要素一杯に広がるため縦横のサイズを100%に
     width: 100%;
     height: 100%;
- 
+
     //暗くするため黒の透明色を指定
     background: rgba(0, 0, 0, .5);
 }
@@ -1101,7 +1106,7 @@ footer{
     overflow-x: hidden;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch; //スマホでのスクロールに慣性を付ける（デバイス限定
- 
+
     //アニメーション指定
     -webkit-transition: all .4s;
        -moz-transition: all .4s;
@@ -1209,7 +1214,9 @@ footer{
 */
 .radioFont{
   color: $dark__fontColor;
-  margin-right: 60px;
+  @media #{$normal} {
+    margin-right: 60px;
+  }
 }
 
 .inputForm{
@@ -1270,5 +1277,50 @@ footer{
   background: $dark__fontColor;
   p{
     color: white;
+  }
+}
+
+.inputForm_sp{
+  input{
+    background-color: #efefef;
+    border: none;
+    color: $dark__fontColor;
+    font-size: $g__fontSize;
+  }
+  p{
+    font-size: $cap__fontSize;
+  }
+  textarea{
+    background-color: #efefef;
+    border: none;
+    color: $dark__fontColor;
+    font-size: $g__fontSize;
+  }
+  .confirm{
+    width: 88px;
+    height: 36px;
+    border: 1px solid $dark__fontColor;
+    color: $dark__fontColor;
+    font-weight: 400;
+    font-size: $link__fontSize;
+    text-align: center;
+    p{
+      display: inline;
+      line-height: 36px;
+    }
+  }
+}
+
+.accessProcess{
+  @media #{$small} {
+    .accessProcess_sp{
+      .from{
+        border-bottom: dashed 1px $g__fontColor;
+        padding-bottom: 3px;
+      }
+      .route{
+        margin: 20px 0 36px 0;
+      }
+    }
   }
 }
