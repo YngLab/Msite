@@ -506,50 +506,27 @@ footer .copyright {
   margin-top: 0;
   width: 100%;
 }
-@media screen and (max-width: 768px) {
-  .sponsor .heading {
-    padding: 0;
-  }
-}
 .sponsor p {
   margin-bottom: 40px;
 }
-@media screen and (max-width: 768px) {
-  .sponsor .companyLinks {
-    margin-left: 16px;
-  }
-  .sponsor .companyLinks a:after {
-    content: "\a";
-    white-space: pre;
-  }
-}
 
-@media screen and (min-width: 769px) {
-  .touristOffice {
-    float: left;
-    width: 50%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .touristOffice p {
-    margin-left: 16px;
-  }
+.touristOffice {
+  float: left;
+  width: 50%;
 }
 .touristOffice .heading {
   margin-top: 0;
   padding-bottom: 24px;
+  /*
+  >p{
+    margin-bottom: 24px;
+  }
+  */
 }
 
-@media screen and (min-width: 769px) {
-  .touristGuide {
-    float: right;
-    width: 50%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .touristGuide p {
-    margin-left: 16px;
-  }
+.touristGuide {
+  float: right;
+  width: 50%;
 }
 .touristGuide .heading {
   margin-top: 0;
