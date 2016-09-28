@@ -21,7 +21,36 @@ $(function(){
     $(".future_logo img, .kids_logo img").css("margin-top", logoBox_margin + "px");
     $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
   });
+  if(w_size <= 768){
+    latestBox_size =  w_size * .925925;
+    $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
+    $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
+  }
 
+  var $setElm = $(".latestEvent .eventtitle");
+  var cutFigure = "8"; // カットする文字数
+  var afterTxt = "..."; // 文字カット後に表示するテキスト
+
+  if(1156 <= w_size  &&  w_size < 1257){
+    cutFigure = "9";
+  }
+  if(1257 <= w_size  &&  w_size < 1358){
+    cutFigure = "10";
+  }
+  if(1358 <= w_size){
+    cutFigure = "11";
+  }
+  $setElm.each(function(){
+    var textLength = $(this).text().length - 33;
+    var textTrim = $(this).text().substr(17,(cutFigure));
+    console.log(textLength);
+    console.log(textTrim);
+    if(cutFigure < textLength) {
+      $(this).html(textTrim + afterTxt).css({visibility:"visible"});
+    } else if(cutFigure >= textLength) {
+        $(this).css({visibility:"visible"});
+    }
+  });
   //ページトップに戻るボタン
   $(".move-page-top").click(function(){
     $("html, body").animate({scrollTop:0},"slow");
