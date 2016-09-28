@@ -360,29 +360,50 @@ footer{
   .heading{
     margin-top: 0;
     width: 100%;
+    @media #{$small} {
+      padding: 0;
+    }
   }
   p{
     margin-bottom: 40px;
   }
+  .companyLinks{
+    @media #{$small} {
+      margin-left: 16px;
+      a:after{
+        content: "\A" ;
+        white-space: pre ;
+      }
+    }
+  }
 }
 
 .touristOffice{
-  float: left;
-  width: 50%;
+  @media #{$normal} {
+    float: left;
+    width: 50%;
+  }
+  @media #{$small} {
+    p{
+      margin-left: 16px;
+    }
+  }
   .heading{
     margin-top: 0;
     padding-bottom: 24px;
-    /*
-    >p{
-      margin-bottom: 24px;
-    }
-    */
   }
 }
 
 .touristGuide{
-  float: right;
-  width: 50%;
+  @media #{$normal} {
+    float: right;
+    width: 50%;
+  }
+  @media #{$small} {
+    p{
+      margin-left: 16px;
+    }
+  }
   .heading{
     margin-top: 0;
     padding-bottom: 24px;
