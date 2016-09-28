@@ -329,27 +329,39 @@ footer{
 
 .autoHeight{
   min-height: calc(100vh - (71px) - (65px + (12px + 50px)) - (2.9629vw + 96px + 24px));
+  @media #{$small} {
+    min-height: calc(100vh - 127px - 461px);
+  }
 }
 
 .autoHeight-ac{
   min-height: calc(100vh - (71px) - (65px + (12px + 50px)) - (2.9629vw + 40px + 96px + 24px));
+  @media #{$small} {
+    min-height: calc(100vh - 127px - 461px);
+  }
 }
 
 .p-layout{
-  position: relative;
-  width: 100%;
+  @media #{$normal} {
+    position: relative;
+    width: 100%;
+  }
 }
 
 .p-centering{
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: left;
+  @media #{$normal} {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
 }
 
 .topMargin{
-  top: calc(50% - 50px);
+  @media #{$normal} {
+    top: calc(50% - 50px);
+  }
 }
 
 .p-margin{
