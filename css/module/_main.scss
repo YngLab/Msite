@@ -33,8 +33,6 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-kids;
     display: inline-block;
-    height: 20.9259vw;
-    width: 20.9259vw;
     margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
     //margin: -1px 2.75% -1px -1px;
     position: relative;
@@ -60,11 +58,13 @@
   }
   .eventText{
     position: absolute;
-    left: calc((100% - 231px) * 0.5);
+    // left: calc((100% - 231px) * 0.5);
+    left: 16px;
     position: absolute;
     top: calc(55.7522% + (100% - 55.7522%) * 0.5);
     transform: translate(0%, -50%);
     text-align: left;
+    width: calc(100% - 32px);
     //margin-left: calc(100% * (18 / 280.616));
     //margin-left: 18px;
     /*
@@ -77,6 +77,8 @@
       font-size: $h3__fontSize;
       margin: 3px 0 0 0;
       color: $dark__fontColor;
+      height: 21px;
+      visibility: hidden;
     }
     .eventplace{
       margin: 10px 0 0 0;

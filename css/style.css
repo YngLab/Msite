@@ -676,8 +676,6 @@ footer .copyright {
   background-color: #ffffff;
   border: solid 1px #8fc31f;
   display: inline-block;
-  height: 20.9259vw;
-  width: 20.9259vw;
   margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
   position: relative;
 }
@@ -702,11 +700,12 @@ footer .copyright {
 }
 .latestEvent .eventText {
   position: absolute;
-  left: calc((100% - 231px) * 0.5);
+  left: 16px;
   position: absolute;
   top: calc(55.7522% + (100% - 55.7522%) * 0.5);
   transform: translate(0%, -50%);
   text-align: left;
+  width: calc(100% - 32px);
   /*
   .eventsch{
     margin: calc(100% * (23 / 280.616)) 0 0 0;
@@ -718,6 +717,8 @@ footer .copyright {
   font-size: 21px;
   margin: 3px 0 0 0;
   color: #727171;
+  height: 21px;
+  visibility: hidden;
 }
 .latestEvent .eventText .eventplace {
   margin: 10px 0 0 0;
