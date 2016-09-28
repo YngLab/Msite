@@ -4,6 +4,9 @@
 .menu{
   float: left;
   width: 70%;
+  @media #{$small} {
+    width: 100%;
+  }
   // ul{
   //   -webkit-transition: all 0.5s;
   //   -moz-transition: all 0.5s;

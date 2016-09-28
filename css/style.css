@@ -2046,6 +2046,11 @@ footer .copyright p {
   float: left;
   width: 70%;
 }
+@media screen and (max-width: 768px) {
+  .menu {
+    width: 100%;
+  }
+}
 
 .menu label {
   border-top: 1px solid #dddddd;
