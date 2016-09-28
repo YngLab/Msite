@@ -1313,24 +1313,6 @@ footer .copyright p {
   font-weight: 400;
   margin-bottom: 24px;
 }
-.event_textBox .event_point {
-  line-height: 1.75em;
-  color: #727171;
-  margin-bottom: 24px;
-  text-align: left;
-}
-@media screen and (min-width: 769px) {
-  .event_textBox .event_point {
-    float: left;
-    margin-bottom: 7px;
-  }
-}
-.event_textBox .event_point .event_point_cap {
-  font-weight: 400;
-}
-.event_textBox .event_point .event_point_contents {
-  padding: 0 42px 0 14px;
-}
 .event_textBox .event_detail {
   font-size: 14px;
   color: #9fa0a0;
@@ -1353,6 +1335,25 @@ footer .copyright p {
   .event_textBox .event_detail {
     padding-bottom: calc(24px + 38px + 40px);
   }
+}
+
+.event_point {
+  line-height: 1.75em;
+  color: #727171;
+  margin-bottom: 24px;
+  text-align: left;
+}
+@media screen and (min-width: 769px) {
+  .event_point {
+    float: left;
+    margin-bottom: 7px;
+  }
+}
+.event_point .event_point_cap {
+  font-weight: 400;
+}
+.event_point .event_point_contents {
+  padding-left: 14px;
 }
 
 .eventArchive_textBox_wrap {
@@ -1413,6 +1414,20 @@ footer .copyright p {
 }
 .collectevent .form_guide {
   margin-top: 24px;
+}
+
+.eventabout {
+  width: 25%;
+  float: left;
+  margin-right: calc(100% * (75 / 1000));
+}
+.eventabout img {
+  width: 100%;
+}
+.eventabout .eventabout_title {
+  line-height: 20px;
+  font-size: 16px;
+  margin-bottom: 6px;
 }
 
 #all_experiencemenu {
@@ -1849,13 +1864,31 @@ footer .copyright p {
   margin-right: 60px;
 }
 
+.form {
+  float: left;
+  width: calc(75% - (100% * (75 / 1000)));
+}
+.form:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.inputForm {
+  float: left;
+  width: 100%;
+}
 .inputForm th {
   color: #727171;
   font-size: 13px;
   text-align: left;
+  width: 91px;
+}
+.inputForm td {
+  width: calc(100% - 28px);
 }
 .inputForm td input {
-  width: 100%;
+  width: calc(100% - 28px);
 }
 .inputForm input {
   border: none;
@@ -1868,10 +1901,10 @@ footer .copyright p {
   color: #727171;
   font-size: 14px;
   padding: 11px 14px 11px 14px;
-  width: 100%;
+  width: calc(100% - 28px);
 }
 .inputForm .textareaLabel {
-  padding-top: 8px;
+  padding-top: 20px;
   vertical-align: top;
 }
 .inputForm .confirm {
