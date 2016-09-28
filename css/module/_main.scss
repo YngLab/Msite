@@ -1207,7 +1207,9 @@ footer{
 */
 .radioFont{
   color: $dark__fontColor;
-  margin-right: 60px;
+  @media #{$normal} {
+    margin-right: 60px;
+  }
 }
 
 .inputForm{
@@ -1268,5 +1270,36 @@ footer{
   background: $dark__fontColor;
   p{
     color: white;
+  }
+}
+
+.inputForm_sp{
+  input{
+    background-color: #efefef;
+    border: none;
+    color: $dark__fontColor;
+    font-size: $g__fontSize;
+  }
+  p{
+    font-size: $cap__fontSize;
+  }
+  textarea{
+    background-color: #efefef;
+    border: none;
+    color: $dark__fontColor;
+    font-size: $g__fontSize;
+  }
+  .confirm{
+    width: 88px;
+    height: 36px;
+    border: 1px solid $dark__fontColor;
+    color: $dark__fontColor;
+    font-weight: 400;
+    font-size: $link__fontSize;
+    text-align: center;
+    p{
+      display: inline;
+      line-height: 36px;
+    }
   }
 }

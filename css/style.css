@@ -572,8 +572,16 @@ footer .copyright {
   padding-bottom: 24px;
 }
 
-.radio {
-  margin-bottom: 8px;
+@media screen and (min-width: 769px) {
+  .radio {
+    margin-bottom: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .radio .radioElement {
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 
 .inputForm th {
@@ -584,6 +592,34 @@ footer .copyright {
 }
 .inputForm .confirm {
   margin: 40px 0 40px 0;
+}
+@media screen and (max-width: 768px) {
+  .inputForm {
+    display: none;
+  }
+}
+
+.inputForm_sp .inputBox_sp, .inputForm_sp .inputBox_sp_b {
+  margin-bottom: 20px;
+}
+.inputForm_sp .inputBox_sp input, .inputForm_sp .inputBox_sp_b input {
+  height: 36px;
+  width: 100%;
+}
+.inputForm_sp .inputBox_sp p, .inputForm_sp .inputBox_sp_b p {
+  margin-bottom: 13px;
+}
+.inputForm_sp .inputBox_sp textarea, .inputForm_sp .inputBox_sp_b textarea {
+  height: 108px;
+  width: 100%;
+}
+.inputForm_sp .inputBox_sp_b {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 769px) {
+  .inputForm_sp {
+    display: none;
+  }
 }
 
 /* module */
@@ -1845,7 +1881,11 @@ footer .copyright p {
 */
 .radioFont {
   color: #727171;
-  margin-right: 60px;
+}
+@media screen and (min-width: 769px) {
+  .radioFont {
+    margin-right: 60px;
+  }
 }
 
 .inputForm th {
@@ -1899,6 +1939,35 @@ footer .copyright p {
 }
 .revision p {
   color: white;
+}
+
+.inputForm_sp input {
+  background-color: #efefef;
+  border: none;
+  color: #727171;
+  font-size: 14px;
+}
+.inputForm_sp p {
+  font-size: 13px;
+}
+.inputForm_sp textarea {
+  background-color: #efefef;
+  border: none;
+  color: #727171;
+  font-size: 14px;
+}
+.inputForm_sp .confirm {
+  width: 88px;
+  height: 36px;
+  border: 1px solid #727171;
+  color: #727171;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+}
+.inputForm_sp .confirm p {
+  display: inline;
+  line-height: 36px;
 }
 
 .menu {
