@@ -419,20 +419,24 @@ footer .copyright {
   height: 60vh;
 }
 
-.adress {
-  width: 50%;
-  float: left;
-}
-.adress .heading > p {
-  margin-bottom: 24px;
+@media screen and (min-width: 769px) {
+  .adress {
+    width: 50%;
+    float: left;
+  }
+  .adress .heading > p {
+    margin-bottom: 24px;
+  }
 }
 
-.parking {
-  width: 50%;
-  float: left;
-}
-.parking .heading > p {
-  margin-bottom: 24px;
+@media screen and (min-width: 769px) {
+  .parking {
+    width: 50%;
+    float: left;
+  }
+  .parking .heading > p {
+    margin-bottom: 24px;
+  }
 }
 
 .access {
@@ -445,10 +449,26 @@ footer .copyright {
 
 .accessProcess {
   width: 100%;
-  float: left;
 }
 .accessProcess img {
   width: 100%;
+}
+@media screen and (min-width: 769px) {
+  .accessProcess {
+    float: left;
+  }
+  .accessProcess .accessProcess_sp {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .accessProcess img {
+    display: none;
+  }
+  .accessProcess .accessProcess_sp {
+    margin-left: 16px;
+    text-align: left;
+  }
 }
 
 .pageTitle {
@@ -1219,6 +1239,14 @@ footer .copyright p {
   font-size: 24px;
   margin-left: 24px;
 }
+@media screen and (max-width: 768px) {
+  .heading-paragraph {
+    padding: 40px 0 27px 0;
+  }
+  .heading-paragraph p {
+    font-size: 18px;
+  }
+}
 
 .monthSort {
   float: left;
@@ -1968,6 +1996,16 @@ footer .copyright p {
 .inputForm_sp .confirm p {
   display: inline;
   line-height: 36px;
+}
+
+@media screen and (max-width: 768px) {
+  .accessProcess .accessProcess_sp .from {
+    border-bottom: dashed 1px #9fa0a0;
+    padding-bottom: 3px;
+  }
+  .accessProcess .accessProcess_sp .route {
+    margin: 20px 0 36px 0;
+  }
 }
 
 .menu {

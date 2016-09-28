@@ -268,21 +268,25 @@ footer{
 }
 
 .adress{
-  width: 50%;
-  float: left;
-  .heading{
-    >p{
-      margin-bottom: 24px;
+  @media #{$normal} {
+    width: 50%;
+    float: left;
+    .heading{
+      >p{
+        margin-bottom: 24px;
+      }
     }
   }
 }
 
 .parking{
-  width: 50%;
-  float: left;
-  .heading{
-    >p{
-      margin-bottom: 24px;
+  @media #{$normal} {
+    width: 50%;
+    float: left;
+    .heading{
+      >p{
+        margin-bottom: 24px;
+      }
     }
   }
 }
@@ -299,9 +303,23 @@ footer{
 
 .accessProcess{
   width: 100%;
-  float: left;
   img{
     width: 100%;
+  }
+  @media #{$normal} {
+    float: left;
+    .accessProcess_sp{
+      display: none;
+    }
+  }
+  @media #{$small} {
+    img{
+      display: none;
+    }
+    .accessProcess_sp{
+      margin-left: 16px;
+      text-align: left;
+    }
   }
 }
 
