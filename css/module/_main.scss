@@ -686,6 +686,7 @@ footer{
 }
 
 .event_textBox_wrap{
+  background: white;
   position: relative;
   @include smallW;
   @media #{$normal}{
@@ -741,6 +742,7 @@ footer{
 }
 
 .eventArchive_textBox_wrap{
+  background: white;
   position: relative;
   @include smallW;
   .eventArchive_detail{

@@ -346,7 +346,9 @@ footer .copyright {
 }
 
 @media screen and (min-width: 769px) {
-  .event_textBox_wrap, .event_pic, .exmenu_textBox_wrap, .exmenu_pic {
+  .event_textBox_wrap, .event_pic,
+  .exmenu_textBox_wrap, .exmenu_pic,
+  .eventArchive_textBox_wrap, .eventArchive_pic {
     max-height: calc(1440px * 0.25);
     min-height: calc(1080px * 0.25);
   }
@@ -1421,6 +1423,7 @@ footer .copyright p {
 }
 
 .event_textBox_wrap {
+  background: white;
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -1493,6 +1496,7 @@ footer .copyright p {
 }
 
 .eventArchive_textBox_wrap {
+  background: white;
   position: relative;
 }
 @media screen and (max-width: 768px) {

@@ -173,7 +173,9 @@ footer{
   }
 }
 
-.event_textBox_wrap, .event_pic, .exmenu_textBox_wrap, .exmenu_pic{
+.event_textBox_wrap, .event_pic,
+.exmenu_textBox_wrap, .exmenu_pic,
+.eventArchive_textBox_wrap, .eventArchive_pic{
   @media #{$normal} {
     max-height: calc(1440px * 0.25);
     min-height: calc(1080px * 0.25);
