@@ -1,5 +1,6 @@
 $small: "screen and (max-width: 768px)";
 $normal: "screen and (min-width: 769px)";
+$maximum: "screen and (min-width: 1441px)";
 
 $title__fontSize: 21px;
 $title__color: #3e3a39;
@@ -32,4 +33,10 @@ $accordion__border: #dddddd;
 
 @mixin headingMark{
 
+}
+
+@mixin smallW{
+  @media #{$small} {
+    width: 100%;
+  }
 }
