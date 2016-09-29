@@ -12,7 +12,15 @@
 <link rel = "shortcut icon" href="images/hmp.ico">
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script charset="utf-8">
+  $(window).load(function() {
+    $(".flexslider").flexslider();
+    animation: "slide"
+  });
+</script>
 <div id="wrapper">
+  <div id = "header_sp">　</div>
   <div id="header">
       <div id="drawer-toggle">
         <span class="top"></span>
@@ -58,320 +66,445 @@
   </div>
   <div class = "bgcolor">
     <div class = "wrap">
-      <div class = "latestEvent">
-        <div class = "heading">
-          <div class = "addPadding">
-            <div class = "headmark">
-            </div>
-            <p>
-              体験メニュー
-            </p>
-          </div>
+      <div class = "latestEvent only_sp">
+        <div class = "flexslider">
+          <ul class = "slides">
+            <li>
+              <a href = "#">
+                <div class = "latestBox_future">
+                  <div class = "remaindays_future">
+                    <div class = "caption">
+                      あと5日
+                    </div>
+                  </div>
+                  <div class = "latestBox_img">
+                    <img src="images/sample_relatestimg.jpg" alt="イベント1">
+                  </div>
+                  <div class = "eventText">
+                    <p class = "eventsch caption FCHcolor">
+                      10/15(土)
+                    </p>
+                    <p class = "eventtitle">オープニングセレモニーあああああアアアアアアオープニングセレモニーあああああアアアアアア</p>
+                    <p class = "eventplace caption">
+                      みらい館
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href = "#">
+                <div class = "latestBox_future">
+                  <div class = "remaindays_future">
+                    <div class = "caption">
+                      あと5日
+                    </div>
+                  </div>
+                  <div class = "latestBox_img">
+                    <img src="images/sample_relatestimg.jpg" alt="イベント1">
+                  </div>
+                  <div class = "eventText">
+                    <p class = "eventsch caption FCHcolor">
+                      10/15(土)
+                    </p>
+                    <p class = "eventtitle">オープニングセレモニー</p>
+                    <p class = "eventplace caption">
+                      みらい館
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href = "#">
+                <div class = "latestBox_kids">
+                  <div class = "remaindays_kids">
+                    <div class = "caption">
+                      あと5日
+                    </div>
+                  </div>
+                  <div class = "latestBox_img">
+                    <img src="images/sample_relatestimg.jpg" alt="イベント1">
+                  </div>
+                  <div class = "eventText">
+                    <p class = "eventsch caption KPHcolor">
+                      10/15(土)
+                    </p>
+                    <p class = "eventtitle">オープニングセレモニー</p>
+                    <p class = "eventplace caption">
+                      みらい館
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href = "#">
+                <div class = "latestBox_future">
+                  <div class = "remaindays_future">
+                    <div class = "caption">
+                      あと5日
+                    </div>
+                  </div>
+                  <div class = "latestBox_img">
+                    <img src="images/sample_relatestimg.jpg" alt="イベント1">
+                  </div>
+                  <div class = "eventText">
+                    <p class = "eventsch caption FCHcolor">
+                      10/15(土)
+                    </p>
+                    <p class = "eventtitle">オープニングセレモニー</p>
+                    <p class = "eventplace caption">
+                      みらい館
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
-        <a href = "#">
-          <div class = "latestBox_future">
-            <div class = "remaindays_future">
-              <div class = "caption">
-                あと5日
-              </div>
-            </div>
-            <img src="images/sample_relatestimg.jpg" alt="イベント1">
-            <div class = "eventText">
-              <p class = "eventsch caption FCHcolor">
-                10/15(土)
-              </p>
-              <p class = "eventtitle">
-                オープニングセレモニー
-              </p>
-              <p class = "eventplace caption">
-                みらい館
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href = "#">
-          <div class = "latestBox_future">
-            <div class = "remaindays_future">
-              <div class = "caption">
-                あと5日
-              </div>
-            </div>
-            <img src="images/sample_relatestimg.jpg" alt="イベント2">
-            <div class = "eventText">
-              <p class = "eventsch caption FCHcolor">
-                10/15(土)
-              </p>
-              <p class = "eventtitle">
-                オープニングセレモニー
-              </p>
-              <p class = "eventplace caption">
-                みらい館
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href = "#">
-          <div class = "latestBox_future">
-            <div class = "remaindays_future">
-              <div class = "caption">
-                あと5日
-              </div>
-            </div>
-            <img src="images/sample_relatestimg.jpg" alt="イベント3">
-            <div class = "eventText">
-              <p class = "eventsch caption FCHcolor">
-                10/15(土)
-              </p>
-              <p class = "eventtitle">
-                オープニングセレモニー
-              </p>
-              <p class = "eventplace caption">
-                みらい館
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href = "#">
-          <div class = "latestBox_future">
-            <div class = "remaindays_future">
-              <div class = "caption">
-                あと5日
-              </div>
-            </div>
-            <img src="images/sample_relatestimg.jpg" alt="イベント4">
-            <div class = "eventText">
-              <p class = "eventsch caption FCHcolor">
-                10/15(土)
-              </p>
-              <p class = "eventtitle">
-                オープニングセレモニー
-              </p>
-              <p class = "eventplace caption">
-                みらい館
-              </p>
-            </div>
-          </div>
-        </a>
-      </div><!-- ここまでがlatestEvent -->
-      <div class = "">
       </div>
-    </div><!-- ここまでがwrap -->
-  </div>
-  <div class = "wrap">
-    <div class = "heading-lineup">
-      <div class = "headmark">
+      <div class = "latestEvent only_pc">
+        <div class = "latestEvent">
+          <div class = "heading">
+            <div class = "addPadding">
+              <div class = "headmark">
+              </div>
+              <p>
+                体験メニュー
+              </p>
+            </div>
+          </div>
+          <a href = "#">
+            <div class = "latestBox_future">
+              <div class = "remaindays_future">
+                <div class = "caption">
+                  あと5日
+                </div>
+              </div>
+              <img src="images/sample_relatestimg.jpg" alt="イベント1">
+              <div class = "eventText">
+                <p class = "eventsch caption FCHcolor">
+                  10/15(土)
+                </p>
+                <p class = "eventtitle">オープニングセレモニー</p>
+                <p class = "eventplace caption">
+                  みらい館
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href = "#">
+            <div class = "latestBox_future">
+              <div class = "remaindays_future">
+                <div class = "caption">
+                  あと5日
+                </div>
+              </div>
+              <img src="images/sample_relatestimg.jpg" alt="イベント2">
+              <div class = "eventText">
+                <p class = "eventsch caption FCHcolor">
+                  10/15(土)
+                </p>
+                <p class = "eventtitle">オープニングセレモニー</p>
+                <p class = "eventplace caption">
+                  みらい館
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href = "#">
+            <div class = "latestBox_future">
+              <div class = "remaindays_future">
+                <div class = "caption">
+                  あと5日
+                </div>
+              </div>
+              <img src="images/sample_relatestimg.jpg" alt="イベント3">
+              <div class = "eventText">
+                <p class = "eventsch caption FCHcolor">
+                  10/15(土)
+                </p>
+                <p class = "eventtitle">オープニングセレモニー</p>
+                <p class = "eventplace caption">
+                  みらい館
+                </p>
+              </div>
+            </div>
+          </a>
+          <a href = "#">
+            <div class = "latestBox_future">
+              <div class = "remaindays_future">
+                <div class = "caption">
+                  あと5日
+                </div>
+              </div>
+              <img src="images/sample_relatestimg.jpg" alt="イベント4">
+              <div class = "eventText">
+                <p class = "eventsch caption FCHcolor">
+                  10/15(土)
+                </p>
+                <p class = "eventtitle">オープニングセレモニー</p>
+                <p class = "eventplace caption">
+                  みらい館
+                </p>
+              </div>
+            </div>
+          </a>
+        </div><!-- ここまでがlatestEvent -->
+        <div class = "">
+        </div>
       </div>
-      <p class = "headingTitle">
-        今後のイベント
-      </p>
     </div>
-    <div class = "monthSort">
-      <p>
-        今後のイベント
-      </p>
-      <ul>
-        <li class = "active">
-          10
-        </li>
-        <li>
-          <a href = "#" class = "linkText_">
-            11
-          </a>
-        </li>
-        <li>
-          <a href = "#" class = "linkText_">
-            12
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class = "archive">
-      <p>
-        今までのイベント
-      </p>
-      <ul>
-        <li class = "archive_year">
-            2016年
-        </li>
-        <li>
-          <a href = "#" class = "linkText_">
-            7
-          </a>
-        </li>
-        <li>
+    <div class = "wrap">
+      <div class = "heading-lineup">
+        <div class = "headmark">
+        </div>
+        <p class = "headingTitle">
+          今後のイベント
+        </p>
+      </div>
+      <div class = "monthSort">
+        <p>
+          今後のイベント
+        </p>
+        <ul>
+          <li class = "active">
+            10
+          </li>
+          <li>
             <a href = "#" class = "linkText_">
-            8
+              11
+            </a>
+          </li>
+          <li>
+            <a href = "#" class = "linkText_">
+              12
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class = "archive">
+        <p>
+          今までのイベント
+        </p>
+        <ul>
+          <li class = "archive_year">
+              2016年
+          </li>
+          <li>
+            <a href = "#" class = "linkText_">
+              7
+            </a>
+          </li>
+          <li>
+              <a href = "#" class = "linkText_">
+              8
+            </a>
+          </li>
+          <li>
+            <a href = "#" class = "linkText_">
+              9
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id = "all_eventmenu">
+    <div class = "eventmenu">
+      <img class = "event_pic" src = "images/sample_contents.jpg" alt = "オープニングセレモニー">
+      <div class = "event_textBox_wrap">
+        <div class = "event_textBox">
+          <div class = "event_title">
+            オープニングセレモニー
+          </div>
+          <div class = "event_point">
+            <table>
+              <tr>
+                <th class = "event_point_cap">日時</th>
+                <td class = "event_point_contents">8月28日(日)　10:00-15:00</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">会場</th>
+                <td class = "event_point_contents">はこだてみらい館</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">参加費</th>
+                <td class = "event_point_contents">無料</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">対象</th>
+                <td class = "event_point_contents">子どもから大人まで</td>
+              </tr>
+            </table>
+          </div>
+          <div class = "event_detail">
+            はこだてみらい館で行われる予定の MESH を使ったワークショップを一足先に体験していただきます！「MESH」とは、誰でも簡単に電子工作やプログラミングなどのデジタルなものづくりを楽しむことが出来るツールです。
+          </div>
+        </div>
+        <form class = "form inputForm" action = "event_subscript.html" method = "post">
+          <div class = "confirm button subscriptionButton">
+            <input type="submit" value="申し込む" class = "sendbutton">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class = "eventmenu">
+      <img class = "event_pic" src = "images/sample_contents.jpg"  alt = "オープニングセレモニー">
+      <div class = "event_textBox_wrap">
+        <div class = "event_textBox">
+          <div class = "event_title">
+            オープニングセレモニー
+          </div>
+          <div class = "event_point">
+            <table>
+              <tr>
+                <th class = "event_point_cap">日時</th>
+                <td class = "event_point_contents">8月28日(日)　10:00-15:00</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">会場</th>
+                <td class = "event_point_contents">はこだてみらい館</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">参加費</th>
+                <td class = "event_point_contents">無料</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">対象</th>
+                <td class = "event_point_contents">子どもから大人まで</td>
+              </tr>
+            </table>
+          </div>
+          <div class = "event_detail">
+            はこだてみらい館で行われる予定の MESH を使ったワークショップを一足先に体験していただきます！「MESH」とは、誰でも簡単に電子工作やプログラミングなどのデジタルなものづくりを楽しむことが出来るツールです。
+          </div>
+        </div>
+        <form class = "form inputForm" action = "event_subscript.html" method = "post">
+          <div class = "confirm button subscriptionButton">
+            <input type="submit" value="申し込む" class = "sendbutton">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class = "eventmenu">
+      <img class = "event_pic" src = "images/sample_contents.jpg"  alt = "オープニングセレモニー">
+      <div class = "event_textBox_wrap">
+        <div class = "event_textBox">
+          <div class = "event_title">
+            オープニングセレモニー
+          </div>
+          <div class = "event_point">
+            <table>
+              <tr>
+                <th class = "event_point_cap">日時</th>
+                <td class = "event_point_contents">8月28日(日)　10:00-15:00</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">会場</th>
+                <td class = "event_point_contents">はこだてみらい館</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">参加費</th>
+                <td class = "event_point_contents">無料</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">対象</th>
+                <td class = "event_point_contents">子どもから大人まで</td>
+              </tr>
+            </table>
+          </div>
+          <div class = "event_detail">
+            はこだてみらい館で行われる予定の MESH を使ったワークショップを一足先に体験していただきます！「MESH」とは、誰でも簡単に電子工作やプログラミングなどのデジタルなものづくりを楽しむことが出来るツールです。
+          </div>
+        </div>
+        <form class = "form inputForm" action = "event_subscript.html" method = "post">
+          <div class = "confirm button subscriptionButton">
+            <input type="submit" value="申し込む" class = "sendbutton">
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <div class = "eventmenu">
+      <img class = "event_pic" src = "images/sample_contents.jpg"  alt = "オープニングセレモニー">
+      <div class = "event_textBox_wrap">
+        <div class = "event_textBox">
+          <div class = "event_title">
+            オープニングセレモニー
+          </div>
+          <div class = "event_point">
+            <table>
+              <tr>
+                <th class = "event_point_cap">日時</th>
+                <td class = "event_point_contents">8月28日(日)　10:00-15:00</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">会場</th>
+                <td class = "event_point_contents">はこだてみらい館</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">参加費</th>
+                <td class = "event_point_contents">無料</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">対象</th>
+                <td class = "event_point_contents">子どもから大人まで</td>
+              </tr>
+            </table>
+          </div>
+          <div class = "event_detail">
+            はこだてみらい館で行われる予定の MESH を使ったワークショップを一足先に体験していただきます！「MESH」とは、誰でも簡単に電子工作やプログラミングなどのデジタルなものづくりを楽しむことが出来るツールです。
+          </div>
+        </div>
+        <form class = "form inputForm" action = "event_subscript.html" method = "post">
+          <div class = "confirm button subscriptionButton">
+            <input type="submit" value="申し込む" class = "sendbutton">
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <div class = "wrap">
+      <div class = "collectevent">
+        <p>
+          はこだてみらいプロジェクトではイベントの開催者を募集しています。<br>
+          開催希望の方は、下記フォームからご連絡お願いいたします。
+        </p>
+        <p class = "form_guide">
+          <a href = "contact.html" class = "linkText">
+            お問い合わせフォーム
           </a>
-        </li>
-        <li>
-          <a href = "#" class = "linkText_">
-            9
+        </p>
+      </div>
+    </div>
+    <footer>
+      <img src = "images/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
+      <div class = "foot">
+        <div class ="footerLinks">
+          <a href = "member.html" class="links">メンバー</a>
+          <a href = "notice.html" class="links">お知らせ</a>
+          <a href = "recruit.html" class="links">求人情報</a>
+          <a href = "FAQ.html" class="links">よくあるご質問</a>
+          <a href = "relatedlinks.html" class="links">関連リンク</a>
+          <a href = "sitemap.html" class="links">サイトマップ</a>
+          <a href = "sitepolicy.html" class="links">サイトポリシー</a>
+        </div>
+        <div class = "SNSbutton">
+          <a href = "https://www.facebook.com/hakodatemiraiproject/">
+            <img src = "images/fb.png" alt="公式Facebook" class = "SNS">
           </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div id = "all_eventmenu">
-  <div class = "eventmenu">
-    <img class = "event_pic" src = "images/sample_contents.jpg" alt = "オープニングセレモニー">
-    <div class = "event_textBox_wrap">
-      <div class = "event_textBox">
-        <div class = "event_title">
-          オープニングセレモニー
+          <a href = "https://www.instagram.com/instagramjapan/?hl=ja">
+            <img src = "images/ig.png" alt="Instagram" class = "SNS">
+          </a>
         </div>
-        <div class = "event_point">
-          <table>
-            <tr>
-              <th class = "event_point_cap">日時</th>
-              <td class = "event_point_contents">8月28日(日)　10:00-15:00</td>
-            </tr>
-            <tr>
-              <th class = "event_point_cap">会場</th>
-              <td class = "event_point_contents">はこだてみらい館</td>
-            </tr>
-            <tr>
-              <th class = "event_point_cap">参加費</th>
-              <td class = "event_point_contents">無料</td>
-            </tr>
-            <tr>
-              <th class = "event_point_cap">対象</th>
-              <td class = "event_point_contents">子どもから大人まで</td>
-            </tr>
-          </table>
+        <div class = "copyright">
+          <p>@2016 Hakodate Mirai Project</p>
         </div>
-        <div class = "event_detail">
-          はこだてみらい館で行われる予定の MESH を使ったワークショップを一足先に体験していただきます！「MESH」とは、誰でも簡単に電子工作やプログラミングなどのデジタルなものづくりを楽しむことが出来るツールです。
-        </div>
-        <a href = "#">
-          <div class = "button subscriptionButton">
-            <p>
-              申し込む
-            </p>
-          </div>
-        </a>
       </div>
-    </div>
-  </div>
-  <div class = "eventmenu">
-    <img class = "event_pic" src = "images/sample_contents.jpg"  alt = "オープニングセレモニー">
-    <div class = "event_textBox_wrap">
-      <div class = "event_textBox">
-        <div class = "event_title">
-          オープニングセレモニー
-        </div>
-        <div class = "event_point">
-          <table>
-            <tr>
-              <th class = "event_point_cap">日時</th>
-              <td class = "event_point_contents">8月28日(日)　10:00-15:00</td>
-            </tr>
-            <tr>
-              <th class = "event_point_cap">会場</th>
-              <td class = "event_point_contents">はこだてみらい館</td>
-            </tr>
-            <tr>
-              <th class = "event_point_cap">参加費</th>
-              <td class = "event_point_contents">無料</td>
-            </tr>
-            <tr>
-              <th class = "event_point_cap">対象</th>
-              <td class = "event_point_contents">子どもから大人まで</td>
-            </tr>
-          </table>
-        </div>
-        <div class = "event_detail">
-          はこだてみらい館で行われる予定の MESH を使ったワークショップを一足先に体験していただきます！「MESH」とは、誰でも簡単に電子工作やプログラミングなどのデジタルなものづくりを楽しむことが出来るツールです。
-        </div>
-        <a href = "#">
-          <div class = "button subscriptionButton">
-            <p>
-              申し込む
-            </p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class = "eventmenu">
-    <img class = "event_pic" src = "images/sample_contents.jpg"  alt = "オープニングセレモニー">
-    <div class = "event_textBox_wrap">
-      <div class = "event_textBox">
-        <div class = "event_title">
-          オープニングセレモニー
-        </div>
-        <div class = "event_point">
-          <table>
-            <tr>
-              <th class = "event_point_cap">日時</th>
-              <td class = "event_point_contents">8月28日(日)　10:00-15:00</td>
-            </tr>
-            <tr>
-              <th class = "event_point_cap">会場</th>
-              <td class = "event_point_contents">はこだてみらい館</td>
-            </tr>
-            <tr>
-              <th class = "event_point_cap">参加費</th>
-              <td class = "event_point_contents">無料</td>
-            </tr>
-            <tr>
-              <th class = "event_point_cap">対象</th>
-              <td class = "event_point_contents">子どもから大人まで</td>
-            </tr>
-          </table>
-        </div>
-        <div class = "event_detail">
-          はこだてみらい館で行われる予定の MESH を使ったワークショップを一足先に体験していただきます！「MESH」とは、誰でも簡単に電子工作やプログラミングなどのデジタルなものづくりを楽しむことが出来るツールです。
-        </div>
-        <a href = "#">
-          <div class = "button subscriptionButton">
-            <p>
-              申し込む
-            </p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class = "eventmenu">
-    <img class = "event_pic" src = "images/sample_contents.jpg"  alt = "オープニングセレモニー">
-    <div class = "event_textBox_wrap">
-      <div class = "event_textBox">
-        <div class = "event_title">
-          オープニングセレモニー
-        </div>
-        <div class = "event_point">
-          <table>
-            <tr>
-              <th class = "event_point_cap">日時</th>
-              <td class = "event_point_contents">8月28日(日)　10:00-15:00</td>
-            </tr>
-            <tr>
-              <th class = "event_point_cap">会場</th>
-              <td class = "event_point_contents">はこだてみらい館</td>
-            </tr>
-            <tr>
-              <th class = "event_point_cap">参加費</th>
-              <td class = "event_point_contents">無料</td>
-            </tr>
-            <tr>
-              <th class = "event_point_cap">対象</th>
-              <td class = "event_point_contents">子どもから大人まで</td>
-            </tr>
-          </table>
-        </div>
-        <div class = "event_detail">
-          はこだてみらい館で行われる予定の MESH を使ったワークショップを一足先に体験していただきます！「MESH」とは、誰でも簡単に電子工作やプログラミングなどのデジタルなものづくりを楽しむことが出来るツールです。
-        </div>
-        <a href = "#">
-          <div class = "button subscriptionButton">
-            <p>
-              申し込む
-            </p>
-          </div>
-        </a>
-      </div>
-    </div>
+    </footer>
+    <div class="overlay"></div>
   </div>
   <div class = "wrap">
     <div class = "collectevent">
@@ -380,14 +513,14 @@
         開催希望の方は、下記フォームからご連絡お願いいたします。
       </p>
       <p class = "form_guide">
-        <a href = "#" class = "linkText">
+        <a href = "contact.html" class = "linkText">
           お問い合わせフォーム
         </a>
       </p>
     </div>
   </div>
   <footer>
-    <img src = "images/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
+    <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
     <div class = "foot">
       <div class ="footerLinks">
         <a href = "member.html" class="links">メンバー</a>
@@ -400,10 +533,10 @@
       </div>
       <div class = "SNSbutton">
         <a href = "https://www.facebook.com/hakodatemiraiproject/">
-          <img src = "images/fb.png" alt="公式Facebook" class = "SNS">
+          <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
         </a>
         <a href = "https://www.instagram.com/instagramjapan/?hl=ja">
-          <img src = "images/ig.png" alt="Instagram" class = "SNS">
+          <img src = "images/common/ig.png" alt="Instagram" class = "SNS">
         </a>
       </div>
       <div class = "copyright">
@@ -429,7 +562,7 @@
     </ul>
     <ul class = "pNav_sp">
       <a href = "access.html"><li>アクセス</li></a>
-      <a href = "FAQ.html"><li>お問い合わせ</li></a>
+      <a href = "contact.html"><li>お問い合わせ</li></a>
     </ul>
   </div>
 </div>

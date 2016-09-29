@@ -69,4 +69,16 @@ a:hover{
   }
 }
 
+.only_pc{
+  @media #{$small} {
+    display: none;
+  }
+}
+
+.only_sp{
+  @media #{$normal} {
+    display: none;
+  }
+}
+
 //↑加納↓高居

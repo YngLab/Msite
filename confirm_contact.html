@@ -13,6 +13,7 @@
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
 <div id="wrapper">
+  <div id = "header_sp">　</div>
   <div id="header">
       <div id="drawer-toggle">
         <span class="top"></span>
@@ -67,42 +68,42 @@
         <input type = "radio" name = "radio" id = "both" value = "both">
           <label for = "both"><span class = "radioFont">どちらとも</span></label>
       </div>
-      <table class = "inputForm">
-        <tr>
-          <th>お名前</th>
-          <td>
-            <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
-          </td>
-        </tr>
-        <tr>
-          <th>メールアドレス</th>
-          <td>
-            <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
-          </td>
-        </tr>
-        <tr>
-          <th class = "textareaLabel">問い合わせ内容</th>
-          <td>
-            <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
-          </td>
-        </tr>
-        <tr>
-          <th>
-            <a href = "contact.html">
-              <div class = "confirm revision">
-                <p>訂正</p>
-              </div>
-            </a>
-          </th>
-          <td>
-            <a href = "recieve_contact.html">
+      <form class = "form" action = "php/hoge.php" method = "post">
+        <table class = "inputForm">
+          <tr>
+            <th>お名前</th>
+            <td>
+              <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
+            </td>
+          </tr>
+          <tr>
+            <th>メールアドレス</th>
+            <td>
+              <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
+            </td>
+          </tr>
+          <tr>
+            <th class = "textareaLabel">問い合わせ内容</th>
+            <td>
+              <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <a href = "javascript:history.back();">
+                <div class = "confirm revision">
+                  <input type="button" value="訂正" class = "backbutton">
+                </div>
+              </a>
+            </th>
+            <td>
               <div class = "confirm">
-                <p>送信</p>
+                <input type="submit" value="送信" class = "sendbutton">
               </div>
-            </a>
-          </td>
-        </tr>
-      </table>
+            </td>
+          </tr>
+        </table>
+      </form>
     </div>
   <!-- ここまで -->
   </div>
@@ -149,7 +150,7 @@
     </ul>
     <ul class = "pNav_sp">
       <a href = "access.html"><li>アクセス</li></a>
-      <a href = "FAQ.html"><li>お問い合わせ</li></a>
+      <a href = "contact.html"><li>お問い合わせ</li></a>
     </ul>
   </div>
 </div>

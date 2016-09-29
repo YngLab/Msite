@@ -28,9 +28,22 @@ $(function(){
   }
 
   var $setElm = $(".latestEvent .eventtitle");
-  var cutFigure = "8"; // カットする文字数
+  var cutFigure = 8; // カットする文字数
   var afterTxt = "..."; // 文字カット後に表示するテキスト
-
+  var i = 330;
+  var j = 0;
+  if(320 <= w_size  &&  w_size < 330){
+      cutFigure = "11";
+    }
+  while(i < 768){
+    if(i <= w_size  &&  w_size < i + 23){
+      cutFigure = 12 + j;
+      console.log(j);
+      break;
+    }
+    i = i + 23;
+    j++;
+  }
   if(1156 <= w_size  &&  w_size < 1257){
     cutFigure = "9";
   }
@@ -41,10 +54,9 @@ $(function(){
     cutFigure = "11";
   }
   $setElm.each(function(){
-    var textLength = $(this).text().length - 33;
-    var textTrim = $(this).text().substr(17,(cutFigure));
-    console.log(textLength);
-    console.log(textTrim);
+    var textLength = $(this).text().length;
+    var textTrim = $(this).text().substr(0,(cutFigure));
+    console.log(cutFigure);
     if(cutFigure < textLength) {
       $(this).html(textTrim + afterTxt).css({visibility:"visible"});
     } else if(cutFigure >= textLength) {

@@ -1,11 +1,12 @@
 @charset "UTF-8";
 
+.topcap{
+    text-align: center;
+}
 .latestEvent{
   font-size: 0;
   padding-bottom: 40px;
-  .topcap{
-    text-align: center;
-  }
+  margin-top: 40px;
   .latestBox_future{
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
@@ -52,6 +53,9 @@
       }
     }
   }
+  .latestBox_img{
+    height: 55.7522%;
+  }
   img{
     height: 55.7522%;
     width: 100%;
@@ -85,6 +89,15 @@
       color: $g__fontColor;
     }
   }
+  .flex-direction-nav{
+    display: none;
+  }
+  .flex-control-nav{
+    bottom: -30px;
+  }
+  .flex-control-paging li a{
+    background-color: $g__fontColor;
+  }
 }
 
 .moreview{
@@ -92,7 +105,7 @@
   text-align: right;
   width: 100%;
   @media #{$small} {
-    margin-bottom: 40px;
+    margin: 10px 0 40px 0;
   }
 }
 
@@ -574,6 +587,12 @@ footer{
     font-size: $h2__fontSize;
     margin-left: 24px;
   }
+  @media #{$small} {
+    padding: 40px 0 27px 0;
+    p{
+      font-size: 18px;
+    }
+  }
 }
 
 .monthSort{
@@ -677,22 +696,6 @@ footer{
     font-weight: 400;
     margin-bottom: 24px;
   }
-  .event_point{
-    line-height: 1.75em;
-    color: $dark__fontColor;
-    margin-bottom: 24px;
-    text-align: left;
-    @media #{$normal} {
-      float: left;
-      margin-bottom: 7px;
-    }
-    .event_point_cap{
-      font-weight: 400;
-    }
-    .event_point_contents{
-      padding: 0 42px 0 14px;
-    }
-  }
   .event_detail{
     font-size: $g__fontSize;
     color: $g__fontColor;
@@ -709,6 +712,22 @@ footer{
     @media #{$small} {
       padding-bottom: calc(24px + 38px + 40px);
     }
+  }
+}
+.event_point{
+  line-height: 1.75em;
+  color: $dark__fontColor;
+  margin-bottom: 24px;
+  text-align: left;
+  @media #{$normal} {
+    float: left;
+    margin-bottom: 7px;
+  }
+  .event_point_cap{
+    font-weight: 400;
+  }
+  .event_point_contents{
+    padding-left: 14px;
   }
 }
 
@@ -758,6 +777,20 @@ footer{
   line-height: 1.75em;
   .form_guide{
     margin-top: 24px;
+  }
+}
+
+.eventabout{
+  width: 25%;
+  float: left;
+  margin-right: calc(100% * (75 / 1000));
+  img{
+    width: 100%;
+  }
+  .eventabout_title{
+    line-height: 20px;
+    font-size: 16px;
+    margin-bottom: 6px;
   }
 }
 
@@ -924,7 +957,6 @@ footer{
     top: 4%;
     right: calc(5% - 10px);
     z-index: 10;
-    
   }
   #modal-close:hover{
     opacity: 1;
@@ -1056,8 +1088,8 @@ footer{
       transform: translateY(4px);
     }
   }
-} 
- 
+}
+
 #wrapper.open {
     //クラス「open」が付いたら左に280px移動
     -webkit-transform: translate3d(-75%, 0, 0);
@@ -1075,7 +1107,7 @@ footer{
     }
   }
 }
- 
+
 /* オーバーレイ表示をするためのCSS */
 .open .overlay {
     position: absolute;
@@ -1083,11 +1115,11 @@ footer{
     left: 0;
     //親要素の上に表示するためz-indexを指定
     z-index: 999;
- 
+
     //親要素一杯に広がるため縦横のサイズを100%に
     width: 100%;
     height: 100%;
- 
+
     //暗くするため黒の透明色を指定
     background: rgba(0, 0, 0, .5);
 }
@@ -1101,7 +1133,7 @@ footer{
     overflow-x: hidden;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch; //スマホでのスクロールに慣性を付ける（デバイス限定
- 
+
     //アニメーション指定
     -webkit-transition: all .4s;
        -moz-transition: all .4s;
@@ -1209,18 +1241,30 @@ footer{
 */
 .radioFont{
   color: $dark__fontColor;
-  margin-right: 60px;
+  @media #{$normal} {
+    margin-right: 60px;
+  }
+}
+
+.form{
+  float: left;
+  width: calc(75% - (100% * (75 / 1000)));
+  @include clearfix;
 }
 
 .inputForm{
+  float: left;
+  width: 100%;
   th{
     color: $dark__fontColor;
     font-size: 13px;
     text-align: left;
+    width: 91px;
   }
   td{
+    width: calc(100% - 28px);
     input{
-      width: 100%;
+      width: calc(100% - 28px);
     }
   }
   input{
@@ -1236,11 +1280,75 @@ footer{
     color: $dark__fontColor;
     font-size: $g__fontSize;
     padding: 11px 14px 11px 14px;
-    width: 100%;
+    width: calc(100% - 28px);
   }
   .textareaLabel{
-    padding-top: 8px;
+    padding-top: 20px;
     vertical-align: top;
+  }
+  .confirm{
+    width: 88px;
+    height: 36px;
+    border: 1px solid $dark__fontColor;
+    color: $dark__fontColor;
+    font-weight: 400;
+    font-size: $link__fontSize;
+    text-align: center;
+    .sendbutton{
+      background-color: transparent;
+      padding: 0;
+      line-height: 36px;
+      width: 100%;
+      cursor: pointer;
+    }
+    .backbutton{
+      background-color: transparent;
+      color: #FFFFFF;
+      padding: 0;
+      line-height: 36px;
+      width: 100%;
+      cursor: pointer;
+    }
+    p{
+      display: inline;
+      line-height: 36px;
+    }
+  }
+}
+
+
+
+.inputBox{
+  input{
+    background-color: #efefef;
+  }
+  textarea{
+    background-color: #efefef;
+  }
+}
+
+.revision{
+  background: $dark__fontColor;
+  p{
+    color: white;
+  }
+}
+
+.inputForm_sp{
+  input{
+    background-color: #efefef;
+    border: none;
+    color: $dark__fontColor;
+    font-size: $g__fontSize;
+  }
+  p{
+    font-size: $cap__fontSize;
+  }
+  textarea{
+    background-color: #efefef;
+    border: none;
+    color: $dark__fontColor;
+    font-size: $g__fontSize;
   }
   .confirm{
     width: 88px;
@@ -1257,18 +1365,16 @@ footer{
   }
 }
 
-.inputBox{
-  input{
-    background-color: #efefef;
-  }
-  textarea{
-    background-color: #efefef;
-  }
-}
-
-.revision{
-  background: $dark__fontColor;
-  p{
-    color: white;
+.accessProcess{
+  @media #{$small} {
+    .accessProcess_sp{
+      .from{
+        border-bottom: dashed 1px $g__fontColor;
+        padding-bottom: 3px;
+      }
+      .route{
+        margin: 20px 0 36px 0;
+      }
+    }
   }
 }

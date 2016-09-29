@@ -8,10 +8,12 @@
 
 .wrap{
   margin: 0 auto;
-  //max-width: 1440px;
-  //min-width: 1080px;
   width: 92.5925%;
   @include clearfix;
+  @media #{$normal} {
+    max-width: 1440px;
+    min-width: 1080px;
+  }
   @media #{$small} {
     width: calc(100% * (728 / 768));
   }
@@ -21,6 +23,15 @@
   #header{
     @media #{$normal} {
       display: none;
+    }
+  }
+  #header_sp{
+    @media #{$normal} {
+      display: none;
+    }
+    @media #{$small} {
+      background: $g__fontColor;
+      font-size: 40px;
     }
   }
 }
@@ -164,6 +175,11 @@ footer{
     width: 75%;
     height: 25vw;
   }
+  .inputForm{
+    .confirm{
+      margin: 0;
+    }
+  }
 }
 
 .event_pic{
@@ -268,21 +284,25 @@ footer{
 }
 
 .adress{
-  width: 50%;
-  float: left;
-  .heading{
-    >p{
-      margin-bottom: 24px;
+  @media #{$normal} {
+    width: 50%;
+    float: left;
+    .heading{
+      >p{
+        margin-bottom: 24px;
+      }
     }
   }
 }
 
 .parking{
-  width: 50%;
-  float: left;
-  .heading{
-    >p{
-      margin-bottom: 24px;
+  @media #{$normal} {
+    width: 50%;
+    float: left;
+    .heading{
+      >p{
+        margin-bottom: 24px;
+      }
     }
   }
 }
@@ -299,9 +319,23 @@ footer{
 
 .accessProcess{
   width: 100%;
-  float: left;
   img{
     width: 100%;
+  }
+  @media #{$normal} {
+    float: left;
+    .accessProcess_sp{
+      display: none;
+    }
+  }
+  @media #{$small} {
+    img{
+      display: none;
+    }
+    .accessProcess_sp{
+      margin-left: 16px;
+      text-align: left;
+    }
   }
 }
 
@@ -423,7 +457,15 @@ footer{
 }
 
 .radio{
-  margin-bottom: 8px;
+  @media #{$normal} {
+    margin-bottom: 8px;
+  }
+  @media #{$small} {
+    .radioElement{
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .inputForm{
@@ -435,5 +477,31 @@ footer{
   }
   .confirm{
     margin: 40px 0 40px 0;
+  }
+  @media #{$small} {
+    display: none;
+  }
+}
+
+.inputForm_sp{
+  .inputBox_sp, .inputBox_sp_b{
+    margin-bottom: 20px;
+    input{
+      height: 36px;
+      width: 100%;
+    }
+    p{
+      margin-bottom: 13px;
+    }
+    textarea{
+      height: 108px;
+      width: 100%;
+    }
+  }
+  .inputBox_sp_b{
+    margin-bottom: 30px;
+  }
+  @media #{$normal} {
+    display: none;
   }
 }
