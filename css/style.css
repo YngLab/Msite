@@ -679,6 +679,7 @@ footer .copyright {
 .latestEvent {
   font-size: 0;
   padding-bottom: 40px;
+  margin-top: 40px;
 }
 .latestEvent .latestBox_future {
   background-color: #ffffff;
@@ -2025,6 +2026,21 @@ footer .copyright p {
   font-weight: 400;
   font-size: 15px;
   text-align: center;
+}
+.inputForm .confirm .sendbutton {
+  background-color: transparent;
+  padding: 0;
+  line-height: 36px;
+  width: 100%;
+  cursor: pointer;
+}
+.inputForm .confirm .backbutton {
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0;
+  line-height: 36px;
+  width: 100%;
+  cursor: pointer;
 }
 .inputForm .confirm p {
   display: inline;
