@@ -1106,7 +1106,7 @@
     slideshowSpeed: 4000,           //Integer: Set the speed of the slideshow cycling, in milliseconds
     animationSpeed: 1000,            //Integer: Set the speed of animations, in milliseconds
     initDelay: 0,                   //{NEW} Integer: Set an initialization delay, in milliseconds
-    randomize: true,               //Boolean: Randomize slide order
+    randomize: false,               //Boolean: Randomize slide order
     fadeFirstSlide: true,           //Boolean: Fade in the first slide when animation type is "fade"
     thumbCaptions: false,           //Boolean: Whether or not to put captions on thumbnails when using the "thumbnails" controlNav.
 

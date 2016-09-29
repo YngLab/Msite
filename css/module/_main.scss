@@ -1,17 +1,15 @@
 @charset "UTF-8";
 
+.topcap{
+    text-align: center;
+}
 .latestEvent{
   font-size: 0;
   padding-bottom: 40px;
-  .topcap{
-    text-align: center;
-  }
   .latestBox_future{
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
     display: inline-block;
-    height: 20.9259vw;
-    width: 20.9259vw;
     margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
     //margin: -1px 2.75% -1px -1px;
     position: relative;
@@ -35,8 +33,6 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-kids;
     display: inline-block;
-    height: 20.9259vw;
-    width: 20.9259vw;
     margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
     //margin: -1px 2.75% -1px -1px;
     position: relative;
@@ -56,17 +52,22 @@
       }
     }
   }
+  .latestBox_img{
+    height: 55.7522%;
+  }
   img{
     height: 55.7522%;
     width: 100%;
   }
   .eventText{
     position: absolute;
-    left: calc((100% - 231px) * 0.5);
+    // left: calc((100% - 231px) * 0.5);
+    left: 16px;
     position: absolute;
     top: calc(55.7522% + (100% - 55.7522%) * 0.5);
     transform: translate(0%, -50%);
     text-align: left;
+    width: calc(100% - 32px);
     //margin-left: calc(100% * (18 / 280.616));
     //margin-left: 18px;
     /*
@@ -79,11 +80,22 @@
       font-size: $h3__fontSize;
       margin: 3px 0 0 0;
       color: $dark__fontColor;
+      height: 21px;
+      visibility: hidden;
     }
     .eventplace{
       margin: 10px 0 0 0;
       color: $g__fontColor;
     }
+  }
+  .flex-direction-nav{
+    display: none;
+  }
+  .flex-control-nav{
+    bottom: -30px;
+  }
+  .flex-control-paging li a{
+    background-color: $g__fontColor;
   }
 }
 
@@ -92,7 +104,7 @@
   text-align: right;
   width: 100%;
   @media #{$small} {
-    margin-bottom: 40px;
+    margin: 10px 0 40px 0;
   }
 }
 
@@ -101,14 +113,14 @@
 }
 
 .gNav_container{
-  width: 618px;
-  margin: 0 auto;
+  padding-top: 28px;
 }
 
 .gNav_TOP{
   color: $g__fontColor;
-  padding-top: 16px;
-  width: 644px;
+  margin-top: 28px;
+  border-right: 1px solid $g__fontColor;
+  color: $g__fontColor;
   margin: 0 auto;
   @include clearfix;
 }
@@ -354,32 +366,26 @@
 }
 
 .siteMap{
-  line-height: 1.75em;
-  .top{
+  .linkGroup{
     text-align: left;
     font-weight: 400;
-    margin-bottom: 30px;
+    @media #{$normal} {
+      margin-bottom: 30px;
+      .linkText{
+        margin-right: 30px;
+      }
+    }
   }
-  .headerElements{
-    text-align: left;
-    font-weight: 400;
-    margin-bottom: 30px;
-    //margin-left: -1px;
-    //text-align: center;
-    //width: calc((100%-80px) / 6);
+  @media #{$small} {
+    span{
+      display: block;
+      margin-bottom: 30px;
+    }
+    span:after{
+      content: "\A";
+      white-space: pre;
+    }
   }
-  .footerElements{
-    text-align: left;
-    font-weight: 400;
-    margin-bottom: 30px;
-    //margin-left: -1px;
-    //text-align: center;
-    //width: calc((100%-80px) / 6);
-  }
-}
-
-.textMargin{
-  margin-right: 30px;
 }
 
 footer{
@@ -402,17 +408,31 @@ footer{
   .foot{
     @include clearfix;
     .footerLinks{
-      width: 714px;
       margin: 0 auto;
       text-align: center;
       @include clearfix;
+      @media #{$normal} {
+        width: 714px;
+      }
+      @media #{$small} {
+        margin: 14px 0 24px 0;
+      }
       .links{
-        margin: 46px 0;
         color: $g__fontColor;
-        float: left;
-        font-size: $g__fontSize;
-        padding: 14px;
         text-decoration: none;
+        @media #{$normal} {
+          font-size: $g__fontSize;
+          padding: 14px;
+          margin: 46px 0;
+          float: left;
+        }
+        @media #{$small} {
+          width: 320px;
+          font-size: 12px;
+          padding: 12px;
+          margin: 0 auto;
+          display: block;
+        }
       }
     }
     .SNSbutton{
@@ -513,17 +533,49 @@ footer{
   @media #{$small} {
     font-size: 18px;
     padding: 20px 0 27px 0;
+    .addPadding{
+      padding-top: 20px;
+    }
+  }
+}
+
+.concierge{
+  padding: 50px 0 40px 0;
+  p{
+    color: $g__color-kids;
+    font-size: $h3__fontSize;
+    @media #{$small} {
+      font-size: 18px;
+    }
+  }
+  @media #{$small} {
+    font-size: 18px;
+    padding: 20px 0 27px 0;
+    .addPadding{
+      padding-top: 20px;
+    }
   }
 }
 
 .heading-lineup{
-  padding: 50px 0 40px 0;
-  float: left;
-  .headingTitle{
-    color: $h2__color;
-    font-size: $h2__fontSize;
-    margin-left: 12px;
+  @media #{$normal} {
+    padding: 50px 0 40px 0;
     float: left;
+    .headingTitle{
+      color: $h2__color;
+      font-size: $h2__fontSize;
+      margin-left: 12px;
+      float: left;
+    }
+  }
+  @media #{$small} {
+    font-size: 18px;
+    padding: 40px 0 27px 0;
+    p{
+      color: $h2__color;
+      font-size: 18px;
+      margin-left: 16px;
+    }
   }
 }
 
@@ -534,6 +586,12 @@ footer{
     font-size: $h2__fontSize;
     margin-left: 24px;
   }
+  @media #{$small} {
+    padding: 40px 0 27px 0;
+    p{
+      font-size: 18px;
+    }
+  }
 }
 
 .monthSort{
@@ -542,6 +600,10 @@ footer{
   color: $h2__color;
   font-size: $cap__fontSize;
   line-height: 1.75em;
+  @include smallW;
+  @media #{$small} {
+    margin: 0 0 20px 18px;
+  }
   li{
     display: inline;
     margin-right: 26px;
@@ -565,6 +627,10 @@ footer{
   color: $h2__color;
   font-size: $cap__fontSize;
   line-height: 1.75em;
+  @include smallW;
+  @media #{$small} {
+    margin: 0 0 20px 18px;
+  }
   li{
     display: inline;
     margin-right: 26px;
@@ -611,52 +677,74 @@ footer{
 
 .event_textBox_wrap{
   position: relative;
-  float: right;
+  @include smallW;
+  @media #{$normal}{
+    float: right;
+  }
 }
 
 .event_textBox{
-  margin: 24px 0 0 50px ;
+  margin: 24px 0 0 50px;
   position: relative;
+  @media #{$small} {
+    margin: 24px 20px 0px 20px;
+  }
   .event_title{
     font-size: $h2__fontSize;
     color: $g__color-future;
     font-weight: 400;
     margin-bottom: 24px;
   }
-  .event_point{
-    line-height: 1.75em;
-    color: $dark__fontColor;
-    float: left;
-    margin-bottom: 7px;
-    .event_point_cap{
-      float: left;
-      font-weight: 400;
-    }
-    .event_point_contents{
-      float: left;
-      margin: 0 42px 0 14px;
-    }
-  }
   .event_detail{
     font-size: $g__fontSize;
     color: $g__fontColor;
     font-weight: 200;
     line-height: 1.75em;
-    float: right;
-    margin-right: 40px;
+    //float: right;
+    //margin-right: 40px;
     width: calc(100% - 300px);
+    @include smallW;
+    @media #{$normal} {
+      float: right;
+      margin-right: 40px;
+    }
+    @media #{$small} {
+      padding-bottom: calc(24px + 38px + 40px);
+    }
+  }
+}
+.event_point{
+  line-height: 1.75em;
+  color: $dark__fontColor;
+  margin-bottom: 24px;
+  text-align: left;
+  @media #{$normal} {
+    float: left;
+    margin-bottom: 7px;
+  }
+  .event_point_cap{
+    font-weight: 400;
+  }
+  .event_point_contents{
+    padding-left: 14px;
   }
 }
 
 .eventArchive_textBox_wrap{
   position: relative;
+  @include smallW;
   .eventArchive_detail{
     font-size: $g__fontSize;
     color: $g__fontColor;
     font-weight: 200;
     line-height: 1.75em;
-    float: left;
     width: calc(100% - 40px);
+    @media #{$normal} {
+      float: left;
+    }
+    @media #{$small} {
+      padding-bottom: 40px;
+    }
   }
 }
 
@@ -675,8 +763,12 @@ footer{
   }
 }
 .subscriptionButton{
-    bottom: 24px;
-    left: 50px;
+  bottom: 24px;
+  left: 50px;
+  @media #{$small} {
+    bottom: 40px;
+    left: 20px;
+  }
 }
 
 .collectevent{
@@ -684,6 +776,20 @@ footer{
   line-height: 1.75em;
   .form_guide{
     margin-top: 24px;
+  }
+}
+
+.eventabout{
+  width: 25%;
+  float: left;
+  margin-right: calc(100% * (75 / 1000));
+  img{
+    width: 100%;
+  }
+  .eventabout_title{
+    line-height: 20px;
+    font-size: 16px;
+    margin-bottom: 6px;
   }
 }
 
@@ -750,6 +856,9 @@ footer{
 .info_table_FCH, .info_table_KPH{
   text-align: left;
   width: 100%;
+  @media #{$small} {
+    display: none;
+  }
   tr{
     height: 50px;
     width: 100%;
@@ -769,6 +878,14 @@ footer{
     line-height: 1.75em;
     padding-bottom: 12px;
     padding-left: 14px;
+  }
+}
+
+.info_table_FCH_sp, .info_table_KPH_sp{
+  text-align: left;
+  width: 100%;
+  @media #{$normal} {
+    display: none;
   }
 }
 
@@ -794,6 +911,21 @@ footer{
   }
 }
 
+.info_table_FCH_label{
+  color: $g__color-future;
+  border-bottom: dashed 1px $g__color-future;
+  padding-bottom: 3px;
+}
+
+.info_table_KPH_label{
+  color: $g__color-kids;
+  border-bottom: dashed 1px $g__color-kids;
+  padding-bottom: 3px;
+}
+
+.info_table_data{
+  margin: 20px 0 36px 0;
+}
 
 /* modal-contentのCSS */
 .modal-content {
@@ -824,7 +956,6 @@ footer{
     top: 4%;
     right: calc(5% - 10px);
     z-index: 10;
-    
   }
   #modal-close:hover{
     opacity: 1;
@@ -921,6 +1052,139 @@ footer{
     }
   }
 }
+
+
+#wrapper {
+    //オーバーレイをabsolute指定するため必要
+    position: relative;
+    //アニメーションの指定
+    -webkit-transition: all .4s;
+       -moz-transition: all .4s;
+         -o-transition: all .4s;
+            transition: all .4s;
+  #drawer-toggle{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 23px;
+    padding-top: 17px;
+    background-color: $g__fontColor;
+    z-index: 1000;
+    span{
+      margin: 0 auto;
+      display: block;
+      height: 2px;
+      background-color: #FFFFFF;
+      width: 20px;
+      transition: all .4s;
+      transform: rotate(0deg);
+    }
+    .top {
+      transform: translateY(-4px);
+    }
+    .bottom {
+      transform: translateY(4px);
+    }
+  }
+}
+
+#wrapper.open {
+    //クラス「open」が付いたら左に280px移動
+    -webkit-transform: translate3d(-75%, 0, 0);
+       -moz-transform: translate3d(-75%, 0, 0);
+            transform: translate3d(-75%, 0, 0);
+  #drawer-toggle{
+    .middle {
+    background: rgba(255, 255, 255, 0);
+    }
+    .top {
+      transform: rotate(-45deg) translateY(2px);
+    }
+    .bottom {
+      transform: rotate(45deg) translateY(-3px);
+    }
+  }
+}
+
+/* オーバーレイ表示をするためのCSS */
+.open .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    //親要素の上に表示するためz-indexを指定
+    z-index: 999;
+
+    //親要素一杯に広がるため縦横のサイズを100%に
+    width: 100%;
+    height: 100%;
+
+    //暗くするため黒の透明色を指定
+    background: rgba(0, 0, 0, .5);
+}
+
+#drawer {
+    position: fixed; //常に固定なのでfixed
+    top: 0;
+    right: -75%;  //初期状態では隠すため、横幅のサイズ分だけ画面外に移動する
+    width: 75%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; //スマホでのスクロールに慣性を付ける（デバイス限定
+
+    //アニメーション指定
+    -webkit-transition: all .4s;
+       -moz-transition: all .4s;
+         -o-transition: all .4s;
+            transition: all .4s;
+  .sp_language{
+    p{
+      line-height: 40px;
+      float: right;
+      margin-right: 21px;
+    }
+  }
+  .navBox{
+    height: calc((100% - 40px) - calc((100% - 40px) / 17));
+    margin-top: calc((100vh - 40px) /17);
+    li{
+      padding-left: 30px;
+      line-height: calc((100vh - 40px) / (17 / 2));
+      display: block;
+    }
+    .gNav_sp{
+      height: 75%;
+      li{
+        height: calc(100% * (1/6));
+      }
+    }
+    .pNav_sp{
+      height: 25%;
+      background-color: $bg__color;
+      li{
+        height: calc(100% * (1/2));
+      }
+    }
+  }
+}
+
+#drawer.open {
+    //クラス「open」が付いたら左へ280px移動（画面内へ移動し表示される）
+    -webkit-transform: translate3d(-100%, 0, 0);
+       -moz-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+}
+
+.sp_language{
+  width: 100%;
+  height: 40px;
+  background-color: $g__fontColor;
+  a{
+    color: #FFFFFF;
+  }
+}
+
 //↑加納↓高居
 
 .lineSpace{
@@ -942,6 +1206,16 @@ footer{
 .archives{
   .headmarkMargin{
     margin: 0 0 24px 24px;
+    @media #{$small} {
+      font-size: 18px;
+      margin: 0 0 27px 16px;
+    }
+  }
+  .linkText{
+    margin-left: 24px;
+    @media #{$small} {
+      margin-left: 16px;
+    }
   }
 }
 
@@ -966,18 +1240,30 @@ footer{
 */
 .radioFont{
   color: $dark__fontColor;
-  margin-right: 60px;
+  @media #{$normal} {
+    margin-right: 60px;
+  }
+}
+
+.form{
+  float: left;
+  width: calc(75% - (100% * (75 / 1000)));
+  @include clearfix;
 }
 
 .inputForm{
+  float: left;
+  width: 100%;
   th{
     color: $dark__fontColor;
     font-size: 13px;
     text-align: left;
+    width: 91px;
   }
   td{
+    width: calc(100% - 28px);
     input{
-      width: 100%;
+      width: calc(100% - 28px);
     }
   }
   input{
@@ -993,10 +1279,10 @@ footer{
     color: $dark__fontColor;
     font-size: $g__fontSize;
     padding: 11px 14px 11px 14px;
-    width: 100%;
+    width: calc(100% - 28px);
   }
   .textareaLabel{
-    padding-top: 8px;
+    padding-top: 20px;
     vertical-align: top;
   }
   .confirm{
@@ -1027,5 +1313,50 @@ footer{
   background: $dark__fontColor;
   p{
     color: white;
+  }
+}
+
+.inputForm_sp{
+  input{
+    background-color: #efefef;
+    border: none;
+    color: $dark__fontColor;
+    font-size: $g__fontSize;
+  }
+  p{
+    font-size: $cap__fontSize;
+  }
+  textarea{
+    background-color: #efefef;
+    border: none;
+    color: $dark__fontColor;
+    font-size: $g__fontSize;
+  }
+  .confirm{
+    width: 88px;
+    height: 36px;
+    border: 1px solid $dark__fontColor;
+    color: $dark__fontColor;
+    font-weight: 400;
+    font-size: $link__fontSize;
+    text-align: center;
+    p{
+      display: inline;
+      line-height: 36px;
+    }
+  }
+}
+
+.accessProcess{
+  @media #{$small} {
+    .accessProcess_sp{
+      .from{
+        border-bottom: dashed 1px $g__fontColor;
+        padding-bottom: 3px;
+      }
+      .route{
+        margin: 20px 0 36px 0;
+      }
+    }
   }
 }

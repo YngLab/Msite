@@ -13,7 +13,24 @@
   width: 92.5925%;
   @include clearfix;
   @media #{$small} {
-    width: calc(100% * (728px / 768px));
+    width: calc(100% * (728 / 768));
+  }
+}
+
+#wrapper{
+  #header{
+    @media #{$normal} {
+      display: none;
+    }
+  }
+  #header_sp{
+    @media #{$normal} {
+      display: none;
+    }
+    @media #{$small} {
+      background: $g__fontColor;
+      font-size: 40px;
+    }
   }
 }
 
@@ -22,7 +39,7 @@
 }
 
 .nav_TOP{
-  height: 48px;
+  height: 70px;
   margin: 0 auto 50px auto;
   @media #{$small} {
     display: none;
@@ -31,6 +48,9 @@
 
 .gHeader{
   height: 81px;
+  @media #{$small} {
+    display: none;
+  }
 }
 
 .topcap{
@@ -149,69 +169,87 @@ footer{
 }
 
 .event_textBox_wrap{
-  width: 75%;
-  height: 25vw;
+  @media #{$normal} {
+    width: 75%;
+    height: 25vw;
+  }
 }
 
 .event_pic{
-  width: 25%;
-  height: 25vw;
+  @media #{$normal} {
+    width: 25%;
+    height: 25vw;
+  }
 }
 
 .eventArchive_textBox_wrap{
-  width: 50%;
-  height: 25vw;
+  @media #{$normal} {
+    width: 50%;
+    height: 25vw;
+  }
 }
 
 .eventArchive_pic{
-  width: 50%;
-  height: 25vw;
+  @media #{$normal} {
+    width: 50%;
+    height: 25vw;
+  }
 }
 
 .eventArchive_leftText{
-  .eventArchive_textBox_wrap{
-    float: left;
-  }
-  .eventArchive_pic{
-    float: right;
+  @media #{$normal} {
+    .eventArchive_textBox_wrap{
+      float: left;
+    }
+    .eventArchive_pic{
+      float: right;
+    }
   }
 }
 
 .eventArchive_rightText{
-  .eventArchive_textBox_wrap{
-    float: right;
-  }
-  .eventArchive_pic{
-    float: left;
+  @media #{$normal} {
+    .eventArchive_textBox_wrap{
+      float: right;
+    }
+    .eventArchive_pic{
+      float: left;
+    }
   }
 }
 
 .exmenu_leftText{
-  .exmenu_textBox_wrap{
-    float: left;
-  }
-  .exmenu_pic{
-    float: right;
+  @media #{$normal} {
+    .exmenu_textBox_wrap{
+      float: left;
+    }
+    .exmenu_pic{
+      float: right;
+    }
   }
 }
 
 .exmenu_rightText{
-  .exmenu_textBox_wrap{
-    float: right;
-  }
-  .exmenu_pic{
-    float: left;
+  @media #{$normal} {
+    .exmenu_textBox_wrap{
+      float: right;
+    }
+    .exmenu_pic{
+      float: left;
+    }
   }
 }
 
 .exmenu_textBox_wrap{
   width: 25%;
   height: 25vw;
+  @include smallW;
 }
 
 .exmenu_pic{
   width: 75%;
   height: 25vw;
+  @include smallW;
 }
 
 .heading{
@@ -239,21 +277,25 @@ footer{
 }
 
 .adress{
-  width: 50%;
-  float: left;
-  .heading{
-    >p{
-      margin-bottom: 24px;
+  @media #{$normal} {
+    width: 50%;
+    float: left;
+    .heading{
+      >p{
+        margin-bottom: 24px;
+      }
     }
   }
 }
 
 .parking{
-  width: 50%;
-  float: left;
-  .heading{
-    >p{
-      margin-bottom: 24px;
+  @media #{$normal} {
+    width: 50%;
+    float: left;
+    .heading{
+      >p{
+        margin-bottom: 24px;
+      }
     }
   }
 }
@@ -270,9 +312,23 @@ footer{
 
 .accessProcess{
   width: 100%;
-  float: left;
   img{
     width: 100%;
+  }
+  @media #{$normal} {
+    float: left;
+    .accessProcess_sp{
+      display: none;
+    }
+  }
+  @media #{$small} {
+    img{
+      display: none;
+    }
+    .accessProcess_sp{
+      margin-left: 16px;
+      text-align: left;
+    }
   }
 }
 
@@ -286,36 +342,53 @@ footer{
 }
 
 .archives{
-  float: right;
-  width: 30%;
-  .archiveLayout{
-    margin-left: 75px;
+  @media #{$normal} {
+    float: right;
+    width: 30%;
+    .archiveLayout{
+      margin-left: 75px;
+    }
+  }
+  @media #{$small} {
+    margin-bottom: 41px;
   }
 }
 
 .autoHeight{
   min-height: calc(100vh - (71px) - (65px + (12px + 50px)) - (2.9629vw + 96px + 24px));
+  @media #{$small} {
+    min-height: calc(100vh - 127px - 461px);
+  }
 }
 
 .autoHeight-ac{
   min-height: calc(100vh - (71px) - (65px + (12px + 50px)) - (2.9629vw + 40px + 96px + 24px));
+  @media #{$small} {
+    min-height: calc(100vh - 127px - 461px);
+  }
 }
 
 .p-layout{
-  position: relative;
-  width: 100%;
+  @media #{$normal} {
+    position: relative;
+    width: 100%;
+  }
 }
 
 .p-centering{
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: left;
+  @media #{$normal} {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
 }
 
 .topMargin{
-  top: calc(50% - 50px);
+  @media #{$normal} {
+    top: calc(50% - 50px);
+  }
 }
 
 .p-margin{
@@ -326,29 +399,50 @@ footer{
   .heading{
     margin-top: 0;
     width: 100%;
+    @media #{$small} {
+      padding: 0;
+    }
   }
   p{
     margin-bottom: 40px;
   }
+  .companyLinks{
+    @media #{$small} {
+      margin-left: 16px;
+      a:after{
+        content: "\A";
+        white-space: pre;
+      }
+    }
+  }
 }
 
 .touristOffice{
-  float: left;
-  width: 50%;
+  @media #{$normal} {
+    float: left;
+    width: 50%;
+  }
+  @media #{$small} {
+    p{
+      margin-left: 16px;
+    }
+  }
   .heading{
     margin-top: 0;
     padding-bottom: 24px;
-    /*
-    >p{
-      margin-bottom: 24px;
-    }
-    */
   }
 }
 
 .touristGuide{
-  float: right;
-  width: 50%;
+  @media #{$normal} {
+    float: right;
+    width: 50%;
+  }
+  @media #{$small} {
+    p{
+      margin-left: 16px;
+    }
+  }
   .heading{
     margin-top: 0;
     padding-bottom: 24px;
@@ -356,7 +450,15 @@ footer{
 }
 
 .radio{
-  margin-bottom: 8px;
+  @media #{$normal} {
+    margin-bottom: 8px;
+  }
+  @media #{$small} {
+    .radioElement{
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .inputForm{
@@ -368,5 +470,31 @@ footer{
   }
   .confirm{
     margin: 40px 0 40px 0;
+  }
+  @media #{$small} {
+    display: none;
+  }
+}
+
+.inputForm_sp{
+  .inputBox_sp, .inputBox_sp_b{
+    margin-bottom: 20px;
+    input{
+      height: 36px;
+      width: 100%;
+    }
+    p{
+      margin-bottom: 13px;
+    }
+    textarea{
+      height: 108px;
+      width: 100%;
+    }
+  }
+  .inputBox_sp_b{
+    margin-bottom: 30px;
+  }
+  @media #{$normal} {
+    display: none;
   }
 }
