@@ -57,6 +57,9 @@
 
 .topcap{
   padding: 50px 0 40px 0;
+  @media #{$small} {
+    padding: 46px 0 20px 0;
+  }
 }
 
 .future_entrance{

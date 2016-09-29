@@ -99,8 +99,10 @@ a:hover {
   color: #8fc31f;
 }
 
-.bgcolor {
-  background-color: #f7f8f8;
+@media screen and (min-width: 769px) {
+  .bgcolor {
+    background-color: #f7f8f8;
+  }
 }
 
 .linkText {
@@ -197,6 +199,11 @@ a:hover {
 
 .topcap {
   padding: 50px 0 40px 0;
+}
+@media screen and (max-width: 768px) {
+  .topcap {
+    padding: 46px 0 20px 0;
+  }
 }
 
 .future_entrance {
@@ -686,7 +693,6 @@ footer .copyright {
 .latestEvent {
   font-size: 0;
   padding-bottom: 40px;
-  margin-top: 40px;
 }
 .latestEvent .latestBox_future {
   background-color: #ffffff;
@@ -1387,7 +1393,6 @@ footer .copyright p {
 
 #all_eventmenu, #all_experiencemenu {
   border-top: solid 1px #9fa0a0;
-  padding-bottom: 40px;
 }
 @media screen and (min-width: 769px) {
   #all_eventmenu, #all_experiencemenu {
@@ -1395,6 +1400,11 @@ footer .copyright p {
     margin-right: auto;
     max-width: 1440px;
     min-width: 1080px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  #all_eventmenu, #all_experiencemenu {
+    padding-bottom: 40px;
   }
 }
 
@@ -1551,12 +1561,6 @@ footer .copyright p {
   line-height: 20px;
   font-size: 16px;
   margin-bottom: 6px;
-}
-
-@media screen and (min-width: 1441px) {
-  #all_experiencemenu {
-    padding-bottom: 40px;
-  }
 }
 
 .experiencemenu {
