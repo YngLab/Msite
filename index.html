@@ -16,6 +16,7 @@
 <!--ランダム画像のcss-->
 <style type="text/css">
 .imageContainer {
+  position: relative;
   width: 100%;
 }
 #imageArea {
@@ -23,10 +24,9 @@
   position: relative;
 }
 #imageArea img {
-  display: block;
-  float: left;    
+  position: absolute;
+  display: block; 
   margin: 0 auto;
-  padding: 0;
 }
 #imageBox1,
 #imageBox2,
@@ -53,18 +53,9 @@
 </style>
 
 <div class="imageContainer">
-  <div id="imageArea">
-    <div id="imageBox1"></div>
-    <div id="imageBox2"></div>
-    <div id="imageBox3"></div>
-    <div id="imageBox4"></div>
-    <div id="imageBox5"></div>
-    <div id="imageBox6"></div>
-    <div id="imageBox7"></div>
-    <div id="imageBox8"></div>
-    <div id="indexTitle">
-    <div id="indexTitleText"><h1>はこだてみらいプロジェクト</h1></div>
-    </div>
+  <div id="imageArea"></div>
+  <div id="indexTitle">
+  <div id="indexTitleText"><h1>はこだてみらいプロジェクト</h1></div>
   </div>
 </div>
 <div class = "bgcolor">

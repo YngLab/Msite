@@ -9,45 +9,40 @@ var num=23;
 var arrNum = new Array();
 var interval;
 
+Block = function(x, y, size) {
+	this.x=x;
+	this.y=y;
+	this.size=size;
+	this.src='';
+	this.src2='';
+	this.change=0;
+	this.isChange=false;
+}
+var blockArr = new Array();
 $(window).on('resize', resizeWindow);
 function resizeWindow() {
 	var imageArea = $('#imageArea');
 	fullWidth = imageArea.width();
 	document.getElementById('imageArea').style.width = '100%';
 	document.getElementById('imageArea').style.height = fullWidth*0.5 + 'px';
-	//var smallWidth = Math.floor(fullWidth*0.25*0.5);
-	//var largeWidth = Math.floor(smallWidth*2);
 	var largeWidth = fullWidth*0.25;
 	var smallWidth = largeWidth*0.5;
 	var imageCount=1;
-	for(var i=1; i<9; i++) {
-		var id = 'imageBox' + i;
-		document.getElementById(id).style.width = '25%';
-		document.getElementById(id).style.height = '50%';
-		if(boxPattern[i-1]==1) {
-			document.getElementById('image'+imageCount).style.width = '100%';
-			document.getElementById('image'+imageCount).style.height = '100%';
-			imageCount++;
-			}
-		else if(boxPattern[i-1]==2) {
-			document.getElementById('image'+imageCount).style.width = '50%';
-			document.getElementById('image'+imageCount).style.height = '50%';
-			document.getElementById('image'+(imageCount+1)).style.width = '50%';
-			document.getElementById('image'+(imageCount+1)).style.height = '50%';
-			document.getElementById('image'+(imageCount+2)).style.width = '50%';
-			document.getElementById('image'+(imageCount+2)).style.height = '50%';	
-			document.getElementById('image'+(imageCount+3)).style.width = '50%';
-			document.getElementById('image'+(imageCount+3)).style.height = '50%';
-			imageCount+=4;	
-		}
+	var minBlockSize = fullWidth*0.125;
+	for(var i=1; i<blockArr.length+1; i++) {
+		document.getElementById('image'+i).style.left = blockArr[i-1].x*minBlockSize+'px';
+		document.getElementById('image'+i).style.top = blockArr[i-1].y*minBlockSize+'px';
+		document.getElementById('image'+i).style.width = minBlockSize*blockArr[i-1].size+'px';
+		document.getElementById('image'+i).style.height = minBlockSize*blockArr[i-1].size+'px';
+
 	}
+
 	var indexTitle =$('#indexTitle');
-	document.getElementById('indexTitleText').style.marginTop = fullWidth*0.01 + 'px';
-	document.getElementById('indexTitleText').style.marginBottom = fullWidth*0.01 + 'px';
+	document.getElementById('indexTitleText').style.marginTop = fullWidth*0.013 + 'px';
+	document.getElementById('indexTitleText').style.marginBottom = fullWidth*0.013 + 'px';
 	document.getElementById('indexTitle').style.fontSize = fullWidth/35.0 + 'px';
 	document.getElementById('indexTitle').style.left = fullWidth/2-indexTitle.width()/2 + 'px';
 	document.getElementById('indexTitle').style.top = fullWidth/4-indexTitle.height()/2 + 'px';
-
 }
 
 function shuffleArray(array) {
@@ -85,34 +80,39 @@ function updateImageView(){
 			}
 		}
 	}
-	var imageCount=1;
 	var imageSize=300;
-	for(var i=1; i<9; i++) {
-		var id = 'imageBox' + i;
-		var htmlText ='';
-		if(boxPattern[i-1]==1) {
-			htmlText += '<img id="image'+ imageCount +'"border="0" src="" width="'+imageSize+'" height="'+imageSize+'" alt="">';
-			imageCount++;
+	var htmlText ='';
+	var imageCount=1;
+	for(var y=0; y<2; y++) {
+		for(var x=0; x<4; x++) {
+			if(boxPattern[y*4+x]==1) {
+				blockArr.push(new Block(x*2, y*2, 2));
+				htmlText += '<img id="image'+ imageCount +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+				imageCount++;
+			}
+			else if(boxPattern[y*4+x]==2) {
+				blockArr.push(new Block(x*2, y*2, 1));
+				blockArr.push(new Block(x*2+1, y*2, 1));
+				blockArr.push(new Block(x*2, y*2+1, 1));
+				blockArr.push(new Block(x*2+1, y*2+1, 1));
+				htmlText += '<img id="image'+ imageCount +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+				htmlText += '<img id="image'+ (imageCount+1) +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+				htmlText += '<img id="image'+ (imageCount+2) +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+				htmlText += '<img id="image'+ (imageCount+3) +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+				imageCount+=4;	
+			}
 		}
-		else if(boxPattern[i-1]==2) {
-			htmlText += '<img id="image'+ imageCount +'"border="0" src="" width="'+imageSize+'" height="'+imageSize+'" alt="">';
-			htmlText += '<img id="image'+ (imageCount+1) +'"border="0" src="" width="'+imageSize+'" height="'+imageSize+'" alt="">';
-			htmlText += '<img id="image'+ (imageCount+2) +'"border="0" src="" width="'+imageSize+'" height="'+imageSize+'" alt="">';
-			htmlText += '<img id="image'+ (imageCount+3) +'"border="0" src="" width="'+imageSize+'" height="'+imageSize+'" alt="">';
-			imageCount+=4;	
-		}
-		document.getElementById(id).innerHTML = htmlText;
 	}
+	document.getElementById('imageArea').innerHTML = htmlText;
 	for(var i=1; i<=num; i++) {
 		var id = 'image' + i;
-		//var n = Math.floor(Math.random()*img.length);
-		//if(i<10) id += '0' + i;
-		//else if(i<100) id+= '' + i;
-		//else if(i<1000) id+= '0' + i;
-		//else if(i<10000) id+= '0' + i;
+		blockArr[i-1].src = img[arrNum[i-1]];
 		document.getElementById(id).src=img[arrNum[i-1]];
 	}
+
 	resizeWindow();
+
+	//ループ
 	//interval = setInterval(imageLoop.bind(this), 33);
 
 	//var htmlText ='';
@@ -127,5 +127,23 @@ function updateImageView(){
 	*/
 }
 
+
+var imageLoopTimer=0;
+var limit=99
 function imageLoop() {
+	imageLoopTimer++;
+	if(imageLoopTimer>limit) {
+		imageLoopTimer=0;
+		limit=Math.random()*163 +33;
+		//ランダムでisChange=true
+	}
+
+	for(var i=1; i<blockArr.length+1; i++) {
+		//change増やす
+		//0.5こえたら画像変更
+		if(blockArr[i-1].isChange) {
+			if(change<0.5) document.getElementById('image'+i).style.transform = 'rotateY(' + blockArr[i-1].change*180 + 'deg)';
+			else document.getElementById('image'+i).style.transform = 'rotateY(' + (blockArr[i-1].change*180)-180 + 'deg)';
+		}
+	}
 }
