@@ -1833,6 +1833,7 @@ footer .copyright p {
 }
 
 #wrapper.open {
+  position: fixed;
   -webkit-transform: translate3d(-75%, 0, 0);
   -moz-transform: translate3d(-75%, 0, 0);
   transform: translate3d(-75%, 0, 0);
