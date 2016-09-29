@@ -1,8 +1,6 @@
-//スマホ 7なんとかpx
-//2*3
-//大2小4
-
 var imageNum = 50;
+var imagePath = 'images/index/';
+
 var img = new Array();
 var fullWidth;
 var boxPattern;
@@ -109,7 +107,7 @@ function updateImageView(){
 		num = sp_num;
 	}
 	for(var i=0; i<imageNum; i++) {
-		var n = 'images/index/';
+		var n = imagePath;
 		if(i<999) n+='0';
 		if(i<99) n+= '0';
 		if(i<9) n+='0';
