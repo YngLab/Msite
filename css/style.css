@@ -136,14 +136,18 @@ a:hover {
 
 .wrap {
   margin: 0 auto;
-  max-width: 1440px;
-  min-width: 1080px;
   width: 92.5925%;
 }
 .wrap:after {
   clear: both;
   content: "";
   display: block;
+}
+@media screen and (min-width: 769px) {
+  .wrap {
+    max-width: 1440px;
+    min-width: 1080px;
+  }
 }
 @media screen and (max-width: 768px) {
   .wrap {
