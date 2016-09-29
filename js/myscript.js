@@ -118,7 +118,7 @@ $(function(){
 
     //モーダルウィンドウを開いている時に背景のスクロールを不可にする
     current_scrollY = $( window ).scrollTop(); 
-    $("body").css({
+    $("html, body").css({
       position: 'fixed',
       width: '100%',
       top: -1 * current_scrollY
@@ -158,7 +158,7 @@ $(function(){
         //現在のコンテンツ情報を削除
         nowModalSyncer = null;
         //止めていた背景を再度スクロールできるように
-        $("body").removeAttr("style");
+        $("html, body").removeAttr("style");
         $("html, body").prop({scrollTop: current_scrollY});
         $("#modal-overlay").hide();
       });
