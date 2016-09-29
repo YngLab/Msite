@@ -154,6 +154,17 @@ a:hover {
     display: none;
   }
 }
+@media screen and (min-width: 769px) {
+  #wrapper #header_sp {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #wrapper #header_sp {
+    background: #9fa0a0;
+    font-size: 40px;
+  }
+}
 
 .latestEvent {
   margin-right: -3.2%;
