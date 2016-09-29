@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
 .topcap{
-    text-align: center;
+  text-align: center;
 }
 .latestEvent{
   font-size: 0;
   padding-bottom: 40px;
-  margin-top: 40px;
+  //margin-top: 40px;
   .latestBox_future{
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
@@ -667,8 +667,17 @@ footer{
   }
 }
 
-#all_eventmenu{
+#all_eventmenu, #all_experiencemenu{
   border-top: solid 1px $g__fontColor;
+  @media #{$normal} {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    min-width: 1080px;
+  }
+  @media #{$maximum} {
+    padding-bottom: 40px;
+  }
 }
 
 .eventmenu{
@@ -677,6 +686,7 @@ footer{
 }
 
 .event_textBox_wrap{
+  background: white;
   position: relative;
   @include smallW;
   @media #{$normal}{
@@ -732,6 +742,7 @@ footer{
 }
 
 .eventArchive_textBox_wrap{
+  background: white;
   position: relative;
   @include smallW;
   .eventArchive_detail{
@@ -794,10 +805,6 @@ footer{
   }
 }
 
-#all_experiencemenu{
-  border-top: solid 1px $g__fontColor;
-}
-
 .experiencemenu{
   border-bottom: solid 1px $g__fontColor;
   cursor: pointer;
@@ -813,6 +820,7 @@ footer{
 }
 
 .exmenu_textBox_wrap{
+  background: white;
   position: relative;
 }
 
@@ -876,6 +884,7 @@ footer{
     width: 21.5%;
   }
   td{
+    background: white;
     line-height: 1.75em;
     padding-bottom: 12px;
     padding-left: 14px;
