@@ -344,6 +344,9 @@ footer .copyright {
     height: 25vw;
   }
 }
+.event_textBox_wrap .inputForm .confirm {
+  margin: 0;
+}
 
 @media screen and (min-width: 769px) {
   .event_pic {
