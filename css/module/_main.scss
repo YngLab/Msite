@@ -666,8 +666,15 @@ footer{
   }
 }
 
-#all_eventmenu{
+#all_eventmenu, #all_experiencemenu{
   border-top: solid 1px $g__fontColor;
+  padding-bottom: 40px;
+  @media #{$normal} {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    min-width: 1080px;
+  }
 }
 
 .eventmenu{
@@ -794,7 +801,9 @@ footer{
 }
 
 #all_experiencemenu{
-  border-top: solid 1px $g__fontColor;
+  @media #{$maximum} {
+    padding-bottom: 40px;
+  }
 }
 
 .experiencemenu{
@@ -812,6 +821,7 @@ footer{
 }
 
 .exmenu_textBox_wrap{
+  background: white;
   position: relative;
 }
 
@@ -875,6 +885,7 @@ footer{
     width: 21.5%;
   }
   td{
+    background: white;
     line-height: 1.75em;
     padding-bottom: 12px;
     padding-left: 14px;

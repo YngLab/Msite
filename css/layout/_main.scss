@@ -8,7 +8,7 @@
 
 .wrap{
   margin: 0 auto;
-  width: 92.5925%;
+  width: calc(100% * (1000 / 1080));
   @include clearfix;
   @media #{$normal} {
     max-width: 1440px;
@@ -157,7 +157,7 @@ footer{
 }
 
 .facility_explain{
-  margin-top: 50px;
+  padding-top: 50px;
   @media #{$small} {
     display: none;
   }
@@ -167,6 +167,13 @@ footer{
   padding: 16px 0 20px 0;
   @media #{$normal} {
     display: none;
+  }
+}
+
+.event_textBox_wrap, .event_pic, .exmenu_textBox_wrap, .exmenu_pic{
+  @media #{$normal} {
+    max-height: calc(1440px * 0.25);
+    min-height: calc(1080px * 0.25);
   }
 }
 
