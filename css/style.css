@@ -303,13 +303,27 @@ footer {
   margin-top: 60px;
 }
 footer .foot {
-  height: 96px;
   width: 100%;
+}
+@media screen and (min-width: 769px) {
+  footer .foot {
+    height: 96px;
+  }
+}
+footer .foot:after {
+  clear: both;
+  content: "";
+  display: block;
 }
 footer .copyright {
   background: #9fa0a0;
   height: 24px;
   width: 100%;
+}
+footer:after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
 .HMP_logo {
@@ -1836,7 +1850,7 @@ footer .copyright p {
 }
 #wrapper #drawer-toggle {
   position: fixed;
-  right: 0;
+  right: -1px;
   top: 0;
   width: 40px;
   height: 23px;

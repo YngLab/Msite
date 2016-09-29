@@ -1065,16 +1065,16 @@ footer{
 
 
 #wrapper {
-    //オーバーレイをabsolute指定するため必要
-    position: relative;
-    //アニメーションの指定
-    -webkit-transition: all .4s;
-       -moz-transition: all .4s;
-         -o-transition: all .4s;
-            transition: all .4s;
+  //オーバーレイをabsolute指定するため必要
+  position: relative;
+  //アニメーションの指定
+  -webkit-transition: all .4s;
+     -moz-transition: all .4s;
+       -o-transition: all .4s;
+          transition: all .4s;
   #drawer-toggle{
     position: fixed;
-    right: 0;
+    right: -1px;
     top: 0;
     width: 40px;
     height: 23px;
@@ -1100,10 +1100,11 @@ footer{
 }
 
 #wrapper.open {
-    //クラス「open」が付いたら左に280px移動
-    -webkit-transform: translate3d(-75%, 0, 0);
-       -moz-transform: translate3d(-75%, 0, 0);
-            transform: translate3d(-75%, 0, 0);
+  // position: fixed;
+  //クラス「open」が付いたら左に280px移動
+  -webkit-transform: translate3d(-75%, 0, 0);
+     -moz-transform: translate3d(-75%, 0, 0);
+          transform: translate3d(-75%, 0, 0);
   #drawer-toggle{
     .middle {
     background: rgba(255, 255, 255, 0);
