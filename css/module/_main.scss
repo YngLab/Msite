@@ -6,6 +6,7 @@
 .latestEvent{
   font-size: 0;
   padding-bottom: 40px;
+  margin-top: 40px;
   .latestBox_future{
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
@@ -1304,6 +1305,21 @@ footer{
     font-weight: 400;
     font-size: $link__fontSize;
     text-align: center;
+    .sendbutton{
+      background-color: transparent;
+      padding: 0;
+      line-height: 36px;
+      width: 100%;
+      cursor: pointer;
+    }
+    .backbutton{
+      background-color: transparent;
+      color: #FFFFFF;
+      padding: 0;
+      line-height: 36px;
+      width: 100%;
+      cursor: pointer;
+    }
     p{
       display: inline;
       line-height: 36px;

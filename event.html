@@ -6,7 +6,7 @@
 <meta name = "keywords" content="はこだてみらいプロジェクト,はこだてみらい館,はこだてキッズプラザ,函館,未来館,future center,kids plaza,施設">
 <meta name = "description" content="2016年10月15日に函館駅前にOPENするはこだてみらい館・はこだてキッズプラザの告知サイトです。">
 <title>はこだてみらいプロジェクト</title>
-<!--たぶんここまで-->
+<!-- たぶんここまで -->
 
 <link rel = "stylesheet" href="css/style.css">
 <link rel = "shortcut icon" href="images/hmp.ico">
@@ -14,19 +14,19 @@
 <script src = "js/myscript.js"></script>
 <script src="js/jquery.flexslider.js"></script>
 <script charset="utf-8">
-$(window).load(function() {
-  $(".flexslider").flexslider();
-  animation: "slide"
-});
+  $(window).load(function() {
+    $(".flexslider").flexslider();
+    animation: "slide"
+  });
 </script>
 <div id="wrapper">
   <div id = "header_sp">　</div>
   <div id="header">
-    <div id="drawer-toggle">
-      <span class="top"></span>
-      <span class="middle"></span>
-      <span class="bottom"></span>
-    </div>
+      <div id="drawer-toggle">
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </div>
   </div>
   <header>
     <div class = "gHeader">
@@ -182,7 +182,7 @@ $(window).load(function() {
                   あと5日
                 </div>
               </div>
-              <img src="images/sample_relatestimg.jpg" alt="イベント2">
+              <img src="images/sample_relatestimg.jpg" alt="イベント1">
               <div class = "eventText">
                 <p class = "eventsch caption FCHcolor">
                   10/15(土)
@@ -220,7 +220,7 @@ $(window).load(function() {
                   あと5日
                 </div>
               </div>
-              <img src="images/sample_relatestimg.jpg" alt="イベント2">
+              <img src="images/sample_relatestimg.jpg" alt="イベント3">
               <div class = "eventText">
                 <p class = "eventsch caption FCHcolor">
                   10/15(土)
@@ -239,7 +239,7 @@ $(window).load(function() {
                   あと5日
                 </div>
               </div>
-              <img src="images/sample_relatestimg.jpg" alt="イベント2">
+              <img src="images/sample_relatestimg.jpg" alt="イベント4">
               <div class = "eventText">
                 <p class = "eventsch caption FCHcolor">
                   10/15(土)
@@ -254,14 +254,14 @@ $(window).load(function() {
         </div><!-- ここまでがlatestEvent -->
         <div class = "">
         </div>
-      </div><!-- ここまでがwrap -->
+      </div>
     </div>
     <div class = "wrap">
       <div class = "heading-lineup">
         <div class = "headmark">
         </div>
         <p class = "headingTitle">
-          今までのイベント
+          今後のイベント
         </p>
       </div>
       <div class = "monthSort">
@@ -269,10 +269,8 @@ $(window).load(function() {
           今後のイベント
         </p>
         <ul>
-          <li>
-            <a href = "#" class = "linkText_">
-              10
-            </a>
+          <li class = "active">
+            10
           </li>
           <li>
             <a href = "#" class = "linkText_">
@@ -292,13 +290,15 @@ $(window).load(function() {
         </p>
         <ul>
           <li class = "archive_year">
-            2016年
-          </li>
-          <li class = "active">
-            7
+              2016年
           </li>
           <li>
             <a href = "#" class = "linkText_">
+              7
+            </a>
+          </li>
+          <li>
+              <a href = "#" class = "linkText_">
               8
             </a>
           </li>
@@ -312,9 +312,9 @@ $(window).load(function() {
     </div>
   </div>
   <div id = "all_eventmenu">
-    <div class = "eventmenu eventArchive_leftText">
-      <img class = "eventArchive_pic" src = "images/sample_contents.jpg"  alt = "オープニングセレモニー">
-      <div class = "eventArchive_textBox_wrap">
+    <div class = "eventmenu">
+      <img class = "event_pic" src = "images/sample_contents.jpg" alt = "オープニングセレモニー">
+      <div class = "event_textBox_wrap">
         <div class = "event_textBox">
           <div class = "event_title">
             オープニングセレモニー
@@ -339,15 +339,22 @@ $(window).load(function() {
               </tr>
             </table>
           </div>
-          <div class = "eventArchive_detail">
+          <div class = "event_detail">
             はこだてみらい館で行われる予定の MESH を使ったワークショップを一足先に体験していただきます！「MESH」とは、誰でも簡単に電子工作やプログラミングなどのデジタルなものづくりを楽しむことが出来るツールです。
           </div>
         </div>
+        <a href = "confirm_event.html">
+          <div class = "button subscriptionButton">
+            <p>
+              申し込む
+            </p>
+          </div>
+        </a>
       </div>
     </div>
-    <div class = "eventmenu eventArchive_rightText">
-      <img class = "eventArchive_pic" src = "images/sample_contents.jpg"  alt = "オープニングセレモニー">
-      <div class = "eventArchive_textBox_wrap">
+    <div class = "eventmenu">
+      <img class = "event_pic" src = "images/sample_contents.jpg"  alt = "オープニングセレモニー">
+      <div class = "event_textBox_wrap">
         <div class = "event_textBox">
           <div class = "event_title">
             オープニングセレモニー
@@ -372,15 +379,22 @@ $(window).load(function() {
               </tr>
             </table>
           </div>
-          <div class = "eventArchive_detail">
+          <div class = "event_detail">
             はこだてみらい館で行われる予定の MESH を使ったワークショップを一足先に体験していただきます！「MESH」とは、誰でも簡単に電子工作やプログラミングなどのデジタルなものづくりを楽しむことが出来るツールです。
           </div>
         </div>
+        <a href = "confirm_event.html">
+          <div class = "button subscriptionButton">
+            <p>
+              申し込む
+            </p>
+          </div>
+        </a>
       </div>
     </div>
-    <div class = "eventmenu eventArchive_leftText">
-      <img class = "eventArchive_pic" src = "images/sample_contents.jpg"  alt = "オープニングセレモニー">
-      <div class = "eventArchive_textBox_wrap">
+    <div class = "eventmenu">
+      <img class = "event_pic" src = "images/sample_contents.jpg"  alt = "オープニングセレモニー">
+      <div class = "event_textBox_wrap">
         <div class = "event_textBox">
           <div class = "event_title">
             オープニングセレモニー
@@ -405,15 +419,22 @@ $(window).load(function() {
               </tr>
             </table>
           </div>
-          <div class = "eventArchive_detail">
+          <div class = "event_detail">
             はこだてみらい館で行われる予定の MESH を使ったワークショップを一足先に体験していただきます！「MESH」とは、誰でも簡単に電子工作やプログラミングなどのデジタルなものづくりを楽しむことが出来るツールです。
           </div>
         </div>
+        <a href = "confirm_event.html">
+          <div class = "button subscriptionButton">
+            <p>
+              申し込む
+            </p>
+          </div>
+        </a>
       </div>
     </div>
-    <div class = "eventmenu eventArchive_rightText">
-      <img class = "eventArchive_pic" src = "images/sample_contents.jpg"  alt = "オープニングセレモニー">
-      <div class = "eventArchive_textBox_wrap">
+    <div class = "eventmenu">
+      <img class = "event_pic" src = "images/sample_contents.jpg"  alt = "オープニングセレモニー">
+      <div class = "event_textBox_wrap">
         <div class = "event_textBox">
           <div class = "event_title">
             オープニングセレモニー
@@ -438,10 +459,17 @@ $(window).load(function() {
               </tr>
             </table>
           </div>
-          <div class = "eventArchive_detail">
+          <div class = "event_detail">
             はこだてみらい館で行われる予定の MESH を使ったワークショップを一足先に体験していただきます！「MESH」とは、誰でも簡単に電子工作やプログラミングなどのデジタルなものづくりを楽しむことが出来るツールです。
           </div>
         </div>
+        <a href = "confirm_event.html">
+          <div class = "button subscriptionButton">
+            <p>
+              申し込む
+            </p>
+          </div>
+        </a>
       </div>
     </div>
     <div class = "wrap">
@@ -451,7 +479,7 @@ $(window).load(function() {
           開催希望の方は、下記フォームからご連絡お願いいたします。
         </p>
         <p class = "form_guide">
-          <a href = "#" class = "linkText">
+          <a href = "contact.html" class = "linkText">
             お問い合わせフォーム
           </a>
         </p>
