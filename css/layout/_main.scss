@@ -8,8 +8,8 @@
 
 .wrap{
   margin: 0 auto;
-  //max-width: 1440px;
-  //min-width: 1080px;
+  max-width: 1440px;
+  min-width: 1080px;
   width: 92.5925%;
   @include clearfix;
   @media #{$small} {

@@ -136,6 +136,8 @@ a:hover {
 
 .wrap {
   margin: 0 auto;
+  max-width: 1440px;
+  min-width: 1080px;
   width: 92.5925%;
 }
 .wrap:after {
