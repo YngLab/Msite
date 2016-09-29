@@ -679,6 +679,7 @@ footer .copyright {
 .latestEvent {
   font-size: 0;
   padding-bottom: 40px;
+  margin-top: 40px;
 }
 .latestEvent .latestBox_future {
   background-color: #ffffff;
