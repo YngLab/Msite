@@ -10,6 +10,10 @@
 
 <link rel = "stylesheet" href="css/style.css">
 <link rel = "shortcut icon" href="images/hmp.ico">
+<!--ランダム画像のjs-->
+<script src="js/jquery.js"></script>
+<script src="js/imageview.js"></script>
+
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
 <script src="js/jquery.flexslider.js"></script>
@@ -19,6 +23,45 @@
     animation: "slide"
   });
 </script>
+<!--ランダム画像のcss-->
+<style type="text/css">
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+#imageArea {
+  width: 100%;
+  position: relative;
+}
+#imageArea img {
+  position: absolute;
+  display: block; 
+  margin: 0 auto;
+}
+#imageBox1,
+#imageBox2,
+#imageBox3,
+#imageBox4,
+#imageBox5,
+#imageBox6,
+#imageBox7,
+#imageBox8 {
+  width: 25%;
+  float: left;
+}
+#indexTitle {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 60%;
+  border-top: 2px #fff solid;
+  border-bottom: 2px #fff solid;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+}
+#indexTitleText {
+}
+</style>
+
 <div id="wrapper">
   <div id="header">
     <div id="drawer-toggle">
@@ -27,9 +70,12 @@
       <span class="bottom"></span>
     </div>
   </div>
-  <div class = "instaPic">
-    <!-- なんとかかんとか -->
+  <div class="imageContainer">
+    <div id="imageArea"></div>
+      <div id="indexTitle">
+      <div id="indexTitleText"><h1>はこだてみらいプロジェクト</h1></div>
   </div>
+</div>
   <div class = "bgcolor">
     <div class = "wrap">
       <h2 class = "topcap">
@@ -382,6 +428,8 @@
           </div>
         </div>
       </a>
+      <!-- 最後にこの関数を読み込む-->
+      <script>updateImageView();</script>
     </div><!-- ここまでがwrap -->
   </div>
   <footer>
