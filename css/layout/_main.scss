@@ -23,6 +23,15 @@
       display: none;
     }
   }
+  #header_sp{
+    @media #{$normal} {
+      display: none;
+    }
+    @media #{$small} {
+      background: $g__fontColor;
+      font-size: 40px;
+    }
+  }
 }
 
 .latestEvent{
