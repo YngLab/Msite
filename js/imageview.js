@@ -111,7 +111,9 @@ function updateImageView(){
 	}
 
 	resizeWindow();
-	interval = setInterval(imageLoop.bind(this), 33);
+
+	//ループ
+	//interval = setInterval(imageLoop.bind(this), 33);
 
 	//var htmlText ='';
 	//var size = '140';
