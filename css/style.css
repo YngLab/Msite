@@ -1808,7 +1808,7 @@ footer .copyright p {
 }
 #wrapper #drawer-toggle {
   position: fixed;
-  right: 0;
+  right: -1px;
   top: 0;
   width: 40px;
   height: 23px;
