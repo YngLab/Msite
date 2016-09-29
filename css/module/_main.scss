@@ -1091,7 +1091,7 @@ footer{
 }
 
 #wrapper.open {
-  position: fixed;
+  // position: fixed;
   //クラス「open」が付いたら左に280px移動
   -webkit-transform: translate3d(-75%, 0, 0);
      -moz-transform: translate3d(-75%, 0, 0);

@@ -131,14 +131,18 @@ footer{
   width: 100%;
   margin-top: 60px;
   .foot{
-    height: 96px;
+    @media #{$normal} {
+      height: 96px;
+    }
     width: 100%;
+    @include clearfix;
   }
   .copyright{
     background: #9fa0a0;
     height: 24px;
     width: 100%;
   }
+  @include clearfix;
 }
 
 .HMP_logo{
