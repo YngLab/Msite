@@ -1,14 +1,22 @@
 //スマホ 7なんとかpx
-//2*4
+//2*3
 //大2小4
 
+var imageNum = 50;
 var img = new Array();
 var fullWidth;
-var boxPattern = [1, 1, 1, 2, 2, 2, 2, 2];
-var num=23;
+var boxPattern;
+var pc_boxPattern = [1, 1, 1, 2, 2, 2, 2, 2];
+var sp_boxPattern = [1, 1, 2, 2, 2, 2];
+
+var num;
+var pc_num=23;
+var sp_num = 18;
 var arrNum = new Array();
 var interval;
-
+var spWidth = 768;
+var device = '';	//pc or sp
+var imageArea;
 Block = function(x, y, size) {
 	this.x=x;
 	this.y=y;
@@ -21,22 +29,44 @@ Block = function(x, y, size) {
 var blockArr = new Array();
 $(window).on('resize', resizeWindow);
 function resizeWindow() {
-	var imageArea = $('#imageArea');
 	fullWidth = imageArea.width();
-	document.getElementById('imageArea').style.width = '100%';
-	document.getElementById('imageArea').style.height = fullWidth*0.5 + 'px';
+	if(fullWidth>spWidth) {
+		if(device=='sp') {
+			updateImageView();
+		} 
+	}
+	else {
+		if(device=='pc') {
+			updateImageView();
+		}
+	}
 	var largeWidth = fullWidth*0.25;
 	var smallWidth = largeWidth*0.5;
-	var imageCount=1;
 	var minBlockSize = fullWidth*0.125;
-	for(var i=1; i<blockArr.length+1; i++) {
-		document.getElementById('image'+i).style.left = blockArr[i-1].x*minBlockSize+'px';
-		document.getElementById('image'+i).style.top = blockArr[i-1].y*minBlockSize+'px';
-		document.getElementById('image'+i).style.width = minBlockSize*blockArr[i-1].size+'px';
-		document.getElementById('image'+i).style.height = minBlockSize*blockArr[i-1].size+'px';
 
+	var imageCount=1;
+	if(device=='pc') {
+		document.getElementById('imageArea').style.width = '100%';
+		document.getElementById('imageArea').style.height = fullWidth*0.5 + 'px';
+		for(var i=1; i<blockArr.length+1; i++) {
+			document.getElementById('image'+i).style.left = blockArr[i-1].x*minBlockSize+'px';
+			document.getElementById('image'+i).style.top = blockArr[i-1].y*minBlockSize+'px';
+			document.getElementById('image'+i).style.width = minBlockSize*blockArr[i-1].size+'px';
+			document.getElementById('image'+i).style.height = minBlockSize*blockArr[i-1].size+'px';
+
+		}
 	}
+	else if(device=='sp') {
+		document.getElementById('imageArea').style.width = '100%';
+		document.getElementById('imageArea').style.height = fullWidth*1.5 + 'px';
+		for(var i=1; i<blockArr.length+1; i++) {
+			document.getElementById('image'+i).style.left = blockArr[i-1].x*minBlockSize+'px';
+			document.getElementById('image'+i).style.top = blockArr[i-1].y*minBlockSize+'px';
+			document.getElementById('image'+i).style.width = minBlockSize*blockArr[i-1].size+'px';
+			document.getElementById('image'+i).style.height = minBlockSize*blockArr[i-1].size+'px';
 
+		}
+	}
 	var indexTitle =$('#indexTitle');
 	document.getElementById('indexTitleText').style.marginTop = fullWidth*0.013 + 'px';
 	document.getElementById('indexTitleText').style.marginBottom = fullWidth*0.013 + 'px';
@@ -47,18 +77,32 @@ function resizeWindow() {
 
 function shuffleArray(array) {
   var n = array.length, t, i;
+  var arr = array.slice(0);
   while (n) {
     i = Math.floor(Math.random() * n--);
-    t = array[n];
-    array[n] = array[i];
-    array[i] = t;
+    t = arr[n];
+    arr[n] = arr[i];
+    arr[i] = t;
   }
-  return array;
+  return arr;
 }
 
 function updateImageView(){
-	shuffleArray(boxPattern);
-	var imageNum = 50;
+	imageArea = $('#imageArea');
+	fullWidth = imageArea.width();
+	if(fullWidth>spWidth) {
+		device='pc';
+	}
+	else {
+		device='sp';
+	}
+	if(device=='pc') {
+		boxPattern = shuffleArray(pc_boxPattern);
+		num = pc_num;
+	} else if(device=='sp') {
+		boxPattern = shuffleArray(sp_boxPattern);
+		num = sp_num;
+	}
 	for(var i=0; i<imageNum; i++) {
 		var n = 'images/index/';
 		if(i<999) n+='0';
@@ -66,7 +110,7 @@ function updateImageView(){
 		if(i<9) n+='0';
 		img[i] = n + (i+1) + '.jpg';
 	}
-
+	arrNum = new Array();
 	for(var i=0; i<num; i++) {
 		while(true) {
 			var n = Math.floor(Math.random()*img.length);
@@ -83,23 +127,48 @@ function updateImageView(){
 	var imageSize=300;
 	var htmlText ='';
 	var imageCount=1;
-	for(var y=0; y<2; y++) {
-		for(var x=0; x<4; x++) {
-			if(boxPattern[y*4+x]==1) {
-				blockArr.push(new Block(x*2, y*2, 2));
-				htmlText += '<img id="image'+ imageCount +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
-				imageCount++;
+	blockArr = new Array();
+	if(device=='pc') {
+		for(var y=0; y<2; y++) {
+			for(var x=0; x<4; x++) {
+				if(boxPattern[y*4+x]==1) {
+					blockArr.push(new Block(x*2, y*2, 2));
+					htmlText += '<img id="image'+ imageCount +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+					imageCount++;
+				}
+				else if(boxPattern[y*4+x]==2) {
+					blockArr.push(new Block(x*2, y*2, 1));
+					blockArr.push(new Block(x*2+1, y*2, 1));
+					blockArr.push(new Block(x*2, y*2+1, 1));
+					blockArr.push(new Block(x*2+1, y*2+1, 1));
+					htmlText += '<img id="image'+ imageCount +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+					htmlText += '<img id="image'+ (imageCount+1) +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+					htmlText += '<img id="image'+ (imageCount+2) +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+					htmlText += '<img id="image'+ (imageCount+3) +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+					imageCount+=4;	
+				}
 			}
-			else if(boxPattern[y*4+x]==2) {
-				blockArr.push(new Block(x*2, y*2, 1));
-				blockArr.push(new Block(x*2+1, y*2, 1));
-				blockArr.push(new Block(x*2, y*2+1, 1));
-				blockArr.push(new Block(x*2+1, y*2+1, 1));
-				htmlText += '<img id="image'+ imageCount +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
-				htmlText += '<img id="image'+ (imageCount+1) +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
-				htmlText += '<img id="image'+ (imageCount+2) +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
-				htmlText += '<img id="image'+ (imageCount+3) +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
-				imageCount+=4;	
+		}
+	}
+	else if(device=='sp') {
+		for(var y=0; y<3; y++) {
+			for(var x=0; x<2; x++) {
+				if(boxPattern[y*2+x]==1) {
+					blockArr.push(new Block(x*2, y*2, 2));
+					htmlText += '<img id="image'+ imageCount +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+					imageCount++;
+				}
+				else if(boxPattern[y*2+x]==2) {
+					blockArr.push(new Block(x*2, y*2, 1));
+					blockArr.push(new Block(x*2+1, y*2, 1));
+					blockArr.push(new Block(x*2, y*2+1, 1));
+					blockArr.push(new Block(x*2+1, y*2+1, 1));
+					htmlText += '<img id="image'+ imageCount +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+					htmlText += '<img id="image'+ (imageCount+1) +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+					htmlText += '<img id="image'+ (imageCount+2) +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+					htmlText += '<img id="image'+ (imageCount+3) +'"border="0" width="'+imageSize+'" height="'+imageSize+'" alt="">';
+					imageCount+=4;	
+				}
 			}
 		}
 	}
@@ -109,22 +178,10 @@ function updateImageView(){
 		blockArr[i-1].src = img[arrNum[i-1]];
 		document.getElementById(id).src=img[arrNum[i-1]];
 	}
-
 	resizeWindow();
 
 	//ループ
 	//interval = setInterval(imageLoop.bind(this), 33);
-
-	//var htmlText ='';
-	//var size = '140';
-
-	/*
-	for(var i=1; i<=num; i++) {
-		htmlText += '<img id="image'+ i +'"border="0" src="" width="'+size+'" height="'+size+'" alt="">';
-	}
-
-	document.getElementById('imageArea').innerHTML = htmlText;
-	*/
 }
 
 
