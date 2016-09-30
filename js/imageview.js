@@ -53,9 +53,10 @@ function resizeWindow() {
 			document.getElementById('image'+i).style.width = minBlockSize*blockArr[i-1].size+'px';
 			document.getElementById('image'+i).style.height = minBlockSize*blockArr[i-1].size+'px';
 		}
-		document.getElementById('indexTitleText').style.marginTop = fullWidth*0.013 + 'px';
-		document.getElementById('indexTitleText').style.marginBottom = fullWidth*0.013 + 'px';
-		document.getElementById('indexTitle').style.fontSize = fullWidth/35.0 + 'px';
+		document.getElementById('indexTitle').style.width = '50%';
+		document.getElementById('indexTitleText').style.marginTop = fullWidth*0.014 + 'px';
+		document.getElementById('indexTitleText').style.marginBottom = fullWidth*0.014 + 'px';
+		document.getElementById('indexTitle').style.fontSize = fullWidth/32.0 + 'px';
 		document.getElementById('indexTitle').style.left = fullWidth/2-indexTitle.width()/2 + 'px';
 		document.getElementById('indexTitle').style.top = fullWidth/4-indexTitle.height()/2 + 'px';
 	}
@@ -69,9 +70,10 @@ function resizeWindow() {
 			document.getElementById('image'+i).style.width = minBlockSize*blockArr[i-1].size+'px';
 			document.getElementById('image'+i).style.height = minBlockSize*blockArr[i-1].size+'px';
 		}
-		document.getElementById('indexTitleText').style.marginTop = fullWidth*0.015 + 'px';
-		document.getElementById('indexTitleText').style.marginBottom = fullWidth*0.015 + 'px';
-		document.getElementById('indexTitle').style.fontSize = fullWidth/24.0 + 'px';
+		document.getElementById('indexTitle').style.width = '100%';
+		document.getElementById('indexTitleText').style.marginTop = fullWidth*0.025 + 'px';
+		document.getElementById('indexTitleText').style.marginBottom = fullWidth*0.025 + 'px';
+		document.getElementById('indexTitle').style.fontSize = fullWidth/15.0 + 'px';
 		document.getElementById('indexTitle').style.left = fullWidth/2-indexTitle.width()/2 + 'px';
 		document.getElementById('indexTitle').style.top = fullWidth*0.75-indexTitle.height()/2 + 'px';
 	}
