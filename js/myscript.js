@@ -199,41 +199,42 @@ $(function(){
   }
 
   var $content = $('#wrapper'),
-        $drawer = $('#drawer'),
-        $button = $('#drawer-toggle'),
-        isOpen = false;
+      $drawer = $('#drawer'),
+      $button = $('#drawer-toggle'),
+      isOpen = false;
     
   //ボタンをタップ、クリックした時
   $button.on('touchstart click', function () {
     if(isOpen) {
-        $drawer.removeClass('open');
-        $content.removeClass('open');
-        isOpen = false;
+      $drawer.removeClass('open');
+      $content.removeClass('open');
+      isOpen = false;
     } else {
-        $drawer.addClass('open');
-        $content.addClass('open');
-        isOpen = true;
+      $drawer.addClass('open');
+      $content.addClass('open');
+      isOpen = true;
     }
-    current_scrollY = $( window ).scrollTop(); 
-    $("html, body").css({
-      position: 'fixed',
-      width: '100%',
-      top: -1 * current_scrollY
-    });
-    $("#wrapper.open #drawer-toggle").css("top", current_scrollY);
     return false; //親要素へのイベント伝播、aタグのURLクリックによる画面遷移を防ぐ
+    // current_scrollY = $( window ).scrollTop(); 
+    // $("html, body").css({
+    //   position: 'fixed',
+    //   width: '100%',
+    //   top: -1 * current_scrollY
+    // });
+    // $("#wrapper.open #drawer-toggle").css("top", current_scrollY);
+
   });
 
   //コンテンツ部分をタップ、クリックした時
   $content.on('touchstart click', function (e) {
-      e.stopPropagation(); //イベント伝播のみ阻止
-      if(isOpen) {
-        $drawer.removeClass('open');
-        $content.removeClass('open');
-        isOpen = false;
-      }
-      $("#wrapper #drawer-toggle").css("top", 0);
-      $("html, body").removeAttr("style");
-      $("html, body").prop({scrollTop: current_scrollY});
+    e.stopPropagation(); //イベント伝播のみ阻止
+    if(isOpen) {
+      $drawer.removeClass('open');
+      $content.removeClass('open');
+      isOpen = false;
+    }
+    // $("#wrapper #drawer-toggle").css("top", 0);
+    // $("html, body").removeAttr("style");
+    // $("html, body").prop({scrollTop: current_scrollY});
   });
 });
