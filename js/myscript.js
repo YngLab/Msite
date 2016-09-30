@@ -220,8 +220,7 @@ $(function(){
       width: '100%',
       top: -1 * current_scrollY
     });
-    // $("#wrapper.open").css("position", "fixed");
-    // $("#wrapper.open").css("top", current_scrollY);
+    $("#wrapper.open #drawer-toggle").css("top", current_scrollY);
     return false; //親要素へのイベント伝播、aタグのURLクリックによる画面遷移を防ぐ
   });
 
@@ -233,6 +232,7 @@ $(function(){
         $content.removeClass('open');
         isOpen = false;
       }
+      $("#wrapper #drawer-toggle").css("top", 0);
       $("html, body").removeAttr("style");
       $("html, body").prop({scrollTop: current_scrollY});
   });

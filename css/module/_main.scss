@@ -1085,7 +1085,7 @@ footer{
     height: 23px;
     padding-top: 17px;
     background-color: $g__fontColor;
-    z-index: 1000;
+    z-index: 10;
     span{
       margin: 0 auto;
       display: block;
@@ -1110,17 +1110,11 @@ footer{
   -webkit-transform: translate3d(-75%, 0, 0);
      -moz-transform: translate3d(-75%, 0, 0);
           transform: translate3d(-75%, 0, 0);
-  #drawer-toggle{
-    .middle {
-    background: rgba(255, 255, 255, 0);
-    }
-    .top {
-      transform: rotate(-45deg) translateY(2px);
-    }
-    .bottom {
-      transform: rotate(45deg) translateY(-3px);
-    }
-  }
+  // #drawer-toggle{
+  //   position: fixed;
+  //   right: -1px;
+  //   top: 0;
+  // }
 }
 
 /* オーバーレイ表示をするためのCSS */
@@ -1338,7 +1332,7 @@ footer{
   //}
 }
 
-.inputBox{
+.inputBox, .inputBox_sub{
   input{
     background-color: #efefef;
   }
