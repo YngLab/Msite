@@ -1,5 +1,5 @@
-var imageNum = 50;
-var imagePath = 'images/index/';
+var imageNum = 83;
+var imagePath = 'images/index/sq_';
 
 var img = new Array();
 var fullWidth;

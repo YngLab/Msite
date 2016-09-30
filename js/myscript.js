@@ -27,6 +27,13 @@ $(function(){
     $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
   }
 
+  // スクロールしたら発動
+  $(window).scroll(function() {
+    // スクロール量を変数に格納
+    var sc = $(this).scrollTop();
+    console.log(sc);
+  });
+
   var $setElm = $(".latestEvent .eventtitle");
   var cutFigure = 8; // カットする文字数
   var afterTxt = "..."; // 文字カット後に表示するテキスト
@@ -180,16 +187,28 @@ $(function(){
     
   //ボタンをタップ、クリックした時
   $button.on('touchstart click', function () {
-      if(isOpen) {
-          $drawer.removeClass('open');
-          $content.removeClass('open');
-          isOpen = false;
-      } else {
-          $drawer.addClass('open');
-          $content.addClass('open');
-          isOpen = true;
-      }
-      return false; //親要素へのイベント伝播、aタグのURLクリックによる画面遷移を防ぐ
+    if(isOpen) {
+        $drawer.removeClass('open');
+        $content.removeClass('open');
+        isOpen = false;
+    } else {
+        $drawer.addClass('open');
+        $content.addClass('open');
+        isOpen = true;
+    }
+    current_scrollY = $( window ).scrollTop(); 
+    $("#drawer-toggle").css({
+      position: "fixed",
+      top: current_scrollY
+    });
+    $("body").css({
+      position: 'fixed',
+      width: '100%',
+      top: -1 * current_scrollY
+    });
+    // $("#wrapper.open").css("position", "fixed");
+    // $("#wrapper.open").css("top", current_scrollY);
+    return false; //親要素へのイベント伝播、aタグのURLクリックによる画面遷移を防ぐ
   });
 
   //コンテンツ部分をタップ、クリックした時
@@ -200,5 +219,12 @@ $(function(){
           $content.removeClass('open');
           isOpen = false;
       }
-    });
+      $("#drawer-toggle").css({
+        position: 'fixed',
+        top: 0
+      });
+      $("body").removeAttr("style");
+      $("html, body").prop({scrollTop: current_scrollY});
+      console.log("aaaa");
+  });
 });

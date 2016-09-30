@@ -60,7 +60,7 @@
   <div class = "wrap">
   <!-- 以下body -->
     <div class = "autoHeight">
-      <form class = "form" action = "php/hoge.php" method = "post">
+      <form class = "form" action = "confirm_contact.html" method = "post">
         <div class = "radio">
           <span class = "radioElement">
             <input type = "radio" name = "radio" id = "fch" value = "fch">
@@ -81,36 +81,36 @@
             </label>
           </span>
         </div>
-        <table class = "inputForm inputBox">
-          <tr>
-            <th>お名前</th>
-            <td>
-              <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
-            </td>
-          </tr>
-          <tr>
-            <th>メールアドレス</th>
-            <td>
-              <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
-            </td>
-          </tr>
-          <tr>
-            <th class = "textareaLabel">問い合わせ内容</th>
-            <td>
-              <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
-            </td>
-          </tr>
-          <tr>
-            <th>　</th>
-            <td>
-              <a href = "confirm_contact.html">
+        <form class = "form" action = "php/hoge.php" method = "post">
+          <table class = "inputForm inputBox">
+            <tr>
+              <th>お名前</th>
+              <td>
+                <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
+              </td>
+            </tr>
+            <tr>
+              <th>メールアドレス</th>
+              <td>
+                <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
+              </td>
+            </tr>
+            <tr>
+              <th class = "textareaLabel">問い合わせ内容</th>
+              <td>
+                <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <th>　</th>
+              <td>
                 <div class = "confirm">
-                  <p>確認</p>
+                  <input type="submit" value="確認" class = "sendbutton">
                 </div>
-              </a>
-            </td>
-          </tr>
-        </table>
+              </td>
+            </tr>
+          </table>
+        </form>
         <div class = "inputForm_sp">
           <div class = "inputBox_sp">
             <p>お名前</p>
@@ -137,7 +137,7 @@
   <!-- ここまで -->
   </div>
   <footer>
-    <img src = "images/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
+    <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
     <div class = "foot">
       <div class ="footerLinks">
         <a href = "member.html" class="links">メンバー</a>
@@ -150,10 +150,10 @@
       </div>
       <div class = "SNSbutton">
         <a href = "https://www.facebook.com/hakodatemiraiproject/">
-          <img src = "images/fb.png" alt="公式Facebook" class = "SNS">
+          <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
         </a>
         <a href = "https://www.instagram.com/instagramjapan/?hl=ja">
-          <img src = "images/ig.png" alt="Instagram" class = "SNS">
+          <img src = "images/common/ig.png" alt="Instagram" class = "SNS">
         </a>
       </div>
       <div class = "copyright">

@@ -56,7 +56,9 @@ a:hover{
 }
 
 .bgcolor{
-  background-color: $bg__color;
+  @media #{$normal} {
+    background-color: $bg__color;
+  }
 }
 
 .linkText{
