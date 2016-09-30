@@ -1553,19 +1553,43 @@ footer .copyright p {
   }
 }
 
-.button {
-  position: absolute;
+/*
+.button{
+  //position: absolute;
   width: 88px;
   height: 36px;
+  border: 1px solid $dark__fontColor;
+  color: $dark__fontColor;
+  font-weight: 400;
+  font-size: $link__fontSize;
+  text-align: center;
+  p{
+    display: inline;
+    line-height: 36px;
+  }
+}
+*/
+.button {
+  background: transparent;
   border: 1px solid #727171;
   color: #727171;
   font-weight: 400;
   font-size: 15px;
+  height: 36px;
   text-align: center;
+  width: 88px;
 }
-.button p {
-  display: inline;
-  line-height: 36px;
+
+.subscription {
+  bottom: 24px;
+  left: 50px;
+  position: absolute;
+}
+@media screen and (max-width: 768px) {
+  .subscription {
+    bottom: 40px;
+    left: 20px;
+  }
 }
 
 .subscriptionButton {

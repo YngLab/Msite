@@ -765,8 +765,9 @@ footer{
   }
 }
 
+/*
 .button{
-  position: absolute;
+  //position: absolute;
   width: 88px;
   height: 36px;
   border: 1px solid $dark__fontColor;
@@ -779,6 +780,29 @@ footer{
     line-height: 36px;
   }
 }
+*/
+
+.button{
+  background: transparent;
+  border: 1px solid $dark__fontColor;
+  color: $dark__fontColor;
+  font-weight: 400;
+  font-size: $link__fontSize;
+  height: 36px;
+  text-align: center;
+  width: 88px;
+}
+
+.subscription{
+  bottom: 24px;
+  left: 50px;
+  position: absolute;
+  @media #{$small} {
+    bottom: 40px;
+    left: 20px;
+  }
+}
+
 .subscriptionButton{
   bottom: 24px;
   left: 50px;
