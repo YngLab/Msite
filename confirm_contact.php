@@ -77,7 +77,7 @@ $_SESSION = $_POST;
         <input type = "radio" name = "radio" id = "both" value = "both">
           <label for = "both"><span class = "radioFont">どちらとも</span></label>
       </div>
-      <form class = "form" action = "php/hoge.php" method = "post">
+      <form class = "form" action = "send_contact.php" method = "post">
         <table class = "inputForm">
           <tr>
             <th>お名前</th>
