@@ -489,16 +489,24 @@ footer{
   @media #{$small} {
     display: none;
   }
-  .inputBox{
-    th{
-      padding-right: 30px;
-    }
-    td{
-      padding: 8px 0 8px 0;
-    }
-    .confirm{
-      margin: 40px 0 40px 0;
-    }
+}
+
+.inputBox, .inputBox_sub{
+  width: 100%;
+  th{
+    padding-right: 30px;
+  }
+  td{
+    padding: 8px 0 8px 0;
+  }
+  .confirm{
+    margin: 40px 0 40px 0;
+  }
+}
+
+.inputBox_sub{
+  td{
+    padding: 0 0 16px 0;
   }
 }
 

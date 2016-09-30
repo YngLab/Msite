@@ -674,14 +674,22 @@ footer:after {
     display: none;
   }
 }
-.inputForm .inputBox th {
+
+.inputBox, .inputBox_sub {
+  width: 100%;
+}
+.inputBox th, .inputBox_sub th {
   padding-right: 30px;
 }
-.inputForm .inputBox td {
+.inputBox td, .inputBox_sub td {
   padding: 8px 0 8px 0;
 }
-.inputForm .inputBox .confirm {
+.inputBox .confirm, .inputBox_sub .confirm {
   margin: 40px 0 40px 0;
+}
+
+.inputBox_sub td {
+  padding: 0 0 16px 0;
 }
 
 @media screen and (min-width: 769px) {
@@ -2100,10 +2108,10 @@ footer .copyright p {
   line-height: 36px;
 }
 
-.inputBox input {
+.inputBox input, .inputBox_sub input {
   background-color: #efefef;
 }
-.inputBox textarea {
+.inputBox textarea, .inputBox_sub textarea {
   background-color: #efefef;
 }
 
