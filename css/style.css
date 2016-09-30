@@ -672,17 +672,17 @@ footer:after {
   }
 }
 
-.inputBox, .inputBox_sub {
+.inputBox, .inputBox_sub, .inputBox_conf {
   width: 100%;
 }
-.inputBox th, .inputBox_sub th {
+.inputBox th, .inputBox_sub th, .inputBox_conf th {
   padding-right: 30px;
 }
-.inputBox td, .inputBox_sub td {
+.inputBox td, .inputBox_sub td, .inputBox_conf td {
   padding: 8px 0 8px 0;
 }
-.inputBox .confirm, .inputBox_sub .confirm {
-  margin: 40px 0 40px 0;
+.inputBox .confirm, .inputBox_sub .confirm, .inputBox_conf .confirm {
+  margin: 24px 0 0 0;
 }
 
 .inputBox_sub td {
@@ -694,21 +694,21 @@ footer:after {
     display: none;
   }
 }
-.inputForm_sp .inputBox_sp, .inputForm_sp .inputBox_sp_b {
+.inputForm_sp .inputBox_sp, .inputForm_sp .inputBox_conf_sp, .inputForm_sp .inputBox_sp_b, .inputForm_sp .inputBox_conf_sp_b {
   margin-bottom: 20px;
 }
-.inputForm_sp .inputBox_sp input, .inputForm_sp .inputBox_sp_b input {
+.inputForm_sp .inputBox_sp input, .inputForm_sp .inputBox_conf_sp input, .inputForm_sp .inputBox_sp_b input, .inputForm_sp .inputBox_conf_sp_b input {
   height: 36px;
   width: 100%;
 }
-.inputForm_sp .inputBox_sp p, .inputForm_sp .inputBox_sp_b p {
+.inputForm_sp .inputBox_sp p, .inputForm_sp .inputBox_conf_sp p, .inputForm_sp .inputBox_sp_b p, .inputForm_sp .inputBox_conf_sp_b p {
   margin-bottom: 13px;
 }
-.inputForm_sp .inputBox_sp textarea, .inputForm_sp .inputBox_sp_b textarea {
+.inputForm_sp .inputBox_sp textarea, .inputForm_sp .inputBox_conf_sp textarea, .inputForm_sp .inputBox_sp_b textarea, .inputForm_sp .inputBox_conf_sp_b textarea {
   height: 108px;
   width: 100%;
 }
-.inputForm_sp .inputBox_sp_b {
+.inputForm_sp .inputBox_sp_b, .inputForm_sp .inputBox_conf_sp_b {
   margin-bottom: 30px;
 }
 
@@ -1553,19 +1553,55 @@ footer .copyright p {
   }
 }
 
-.button {
-  position: absolute;
+/*
+.button{
+  //position: absolute;
   width: 88px;
   height: 36px;
+  border: 1px solid $dark__fontColor;
+  color: $dark__fontColor;
+  font-weight: 400;
+  font-size: $link__fontSize;
+  text-align: center;
+  p{
+    display: inline;
+    line-height: 36px;
+  }
+}
+*/
+.button, .rev_button {
   border: 1px solid #727171;
-  color: #727171;
   font-weight: 400;
   font-size: 15px;
+  height: 36px;
   text-align: center;
+  width: 88px;
 }
-.button p {
-  display: inline;
-  line-height: 36px;
+
+.button {
+  background: transparent;
+  color: #727171;
+}
+
+.rev_button {
+  background: #727171;
+  color: #ffffff;
+}
+
+.subscription {
+  bottom: 24px;
+  left: 50px;
+  position: absolute;
+}
+@media screen and (max-width: 768px) {
+  .subscription {
+    bottom: 40px;
+    left: 20px;
+  }
+}
+
+.send {
+  padding-left: 30px;
 }
 
 .subscriptionButton {
@@ -2105,31 +2141,26 @@ footer .copyright p {
   line-height: 36px;
 }
 
-.inputBox input, .inputBox_sub input {
+.inputBox input, .inputBox_sub input, .inputBox_sp input, .inputBox_sp_b input {
   background-color: #efefef;
 }
-.inputBox textarea, .inputBox_sub textarea {
+.inputBox textarea, .inputBox_sub textarea, .inputBox_sp textarea, .inputBox_sp_b textarea {
   background-color: #efefef;
 }
 
 .revision {
   background: #727171;
 }
-.revision p {
-  color: white;
-}
 
-.inputForm_sp input {
-  background-color: #efefef;
+.inputForm_sp .inputBox_sp input, .inputForm_sp .inputBox_conf_sp input, .inputForm_sp .inputBox_sp_b input, .inputForm_sp .inputBox_conf_sp_b input {
   border: none;
   color: #727171;
   font-size: 14px;
 }
-.inputForm_sp p {
+.inputForm_sp .inputBox_sp p, .inputForm_sp .inputBox_conf_sp p, .inputForm_sp .inputBox_sp_b p, .inputForm_sp .inputBox_conf_sp_b p {
   font-size: 13px;
 }
-.inputForm_sp textarea {
-  background-color: #efefef;
+.inputForm_sp .inputBox_sp textarea, .inputForm_sp .inputBox_conf_sp textarea, .inputForm_sp .inputBox_sp_b textarea, .inputForm_sp .inputBox_conf_sp_b textarea {
   border: none;
   color: #727171;
   font-size: 14px;
