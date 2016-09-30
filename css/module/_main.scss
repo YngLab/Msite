@@ -1,11 +1,12 @@
 @charset "UTF-8";
 
 .topcap{
-    text-align: center;
+  text-align: center;
 }
 .latestEvent{
   font-size: 0;
   padding-bottom: 40px;
+  //margin-top: 40px;
   .latestBox_future{
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
@@ -180,9 +181,14 @@
   }
   .future_logo{
     border-bottom: solid 1px $g__color-future;
-    text-align: center;
+    height: 200px;
+    position: relative;
     img{
-      width: 43.3884%;
+      width: 51.6528%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
     }
   }
   .future_logo:hover{
@@ -209,9 +215,7 @@
   }
   .future_textbox{
     float: left;
-    margin: -58px 0 0 -100px;
-    //margin-left: -100px;
-    //margin-top: -58px;
+    margin: -12px 0 0 -100px;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -264,9 +268,13 @@
   .kids_logo{
     border-bottom: solid 1px $g__color-kids;
     height: 200px;
-    text-align: center;
+    position: relative;
     img{
       width: 51.6528%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
     }
   }
   .kids_logo:hover{
@@ -293,9 +301,7 @@
   }
   .kids_textbox{
     float: left;
-    margin: -58px 0 0 -100px;
-    //margin-left: -100px;
-    //margin-top: -58px;
+    margin: -12px 0 0 -100px;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -666,8 +672,17 @@ footer{
   }
 }
 
-#all_eventmenu{
+#all_eventmenu, #all_experiencemenu{
   border-top: solid 1px $g__fontColor;
+  @media #{$normal} {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    min-width: 1080px;
+  }
+  @media #{$maximum} {
+    padding-bottom: 40px;
+  }
 }
 
 .eventmenu{
@@ -676,6 +691,7 @@ footer{
 }
 
 .event_textBox_wrap{
+  background: white;
   position: relative;
   @include smallW;
   @media #{$normal}{
@@ -731,6 +747,7 @@ footer{
 }
 
 .eventArchive_textBox_wrap{
+  background: white;
   position: relative;
   @include smallW;
   .eventArchive_detail{
@@ -748,8 +765,9 @@ footer{
   }
 }
 
+/*
 .button{
-  position: absolute;
+  //position: absolute;
   width: 88px;
   height: 36px;
   border: 1px solid $dark__fontColor;
@@ -762,6 +780,29 @@ footer{
     line-height: 36px;
   }
 }
+*/
+
+.button{
+  background: transparent;
+  border: 1px solid $dark__fontColor;
+  color: $dark__fontColor;
+  font-weight: 400;
+  font-size: $link__fontSize;
+  height: 36px;
+  text-align: center;
+  width: 88px;
+}
+
+.subscription{
+  bottom: 24px;
+  left: 50px;
+  position: absolute;
+  @media #{$small} {
+    bottom: 40px;
+    left: 20px;
+  }
+}
+
 .subscriptionButton{
   bottom: 24px;
   left: 50px;
@@ -793,10 +834,6 @@ footer{
   }
 }
 
-#all_experiencemenu{
-  border-top: solid 1px $g__fontColor;
-}
-
 .experiencemenu{
   border-bottom: solid 1px $g__fontColor;
   cursor: pointer;
@@ -812,6 +849,7 @@ footer{
 }
 
 .exmenu_textBox_wrap{
+  background: white;
   position: relative;
 }
 
@@ -875,6 +913,7 @@ footer{
     width: 21.5%;
   }
   td{
+    background: white;
     line-height: 1.75em;
     padding-bottom: 12px;
     padding-left: 14px;
@@ -1055,22 +1094,22 @@ footer{
 
 
 #wrapper {
-    //オーバーレイをabsolute指定するため必要
-    position: relative;
-    //アニメーションの指定
-    -webkit-transition: all .4s;
-       -moz-transition: all .4s;
-         -o-transition: all .4s;
-            transition: all .4s;
+  //オーバーレイをabsolute指定するため必要
+  position: relative;
+  //アニメーションの指定
+  -webkit-transition: all .4s;
+     -moz-transition: all .4s;
+       -o-transition: all .4s;
+          transition: all .4s;
   #drawer-toggle{
     position: fixed;
-    right: 0;
+    right: -1px;
     top: 0;
     width: 40px;
     height: 23px;
     padding-top: 17px;
     background-color: $g__fontColor;
-    z-index: 1000;
+    z-index: 10;
     span{
       margin: 0 auto;
       display: block;
@@ -1090,21 +1129,16 @@ footer{
 }
 
 #wrapper.open {
-    //クラス「open」が付いたら左に280px移動
-    -webkit-transform: translate3d(-75%, 0, 0);
-       -moz-transform: translate3d(-75%, 0, 0);
-            transform: translate3d(-75%, 0, 0);
-  #drawer-toggle{
-    .middle {
-    background: rgba(255, 255, 255, 0);
-    }
-    .top {
-      transform: rotate(-45deg) translateY(2px);
-    }
-    .bottom {
-      transform: rotate(45deg) translateY(-3px);
-    }
-  }
+  // position: fixed;
+  //クラス「open」が付いたら左に280px移動
+  -webkit-transform: translate3d(-75%, 0, 0);
+     -moz-transform: translate3d(-75%, 0, 0);
+          transform: translate3d(-75%, 0, 0);
+  // #drawer-toggle{
+  //   position: fixed;
+  //   right: -1px;
+  //   top: 0;
+  // }
 }
 
 /* オーバーレイ表示をするためのCSS */
@@ -1246,61 +1280,83 @@ footer{
 }
 
 .form{
-  float: left;
-  width: calc(75% - (100% * (75 / 1000)));
   @include clearfix;
+  @media #{$normal} {
+    float: left;
+    width: calc(75% - (100% * (75 / 1000)));
+  }
 }
 
 .inputForm{
-  float: left;
-  width: 100%;
-  th{
-    color: $dark__fontColor;
-    font-size: 13px;
-    text-align: left;
-    width: 91px;
-  }
-  td{
-    width: calc(100% - 28px);
+  //.inputBox{
+    float: left;
+    width: 100%;
+    th{
+      color: $dark__fontColor;
+      font-size: 13px;
+      text-align: left;
+      width: 91px;
+    }
+    td{
+      width: calc(100% - 28px);
+      input{
+        width: calc(100% - 28px);
+      }
+    }
     input{
+      border: none;
+      //background-color: #efefef;
+      color: $dark__fontColor;
+      font-size: $g__fontSize;
+      padding: 11px 14px 11px 14px;
+    }
+    textarea{
+      border: none;
+      //background-color: #efefef;
+      color: $dark__fontColor;
+      font-size: $g__fontSize;
+      padding: 11px 14px 11px 14px;
       width: calc(100% - 28px);
     }
-  }
-  input{
-    border: none;
-    //background-color: #efefef;
-    color: $dark__fontColor;
-    font-size: $g__fontSize;
-    padding: 11px 14px 11px 14px;
-  }
-  textarea{
-    border: none;
-    //background-color: #efefef;
-    color: $dark__fontColor;
-    font-size: $g__fontSize;
-    padding: 11px 14px 11px 14px;
-    width: calc(100% - 28px);
-  }
-  .textareaLabel{
-    padding-top: 20px;
-    vertical-align: top;
-  }
-  .confirm{
-    width: 88px;
-    height: 36px;
-    border: 1px solid $dark__fontColor;
-    color: $dark__fontColor;
-    font-weight: 400;
-    font-size: $link__fontSize;
-    text-align: center;
-    p{
-      display: inline;
-      line-height: 36px;
+    .textareaLabel{
+      padding-top: 20px;
+      vertical-align: top;
     }
-  }
+    .confirm{
+      width: 88px;
+      height: 36px;
+      border: 1px solid $dark__fontColor;
+      color: $dark__fontColor;
+      font-weight: 400;
+      font-size: $link__fontSize;
+      text-align: center;
+      .sendbutton{
+        background-color: transparent;
+        color: $dark__fontColor;
+        font-weight: 400;
+        font-size: $link__fontSize;
+        padding: 0;
+        line-height: 36px;
+        width: 100%;
+        cursor: pointer;
+      }
+      .backbutton{
+        background-color: transparent;
+        color: #FFFFFF;
+        padding: 0;
+        line-height: 36px;
+        width: 100%;
+        cursor: pointer;
+      }
+      p{
+        display: inline;
+        line-height: 36px;
+      }
+    }
+  //}
 }
 
-.inputBox{
+.inputBox, .inputBox_sub{
   input{
     background-color: #efefef;
   }

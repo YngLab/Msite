@@ -8,10 +8,12 @@
 
 .wrap{
   margin: 0 auto;
-  //max-width: 1440px;
-  //min-width: 1080px;
-  width: 92.5925%;
+  width: calc(100% * (1000 / 1080));
   @include clearfix;
+  @media #{$normal} {
+    max-width: 1440px;
+    min-width: 1080px;
+  }
   @media #{$small} {
     width: calc(100% * (728 / 768));
   }
@@ -55,6 +57,9 @@
 
 .topcap{
   padding: 50px 0 40px 0;
+  @media #{$small} {
+    padding: 46px 0 20px 0;
+  }
 }
 
 .future_entrance{
@@ -129,14 +134,18 @@ footer{
   width: 100%;
   margin-top: 60px;
   .foot{
-    height: 96px;
+    @media #{$normal} {
+      height: 96px;
+    }
     width: 100%;
+    @include clearfix;
   }
   .copyright{
     background: #9fa0a0;
     height: 24px;
     width: 100%;
   }
+  @include clearfix;
 }
 
 .HMP_logo{
@@ -155,7 +164,7 @@ footer{
 }
 
 .facility_explain{
-  margin-top: 50px;
+  padding-top: 50px;
   @media #{$small} {
     display: none;
   }
@@ -168,10 +177,24 @@ footer{
   }
 }
 
+.event_textBox_wrap, .event_pic,
+.exmenu_textBox_wrap, .exmenu_pic,
+.eventArchive_textBox_wrap, .eventArchive_pic{
+  @media #{$normal} {
+    max-height: calc(1440px * 0.25);
+    min-height: calc(1080px * 0.25);
+  }
+}
+
 .event_textBox_wrap{
   @media #{$normal} {
     width: 75%;
     height: 25vw;
+  }
+  .inputForm{
+    .confirm{
+      margin: 0;
+    }
   }
 }
 
@@ -462,6 +485,13 @@ footer{
 }
 
 .inputForm{
+  @media #{$small} {
+    display: none;
+  }
+}
+
+.inputBox, .inputBox_sub{
+  width: 100%;
   th{
     padding-right: 30px;
   }
@@ -471,12 +501,18 @@ footer{
   .confirm{
     margin: 40px 0 40px 0;
   }
-  @media #{$small} {
-    display: none;
+}
+
+.inputBox_sub{
+  td{
+    padding: 0 0 16px 0;
   }
 }
 
 .inputForm_sp{
+  @media #{$normal} {
+    display: none;
+  }
   .inputBox_sp, .inputBox_sp_b{
     margin-bottom: 20px;
     input{
@@ -493,8 +529,5 @@ footer{
   }
   .inputBox_sp_b{
     margin-bottom: 30px;
-  }
-  @media #{$normal} {
-    display: none;
   }
 }

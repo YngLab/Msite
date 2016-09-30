@@ -10,6 +10,10 @@
 
 <link rel = "stylesheet" href="css/style.css">
 <link rel = "shortcut icon" href="images/hmp.ico">
+<!--ランダム画像のjs-->
+<script src="js/jquery.js"></script>
+<script src="js/imageview.js"></script>
+
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
 <script src="js/jquery.flexslider.js"></script>
@@ -19,6 +23,45 @@
     animation: "slide"
   });
 </script>
+<!--ランダム画像のcss-->
+<style type="text/css">
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+#imageArea {
+  width: 100%;
+  position: relative;
+}
+#imageArea img {
+  position: absolute;
+  display: block; 
+  margin: 0 auto;
+}
+#imageBox1,
+#imageBox2,
+#imageBox3,
+#imageBox4,
+#imageBox5,
+#imageBox6,
+#imageBox7,
+#imageBox8 {
+  width: 25%;
+  float: left;
+}
+#indexTitle {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 60%;
+  border-top: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+}
+#indexTitleText {
+}
+</style>
+
 <div id="wrapper">
   <div id="header">
     <div id="drawer-toggle">
@@ -27,9 +70,12 @@
       <span class="bottom"></span>
     </div>
   </div>
-  <div class = "instaPic">
-    <!-- なんとかかんとか -->
+  <div class="imageContainer">
+    <div id="imageArea"></div>
+      <div id="indexTitle">
+      <div id="indexTitleText"><h1>はこだてみらいプロジェクト</h1></div>
   </div>
+</div>
   <div class = "bgcolor">
     <div class = "wrap">
       <h2 class = "topcap">
@@ -43,17 +89,63 @@
                 <div class = "latestBox_future">
                   <div class = "remaindays_future">
                     <div class = "caption">
-                      あと5日
+                      あと12日
                     </div>
                   </div>
                   <div class = "latestBox_img">
-                    <img src="images/sample_relatestimg.jpg" alt="イベント1">
+                    <img src="images/event1_FCH.jpg" alt="イベント1">
+                  </div>
+                  <div class = "eventText">
+                    <p class = "eventsch caption FCHcolor">
+                      10/12(水)
+                    </p>
+                    <p class = "eventtitle">先行体験会</p>
+                    <p class = "eventplace caption">
+                      みらい館
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>          
+          <li>
+              <a href = "#">
+                <div class = "latestBox_kids">
+                  <div class = "remaindays_kids">
+                    <div class = "caption">
+                      あと12日
+                    </div>
+                  </div>
+                  <div class = "latestBox_img">
+                    <img src="images/event1_KPH.jpg" alt="イベント2">
+                  </div>
+                  <div class = "eventText">
+                    <p class = "eventsch caption KPHcolor">
+                      10/12(水)
+                    </p>
+                    <p class = "eventtitle">先行体験会</p>
+                    <p class = "eventplace caption">
+                      キッズプラザ
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href = "#">
+                <div class = "latestBox_future">
+                  <div class = "remaindays_future">
+                    <div class = "caption">
+                      あと15日
+                    </div>
+                  </div>
+                  <div class = "latestBox_img">
+                    <img src="images/event1_FCH.jpg" alt="イベント3">
                   </div>
                   <div class = "eventText">
                     <p class = "eventsch caption FCHcolor">
                       10/15(土)
                     </p>
-                    <p class = "eventtitle">オープニングセレモニーあああああアアアアアアオープニングセレモニーあああああアアアアアア</p>
+                    <p class = "eventtitle">トークセッション</p>
                     <p class = "eventplace caption">
                       みらい館
                     </p>
@@ -66,61 +158,17 @@
                 <div class = "latestBox_future">
                   <div class = "remaindays_future">
                     <div class = "caption">
-                      あと5日
+                      あと16日
                     </div>
                   </div>
                   <div class = "latestBox_img">
-                    <img src="images/sample_relatestimg.jpg" alt="イベント1">
+                    <img src="images/event1_FCH.jpg" alt="イベント4">
                   </div>
                   <div class = "eventText">
                     <p class = "eventsch caption FCHcolor">
-                      10/15(土)
+                      10/16(日)
                     </p>
-                    <p class = "eventtitle">オープニングセレモニー</p>
-                    <p class = "eventplace caption">
-                      みらい館
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </li><li>
-              <a href = "#">
-                <div class = "latestBox_kids">
-                  <div class = "remaindays_kids">
-                    <div class = "caption">
-                      あと5日
-                    </div>
-                  </div>
-                  <div class = "latestBox_img">
-                    <img src="images/sample_relatestimg.jpg" alt="イベント1">
-                  </div>
-                  <div class = "eventText">
-                    <p class = "eventsch caption KPHcolor">
-                      10/15(土)
-                    </p>
-                    <p class = "eventtitle">オープニングセレモニー</p>
-                    <p class = "eventplace caption">
-                      みらい館
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </li><li>
-              <a href = "#">
-                <div class = "latestBox_future">
-                  <div class = "remaindays_future">
-                    <div class = "caption">
-                      あと5日
-                    </div>
-                  </div>
-                  <div class = "latestBox_img">
-                    <img src="images/sample_relatestimg.jpg" alt="イベント1">
-                  </div>
-                  <div class = "eventText">
-                    <p class = "eventsch caption FCHcolor">
-                      10/15(土)
-                    </p>
-                    <p class = "eventtitle">オープニングセレモニー</p>
+                    <p class = "eventtitle">井上涼さんアニメーションワークショップ</p>
                     <p class = "eventplace caption">
                       みらい館
                     </p>
@@ -136,53 +184,53 @@
           <div class = "latestBox_future">
             <div class = "remaindays_future">
               <div class = "caption">
-                あと5日
+                あと12日
               </div>
             </div>
-            <img src="images/sample_relatestimg.jpg" alt="イベント1">
+            <img src="images/event1_FCH.jpg" alt="イベント1">
             <div class = "eventText">
               <p class = "eventsch caption FCHcolor">
-                10/15(土)
+                10/12(水)
               </p>
-              <p class = "eventtitle">オープニングセレモニー</p>
+              <p class = "eventtitle">先行体験会</p>
               <p class = "eventplace caption">
                 みらい館
               </p>
             </div>
           </div>
-        </a>
-        <a href = "#">
-          <div class = "latestBox_future">
-            <div class = "remaindays_future">
-              <div class = "caption">
-                あと5日
-              </div>
-            </div>
-            <img src="images/sample_relatestimg.jpg" alt="イベント2">
-            <div class = "eventText">
-              <p class = "eventsch caption FCHcolor">
-                10/15(土)
-              </p>
-              <p class = "eventtitle">オープニングセレモニー</p>
-              <p class = "eventplace caption">
-                みらい館
-              </p>
-            </div>
-          </div>
-        </a>
+        </a>      
         <a href = "#">
           <div class = "latestBox_kids">
             <div class = "remaindays_kids">
               <div class = "caption">
-                あと5日
+                あと12日
               </div>
             </div>
-            <img src="images/sample_relatestimg.jpg" alt="イベント3">
+            <img src="images/event1_KPH.jpg" alt="イベント2">
             <div class = "eventText">
               <p class = "eventsch caption KPHcolor">
+                10/12(水)
+              </p>
+              <p class = "eventtitle">先行体験会</p>
+              <p class = "eventplace caption">
+                キッズプラザ
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href = "#">
+          <div class = "latestBox_future">
+            <div class = "remaindays_future">
+              <div class = "caption">
+                あと15日
+              </div>
+            </div>
+            <img src="images/event1_FCH.jpg" alt="イベント3">
+            <div class = "eventText">
+              <p class = "eventsch caption FCHcolor">
                 10/15(土)
               </p>
-              <p class = "eventtitle">オープニングセレモニー</p>
+              <p class = "eventtitle">トークセッション</p>
               <p class = "eventplace caption">
                 みらい館
               </p>
@@ -193,15 +241,15 @@
           <div class = "latestBox_future">
             <div class = "remaindays_future">
               <div class = "caption">
-                あと5日
+                あと16日
               </div>
             </div>
-            <img src="images/sample_relatestimg.jpg" alt="イベント4">
+            <img src="images/event1_FCH.jpg" alt="イベント4">
             <div class = "eventText">
               <p class = "eventsch caption FCHcolor">
-                10/15(土)
+                10/16(日)
               </p>
-              <p class = "eventtitle">オープニングセレモニー</p>
+              <p class = "eventtitle">井上涼さんアニメーションワークショップ</p>
               <p class = "eventplace caption">
                 みらい館
               </p>
@@ -246,23 +294,16 @@
         </p>
         <a href = "KPH.html">
           <div class = "kids_logo">
-            <img src = "images/KPHlogo.svg" alt = "はこだてキッズプラザロゴ">
+            <img src = "images/index/KPHlogo.svg" alt = "はこだてキッズプラザロゴ">
           </div>
         </a>
         <a href = "KPH.html">
           <div class = "kids_contents">
-            <img src="images/sample_contents.jpg" alt="コンテンツ">
+            <img src="images/index/kph_thumbnail.jpg" alt="コンテンツ">
             <div class = "kids_textbox right_textbox">
               <div class = "h2-top">
                 体験メニュー
               </div>
-              <p>
-                キッズプラザのコンテンツは
-                <br>
-                自由に体を動かすことから
-                <br>
-                知恵を身につける
-              </p>
             </div>
           </div>
         </a>
@@ -272,15 +313,8 @@
               <div class = "h2-top">
                 施設情報
               </div>
-              <p>
-                プレイグラウンド、託児室
-                <br>
-                相談室、 多目的スペース
-                <br>
-                授乳・おむつ替え室
-              </p>
             </div>
-            <img src="images/sample_contents.jpg" alt="コンテンツ">
+            <img src="images/index/kph_facility.jpg" alt="コンテンツ">
           </div>
         </a>
       </div><!-- ここまでがkids_entance -->
@@ -292,23 +326,16 @@
         </div>
         <a href = "FCH.html">
           <div class = "future_logo">
-            <img src = "images/FCHlogo.svg" alt = "はこだてみらい館ロゴ">
+            <img src = "images/index/FCHlogo.svg" alt = "はこだてみらい館ロゴ">
           </div>
         </a>
         <a href = "FCH.html">
           <div class = "future_contents">
-            <img src="images/sample_contents.jpg" alt="コンテンツ">
+            <img src="images/index/fch_thumbnail.jpg" alt="コンテンツ">
             <div class = "future_textbox right_textbox">
               <div class = "h2-top">
                 体験メニュー
               </div>
-              <p>
-                みらい館のコンテンツは
-                <br>
-                最先端技術を利用し
-                <br>
-                創造性を養う
-              </p>
             </div>
           </div>
         </a>
@@ -318,15 +345,8 @@
               <div class = "h2-top">
                 施設情報
               </div>
-              <p>
-                多目的ホール、マルチシアター
-                <br>
-                コミュニケーションスペース
-                <br>
-                ラボ、無線LAN
-              </p>
             </div>
-            <img src="images/sample_contents.jpg" alt="コンテンツ">
+            <img src="images/index/fch_facility.jpg" alt="コンテンツ">
           </div>
         </a>
       </div><!-- ここまでがfuture_entance -->
@@ -382,10 +402,12 @@
           </div>
         </div>
       </a>
+      <!-- 最後にこの関数を読み込む-->
+      <script>updateImageView();</script>
     </div><!-- ここまでがwrap -->
   </div>
   <footer>
-    <img src = "images/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
+    <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
     <div class = "foot">
       <div class ="footerLinks">
         <a href = "member.html" class="links">メンバー</a>
@@ -398,10 +420,10 @@
       </div>
       <div class = "SNSbutton">
         <a href = "https://www.facebook.com/hakodatemiraiproject/">
-          <img src = "images/fb.png" alt="公式Facebook" class = "SNS">
+          <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
         </a>
         <a href = "https://www.instagram.com/instagramjapan/?hl=ja">
-          <img src = "images/ig.png" alt="Instagram" class = "SNS">
+          <img src = "images/common/ig.png" alt="Instagram" class = "SNS">
         </a>
       </div>
       <div class = "copyright">

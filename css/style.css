@@ -47,7 +47,7 @@ table {
   border-spacing: 0;
 }
 
-html {
+html, input, textarea {
   color: #9fa0a0;
   font-family: 'Noto Sans Japanese', sans-serif;
   font-size: 14px;
@@ -99,8 +99,10 @@ a:hover {
   color: #8fc31f;
 }
 
-.bgcolor {
-  background-color: #f7f8f8;
+@media screen and (min-width: 769px) {
+  .bgcolor {
+    background-color: #f7f8f8;
+  }
 }
 
 .linkText {
@@ -136,12 +138,18 @@ a:hover {
 
 .wrap {
   margin: 0 auto;
-  width: 92.5925%;
+  width: calc(100% * (1000 / 1080));
 }
 .wrap:after {
   clear: both;
   content: "";
   display: block;
+}
+@media screen and (min-width: 769px) {
+  .wrap {
+    max-width: 1440px;
+    min-width: 1080px;
+  }
 }
 @media screen and (max-width: 768px) {
   .wrap {
@@ -191,6 +199,11 @@ a:hover {
 
 .topcap {
   padding: 50px 0 40px 0;
+}
+@media screen and (max-width: 768px) {
+  .topcap {
+    padding: 46px 0 20px 0;
+  }
 }
 
 .future_entrance {
@@ -290,13 +303,27 @@ footer {
   margin-top: 60px;
 }
 footer .foot {
-  height: 96px;
   width: 100%;
+}
+@media screen and (min-width: 769px) {
+  footer .foot {
+    height: 96px;
+  }
+}
+footer .foot:after {
+  clear: both;
+  content: "";
+  display: block;
 }
 footer .copyright {
   background: #9fa0a0;
   height: 24px;
   width: 100%;
+}
+footer:after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
 .HMP_logo {
@@ -315,7 +342,7 @@ footer .copyright {
 }
 
 .facility_explain {
-  margin-top: 50px;
+  padding-top: 50px;
 }
 @media screen and (max-width: 768px) {
   .facility_explain {
@@ -333,10 +360,22 @@ footer .copyright {
 }
 
 @media screen and (min-width: 769px) {
+  .event_textBox_wrap, .event_pic,
+  .exmenu_textBox_wrap, .exmenu_pic,
+  .eventArchive_textBox_wrap, .eventArchive_pic {
+    max-height: calc(1440px * 0.25);
+    min-height: calc(1080px * 0.25);
+  }
+}
+
+@media screen and (min-width: 769px) {
   .event_textBox_wrap {
     width: 75%;
     height: 25vw;
   }
+}
+.event_textBox_wrap .inputForm .confirm {
+  margin: 0;
 }
 
 @media screen and (min-width: 769px) {
@@ -627,21 +666,34 @@ footer .copyright {
   }
 }
 
-.inputForm th {
-  padding-right: 30px;
-}
-.inputForm td {
-  padding: 8px 0 8px 0;
-}
-.inputForm .confirm {
-  margin: 40px 0 40px 0;
-}
 @media screen and (max-width: 768px) {
   .inputForm {
     display: none;
   }
 }
 
+.inputBox, .inputBox_sub {
+  width: 100%;
+}
+.inputBox th, .inputBox_sub th {
+  padding-right: 30px;
+}
+.inputBox td, .inputBox_sub td {
+  padding: 8px 0 8px 0;
+}
+.inputBox .confirm, .inputBox_sub .confirm {
+  margin: 40px 0 40px 0;
+}
+
+.inputBox_sub td {
+  padding: 0 0 16px 0;
+}
+
+@media screen and (min-width: 769px) {
+  .inputForm_sp {
+    display: none;
+  }
+}
 .inputForm_sp .inputBox_sp, .inputForm_sp .inputBox_sp_b {
   margin-bottom: 20px;
 }
@@ -658,11 +710,6 @@ footer .copyright {
 }
 .inputForm_sp .inputBox_sp_b {
   margin-bottom: 30px;
-}
-@media screen and (min-width: 769px) {
-  .inputForm_sp {
-    display: none;
-  }
 }
 
 /* module */
@@ -854,10 +901,15 @@ footer .copyright {
 }
 .future_entrance .future_logo {
   border-bottom: solid 1px #f39800;
-  text-align: center;
+  height: 200px;
+  position: relative;
 }
 .future_entrance .future_logo img {
-  width: 43.3884%;
+  width: 51.6528%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
 }
 .future_entrance .future_logo:hover {
   opacity: 0.5;
@@ -883,7 +935,7 @@ footer .copyright {
 }
 .future_entrance .future_textbox {
   float: left;
-  margin: -58px 0 0 -100px;
+  margin: -12px 0 0 -100px;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -938,10 +990,14 @@ footer .copyright {
 .kids_entrance .kids_logo {
   border-bottom: solid 1px #8fc31f;
   height: 200px;
-  text-align: center;
+  position: relative;
 }
 .kids_entrance .kids_logo img {
   width: 51.6528%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
 }
 .kids_entrance .kids_logo:hover {
   opacity: 0.5;
@@ -967,7 +1023,7 @@ footer .copyright {
 }
 .kids_entrance .kids_textbox {
   float: left;
-  margin: -58px 0 0 -100px;
+  margin: -12px 0 0 -100px;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -1371,8 +1427,21 @@ footer .copyright p {
   }
 }
 
-#all_eventmenu {
+#all_eventmenu, #all_experiencemenu {
   border-top: solid 1px #9fa0a0;
+}
+@media screen and (min-width: 769px) {
+  #all_eventmenu, #all_experiencemenu {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    min-width: 1080px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  #all_eventmenu, #all_experiencemenu {
+    padding-bottom: 40px;
+  }
 }
 
 .eventmenu {
@@ -1385,6 +1454,7 @@ footer .copyright p {
 }
 
 .event_textBox_wrap {
+  background: white;
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -1457,6 +1527,7 @@ footer .copyright p {
 }
 
 .eventArchive_textBox_wrap {
+  background: white;
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -1482,19 +1553,43 @@ footer .copyright p {
   }
 }
 
-.button {
-  position: absolute;
+/*
+.button{
+  //position: absolute;
   width: 88px;
   height: 36px;
+  border: 1px solid $dark__fontColor;
+  color: $dark__fontColor;
+  font-weight: 400;
+  font-size: $link__fontSize;
+  text-align: center;
+  p{
+    display: inline;
+    line-height: 36px;
+  }
+}
+*/
+.button {
+  background: transparent;
   border: 1px solid #727171;
   color: #727171;
   font-weight: 400;
   font-size: 15px;
+  height: 36px;
   text-align: center;
+  width: 88px;
 }
-.button p {
-  display: inline;
-  line-height: 36px;
+
+.subscription {
+  bottom: 24px;
+  left: 50px;
+  position: absolute;
+}
+@media screen and (max-width: 768px) {
+  .subscription {
+    bottom: 40px;
+    left: 20px;
+  }
 }
 
 .subscriptionButton {
@@ -1530,10 +1625,6 @@ footer .copyright p {
   margin-bottom: 6px;
 }
 
-#all_experiencemenu {
-  border-top: solid 1px #9fa0a0;
-}
-
 .experiencemenu {
   border-bottom: solid 1px #9fa0a0;
   cursor: pointer;
@@ -1553,6 +1644,7 @@ footer .copyright p {
 }
 
 .exmenu_textBox_wrap {
+  background: white;
   position: relative;
 }
 
@@ -1619,6 +1711,7 @@ footer .copyright p {
   width: 21.5%;
 }
 .info_table_FCH td, .info_table_KPH td {
+  background: white;
   line-height: 1.75em;
   padding-bottom: 12px;
   padding-left: 14px;
@@ -1798,13 +1891,13 @@ footer .copyright p {
 }
 #wrapper #drawer-toggle {
   position: fixed;
-  right: 0;
+  right: -1px;
   top: 0;
   width: 40px;
   height: 23px;
   padding-top: 17px;
   background-color: #9fa0a0;
-  z-index: 1000;
+  z-index: 10;
 }
 #wrapper #drawer-toggle span {
   margin: 0 auto;
@@ -1826,15 +1919,6 @@ footer .copyright p {
   -webkit-transform: translate3d(-75%, 0, 0);
   -moz-transform: translate3d(-75%, 0, 0);
   transform: translate3d(-75%, 0, 0);
-}
-#wrapper.open #drawer-toggle .middle {
-  background: rgba(255, 255, 255, 0);
-}
-#wrapper.open #drawer-toggle .top {
-  transform: rotate(-45deg) translateY(2px);
-}
-#wrapper.open #drawer-toggle .bottom {
-  transform: rotate(45deg) translateY(-3px);
 }
 
 /* オーバーレイ表示をするためのCSS */
@@ -1968,14 +2052,16 @@ footer .copyright p {
   }
 }
 
-.form {
-  float: left;
-  width: calc(75% - (100% * (75 / 1000)));
-}
 .form:after {
   clear: both;
   content: "";
   display: block;
+}
+@media screen and (min-width: 769px) {
+  .form {
+    float: left;
+    width: calc(75% - (100% * (75 / 1000)));
+  }
 }
 
 .inputForm {
@@ -2020,15 +2106,33 @@ footer .copyright p {
   font-size: 15px;
   text-align: center;
 }
+.inputForm .confirm .sendbutton {
+  background-color: transparent;
+  color: #727171;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 0;
+  line-height: 36px;
+  width: 100%;
+  cursor: pointer;
+}
+.inputForm .confirm .backbutton {
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 0;
+  line-height: 36px;
+  width: 100%;
+  cursor: pointer;
+}
 .inputForm .confirm p {
   display: inline;
   line-height: 36px;
 }
 
-.inputBox input {
+.inputBox input, .inputBox_sub input {
   background-color: #efefef;
 }
-.inputBox textarea {
+.inputBox textarea, .inputBox_sub textarea {
   background-color: #efefef;
 }
 
