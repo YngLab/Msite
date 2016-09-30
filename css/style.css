@@ -47,7 +47,7 @@ table {
   border-spacing: 0;
 }
 
-html {
+html, input, textarea {
   color: #9fa0a0;
   font-family: 'Noto Sans Japanese', sans-serif;
   font-size: 14px;
@@ -925,7 +925,7 @@ footer:after {
 }
 .future_entrance .future_textbox {
   float: left;
-  margin: -58px 0 0 -100px;
+  margin: -12px 0 0 -100px;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -1009,7 +1009,7 @@ footer:after {
 }
 .kids_entrance .kids_textbox {
   float: left;
-  margin: -58px 0 0 -100px;
+  margin: -12px 0 0 -100px;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -2077,6 +2077,9 @@ footer .copyright p {
 }
 .inputForm .confirm .sendbutton {
   background-color: transparent;
+  color: #727171;
+  font-weight: 400;
+  font-size: 15px;
   padding: 0;
   line-height: 36px;
   width: 100%;

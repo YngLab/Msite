@@ -210,9 +210,7 @@
   }
   .future_textbox{
     float: left;
-    margin: -58px 0 0 -100px;
-    //margin-left: -100px;
-    //margin-top: -58px;
+    margin: -12px 0 0 -100px;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -294,9 +292,7 @@
   }
   .kids_textbox{
     float: left;
-    margin: -58px 0 0 -100px;
-    //margin-left: -100px;
-    //margin-top: -58px;
+    margin: -12px 0 0 -100px;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -1306,6 +1302,9 @@ footer{
     text-align: center;
     .sendbutton{
       background-color: transparent;
+      color: $dark__fontColor;
+      font-weight: 400;
+      font-size: $link__fontSize;
       padding: 0;
       line-height: 36px;
       width: 100%;
