@@ -1,3 +1,12 @@
+<?php
+if(!$_POST){
+  header('Location: ../');
+}
+
+session_start();
+$_SESSION = $_POST;
+?>
+
 <!DOCTYPE html>
 <meta charset = "utf-8">
 <meta name = "viewport" content="width=device-width,initial-scale=1.0" />  <!-- なんだこの宣言文は -->
@@ -54,84 +63,55 @@
   </header>
   <div class = "pageTitle">
     <div class = "wrap">
-      <p class = "titleText">お問い合わせ</p>
+      <p class = "titleText">お問い合わせの確認</p>
     </div>
   </div>
   <div class = "wrap">
   <!-- 以下body -->
-    <div class = "autoHeight">
-      <form class = "form" action = "confirm_contact.php" method = "post">
-        <div class = "radio">
-          <span class = "radioElement">
-            <input type = "radio" name = "radio" id = "fch" value = "fch">
-            <label for = "fch">
-              <span class = "radioFont">はこだてみらい館</span>
-            </label>
-          </span>
-          <span class = "radioElement">
-            <input type = "radio" name = "radio" id = "hkp" value = "hkp">
-            <label for = "hkp">
-              <span class = "radioFont">はこだてキッズプラザ</span>
-            </label>
-          </span>
-          <span class = "radioElement">
-            <input type = "radio" name = "radio" id = "both" value = "both">
-            <label for = "both">
-              <span class = "radioFont">どちらとも</span>
-            </label>
-          </span>
-        </div>
-        <form class = "form" action = "php/hoge.php" method = "post">
-          <table class = "inputForm inputBox">
-            <tr>
-              <th>お名前</th>
-              <td>
-                <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
-              </td>
-            </tr>
-            <tr>
-              <th>メールアドレス</th>
-              <td>
-                <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
-              </td>
-            </tr>
-            <tr>
-              <th class = "textareaLabel">問い合わせ内容</th>
-              <td>
-                <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <th>　</th>
-              <td>
-                <div class = "confirm">
-                  <input type="submit" value="確認" class = "sendbutton">
+    <div>
+      <div class = "radio">
+        <input type = "radio" name = "radio" id = "fch" value = "fch" checked>
+          <label for = "fch"><span class = "radioFont">はこだてみらい館</span></label>
+        <input type = "radio" name = "radio" id = "hkp" value = "hkp">
+          <label for = "hkp"><span class = "radioFont">はこだてキッズプラザ</span></label>
+        <input type = "radio" name = "radio" id = "both" value = "both">
+          <label for = "both"><span class = "radioFont">どちらとも</span></label>
+      </div>
+      <form class = "form" action = "php/hoge.php" method = "post">
+        <table class = "inputForm">
+          <tr>
+            <th>お名前</th>
+            <td>
+              <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['name']);?> readonly>
+            </td>
+          </tr>
+          <tr>
+            <th>メールアドレス</th>
+            <td>
+              <input type = "email" name ="email" maxlength = "255" value=<?php echo htmlspecialchars($_POST['email']);?> readonly>
+            </td>
+          </tr>
+          <tr>
+            <th class = "textareaLabel">問い合わせ内容</th>
+            <td>
+              <textarea name = "comment" id = "comment" cols = "40" rows = "5" readonly><?php echo htmlspecialchars($_POST['message']);?></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <a href = "javascript:history.back();">
+                <div class = "confirm revision">
+                  <input type="button" value="訂正" class = "backbutton">
                 </div>
-              </td>
-            </tr>
-          </table>
-        </form>
-        <div class = "inputForm_sp">
-          <div class = "inputBox_sp">
-            <p>お名前</p>
-            <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
-          </div>
-          <div class = "inputBox_sp">
-            <p>メールアドレス</p>
-            <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
-          </div>
-          <div class = "inputBox_sp_b">
-            <p>問い合わせ内容</p>
-            <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
-          </div>
-          <div>
-            <a href = "confirm_contact.html">
+              </a>
+            </th>
+            <td>
               <div class = "confirm">
-                <p>確認</p>
+                <input type="submit" value="送信" class = "sendbutton">
               </div>
-            </a>
-          </div>
-        </div>
+            </td>
+          </tr>
+        </table>
       </form>
     </div>
   <!-- ここまで -->
