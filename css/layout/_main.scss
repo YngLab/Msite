@@ -485,6 +485,13 @@ footer{
 }
 
 .inputForm{
+  @media #{$small} {
+    display: none;
+  }
+}
+
+.inputBox, .inputBox_sub{
+  width: 100%;
   th{
     padding-right: 30px;
   }
@@ -494,12 +501,18 @@ footer{
   .confirm{
     margin: 40px 0 40px 0;
   }
-  @media #{$small} {
-    display: none;
+}
+
+.inputBox_sub{
+  td{
+    padding: 0 0 16px 0;
   }
 }
 
 .inputForm_sp{
+  @media #{$normal} {
+    display: none;
+  }
   .inputBox_sp, .inputBox_sp_b{
     margin-bottom: 20px;
     input{
@@ -516,8 +529,5 @@ footer{
   }
   .inputBox_sp_b{
     margin-bottom: 30px;
-  }
-  @media #{$normal} {
-    display: none;
   }
 }

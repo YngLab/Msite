@@ -47,7 +47,7 @@ table {
   border-spacing: 0;
 }
 
-html {
+html, input, textarea {
   color: #9fa0a0;
   font-family: 'Noto Sans Japanese', sans-serif;
   font-size: 14px;
@@ -666,21 +666,34 @@ footer:after {
   }
 }
 
-.inputForm th {
-  padding-right: 30px;
-}
-.inputForm td {
-  padding: 8px 0 8px 0;
-}
-.inputForm .confirm {
-  margin: 40px 0 40px 0;
-}
 @media screen and (max-width: 768px) {
   .inputForm {
     display: none;
   }
 }
 
+.inputBox, .inputBox_sub {
+  width: 100%;
+}
+.inputBox th, .inputBox_sub th {
+  padding-right: 30px;
+}
+.inputBox td, .inputBox_sub td {
+  padding: 8px 0 8px 0;
+}
+.inputBox .confirm, .inputBox_sub .confirm {
+  margin: 40px 0 40px 0;
+}
+
+.inputBox_sub td {
+  padding: 0 0 16px 0;
+}
+
+@media screen and (min-width: 769px) {
+  .inputForm_sp {
+    display: none;
+  }
+}
 .inputForm_sp .inputBox_sp, .inputForm_sp .inputBox_sp_b {
   margin-bottom: 20px;
 }
@@ -697,11 +710,6 @@ footer:after {
 }
 .inputForm_sp .inputBox_sp_b {
   margin-bottom: 30px;
-}
-@media screen and (min-width: 769px) {
-  .inputForm_sp {
-    display: none;
-  }
 }
 
 /* module */
@@ -893,10 +901,15 @@ footer:after {
 }
 .future_entrance .future_logo {
   border-bottom: solid 1px #f39800;
-  text-align: center;
+  height: 200px;
+  position: relative;
 }
 .future_entrance .future_logo img {
-  width: 43.3884%;
+  width: 51.6528%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
 }
 .future_entrance .future_logo:hover {
   opacity: 0.5;
@@ -922,7 +935,7 @@ footer:after {
 }
 .future_entrance .future_textbox {
   float: left;
-  margin: -58px 0 0 -100px;
+  margin: -12px 0 0 -100px;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -977,10 +990,14 @@ footer:after {
 .kids_entrance .kids_logo {
   border-bottom: solid 1px #8fc31f;
   height: 200px;
-  text-align: center;
+  position: relative;
 }
 .kids_entrance .kids_logo img {
   width: 51.6528%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
 }
 .kids_entrance .kids_logo:hover {
   opacity: 0.5;
@@ -1006,7 +1023,7 @@ footer:after {
 }
 .kids_entrance .kids_textbox {
   float: left;
-  margin: -58px 0 0 -100px;
+  margin: -12px 0 0 -100px;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -1856,7 +1873,7 @@ footer .copyright p {
   height: 23px;
   padding-top: 17px;
   background-color: #9fa0a0;
-  z-index: 1000;
+  z-index: 10;
 }
 #wrapper #drawer-toggle span {
   margin: 0 auto;
@@ -1878,15 +1895,6 @@ footer .copyright p {
   -webkit-transform: translate3d(-75%, 0, 0);
   -moz-transform: translate3d(-75%, 0, 0);
   transform: translate3d(-75%, 0, 0);
-}
-#wrapper.open #drawer-toggle .middle {
-  background: rgba(255, 255, 255, 0);
-}
-#wrapper.open #drawer-toggle .top {
-  transform: rotate(-45deg) translateY(2px);
-}
-#wrapper.open #drawer-toggle .bottom {
-  transform: rotate(45deg) translateY(-3px);
 }
 
 /* オーバーレイ表示をするためのCSS */
@@ -2020,14 +2028,16 @@ footer .copyright p {
   }
 }
 
-.form {
-  float: left;
-  width: calc(75% - (100% * (75 / 1000)));
-}
 .form:after {
   clear: both;
   content: "";
   display: block;
+}
+@media screen and (min-width: 769px) {
+  .form {
+    float: left;
+    width: calc(75% - (100% * (75 / 1000)));
+  }
 }
 
 .inputForm {
@@ -2074,6 +2084,9 @@ footer .copyright p {
 }
 .inputForm .confirm .sendbutton {
   background-color: transparent;
+  color: #727171;
+  font-weight: 400;
+  font-size: 15px;
   padding: 0;
   line-height: 36px;
   width: 100%;
@@ -2092,10 +2105,10 @@ footer .copyright p {
   line-height: 36px;
 }
 
-.inputBox input {
+.inputBox input, .inputBox_sub input {
   background-color: #efefef;
 }
-.inputBox textarea {
+.inputBox textarea, .inputBox_sub textarea {
   background-color: #efefef;
 }
 
