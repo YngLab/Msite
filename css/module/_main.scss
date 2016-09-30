@@ -181,9 +181,14 @@
   }
   .future_logo{
     border-bottom: solid 1px $g__color-future;
-    text-align: center;
+    height: 200px;
+    position: relative;
     img{
-      width: 43.3884%;
+      width: 51.6528%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
     }
   }
   .future_logo:hover{
@@ -263,9 +268,13 @@
   .kids_logo{
     border-bottom: solid 1px $g__color-kids;
     height: 200px;
-    text-align: center;
+    position: relative;
     img{
       width: 51.6528%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
     }
   }
   .kids_logo:hover{
