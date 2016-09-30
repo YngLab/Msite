@@ -99,8 +99,10 @@ a:hover {
   color: #8fc31f;
 }
 
-.bgcolor {
-  background-color: #f7f8f8;
+@media screen and (min-width: 769px) {
+  .bgcolor {
+    background-color: #f7f8f8;
+  }
 }
 
 .linkText {
@@ -136,7 +138,7 @@ a:hover {
 
 .wrap {
   margin: 0 auto;
-  width: 92.5925%;
+  width: calc(100% * (1000 / 1080));
 }
 .wrap:after {
   clear: both;
@@ -155,6 +157,9 @@ a:hover {
   }
 }
 
+#wrapper {
+  overflow: hidden;
+}
 @media screen and (min-width: 769px) {
   #wrapper #header {
     display: none;
@@ -197,6 +202,11 @@ a:hover {
 
 .topcap {
   padding: 50px 0 40px 0;
+}
+@media screen and (max-width: 768px) {
+  .topcap {
+    padding: 46px 0 20px 0;
+  }
 }
 
 .future_entrance {
@@ -296,13 +306,27 @@ footer {
   margin-top: 60px;
 }
 footer .foot {
-  height: 96px;
   width: 100%;
+}
+@media screen and (min-width: 769px) {
+  footer .foot {
+    height: 96px;
+  }
+}
+footer .foot:after {
+  clear: both;
+  content: "";
+  display: block;
 }
 footer .copyright {
   background: #9fa0a0;
   height: 24px;
   width: 100%;
+}
+footer:after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
 .HMP_logo {
@@ -321,7 +345,7 @@ footer .copyright {
 }
 
 .facility_explain {
-  margin-top: 50px;
+  padding-top: 50px;
 }
 @media screen and (max-width: 768px) {
   .facility_explain {
@@ -335,6 +359,15 @@ footer .copyright {
 @media screen and (min-width: 769px) {
   .facility_explain_sp {
     display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .event_textBox_wrap, .event_pic,
+  .exmenu_textBox_wrap, .exmenu_pic,
+  .eventArchive_textBox_wrap, .eventArchive_pic {
+    max-height: calc(1440px * 0.25);
+    min-height: calc(1080px * 0.25);
   }
 }
 
@@ -682,7 +715,6 @@ footer .copyright {
 .latestEvent {
   font-size: 0;
   padding-bottom: 40px;
-  margin-top: 40px;
 }
 .latestEvent .latestBox_future {
   background-color: #ffffff;
@@ -1381,8 +1413,21 @@ footer .copyright p {
   }
 }
 
-#all_eventmenu {
+#all_eventmenu, #all_experiencemenu {
   border-top: solid 1px #9fa0a0;
+}
+@media screen and (min-width: 769px) {
+  #all_eventmenu, #all_experiencemenu {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    min-width: 1080px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  #all_eventmenu, #all_experiencemenu {
+    padding-bottom: 40px;
+  }
 }
 
 .eventmenu {
@@ -1395,6 +1440,7 @@ footer .copyright p {
 }
 
 .event_textBox_wrap {
+  background: white;
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -1467,6 +1513,7 @@ footer .copyright p {
 }
 
 .eventArchive_textBox_wrap {
+  background: white;
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -1540,10 +1587,6 @@ footer .copyright p {
   margin-bottom: 6px;
 }
 
-#all_experiencemenu {
-  border-top: solid 1px #9fa0a0;
-}
-
 .experiencemenu {
   border-bottom: solid 1px #9fa0a0;
   cursor: pointer;
@@ -1563,6 +1606,7 @@ footer .copyright p {
 }
 
 .exmenu_textBox_wrap {
+  background: white;
   position: relative;
 }
 
@@ -1629,6 +1673,7 @@ footer .copyright p {
   width: 21.5%;
 }
 .info_table_FCH td, .info_table_KPH td {
+  background: white;
   line-height: 1.75em;
   padding-bottom: 12px;
   padding-left: 14px;
@@ -1808,7 +1853,7 @@ footer .copyright p {
 }
 #wrapper #drawer-toggle {
   position: fixed;
-  right: 0;
+  right: -1px;
   top: 0;
   width: 40px;
   height: 23px;
