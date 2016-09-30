@@ -181,9 +181,14 @@
   }
   .future_logo{
     border-bottom: solid 1px $g__color-future;
-    text-align: center;
+    height: 200px;
+    position: relative;
     img{
-      width: 43.3884%;
+      width: 51.6528%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
     }
   }
   .future_logo:hover{
@@ -263,9 +268,13 @@
   .kids_logo{
     border-bottom: solid 1px $g__color-kids;
     height: 200px;
-    text-align: center;
+    position: relative;
     img{
       width: 51.6528%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
     }
   }
   .kids_logo:hover{
@@ -1076,7 +1085,7 @@ footer{
     height: 23px;
     padding-top: 17px;
     background-color: $g__fontColor;
-    z-index: 1000;
+    z-index: 10;
     span{
       margin: 0 auto;
       display: block;
@@ -1101,17 +1110,11 @@ footer{
   -webkit-transform: translate3d(-75%, 0, 0);
      -moz-transform: translate3d(-75%, 0, 0);
           transform: translate3d(-75%, 0, 0);
-  #drawer-toggle{
-    .middle {
-    background: rgba(255, 255, 255, 0);
-    }
-    .top {
-      transform: rotate(-45deg) translateY(2px);
-    }
-    .bottom {
-      transform: rotate(45deg) translateY(-3px);
-    }
-  }
+  // #drawer-toggle{
+  //   position: fixed;
+  //   right: -1px;
+  //   top: 0;
+  // }
 }
 
 /* オーバーレイ表示をするためのCSS */
