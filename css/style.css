@@ -47,7 +47,7 @@ table {
   border-spacing: 0;
 }
 
-html {
+html, input, textarea {
   color: #9fa0a0;
   font-family: 'Noto Sans Japanese', sans-serif;
   font-size: 14px;
@@ -2077,6 +2077,9 @@ footer .copyright p {
 }
 .inputForm .confirm .sendbutton {
   background-color: transparent;
+  color: #727171;
+  font-weight: 400;
+  font-size: 15px;
   padding: 0;
   line-height: 36px;
   width: 100%;
