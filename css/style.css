@@ -1867,7 +1867,7 @@ footer .copyright p {
   height: 23px;
   padding-top: 17px;
   background-color: #9fa0a0;
-  z-index: 1000;
+  z-index: 10;
 }
 #wrapper #drawer-toggle span {
   margin: 0 auto;
@@ -1895,19 +1895,6 @@ footer .copyright p {
 #wrapper.open {
   -webkit-transform: translate3d(-75%, 0, 0);
   transform: translate3d(-75%, 0, 0);
-}
-#wrapper.open #drawer-toggle .middle {
-  background: rgba(255, 255, 255, 0);
-}
-#wrapper.open #drawer-toggle .top {
-  -webkit-transform: rotate(-45deg) translateY(2px);
-      -ms-transform: rotate(-45deg) translateY(2px);
-          transform: rotate(-45deg) translateY(2px);
-}
-#wrapper.open #drawer-toggle .bottom {
-  -webkit-transform: rotate(45deg) translateY(-3px);
-      -ms-transform: rotate(45deg) translateY(-3px);
-          transform: rotate(45deg) translateY(-3px);
 }
 
 /* オーバーレイ表示をするためのCSS */
