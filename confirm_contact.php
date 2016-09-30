@@ -71,11 +71,11 @@ $_SESSION = $_POST;
     <div>
       <form class = "form" action = "send_contact.php" method = "post">
         <div class = "radio">
-          <input type = "radio" name = "radio" id = "fch" value = "fch" readonly <?php if($_POST['radio'] == fch)echo "checked" ?)>
+          <input type = "radio" name = "radio" id = "fch" value = "fch" readonly <?php if($_POST['radio'] == fch)echo "checked"; ?>
             <label for = "fch"><span class = "radioFont">はこだてみらい館</span></label>
-          <input type = "radio" name = "radio" id = "hkp" value = "hkp" readonly <?php if($_POST['radio'] == hkp)echo "checked" ?)>
+          <input type = "radio" name = "radio" id = "hkp" value = "hkp" readonly <?php if($_POST['radio'] == hkp)echo "checked"; ?>
             <label for = "hkp"><span class = "radioFont">はこだてキッズプラザ</span></label>
-          <input type = "radio" name = "radio" id = "both" value = "both" readonly <?php if($_POST['radio'] == both)echo "checked" ?)>
+          <input type = "radio" name = "radio" id = "both" value = "both" readonly <?php if($_POST['radio'] == both)echo "checked"; ?>
             <label for = "both"><span class = "radioFont">どちらとも</span></label>
         </div>
         <table class = "inputForm">
@@ -94,7 +94,7 @@ $_SESSION = $_POST;
           <tr>
             <th class = "textareaLabel">問い合わせ内容</th>
             <td>
-              <textarea name = "comment" id = "comment" cols = "40" rows = "5" readonly><?php echo htmlspecialchars($_POST['message']);?></textarea>
+              <textarea name = "comment" id = "comment" cols = "40" rows = "5" readonly><?php echo htmlspecialchars($_POST['comment']);?></textarea>
             </td>
           </tr>
           <tr>
