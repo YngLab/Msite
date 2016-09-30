@@ -1253,79 +1253,81 @@ footer{
 }
 
 .form{
-  float: left;
-  width: calc(75% - (100% * (75 / 1000)));
   @include clearfix;
+  @media #{$normal} {
+    float: left;
+    width: calc(75% - (100% * (75 / 1000)));
+  }
 }
 
 .inputForm{
-  float: left;
-  width: 100%;
-  th{
-    color: $dark__fontColor;
-    font-size: 13px;
-    text-align: left;
-    width: 91px;
-  }
-  td{
-    width: calc(100% - 28px);
+  //.inputBox{
+    float: left;
+    width: 100%;
+    th{
+      color: $dark__fontColor;
+      font-size: 13px;
+      text-align: left;
+      width: 91px;
+    }
+    td{
+      width: calc(100% - 28px);
+      input{
+        width: calc(100% - 28px);
+      }
+    }
     input{
+      border: none;
+      //background-color: #efefef;
+      color: $dark__fontColor;
+      font-size: $g__fontSize;
+      padding: 11px 14px 11px 14px;
+    }
+    textarea{
+      border: none;
+      //background-color: #efefef;
+      color: $dark__fontColor;
+      font-size: $g__fontSize;
+      padding: 11px 14px 11px 14px;
       width: calc(100% - 28px);
     }
-  }
-  input{
-    border: none;
-    //background-color: #efefef;
-    color: $dark__fontColor;
-    font-size: $g__fontSize;
-    padding: 11px 14px 11px 14px;
-  }
-  textarea{
-    border: none;
-    //background-color: #efefef;
-    color: $dark__fontColor;
-    font-size: $g__fontSize;
-    padding: 11px 14px 11px 14px;
-    width: calc(100% - 28px);
-  }
-  .textareaLabel{
-    padding-top: 20px;
-    vertical-align: top;
-  }
-  .confirm{
-    width: 88px;
-    height: 36px;
-    border: 1px solid $dark__fontColor;
-    color: $dark__fontColor;
-    font-weight: 400;
-    font-size: $link__fontSize;
-    text-align: center;
-    .sendbutton{
-      background-color: transparent;
+    .textareaLabel{
+      padding-top: 20px;
+      vertical-align: top;
+    }
+    .confirm{
+      width: 88px;
+      height: 36px;
+      border: 1px solid $dark__fontColor;
       color: $dark__fontColor;
       font-weight: 400;
       font-size: $link__fontSize;
-      padding: 0;
-      line-height: 36px;
-      width: 100%;
-      cursor: pointer;
+      text-align: center;
+      .sendbutton{
+        background-color: transparent;
+        color: $dark__fontColor;
+        font-weight: 400;
+        font-size: $link__fontSize;
+        padding: 0;
+        line-height: 36px;
+        width: 100%;
+        cursor: pointer;
+      }
+      .backbutton{
+        background-color: transparent;
+        color: #FFFFFF;
+        padding: 0;
+        line-height: 36px;
+        width: 100%;
+        cursor: pointer;
+      }
+      p{
+        display: inline;
+        line-height: 36px;
+      }
     }
-    .backbutton{
-      background-color: transparent;
-      color: #FFFFFF;
-      padding: 0;
-      line-height: 36px;
-      width: 100%;
-      cursor: pointer;
-    }
-    p{
-      display: inline;
-      line-height: 36px;
-    }
-  }
+  //}
 }
-
-
 
 .inputBox{
   input{

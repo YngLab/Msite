@@ -486,21 +486,26 @@ footer{
 }
 
 .inputForm{
-  th{
-    padding-right: 30px;
-  }
-  td{
-    padding: 8px 0 8px 0;
-  }
-  .confirm{
-    margin: 40px 0 40px 0;
-  }
   @media #{$small} {
     display: none;
+  }
+  .inputBox{
+    th{
+      padding-right: 30px;
+    }
+    td{
+      padding: 8px 0 8px 0;
+    }
+    .confirm{
+      margin: 40px 0 40px 0;
+    }
   }
 }
 
 .inputForm_sp{
+  @media #{$normal} {
+    display: none;
+  }
   .inputBox_sp, .inputBox_sp_b{
     margin-bottom: 20px;
     input{
@@ -517,8 +522,5 @@ footer{
   }
   .inputBox_sp_b{
     margin-bottom: 30px;
-  }
-  @media #{$normal} {
-    display: none;
   }
 }
