@@ -3,7 +3,7 @@ $(function(){
   latestBox_size =  w_size * .209259;
   logoBox_size = w_size * .126851;
   logoBox_margin = w_size * .035185;
-  institution_size = w_size * .224074;
+  institution_size = $(".future_contents").width() / 2;
   $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
   $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
   $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
@@ -14,7 +14,7 @@ $(function(){
     latestBox_size =  w_size * .209259;
     logoBox_size = w_size * .126851;
     logoBox_margin = w_size * .035185;
-    institution_size = w_size * .224074;
+    institution_size = $(".future_contents").width() / 2;
     $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
     $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
     $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
