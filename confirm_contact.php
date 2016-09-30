@@ -69,15 +69,15 @@ $_SESSION = $_POST;
   <div class = "wrap">
   <!-- 以下body -->
     <div>
-      <div class = "radio">
-        <input type = "radio" name = "radio" id = "fch" value = "fch" checked>
-          <label for = "fch"><span class = "radioFont">はこだてみらい館</span></label>
-        <input type = "radio" name = "radio" id = "hkp" value = "hkp">
-          <label for = "hkp"><span class = "radioFont">はこだてキッズプラザ</span></label>
-        <input type = "radio" name = "radio" id = "both" value = "both">
-          <label for = "both"><span class = "radioFont">どちらとも</span></label>
-      </div>
       <form class = "form" action = "send_contact.php" method = "post">
+        <div class = "radio">
+          <input type = "radio" name = "radio" id = "fch" value = "fch" checked>
+            <label for = "fch"><span class = "radioFont">はこだてみらい館</span></label>
+          <input type = "radio" name = "radio" id = "hkp" value = "hkp">
+            <label for = "hkp"><span class = "radioFont">はこだてキッズプラザ</span></label>
+          <input type = "radio" name = "radio" id = "both" value = "both">
+            <label for = "both"><span class = "radioFont">どちらとも</span></label>
+        </div>
         <table class = "inputForm">
           <tr>
             <th>お名前</th>
