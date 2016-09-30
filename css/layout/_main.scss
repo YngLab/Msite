@@ -490,7 +490,7 @@ footer{
   }
 }
 
-.inputBox, .inputBox_sub{
+.inputBox, .inputBox_sub, .inputBox_conf{
   width: 100%;
   th{
     padding-right: 30px;
@@ -499,7 +499,7 @@ footer{
     padding: 8px 0 8px 0;
   }
   .confirm{
-    margin: 40px 0 40px 0;
+    margin: 24px 0 0 0;
   }
 }
 
@@ -513,7 +513,7 @@ footer{
   @media #{$normal} {
     display: none;
   }
-  .inputBox_sp, .inputBox_sp_b{
+  .inputBox_sp, .inputBox_conf_sp, .inputBox_sp_b, .inputBox_conf_sp_b,{
     margin-bottom: 20px;
     input{
       height: 36px;
@@ -527,7 +527,7 @@ footer{
       width: 100%;
     }
   }
-  .inputBox_sp_b{
+  .inputBox_sp_b, .inputBox_conf_sp_b{
     margin-bottom: 30px;
   }
 }

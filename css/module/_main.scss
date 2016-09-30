@@ -782,15 +782,24 @@ footer{
 }
 */
 
-.button{
-  background: transparent;
+.button, .rev_button{
   border: 1px solid $dark__fontColor;
-  color: $dark__fontColor;
+  //color: $dark__fontColor;
   font-weight: 400;
   font-size: $link__fontSize;
   height: 36px;
   text-align: center;
   width: 88px;
+}
+
+.button{
+  background: transparent;
+  color: $dark__fontColor;
+}
+
+.rev_button{
+  background: $dark__fontColor;
+  color: #ffffff;
 }
 
 .subscription{
@@ -801,6 +810,10 @@ footer{
     bottom: 40px;
     left: 20px;
   }
+}
+
+.send{
+  padding-left: 30px;
 }
 
 .subscriptionButton{
@@ -1356,7 +1369,7 @@ footer{
   //}
 }
 
-.inputBox, .inputBox_sub{
+.inputBox, .inputBox_sub, .inputBox_sp, .inputBox_sp_b{
   input{
     background-color: #efefef;
   }
@@ -1367,26 +1380,26 @@ footer{
 
 .revision{
   background: $dark__fontColor;
-  p{
-    color: white;
-  }
+  //color: #FFF;
 }
 
 .inputForm_sp{
-  input{
-    background-color: #efefef;
-    border: none;
-    color: $dark__fontColor;
-    font-size: $g__fontSize;
-  }
-  p{
-    font-size: $cap__fontSize;
-  }
-  textarea{
-    background-color: #efefef;
-    border: none;
-    color: $dark__fontColor;
-    font-size: $g__fontSize;
+  .inputBox_sp, .inputBox_conf_sp, .inputBox_sp_b, .inputBox_conf_sp_b{
+    input{
+      //background-color: #efefef;
+      border: none;
+      color: $dark__fontColor;
+      font-size: $g__fontSize;
+    }
+    p{
+      font-size: $cap__fontSize;
+    }
+    textarea{
+      //background-color: #efefef;
+      border: none;
+      color: $dark__fontColor;
+      font-size: $g__fontSize;
+    }
   }
   .confirm{
     width: 88px;
@@ -1416,3 +1429,4 @@ footer{
     }
   }
 }
+
