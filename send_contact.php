@@ -10,7 +10,7 @@ if($_SESSION['radio'] == "fch"){
 }else if($_SESSION['radio'] == "hkp"){
   $about = "はこだてキッズプラザについて";
 }else if($_SESSION['radio'] == "both"){
-  $about = "どちらとも言えないご質問"
+  $about = "どちらとも言えないご質問";
 }
 
 $return =<<<HTML
