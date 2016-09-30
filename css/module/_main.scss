@@ -1306,6 +1306,9 @@ footer{
     text-align: center;
     .sendbutton{
       background-color: transparent;
+      color: $dark__fontColor;
+      font-weight: 400;
+      font-size: $link__fontSize;
       padding: 0;
       line-height: 36px;
       width: 100%;
