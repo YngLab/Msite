@@ -37,10 +37,12 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
     display: inline-block;
-    margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
+    margin-right: calc(100% * (32 / 1080) - 1px);
     //margin: -1px 2.75% -1px -1px;
-    max-height: 301.328px !important;
-    max-width: 301.328px !important;
+    min-height: 236.875px !important;
+    min-width: 236.875px !important;
+    max-height: 325.594px !important;
+    max-width: 325.594px !important;
     //min-width: 1080px !important;
     position: relative;
     .remaindays_future{
@@ -63,10 +65,12 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-kids;
     display: inline-block;
-    margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
+    margin-right: calc(100% * (32 / 1080) - 1px);
     //margin: -1px 2.75% -1px -1px;
-    max-height: 301.328px !important;
-    max-width: 301.328px !important;
+    min-height: 236.875px !important;
+    min-width: 236.875px !important;
+    max-height: 325.594px !important;
+    max-width: 325.594px !important;
     //min-width: 1080px !important;
     position: relative;
     .remaindays_kids{
