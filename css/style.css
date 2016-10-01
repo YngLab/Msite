@@ -1204,7 +1204,7 @@ footer .foot .footerLinks:after {
 }
 @media screen and (min-width: 769px) {
   footer .foot .footerLinks {
-    width: 714px;
+    width: 590px;
   }
 }
 @media screen and (max-width: 768px) {
