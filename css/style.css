@@ -2207,15 +2207,17 @@ h2.concept_title {
 }
 .concept h3 {
   text-align: center;
+  margin-bottom: 25px;
 }
-
-.concept_sub {
-  margin-top: 100px;
+@media screen and (max-width: 768px) {
+  .concept h3 {
+    display: none;
+  }
 }
-.concept_sub:after {
-  clear: both;
-  content: "";
-  display: block;
+@media screen and (max-width: 768px) {
+  .concept {
+    margin: 10px;
+  }
 }
 
 .concept_img {
@@ -2225,20 +2227,50 @@ h2.concept_title {
 .concept_img img {
   width: 100%;
 }
-
-.concept_text {
-  max-width: 40%;
-  float: left;
-}
-.concept_text p {
-  margin-top: calc(960px / 4 - 1em);
+@media screen and (max-width: 768px) {
+  .concept_img {
+    float: none;
+    max-width: 100%;
+  }
 }
 
-.concept_text-right,
-.concept_img-right {
-  margin-left: 10%;
+@media screen and (min-width: 769px) {
+  .concept_text {
+    max-width: 40%;
+    float: left;
+  }
+  .concept_text p {
+    margin-top: calc(960px / 4 - 1em);
+  }
+}
+@media screen and (max-width: 768px) {
+  .concept_text {
+    float: none;
+    max-width: 100%;
+  }
 }
 
+@media screen and (min-width: 769px) {
+  .concept_text-left,
+  .concept_img-left {
+    float: left;
+  }
+
+  .concept_text-right,
+  .concept_img-right {
+    float: right;
+    margin-left: 10%;
+  }
+
+  .concept_sub {
+    margin-top: 100px;
+  }
+  .concept_sub:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
 .menu {
   float: left;
   width: 70%;

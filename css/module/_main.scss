@@ -1442,12 +1442,14 @@ h2.concept_title{
   line-height: 1.8em;
   h3{
     text-align: center;
+    margin-bottom: 25px;
+    @media #{$small} {
+      display: none;
+    }
   }
-}
-
-.concept_sub{
-  @include clearfix;
-  margin-top: 100px;
+  @media #{$small} {
+    margin: 10px;
+  }
 }
 
 .concept_img{
@@ -1456,17 +1458,39 @@ h2.concept_title{
   img{
     width: 100%;
   }
-}
-
-.concept_text{
-  max-width: 40%;
-  float: left;
-  p{
-    margin-top: calc(960px / 4 - 1em);
+  @media #{$small} {
+    float: none;
+    max-width: 100%;
   }
 }
 
-.concept_text-right,
-.concept_img-right{
-  margin-left: 10%;
+.concept_text{
+  @media #{$normal}{
+    max-width: 40%;
+    float: left;
+    p{
+      margin-top: calc(960px / 4 - 1em);
+    }
+  }
+  @media #{$small} {
+    float: none;
+    max-width: 100%;
+  }
+}
+
+@media #{$normal}{
+  .concept_text-left,
+  .concept_img-left{
+    float: left;
+  }
+
+  .concept_text-right,
+  .concept_img-right{
+    float: right;
+    margin-left: 10%;
+  }
+  .concept_sub{
+    @include clearfix;
+    margin-top: 100px;
+  }
 }
