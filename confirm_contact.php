@@ -18,7 +18,7 @@ $_SESSION = $_POST;
 <!-- たぶんここまで -->
 
 <link rel = "stylesheet" href="css/style.css">
-<link rel = "shortcut icon" href="images/hmp.ico">
+<link rel = "shortcut icon" href="images/common/hmp.ico">
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
 <div id="wrapper">
