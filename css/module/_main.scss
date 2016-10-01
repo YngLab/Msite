@@ -211,7 +211,7 @@
     height: 200px;
     position: relative;
     img{
-      width: 51.6528%;
+      width: calc(100% * (210 / 484));
       position: absolute;
       top: 50%;
       left: 50%;
@@ -297,7 +297,7 @@
     height: 200px;
     position: relative;
     img{
-      width: 51.6528%;
+      width: calc(100% * (250 / 484));
       position: absolute;
       top: 50%;
       left: 50%;
