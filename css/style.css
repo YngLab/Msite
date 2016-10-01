@@ -560,7 +560,7 @@ footer:after {
 }
 
 .pageTitle {
-  margin: 12px 0 50px 0;
+  margin-bottom: 50px;
 }
 .pageTitle .titleText {
   padding-left: 24px;

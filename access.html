@@ -10,7 +10,7 @@
 
 <link rel = "stylesheet" href="css/style.css">
 <link rel = "shortcut icon" href="images/common/hmp.ico">
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js?key=AIzaSyClT_6y9GTq8Z1cBSUMuTGon6DyCldyqww"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
 <script type="text/javascript">
   function initialize() {
@@ -23,12 +23,12 @@
     };
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); //地図を表示
     //地図上にマーカーを配置する
-    var markerImg = {
-      url: 'images/access/marker.png',
-      scaledSize : new google.maps.Size(50, 65)
-    };
+    // var markerImg = {
+    //   url: 'images/access/marker.png',
+    //   scaledSize : new google.maps.Size(50, 65)
+    // };
     marker = new google.maps.Marker({
-      icon: markerImg,
+      // icon: markerImg,
       position: latlng,
       map: map
     });
@@ -41,7 +41,6 @@
       {
           "stylers": [
             { "saturation": -100 },
-            { "lightness": -10 }
           ]
       }
     ];
