@@ -1461,6 +1461,9 @@ h2.concept_title{
 .concept_text{
   max-width: 40%;
   float: left;
+  p{
+    margin-top: calc(960px / 4 - 1em);
+  }
 }
 
 .concept_text-right,

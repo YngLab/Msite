@@ -2230,6 +2230,9 @@ h2.concept_title {
   max-width: 40%;
   float: left;
 }
+.concept_text p {
+  margin-top: calc(960px / 4 - 1em);
+}
 
 .concept_text-right,
 .concept_img-right {
