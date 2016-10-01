@@ -1204,7 +1204,7 @@ footer .foot .footerLinks:after {
 }
 @media screen and (min-width: 769px) {
   footer .foot .footerLinks {
-    width: 504px;
+    width: 714px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1980,6 +1980,11 @@ footer .copyright p {
 .companyLogo {
   width: 160px;
   margin-right: 80px;
+}
+
+p.company_about {
+  margin-left: 0;
+  font-size: 14px;
 }
 
 #wrapper {
