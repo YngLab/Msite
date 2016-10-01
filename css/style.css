@@ -672,20 +672,20 @@ footer:after {
   }
 }
 
-.inputBox, .inputBox_sub, .inputBox_conf {
+.inputBox, .inputBox_sub, .inputBox_conf, .inputBox_Econf {
   width: 100%;
 }
-.inputBox th, .inputBox_sub th, .inputBox_conf th {
+.inputBox th, .inputBox_sub th, .inputBox_conf th, .inputBox_Econf th {
   padding-right: 30px;
 }
-.inputBox td, .inputBox_sub td, .inputBox_conf td {
+.inputBox td, .inputBox_sub td, .inputBox_conf td, .inputBox_Econf td {
   padding: 8px 0 8px 0;
 }
-.inputBox .confirm, .inputBox_sub .confirm, .inputBox_conf .confirm {
+.inputBox .confirm, .inputBox_sub .confirm, .inputBox_conf .confirm, .inputBox_Econf .confirm {
   margin: 24px 0 0 0;
 }
 
-.inputBox_sub td {
+.inputBox_sub td, .inputBox_Econf td {
   padding: 0 0 16px 0;
 }
 
@@ -1623,11 +1623,6 @@ footer .copyright p {
   margin-top: 24px;
 }
 
-.eventabout {
-  width: 25%;
-  float: left;
-  margin-right: calc(100% * (75 / 1000));
-}
 .eventabout img {
   width: 100%;
 }
@@ -1635,6 +1630,18 @@ footer .copyright p {
   line-height: 20px;
   font-size: 16px;
   margin-bottom: 6px;
+}
+@media screen and (min-width: 769px) {
+  .eventabout {
+    width: 25%;
+    float: left;
+    margin-right: calc(100% * (75 / 1000));
+  }
+}
+@media screen and (max-width: 768px) {
+  .eventabout .eventabout_title {
+    margin: 24px 0 24px 0;
+  }
 }
 
 .experiencemenu {
