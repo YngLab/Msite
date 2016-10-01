@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-.instaPic{
-  background-color: #CCCCCC;//sample
-  height: 400px;
-  width: 100%;
-}
-
 .wrap{
   margin: 0 auto;
   width: calc(100% * (1000 / 1080));
@@ -34,6 +28,15 @@
       font-size: 40px;
     }
   }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+#imageArea {
+  width: 100%;
+  position: relative;
 }
 
 .latestEvent{
@@ -164,13 +167,26 @@ footer{
 }
 
 .facility_explain{
-  padding-top: 50px;
+  padding: 50px 0 20px 0;
+  @media #{$small} {
+    display: none;
+  }
+}
+
+.facility_detail{
   @media #{$small} {
     display: none;
   }
 }
 
 .facility_explain_sp{
+  padding: 16px 0 20px 0;
+  @media #{$normal} {
+    display: none;
+  }
+}
+
+.facility_detail_sp{
   padding: 16px 0 20px 0;
   @media #{$normal} {
     display: none;
@@ -432,6 +448,9 @@ footer{
   .companyLinks{
     @media #{$small} {
       margin-left: 16px;
+      .companyLogo{
+        margin-bottom: 40px;
+      }
       a:after{
         content: "\A";
         white-space: pre;
