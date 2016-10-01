@@ -1567,8 +1567,6 @@ footer .copyright p {
   font-weight: 200;
   line-height: 1.75em;
   width: calc(100% - 300px);
-  height: calc(100% - 56px);
-  overflow: scroll;
 }
 @media screen and (max-width: 768px) {
   .event_textBox .event_detail {
@@ -2743,3 +2741,7 @@ html[xmlns] .flexslider .slides {
   }
 }
 /* state */
+.event_detail-overflow {
+  height: calc(100% - 56px);
+  overflow-y: scroll;
+}
