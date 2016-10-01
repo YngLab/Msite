@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<meta charset="utf-8">
+<title>キッズプラザ</title>
+<script src="js/libs/jQuery/jquery.js"></script>
+<script src="js/libs/jQuery/jquery-ui.js"></script>
+<link href="css/jquery-ui.css" rel="stylesheet" media="all"/>
+<link href="css/logoapp.css" rel="stylesheet" media="all"/>
+
+<script src="js/libs/jsgif/LZWEncoder.js"></script>
+<script src="js/libs/jsgif/NeuQuant.js"></script>
+<script src="js/libs/jsgif/GIFEncoder.js"></script>
+<script src="js/libs/jsgif/b64.js"></script>
+
+<script src="js/common_data.js"></script>
+<script src="js/dot_data.js"></script>
+<script src="js/dot_js.js"></script>
+
+<body class="appBody" onload="init()">
+
+<div id="tutorialDialog">
+	<div class="tutorialContainer">
+		<div class="tutorialTopBlock">
+		<div class="tutorialTextBlock"><p id="tutorialText"></p></div>
+		<div class="tutorialSkipContainer"><div class="tutorialSkipBlock"><a href="javascript:void(0);">
+		<div id="tutorialSkipButton">Skip<img width="20" height="20" src="images/arrow_r.png" alt""></div>
+		</a></div></div>
+		</div>
+		<div class="tutorialBottomBlock">
+		<div class="tutorialLeftContainer"><div class="tutorialLeftBlock"> <a href="javascript:void(0);"><div id="tutorialBackButton"><img width="20" height="20" src="images/arrow_l.png" alt""/>前へ</div></a></div></div>
+		<div class="tutorialCenterContainer">
+			<div class="tutorialCenterBlock">
+				<div class="tutorialPreviewContainer">
+					<div class="tutorialPreviewArea">
+						<div class="tutorialPreviewBlockFirst">
+							<a href="javascript:void(0);" onClick=""><canvas class="tutorialPreviewCanvas" id="tutorialPreviewCanvas1" width="48" height="48"></canvas></a>
+						</div>
+						<div class="tutorialPreviewBlock">
+							<a href="javascript:void(0);" onClick=""><canvas class="tutorialPreviewCanvas" id="tutorialPreviewCanvas2" width="48" height="48"></canvas></a>
+						</div>
+						<div class="tutorialPreviewBlock">
+							<a href="javascript:void(0);" onClick=""><canvas class="tutorialPreviewCanvas" id="tutorialPreviewCanvas3" width="48" height="48"></canvas></a>
+						</div>
+						<div class="tutorialPreviewBlock">
+							<a href="javascript:void(0);" onClick=""><canvas class="tutorialPreviewCanvas" id="tutorialPreviewCanvas4" width="48" height="48"></canvas></a>
+						</div>
+						<div class="tutorialPreviewBlock">
+							<a href="javascript:void(0);" onClick=""><canvas class="tutorialPreviewCanvas" id="tutorialPreviewCanvas5" width="48" height="48"></canvas></a>
+						</div>
+						<div class="tutorialPreviewBlock">
+							<a href="javascript:void(0);" onClick=""><canvas class="tutorialPreviewCanvas" id="tutorialPreviewCanvas6" width="48" height="48"></canvas></a>
+						</div>
+						<div class="tutorialPreviewBlock">
+							<a href="javascript:void(0);" onClick=""><canvas class="tutorialPreviewCanvas" id="tutorialPreviewCanvas7" width="48" height="48"></canvas></a>
+						</div>
+						<div class="tutorialPreviewBlock">
+							<a href="javascript:void(0);" onClick=""><canvas class="tutorialPreviewCanvas" id="tutorialPreviewCanvas8" width="48" height="48"></canvas></a>
+						</div>
+					</div>
+				</div>
+				<div class="tutorialMainContainer">
+					<div class="tutorialMainBlock">
+							<canvas id="tutorialMainCanvas" width="450" height="450"></canvas>
+					</div>
+				</div>
+				<div class="tutorialButtonContainer">
+					<div id="tutorialButtonArea">
+						<div class="tutorialButtonBlockFirst">
+							<a href="javascript:void(0);"><img id="tutorialUndoButton" width="60" height="60" src="" alt""></a>
+						</div>
+						<div class="tutorialButtonBlock">
+							<a href="javascript:void(0);"><img id="tutorialClearButton" width="60" height="60" src="" alt""></a>
+						</div>
+						<div class="tutorialButtonBlock">
+							<a href="javascript:void(0);"><img id="tutorialCopyButton" width="60" height="60" src="" alt""></a>
+						</div>
+						<div class="tutorialButtonBlock">
+							<a href="javascript:void(0);"><img id="tutorialPlayButton" width="60" height="60" src="" alt""></a>
+						</div>
+						<div class="tutorialButtonBlock">
+							<a href="javascript:void(0);"><img id="tutorialCompleteButton" width="60" height="60" src="" alt""></a>
+						</div>
+					</div>
+				</div>
+				<div id="tutorialPointer"><img width="20" height="20" src="images/tut_pointer.png" alt=""></div>
+			</div>
+		</div>
+		<div class="tutorialRightContainer"><div class="tutorialRightBlock">
+
+		<div class="tutorialRightTopBlock"><div class="tutorialPageButtonArea">
+			<div class="tutorialPageButtonBlockFirst">
+				<a href="javascript:void(0);"><img id="tutorialPageButton1" width="30" height="30" src="" alt""></a>
+			</div>
+			<div class="tutorialPageButtonBlock">
+				<a href="javascript:void(0);"><img id="tutorialPageButton2" width="30" height="30" src="" alt""></a>
+			</div>
+			<div class="tutorialPageButtonBlock">
+				<a href="javascript:void(0);"><img id="tutorialPageButton3" width="30" height="30" src="" alt""></a>
+			</div>
+			<div class="tutorialPageButtonBlock">
+				<a href="javascript:void(0);"><img id="tutorialPageButton4" width="30" height="30" src="" alt""></a>
+			</div>
+			<div class="tutorialPageButtonBlock">
+				<a href="javascript:void(0);"><img id="tutorialPageButton5" width="30" height="30" src="" alt""></a>
+			</div>
+
+		</div></div>
+
+		<div class="tutorialRightBottomBlock"><a href="javascript:void(0);"><div id="tutorialNextButton">次へ<img width="20" height="20" src="images/arrow_r.png" alt""></div></a></div>
+
+		</div></div>
+		</div>
+	</div>
+</div>
+<div id="copyDialog" >
+	<p>現在のコマをコピーします。<br>コピー先を指定してください。</p>
+     <select id="copyNum">
+     </select>
+</div>
+<div id="completeDialog">
+	<div class="completeContainer">
+		<p class="completeText">完成しましたか？</p>
+		<div class="completeLeftContainer"><a href="javascript:void(0);"><div class="completeLeftBlock" id="notCompleteButton">もう少し作る</div></a></div>
+		<div class="completeCenterContainer">
+			<div class="completeCenterBlock"><canvas id="completeCanvas" width="450" height="450"></canvas></div>
+		</div>
+		<div class="completeRightContainer"><a href="javascript:void(0);"><div class="completeRightBlock" id="uploadButton">サイトで公開<br>(現在開発中）</div></a></div>
+	</div>
+	<!-- <img id="gifimage" /> -->
+</div>
+<div class="appContainer">
+	<div class="appBlock">
+		<div class="topBlock">
+			<div class="appTitle"><h1>ロゴアプリタイトル</h1></div>
+			<div class="helpArea">
+			<div class="helpBlock"><a href="javascript:void(0);"><img id="helpButton" width="50" height="50" src="" alt""></a></div>
+			</div>
+		</div>
+		<div class="bottomBlock">
+			<div class="previewContainer">
+				<div class="previewArea">
+					<div class="previewBlockFirst">
+						<a href="javascript:void(0);" onClick=""><canvas class="previewCanvas" id="previewCanvas1" width="48" height="48"></canvas></a>
+					</div>
+					<div class="previewBlock">
+						<a href="javascript:void(0);" onClick=""><canvas class="previewCanvas" id="previewCanvas2" width="48" height="48"></canvas></a>
+					</div>
+					<div class="previewBlock">
+						<a href="javascript:void(0);" onClick=""><canvas class="previewCanvas" id="previewCanvas3" width="48" height="48"></canvas></a>
+					</div>
+					<div class="previewBlock">
+						<a href="javascript:void(0);" onClick=""><canvas class="previewCanvas" id="previewCanvas4" width="48" height="48"></canvas></a>
+					</div>
+					<div class="previewBlock">
+						<a href="javascript:void(0);" onClick=""><canvas class="previewCanvas" id="previewCanvas5" width="48" height="48"></canvas></a>
+					</div>
+					<div class="previewBlock">
+						<a href="javascript:void(0);" onClick=""><canvas class="previewCanvas" id="previewCanvas6" width="48" height="48"></canvas></a>
+					</div>
+					<div class="previewBlock">
+						<a href="javascript:void(0);" onClick=""><canvas class="previewCanvas" id="previewCanvas7" width="48" height="48"></canvas></a>
+					</div>
+					<div class="previewBlock">
+						<a href="javascript:void(0);" onClick=""><canvas class="previewCanvas" id="previewCanvas8" width="48" height="48"></canvas></a>
+					</div>
+				</div>
+			</div>
+			<div class="mainContainer">
+				<div class="mainBlock">
+					<canvas id="mainCanvas" width="450" height="450"></canvas>
+				</div>
+			</div>
+			<div class="buttonContainer">
+				<div class="buttonArea">
+					<div class="buttonBlockFirst">
+						<a href="javascript:void(0);"><img id="undoButton" width="60" height="60" src="" alt""></a>
+					</div>
+					<div class="buttonBlock">
+						<a href="javascript:void(0);"><img id="clearButton" width="60" height="60" src="" alt""></a>
+					</div>
+					<div class="buttonBlock">
+						<a href="javascript:void(0);"><img id="copyButton" width="60" height="60" src="" alt""></a>
+					</div>
+					<div class="buttonBlock">
+						<a href="javascript:void(0);"><img id="playButton" width="60" height="60" src="" alt""></a>
+					</div>
+					<div class="buttonBlock">
+						<a href="javascript:void(0);"><img id="completeButton" width="60" height="60" src="" alt""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--
+<form class="myform" name="myform">
+	<input size="40" type="text" name="mytext">
+</form>
+-->
+</body>
+</html>

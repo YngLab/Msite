@@ -105,6 +105,13 @@ a:hover {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .bgcolor-top {
+    background-color: #f7f8f8;
+    padding-bottom: 40px;
+  }
+}
+
 .linkText {
   border-bottom: solid 1px #595757;
   color: #595757;
@@ -959,7 +966,7 @@ footer:after {
   position: relative;
 }
 .future_entrance .future_logo img {
-  width: 51.6528%;
+  width: calc(100% * (210 / 484));
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1047,7 +1054,7 @@ footer:after {
   position: relative;
 }
 .kids_entrance .kids_logo img {
-  width: 51.6528%;
+  width: calc(100% * (250 / 484));
   position: absolute;
   top: 50%;
   left: 50%;
