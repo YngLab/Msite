@@ -9,11 +9,10 @@
 <!-- たぶんここまで -->
 
 <link rel = "stylesheet" href="css/style.css">
-<link rel = "shortcut icon" href="images/hmp.ico">
+<link rel = "shortcut icon" href="images/common/hmp.ico">
 <!--ランダム画像のjs-->
 <script src="js/jquery.js"></script>
 <script src="js/imageview.js"></script>
-
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
 <script src="js/jquery.flexslider.js"></script>
@@ -23,44 +22,6 @@
     animation: "slide"
   });
 </script>
-<!--ランダム画像のcss-->
-<style type="text/css">
-.imageContainer {
-  position: relative;
-  width: 100%;
-}
-#imageArea {
-  width: 100%;
-  position: relative;
-}
-#imageArea img {
-  position: absolute;
-  display: block; 
-  margin: 0 auto;
-}
-#imageBox1,
-#imageBox2,
-#imageBox3,
-#imageBox4,
-#imageBox5,
-#imageBox6,
-#imageBox7,
-#imageBox8 {
-  width: 25%;
-  float: left;
-}
-#indexTitle {
-  background-color: rgba(0, 0, 0, 0.3);
-  width: 60%;
-  border-top: 1px #fff solid;
-  border-bottom: 1px #fff solid;
-  color: #fff;
-  position: absolute;
-  text-align: center;
-}
-#indexTitleText {
-}
-</style>
 
 <div id="wrapper">
   <div id="header">
@@ -72,10 +33,14 @@
   </div>
   <div class="imageContainer">
     <div id="imageArea"></div>
+    <a href = "HMP.html">
       <div id="indexTitle">
-      <div id="indexTitleText"><h1>はこだてみらいプロジェクト</h1></div>
+        <div id="indexTitleText">
+          <h1>はこだてみらいプロジェクト</h1>
+        </div>
+      </div>
+    </a>
   </div>
-</div>
   <div class = "bgcolor">
     <div class = "wrap">
       <h2 class = "topcap">
@@ -85,7 +50,7 @@
         <div class = "flexslider">
           <ul class = "slides">
             <li>
-              <a href = "#">
+              <a href = "event.html#0">
                 <div class = "latestBox_future">
                   <div class = "remaindays_future">
                     <div class = "caption">
@@ -108,7 +73,7 @@
               </a>
             </li>
             <li>
-              <a href = "#">
+              <a href = "event.html#1">
                 <div class = "latestBox_kids">
                   <div class = "remaindays_kids">
                     <div class = "caption">
@@ -131,7 +96,7 @@
               </a>
             </li>
             <li>
-              <a href = "#">
+              <a href = "event.html#2">
                 <div class = "latestBox_future">
                   <div class = "remaindays_future">
                     <div class = "caption">
@@ -154,7 +119,7 @@
               </a>
             </li>
             <li>
-              <a href = "#">
+              <a href = "event.html#3">
                 <div class = "latestBox_future">
                   <div class = "remaindays_future">
                     <div class = "caption">
@@ -180,7 +145,7 @@
         </div>
       </div>
       <div class = "latestEvent only_pc">
-        <a href = "#">
+        <a href = "event.html#0">
           <div class = "latestBox_future">
             <div class = "remaindays_future">
               <div class = "caption">
@@ -199,7 +164,7 @@
             </div>
           </div>
         </a>
-        <a href = "#">
+        <a href = "event.html#1">
           <div class = "latestBox_kids">
             <div class = "remaindays_kids">
               <div class = "caption">
@@ -218,7 +183,7 @@
             </div>
           </div>
         </a>
-        <a href = "#">
+        <a href = "event.html#2">
           <div class = "latestBox_future">
             <div class = "remaindays_future">
               <div class = "caption">
@@ -237,7 +202,7 @@
             </div>
           </div>
         </a>
-        <a href = "#">
+        <a href = "event.html#3">
           <div class = "latestBox_future">
             <div class = "remaindays_future">
               <div class = "caption">
@@ -422,9 +387,9 @@
         <a href = "https://www.facebook.com/hakodatemiraiproject/">
           <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
         </a>
-        <a href = "https://www.instagram.com/instagramjapan/?hl=ja">
+        <!-- <a href = "https://www.instagram.com/instagramjapan/?hl=ja">
           <img src = "images/common/ig.png" alt="Instagram" class = "SNS">
-        </a>
+        </a> -->
       </div>
       <div class = "copyright">
         <p>@2016 Hakodate Mirai Project</p>

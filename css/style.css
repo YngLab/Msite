@@ -130,12 +130,6 @@ a:hover {
 }
 
 /* layout */
-.instaPic {
-  background-color: #CCCCCC;
-  height: 400px;
-  width: 100%;
-}
-
 .wrap {
   margin: 0 auto;
   width: calc(100% * (1000 / 1080));
@@ -172,6 +166,16 @@ a:hover {
     background: #9fa0a0;
     font-size: 40px;
   }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+
+#imageArea {
+  width: 100%;
+  position: relative;
 }
 
 .latestEvent {
@@ -342,10 +346,16 @@ footer:after {
 }
 
 .facility_explain {
-  padding-top: 50px;
+  padding: 50px 0 20px 0;
 }
 @media screen and (max-width: 768px) {
   .facility_explain {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .facility_detail {
     display: none;
   }
 }
@@ -355,6 +365,15 @@ footer:after {
 }
 @media screen and (min-width: 769px) {
   .facility_explain_sp {
+    display: none;
+  }
+}
+
+.facility_detail_sp {
+  padding: 16px 0 20px 0;
+}
+@media screen and (min-width: 769px) {
+  .facility_detail_sp {
     display: none;
   }
 }
@@ -470,7 +489,6 @@ footer:after {
 
 .map_container {
   position: relative;
-  padding-top: 60vh;
 }
 
 #map_canvas {
@@ -618,6 +636,9 @@ footer:after {
   .sponsor .companyLinks {
     margin-left: 16px;
   }
+  .sponsor .companyLinks .companyLogo {
+    margin-bottom: 40px;
+  }
   .sponsor .companyLinks a:after {
     content: "\A";
     white-space: pre;
@@ -715,6 +736,34 @@ footer:after {
 }
 
 /* module */
+#imageArea img {
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+}
+
+#imageBox1,
+#imageBox2,
+#imageBox3,
+#imageBox4,
+#imageBox5,
+#imageBox6,
+#imageBox7,
+#imageBox8 {
+  width: 25%;
+  float: left;
+}
+
+#indexTitle {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 60%;
+  border-top: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+}
+
 .topcap {
   text-align: center;
 }
@@ -870,7 +919,7 @@ footer:after {
 }
 
 .language {
-  float: left;
+  display: none;
 }
 
 .gNav {
@@ -1185,7 +1234,7 @@ footer .foot .footerLinks .links {
   }
 }
 footer .foot .SNSbutton {
-  width: 116px;
+  width: 49px;
   margin: 0 auto 30px auto;
 }
 footer .foot .SNSbutton img {
@@ -1237,6 +1286,11 @@ footer .copyright p {
   font-size: 24px;
   line-height: 1.75em;
   text-align: center;
+}
+
+.facility_detail {
+  text-align: center;
+  line-height: 1.75em;
 }
 
 .facility_explain_sp {
@@ -1662,12 +1716,14 @@ footer .copyright p {
   display: block;
 }
 
-.experiencemenu:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.6;
-  -khtml-opacity: 0.6;
-  opacity: 0.6;
+@media screen and (min-width: 769px) {
+  .experiencemenu:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+  }
 }
 
 .exmenu_textBox_wrap {
@@ -1814,6 +1870,17 @@ footer .copyright p {
   left: 0;
   z-index: 10;
 }
+.modal-content .exmenu_title_kids {
+  width: 100%;
+  position: absolute;
+  font-size: 21px;
+  color: #8fc31f;
+  font-weight: 400;
+  text-align: center;
+  top: 4%;
+  left: 0;
+  z-index: 10;
+}
 .modal-content #modal-close img {
   width: 20px;
   position: absolute;
@@ -1909,6 +1976,11 @@ footer .copyright p {
   }
 }
 
+.companyLogo {
+  width: 160px;
+  margin-right: 80px;
+}
+
 #wrapper {
   position: relative;
   -webkit-transition: all .4s;
@@ -1975,6 +2047,9 @@ footer .copyright p {
   -webkit-transition: all .4s;
   transition: all .4s;
 }
+#drawer .sp_language {
+  display: none;
+}
 #drawer .sp_language p {
   line-height: 40px;
   float: right;
@@ -2009,9 +2084,7 @@ footer .copyright p {
 }
 
 .sp_language {
-  width: 100%;
-  height: 40px;
-  background-color: #9fa0a0;
+  display: none;
 }
 .sp_language a {
   color: #FFFFFF;
@@ -2356,7 +2429,6 @@ h2.concept_title {
 @font-face {
   font-family: 'flexslider-icon';
   src: url("fonts/flexslider-icon.eot");
-  src: url("fonts/flexslider-icon.eot?#iefix") format("embedded-opentype"), url("fonts/flexslider-icon.woff") format("woff"), url("fonts/flexslider-icon.ttf") format("truetype"), url("fonts/flexslider-icon.svg#flexslider-icon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2585,24 +2657,26 @@ html[xmlns] .flexslider .slides {
 }
 
 .flex-control-paging li a:hover {
-  background: #F39800;
+  background: #727171
+  /*本来はfuture,kidsで色分けたい*/
 }
 
 .flex-control-paging li a.flex-active {
-  background: #F39800;
+  background: #727171;
+  /*本来はfuture,kidsで色分けたい*/
   /*background: rgba(0, 0, 0, 0.9);*/
   cursor: default;
 }
 
 .flexslider .flex-prev {
   left: 0px;
-  background: url(../images/arrow_left_white.png) no-repeat left;
+  background: url(../images/common/arrow_left_white.png) no-repeat left;
   background-size: auto 20px;
 }
 
 .flexslider .flex-next {
   right: 0px;
-  background: url(../images/arrow_right_white.png) no-repeat right;
+  background: url(../images/common/arrow_right_white.png) no-repeat right;
   background-size: auto 20px;
 }
 

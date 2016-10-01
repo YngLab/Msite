@@ -9,7 +9,7 @@
 <!-- たぶんここまで -->
 
 <link rel = "stylesheet" href="css/style.css">
-<link rel = "shortcut icon" href="images/hmp.ico">
+<link rel = "shortcut icon" href="images/common/hmp.ico">
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
 <script src="js/jquery.flexslider.js"></script>
@@ -79,7 +79,7 @@
         <div class = "flexslider">
           <ul class = "slides">
             <li>
-              <a href = "#">
+              <a href = "#0">
                 <div class = "latestBox_future">
                   <div class = "remaindays_future">
                     <div class = "caption">
@@ -100,9 +100,9 @@
                   </div>
                 </div>
               </a>
-            </li>          
+            </li>
           <li>
-              <a href = "#">
+              <a href = "#1">
                 <div class = "latestBox_kids">
                   <div class = "remaindays_kids">
                     <div class = "caption">
@@ -125,7 +125,7 @@
               </a>
             </li>
             <li>
-              <a href = "#">
+              <a href = "#2">
                 <div class = "latestBox_future">
                   <div class = "remaindays_future">
                     <div class = "caption">
@@ -148,7 +148,7 @@
               </a>
             </li>
             <li>
-              <a href = "#">
+              <a href = "#3">
                 <div class = "latestBox_future">
                   <div class = "remaindays_future">
                     <div class = "caption">
@@ -184,7 +184,7 @@
               </p>
             </div>
           </div>
-          <a href = "#">
+          <a href = "#0">
             <div class = "latestBox_future">
             <div class = "remaindays_future">
               <div class = "caption">
@@ -203,7 +203,7 @@
             </div>
           </div>
           </a>
-          <a href = "#">
+          <a href = "#1">
             <div class = "latestBox_kids">
             <div class = "remaindays_kids">
               <div class = "caption">
@@ -222,7 +222,7 @@
             </div>
           </div>
         </a>
-        <a href = "#">
+        <a href = "#2">
           <div class = "latestBox_future">
             <div class = "remaindays_future">
               <div class = "caption">
@@ -241,7 +241,7 @@
             </div>
           </div>
         </a>
-        <a href = "#">
+        <a href = "#3">
           <div class = "latestBox_future">
             <div class = "remaindays_future">
               <div class = "caption">
@@ -320,7 +320,7 @@
       </div>
     </div>
     <div id = "all_eventmenu">
-      <div class = "eventmenu">
+      <div class = "eventmenu" id="0">
         <img class = "event_pic" src = "images/sq_event1_FCH.jpg"  alt = "先行体験会">
         <div class = "event_textBox_wrap">
           <div class = "event_textBox">
@@ -355,14 +355,15 @@
               幅15mの巨大な映像、360度全周映像、そして天井や床に映し出される映像が、センサー技術によって人の動きに反応するなど、先端的な技術を取り入れた様々なコンテンツが体験できます。また、アナログからデジタルまで多彩なワークショップを数多く実施し、未来を担う子どもたちの創造力を養います。
             </div>
           </div>
-          <form action = "event_subscript.html" method = "post">
+          <form action = "event_subscript.php" method = "get">
             <div class = "subscription">
+              <input type="hidden" name="id" value="0">
               <input type="submit" value="申し込む" class = "button">
             </div>
           </form>
         </div>
       </div>
-      <div class = "eventmenu">
+      <div class = "eventmenu" id="1">
         <img class = "event_pic" src = "images/sq_event1_KPH.jpg"  alt = "先行体験会">
         <div class = "event_textBox_wrap">
           <div class = "event_textBox">
@@ -397,14 +398,15 @@
               おもいっきり体を動かして、自由に遊ぶことが出来る全天候型のプレイグランドです。超巨大なネット遊具や、飛び跳ねると風が吹く丘、ふれると色が変わる池など、ちょっと不思議な仕掛けが子ども達の好奇心を刺激します。また、乳幼児の遊び場や託児室、育児相談室を設置し、子育てを頑張るお父さんお母さんを応援します。
             </div>
           </div>
-          <form action = "event_subscript.html" method = "post">
+          <form action = "event_subscript.php" method = "get">
             <div class = "subscription">
+              <input type="hidden" name="id" value="1">
               <input type="submit" value="申し込む" class = "button">
             </div>
           </form>
         </div>
       </div>
-      <div class = "eventmenu">
+      <div class = "eventmenu" id="2">
         <img class = "event_pic" src = "images/sq_event2_FCH.jpg" alt = "トークセッション">
         <div class = "event_textBox_wrap">
           <div class = "event_textBox">
@@ -435,14 +437,15 @@
               日本を代表するAI（人口知能）の研究者、中島秀之さんと松原仁さんが、脳科学者の茂木健一郎さんをスペシャルゲストにむかえ、はこだてみらい館・はこだてキッズプラザが大切にしている「オドロクチカラ」とは何なのかを語り合います。
             </div>
           </div>
-          <form action = "event_subscript.html" method = "post">
+          <form action = "event_subscript.php" method = "get">
             <div class = "subscription">
+              <input type="hidden" name="id" value="2">
               <input type="submit" value="申し込む" class = "button">
             </div>
           </form>
         </div>
       </div>
-      <div class = "eventmenu">
+      <div class = "eventmenu" id="3">
         <img class = "event_pic" src = "images/sq_event3_FCH.jpg"  alt = "井上涼さんアニメーションワークショップ">
         <div class = "event_textBox_wrap">
           <div class = "event_textBox">
@@ -479,14 +482,15 @@
               みんなで作ったイカがみんなの歌声に合わせて超巨大画面Media Wallの海を泳ぎまわります！最後はみんなで記念写真をします。
             </div>
           </div>
-          <form action = "event_subscript.html" method = "post">
+          <form action = "event_subscript.php" method = "get">
             <div class = "subscription">
+              <input type="hidden" name="id" value="3">
               <input type="submit" value="申し込む" class = "button">
             </div>
           </form>
         </div>
       </div>
-      <div class = "eventmenu">
+      <div class = "eventmenu" id="4">
         <img class = "event_pic" src = "images/sq_event2_KPH.jpg"  alt = "Whiteaフリースタイルパフォーマンス">
         <div class = "event_textBox_wrap">
           <div class = "event_textBox">
@@ -517,8 +521,9 @@
               レバンガ北海道フリースタイルバスケットボーラーWhitea（ホワイティ）が音楽に合わせて華麗なパフォーマンスを披露してくれます！パフォーマンス後、子どもたちとふれ合いの時間があります。
             </div>
           </div>
-          <form action = "event_subscript.html" method = "post">
+          <form action = "event_subscript.php" method = "get">
             <div class = "subscription">
+              <input type="hidden" name="id" value="4">
               <input type="submit" value="申し込む" class = "button">
             </div>
           </form>
@@ -555,10 +560,10 @@
         <a href = "https://www.facebook.com/hakodatemiraiproject/">
           <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
         </a>
-        <a href = "https://www.instagram.com/instagramjapan/?hl=ja">
+        <!-- <a href = "https://www.instagram.com/instagramjapan/?hl=ja">
           <img src = "images/common/ig.png" alt="Instagram" class = "SNS">
-        </a>
-      </div>
+        </a> -->
+      </div> 
       <div class = "copyright">
         <p>@2016 Hakodate Mirai Project</p>
       </div>

@@ -1,3 +1,9 @@
+<?php
+if(!$_GET){
+  header('Location: ../');
+}
+?>
+
 <!DOCTYPE html>
 <meta charset = "utf-8">
 <meta name = "viewport" content="width=device-width,initial-scale=1.0" />  <!-- なんだこの宣言文は -->
@@ -54,23 +60,86 @@
   </header>
   <div class = "pageTitle">
     <div class = "wrap">
-      <p class = "titleText">お問い合わせの確認</p>
+      <p class = "titleText">イベントの申し込み</p>
     </div>
   </div>
   <div class = "wrap">
   <!-- 以下body -->
     <div class = "autoHeight">
-      <div class = "inputForm">
-        <form class = "form" action = "php/hoge.php" method = "post">
-          <div class = "radio">
-            <input type = "radio" name = "radio" id = "fch" value = "fch" checked>
-              <label for = "fch"><span class = "radioFont">はこだてみらい館</span></label>
-            <input type = "radio" name = "radio" id = "hkp" value = "hkp">
-              <label for = "hkp"><span class = "radioFont">はこだてキッズプラザ</span></label>
-            <input type = "radio" name = "radio" id = "both" value = "both">
-              <label for = "both"><span class = "radioFont">どちらとも</span></label>
-          </div>
-          <table class = "inputBox_conf">
+      <div class = "eventabout">
+        <!-- ここからイベント情報 -->
+        <img src = 
+        <?php if($_GET[id] == 0){echo '"images/sq_event1_FCH.jpg"  alt = "先行体験会"';
+        }else if($_GET[id] == 1){echo '"images/sq_event1_KPH.jpg"  alt = "先行体験会"';
+        }else if($_GET[id] == 2){echo '"images/sq_event2_FCH.jpg" alt = "トークセッション"';
+        }else if($_GET[id] == 3){echo '"images/sq_event3_FCH.jpg"  alt = "井上涼さんアニメーションワークショップ"';
+        }else if($_GET[id] == 4){echo '"images/sq_event2_KPH.jpg"  alt = "Whiteaフリースタイルパフォーマンス"';
+        }
+        ?>>
+        <p class = "FCHcolor eventabout_title">
+        <?php if($_GET[id] == 0){echo 'はこだてみらい館先行体験会';
+        }else if($_GET[id] == 1){echo 'はこだてキッズプラザ先行体験会';
+        }else if($_GET[id] == 2){echo 'トークセッション';
+        }else if($_GET[id] == 3){echo '井上涼さんアニメーションワークショップ';
+        }else if($_GET[id] == 4){echo 'Whiteaフリースタイルパフォーマンス';
+        }
+        ?></p>
+        <div class = "event_point">
+          <table>
+            <tr>
+              <th class = "event_point_cap">日時</th>
+              <td class = "event_point_contents">
+                <?php if($_GET[id] == 0){echo '10月12日(水)　15:00-18:00';
+                }else if($_GET[id] == 1){echo '10月12日(水)　15:00-18:00';
+                }else if($_GET[id] == 2){echo '10月15日(土)　10:30-12:00';
+                }else if($_GET[id] == 3){echo '10月16日(日)　10:00-16:30';
+                }else if($_GET[id] == 4){echo '10月16日(日)　13:00-14:00';
+                }
+                ?></td>
+            </tr>
+            <tr>
+              <th class = "event_point_cap">会場</th>
+              <td class = "event_point_contents">
+                <?php if($_GET[id] == 0){echo 'はこだてみらい館';
+                }else if($_GET[id] == 1){echo 'はこだてキッズプラザ';
+                }else if($_GET[id] == 2){echo 'はこだてみらい館';
+                }else if($_GET[id] == 3){echo 'はこだてみらい館';
+                }else if($_GET[id] == 4){echo 'はこだてキッズプラザ';
+                }
+                ?>
+              </td>
+            </tr>
+            <tr>
+              <th class = "event_point_cap">参加費</th>
+              <td class = "event_point_contents">
+                <?php if($_GET[id] == 0){echo '無料';
+                }else if($_GET[id] == 1){echo '無料';
+                }else if($_GET[id] == 2){echo '無料';
+                }else if($_GET[id] == 3){echo '無料';
+                }else if($_GET[id] == 4){echo '無料';
+                }
+                ?>
+              </td>
+            </tr>
+            <tr>
+              <th class = "event_point_cap">対象</th>
+              <td class = "event_point_contents">
+                <?php if($_GET[id] == 0){echo '小学生から中学生';
+                }else if($_GET[id] == 1){echo '幼稚園児から小学生';
+                }else if($_GET[id] == 2){echo '子どもから大人まで';
+                }else if($_GET[id] == 3){echo '子どもから大人まで';
+                }else if($_GET[id] == 4){echo '子どもから大人まで';
+                }
+                ?>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- ここまでイベント情報 -->
+      </div>
+      <div class = "only_pc">
+        <form class = "form" action = "confirm_event.php" method = "post">
+          <table class = "inputForm inputBox_sub">
             <tr>
               <th>お名前</th>
               <td>
@@ -84,22 +153,23 @@
               </td>
             </tr>
             <tr>
-              <th class = "textareaLabel">問い合わせ内容</th>
+              <th>参加者の年齢</th>
+              <td>
+                <input type = "text" name ="old" maxlength = "255" placeholder="10歳">
+              </td>
+            </tr>
+            <tr>
+              <th class = "textareaLabel">その他ご質問等</th>
               <td>
                 <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
               </td>
             </tr>
             <tr>
-              <th>
-                <a href = "javascript:history.back();">
-                  <div class = "confirm revision">
-                    <input type="button" value="訂正" class = "backbutton">
-                  </div>
-                </a>
-              </th>
+              <th>　</th>
               <td>
                 <div class = "confirm">
-                  <input type="submit" value="送信" class = "sendbutton">
+                  <input type="hidden" name="id" value="<?php echo $_GET[id];?>">
+                  <input type="submit" value="確認" class = "sendbutton">
                 </div>
               </td>
             </tr>
@@ -107,51 +177,25 @@
         </form>
       </div>
       <div class = "inputForm_sp">
-        <form class = "form" action = "confirm_contact.php" method = "post">
-          <div class = "radio">
-            <span class = "radioElement">
-              <input type = "radio" name = "radio" id = "fch" value = "fch">
-              <label for = "fch">
-                <span class = "radioFont">はこだてみらい館</span>
-              </label>
-            </span>
-            <span class = "radioElement">
-              <input type = "radio" name = "radio" id = "hkp" value = "hkp">
-              <label for = "hkp">
-                <span class = "radioFont">はこだてキッズプラザ</span>
-              </label>
-            </span>
-            <span class = "radioElement">
-              <input type = "radio" name = "radio" id = "both" value = "both">
-              <label for = "both">
-                <span class = "radioFont">どちらとも</span>
-              </label>
-            </span>
-          </div>
-          <div class = "inputBox_conf_sp">
+        <form class = "form" action = "confirm_event.php" method = "post">
+          <div class = "inputBox_sp">
             <p>お名前</p>
             <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
           </div>
-          <div class = "inputBox_conf_sp">
+          <div class = "inputBox_sp">
             <p>メールアドレス</p>
             <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
           </div>
-          <div class = "inputBox_conf_sp_b">
-            <p>問い合わせ内容</p>
+          <div class = "inputBox_sp_b">
+            <p>その他ご質問等</p>
             <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
           </div>
-          <table>
-            <tr>
-              <th>
-                <a href = "javascript:history.back();">
-                  <input type="button" value="訂正" class = "rev_button">
-                </a>
-              </th>
-              <td class = "send">
-                <input type="submit" value="送信" class = "button">
-              </td>
-            </tr>
-          </table>
+          <div>
+            <div>
+              <input type="hidden" name="id" value="<?php echo $_GET[id];?>">
+              <input type="submit" value="確認" class = "button">
+            </div>
+          </div>
         </form>
       </div>
     </div>
