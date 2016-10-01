@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-.instaPic{
-  background-color: #CCCCCC;//sample
-  height: 400px;
-  width: 100%;
-}
-
 .wrap{
   margin: 0 auto;
   width: calc(100% * (1000 / 1080));
@@ -34,6 +28,15 @@
       font-size: 40px;
     }
   }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+#imageArea {
+  width: 100%;
+  position: relative;
 }
 
 .latestEvent{
@@ -288,7 +291,7 @@ footer{
 
 .map_container{
   position: relative;
-  padding-top: 60vh;
+  // padding-top: 60vh;
 }
 
 #map_canvas{
@@ -432,6 +435,9 @@ footer{
   .companyLinks{
     @media #{$small} {
       margin-left: 16px;
+      .companyLogo{
+        margin-bottom: 40px;
+      }
       a:after{
         content: "\A";
         white-space: pre;
@@ -490,7 +496,7 @@ footer{
   }
 }
 
-.inputBox, .inputBox_sub, .inputBox_conf{
+.inputBox, .inputBox_sub, .inputBox_conf, .inputBox_Econf{
   width: 100%;
   th{
     padding-right: 30px;
@@ -503,7 +509,7 @@ footer{
   }
 }
 
-.inputBox_sub{
+.inputBox_sub, .inputBox_Econf{
   td{
     padding: 0 0 16px 0;
   }

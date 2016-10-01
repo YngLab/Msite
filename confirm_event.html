@@ -9,7 +9,7 @@
 <!-- たぶんここまで -->
 
 <link rel = "stylesheet" href="css/style.css">
-<link rel = "shortcut icon" href="images/hmp.ico">
+<link rel = "shortcut icon" href="images/common/hmp.ico">
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
 <div id="wrapper">
@@ -85,7 +85,7 @@
           </div>
       </div>
       <form class = "form" action = "php/hoge.php" method = "post">
-        <table class = "inputForm">
+        <table class = "inputForm inputBox_Econf">
           <tr>
             <th>お名前</th>
             <td>
@@ -105,7 +105,7 @@
             </td>
           </tr>
           <tr>
-            <th class = "textareaLabel">問い合わせ内容</th>
+            <th class = "textareaLabel">その他ご質問等</th>
             <td>
               <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
             </td>
@@ -126,6 +126,34 @@
           </tr>
         </table>
       </form>
+      <div class = "inputForm_sp">
+        <form class = "form" action = "confirm_contact.php" method = "post">
+          <div class = "inputBox_conf_sp">
+            <p>お名前</p>
+            <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
+          </div>
+          <div class = "inputBox_conf_sp">
+            <p>メールアドレス</p>
+            <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
+          </div>
+          <div class = "inputBox_conf_sp_b">
+            <p>その他ご質問等</p>
+            <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
+          </div>
+          <table>
+            <tr>
+              <th>
+                <a href = "javascript:history.back();">
+                  <input type="button" value="訂正" class = "rev_button">
+                </a>
+              </th>
+              <td class = "send">
+                <input type="submit" value="送信" class = "button">
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
     </div>
   <!-- ここまで -->
   </div>
@@ -145,9 +173,9 @@
         <a href = "https://www.facebook.com/hakodatemiraiproject/">
           <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
         </a>
-        <a href = "https://www.instagram.com/instagramjapan/?hl=ja">
+        <!-- <a href = "https://www.instagram.com/instagramjapan/?hl=ja">
           <img src = "images/common/ig.png" alt="Instagram" class = "SNS">
-        </a>
+        </a> -->
       </div>
       <div class = "copyright">
         <p>@2016 Hakodate Mirai Project</p>
