@@ -346,10 +346,16 @@ footer:after {
 }
 
 .facility_explain {
-  padding-top: 50px;
+  padding: 50px 0 20px 0;
 }
 @media screen and (max-width: 768px) {
   .facility_explain {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .facility_detail {
     display: none;
   }
 }
@@ -359,6 +365,15 @@ footer:after {
 }
 @media screen and (min-width: 769px) {
   .facility_explain_sp {
+    display: none;
+  }
+}
+
+.facility_detail_sp {
+  padding: 16px 0 20px 0;
+}
+@media screen and (min-width: 769px) {
+  .facility_detail_sp {
     display: none;
   }
 }
@@ -1267,6 +1282,11 @@ footer .copyright p {
   font-size: 24px;
   line-height: 1.75em;
   text-align: center;
+}
+
+.facility_detail {
+  text-align: center;
+  line-height: 1.75em;
 }
 
 .facility_explain_sp {
