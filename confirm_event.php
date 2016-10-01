@@ -140,7 +140,7 @@ $_SESSION = $_POST;
         </div>
         <!-- ここまでイベント情報 -->
       </div>
-      <form class = "form" action = "php/hoge.php" method = "post">
+      <form class = "form" action = "send_event.php" method = "post">
         <table class = "inputForm inputBox_Econf">
           <tr>
             <th>お名前</th>
@@ -183,7 +183,7 @@ $_SESSION = $_POST;
         </table>
       </form>
       <div class = "inputForm_sp">
-        <form class = "form" action = "confirm_contact.php" method = "post">
+        <form class = "form" action = "send_event.php" method = "post">
           <div class = "inputBox_conf_sp">
             <p>お名前</p>
             <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['name']);?> readonly>

@@ -20,7 +20,7 @@ if($_SESSION['id'] == "0"){
 if(isset($_SESSION['old'])){
   $old = "
 ご年齢：
-$_SESSION['old']
+".$_SESSION['old']."
 ";
 }else{
   $old = "";
