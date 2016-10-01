@@ -63,80 +63,127 @@ $_SESSION = $_POST;
   </header>
   <div class = "pageTitle">
     <div class = "wrap">
-      <p class = "titleText">お問い合わせの確認</p>
+      <p class = "titleText">イベントの申し込み確認</p>
     </div>
   </div>
   <div class = "wrap">
   <!-- 以下body -->
     <div class = "autoHeight">
-      <div class = "inputForm">
-        <form class = "form" action = "send_contact.php" method = "post">
-          <div class = "radio">
-            <input type = "radio" name = "radio" id = "fch" value = "fch" readonly <?php if($_POST['radio'] == fch)echo "checked"; ?>>
-              <label for = "fch"><span class = "radioFont">はこだてみらい館</span></label>
-            <input type = "radio" name = "radio" id = "hkp" value = "hkp" readonly <?php if($_POST['radio'] == hkp)echo "checked"; ?>>
-              <label for = "hkp"><span class = "radioFont">はこだてキッズプラザ</span></label>
-            <input type = "radio" name = "radio" id = "both" value = "both" readonly <?php if($_POST['radio'] == both)echo "checked"; ?>>
-              <label for = "both"><span class = "radioFont">どちらとも</span></label>
-          </div>
-          <table class = "inputBox_conf">
+      <div class = "eventabout">
+        <!-- ここからイベント情報 -->
+        <img src = 
+        <?php if($_POST[id] == 0){echo '"images/sq_event1_FCH.jpg"  alt = "先行体験会"';
+        }else if($_POST[id] == 1){echo '"images/sq_event1_KPH.jpg"  alt = "先行体験会"';
+        }else if($_POST[id] == 2){echo '"images/sq_event2_FCH.jpg" alt = "トークセッション"';
+        }else if($_POST[id] == 3){echo '"images/sq_event3_FCH.jpg"  alt = "井上涼さんアニメーションワークショップ"';
+        }else if($_POST[id] == 4){echo '"images/sq_event2_KPH.jpg"  alt = "Whiteaフリースタイルパフォーマンス"';
+        }
+        ?>>
+        <p class = "FCHcolor eventabout_title">
+        <?php if($_POST[id] == 0){echo 'はこだてみらい館先行体験会';
+        }else if($_POST[id] == 1){echo 'はこだてキッズプラザ先行体験会';
+        }else if($_POST[id] == 2){echo 'トークセッション';
+        }else if($_POST[id] == 3){echo '井上涼さんアニメーションワークショップ';
+        }else if($_POST[id] == 4){echo 'Whiteaフリースタイルパフォーマンス';
+        }
+        ?></p>
+        <div class = "event_point">
+          <table>
             <tr>
-              <th>お名前</th>
-              <td>
-                <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['name']);?> readonly>
+              <th class = "event_point_cap">日時</th>
+              <td class = "event_point_contents">
+                <?php if($_POST[id] == 0){echo '10月12日(水)　15:00-18:00';
+                }else if($_POST[id] == 1){echo '10月12日(水)　15:00-18:00';
+                }else if($_POST[id] == 2){echo '10月15日(土)　10:30-12:00';
+                }else if($_POST[id] == 3){echo '10月16日(日)　10:00-16:30';
+                }else if($_POST[id] == 4){echo '10月16日(日)　13:00-14:00';
+                }
+                ?></td>
+            </tr>
+            <tr>
+              <th class = "event_point_cap">会場</th>
+              <td class = "event_point_contents">
+                <?php if($_POST[id] == 0){echo 'はこだてみらい館';
+                }else if($_POST[id] == 1){echo 'はこだてキッズプラザ';
+                }else if($_POST[id] == 2){echo 'はこだてみらい館';
+                }else if($_POST[id] == 3){echo 'はこだてみらい館';
+                }else if($_POST[id] == 4){echo 'はこだてキッズプラザ';
+                }
+                ?>
               </td>
             </tr>
             <tr>
-              <th>メールアドレス</th>
-              <td>
-                <input type = "email" name ="email" maxlength = "255" value=<?php echo htmlspecialchars($_POST['email']);?> readonly>
+              <th class = "event_point_cap">参加費</th>
+              <td class = "event_point_contents">
+                <?php if($_POST[id] == 0){echo '無料';
+                }else if($_POST[id] == 1){echo '無料';
+                }else if($_POST[id] == 2){echo '無料';
+                }else if($_POST[id] == 3){echo '無料';
+                }else if($_POST[id] == 4){echo '無料';
+                }
+                ?>
               </td>
             </tr>
             <tr>
-              <th class = "textareaLabel">問い合わせ内容</th>
-              <td>
-                <textarea name = "comment" id = "comment" cols = "40" rows = "5" readonly><?php echo htmlspecialchars($_POST['comment']);?></textarea>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a href = "javascript:history.back();">
-                  <div class = "confirm revision">
-                    <input type="button" value="訂正" class = "backbutton">
-                  </div>
-                </a>
-              </th>
-              <td>
-                <div class = "confirm">
-                  <input type="submit" value="送信" class = "sendbutton">
-                </div>
+              <th class = "event_point_cap">対象</th>
+              <td class = "event_point_contents">
+                <?php if($_POST[id] == 0){echo '小学生から中学生';
+                }else if($_POST[id] == 1){echo '幼稚園児から小学生';
+                }else if($_POST[id] == 2){echo '子どもから大人まで';
+                }else if($_POST[id] == 3){echo '子どもから大人まで';
+                }else if($_POST[id] == 4){echo '子どもから大人まで';
+                }
+                ?>
               </td>
             </tr>
           </table>
-        </form>
+        </div>
+        <!-- ここまでイベント情報 -->
       </div>
+      <form class = "form" action = "send_event.php" method = "post">
+        <table class = "inputForm inputBox_Econf">
+          <tr>
+            <th>お名前</th>
+            <td>
+              <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['name']);?> readonly>
+            </td>
+          </tr>
+          <tr>
+            <th>メールアドレス</th>
+            <td>
+              <input type = "email" name ="email" maxlength = "255" value=<?php echo htmlspecialchars($_POST['email']);?> readonly>
+            </td>
+          </tr>
+          <tr>
+            <th>参加者の年齢</th>
+            <td>
+              <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['old']);?> readonly>
+            </td>
+          </tr>
+          <tr>
+            <th class = "textareaLabel">その他ご質問等</th>
+            <td>
+              <textarea name = "comment" id = "comment" cols = "40" rows = "5" readonly><?php echo htmlspecialchars($_POST['comment']);?></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th>
+              <a href = "javascript:history.back();">
+                <div class = "confirm revision">
+                  <input type="button" value="訂正" class = "backbutton">
+                </div>
+              </a>
+            </th>
+            <td>
+              <div class = "confirm">
+                <input type="submit" value="送信" class = "sendbutton">
+              </div>
+            </td>
+          </tr>
+        </table>
+      </form>
       <div class = "inputForm_sp">
-        <form class = "form" action = "send_contact.php" method = "post">
-          <div class = "radio">
-            <span class = "radioElement">
-              <input type = "radio" name = "radio" id = "fch" value = "fch" readonly <?php if($_POST['radio'] == fch)echo "checked"; ?>>
-              <label for = "fch">
-                <span class = "radioFont">はこだてみらい館</span>
-              </label>
-            </span>
-            <span class = "radioElement">
-              <input type = "radio" name = "radio" id = "hkp" value = "hkp" readonly <?php if($_POST['radio'] == hkp)echo "checked"; ?>>
-              <label for = "hkp">
-                <span class = "radioFont">はこだてキッズプラザ</span>
-              </label>
-            </span>
-            <span class = "radioElement">
-              <input type = "radio" name = "radio" id = "both" value = "both" readonly <?php if($_POST['radio'] == both)echo "checked"; ?>>
-              <label for = "both">
-                <span class = "radioFont">どちらとも</span>
-              </label>
-            </span>
-          </div>
+        <form class = "form" action = "send_event.php" method = "post">
           <div class = "inputBox_conf_sp">
             <p>お名前</p>
             <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['name']);?> readonly>
@@ -146,7 +193,7 @@ $_SESSION = $_POST;
             <input type = "email" name ="email" maxlength = "255" value=<?php echo htmlspecialchars($_POST['email']);?> readonly>
           </div>
           <div class = "inputBox_conf_sp_b">
-            <p>問い合わせ内容</p>
+            <p>その他ご質問等</p>
             <textarea name = "comment" id = "comment" cols = "40" rows = "5" readonly><?php echo htmlspecialchars($_POST['comment']);?></textarea>
           </div>
           <table>
