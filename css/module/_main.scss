@@ -733,7 +733,9 @@ footer{
 
 .event_textBox{
   margin: 24px 0 0 50px;
+  height: calc(100% - 24px);
   position: relative;
+  @include clearfix;
   @media #{$small} {
     margin: 24px 20px 0px 20px;
   }
@@ -757,6 +759,8 @@ footer{
     //float: right;
     //margin-right: 40px;
     width: calc(100% - 300px);
+    height: calc(100% - 56px);
+    overflow: scroll;
     @include smallW;
     @media #{$normal} {
       float: right;
