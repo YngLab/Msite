@@ -211,7 +211,7 @@
     height: 200px;
     position: relative;
     img{
-      width: 51.6528%;
+      width: calc(100% * (210 / 484));
       position: absolute;
       top: 50%;
       left: 50%;
@@ -297,7 +297,7 @@
     height: 200px;
     position: relative;
     img{
-      width: 51.6528%;
+      width: calc(100% * (250 / 484));
       position: absolute;
       top: 50%;
       left: 50%;
@@ -827,6 +827,7 @@ footer{
 .button{
   background: transparent;
   color: $dark__fontColor;
+  cursor: pointer;
 }
 
 .rev_button{
@@ -1408,7 +1409,7 @@ footer{
         font-weight: 400;
         font-size: $link__fontSize;
         padding: 0;
-        line-height: 36px;
+        line-height: 35px;
         width: 100%;
         cursor: pointer;
       }
@@ -1416,7 +1417,7 @@ footer{
         background-color: transparent;
         color: #FFFFFF;
         padding: 0;
-        line-height: 36px;
+        line-height: 35px;
         width: 100%;
         cursor: pointer;
       }
@@ -1496,6 +1497,7 @@ h2.concept_title{
 }
 
 .concept{
+  font-size: 16px;
   margin: 0 auto;
   max-width: 960px;
   line-height: 1.8em;
@@ -1512,7 +1514,7 @@ h2.concept_title{
 }
 
 .concept_img{
-  max-width: 50%;
+  max-width: 45%;
   float: left;
   img{
     width: 100%;
@@ -1525,10 +1527,10 @@ h2.concept_title{
 
 .concept_text{
   @media #{$normal}{
-    max-width: 40%;
+    max-width: 45%;
     float: left;
     p{
-      margin-top: calc(960px / 4 - 1em);
+      margin-top: calc(960px / 9 * 2 - 16px * 1.5 );
     }
   }
   @media #{$small} {

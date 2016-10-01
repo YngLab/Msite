@@ -10,7 +10,7 @@
 
 <link rel = "stylesheet" href="css/style.css">
 <link rel = "shortcut icon" href="images/common/hmp.ico">
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js?key=AIzaSyCg2fiiYKTBVea5yOKx4kLgIfs9nuuSYCE"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
 <script type="text/javascript">
   function initialize() {
@@ -23,12 +23,12 @@
     };
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); //地図を表示
     //地図上にマーカーを配置する
-    var markerImg = {
-      url: 'images/access/marker.png',
-      scaledSize : new google.maps.Size(50, 65)
-    };
+    // var markerImg = {
+    //   url: 'images/access/marker.png',
+    //   scaledSize : new google.maps.Size(50, 65)
+    // };
     marker = new google.maps.Marker({
-      icon: markerImg,
+      // icon: markerImg,
       position: latlng,
       map: map
     });
@@ -41,7 +41,6 @@
       {
           "stylers": [
             { "saturation": -100 },
-            { "lightness": -10 }
           ]
       }
     ];
@@ -54,7 +53,7 @@
     infoWnd.open(map, marker);
    }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyClT_6y9GTq8Z1cBSUMuTGon6DyCldyqww"></script>
 </script>
 <body onload="initialize();">
 <div id="wrapper">
@@ -103,12 +102,12 @@
     </div>
   </div>
   <div class = "wrap map_container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.575577889772!2d140.72657468074254!3d41.772807690458556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x93211128725d24fb!2z44Kt44Op44Oq44K55Ye96aSo!5e0!3m2!1sja!2sjp!4v1475259043980" width="600" class = "only_pc" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2975.575577889772!2d140.72657468074254!3d41.772807690458556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x93211128725d24fb!2z44Kt44Op44Oq44K55Ye96aSo!5e0!3m2!1sja!2sjp!4v1475259043980" width="600" class = "only_pc" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     <div class = "map_address only_sp">
       <a href = "https://goo.gl/maps/pa7G48WT4162" class = "linkText">
         Googleマップ
-      </a>
-    <!-- <div id = "map_canvas"></div> -->
+      </a> -->
+    <div id = "map_canvas"></div>
   </div>
   <div class = "wrap">
     <div class = "adress">
@@ -130,7 +129,7 @@
         <div class = "headmark"></div>
         <p>駐車場</p>
       </div>
-      <p class = "lineSpace">100台/2時間まで無料(両施設共有)</p>
+      <p class = "lineSpace">199台　施設利用者は2時間まで無料（両施設共通）</p>
     </div>
     <div class = "accessProcess">
       <div class = "heading">
@@ -153,10 +152,10 @@
     <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
     <div class = "foot">
       <div class ="footerLinks">
-        <a href = "member.html" class="links">メンバー</a>
+<!--         <a href = "member.html" class="links">メンバー</a>-->
         <a href = "notice.html" class="links">お知らせ</a>
         <a href = "recruit.html" class="links">求人情報</a>
-        <a href = "FAQ.html" class="links">よくあるご質問</a>
+<!--        <a href = "FAQ.html" class="links">よくあるご質問</a> -->
         <a href = "relatedlinks.html" class="links">関連リンク</a>
         <a href = "sitemap.html" class="links">サイトマップ</a>
         <a href = "sitepolicy.html" class="links">サイトポリシー</a>
