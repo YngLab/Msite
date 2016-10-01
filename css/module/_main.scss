@@ -1,5 +1,31 @@
 @charset "UTF-8";
 
+#imageArea img {
+  position: absolute;
+  display: block; 
+  margin: 0 auto;
+}
+#imageBox1,
+#imageBox2,
+#imageBox3,
+#imageBox4,
+#imageBox5,
+#imageBox6,
+#imageBox7,
+#imageBox8 {
+  width: 25%;
+  float: left;
+}
+#indexTitle {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 60%;
+  border-top: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+}
+
 .topcap{
   text-align: center;
 }

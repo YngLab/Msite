@@ -130,12 +130,6 @@ a:hover {
 }
 
 /* layout */
-.instaPic {
-  background-color: #CCCCCC;
-  height: 400px;
-  width: 100%;
-}
-
 .wrap {
   margin: 0 auto;
   width: calc(100% * (1000 / 1080));
@@ -172,6 +166,16 @@ a:hover {
     background: #9fa0a0;
     font-size: 40px;
   }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+
+#imageArea {
+  width: 100%;
+  position: relative;
 }
 
 .latestEvent {
@@ -715,6 +719,34 @@ footer:after {
 }
 
 /* module */
+#imageArea img {
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+}
+
+#imageBox1,
+#imageBox2,
+#imageBox3,
+#imageBox4,
+#imageBox5,
+#imageBox6,
+#imageBox7,
+#imageBox8 {
+  width: 25%;
+  float: left;
+}
+
+#indexTitle {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 60%;
+  border-top: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+}
+
 .topcap {
   text-align: center;
 }
