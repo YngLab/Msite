@@ -719,8 +719,6 @@ footer:after {
 
 .latestEvent {
   font-size: 0;
-  max-width: 1440px !important;
-  min-width: 1080px !important;
   padding-bottom: 40px;
 }
 .latestEvent .latestBox_future {
@@ -728,6 +726,8 @@ footer:after {
   border: solid 1px #f39800;
   display: inline-block;
   margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
+  max-height: 301.328px !important;
+  max-width: 301.328px !important;
   position: relative;
 }
 .latestEvent .latestBox_future .remaindays_future {
@@ -750,6 +750,8 @@ footer:after {
   border: solid 1px #8fc31f;
   display: inline-block;
   margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
+  max-height: 301.328px !important;
+  max-width: 301.328px !important;
   position: relative;
 }
 .latestEvent .latestBox_kids .remaindays_kids {

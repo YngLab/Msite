@@ -5,8 +5,6 @@
 }
 .latestEvent{
   font-size: 0;
-  max-width: 1440px !important;
-  min-width: 1080px !important;
   padding-bottom: 40px;
   //margin-top: 40px;
   .latestBox_future{
@@ -15,6 +13,9 @@
     display: inline-block;
     margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
     //margin: -1px 2.75% -1px -1px;
+    max-height: 301.328px !important;
+    max-width: 301.328px !important;
+    //min-width: 1080px !important;
     position: relative;
     .remaindays_future{
       background-color: $g__color-future;
@@ -38,6 +39,9 @@
     display: inline-block;
     margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
     //margin: -1px 2.75% -1px -1px;
+    max-height: 301.328px !important;
+    max-width: 301.328px !important;
+    //min-width: 1080px !important;
     position: relative;
     .remaindays_kids{
       background-color: $g__color-kids;
