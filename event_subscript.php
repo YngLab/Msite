@@ -70,18 +70,18 @@ if(!$_GET){
         <!-- ここからイベント情報 -->
         <img src = 
         <?php if($_GET[id] == 0){echo '"images/sq_event1_FCH.jpg"  alt = "先行体験会"';
-        }else if($GET[id] == 1){ echo '"images/sq_event1_KPH.jpg"  alt = "先行体験会"';
-        }else if($GET[id] == 2){ echo '"images/sq_event2_FCH.jpg" alt = "トークセッション"';
-        }else if($GET[id] == 3){ echo '"images/sq_event3_FCH.jpg"  alt = "井上涼さんアニメーションワークショップ"';
-        }else if($GET[id] == 4){ echo '"images/sq_event2_KPH.jpg"  alt = "Whiteaフリースタイルパフォーマンス"';
+        }else if($_GET[id] == 1){echo '"images/sq_event1_KPH.jpg"  alt = "先行体験会"';
+        }else if($_GET[id] == 2){echo '"images/sq_event2_FCH.jpg" alt = "トークセッション"';
+        }else if($_GET[id] == 3){echo '"images/sq_event3_FCH.jpg"  alt = "井上涼さんアニメーションワークショップ"';
+        }else if($_GET[id] == 4){echo '"images/sq_event2_KPH.jpg"  alt = "Whiteaフリースタイルパフォーマンス"';
         }
         ?>>
         <p class = "FCHcolor eventabout_title">
         <?php if($_GET[id] == 0){echo 'はこだてみらい館先行体験会';
-        }else if($GET[id] == 1){ echo 'はこだてキッズプラザ先行体験会';
-        }else if($GET[id] == 2){ echo 'トークセッション';
-        }else if($GET[id] == 3){ echo '井上涼さんアニメーションワークショップ';
-        }else if($GET[id] == 4){ echo 'Whiteaフリースタイルパフォーマンス';
+        }else if($_GET[id] == 1){echo 'はこだてキッズプラザ先行体験会';
+        }else if($_GET[id] == 2){echo 'トークセッション';
+        }else if($_GET[id] == 3){echo '井上涼さんアニメーションワークショップ';
+        }else if($_GET[id] == 4){echo 'Whiteaフリースタイルパフォーマンス';
         }
         ?></p>
         <div class = "event_point">
@@ -90,10 +90,10 @@ if(!$_GET){
               <th class = "event_point_cap">日時</th>
               <td class = "event_point_contents">
                 <?php if($_GET[id] == 0){echo '10月12日(水)　15:00-18:00';
-                }else if($GET[id] == 1){ echo '10月12日(水)　15:00-18:00';
-                }else if($GET[id] == 2){ echo '10月15日(土)　10:30-12:00';
-                }else if($GET[id] == 3){ echo '10月16日(日)　10:00-16:30';
-                }else if($GET[id] == 4){ echo '10月16日(日)　13:00-14:00';
+                }else if($_GET[id] == 1){echo '10月12日(水)　15:00-18:00';
+                }else if($_GET[id] == 2){echo '10月15日(土)　10:30-12:00';
+                }else if($_GET[id] == 3){echo '10月16日(日)　10:00-16:30';
+                }else if($_GET[id] == 4){echo '10月16日(日)　13:00-14:00';
                 }
                 ?></td>
             </tr>
@@ -101,10 +101,10 @@ if(!$_GET){
               <th class = "event_point_cap">会場</th>
               <td class = "event_point_contents">
                 <?php if($_GET[id] == 0){echo 'はこだてみらい館';
-                }else if($GET[id] == 1){ echo 'はこだてキッズプラザ';
-                }else if($GET[id] == 2){ echo 'はこだてみらい館';
-                }else if($GET[id] == 3){ echo 'はこだてみらい館';
-                }else if($GET[id] == 4){ echo 'はこだてキッズプラザ';
+                }else if($_GET[id] == 1){echo 'はこだてキッズプラザ';
+                }else if($_GET[id] == 2){echo 'はこだてみらい館';
+                }else if($_GET[id] == 3){echo 'はこだてみらい館';
+                }else if($_GET[id] == 4){echo 'はこだてキッズプラザ';
                 }
                 ?>
               </td>
@@ -113,10 +113,10 @@ if(!$_GET){
               <th class = "event_point_cap">参加費</th>
               <td class = "event_point_contents">
                 <?php if($_GET[id] == 0){echo '無料';
-                }else if($GET[id] == 1){ echo '無料';
-                }else if($GET[id] == 2){ echo '無料';
-                }else if($GET[id] == 3){ echo '無料';
-                }else if($GET[id] == 4){ echo '無料';
+                }else if($_GET[id] == 1){echo '無料';
+                }else if($_GET[id] == 2){echo '無料';
+                }else if($_GET[id] == 3){echo '無料';
+                }else if($_GET[id] == 4){echo '無料';
                 }
                 ?>
               </td>
@@ -125,10 +125,10 @@ if(!$_GET){
               <th class = "event_point_cap">対象</th>
               <td class = "event_point_contents">
                 <?php if($_GET[id] == 0){echo '小学生から中学生';
-                }else if($GET[id] == 1){ echo '幼稚園児から小学生';
-                }else if($GET[id] == 2){ echo '子どもから大人まで';
-                }else if($GET[id] == 3){ echo '子どもから大人まで';
-                }else if($GET[id] == 4){ echo '子どもから大人まで';
+                }else if($_GET[id] == 1){echo '幼稚園児から小学生';
+                }else if($_GET[id] == 2){echo '子どもから大人まで';
+                }else if($_GET[id] == 3){echo '子どもから大人まで';
+                }else if($_GET[id] == 4){echo '子どもから大人まで';
                 }
                 ?>
               </td>
