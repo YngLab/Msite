@@ -1,2 +1,6 @@
 @charset "UTF-8";
 //↑加納↓高居
+.event_detail-overflow{
+  height: calc(100% - 56px);
+  overflow-y: scroll;
+}
