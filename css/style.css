@@ -959,7 +959,7 @@ footer:after {
   position: relative;
 }
 .future_entrance .future_logo img {
-  width: 51.6528%;
+  width: calc(100% * (210 / 484));
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1047,7 +1047,7 @@ footer:after {
   position: relative;
 }
 .kids_entrance .kids_logo img {
-  width: 51.6528%;
+  width: calc(100% * (250 / 484));
   position: absolute;
   top: 50%;
   left: 50%;
