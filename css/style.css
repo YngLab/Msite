@@ -1529,7 +1529,13 @@ footer .copyright p {
 
 .event_textBox {
   margin: 24px 0 0 50px;
+  height: calc(100% - 24px);
   position: relative;
+}
+.event_textBox:after {
+  clear: both;
+  content: "";
+  display: block;
 }
 @media screen and (max-width: 768px) {
   .event_textBox {
@@ -2728,3 +2734,7 @@ html[xmlns] .flexslider .slides {
   }
 }
 /* state */
+.event_detail-overflow {
+  height: calc(100% - 56px);
+  overflow-y: scroll;
+}
