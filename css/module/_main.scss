@@ -13,6 +13,8 @@
     display: inline-block;
     margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
     //margin: -1px 2.75% -1px -1px;
+    max-width: 1440px !important;
+    min-width: 1080px !important;
     position: relative;
     .remaindays_future{
       background-color: $g__color-future;
@@ -36,6 +38,8 @@
     display: inline-block;
     margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
     //margin: -1px 2.75% -1px -1px;
+    max-width: 1440px !important;
+    min-width: 1080px !important;
     position: relative;
     .remaindays_kids{
       background-color: $g__color-kids;
@@ -834,9 +838,6 @@ footer{
 }
 
 .eventabout{
-  width: 25%;
-  float: left;
-  margin-right: calc(100% * (75 / 1000));
   img{
     width: 100%;
   }
@@ -844,6 +845,16 @@ footer{
     line-height: 20px;
     font-size: 16px;
     margin-bottom: 6px;
+  }
+  @media #{$normal} {
+    width: 25%;
+    float: left;
+    margin-right: calc(100% * (75 / 1000));
+  }
+  @media #{$small} {
+    .eventabout_title{
+      margin: 24px 0 24px 0;
+    }
   }
 }
 

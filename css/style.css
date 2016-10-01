@@ -726,6 +726,8 @@ footer:after {
   border: solid 1px #f39800;
   display: inline-block;
   margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
+  max-width: 1440px !important;
+  min-width: 1080px !important;
   position: relative;
 }
 .latestEvent .latestBox_future .remaindays_future {
@@ -748,6 +750,8 @@ footer:after {
   border: solid 1px #8fc31f;
   display: inline-block;
   margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
+  max-width: 1440px !important;
+  min-width: 1080px !important;
   position: relative;
 }
 .latestEvent .latestBox_kids .remaindays_kids {
@@ -1623,11 +1627,6 @@ footer .copyright p {
   margin-top: 24px;
 }
 
-.eventabout {
-  width: 25%;
-  float: left;
-  margin-right: calc(100% * (75 / 1000));
-}
 .eventabout img {
   width: 100%;
 }
@@ -1635,6 +1634,18 @@ footer .copyright p {
   line-height: 20px;
   font-size: 16px;
   margin-bottom: 6px;
+}
+@media screen and (min-width: 769px) {
+  .eventabout {
+    width: 25%;
+    float: left;
+    margin-right: calc(100% * (75 / 1000));
+  }
+}
+@media screen and (max-width: 768px) {
+  .eventabout .eventabout_title {
+    margin: 24px 0 24px 0;
+  }
 }
 
 .experiencemenu {
