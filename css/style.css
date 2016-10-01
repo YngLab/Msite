@@ -2278,6 +2278,7 @@ h2.concept_title {
 }
 
 .concept {
+  font-size: 16px;
   margin: 0 auto;
   max-width: 960px;
   line-height: 1.8em;
@@ -2298,7 +2299,7 @@ h2.concept_title {
 }
 
 .concept_img {
-  max-width: 50%;
+  max-width: 45%;
   float: left;
 }
 .concept_img img {
@@ -2313,11 +2314,11 @@ h2.concept_title {
 
 @media screen and (min-width: 769px) {
   .concept_text {
-    max-width: 40%;
+    max-width: 45%;
     float: left;
   }
   .concept_text p {
-    margin-top: calc(960px / 4 - 1em);
+    margin-top: calc(960px / 9 * 2 - 16px * 1.5 );
   }
 }
 @media screen and (max-width: 768px) {
