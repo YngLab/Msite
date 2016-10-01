@@ -155,7 +155,7 @@ if(!$_GET){
             <tr>
               <th>参加者の年齢</th>
               <td>
-                <input type = "text" name ="email" maxlength = "255" placeholder="10歳">
+                <input type = "text" name ="old" maxlength = "255" placeholder="10歳">
               </td>
             </tr>
             <tr>

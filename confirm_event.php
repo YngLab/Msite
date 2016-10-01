@@ -145,25 +145,25 @@ $_SESSION = $_POST;
           <tr>
             <th>お名前</th>
             <td>
-              <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
+              <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['name']);?> readonly>
             </td>
           </tr>
           <tr>
             <th>メールアドレス</th>
             <td>
-              <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
+              <input type = "email" name ="email" maxlength = "255" value=<?php echo htmlspecialchars($_POST['email']);?> readonly>
             </td>
           </tr>
           <tr>
             <th>参加者の年齢</th>
             <td>
-              <input type="text" name ="name" maxlength = "255" placeholder = "10歳">
+              <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['old']);?> readonly>
             </td>
           </tr>
           <tr>
             <th class = "textareaLabel">その他ご質問等</th>
             <td>
-              <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
+              <textarea name = "comment" id = "comment" cols = "40" rows = "5" readonly><?php echo htmlspecialchars($_POST['comment']);?></textarea>
             </td>
           </tr>
           <tr>
@@ -186,15 +186,15 @@ $_SESSION = $_POST;
         <form class = "form" action = "confirm_contact.php" method = "post">
           <div class = "inputBox_conf_sp">
             <p>お名前</p>
-            <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
+            <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['name']);?> readonly>
           </div>
           <div class = "inputBox_conf_sp">
             <p>メールアドレス</p>
-            <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
+            <input type = "email" name ="email" maxlength = "255" value=<?php echo htmlspecialchars($_POST['email']);?> readonly>
           </div>
           <div class = "inputBox_conf_sp_b">
             <p>その他ご質問等</p>
-            <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
+            <textarea name = "comment" id = "comment" cols = "40" rows = "5" readonly><?php echo htmlspecialchars($_POST['comment']);?></textarea>
           </div>
           <table>
             <tr>
