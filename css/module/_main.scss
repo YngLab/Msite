@@ -170,7 +170,8 @@
 }
 
 .language{
-  float: left;
+  // float: left;
+  display: none;
 }
 
 .gNav{
@@ -1219,6 +1220,7 @@ footer{
          -o-transition: all .4s;
             transition: all .4s;
   .sp_language{
+    display: none;
     p{
       line-height: 40px;
       float: right;
@@ -1257,9 +1259,10 @@ footer{
 }
 
 .sp_language{
-  width: 100%;
-  height: 40px;
-  background-color: $g__fontColor;
+  display: none;
+  // width: 100%;
+  // height: 40px;
+  // background-color: $g__fontColor;
   a{
     color: #FFFFFF;
   }
