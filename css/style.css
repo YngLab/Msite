@@ -1536,7 +1536,13 @@ footer .copyright p {
 
 .event_textBox {
   margin: 24px 0 0 50px;
+  height: calc(100% - 24px);
   position: relative;
+}
+.event_textBox:after {
+  clear: both;
+  content: "";
+  display: block;
 }
 @media screen and (max-width: 768px) {
   .event_textBox {
@@ -1561,6 +1567,8 @@ footer .copyright p {
   font-weight: 200;
   line-height: 1.75em;
   width: calc(100% - 300px);
+  height: calc(100% - 56px);
+  overflow: scroll;
 }
 @media screen and (max-width: 768px) {
   .event_textBox .event_detail {
