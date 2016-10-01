@@ -6,9 +6,9 @@ $add_header .= "Reply-to: info@hakodate-miraiproject.jp\n";//送信者の情報(
 $add_header .= "X-Mailer: PHP/". phpversion();
 
 if($_SESSION['id'] == "0"){
-  $about = "はこだてみらい館先行体験会";
+  $about = "はこだてみらい館 先行体験会";
 }else if($_SESSION['id'] == "1"){
-  $about = "はこだてキッズプラザ先行体験会";
+  $about = "はこだてキッズプラザ 先行体験会";
 }else if($_SESSION['id'] == "2"){
   $about = "トークセッション";
 }else if($_SESSION['id'] == "3"){

@@ -80,8 +80,8 @@ $_SESSION = $_POST;
         }
         ?>>
         <p class = "FCHcolor eventabout_title">
-        <?php if($_POST[id] == 0){echo 'はこだてみらい館先行体験会';
-        }else if($_POST[id] == 1){echo 'はこだてキッズプラザ先行体験会';
+        <?php if($_POST[id] == 0){echo 'はこだてみらい 館先行体験会';
+        }else if($_POST[id] == 1){echo 'はこだてキッズプラザ 先行体験会';
         }else if($_POST[id] == 2){echo 'トークセッション';
         }else if($_POST[id] == 3){echo '井上涼さんアニメーションワークショップ';
         }else if($_POST[id] == 4){echo 'Whiteaフリースタイルパフォーマンス';
