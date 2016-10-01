@@ -105,6 +105,13 @@ a:hover {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .bgcolor-top {
+    background-color: #f7f8f8;
+    padding-bottom: 40px;
+  }
+}
+
 .linkText {
   border-bottom: solid 1px #595757;
   color: #595757;
@@ -553,7 +560,7 @@ footer:after {
 }
 
 .pageTitle {
-  margin: 12px 0 50px 0;
+  margin-bottom: 50px;
 }
 .pageTitle .titleText {
   padding-left: 24px;
@@ -967,7 +974,7 @@ footer:after {
   position: relative;
 }
 .future_entrance .future_logo img {
-  width: 51.6528%;
+  width: calc(100% * (210 / 484));
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1055,7 +1062,7 @@ footer:after {
   position: relative;
 }
 .kids_entrance .kids_logo img {
-  width: 51.6528%;
+  width: calc(100% * (250 / 484));
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1209,7 +1216,7 @@ footer .foot .footerLinks:after {
 }
 @media screen and (min-width: 769px) {
   footer .foot .footerLinks {
-    width: 714px;
+    width: 504px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1648,6 +1655,7 @@ footer .copyright p {
 .button {
   background: transparent;
   color: #727171;
+  cursor: pointer;
 }
 
 .rev_button {
@@ -1986,6 +1994,11 @@ footer .copyright p {
   margin-right: 80px;
 }
 
+p.company_about {
+  margin-left: 0;
+  font-size: 14px;
+}
+
 #wrapper {
   position: relative;
   -webkit-transition: all .4s;
@@ -2053,12 +2066,12 @@ footer .copyright p {
   transition: all .4s;
 }
 #drawer .sp_language {
-  display: none;
+  width: 100%;
+  height: 40px;
+  background-color: #9fa0a0;
 }
 #drawer .sp_language p {
-  line-height: 40px;
-  float: right;
-  margin-right: 21px;
+  display: none;
 }
 #drawer .navBox {
   height: calc((100% - 40px) - calc((100% - 40px) / 17));
@@ -2086,13 +2099,6 @@ footer .copyright p {
 #drawer.open {
   -webkit-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
-}
-
-.sp_language {
-  display: none;
-}
-.sp_language a {
-  color: #FFFFFF;
 }
 
 .lineSpace {
@@ -2218,7 +2224,7 @@ footer .copyright p {
   font-weight: 400;
   font-size: 15px;
   padding: 0;
-  line-height: 36px;
+  line-height: 35px;
   width: 100%;
   cursor: pointer;
 }
@@ -2226,7 +2232,7 @@ footer .copyright p {
   background-color: transparent;
   color: #FFFFFF;
   padding: 0;
-  line-height: 36px;
+  line-height: 35px;
   width: 100%;
   cursor: pointer;
 }
@@ -2290,6 +2296,7 @@ h2.concept_title {
 }
 
 .concept {
+  font-size: 16px;
   margin: 0 auto;
   max-width: 960px;
   line-height: 1.8em;
@@ -2310,7 +2317,7 @@ h2.concept_title {
 }
 
 .concept_img {
-  max-width: 50%;
+  max-width: 45%;
   float: left;
 }
 .concept_img img {
@@ -2325,11 +2332,11 @@ h2.concept_title {
 
 @media screen and (min-width: 769px) {
   .concept_text {
-    max-width: 40%;
+    max-width: 45%;
     float: left;
   }
   .concept_text p {
-    margin-top: calc(960px / 4 - 1em);
+    margin-top: calc(960px / 9 * 2 - 16px * 1.5 );
   }
 }
 @media screen and (max-width: 768px) {

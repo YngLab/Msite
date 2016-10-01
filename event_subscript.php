@@ -77,9 +77,9 @@ if(!$_GET){
         }
         ?>>
         <p class = "FCHcolor eventabout_title">
-        <?php if($_GET[id] == 0){echo 'はこだてみらい館先行体験会';
-        }else if($_GET[id] == 1){echo 'はこだてキッズプラザ先行体験会';
-        }else if($_GET[id] == 2){echo 'トークセッション';
+        <?php if($_GET[id] == 0){echo 'はこだてみらい館 先行体験会';
+        }else if($_GET[id] == 1){echo 'はこだてキッズプラザ 先行体験会';
+        }else if($_GET[id] == 2){echo 'オドロクチカラ トークセッション';
         }else if($_GET[id] == 3){echo '井上涼さんアニメーションワークショップ';
         }else if($_GET[id] == 4){echo 'Whiteaフリースタイルパフォーマンス';
         }

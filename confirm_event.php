@@ -80,9 +80,9 @@ $_SESSION = $_POST;
         }
         ?>>
         <p class = "FCHcolor eventabout_title">
-        <?php if($_POST[id] == 0){echo 'はこだてみらい館先行体験会';
-        }else if($_POST[id] == 1){echo 'はこだてキッズプラザ先行体験会';
-        }else if($_POST[id] == 2){echo 'トークセッション';
+        <?php if($_POST[id] == 0){echo 'はこだてみらい 館先行体験会';
+        }else if($_POST[id] == 1){echo 'はこだてキッズプラザ 先行体験会';
+        }else if($_POST[id] == 2){echo 'オドロクチカラ トークセッション';
         }else if($_POST[id] == 3){echo '井上涼さんアニメーションワークショップ';
         }else if($_POST[id] == 4){echo 'Whiteaフリースタイルパフォーマンス';
         }
@@ -145,19 +145,19 @@ $_SESSION = $_POST;
           <tr>
             <th>お名前</th>
             <td>
-              <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['name']);?> readonly>
+              <input type="text" name ="name" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['name']);?>>
             </td>
           </tr>
           <tr>
             <th>メールアドレス</th>
             <td>
-              <input type = "email" name ="email" maxlength = "255" value=<?php echo htmlspecialchars($_POST['email']);?> readonly>
+              <input type = "email" name ="email" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['email']);?>>
             </td>
           </tr>
           <tr>
             <th>参加者の年齢</th>
             <td>
-              <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['old']);?> readonly>
+              <input type="text" name ="name" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['old']);?>>
             </td>
           </tr>
           <tr>
@@ -186,11 +186,11 @@ $_SESSION = $_POST;
         <form class = "form" action = "send_event.php" method = "post">
           <div class = "inputBox_conf_sp">
             <p>お名前</p>
-            <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['name']);?> readonly>
+            <input type="text" name ="name" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['name']);?>>
           </div>
           <div class = "inputBox_conf_sp">
             <p>メールアドレス</p>
-            <input type = "email" name ="email" maxlength = "255" value=<?php echo htmlspecialchars($_POST['email']);?> readonly>
+            <input type = "email" name ="email" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['email']);?>>
           </div>
           <div class = "inputBox_conf_sp_b">
             <p>その他ご質問等</p>
