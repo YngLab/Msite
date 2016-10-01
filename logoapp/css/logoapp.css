@@ -1,0 +1,314 @@
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+body{
+  font-family: 'Noto Sans Japanese', sans-serif;
+  color: #666;
+}
+html {
+  height: 100%;
+}
+
+.noTitleDialog .ui-dialog-titlebar {display:none;}
+.ui-widget {
+  font-family: 'Noto Sans Japanese', sans-serif;
+  color: #666;
+}
+
+.tutorialMainBlock,
+.tutorialPreviewCanvas,
+.mainBlock,
+.previewCanvas,
+.completeBlock
+{
+  border: 1px solid #999;
+}
+
+.appBody {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+  min-width: 620px;
+  min-height: 550px;
+}
+.tutorialContainer {
+  width: 840px;
+  height: 540px;
+}
+.tutorialContainer a {
+  text-decoration: none;
+  border: 0px;
+  outline: none;
+}
+.tutorialTopBlock {
+  margin-top: 20px;
+  height: 50px;
+}
+.tutorialTextBlock {
+  float: left;
+  height: 50px;
+}
+#tutorialText {
+  font-size: 24px;
+  margin: 0 0 0 20px;
+}
+.tutorialSkipContainer {
+  width: 120px;
+  float: right;
+  height: 50px;
+  position: relative;
+}
+.tutorialSkipBlock {
+  width: 120px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+}
+#tutorialSkipButton {
+  height: 44px;
+  line-height: 44px;
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+#tutorialSkipButton img {
+  margin-bottom: -4px;
+  margin-left: 12px;
+}
+.tutorialBottomBlock {
+  margin-top: 20px;
+  height: 460px;
+}
+.tutorialLeftContainer {
+  float: left;
+  width: 100px;
+  height: 460px;
+  position: relative;
+}
+.tutorialLeftBlock {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+}
+#tutorialBackButton {
+  height: 44px;
+  line-height: 44px;
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+#tutorialBackButton img {
+  margin-bottom: -3px;
+  margin-right: 18px;
+}
+.tutorialCenterContainer {
+  float: left;
+  width: 620px;
+  height: 460px;
+}
+.tutorialCenterBlock {
+  width: 620px;
+  height: 460px;
+}
+.tutorialPreviewContainer {
+  float:left;
+  width: 60px;
+  height: 460px;
+  position: relative;}
+.tutorialPreviewArea {
+  width: 60px;
+  height: 450px;
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  margin: auto;
+}
+.tutorialPreviewBlockFirst {width: 48px; height: 48px;margin: auto; margin-top: 1px;}
+.tutorialPreviewBlock {width: 48px; height: 48px; margin: auto; margin-top: 9px;}
+.tutorialPreviewNumber {float: left; margin-top: 2px; font-size: 20px;font-weight: bold;}
+.tutorialMainContainer {float:left; margin-left: 10px; width: 460px; height: 460px; position: relative;}
+.tutorialMainBlock {width: 450px; height: 450px;
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  margin: auto;
+}
+.tutorialButtonContainer {
+  margin-left: 10px;
+  float:left;
+  width: 70px;
+  height: 460px;
+  position: relative;
+}
+#tutorialButtonArea {
+  width: 60px; height: 450px;
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  margin: auto;
+}
+.tutorialButtonBlockFirst {
+  width: 60px; height: 60px;margin: auto; margin-top: 1px;
+}
+.tutorialButtonBlock {
+  width: 60px; height: 60px;margin: auto; margin-top: 37px;
+}
+#tutorialPointer {
+  position: absolute;
+  display: none;
+  /* display: block; */
+}
+.tutorialRightContainer {
+  float: right;
+  width: 100px;
+  height: 460px;
+}
+.tutorialRightBlock {
+  width: 100px;
+  height: 460px;
+  position: relative;
+}
+.tutorialRightTopBlock {
+  width: 100px;
+  height: 420px;
+}
+.tutorialPageButtonArea {
+  float: right;
+  margin-top: 100px;
+  width: 40px;
+  height: 240px;
+}
+.tutorialPageButtonBlockFirst {
+  width: 30px;
+  height: 30px;
+}
+.tutorialPageButtonBlock {
+  margin-top: 25px;
+  width: 30px;
+  height: 30px;
+}
+.tutorialRightBottomBlock {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+}
+#tutorialNextButton {
+  height: 44px;
+  line-height: 44px;
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+#tutorialNextButton img {
+  margin-bottom: -3px;
+  margin-left: 12px;
+}
+.appContainer {
+  margin: -275px 0px 0px -310px; /* 幅と高さの半分のネガティブマージン */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 620px;
+  height: 550px;
+}
+.appBlock {
+  width: 620px;
+  height: 550px;
+}
+.topBlock {
+  height: 86px;
+}
+.bottomBlock {
+  height: 460px;
+}
+.appTitle {float: left; width: 528px; height:86px; }
+.appTitle h1 {margin: auto 0px; line-height: 86px;}
+.helpArea {float: left; margin-left: 10px; width: 70px; height: 86px; position: relative;}
+.helpBlock { width: 50px; height: 50px;
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  margin: auto;
+}
+.previewContainer {float:left; width: 60px; height: 460px; position: relative;}
+.previewArea {width: 60px; height: 450px;
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  margin: auto;
+}
+.previewBlockFirst {width: 48px; height: 48px;margin: auto; margin-top: 1px;}
+.previewBlock {width: 48px; height: 48px; margin: auto; margin-top: 9px;}
+.previewNumber {float: left; margin-top: 2px; font-size: 20px;font-weight: bold;}
+.mainContainer {float:left; margin-left: 10px; width: 460px; height: 460px; position: relative;}
+.mainBlock {width: 450px; height: 450px;
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  margin: auto;
+}
+.buttonContainer {
+  margin-left: 10px;
+  float:left;
+  width: 70px;
+  height: 460px;
+  position: relative;
+}
+.buttonArea {
+  width: 60px; height: 450px;
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  margin: auto;
+}
+.buttonBlockFirst {
+  width: 60px; height: 60px;margin: auto; margin-top: 1px;
+}
+.buttonBlock {
+  width: 60px; height: 60px;margin: auto; margin-top: 37px;
+}
+.completeContainer {
+  margin: auto;
+  width: 700px;
+  height: 540px;
+}
+.completeText {
+  font-size: 36px;
+  margin: 24px auto;
+  text-align: center;
+}
+.completeLeftContainer {
+  width: 120px;
+  height: 450px;
+  float: left;
+  position: relative;
+}
+.completeLeftBlock {
+  width: 115px;
+  height: 40px;
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  margin: auto;
+}
+.completeCenterContainer {
+  width: 460px;
+  height: 460px;
+  float: left;
+  position: relative;
+}
+.completeCenterBlock {
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  margin: auto;
+
+}
+.completeRightContainer {
+  width: 120px;
+  height: 450px;
+  float: left;
+  position: relative;
+}
+.completeRightBlock {
+  width: 115px;
+  height: 40px;
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  margin: auto;
+}
