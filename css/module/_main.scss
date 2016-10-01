@@ -759,8 +759,6 @@ footer{
     //float: right;
     //margin-right: 40px;
     width: calc(100% - 300px);
-    height: calc(100% - 56px);
-    overflow: scroll;
     @include smallW;
     @media #{$normal} {
       float: right;
