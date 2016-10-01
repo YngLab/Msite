@@ -138,7 +138,7 @@ if(!$_GET){
         <!-- ここまでイベント情報 -->
       </div>
       <div class = "only_pc">
-        <form class = "form" action = "php/hoge.php" method = "post">
+        <form class = "form" action = "confirm_event.php" method = "post">
           <table class = "inputForm inputBox_sub">
             <tr>
               <th>お名前</th>
@@ -167,18 +167,17 @@ if(!$_GET){
             <tr>
               <th>　</th>
               <td>
-                <a href = "confirm_event.html">
-                  <div class = "confirm">
-                    <input type="submit" value="確認" class = "sendbutton">
-                  </div>
-                </a>
+                <div class = "confirm">
+                  <input type="hidden" name="id" value="<?php echo $_GET[id];?>">
+                  <input type="submit" value="確認" class = "sendbutton">
+                </div>
               </td>
             </tr>
           </table>
         </form>
       </div>
       <div class = "inputForm_sp">
-        <form class = "form" action = "event_subscript.php" method = "post">
+        <form class = "form" action = "confirm_event.php" method = "post">
           <div class = "inputBox_sp">
             <p>お名前</p>
             <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
@@ -192,11 +191,10 @@ if(!$_GET){
             <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
           </div>
           <div>
-            <a href = "confirm_event.html">
-              <div>
-                <input type="submit" value="確認" class = "button">
-              </div>
-            </a>
+            <div>
+              <input type="hidden" name="id" value="<?php echo $_GET[id];?>">
+              <input type="submit" value="確認" class = "button">
+            </div>
           </div>
         </form>
       </div>
