@@ -1198,18 +1198,13 @@ footer .foot:after {
   display: block;
 }
 footer .foot .footerLinks {
-  margin: 0 auto;
+  margin: 46px 0;
   text-align: center;
 }
 footer .foot .footerLinks:after {
   clear: both;
   content: "";
   display: block;
-}
-@media screen and (min-width: 769px) {
-  footer .foot .footerLinks {
-    width: 504px;
-  }
 }
 @media screen and (max-width: 768px) {
   footer .foot .footerLinks {
@@ -1224,8 +1219,6 @@ footer .foot .footerLinks .links {
   footer .foot .footerLinks .links {
     font-size: 14px;
     padding: 14px;
-    margin: 46px 0;
-    float: left;
   }
 }
 @media screen and (max-width: 768px) {
