@@ -455,7 +455,7 @@ footer{
       text-align: center;
       @include clearfix;
       @media #{$normal} {
-        width: 714px;
+        width: 504px;
       }
       @media #{$small} {
         margin: 14px 0 24px 0;
@@ -747,9 +747,15 @@ footer{
   @media #{$small} {
     margin: 24px 20px 0px 20px;
   }
-  .event_title{
+  .event_title_future{
     font-size: $h2__fontSize;
     color: $g__color-future;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+  .event_title_kids{
+    font-size: $h2__fontSize;
+    color: $g__color-kids;
     font-weight: 400;
     margin-bottom: 24px;
   }

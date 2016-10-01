@@ -1551,9 +1551,15 @@ footer .copyright p {
     margin: 24px 20px 0px 20px;
   }
 }
-.event_textBox .event_title {
+.event_textBox .event_title_future {
   font-size: 24px;
   color: #f39800;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.event_textBox .event_title_kids {
+  font-size: 24px;
+  color: #8fc31f;
   font-weight: 400;
   margin-bottom: 24px;
 }
