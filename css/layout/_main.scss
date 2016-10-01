@@ -435,6 +435,9 @@ footer{
   .companyLinks{
     @media #{$small} {
       margin-left: 16px;
+      .companyLogo{
+        margin-bottom: 40px;
+      }
       a:after{
         content: "\A";
         white-space: pre;

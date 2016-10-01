@@ -622,6 +622,9 @@ footer:after {
   .sponsor .companyLinks {
     margin-left: 16px;
   }
+  .sponsor .companyLinks .companyLogo {
+    margin-bottom: 40px;
+  }
   .sponsor .companyLinks a:after {
     content: "\A";
     white-space: pre;
@@ -1935,6 +1938,11 @@ footer .copyright p {
   .movie_wrap .movie_youtube {
     height: 56.25vw;
   }
+}
+
+.companyLogo {
+  width: 160px;
+  margin-right: 80px;
 }
 
 #wrapper {
