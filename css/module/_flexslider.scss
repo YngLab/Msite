@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
  * jQuery FlexSlider v2.6.3
  * http://www.woothemes.com/flexslider/
@@ -229,11 +231,13 @@ html[xmlns] .flexslider .slides {
   -moz-border-radius: 20px;
   border-radius: 20px;*/
 }
-.flex-control-paging li a:hover {
-  background: #F39800;
+.flex-control-paging li a:hover { 
+  background: #727171;
+  /*本来はfuture,kidsで色分けたい*/
 }
-.flex-control-paging li a.flex-active {
-  background: #F39800;
+.flex-control-paging li a.flex-active { 
+  background: #727171;
+  /*本来はfuture,kidsで色分けたい*/
   /*background: rgba(0, 0, 0, 0.9);*/
   cursor: default;
 }

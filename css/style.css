@@ -1712,12 +1712,14 @@ footer .copyright p {
   display: block;
 }
 
-.experiencemenu:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.6;
-  -khtml-opacity: 0.6;
-  opacity: 0.6;
+@media screen and (min-width: 769px) {
+  .experiencemenu:hover {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+  }
 }
 
 .exmenu_textBox_wrap {
@@ -1858,6 +1860,17 @@ footer .copyright p {
   position: absolute;
   font-size: 21px;
   color: #f39800;
+  font-weight: 400;
+  text-align: center;
+  top: 4%;
+  left: 0;
+  z-index: 10;
+}
+.modal-content .exmenu_title_kids {
+  width: 100%;
+  position: absolute;
+  font-size: 21px;
+  color: #8fc31f;
   font-weight: 400;
   text-align: center;
   top: 4%;
@@ -2640,11 +2653,13 @@ html[xmlns] .flexslider .slides {
 }
 
 .flex-control-paging li a:hover {
-  background: #F39800;
+  background: #727171
+  /*本来はfuture,kidsで色分けたい*/
 }
 
 .flex-control-paging li a.flex-active {
-  background: #F39800;
+  background: #727171;
+  /*本来はfuture,kidsで色分けたい*/
   /*background: rgba(0, 0, 0, 0.9);*/
   cursor: default;
 }
