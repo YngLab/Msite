@@ -2352,7 +2352,6 @@ h2.concept_title {
 @font-face {
   font-family: 'flexslider-icon';
   src: url("fonts/flexslider-icon.eot");
-  src: url("fonts/flexslider-icon.eot?#iefix") format("embedded-opentype"), url("fonts/flexslider-icon.woff") format("woff"), url("fonts/flexslider-icon.ttf") format("truetype"), url("fonts/flexslider-icon.svg#flexslider-icon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2592,13 +2591,13 @@ html[xmlns] .flexslider .slides {
 
 .flexslider .flex-prev {
   left: 0px;
-  background: url(../images/arrow_left_white.png) no-repeat left;
+  background: url(../images/common/arrow_left_white.png) no-repeat left;
   background-size: auto 20px;
 }
 
 .flexslider .flex-next {
   right: 0px;
-  background: url(../images/arrow_right_white.png) no-repeat right;
+  background: url(../images/common/arrow_right_white.png) no-repeat right;
   background-size: auto 20px;
 }
 
