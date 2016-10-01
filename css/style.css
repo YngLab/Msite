@@ -560,7 +560,7 @@ footer:after {
 }
 
 .pageTitle {
-  margin: 12px 0 50px 0;
+  margin-bottom: 50px;
 }
 .pageTitle .titleText {
   padding-left: 24px;
@@ -611,7 +611,9 @@ footer:after {
     left: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     text-align: left;
   }
 }
@@ -834,9 +836,11 @@ footer:after {
   left: 16px;
   position: absolute;
   top: calc(55.7522% + (100% - 55.7522%) * 0.5);
-  transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+      -ms-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
   text-align: left;
-  width: calc(100% - 32px);
+  width: calc(100% - 32px)
   /*
   .eventsch{
     margin: calc(100% * (23 / 280.616)) 0 0 0;
@@ -1204,7 +1208,7 @@ footer .foot .footerLinks:after {
 }
 @media screen and (min-width: 769px) {
   footer .foot .footerLinks {
-    width: 714px;
+    width: 504px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1539,9 +1543,15 @@ footer .copyright p {
     margin: 24px 20px 0px 20px;
   }
 }
-.event_textBox .event_title {
+.event_textBox .event_title_future {
   font-size: 24px;
   color: #f39800;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.event_textBox .event_title_kids {
+  font-size: 24px;
+  color: #8fc31f;
   font-weight: 400;
   margin-bottom: 24px;
 }
@@ -1982,11 +1992,14 @@ footer .copyright p {
   margin-right: 80px;
 }
 
+p.company_about {
+  margin-left: 0;
+  font-size: 14px;
+}
+
 #wrapper {
   position: relative;
   -webkit-transition: all .4s;
-  -moz-transition: all .4s;
-  -o-transition: all .4s;
   transition: all .4s;
 }
 #wrapper #drawer-toggle {
@@ -2005,19 +2018,25 @@ footer .copyright p {
   height: 2px;
   background-color: #FFFFFF;
   width: 20px;
-  transition: all .4s;
-  transform: rotate(0deg);
+  -webkit-transition: all .4s;
+          transition: all .4s;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 #wrapper #drawer-toggle .top {
-  transform: translateY(-4px);
+  -webkit-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+          transform: translateY(-4px);
 }
 #wrapper #drawer-toggle .bottom {
-  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
+          transform: translateY(4px);
 }
 
 #wrapper.open {
   -webkit-transform: translate3d(-75%, 0, 0);
-  -moz-transform: translate3d(-75%, 0, 0);
   transform: translate3d(-75%, 0, 0);
 }
 
@@ -2042,17 +2061,15 @@ footer .copyright p {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   -webkit-transition: all .4s;
-  -moz-transition: all .4s;
-  -o-transition: all .4s;
   transition: all .4s;
 }
 #drawer .sp_language {
-  display: none;
+  width: 100%;
+  height: 40px;
+  background-color: #9fa0a0;
 }
 #drawer .sp_language p {
-  line-height: 40px;
-  float: right;
-  margin-right: 21px;
+  display: none;
 }
 #drawer .navBox {
   height: calc((100% - 40px) - calc((100% - 40px) / 17));
@@ -2079,15 +2096,7 @@ footer .copyright p {
 
 #drawer.open {
   -webkit-transform: translate3d(-100%, 0, 0);
-  -moz-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
-}
-
-.sp_language {
-  display: none;
-}
-.sp_language a {
-  color: #FFFFFF;
 }
 
 .lineSpace {
@@ -2403,7 +2412,8 @@ h2.concept_title {
 }
 
 .menu .active .btn {
-  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
 
@@ -2504,11 +2514,7 @@ html[xmlns] .flexslider .slides {
   /*border: 4px solid #fff;*/
   position: relative;
   zoom: 1;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
   -o-box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
   box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
 }
@@ -2526,9 +2532,6 @@ html[xmlns] .flexslider .slides {
 .flex-viewport {
   max-height: 2000px;
   -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -2555,7 +2558,7 @@ html[xmlns] .flexslider .slides {
   z-index: 10;
   overflow: hidden;
   /*opacity: 0;*/
-  cursor: pointer;
+  cursor: pointer
   /*color: rgba(0, 0, 0, 0.8);*/
   /*text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
   -webkit-transition: all 0.3s ease-in-out;
@@ -2653,7 +2656,7 @@ html[xmlns] .flexslider .slides {
   background: #FFFFFF;
   /*background: rgba(0, 0, 0, 0.5);*/
   cursor: pointer;
-  text-indent: -9999px;
+  text-indent: -9999px
   /*-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
   -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
@@ -2664,7 +2667,7 @@ html[xmlns] .flexslider .slides {
 }
 
 .flex-control-paging li a:hover {
-  background: #727171;
+  background: #727171
   /*本来はfuture,kidsで色分けたい*/
 }
 
@@ -2707,9 +2710,6 @@ html[xmlns] .flexslider .slides {
   cursor: pointer;
   -moz-user-select: none;
   -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 

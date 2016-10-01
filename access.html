@@ -10,7 +10,7 @@
 
 <link rel = "stylesheet" href="css/style.css">
 <link rel = "shortcut icon" href="images/common/hmp.ico">
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js?key=AIzaSyClT_6y9GTq8Z1cBSUMuTGon6DyCldyqww"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
 <script type="text/javascript">
   function initialize() {
@@ -23,12 +23,12 @@
     };
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); //地図を表示
     //地図上にマーカーを配置する
-    var markerImg = {
-      url: 'images/access/marker.png',
-      scaledSize : new google.maps.Size(50, 65)
-    };
+    // var markerImg = {
+    //   url: 'images/access/marker.png',
+    //   scaledSize : new google.maps.Size(50, 65)
+    // };
     marker = new google.maps.Marker({
-      icon: markerImg,
+      // icon: markerImg,
       position: latlng,
       map: map
     });
@@ -41,7 +41,6 @@
       {
           "stylers": [
             { "saturation": -100 },
-            { "lightness": -10 }
           ]
       }
     ];
@@ -130,7 +129,7 @@
         <div class = "headmark"></div>
         <p>駐車場</p>
       </div>
-      <p class = "lineSpace">100台/2時間まで無料(両施設共有)</p>
+      <p class = "lineSpace">199台　施設利用者は2時間まで無料（両施設共通）</p>
     </div>
     <div class = "accessProcess">
       <div class = "heading">
@@ -153,10 +152,10 @@
     <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
     <div class = "foot">
       <div class ="footerLinks">
-        <a href = "member.html" class="links">メンバー</a>
+<!--         <a href = "member.html" class="links">メンバー</a>-->
         <a href = "notice.html" class="links">お知らせ</a>
         <a href = "recruit.html" class="links">求人情報</a>
-        <a href = "FAQ.html" class="links">よくあるご質問</a>
+<!--        <a href = "FAQ.html" class="links">よくあるご質問</a> -->
         <a href = "relatedlinks.html" class="links">関連リンク</a>
         <a href = "sitemap.html" class="links">サイトマップ</a>
         <a href = "sitepolicy.html" class="links">サイトポリシー</a>
