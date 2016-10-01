@@ -105,6 +105,13 @@ a:hover {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .bgcolor-top {
+    background-color: #f7f8f8;
+    padding-bottom: 40px;
+  }
+}
+
 .linkText {
   border-bottom: solid 1px #595757;
   color: #595757;
