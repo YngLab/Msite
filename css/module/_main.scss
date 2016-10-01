@@ -1430,3 +1430,40 @@ footer{
   }
 }
 
+h2.concept_title{
+  font-size: 48px;
+  text-align: center;
+  margin: 100px auto;
+}
+
+.concept{
+  margin: 0 auto;
+  max-width: 960px;
+  line-height: 1.8em;
+  h3{
+    text-align: center;
+  }
+}
+
+.concept_sub{
+  @include clearfix;
+  margin-top: 100px;
+}
+
+.concept_img{
+  max-width: 50%;
+  float: left;
+  img{
+    width: 100%;
+  }
+}
+
+.concept_text{
+  max-width: 40%;
+  float: left;
+}
+
+.concept_text-right,
+.concept_img-right{
+  margin-left: 10%;
+}
