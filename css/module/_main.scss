@@ -1163,6 +1163,10 @@ footer{
   margin-right: 80px;
 }
 
+p.company_about{//別部分がコーディング規約無視しているためコーディング規約無視せざるを得ない
+  margin-left: 0;
+  font-size: 14px;
+}
 
 #wrapper {
   //オーバーレイをabsolute指定するため必要

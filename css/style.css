@@ -1986,6 +1986,11 @@ footer .copyright p {
   margin-right: 80px;
 }
 
+p.company_about {
+  margin-left: 0;
+  font-size: 14px;
+}
+
 #wrapper {
   position: relative;
   -webkit-transition: all .4s;
