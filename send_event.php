@@ -10,7 +10,7 @@ if($_SESSION['id'] == "0"){
 }else if($_SESSION['id'] == "1"){
   $about = "はこだてキッズプラザ 先行体験会";
 }else if($_SESSION['id'] == "2"){
-  $about = "トークセッション";
+  $about = "オドロクチカラ トークセッション";
 }else if($_SESSION['id'] == "3"){
   $about = "井上涼さんアニメーションワークショップ";
 }else if($_SESSION['id'] == "4"){
