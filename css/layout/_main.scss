@@ -14,7 +14,9 @@
 }
 
 .autoMargin{
-  margin: 0 calc(100% * (40 / 1080)) 0 calc(100% * (40 / 1080));
+  @media #{$normal} {
+    margin: 0 calc(100% * (40 / 1080)) 0 calc(100% * (40 / 1080));
+  }
 }
 
 #wrapper{

@@ -157,8 +157,10 @@ a:hover {
   }
 }
 
-.autoMargin {
-  margin: 0 calc(100% * (40 / 1080)) 0 calc(100% * (40 / 1080));
+@media screen and (min-width: 769px) {
+  .autoMargin {
+    margin: 0 calc(100% * (40 / 1080)) 0 calc(100% * (40 / 1080));
+  }
 }
 
 @media screen and (min-width: 769px) {
