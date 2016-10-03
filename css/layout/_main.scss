@@ -481,7 +481,7 @@ footer{
 
 .touristOffice{
   @media #{$normal} {
-    float: left;
+    float: right;
     width: 50%;
   }
   @media #{$small} {
@@ -497,7 +497,7 @@ footer{
 
 .touristGuide{
   @media #{$normal} {
-    float: right;
+    float: left;
     width: 50%;
   }
   @media #{$small} {
