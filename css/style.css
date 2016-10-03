@@ -611,23 +611,22 @@ footer:after {
 }
 
 .autoHeight {
-  min-height: calc(100vh - (71px) - (65px + (12px + 50px)) - (2.9629vw + 96px + 24px));
+  min-height: calc(100vh - 94px - 115px - 273px);
 }
 @media screen and (max-width: 768px) {
   .autoHeight {
-    min-height: calc(100vh - 127px - 461px);
+    min-height: calc(100vh - 155px - 389px);
   }
 }
 
-.autoHeight-ac {
+/*
+.autoHeight-ac{
   min-height: calc(100vh - (71px) - (65px + (12px + 50px)) - (2.9629vw + 40px + 96px + 24px));
-}
-@media screen and (max-width: 768px) {
-  .autoHeight-ac {
+  @media screen and (max-width: 768px) {
     min-height: calc(100vh - 127px - 461px);
   }
 }
-
+*/
 @media screen and (min-width: 769px) {
   .p-layout {
     position: relative;
@@ -1233,18 +1232,13 @@ footer .foot:after {
   display: block;
 }
 footer .foot .footerLinks {
-  margin: 0 auto;
+  margin: 46px 0;
   text-align: center;
 }
 footer .foot .footerLinks:after {
   clear: both;
   content: "";
   display: block;
-}
-@media screen and (min-width: 769px) {
-  footer .foot .footerLinks {
-    width: 504px;
-  }
 }
 @media screen and (max-width: 768px) {
   footer .foot .footerLinks {
@@ -1259,8 +1253,6 @@ footer .foot .footerLinks .links {
   footer .foot .footerLinks .links {
     font-size: 14px;
     padding: 14px;
-    margin: 46px 0;
-    float: left;
   }
 }
 @media screen and (max-width: 768px) {

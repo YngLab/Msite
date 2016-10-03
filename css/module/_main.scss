@@ -441,11 +441,11 @@ footer{
   .foot{
     @include clearfix;
     .footerLinks{
-      margin: 0 auto;
+      margin: 46px 0;
       text-align: center;
       @include clearfix;
       @media #{$normal} {
-        width: 504px;
+        //width: 504px;
       }
       @media #{$small} {
         margin: 14px 0 24px 0;
@@ -456,8 +456,8 @@ footer{
         @media #{$normal} {
           font-size: $g__fontSize;
           padding: 14px;
-          margin: 46px 0;
-          float: left;
+          //margin: 46px 0;
+          //float: left;
         }
         @media #{$small} {
           width: 320px;
