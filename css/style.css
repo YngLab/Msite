@@ -139,7 +139,6 @@ a:hover {
 /* layout */
 .wrap {
   margin: 0 auto;
-  width: calc(100% * (1000 / 1080));
 }
 .wrap:after {
   clear: both;
@@ -155,6 +154,12 @@ a:hover {
 @media screen and (max-width: 768px) {
   .wrap {
     width: calc(100% * (728 / 768));
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .autoMargin {
+    margin: 0 calc(100% * (40 / 1080)) 0 calc(100% * (40 / 1080));
   }
 }
 
@@ -682,6 +687,9 @@ footer:after {
     float: right;
     width: 50%;
   }
+  .touristOffice p {
+    margin-left: 24px;
+  }
 }
 @media screen and (max-width: 768px) {
   .touristOffice p {
@@ -697,6 +705,9 @@ footer:after {
   .touristGuide {
     float: left;
     width: 50%;
+  }
+  .touristGuide p {
+    margin-left: 24px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1517,11 +1528,22 @@ footer .copyright p {
   }
 }
 
-#all_eventmenu, #all_experiencemenu {
-  border-top: solid 1px #9fa0a0;
+/*
+#all_eventmenu, #all_experiencemenu{
+  border-top: solid 1px $g__fontColor;
+  @media screen and (min-width: 769px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    min-width: 1080px;
+  }
+  @media screen and (min-width: 1441px) {
+    padding-bottom: 40px;
+  }
 }
+*/
 @media screen and (min-width: 769px) {
-  #all_eventmenu, #all_experiencemenu {
+  #all_experiencemenu_FCH, #all_experiencemenu_KPH, #all_eventmenu {
     margin-left: auto;
     margin-right: auto;
     max-width: 1440px;
@@ -1529,9 +1551,21 @@ footer .copyright p {
   }
 }
 @media screen and (min-width: 1441px) {
-  #all_eventmenu, #all_experiencemenu {
+  #all_experiencemenu_FCH, #all_experiencemenu_KPH, #all_eventmenu {
     padding-bottom: 40px;
   }
+}
+
+#all_experiencemenu_FCH {
+  border-top: solid 1px #f39800;
+}
+
+#all_experiencemenu_KPH {
+  border-top: solid 1px #8fc31f;
+}
+
+#all_eventmenu {
+  border-top: solid 1px #9fa0a0;
 }
 
 .eventmenu {
@@ -1747,18 +1781,42 @@ footer .copyright p {
   }
 }
 
-.experiencemenu {
-  border-bottom: solid 1px #9fa0a0;
+/*
+.experiencemenu{
+  border-bottom: solid 1px $g__fontColor;
+  cursor: pointer;
+  @include clearfix;
+}
+
+.experiencemenu:hover{
+  @media screen and (min-width: 769px) {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
+  }
+}
+*/
+.experiencemenu_FCH, .experiencemenu_KPH {
   cursor: pointer;
 }
-.experiencemenu:after {
+.experiencemenu_FCH:after, .experiencemenu_KPH:after {
   clear: both;
   content: "";
   display: block;
 }
 
+.experiencemenu_FCH {
+  border-bottom: solid 1px #f39800;
+}
+
+.experiencemenu_KPH {
+  border-bottom: solid 1px #8fc31f;
+}
+
 @media screen and (min-width: 769px) {
-  .experiencemenu:hover {
+  .experiencemenu_FCH:hover, .experiencemenu_KPH:hover {
     opacity: 0.5;
     filter: alpha(opacity=50);
     -moz-opacity: 0.6;
@@ -1856,7 +1914,6 @@ footer .copyright p {
 }
 .info_table_FCH tr {
   border-bottom: solid 1px #f39800;
-  border-style: dotted;
 }
 .info_table_FCH th {
   color: #f39800;
@@ -1867,7 +1924,6 @@ footer .copyright p {
 }
 .info_table_KPH tr {
   border-bottom: solid 1px #8fc31f;
-  border-style: dotted;
 }
 .info_table_KPH th {
   color: #8fc31f;

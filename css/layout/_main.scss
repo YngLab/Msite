@@ -2,7 +2,7 @@
 
 .wrap{
   margin: 0 auto;
-  width: calc(100% * (1000 / 1080));
+  //width: calc(100% * (1000 / 1080));
   @include clearfix;
   @media #{$normal} {
     max-width: 1440px;
@@ -10,6 +10,12 @@
   }
   @media #{$small} {
     width: calc(100% * (728 / 768));
+  }
+}
+
+.autoMargin{
+  @media #{$normal} {
+    margin: 0 calc(100% * (40 / 1080)) 0 calc(100% * (40 / 1080));
   }
 }
 
@@ -481,8 +487,12 @@ footer{
 
 .touristOffice{
   @media #{$normal} {
+    //float: left;
     float: right;
     width: 50%;
+    p{
+      margin-left: 24px;
+    }
   }
   @media #{$small} {
     p{
@@ -497,8 +507,12 @@ footer{
 
 .touristGuide{
   @media #{$normal} {
+    //float: right;
     float: left;
     width: 50%;
+    p{
+      margin-left: 24px;
+    }
   }
   @media #{$small} {
     p{
