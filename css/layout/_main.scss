@@ -51,7 +51,8 @@
 
 .nav_TOP{
   height: 70px;
-  margin: 0 auto 50px auto;
+  //margin: 0 auto 50px auto;
+  margin: 0 auto;
   @media #{$small} {
     display: none;
   }
@@ -69,6 +70,10 @@
   @media #{$small} {
     padding: 46px 0 20px 0;
   }
+}
+
+.addPadding{
+  padding-top: 50px;
 }
 
 .future_entrance{

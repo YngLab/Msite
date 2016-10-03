@@ -196,7 +196,7 @@ a:hover {
 
 .nav_TOP {
   height: 70px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
   .nav_TOP {
@@ -220,6 +220,10 @@ a:hover {
   .topcap {
     padding: 46px 0 20px 0;
   }
+}
+
+.addPadding {
+  padding-top: 50px;
 }
 
 .future_entrance {
