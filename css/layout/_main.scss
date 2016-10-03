@@ -2,7 +2,7 @@
 
 .wrap{
   margin: 0 auto;
-  width: calc(100% * (1000 / 1080));
+  //width: calc(100% * (1000 / 1080));
   @include clearfix;
   @media #{$normal} {
     max-width: 1440px;
@@ -11,6 +11,10 @@
   @media #{$small} {
     width: calc(100% * (728 / 768));
   }
+}
+
+.autoMargin{
+  margin: 0 calc(100% * (40 / 1080)) 0 calc(100% * (40 / 1080));
 }
 
 #wrapper{
@@ -266,6 +270,14 @@ footer{
       float: right;
     }
   }
+  @media #{$normal} {
+    .exmenu_textBox_wrap{
+      float: left;
+    }
+    .exmenu_pic{
+      float: right;
+    }
+  }
 }
 
 .exmenu_rightText{
@@ -280,15 +292,27 @@ footer{
 }
 
 .exmenu_textBox_wrap{
-  width: 25%;
-  height: 25vw;
   @include smallW;
+  @media #{$normal} {
+    width: 25%;
+    height: 25vw;
+  }
+  @media #{$small} {
+    width: 100%;
+    height: 50vw;
+  }
 }
 
 .exmenu_pic{
-  width: 75%;
-  height: 25vw;
   @include smallW;
+  @media #{$normal} {
+    width: 75%;
+    height: 25vw;
+  }
+  @media #{$small} {
+    width: 100%;
+    height: 50vw;
+  }
 }
 
 .heading{
