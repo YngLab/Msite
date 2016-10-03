@@ -487,8 +487,12 @@ footer{
 
 .touristOffice{
   @media #{$normal} {
-    float: left;
+    //float: left;
+    float: right;
     width: 50%;
+    p{
+      margin-left: 24px;
+    }
   }
   @media #{$small} {
     p{
@@ -503,8 +507,12 @@ footer{
 
 .touristGuide{
   @media #{$normal} {
-    float: right;
+    //float: right;
+    float: left;
     width: 50%;
+    p{
+      margin-left: 24px;
+    }
   }
   @media #{$small} {
     p{

@@ -684,8 +684,11 @@ footer:after {
 
 @media screen and (min-width: 769px) {
   .touristOffice {
-    float: left;
+    float: right;
     width: 50%;
+  }
+  .touristOffice p {
+    margin-left: 24px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -700,8 +703,11 @@ footer:after {
 
 @media screen and (min-width: 769px) {
   .touristGuide {
-    float: right;
+    float: left;
     width: 50%;
+  }
+  .touristGuide p {
+    margin-left: 24px;
   }
 }
 @media screen and (max-width: 768px) {
