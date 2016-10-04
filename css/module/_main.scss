@@ -510,8 +510,8 @@ footer{
 
 .logoContainer{
   position: relative;
-  @media screen and (min-width: 769px) and (max-width: 1080px){
-    width: 1040px;
+  @media #{$minimum} {
+    width: 1080px;
   }
   .logo_vertical{
     position: absolute;
@@ -1172,6 +1172,7 @@ footer{
   color: $title__color;
   font-size: $title__fontSize;
   font-weight: 500;
+
   .titleText{
     border-left: solid 1px $g__fontColor;
     line-height: 63px;
@@ -1380,6 +1381,9 @@ p.company_about{//別部分がコーディング規約無視しているため�
   color: $title__color;
   font-size: $title__fontSize;
   font-weight: 500;
+  @media #{$minimum} {
+    width: 1080px;
+  }
   .titleText{
     border-left: solid 1px $g__fontColor;
     line-height: 63px;

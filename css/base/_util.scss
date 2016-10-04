@@ -59,11 +59,17 @@ a:hover{
   @media #{$normal} {
     background-color: $bg__color;
   }
+  @media #{$minimum} {
+    width: 1080px;
+  }
 }
 .bgcolor-top{
   @media #{$normal} {
     background-color: $bg__color;
     padding-bottom: 40px;
+  }
+  @media #{$minimum} {
+    width: 1080px;
   }
 }
 

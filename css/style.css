@@ -104,11 +104,21 @@ a:hover {
     background-color: #f7f8f8;
   }
 }
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .bgcolor {
+    width: 1080px;
+  }
+}
 
 @media screen and (min-width: 769px) {
   .bgcolor-top {
     background-color: #f7f8f8;
     padding-bottom: 40px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .bgcolor-top {
+    width: 1080px;
   }
 }
 
@@ -1298,7 +1308,7 @@ footer .copyright p {
 }
 @media screen and (min-width: 769px) and (max-width: 1080px) {
   .logoContainer {
-    width: 1040px;
+    width: 1080px;
   }
 }
 .logoContainer .logo_vertical {
@@ -2207,6 +2217,11 @@ p.company_about {
   color: #3e3a39;
   font-size: 21px;
   font-weight: 500;
+}
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .pageTitle {
+    width: 1080px;
+  }
 }
 .pageTitle .titleText {
   border-left: solid 1px #9fa0a0;
