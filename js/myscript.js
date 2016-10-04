@@ -26,6 +26,9 @@ $(function(){
     if(w_size >= 1440){
       w_size = 1440;
     }
+    if(w_size <= 1080){
+      w_size = 1080;
+    }
     latestBox_size =  w_size * 226 / 1080;
     // logoBox_size = w_size * .126851;
     // future_logoBox_margin_w = $(".future_logo img").width() * (-0.5);

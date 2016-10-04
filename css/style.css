@@ -1296,6 +1296,11 @@ footer .copyright p {
 .logoContainer {
   position: relative;
 }
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .logoContainer {
+    width: 1040px;
+  }
+}
 .logoContainer .logo_vertical {
   position: absolute;
   height: 60%;

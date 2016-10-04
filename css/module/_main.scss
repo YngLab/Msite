@@ -510,6 +510,9 @@ footer{
 
 .logoContainer{
   position: relative;
+  @media screen and (min-width: 769px) and (max-width: 1080px){
+    width: 1040px;
+  }
   .logo_vertical{
     position: absolute;
     height: 60%;
