@@ -703,7 +703,7 @@ footer{
     border: 2px solid $h2__color;
   }
 }
-
+/*
 #all_eventmenu, #all_experiencemenu{
   border-top: solid 1px $g__fontColor;
   @media #{$normal} {
@@ -715,6 +715,31 @@ footer{
   @media #{$maximum} {
     padding-bottom: 40px;
   }
+}
+*/
+#all_experiencemenu_FCH, #all_experiencemenu_KPH, #all_eventmenu{
+  //border-top: solid 1px $g__fontColor;
+  @media #{$normal} {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    min-width: 1080px;
+  }
+  @media #{$maximum} {
+    padding-bottom: 40px;
+  }
+}
+
+#all_experiencemenu_FCH{
+  border-top: solid 1px $g__color-future;
+}
+
+#all_experiencemenu_KPH{
+  border-top: solid 1px $g__color-kids;
+}
+
+#all_eventmenu{
+    border-top: solid 1px $g__fontColor;
 }
 
 .eventmenu{
@@ -733,7 +758,9 @@ footer{
 
 .event_textBox{
   margin: 24px 0 0 50px;
+  height: calc(100% - 24px);
   position: relative;
+  @include clearfix;
   @media #{$small} {
     margin: 24px 20px 0px 20px;
   }
@@ -892,7 +919,7 @@ footer{
     }
   }
 }
-
+/*
 .experiencemenu{
   border-bottom: solid 1px $g__fontColor;
   cursor: pointer;
@@ -908,7 +935,29 @@ footer{
     opacity:0.6;
   }
 }
+*/
+.experiencemenu_FCH, .experiencemenu_KPH{
+  cursor: pointer;
+  @include clearfix;
+}
 
+.experiencemenu_FCH{
+  border-bottom: solid 1px $g__color-future;
+}
+
+.experiencemenu_KPH{
+  border-bottom: solid 1px $g__color-kids;
+}
+
+.experiencemenu_FCH:hover, .experiencemenu_KPH:hover{
+  @media #{$normal} {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
+  }
+}
 .exmenu_textBox_wrap{
   background: white;
   position: relative;
@@ -993,7 +1042,7 @@ footer{
   border-top: solid 1px $g__color-future;
   tr{
     border-bottom: solid 1px $g__color-future;
-    border-style: dotted;
+    //border-style: dotted;
   }
   th{
     color: $g__color-future;
@@ -1004,7 +1053,7 @@ footer{
   border-top: solid 1px $g__color-kids;
   tr{
     border-bottom: solid 1px $g__color-kids;
-    border-style: dotted;
+    //border-style: dotted;
   }
   th{
     color: $g__color-kids;
