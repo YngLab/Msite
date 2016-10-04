@@ -3,54 +3,54 @@ $(function(){
   if(w_size >= 1440){
     w_size = 1440;
   }
-  latestBox_size =  w_size * .209259;
-  logoBox_size = w_size * .126851;
-  future_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
-  future_logoBox_margin_h = $(".future_logo img").height() * (-0.5);
-  kids_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
-  kids_logoBox_margin_h = $(".future_logo img").height() * (-0.5);
+  latestBox_size =  w_size * 226 / 1080;
+  // logoBox_size = w_size * 137 / 1080;
+  // future_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
+  // future_logoBox_margin_h = $(".future_logo img").height() * (-0.5);
+  // kids_logoBox_margin_w = $(".kids_logo img").width() * (-0.5);
+  // kids_logoBox_margin_h = $(".kids_logo img").height() * (-0.5);
   institution_size = $(".future_contents").width() * .5;
   $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
   $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
-  $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
-  $(".future_logo img").css("margin-left", future_logoBox_margin_w + "px");
-  $(".future_logo img").css("margin-top", future_logoBox_margin_h + "px");
-  $(".kids_logo img").css("margin-left", kids_logoBox_margin_w + "px");
-  $(".kids_logo img").css("margin-top", kids_logoBox_margin_h + "px");
+  // $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
+  // $(".future_logo img").css("margin-left", future_logoBox_margin_w + "px");
+  // $(".future_logo img").css("margin-top", future_logoBox_margin_h + "px");
+  // $(".kids_logo img").css("margin-left", kids_logoBox_margin_w + "px");
+  // $(".kids_logo img").css("margin-top", kids_logoBox_margin_h + "px");
   $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
   $(window).resize(function () {
     w_size = $(window).width();
     if(w_size >= 1440){
       w_size = 1440;
     }
-    latestBox_size =  w_size * .209259;
-    logoBox_size = w_size * .126851;
-    future_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
-    future_logoBox_margin_h = $(".future_logo img").height() * (-0.5);
-    kids_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
-    kids_logoBox_margin_h = $(".future_logo img").height() * (-0.5);
+    // latestBox_size =  w_size * .209259;
+    // logoBox_size = w_size * .126851;
+    // future_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
+    // future_logoBox_margin_h = $(".future_logo img").height() * (-0.5);
+    // kids_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
+    // kids_logoBox_margin_h = $(".future_logo img").height() * (-0.5);
     institution_size = $(".future_contents").width() * .5;
-    $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
-    $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
-    $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
-    $(".future_logo img").css("margin-left", future_logoBox_margin_w + "px");
-    $(".future_logo img").css("margin-top", future_logoBox_margin_h + "px");
-    $(".kids_logo img").css("margin-left", kids_logoBox_margin_w + "px");
-    $(".kids_logo img").css("margin-top", kids_logoBox_margin_h + "px");
+    // $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
+    // $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
+    // $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
+    // $(".future_logo img").css("margin-left", future_logoBox_margin_w + "px");
+    // $(".future_logo img").css("margin-top", future_logoBox_margin_h + "px");
+    // $(".kids_logo img").css("margin-left", kids_logoBox_margin_w + "px");
+    // $(".kids_logo img").css("margin-top", kids_logoBox_margin_h + "px");
     $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
   });
   if(w_size <= 768){
     latestBox_size =  w_size * .925925;
-    logoBox_size = logoBox_size * 2;
+    // logoBox_size = logoBox_size * 2;
     $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
     $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
-    $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
+    // $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
     $(window).resize(function () {
       latestBox_size =  w_size * .925925;
       logoBox_size = logoBox_size * 2;
       $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
       $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
-      $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
+      // $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
     });
   }
 
