@@ -996,15 +996,22 @@ footer:after {
 }
 .future_entrance .future_logo {
   border-bottom: solid 1px #f39800;
-  height: 200px;
-  position: relative;
-}
-.future_entrance .future_logo img {
-  width: calc(100% * (210 / 484));
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  height: calc(100vw * (137 / 1080));
+  width: 100%;
+  display: table;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .future_entrance .future_logo {
+    height: calc(100vw * 2 * (137 / 1080));
+  }
+}
+.future_entrance .future_logo .future_logo_img {
+  display: table-cell;
+  vertical-align: middle;
+}
+.future_entrance .future_logo .future_logo_img img {
+  width: calc(100% * (210 / 484));
 }
 .future_entrance .future_logo:hover {
   opacity: 0.5;
@@ -1084,15 +1091,22 @@ footer:after {
 }
 .kids_entrance .kids_logo {
   border-bottom: solid 1px #8fc31f;
-  height: 200px;
-  position: relative;
-}
-.kids_entrance .kids_logo img {
-  width: calc(100% * (250 / 484));
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  height: calc(100vw * (137 / 1080));
+  width: 100%;
+  display: table;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .kids_entrance .kids_logo {
+    height: calc(100vw * 2 * (137 / 1080));
+  }
+}
+.kids_entrance .kids_logo .kids_logo_img {
+  display: table-cell;
+  vertical-align: middle;
+}
+.kids_entrance .kids_logo .kids_logo_img img {
+  width: calc(100% * (250 / 484));
 }
 .kids_entrance .kids_logo:hover {
   opacity: 0.5;
