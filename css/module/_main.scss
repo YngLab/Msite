@@ -208,14 +208,21 @@
   }
   .future_logo{
     border-bottom: solid 1px $g__color-future;
-    height: 200px;
-    position: relative;
-    img{
-      width: calc(100% * (210 / 484));
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      text-align: center;
+    height: calc(100vw * (137 / 1080));
+    width: 100%;
+    display: table;
+    text-align: center;
+    @media #{$small} {
+      height: calc(100vw * 2 * (137 / 1080));
+    }
+    .future_logo_img{
+      // width: calc(100% * (210 / 484));
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // text-align: center;
+      display: table-cell;
+      vertical-align: middle;
     }
   }
   .future_logo:hover{
@@ -294,14 +301,21 @@
   }
   .kids_logo{
     border-bottom: solid 1px $g__color-kids;
-    height: 200px;
-    position: relative;
-    img{
-      width: calc(100% * (250 / 484));
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      text-align: center;
+    height: calc(100vw * (137 / 1080));
+    width: 100%;
+    display: table;
+    text-align: center;
+    @media #{$small} {
+      height: calc(100vw * 2 * (137 / 1080));
+    }
+    .kids_logo_img{
+      // width: calc(100% * (210 / 484));
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // text-align: center;
+      display: table-cell;
+      vertical-align: middle;
     }
   }
   .kids_logo:hover{
