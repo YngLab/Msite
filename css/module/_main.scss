@@ -216,13 +216,15 @@
       height: calc(100vw * 2 * (137 / 1080));
     }
     .future_logo_img{
-      // width: calc(100% * (210 / 484));
       // position: absolute;
       // top: 50%;
       // left: 50%;
       // text-align: center;
       display: table-cell;
       vertical-align: middle;
+      img{
+        width: calc(100% * (210 / 484));
+      }
     }
   }
   .future_logo:hover{
@@ -309,13 +311,15 @@
       height: calc(100vw * 2 * (137 / 1080));
     }
     .kids_logo_img{
-      // width: calc(100% * (210 / 484));
       // position: absolute;
       // top: 50%;
       // left: 50%;
       // text-align: center;
       display: table-cell;
       vertical-align: middle;
+      img{
+        width: calc(100% * (250 / 484));
+      }
     }
   }
   .kids_logo:hover{

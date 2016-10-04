@@ -1010,6 +1010,9 @@ footer:after {
   display: table-cell;
   vertical-align: middle;
 }
+.future_entrance .future_logo .future_logo_img img {
+  width: calc(100% * (210 / 484));
+}
 .future_entrance .future_logo:hover {
   opacity: 0.5;
   filter: alpha(opacity=50);
@@ -1101,6 +1104,9 @@ footer:after {
 .kids_entrance .kids_logo .kids_logo_img {
   display: table-cell;
   vertical-align: middle;
+}
+.kids_entrance .kids_logo .kids_logo_img img {
+  width: calc(100% * (250 / 484));
 }
 .kids_entrance .kids_logo:hover {
   opacity: 0.5;

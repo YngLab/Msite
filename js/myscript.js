@@ -3,6 +3,9 @@ $(function(){
   if(w_size >= 1440){
     w_size = 1440;
   }
+  if(w_size <= 1080){
+    w_size = 1080;
+  }
   latestBox_size =  w_size * 226 / 1080;
   // logoBox_size = w_size * 137 / 1080;
   // future_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
@@ -23,15 +26,15 @@ $(function(){
     if(w_size >= 1440){
       w_size = 1440;
     }
-    // latestBox_size =  w_size * .209259;
+    latestBox_size =  w_size * 226 / 1080;
     // logoBox_size = w_size * .126851;
     // future_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
     // future_logoBox_margin_h = $(".future_logo img").height() * (-0.5);
     // kids_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
     // kids_logoBox_margin_h = $(".future_logo img").height() * (-0.5);
     institution_size = $(".future_contents").width() * .5;
-    // $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
-    // $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
+    $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
+    $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
     // $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
     // $(".future_logo img").css("margin-left", future_logoBox_margin_w + "px");
     // $(".future_logo img").css("margin-top", future_logoBox_margin_h + "px");
