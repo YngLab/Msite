@@ -334,6 +334,7 @@ footer .foot:after {
 footer .copyright {
   background: #9fa0a0;
   height: 24px;
+  min-width: 1080px;
   width: 100%;
 }
 footer:after {
