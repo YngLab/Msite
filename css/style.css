@@ -2858,7 +2858,9 @@ html[xmlns] .flexslider .slides {
   }
 }
 /* state */
-.event_detail-overflow {
-  height: calc(100% - 56px);
-  overflow-y: scroll;
+@media screen and (min-width: 769px) {
+  .event_detail-overflow {
+    height: calc(100% - 56px);
+    overflow-y: scroll;
+  }
 }
