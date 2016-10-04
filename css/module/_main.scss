@@ -628,6 +628,7 @@ footer{
   @media #{$small} {
     padding: 40px 0 27px 0;
     p{
+      margin-left: 16px;
       font-size: 18px;
     }
   }
