@@ -2,7 +2,7 @@
 
 .wrap{
   margin: 0 auto;
-  width: calc(100% * (1000 / 1080));
+  //width: calc(100% * (1000 / 1080));
   @include clearfix;
   @media #{$normal} {
     max-width: 1440px;
@@ -10,6 +10,12 @@
   }
   @media #{$small} {
     width: calc(100% * (728 / 768));
+  }
+}
+
+.autoMargin{
+  @media #{$normal} {
+    margin: 0 calc(100% * (40 / 1080)) 0 calc(100% * (40 / 1080));
   }
 }
 
@@ -146,6 +152,9 @@ footer{
   .copyright{
     background: #9fa0a0;
     height: 24px;
+    @media #{$minimum} {
+      width: 1080px;
+    }
     width: 100%;
   }
   @include clearfix;
@@ -414,19 +423,19 @@ footer{
 }
 
 .autoHeight{
-  min-height: calc(100vh - (71px) - (65px + (12px + 50px)) - (2.9629vw + 96px + 24px));
+  min-height: calc(100vh - 94px - 115px - 273px); //画面表示高さ - ヘッダー - 見出し - フッター
   @media #{$small} {
-    min-height: calc(100vh - 127px - 461px);
+    min-height: calc(100vh - 155px - 389px);
   }
 }
-
+/*
 .autoHeight-ac{
   min-height: calc(100vh - (71px) - (65px + (12px + 50px)) - (2.9629vw + 40px + 96px + 24px));
   @media #{$small} {
     min-height: calc(100vh - 127px - 461px);
   }
 }
-
+*/
 .p-layout{
   @media #{$normal} {
     position: relative;
@@ -481,8 +490,12 @@ footer{
 
 .touristOffice{
   @media #{$normal} {
+    //float: left;
     float: right;
     width: 50%;
+    p{
+      margin-left: 24px;
+    }
   }
   @media #{$small} {
     p{
@@ -497,8 +510,12 @@ footer{
 
 .touristGuide{
   @media #{$normal} {
+    //float: right;
     float: left;
     width: 50%;
+    p{
+      margin-left: 24px;
+    }
   }
   @media #{$small} {
     p{
