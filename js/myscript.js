@@ -1,5 +1,8 @@
 $(function(){
-  w_size = $(window).width();
+  w_size = $(window).width();  
+  if(w_size >= 1440){
+    w_size = 1440;
+  }
   latestBox_size =  w_size * .209259;
   logoBox_size = w_size * .126851;
   future_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
@@ -17,6 +20,9 @@ $(function(){
   $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
   $(window).resize(function () {
     w_size = $(window).width();
+    if(w_size >= 1440){
+      w_size = 1440;
+    }
     latestBox_size =  w_size * .209259;
     logoBox_size = w_size * .126851;
     future_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
@@ -47,6 +53,7 @@ $(function(){
       $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
     });
   }
+
 
   // スクロールしたら発動
   $(window).scroll(function() {
