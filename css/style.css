@@ -1430,6 +1430,7 @@ footer .copyright p {
     padding: 40px 0 27px 0;
   }
   .heading-paragraph p {
+    margin-left: 16px;
     font-size: 18px;
   }
 }
