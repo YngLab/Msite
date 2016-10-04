@@ -460,9 +460,10 @@ footer{
           //float: left;
         }
         @media #{$small} {
-          width: 320px;
+          //width: 320px;
+          width: 100%;
           font-size: 12px;
-          padding: 12px;
+          padding: 12px 0 12px 0;
           margin: 0 auto;
           display: block;
         }

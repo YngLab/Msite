@@ -1257,9 +1257,9 @@ footer .foot .footerLinks .links {
 }
 @media screen and (max-width: 768px) {
   footer .foot .footerLinks .links {
-    width: 320px;
+    width: 100%;
     font-size: 12px;
-    padding: 12px;
+    padding: 12px 0 12px 0;
     margin: 0 auto;
     display: block;
   }
