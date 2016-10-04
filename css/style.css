@@ -1257,9 +1257,9 @@ footer .foot .footerLinks .links {
 }
 @media screen and (max-width: 768px) {
   footer .foot .footerLinks .links {
-    width: 320px;
+    width: 100%;
     font-size: 12px;
-    padding: 12px;
+    padding: 12px 0 12px 0;
     margin: 0 auto;
     display: block;
   }
@@ -1430,6 +1430,7 @@ footer .copyright p {
     padding: 40px 0 27px 0;
   }
   .heading-paragraph p {
+    margin-left: 16px;
     font-size: 18px;
   }
 }
