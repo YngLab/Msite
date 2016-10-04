@@ -884,7 +884,7 @@ footer:after {
   position: absolute;
   left: 16px;
   position: absolute;
-  top: calc(55.7522% + (100% - 55.7522%) * 0.5);
+  top: 80%;
   -webkit-transform: translate(0%, -50%);
       -ms-transform: translate(0%, -50%);
           transform: translate(0%, -50%);
@@ -898,14 +898,14 @@ footer:after {
   */
 }
 .latestEvent .eventText .eventtitle {
-  font-size: 21px;
-  margin: 3px 0 0 0;
+  font-size: 16px;
+  margin-top: 4px;
   color: #727171;
   height: 21px;
   visibility: hidden;
 }
 .latestEvent .eventText .eventplace {
-  margin: 10px 0 0 0;
+  margin-top: 16px;
   color: #9fa0a0;
 }
 .latestEvent .flex-direction-nav {
