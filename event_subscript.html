@@ -4,12 +4,12 @@
 
 <!-- 以下多分テキスト変えたほうがいいよね案件 -->
 <meta name = "keywords" content="はこだてみらいプロジェクト,はこだてみらい館,はこだてキッズプラザ,函館,未来館,future center,kids plaza,施設">
-<meta name = "description" content="2016年10月15日に函館駅前にOPENするはこだてみらい館・はこだてキッズプラザの告知サイトです。">
+<meta name = "description" content="はこだてみらいプロジェクトは、オドロクチカラを育む施設「はこだてみらい館」「はこだてキッズプラザ」を中心に、函館の街の明るい未来につながるアイデアをみんなで実現するプロジェクトです。">
 <title>はこだてみらいプロジェクト</title>
 <!-- たぶんここまで -->
 
 <link rel = "stylesheet" href="css/style.css">
-<link rel = "shortcut icon" href="images/hmp.ico">
+<link rel = "shortcut icon" href="images/common/hmp.ico">
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
 <div id="wrapper">
@@ -24,42 +24,46 @@
   <header>
     <div class = "gHeader">
       <div class = "wrap">
-        <div class = "pNav">
-          <a href = "http://hakodate-miraiproject.jp/" class="pNavli language">JP | EN</a>
-          <a href = "contact.html" class="pNavli rightpNav">お問い合わせ</a>
-          <a href = "access.html" class="pNavli rightpNav">アクセス</a>
-        </div>
-        <div class = "gNav">
-          <li class = "gNavli">
-            <a href="index.html">ホーム</a>
-          </li>
-          <li class = "gNavli">
-            <a href="concept.html">コンセプト</a>
-          </li>
-          <li class = "gNavli">
-            <a href="event.html">イベント</a>
-          </li>
-          <li class = "gNavli">
-            <a href="HMP.html">みらいプロジェクト</a>
-          </li>
-          <li class = "gNavli">
-            <a href="FCH.html">はこだてみらい館</a>
-          </li>
-          <li class = "gNavli">
-            <a href="KPH.html">はこだてキッズプラザ</a>
-          </li>
+        <div class = "autoMargin">
+          <div class = "pNav">
+            <a href = "http://hakodate-miraiproject.jp/" class="pNavli language">JP | EN</a>
+            <a href = "contact.html" class="pNavli rightpNav">お問い合わせ</a>
+            <a href = "access.html" class="pNavli rightpNav">アクセス</a>
+          </div>
+          <div class = "gNav">
+            <li class = "gNavli">
+              <a href="index.html">ホーム</a>
+            </li>
+            <li class = "gNavli">
+              <a href="concept.html">コンセプト</a>
+            </li>
+            <li class = "gNavli">
+              <a href="event.html">イベント</a>
+            </li>
+            <li class = "gNavli">
+              <a href="HMP.html">みらいプロジェクト</a>
+            </li>
+            <li class = "gNavli">
+              <a href="FCH.html">はこだてみらい館</a>
+            </li>
+            <li class = "gNavli">
+              <a href="KPH.html">はこだてキッズプラザ</a>
+            </li>
+          </div>
         </div>
       </div>
     </div>
   </header>
   <div class = "pageTitle">
     <div class = "wrap">
-      <p class = "titleText">イベントの申し込み</p>
+      <div class = "autoMargin">
+        <p class = "titleText">イベントの申し込み</p>
+      </div>
     </div>
   </div>
   <div class = "wrap">
   <!-- 以下body -->
-    <div class = "autoHeight">
+    <div class = "autoHeight autoMargin">
       <div class = "eventabout">
         <img src = "images/sample_relatestimg.jpg">
         <p class = "FCHcolor eventabout_title">科学屋台 はこだてみらい館プレワークショップ</p>
@@ -84,66 +88,95 @@
           </table>
         </div>
       </div>
-      <form class = "form" action = "php/hoge.php" method = "post">
-        <table class = "inputForm inputBox_sub">
-          <tr>
-            <th>お名前</th>
-            <td>
-              <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
-            </td>
-          </tr>
-          <tr>
-            <th>メールアドレス</th>
-            <td>
-              <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
-            </td>
-          </tr>
-          <tr>
-            <th>参加者の年齢</th>
-            <td>
-              <input type = "text" name ="email" maxlength = "255" placeholder="10歳">
-            </td>
-          </tr>
-          <tr>
-            <th class = "textareaLabel">問い合わせ内容</th>
-            <td>
-              <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
-            </td>
-          </tr>
-          <tr>
-            <th>　</th>
-            <td>
-              <a href = "confirm_event.html">
-                <div class = "confirm">
-                  <p>確認</p>
-                </div>
-              </a>
-            </td>
-          </tr>
-        </table>
-      </form>
+      <div class = "only_pc">
+        <form class = "form" action = "php/hoge.php" method = "post">
+          <table class = "inputForm inputBox_sub">
+            <tr>
+              <th>お名前</th>
+              <td>
+                <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
+              </td>
+            </tr>
+            <tr>
+              <th>メールアドレス</th>
+              <td>
+                <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
+              </td>
+            </tr>
+            <tr>
+              <th>参加者の年齢</th>
+              <td>
+                <input type = "text" name ="email" maxlength = "255" placeholder="10歳">
+              </td>
+            </tr>
+            <tr>
+              <th class = "textareaLabel">その他ご質問等</th>
+              <td>
+                <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <th>　</th>
+              <td>
+                <a href = "confirm_event.html">
+                  <div class = "confirm">
+                    <input type="submit" value="確認" class = "sendbutton">
+                  </div>
+                </a>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div class = "inputForm_sp">
+        <form class = "form" action = "event_subscript.php" method = "post">
+          <div class = "inputBox_sp">
+            <p>お名前</p>
+            <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
+          </div>
+          <div class = "inputBox_sp">
+            <p>メールアドレス</p>
+            <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
+          </div>
+          <div class = "inputBox_sp_b">
+            <p>その他ご質問等</p>
+            <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
+          </div>
+          <div>
+            <a href = "confirm_event.html">
+              <div>
+                <input type="submit" value="確認" class = "button">
+              </div>
+            </a>
+          </div>
+        </form>
+      </div>
     </div>
   <!-- ここまで -->
   </div>
   <footer>
-    <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
     <div class = "foot">
-      <div class ="footerLinks">
-        <a href = "member.html" class="links">メンバー</a>
-        <a href = "notice.html" class="links">お知らせ</a>
-        <a href = "recruit.html" class="links">求人情報</a>
-        <a href = "FAQ.html" class="links">よくあるご質問</a>
-        <a href = "relatedlinks.html" class="links">関連リンク</a>
-        <a href = "sitemap.html" class="links">サイトマップ</a>
-        <a href = "sitepolicy.html" class="links">サイトポリシー</a>
-      </div>
-      <div class = "SNSbutton">
-        <a href = "https://www.facebook.com/hakodatemiraiproject/">
-          <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
-        </a>
-        <a href = "https://www.instagram.com/instagramjapan/?hl=ja">
-          <img src = "images/common/ig.png" alt="Instagram" class = "SNS">
-        </a>
+      <div class = "wrap">
+        <div class = "autoMargin">
+          <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
+          <div class ="footerLinks">
+            <!--<a href = "member.html" class="links">メンバー</a>-->
+            <a href = "notice.html" class="links">お知らせ</a>
+            <a href = "recruit.html" class="links">求人情報</a>
+            <!--<a href = "FAQ.html" class="links">よくあるご質問</a> -->
+            <a href = "relatedlinks.html" class="links">関連リンク</a>
+            <a href = "sitemap.html" class="links">サイトマップ</a>
+            <a href = "sitepolicy.html" class="links">サイトポリシー</a>
+          </div>
+          <div class = "SNSbutton">
+            <a href = "https://www.facebook.com/hakodatemiraiproject/" target="_blank">
+              <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
+            </a>
+            <!-- <a href = "https://www.instagram.com/instagramjapan/?hl=ja">
+              <img src = "images/common/ig.png" alt="Instagram" class = "SNS">
+            </a> -->
+          </div>
+        </div>
       </div>
       <div class = "copyright">
         <p>@2016 Hakodate Mirai Project</p>

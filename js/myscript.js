@@ -1,52 +1,41 @@
 $(function(){
-  w_size = $(window).width();
-  latestBox_size =  w_size * .209259;
-  logoBox_size = w_size * .126851;
-  future_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
-  future_logoBox_margin_h = $(".future_logo img").height() * (-0.5);
-  kids_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
-  kids_logoBox_margin_h = $(".future_logo img").height() * (-0.5);
+  w_size = $(window).width();  
+  if(w_size >= 1440){
+    w_size = 1440;
+  }
+  if(w_size > 768 && w_size <= 1080){
+    w_size = 1080;
+  }
+  latestBox_size =  w_size * 226 / 1080;
   institution_size = $(".future_contents").width() * .5;
   $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
   $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
-  $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
-  $(".future_logo img").css("margin-left", future_logoBox_margin_w + "px");
-  $(".future_logo img").css("margin-top", future_logoBox_margin_h + "px");
-  $(".kids_logo img").css("margin-left", kids_logoBox_margin_w + "px");
-  $(".kids_logo img").css("margin-top", kids_logoBox_margin_h + "px");
   $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
   $(window).resize(function () {
     w_size = $(window).width();
-    latestBox_size =  w_size * .209259;
-    logoBox_size = w_size * .126851;
-    future_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
-    future_logoBox_margin_h = $(".future_logo img").height() * (-0.5);
-    kids_logoBox_margin_w = $(".future_logo img").width() * (-0.5);
-    kids_logoBox_margin_h = $(".future_logo img").height() * (-0.5);
+    if(w_size >= 1440){
+      w_size = 1440;
+    }
+    if(w_size > 768 && w_size <= 1080){
+      w_size = 1080;
+    }
+    latestBox_size =  w_size * 226 / 1080;
     institution_size = $(".future_contents").width() * .5;
     $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
     $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
-    $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
-    $(".future_logo img").css("margin-left", future_logoBox_margin_w + "px");
-    $(".future_logo img").css("margin-top", future_logoBox_margin_h + "px");
-    $(".kids_logo img").css("margin-left", kids_logoBox_margin_w + "px");
-    $(".kids_logo img").css("margin-top", kids_logoBox_margin_h + "px");
     $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
   });
   if(w_size <= 768){
     latestBox_size =  w_size * .925925;
-    logoBox_size = logoBox_size * 2;
     $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
     $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
-    $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
     $(window).resize(function () {
       latestBox_size =  w_size * .925925;
-      logoBox_size = logoBox_size * 2;
       $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
       $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
-      $(".future_logo, .kids_logo").css("height", logoBox_size + "px");
     });
   }
+
 
   // スクロールしたら発動
   $(window).scroll(function() {
@@ -55,29 +44,29 @@ $(function(){
   });
 
   var $setElm = $(".latestEvent .eventtitle");
-  var cutFigure = 8; // カットする文字数
+  var cutFigure = 23; // カットする文字数
   var afterTxt = "..."; // 文字カット後に表示するテキスト
   var i = 330;
   var j = 0;
   if(320 <= w_size  &&  w_size < 330){
-      cutFigure = "11";
+      cutFigure = "31";
     }
   while(i < 768){
     if(i <= w_size  &&  w_size < i + 23){
-      cutFigure = 12 + j;
+      cutFigure = 31 + j;
       break;
     }
     i = i + 23;
     j++;
   }
   if(1156 <= w_size  &&  w_size < 1257){
-    cutFigure = "9";
+    cutFigure = "24";
   }
   if(1257 <= w_size  &&  w_size < 1358){
-    cutFigure = "10";
+    cutFigure = "25";
   }
   if(1358 <= w_size){
-    cutFigure = "11";
+    cutFigure = "26";
   }
   $setElm.each(function(){
     var textLength = $(this).text().length;
@@ -206,34 +195,36 @@ $(function(){
   //ボタンをタップ、クリックした時
   $button.on('touchstart click', function () {
     if(isOpen) {
-        $drawer.removeClass('open');
-        $content.removeClass('open');
-        isOpen = false;
+      $drawer.removeClass('open');
+      $content.removeClass('open');
+      isOpen = false;
     } else {
-        $drawer.addClass('open');
-        $content.addClass('open');
-        isOpen = true;
+      $drawer.addClass('open');
+      $content.addClass('open');
+      isOpen = true;
     }
-    current_scrollY = $( window ).scrollTop(); 
-    $("html, body").css({
-      position: 'fixed',
-      width: '100%',
-      top: -1 * current_scrollY
-    });
-    $("#wrapper.open #drawer-toggle").css("top", current_scrollY);
+    // current_scrollY = $( window ).scrollTop(); 
+    // $("html, body").css({
+    //   position: 'fixed',
+    //   width: '100%',
+    //   top: -1 * current_scrollY
+    // });
+    // console.log("aaa");
+    // $("#wrapper.open #drawer-toggle").css("top", current_scrollY);
     return false; //親要素へのイベント伝播、aタグのURLクリックによる画面遷移を防ぐ
   });
 
   //コンテンツ部分をタップ、クリックした時
   $content.on('touchstart click', function (e) {
-      e.stopPropagation(); //イベント伝播のみ阻止
-      if(isOpen) {
-        $drawer.removeClass('open');
-        $content.removeClass('open');
-        isOpen = false;
-      }
-      $("#wrapper #drawer-toggle").css("top", 0);
-      $("html, body").removeAttr("style");
-      $("html, body").prop({scrollTop: current_scrollY});
+    e.stopPropagation(); //イベント伝播のみ阻止
+    // return false;
+    if(isOpen) {
+      $drawer.removeClass('open');
+      $content.removeClass('open');
+      isOpen = false;
+    }
+    $("#wrapper #drawer-toggle").css("top", 0);
+    $("body").removeAttr("style");
+    $("html, body").prop({scrollTop: current_scrollY});
   });
 });

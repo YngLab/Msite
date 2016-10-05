@@ -1,14 +1,8 @@
 @charset "UTF-8";
 
-.instaPic{
-  background-color: #CCCCCC;//sample
-  height: 400px;
-  width: 100%;
-}
-
 .wrap{
   margin: 0 auto;
-  width: calc(100% * (1000 / 1080));
+  //width: calc(100% * (1000 / 1080));
   @include clearfix;
   @media #{$normal} {
     max-width: 1440px;
@@ -16,6 +10,12 @@
   }
   @media #{$small} {
     width: calc(100% * (728 / 768));
+  }
+}
+
+.autoMargin{
+  @media #{$normal} {
+    margin: 0 calc(100% * (40 / 1080)) 0 calc(100% * (40 / 1080));
   }
 }
 
@@ -34,6 +34,15 @@
       font-size: 40px;
     }
   }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+#imageArea {
+  width: 100%;
+  position: relative;
 }
 
 .latestEvent{
@@ -143,6 +152,9 @@ footer{
   .copyright{
     background: #9fa0a0;
     height: 24px;
+    @media #{$minimum} {
+      width: 1080px;
+    }
     width: 100%;
   }
   @include clearfix;
@@ -164,13 +176,26 @@ footer{
 }
 
 .facility_explain{
-  padding-top: 50px;
+  padding: 50px 0 20px 0;
+  @media #{$small} {
+    display: none;
+  }
+}
+
+.facility_detail{
   @media #{$small} {
     display: none;
   }
 }
 
 .facility_explain_sp{
+  padding: 16px 0 20px 0;
+  @media #{$normal} {
+    display: none;
+  }
+}
+
+.facility_detail_sp{
   padding: 16px 0 20px 0;
   @media #{$normal} {
     display: none;
@@ -202,6 +227,9 @@ footer{
   @media #{$normal} {
     width: 25%;
     height: 25vw;
+  }
+  @media #{$small} {
+    width: 100%;
   }
 }
 
@@ -250,6 +278,14 @@ footer{
       float: right;
     }
   }
+  @media #{$normal} {
+    .exmenu_textBox_wrap{
+      float: left;
+    }
+    .exmenu_pic{
+      float: right;
+    }
+  }
 }
 
 .exmenu_rightText{
@@ -264,15 +300,27 @@ footer{
 }
 
 .exmenu_textBox_wrap{
-  width: 25%;
-  height: 25vw;
   @include smallW;
+  @media #{$normal} {
+    width: 25%;
+    height: 25vw;
+  }
+  @media #{$small} {
+    width: 100%;
+    height: 50vw;
+  }
 }
 
 .exmenu_pic{
-  width: 75%;
-  height: 25vw;
   @include smallW;
+  @media #{$normal} {
+    width: 75%;
+    height: 25vw;
+  }
+  @media #{$small} {
+    width: 100%;
+    height: 50vw;
+  }
 }
 
 .heading{
@@ -358,7 +406,7 @@ footer{
 //↑加納↓高居
 
 .pageTitle{
-  margin: 12px 0 50px 0;
+  margin-bottom: 50px;
   .titleText{
     padding-left: 24px;
   }
@@ -378,19 +426,19 @@ footer{
 }
 
 .autoHeight{
-  min-height: calc(100vh - (71px) - (65px + (12px + 50px)) - (2.9629vw + 96px + 24px));
+  min-height: calc(100vh - 94px - 115px - 273px); //画面表示高さ - ヘッダー - 見出し - フッター
   @media #{$small} {
-    min-height: calc(100vh - 127px - 461px);
+    min-height: calc(100vh - 155px - 389px);
   }
 }
-
+/*
 .autoHeight-ac{
   min-height: calc(100vh - (71px) - (65px + (12px + 50px)) - (2.9629vw + 40px + 96px + 24px));
   @media #{$small} {
     min-height: calc(100vh - 127px - 461px);
   }
 }
-
+*/
 .p-layout{
   @media #{$normal} {
     position: relative;
@@ -432,6 +480,9 @@ footer{
   .companyLinks{
     @media #{$small} {
       margin-left: 16px;
+      .companyLogo{
+        margin-bottom: 40px;
+      }
       a:after{
         content: "\A";
         white-space: pre;
@@ -442,8 +493,12 @@ footer{
 
 .touristOffice{
   @media #{$normal} {
-    float: left;
+    //float: left;
+    float: right;
     width: 50%;
+    p{
+      margin-left: 24px;
+    }
   }
   @media #{$small} {
     p{
@@ -458,8 +513,12 @@ footer{
 
 .touristGuide{
   @media #{$normal} {
-    float: right;
+    //float: right;
+    float: left;
     width: 50%;
+    p{
+      margin-left: 24px;
+    }
   }
   @media #{$small} {
     p{
@@ -490,7 +549,7 @@ footer{
   }
 }
 
-.inputBox, .inputBox_sub{
+.inputBox, .inputBox_sub, .inputBox_conf, .inputBox_Econf{
   width: 100%;
   th{
     padding-right: 30px;
@@ -499,11 +558,11 @@ footer{
     padding: 8px 0 8px 0;
   }
   .confirm{
-    margin: 40px 0 40px 0;
+    margin: 24px 0 0 0;
   }
 }
 
-.inputBox_sub{
+.inputBox_sub, .inputBox_Econf{
   td{
     padding: 0 0 16px 0;
   }
@@ -513,7 +572,7 @@ footer{
   @media #{$normal} {
     display: none;
   }
-  .inputBox_sp, .inputBox_sp_b{
+  .inputBox_sp, .inputBox_conf_sp, .inputBox_sp_b, .inputBox_conf_sp_b,{
     margin-bottom: 20px;
     input{
       height: 36px;
@@ -527,7 +586,7 @@ footer{
       width: 100%;
     }
   }
-  .inputBox_sp_b{
+  .inputBox_sp_b, .inputBox_conf_sp_b{
     margin-bottom: 30px;
   }
 }
