@@ -228,6 +228,9 @@ footer{
     width: 25%;
     height: 25vw;
   }
+  @media #{$small} {
+    width: 100%;
+  }
 }
 
 .eventArchive_textBox_wrap{
