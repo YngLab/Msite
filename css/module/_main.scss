@@ -1103,45 +1103,56 @@ footer{
 .modal-content {
   // width: calc(90vh + 400px);
   height: 90%;
-  width: calc(90vh*1.4993);
+  width: calc(90vh * 16 / 9); //写真が16:9
   margin: 0 ;
-  background: #fff;
+  // background: #fff;
   // border: solid 1px $g__color-future;
   position: fixed;
   display: none;
   z-index: 2;
-  overflow: scroll;
+  overflow: hidden;
+  // ↓スライドショーのタイトル
   .exmenu_title_future{
-    width: 100%;
-    position: absolute;
-    font-size: $h3__fontSize;
-    color: $g__color-future;
-    font-weight: 400;
-    text-align: center;
-    top: 4%;
-    left: 0;
-    z-index: 10;
+    display: none;
+    // width: 100%;
+    // position: absolute;
+    // font-size: $h3__fontSize;
+    // color: $g__color-future;
+    // font-weight: 400;
+    // text-align: center;
+    // top: 4%;
+    // left: 0;
+    // z-index: 10;
   }
   .exmenu_title_kids{
-    width: 100%;
-    position: absolute;
-    font-size: $h3__fontSize;
-    color: $g__color-kids;
-    font-weight: 400;
-    text-align: center;
-    top: 4%;
-    left: 0;
-    z-index: 10;
+    display: none;
+    // width: 100%;
+    // position: absolute;
+    // font-size: $h3__fontSize;
+    // color: $g__color-kids;
+    // font-weight: 400;
+    // text-align: center;
+    // top: 4%;
+    // left: 0;
+    // z-index: 10;
+  }
+  #modal-close{
+    cursor: pointer;
   }
   #modal-close img{
     width: 20px;
+    height:20px;
     position: absolute;
     top: 4%;
     right: calc(5% - 10px);
     z-index: 10;
   }
-  #modal-close:hover{
-    opacity: 1;
+  #modal-close img:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
   }
   .exmenu_slide{
     //height: calc(100% - 115px);

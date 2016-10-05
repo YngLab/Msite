@@ -1980,45 +1980,36 @@ footer .copyright p {
 /* modal-contentのCSS */
 .modal-content {
   height: 90%;
-  width: calc(90vh*1.4993);
+  width: calc(90vh * 16 / 9);
   margin: 0;
-  background: #fff;
   position: fixed;
   display: none;
   z-index: 2;
-  overflow: scroll;
+  overflow: hidden;
 }
 .modal-content .exmenu_title_future {
-  width: 100%;
-  position: absolute;
-  font-size: 21px;
-  color: #f39800;
-  font-weight: 400;
-  text-align: center;
-  top: 4%;
-  left: 0;
-  z-index: 10;
+  display: none;
 }
 .modal-content .exmenu_title_kids {
-  width: 100%;
-  position: absolute;
-  font-size: 21px;
-  color: #8fc31f;
-  font-weight: 400;
-  text-align: center;
-  top: 4%;
-  left: 0;
-  z-index: 10;
+  display: none;
+}
+.modal-content #modal-close {
+  cursor: pointer;
 }
 .modal-content #modal-close img {
   width: 20px;
+  height: 20px;
   position: absolute;
   top: 4%;
   right: calc(5% - 10px);
   z-index: 10;
 }
-.modal-content #modal-close:hover {
-  opacity: 1;
+.modal-content #modal-close img:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.6;
+  -khtml-opacity: 0.6;
+  opacity: 0.6;
 }
 
 #modal-overlay {
@@ -2778,18 +2769,7 @@ html[xmlns] .flexslider .slides {
 }
 
 .flex-control-nav {
-  width: 100%;
-  position: absolute;
-  bottom: 10px;
-  text-align: center;
-  z-index: 10;
-}
-
-.flex-control-nav li {
-  margin: 0 15px;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
+  display: none;
 }
 
 .flex-control-paging li a {
