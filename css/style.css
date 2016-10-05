@@ -817,13 +817,12 @@ footer:after {
 }
 
 #indexTitle {
-  background-color: rgba(0, 0, 0, 0.3);
   width: 60%;
-  border-top: 1px #fff solid;
-  border-bottom: 1px #fff solid;
-  color: #fff;
   position: absolute;
   text-align: center;
+}
+#indexTitle img {
+  width: 100%;
 }
 
 .topcap {
