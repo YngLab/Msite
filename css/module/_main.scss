@@ -1582,7 +1582,9 @@ p.company_about{//別部分がコーディング規約無視しているため�
 h2.concept_title{
   font-size: 48px;
   text-align: center;
-  margin: 100px auto;
+  //margin: 100px auto;
+  margin-bottom: 100px;
+  padding-top: 100px;
 }
 
 .concept{

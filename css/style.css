@@ -2431,7 +2431,8 @@ p.company_about {
 h2.concept_title {
   font-size: 48px;
   text-align: center;
-  margin: 100px auto;
+  margin-bottom: 100px;
+  padding-top: 100px;
 }
 
 .concept {
