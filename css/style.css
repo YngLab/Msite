@@ -1982,11 +1982,10 @@ footer .copyright p {
   height: 90%;
   width: calc(90vh * 16 / 9);
   margin: 0;
-  background: #fff;
   position: fixed;
   display: none;
   z-index: 2;
-  overflow: scroll;
+  overflow: hidden;
 }
 .modal-content .exmenu_title_future {
   display: none;

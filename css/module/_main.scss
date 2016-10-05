@@ -1105,12 +1105,12 @@ footer{
   height: 90%;
   width: calc(90vh * 16 / 9); //写真が16:9
   margin: 0 ;
-  background: #fff;
+  // background: #fff;
   // border: solid 1px $g__color-future;
   position: fixed;
   display: none;
   z-index: 2;
-  overflow: scroll;
+  overflow: hidden;
   // ↓スライドショーのタイトル
   .exmenu_title_future{
     display: none;
