@@ -198,22 +198,25 @@ html[xmlns] .flexslider .slides {
 .flex-pauseplay a.flex-play:before {
   content: '\f003';
 }
-.flex-control-nav {
-  width: 100%;
-  position: absolute;
-  bottom: 10px;
-  text-align: center;
-  z-index: 10;
-}
-.flex-control-nav li {
-  margin: 0 15px;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-}
 
-.flex-control-nav li a{
+// 下の方にある四角いナビゲーション
+.flex-control-nav {
+  display: none;
+  // width: 100%;
+  // position: absolute;
+  // bottom: 10px;
+  // text-align: center;
+  // z-index: 10;
 }
+// .flex-control-nav li {
+//   margin: 0 15px;
+//   display: inline-block;
+//   zoom: 1;
+//   *display: inline;
+// }
+
+// .flex-control-nav li a{
+// }
 
 .flex-control-paging li a {
   width: 10px;
