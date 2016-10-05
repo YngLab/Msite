@@ -206,35 +206,42 @@ $(function(){
   //ボタンをタップ、クリックした時
   $button.on('touchstart click', function () {
     if(isOpen) {
-      $drawer.removeClass('open');
-      $content.removeClass('open');
+      drawerClose();
+      // $drawer.removeClass('open');
+      // $content.removeClass('open');
       isOpen = false;
     } else {
       $drawer.addClass('open');
       $content.addClass('open');
+      current_scrollY = $( window ).scrollTop(); 
+      $("html, body").css({
+        position: 'fixed',
+        width: '100%',
+        top: -1 * current_scrollY
+      });
+      $("#wrapper.open #drawer-toggle").css("top", current_scrollY);
       isOpen = true;
     }
     return false; //親要素へのイベント伝播、aタグのURLクリックによる画面遷移を防ぐ
-    // current_scrollY = $( window ).scrollTop(); 
-    // $("html, body").css({
-    //   position: 'fixed',
-    //   width: '100%',
-    //   top: -1 * current_scrollY
-    // });
-    // $("#wrapper.open #drawer-toggle").css("top", current_scrollY);
-
   });
 
   //コンテンツ部分をタップ、クリックした時
   $content.on('touchstart click', function (e) {
     e.stopPropagation(); //イベント伝播のみ阻止
+    // return false;
     if(isOpen) {
-      $drawer.removeClass('open');
-      $content.removeClass('open');
+      drawerClose();
       isOpen = false;
     }
-    // $("#wrapper #drawer-toggle").css("top", 0);
-    // $("html, body").removeAttr("style");
-    // $("html, body").prop({scrollTop: current_scrollY});
   });
+
+  //ドロワーメニューを閉じる
+  function drawerClose(){
+  $drawer.removeClass('open');
+  $content.removeClass('open');
+  $("#wrapper #drawer-toggle").css("top", 0);
+  $("html, body").removeAttr("style");
+  //$("html, body").css("top", 0);
+  $("html, body").prop({scrollTop: current_scrollY});
+  }
 });

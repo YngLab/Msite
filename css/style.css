@@ -585,7 +585,9 @@ footer:after {
     left: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     text-align: left;
   }
 }
@@ -777,9 +779,11 @@ footer:after {
   left: 16px;
   position: absolute;
   top: calc(55.7522% + (100% - 55.7522%) * 0.5);
-  transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+      -ms-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
   text-align: left;
-  width: calc(100% - 32px);
+  width: calc(100% - 32px)
   /*
   .eventsch{
     margin: calc(100% * (23 / 280.616)) 0 0 0;
@@ -1861,8 +1865,6 @@ footer .copyright p {
 #wrapper {
   position: relative;
   -webkit-transition: all .4s;
-  -moz-transition: all .4s;
-  -o-transition: all .4s;
   transition: all .4s;
 }
 #wrapper #drawer-toggle {
@@ -1873,7 +1875,7 @@ footer .copyright p {
   height: 23px;
   padding-top: 17px;
   background-color: #9fa0a0;
-  z-index: 10;
+  z-index: 1000;
 }
 #wrapper #drawer-toggle span {
   margin: 0 auto;
@@ -1881,20 +1883,60 @@ footer .copyright p {
   height: 2px;
   background-color: #FFFFFF;
   width: 20px;
-  transition: all .4s;
-  transform: rotate(0deg);
+  -webkit-transition: all .4s;
+          transition: all .4s;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 #wrapper #drawer-toggle .top {
-  transform: translateY(-4px);
+  -webkit-transform: translateY(-4px);
+      -ms-transform: translateY(-4px);
+          transform: translateY(-4px);
 }
 #wrapper #drawer-toggle .bottom {
-  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
+          transform: translateY(4px);
 }
 
 #wrapper.open {
   -webkit-transform: translate3d(-75%, 0, 0);
-  -moz-transform: translate3d(-75%, 0, 0);
   transform: translate3d(-75%, 0, 0);
+}
+#wrapper.open #drawer-toggle {
+  position: fixed;
+  right: -1px;
+  top: 0;
+}
+#wrapper.open #drawer-toggle .middle {
+  background: rgba(255, 255, 255, 0);
+}
+#wrapper.open #drawer-toggle .top {
+  -webkit-transform: rotate(-45deg) translateY(2px);
+      -ms-transform: rotate(-45deg) translateY(2px);
+          transform: rotate(-45deg) translateY(2px);
+}
+#wrapper.open #drawer-toggle .bottom {
+  -webkit-transform: rotate(45deg) translateY(-3px);
+      -ms-transform: rotate(45deg) translateY(-3px);
+          transform: rotate(45deg) translateY(-3px);
+}
+
+#wrapper.open #drawer-toggle .middle {
+  background: rgba(255, 255, 255, 0);
+}
+
+#wrapper.open #drawer-toggle .top {
+  -webkit-transform: rotate(-45deg) translateY(2px);
+  -ms-transform: rotate(-45deg) translateY(2px);
+  transform: rotate(-45deg) translateY(2px);
+}
+
+#wrapper.open #drawer-toggle .bottom {
+  -webkit-transform: rotate(45deg) translateY(-3px);
+  -ms-transform: rotate(45deg) translateY(-3px);
+  transform: rotate(45deg) translateY(-3px);
 }
 
 /* オーバーレイ表示をするためのCSS */
@@ -1918,8 +1960,6 @@ footer .copyright p {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   -webkit-transition: all .4s;
-  -moz-transition: all .4s;
-  -o-transition: all .4s;
   transition: all .4s;
 }
 #drawer .sp_language p {
@@ -1952,7 +1992,6 @@ footer .copyright p {
 
 #drawer.open {
   -webkit-transform: translate3d(-100%, 0, 0);
-  -moz-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
 }
 
@@ -2205,7 +2244,8 @@ footer .copyright p {
 }
 
 .menu .active .btn {
-  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
 
@@ -2307,11 +2347,7 @@ html[xmlns] .flexslider .slides {
   /*border: 4px solid #fff;*/
   position: relative;
   zoom: 1;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
-  -webkit-box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
   -o-box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
   box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
 }
@@ -2329,9 +2365,6 @@ html[xmlns] .flexslider .slides {
 .flex-viewport {
   max-height: 2000px;
   -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -2358,7 +2391,7 @@ html[xmlns] .flexslider .slides {
   z-index: 10;
   overflow: hidden;
   /*opacity: 0;*/
-  cursor: pointer;
+  cursor: pointer
   /*color: rgba(0, 0, 0, 0.8);*/
   /*text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
   -webkit-transition: all 0.3s ease-in-out;
@@ -2456,7 +2489,7 @@ html[xmlns] .flexslider .slides {
   background: #FFFFFF;
   /*background: rgba(0, 0, 0, 0.5);*/
   cursor: pointer;
-  text-indent: -9999px;
+  text-indent: -9999px
   /*-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
   -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
@@ -2508,9 +2541,6 @@ html[xmlns] .flexslider .slides {
   cursor: pointer;
   -moz-user-select: none;
   -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
