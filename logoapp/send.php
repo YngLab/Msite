@@ -21,7 +21,7 @@ $content =<<<HTML
 <link rel="stylesheet" href="../css/style.css">
 <title>はこだてみらい館・はこだてキッズプラザ 告知サイト</title>
 
-<h2>送信が完了しました。</h2>
+<h2 class="logoApp_h2">送信が完了しました。</h2>
 <div class="logoApp_send">
   <p>送信していただいたうごくロゴは<br>
     施設オープン時のイベントでの使用や<br>
@@ -50,15 +50,54 @@ $content =<<<HTML
   </a>
 </div>
 
-<footer>
-  <div class="footer_inner">
-    <a href="https://www.facebook.com/hakodatemiraiproject/" target="_blank"><img src="../img/sns_facebook.png" alt="公式facebook" class="footer_snsButton"></a>
-    <p class="footer_text">〒040-0063函館市若松町20番1号 キラリス函館</p>
-    <p class="footer_text">TEL : 0138-23-1131（NAアーバンデベロップメント）</p>
-    <p class="footer_text">E-Mail : info@<span class="contact-spamBlock">spamblock</span>hakodate-miraiproject.jp</p>
-    <p class="footer_text-copyright">©2016 Hakodate Mirai Project</p>
+<div class = "wrap">
+  <footer>
+    <img src = "/images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
+    <div class = "foot">
+      <div class ="footerLinks">
+        <a href = "member.html" class="links">メンバー</a>
+        <a href = "notice.html" class="links">お知らせ</a>
+        <a href = "recruit.html" class="links">求人情報</a>
+        <a href = "FAQ.html" class="links">よくあるご質問</a>
+        <a href = "relatedlinks.html" class="links">関連リンク</a>
+        <a href = "sitemap.html" class="links">サイトマップ</a>
+        <a href = "sitepolicy.html" class="links">サイトポリシー</a>
+      </div>
+      <div class = "SNSbutton">
+        <a href = "https://www.facebook.com/hakodatemiraiproject/" target="_blank">
+          <img src = "/images/common/fb.png" alt="公式Facebook" class = "SNS">
+        </a>
+        <!-- <a href = "https://www.instagram.com/instagramjapan/?hl=ja">
+          <img src = "images/common/ig.png" alt="Instagram" class = "SNS">
+        </a> -->
+      </div>
+      <div class = "copyright">
+        <p>@2016 Hakodate Mirai Project</p>
+      </div>
+    </div>
+  </footer>
+  <div class="overlay"></div>
+</div>
+<div id="drawer">
+  <!-- ドロワー部分 -->
+  <div class = "sp_language">
+    <p><a href = "#">English</p></a>
   </div>
-</footer>
+  <div class = "navBox">
+    <ul class = "gNav_sp">
+      <a href = "index.html"><li>ホーム</li></a>
+      <a href = "concept.html"><li>コンセプト</li></a>
+      <a href = "event.html"><li>イベント</li></a>
+      <a href = "HMP.html"><li>みらいプロジェクト</li></a>
+      <a href = "FCH.html"><li>はこだてみらい館</li></a>
+      <a href = "KPH.html"><li>はこだてキッズプラザ</li></a>
+    </ul>
+    <ul class = "pNav_sp">
+      <a href = "access.html"><li>アクセス</li></a>
+      <a href = "contact.html"><li>お問い合わせ</li></a>
+    </ul>
+  </div>
+</div>
 HTML;
 
 echo $content;
