@@ -2052,14 +2052,29 @@ footer .copyright p {
 .adress .KPHaddress {
   margin: 0 0 10px 24px;
 }
+@media screen and (max-width: 768px) {
+  .adress .KPHaddress {
+    margin: 0 0 10px 16px;
+  }
+}
 .adress .FCHaddress {
   margin-left: 24px;
+}
+@media screen and (max-width: 768px) {
+  .adress .FCHaddress {
+    margin-left: 16px;
+  }
 }
 
 .parking .lineSpace {
   color: #9fa0a0;
   font-size: 14px;
   margin-left: 24px;
+}
+@media screen and (max-width: 768px) {
+  .parking .lineSpace {
+    margin-left: 16px;
+  }
 }
 
 .movie_wrap {
@@ -2410,10 +2425,11 @@ p.company_about {
 @media screen and (max-width: 768px) {
   .accessProcess .accessProcess_sp .from {
     border-bottom: dashed 1px #9fa0a0;
+    margin-right: 16px;
     padding-bottom: 3px;
   }
   .accessProcess .accessProcess_sp .route {
-    margin: 20px 0 36px 0;
+    margin: 20px 16px 36px 0;
   }
 }
 
