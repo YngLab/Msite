@@ -26,19 +26,19 @@ if(isset($_SESSION['old'])){
   $old = "";
 }
 
-if($_POST[id] == 0){$date = '
+if($_SESSION[id] == 0){$date = '
 日時：10月12日(水)　15:00-18:00
 ';
-}else if($_POST[id] == 1){$date = '
+}else if($_SESSION[id] == 1){$date = '
 日時：10月12日(水)　15:00-18:00
 ';
-}else if($_POST[id] == 2){$date = '
+}else if($_SESSION[id] == 2){$date = '
 日時：10月15日(土)　10:30-12:00
 ';
-}else if($_POST[id] == 3){$date = '
-日時：10月16日(日)　10:00-16:30
+}else if($_SESSION[id] == 3){$date = '
+日時：10月16日(日)　10:30-16:30
 ';
-}else if($_POST[id] == 4){$date = '
+}else if($_SESSION[id] == 4){$date = '
 日時：10月16日(日)　13:00-14:00
 ';
 }

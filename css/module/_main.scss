@@ -91,7 +91,7 @@
     // left: calc((100% - 231px) * 0.5);
     left: 16px;
     position: absolute;
-    top: calc(55.7522% + (100% - 55.7522%) * 0.5);
+    top: 80%;
     transform: translate(0%, -50%);
     text-align: left;
     width: calc(100% - 32px);
@@ -104,14 +104,14 @@
     }
     */
     .eventtitle{
-      font-size: $h3__fontSize;
-      margin: 3px 0 0 0;
+      font-size: 16px;
+      margin-top: 4px;
       color: $dark__fontColor;
       height: 21px;
       visibility: hidden;
     }
     .eventplace{
-      margin: 10px 0 0 0;
+      margin-top: 16px;
       color: $g__fontColor;
     }
   }
@@ -1103,45 +1103,56 @@ footer{
 .modal-content {
   // width: calc(90vh + 400px);
   height: 90%;
-  width: calc(90vh*1.4993);
+  width: calc(90vh * 16 / 9); //写真が16:9
   margin: 0 ;
-  background: #fff;
+  // background: #fff;
   // border: solid 1px $g__color-future;
   position: fixed;
   display: none;
   z-index: 2;
-  overflow: scroll;
+  overflow: hidden;
+  // ↓スライドショーのタイトル
   .exmenu_title_future{
-    width: 100%;
-    position: absolute;
-    font-size: $h3__fontSize;
-    color: $g__color-future;
-    font-weight: 400;
-    text-align: center;
-    top: 4%;
-    left: 0;
-    z-index: 10;
+    display: none;
+    // width: 100%;
+    // position: absolute;
+    // font-size: $h3__fontSize;
+    // color: $g__color-future;
+    // font-weight: 400;
+    // text-align: center;
+    // top: 4%;
+    // left: 0;
+    // z-index: 10;
   }
   .exmenu_title_kids{
-    width: 100%;
-    position: absolute;
-    font-size: $h3__fontSize;
-    color: $g__color-kids;
-    font-weight: 400;
-    text-align: center;
-    top: 4%;
-    left: 0;
-    z-index: 10;
+    display: none;
+    // width: 100%;
+    // position: absolute;
+    // font-size: $h3__fontSize;
+    // color: $g__color-kids;
+    // font-weight: 400;
+    // text-align: center;
+    // top: 4%;
+    // left: 0;
+    // z-index: 10;
+  }
+  #modal-close{
+    cursor: pointer;
   }
   #modal-close img{
     width: 20px;
+    height:20px;
     position: absolute;
     top: 4%;
     right: calc(5% - 10px);
     z-index: 10;
   }
-  #modal-close:hover{
-    opacity: 1;
+  #modal-close img:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
   }
   .exmenu_slide{
     //height: calc(100% - 115px);
@@ -1263,7 +1274,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
     height: 23px;
     padding-top: 17px;
     background-color: $g__fontColor;
-    z-index: 10;
+    z-index: 1000;
     span{
       margin: 0 auto;
       display: block;
@@ -1288,44 +1299,53 @@ p.company_about{//別部分がコーディング規約無視しているため�
   -webkit-transform: translate3d(-75%, 0, 0);
      -moz-transform: translate3d(-75%, 0, 0);
           transform: translate3d(-75%, 0, 0);
-  // #drawer-toggle{
-  //   position: fixed;
-  //   right: -1px;
-  //   top: 0;
-  // }
+  #drawer-toggle{
+    position: fixed;
+    right: -1px;
+    top: 0;
+    .middle {
+    background: rgba(255, 255, 255, 0);
+    }
+    .top {
+      transform: rotate(-45deg) translateY(2px);
+    }
+    .bottom {
+      transform: rotate(45deg) translateY(-3px);
+    }
+  }
 }
 
 /* オーバーレイ表示をするためのCSS */
 .open .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    //親要素の上に表示するためz-indexを指定
-    z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  //親要素の上に表示するためz-indexを指定
+  z-index: 999;
 
-    //親要素一杯に広がるため縦横のサイズを100%に
-    width: 100%;
-    height: 100%;
+  //親要素一杯に広がるため縦横のサイズを100%に
+  width: 100%;
+  height: 100%;
 
-    //暗くするため黒の透明色を指定
-    background: rgba(0, 0, 0, .5);
+  //暗くするため黒の透明色を指定
+  background: rgba(0, 0, 0, .5);
 }
 
 #drawer {
-    position: fixed; //常に固定なのでfixed
-    top: 0;
-    right: -75%;  //初期状態では隠すため、横幅のサイズ分だけ画面外に移動する
-    width: 75%;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch; //スマホでのスクロールに慣性を付ける（デバイス限定
+  position: fixed; //常に固定なのでfixed
+  top: 0;
+  right: -75%;  //初期状態では隠すため、横幅のサイズ分だけ画面外に移動する
+  width: 75%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; //スマホでのスクロールに慣性を付ける（デバイス限定
 
-    //アニメーション指定
-    -webkit-transition: all .4s;
-       -moz-transition: all .4s;
-         -o-transition: all .4s;
-            transition: all .4s;
+  //アニメーション指定
+  -webkit-transition: all .4s;
+     -moz-transition: all .4s;
+       -o-transition: all .4s;
+          transition: all .4s;
   .sp_language{
     width: 100%;
     height: 40px;
@@ -1573,7 +1593,9 @@ p.company_about{//別部分がコーディング規約無視しているため�
 h2.concept_title{
   font-size: 48px;
   text-align: center;
-  margin: 100px auto;
+  //margin: 100px auto;
+  margin-bottom: 100px;
+  padding-top: 100px;
 }
 
 .concept{
@@ -1602,6 +1624,7 @@ h2.concept_title{
   @media #{$small} {
     float: none;
     max-width: 100%;
+    margin-top: 40px;
   }
 }
 
