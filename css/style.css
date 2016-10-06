@@ -1980,45 +1980,36 @@ footer .copyright p {
 /* modal-contentのCSS */
 .modal-content {
   height: 90%;
-  width: calc(90vh*1.4993);
+  width: calc(90vh * 16 / 9);
   margin: 0;
-  background: #fff;
   position: fixed;
   display: none;
   z-index: 2;
-  overflow: scroll;
+  overflow: hidden;
 }
 .modal-content .exmenu_title_future {
-  width: 100%;
-  position: absolute;
-  font-size: 21px;
-  color: #f39800;
-  font-weight: 400;
-  text-align: center;
-  top: 4%;
-  left: 0;
-  z-index: 10;
+  display: none;
 }
 .modal-content .exmenu_title_kids {
-  width: 100%;
-  position: absolute;
-  font-size: 21px;
-  color: #8fc31f;
-  font-weight: 400;
-  text-align: center;
-  top: 4%;
-  left: 0;
-  z-index: 10;
+  display: none;
+}
+.modal-content #modal-close {
+  cursor: pointer;
 }
 .modal-content #modal-close img {
   width: 20px;
+  height: 20px;
   position: absolute;
   top: 4%;
   right: calc(5% - 10px);
   z-index: 10;
 }
-.modal-content #modal-close:hover {
-  opacity: 1;
+.modal-content #modal-close img:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.6;
+  -khtml-opacity: 0.6;
+  opacity: 0.6;
 }
 
 #modal-overlay {
@@ -2128,7 +2119,7 @@ p.company_about {
   height: 23px;
   padding-top: 17px;
   background-color: #9fa0a0;
-  z-index: 10;
+  z-index: 1000;
 }
 #wrapper #drawer-toggle span {
   margin: 0 auto;
@@ -2156,6 +2147,24 @@ p.company_about {
 #wrapper.open {
   -webkit-transform: translate3d(-75%, 0, 0);
   transform: translate3d(-75%, 0, 0);
+}
+#wrapper.open #drawer-toggle {
+  position: fixed;
+  right: -1px;
+  top: 0;
+}
+#wrapper.open #drawer-toggle .middle {
+  background: rgba(255, 255, 255, 0);
+}
+#wrapper.open #drawer-toggle .top {
+  -webkit-transform: rotate(-45deg) translateY(2px);
+      -ms-transform: rotate(-45deg) translateY(2px);
+          transform: rotate(-45deg) translateY(2px);
+}
+#wrapper.open #drawer-toggle .bottom {
+  -webkit-transform: rotate(45deg) translateY(-3px);
+      -ms-transform: rotate(45deg) translateY(-3px);
+          transform: rotate(45deg) translateY(-3px);
 }
 
 /* オーバーレイ表示をするためのCSS */
@@ -2413,7 +2422,8 @@ p.company_about {
 h2.concept_title {
   font-size: 48px;
   text-align: center;
-  margin: 100px auto;
+  margin-bottom: 100px;
+  padding-top: 100px;
 }
 
 .concept {
@@ -2448,6 +2458,7 @@ h2.concept_title {
   .concept_img {
     float: none;
     max-width: 100%;
+    margin-top: 40px;
   }
 }
 
@@ -2758,18 +2769,7 @@ html[xmlns] .flexslider .slides {
 }
 
 .flex-control-nav {
-  width: 100%;
-  position: absolute;
-  bottom: 10px;
-  text-align: center;
-  z-index: 10;
-}
-
-.flex-control-nav li {
-  margin: 0 15px;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
+  display: none;
 }
 
 .flex-control-paging li a {
