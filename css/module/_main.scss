@@ -1303,7 +1303,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
 
 #wrapper.open {
   // position: fixed;
-  //クラス「open」が付いたら左に280px移動
+  //クラス「open」が付いたら左に75%移動
   -webkit-transform: translate3d(-75%, 0, 0);
      -moz-transform: translate3d(-75%, 0, 0);
           transform: translate3d(-75%, 0, 0);
@@ -1370,22 +1370,29 @@ p.company_about{//別部分がコーディング規約無視しているため�
     height: calc((100% - 40px) - calc((100% - 40px) / 17));
     margin-top: calc((100vh - 40px) /17);
     li{
-      padding-left: 30px;
-      line-height: calc((100vh - 40px) / (17 / 2));
+      border-bottom: 1px solid $g__fontColor;
+      padding-top: calc((100% * (1/6) - .75em)/2);
+      margin: 0 30px calc(100% * (1/6)/2) 30px;
+      // line-height: calc((100vh - 40px) / (17 / 2));
+      line-height: 1.75em;
       display: block;
     }
     .gNav_sp{
       height: 75%;
       li{
-        height: calc(100% * (1/6));
+        // height: calc(100% * (1/6));
+        .gNav_sp_{
+          border-bottom: 1px solid $g__fontColor;
+          height: 70%;
+        }
       }
     }
     .pNav_sp{
       height: 25%;
       background-color: $bg__color;
-      li{
-        height: calc(100% * (1/2));
-      }
+      // li{
+      //   height: calc(100% * (1/2));
+      // }
     }
   }
 }

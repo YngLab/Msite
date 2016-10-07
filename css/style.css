@@ -2324,22 +2324,22 @@ p.company_about {
   margin-top: calc((100vh - 40px) /17);
 }
 #drawer .navBox li {
-  padding-left: 30px;
-  line-height: calc((100vh - 40px) / (17 / 2));
+  border-bottom: 1px solid #9fa0a0;
+  padding-top: calc((100% * (1/6) - .75em)/2);
+  margin: 0 30px calc(100% * (1/6)/2) 30px;
+  line-height: 1.75em;
   display: block;
 }
 #drawer .navBox .gNav_sp {
   height: 75%;
 }
-#drawer .navBox .gNav_sp li {
-  height: calc(100% * (1/6));
+#drawer .navBox .gNav_sp li .gNav_sp_ {
+  border-bottom: 1px solid #9fa0a0;
+  height: 70%;
 }
 #drawer .navBox .pNav_sp {
   height: 25%;
   background-color: #f7f8f8;
-}
-#drawer .navBox .pNav_sp li {
-  height: calc(100% * (1/2));
 }
 
 #drawer.open {
