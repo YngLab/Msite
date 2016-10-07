@@ -1276,7 +1276,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
           transition: all .4s;
   #drawer-toggle{
     position: fixed;
-    right: -1px;
+    right: 0;
     top: 0;
     width: 40px;
     height: 23px;
@@ -1309,7 +1309,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
           transform: translate3d(-75%, 0, 0);
   #drawer-toggle{
     position: fixed;
-    right: -1px;
+    right: 0;
     top: 0;
     .middle {
     background: rgba(255, 255, 255, 0);
