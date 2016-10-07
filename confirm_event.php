@@ -95,7 +95,7 @@ $_SESSION = $_POST;
                 <?php if($_POST[id] == 0){echo '10月12日(水)　15:00-18:00';
                 }else if($_POST[id] == 1){echo '10月12日(水)　15:00-18:00';
                 }else if($_POST[id] == 2){echo '10月15日(土)　10:30-12:00';
-                }else if($_POST[id] == 3){echo '10月16日(日)　10:00-16:30';
+                }else if($_POST[id] == 3){echo '10月16日(日)　10:30-16:30';
                 }else if($_POST[id] == 4){echo '10月16日(日)　13:00-14:00';
                 }
                 ?></td>

@@ -32,6 +32,7 @@
     @media #{$small} {
       background: $g__fontColor;
       font-size: 40px;
+      margin-bottom: 12px;
     }
   }
 }
@@ -328,7 +329,7 @@ footer{
 }
 
 .pageTitle_event{
-  margin: 12px 0 0 0;
+  //margin: 12px 0 0 0;
   .titleText{
     padding-left: 24px;
   }
@@ -486,7 +487,7 @@ footer{
       a:after{
         content: "\A";
         white-space: pre;
-      }
+      }//改行を無理矢理挿入するコードです。実はmoduleのサイトマップのところにもあります。
     }
   }
 }
@@ -588,5 +589,86 @@ footer{
   }
   .inputBox_sp_b, .inputBox_conf_sp_b{
     margin-bottom: 30px;
+  }
+}
+
+#logoApp{
+  margin: 0 auto 100px auto;
+  width: 1080px;
+  @include smallW;
+  @media #{$small} {
+    padding: 0 20px;
+  }
+}
+
+.logoApp_example{
+  width: 1080px;
+  @include smallW;
+  @include clearfix;
+}
+
+.logoApp_exampleTable{
+  float: right;
+  height: 1080px / 2;
+  margin-bottom: 20px;
+  width: 1080px / 2;
+  @include smallW;
+  @media #{$small} {
+    height: auto;
+    margin-bottom: 0;
+  }
+  td{
+    width: 25%;
+  }
+}
+
+.logoApp_exampleImage{
+  width: 100%;
+}
+
+.logoApp_link{
+  display: block;
+  margin: auto;
+  text-decoration: none;
+  width: 220px;
+  @media #{$small} {
+    margin-top: 20px;
+  }
+}
+
+.logoApp_linkButton{
+  border: 2px solid $g__fontColor;
+  border-radius: 5px;
+  color: $g__fontColor;
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+  transition: .1s;
+  &:hover{
+    background-color: $g__fontColor;
+    color: #fdfdfd;
+  }
+}
+
+.logoApp_send{
+  padding: 25px;
+  h2{
+    border-bottom: none;
+  }
+  .guide_logoApp{
+    width: 600px;
+    margin: 50px auto 0 auto;
+    @include clearfix;
+    .guide_logoApp_future{
+      width: auto;
+      float: left;
+    }
+    .guide_logoApp_kids{
+      width: auto;
+      float: right;
+    }
+    img{
+      width: 200px;
+    }
   }
 }
