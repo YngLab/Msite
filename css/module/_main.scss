@@ -871,7 +871,7 @@ footer{
 */
 
 .button, .rev_button, .panel{
-  border: 1px solid $dark__fontColor;
+  //border: 1px solid $dark__fontColor;
   //color: $dark__fontColor;
   font-weight: 400;
   font-size: $link__fontSize;
@@ -881,6 +881,7 @@ footer{
 }
 
 .button, .rev_button{
+  border: 1px solid $dark__fontColor;
   cursor: pointer;
   text-align: center;
   width: 88px;

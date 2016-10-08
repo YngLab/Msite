@@ -1839,13 +1839,13 @@ footer .copyright p {
 }
 */
 .button, .rev_button, .panel {
-  border: 1px solid #727171;
   font-weight: 400;
   font-size: 15px;
   height: 36px;
 }
 
 .button, .rev_button {
+  border: 1px solid #727171;
   cursor: pointer;
   text-align: center;
   width: 88px;
