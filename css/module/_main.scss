@@ -1342,7 +1342,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
 #drawer {
   position: fixed; //常に固定なのでfixed
   top: 0;
-  right: -75%;  //初期状態では隠すため、横幅のサイズ分だけ画面外に移動する
+  right: -75%; //初期状態では隠すため、横幅のサイズ分だけ画面外に移動する
   width: 75%;
   height: 100%;
   overflow-x: hidden;
@@ -1371,8 +1371,8 @@ p.company_about{//別部分がコーディング規約無視しているため�
     margin-top: calc((100vh - 40px) /17);
     li{
       border-bottom: 1px solid $g__fontColor;
-      padding-top: calc((100% * (1/6) - .75em)/2);
-      margin: 0 30px calc(100% * (1/6)/2) 30px;
+      padding-top: calc(((100vh - 40px) /17) - 0.875em); // (縦幅-上部灰色スペース)/1つのメニューの半分(17)-文字の縦幅の半分(0.875em)
+      margin: 0 30px calc(((100vh - 40px) /17) - 0.875em - 1px) 30px; //上記からborder1pxを引く
       // line-height: calc((100vh - 40px) / (17 / 2));
       line-height: 1.75em;
       display: block;
