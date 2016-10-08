@@ -870,12 +870,18 @@ footer{
 }
 */
 
-.button, .rev_button{
+.button, .rev_button, .panel{
   border: 1px solid $dark__fontColor;
   //color: $dark__fontColor;
   font-weight: 400;
   font-size: $link__fontSize;
   height: 36px;
+  //text-align: center;
+  //width: 88px;
+}
+
+.button, .rev_button{
+  cursor: pointer;
   text-align: center;
   width: 88px;
 }
@@ -883,12 +889,19 @@ footer{
 .button{
   background: transparent;
   color: $dark__fontColor;
-  cursor: pointer;
 }
 
 .rev_button{
   background: $dark__fontColor;
   color: #ffffff;
+}
+
+.panel{
+  height: 32px;
+  padding: 1px 13px;
+  .panelLabel{
+    line-height: 32px;
+  }
 }
 
 .subscription{
