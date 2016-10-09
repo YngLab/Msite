@@ -920,12 +920,13 @@ footer:after {
 }
 
 #indexTitle {
+  background-color: rgba(0, 0, 0, 0.3);
   width: 60%;
+  border-top: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  color: #fff;
   position: absolute;
   text-align: center;
-}
-#indexTitle img {
-  width: 100%;
 }
 
 .topcap {
@@ -1837,11 +1838,15 @@ footer .copyright p {
   }
 }
 */
-.button, .rev_button {
-  border: 1px solid #727171;
+.button, .rev_button, .panel {
   font-weight: 400;
   font-size: 15px;
   height: 36px;
+}
+
+.button, .rev_button {
+  border: 1px solid #727171;
+  cursor: pointer;
   text-align: center;
   width: 88px;
 }
@@ -1849,12 +1854,18 @@ footer .copyright p {
 .button {
   background: transparent;
   color: #727171;
-  cursor: pointer;
 }
 
 .rev_button {
   background: #727171;
   color: #ffffff;
+}
+
+.panel {
+  height: 32px;
+}
+.panel .panelLabel {
+  line-height: 32px;
 }
 
 .subscription {
