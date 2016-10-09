@@ -1,11 +1,38 @@
 @charset "UTF-8";
 
+#imageArea img {
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+}
+#imageBox1,
+#imageBox2,
+#imageBox3,
+#imageBox4,
+#imageBox5,
+#imageBox6,
+#imageBox7,
+#imageBox8 {
+  width: 25%;
+  float: left;
+}
+#indexTitle {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 60%;
+  border-top: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+}
+
+.topcap{
+  text-align: center;
+}
 .latestEvent{
   font-size: 0;
   padding-bottom: 40px;
-  .topcap{
-    text-align: center;
-  }
+  //margin-top: 40px;
   .latestBox_future{
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
@@ -33,8 +60,6 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-kids;
     display: inline-block;
-    height: 20.9259vw;
-    width: 20.9259vw;
     margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
     //margin: -1px 2.75% -1px -1px;
     position: relative;
@@ -54,17 +79,22 @@
       }
     }
   }
+  .latestBox_img{
+    height: 55.7522%;
+  }
   img{
     height: 55.7522%;
     width: 100%;
   }
   .eventText{
     position: absolute;
-    left: calc((100% - 231px) * 0.5);
+    // left: calc((100% - 231px) * 0.5);
+    left: 16px;
     position: absolute;
-    top: calc(55.7522% + (100% - 55.7522%) * 0.5);
+    top: 80%;
     transform: translate(0%, -50%);
     text-align: left;
+    width: calc(100% - 32px);
     //margin-left: calc(100% * (18 / 280.616));
     //margin-left: 18px;
     /*
@@ -74,14 +104,25 @@
     }
     */
     .eventtitle{
-      font-size: $h3__fontSize;
-      margin: 3px 0 0 0;
+      font-size: 16px;
+      margin-top: 4px;
       color: $dark__fontColor;
+      height: 21px;
+      visibility: hidden;
     }
     .eventplace{
-      margin: 10px 0 0 0;
+      margin-top: 16px;
       color: $g__fontColor;
     }
+  }
+  .flex-direction-nav{
+    display: none;
+  }
+  .flex-control-nav{
+    bottom: -30px;
+  }
+  .flex-control-paging li a{
+    background-color: $g__fontColor;
   }
 }
 
@@ -90,7 +131,7 @@
   text-align: right;
   width: 100%;
   @media #{$small} {
-    margin-bottom: 40px;
+    margin: 10px 0 40px 0;
   }
 }
 
@@ -99,14 +140,14 @@
 }
 
 .gNav_container{
-  width: 618px;
-  margin: 0 auto;
+  padding-top: 28px;
 }
 
 .gNav_TOP{
   color: $g__fontColor;
-  padding-top: 16px;
-  width: 644px;
+  margin-top: 28px;
+  border-right: 1px solid $g__fontColor;
+  color: $g__fontColor;
   margin: 0 auto;
   @include clearfix;
 }
@@ -129,7 +170,8 @@
 }
 
 .language{
-  float: left;
+  // float: left;
+  display: none;
 }
 
 .gNav{
@@ -166,9 +208,23 @@
   }
   .future_logo{
     border-bottom: solid 1px $g__color-future;
+    height: calc(100vw * (137 / 1080));
+    width: 100%;
+    display: table;
     text-align: center;
-    img{
-      width: 43.3884%;
+    @media #{$small} {
+      height: calc(100vw * 2 * (137 / 1080));
+    }
+    .future_logo_img{
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      img{
+        width: calc(100% * (210 / 484));
+      }
     }
   }
   .future_logo:hover{
@@ -195,9 +251,7 @@
   }
   .future_textbox{
     float: left;
-    margin: -58px 0 0 -100px;
-    //margin-left: -100px;
-    //margin-top: -58px;
+    margin: -12px 0 0 -100px;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -249,10 +303,23 @@
   }
   .kids_logo{
     border-bottom: solid 1px $g__color-kids;
-    height: 200px;
+    height: calc(100vw * (137 / 1080));
+    width: 100%;
+    display: table;
     text-align: center;
-    img{
-      width: 51.6528%;
+    @media #{$small} {
+      height: calc(100vw * 2 * (137 / 1080));
+    }
+    .kids_logo_img{
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      img{
+        width: calc(100% * (250 / 484));
+      }
     }
   }
   .kids_logo:hover{
@@ -279,9 +346,7 @@
   }
   .kids_textbox{
     float: left;
-    margin: -58px 0 0 -100px;
-    //margin-left: -100px;
-    //margin-top: -58px;
+    margin: -12px 0 0 -100px;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -352,32 +417,26 @@
 }
 
 .siteMap{
-  line-height: 1.75em;
-  .top{
+  .linkGroup{
     text-align: left;
     font-weight: 400;
-    margin-bottom: 30px;
+    @media #{$normal} {
+      margin-bottom: 30px;
+      .linkText{
+        margin-right: 30px;
+      }
+    }
   }
-  .headerElements{
-    text-align: left;
-    font-weight: 400;
-    margin-bottom: 30px;
-    //margin-left: -1px;
-    //text-align: center;
-    //width: calc((100%-80px) / 6);
+  @media #{$small} {
+    span{
+      display: block;
+      margin-bottom: 30px;
+    }
+    span:after{
+      content: "\A";
+      white-space: pre;
+    }//改行を無理矢理挿入するコードです。実はlayoutの関連リンクのところにもあります。
   }
-  .footerElements{
-    text-align: left;
-    font-weight: 400;
-    margin-bottom: 30px;
-    //margin-left: -1px;
-    //text-align: center;
-    //width: calc((100%-80px) / 6);
-  }
-}
-
-.textMargin{
-  margin-right: 30px;
 }
 
 footer{
@@ -400,21 +459,36 @@ footer{
   .foot{
     @include clearfix;
     .footerLinks{
-      width: 714px;
-      margin: 0 auto;
+      margin: 46px 0;
       text-align: center;
       @include clearfix;
+      @media #{$normal} {
+        //width: 504px;
+      }
+      @media #{$small} {
+        margin: 14px 0 24px 0;
+      }
       .links{
-        margin: 46px 0;
         color: $g__fontColor;
-        float: left;
-        font-size: $g__fontSize;
-        padding: 14px;
         text-decoration: none;
+        @media #{$normal} {
+          font-size: $g__fontSize;
+          padding: 14px;
+          //margin: 46px 0;
+          //float: left;
+        }
+        @media #{$small} {
+          //width: 320px;
+          width: 100%;
+          font-size: 12px;
+          padding: 12px 0 12px 0;
+          margin: 0 auto;
+          display: block;
+        }
       }
     }
     .SNSbutton{
-      width: 116px;
+      width: 49px; // facebookiconの17px+margin16*2px
       margin: 0 auto 30px auto;
       img{
         height: 32px;
@@ -436,6 +510,9 @@ footer{
 
 .logoContainer{
   position: relative;
+  @media #{$minimum} {
+    width: 1080px;
+  }
   .logo_vertical{
     position: absolute;
     height: 60%;
@@ -472,6 +549,11 @@ footer{
   font-size: $h2__fontSize;
   line-height: 1.75em;
   text-align: center;
+}
+
+.facility_detail{
+  text-align: center;
+  line-height: 1.75em;
 }
 
 .facility_explain_sp{
@@ -511,17 +593,49 @@ footer{
   @media #{$small} {
     font-size: 18px;
     padding: 20px 0 27px 0;
+    .addPadding{
+      padding-top: 20px;
+    }
+  }
+}
+
+.concierge{
+  padding: 50px 0 40px 0;
+  p{
+    color: $g__color-kids;
+    font-size: $h3__fontSize;
+    @media #{$small} {
+      font-size: 18px;
+    }
+  }
+  @media #{$small} {
+    font-size: 18px;
+    padding: 20px 0 27px 0;
+    .addPadding{
+      padding-top: 20px;
+    }
   }
 }
 
 .heading-lineup{
-  padding: 50px 0 40px 0;
-  float: left;
-  .headingTitle{
-    color: $h2__color;
-    font-size: $h2__fontSize;
-    margin-left: 12px;
+  @media #{$normal} {
+    padding: 50px 0 40px 0;
     float: left;
+    .headingTitle{
+      color: $h2__color;
+      font-size: $h2__fontSize;
+      margin-left: 12px;
+      float: left;
+    }
+  }
+  @media #{$small} {
+    font-size: 18px;
+    padding: 40px 0 27px 0;
+    p{
+      color: $h2__color;
+      font-size: 18px;
+      margin-left: 16px;
+    }
   }
 }
 
@@ -532,6 +646,13 @@ footer{
     font-size: $h2__fontSize;
     margin-left: 24px;
   }
+  @media #{$small} {
+    padding: 40px 0 27px 0;
+    p{
+      margin-left: 16px;
+      font-size: 18px;
+    }
+  }
 }
 
 .monthSort{
@@ -540,6 +661,10 @@ footer{
   color: $h2__color;
   font-size: $cap__fontSize;
   line-height: 1.75em;
+  @include smallW;
+  @media #{$small} {
+    margin: 0 0 20px 18px;
+  }
   li{
     display: inline;
     margin-right: 26px;
@@ -563,6 +688,10 @@ footer{
   color: $h2__color;
   font-size: $cap__fontSize;
   line-height: 1.75em;
+  @include smallW;
+  @media #{$small} {
+    margin: 0 0 20px 18px;
+  }
   li{
     display: inline;
     margin-right: 26px;
@@ -597,6 +726,40 @@ footer{
     border: 2px solid $h2__color;
   }
 }
+/*
+#all_eventmenu, #all_experiencemenu{
+  border-top: solid 1px $g__fontColor;
+  @media #{$normal} {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    min-width: 1080px;
+  }
+  @media #{$maximum} {
+    padding-bottom: 40px;
+  }
+}
+*/
+#all_experiencemenu_FCH, #all_experiencemenu_KPH, #all_eventmenu{
+  //border-top: solid 1px $g__fontColor;
+  @media #{$normal} {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    min-width: 1080px;
+  }
+  @media #{$maximum} {
+    padding-bottom: 40px;
+  }
+}
+
+#all_experiencemenu_FCH{
+  border-top: solid 1px $g__color-future;
+}
+
+#all_experiencemenu_KPH{
+  border-top: solid 1px $g__color-kids;
+}
 
 #all_eventmenu{
   border-top: solid 1px $g__fontColor;
@@ -608,58 +771,91 @@ footer{
 }
 
 .event_textBox_wrap{
+  background: white;
   position: relative;
-  float: right;
+  @include smallW;
+  @media #{$normal}{
+    float: right;
+  }
 }
 
 .event_textBox{
-  margin: 24px 0 0 50px ;
+  margin: 24px 0 0 50px;
+  height: calc(100% - 24px);
   position: relative;
-  .event_title{
+  @include clearfix;
+  @media #{$small} {
+    margin: 24px 20px 0px 20px;
+  }
+  .event_title_future{
     font-size: $h2__fontSize;
     color: $g__color-future;
     font-weight: 400;
     margin-bottom: 24px;
   }
-  .event_point{
-    line-height: 1.75em;
-    color: $dark__fontColor;
-    float: left;
-    margin-bottom: 7px;
-    .event_point_cap{
-      float: left;
-      font-weight: 400;
-    }
-    .event_point_contents{
-      float: left;
-      margin: 0 42px 0 14px;
-    }
+  .event_title_kids{
+    font-size: $h2__fontSize;
+    color: $g__color-kids;
+    font-weight: 400;
+    margin-bottom: 24px;
   }
   .event_detail{
     font-size: $g__fontSize;
     color: $g__fontColor;
     font-weight: 200;
     line-height: 1.75em;
-    float: right;
-    margin-right: 40px;
+    //float: right;
+    //margin-right: 40px;
     width: calc(100% - 300px);
+    @include smallW;
+    @media #{$normal} {
+      float: right;
+      margin-right: 40px;
+    }
+    @media #{$small} {
+      padding-bottom: calc(24px + 38px + 40px);
+    }
+  }
+}
+.event_point{
+  line-height: 1.75em;
+  color: $dark__fontColor;
+  margin-bottom: 24px;
+  text-align: left;
+  @media #{$normal} {
+    float: left;
+    margin-bottom: 7px;
+  }
+  .event_point_cap{
+    font-weight: 400;
+  }
+  .event_point_contents{
+    padding-left: 14px;
   }
 }
 
 .eventArchive_textBox_wrap{
+  background: white;
   position: relative;
+  @include smallW;
   .eventArchive_detail{
     font-size: $g__fontSize;
     color: $g__fontColor;
     font-weight: 200;
     line-height: 1.75em;
-    float: left;
     width: calc(100% - 40px);
+    @media #{$normal} {
+      float: left;
+    }
+    @media #{$small} {
+      padding-bottom: 40px;
+    }
   }
 }
 
+/*
 .button{
-  position: absolute;
+  //position: absolute;
   width: 88px;
   height: 36px;
   border: 1px solid $dark__fontColor;
@@ -672,9 +868,50 @@ footer{
     line-height: 36px;
   }
 }
+*/
+
+.button, .rev_button{
+  border: 1px solid $dark__fontColor;
+  //color: $dark__fontColor;
+  font-weight: 400;
+  font-size: $link__fontSize;
+  height: 36px;
+  text-align: center;
+  width: 88px;
+}
+
+.button{
+  background: transparent;
+  color: $dark__fontColor;
+  cursor: pointer;
+}
+
+.rev_button{
+  background: $dark__fontColor;
+  color: #ffffff;
+}
+
+.subscription{
+  bottom: 24px;
+  left: 50px;
+  position: absolute;
+  @media #{$small} {
+    bottom: 40px;
+    left: 20px;
+  }
+}
+
+.send{
+  padding-left: 30px;
+}
+
 .subscriptionButton{
-    bottom: 24px;
-    left: 50px;
+  bottom: 24px;
+  left: 50px;
+  @media #{$small} {
+    bottom: 40px;
+    left: 20px;
+  }
 }
 
 .collectevent{
@@ -685,10 +922,27 @@ footer{
   }
 }
 
-#all_experiencemenu{
-  border-top: solid 1px $g__fontColor;
+.eventabout{
+  img{
+    width: 100%;
+  }
+  .eventabout_title{
+    line-height: 20px;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  @media #{$normal} {
+    width: 25%;
+    float: left;
+    margin-right: calc(100% * (75 / 1000));
+  }
+  @media #{$small} {
+    .eventabout_title{
+      margin: 24px 0 24px 0;
+    }
+  }
 }
-
+/*
 .experiencemenu{
   border-bottom: solid 1px $g__fontColor;
   cursor: pointer;
@@ -696,14 +950,39 @@ footer{
 }
 
 .experiencemenu:hover{
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -moz-opacity:0.6;
-  -khtml-opacity: 0.6;
-  opacity:0.6;
+  @media #{$normal} {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
+  }
+}
+*/
+.experiencemenu_FCH, .experiencemenu_KPH{
+  cursor: pointer;
+  @include clearfix;
 }
 
+.experiencemenu_FCH{
+  border-bottom: solid 1px $g__color-future;
+}
+
+.experiencemenu_KPH{
+  border-bottom: solid 1px $g__color-kids;
+}
+
+.experiencemenu_FCH:hover, .experiencemenu_KPH:hover{
+  @media #{$normal} {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
+  }
+}
 .exmenu_textBox_wrap{
+  background: white;
   position: relative;
 }
 
@@ -748,6 +1027,9 @@ footer{
 .info_table_FCH, .info_table_KPH{
   text-align: left;
   width: 100%;
+  @media #{$small} {
+    display: none;
+  }
   tr{
     height: 50px;
     width: 100%;
@@ -764,9 +1046,18 @@ footer{
     width: 21.5%;
   }
   td{
+    background: white;
     line-height: 1.75em;
     padding-bottom: 12px;
     padding-left: 14px;
+  }
+}
+
+.info_table_FCH_sp, .info_table_KPH_sp{
+  text-align: left;
+  width: 100%;
+  @media #{$normal} {
+    display: none;
   }
 }
 
@@ -774,7 +1065,7 @@ footer{
   border-top: solid 1px $g__color-future;
   tr{
     border-bottom: solid 1px $g__color-future;
-    border-style: dotted;
+    //border-style: dotted;
   }
   th{
     color: $g__color-future;
@@ -785,47 +1076,83 @@ footer{
   border-top: solid 1px $g__color-kids;
   tr{
     border-bottom: solid 1px $g__color-kids;
-    border-style: dotted;
+    //border-style: dotted;
   }
   th{
     color: $g__color-kids;
   }
 }
 
+.info_table_FCH_label{
+  color: $g__color-future;
+  border-bottom: dashed 1px $g__color-future;
+  padding-bottom: 3px;
+}
+
+.info_table_KPH_label{
+  color: $g__color-kids;
+  border-bottom: dashed 1px $g__color-kids;
+  padding-bottom: 3px;
+}
+
+.info_table_data{
+  margin: 20px 0 36px 0;
+}
 
 /* modal-contentのCSS */
 .modal-content {
   // width: calc(90vh + 400px);
   height: 90%;
-  width: calc(90vh*1.4993);
+  width: calc(90vh * 16 / 9); //写真が16:9
   margin: 0 ;
-  background: #fff;
+  // background: #fff;
   // border: solid 1px $g__color-future;
   position: fixed;
   display: none;
   z-index: 2;
-  overflow: scroll;
+  overflow: hidden;
+  // ↓スライドショーのタイトル
   .exmenu_title_future{
-    width: 100%;
-    position: absolute;
-    font-size: $h3__fontSize;
-    color: $g__color-future;
-    font-weight: 400;
-    text-align: center;
-    top: 4%;
-    left: 0;
-    z-index: 10;
+    display: none;
+    // width: 100%;
+    // position: absolute;
+    // font-size: $h3__fontSize;
+    // color: $g__color-future;
+    // font-weight: 400;
+    // text-align: center;
+    // top: 4%;
+    // left: 0;
+    // z-index: 10;
+  }
+  .exmenu_title_kids{
+    display: none;
+    // width: 100%;
+    // position: absolute;
+    // font-size: $h3__fontSize;
+    // color: $g__color-kids;
+    // font-weight: 400;
+    // text-align: center;
+    // top: 4%;
+    // left: 0;
+    // z-index: 10;
+  }
+  #modal-close{
+    cursor: pointer;
   }
   #modal-close img{
     width: 20px;
+    height:20px;
     position: absolute;
     top: 4%;
     right: calc(5% - 10px);
     z-index: 10;
-    
   }
-  #modal-close:hover{
-    opacity: 1;
+  #modal-close img:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity:0.6;
+    -khtml-opacity: 0.6;
+    opacity:0.6;
   }
   .exmenu_slide{
     //height: calc(100% - 115px);
@@ -883,9 +1210,15 @@ footer{
   }
   .KPHaddress{
     margin: 0 0 10px 24px;
+    @media #{$small} {
+      margin: 0 0 10px 16px;
+    }
   }
   .FCHaddress{
     margin-left: 24px;
+    @media #{$small} {
+      margin-left: 16px;
+    }
   }
 }
 
@@ -894,6 +1227,9 @@ footer{
     color: $g__fontColor;
     font-size: $g__fontSize;
     margin-left: 24px;
+    @media #{$small} {
+      margin-left: 16px;
+    }
   }
 }
 .movie_wrap{
@@ -919,6 +1255,148 @@ footer{
     }
   }
 }
+
+.companyLogo{
+  width: 160px;
+  margin-right: 80px;
+}
+
+p.company_about{//別部分がコーディング規約無視しているためコーディング規約無視せざるを得ない
+  margin-left: 0;
+  font-size: 14px;
+}
+
+#wrapper {
+  //オーバーレイをabsolute指定するため必要
+  position: relative;
+  //アニメーションの指定
+  -webkit-transition: all .4s;
+     -moz-transition: all .4s;
+       -o-transition: all .4s;
+          transition: all .4s;
+  #drawer-toggle{
+    position: fixed;
+    right: -1px;
+    top: 0;
+    width: 40px;
+    height: 23px;
+    padding-top: 17px;
+    background-color: $g__fontColor;
+    z-index: 1000;
+    span{
+      margin: 0 auto;
+      display: block;
+      height: 2px;
+      background-color: #FFFFFF;
+      width: 20px;
+      transition: all .4s;
+      transform: rotate(0deg);
+    }
+    .top {
+      transform: translateY(-4px);
+    }
+    .bottom {
+      transform: translateY(4px);
+    }
+  }
+}
+
+#wrapper.open {
+  // position: fixed;
+  //クラス「open」が付いたら左に280px移動
+  -webkit-transform: translate3d(-75%, 0, 0);
+     -moz-transform: translate3d(-75%, 0, 0);
+          transform: translate3d(-75%, 0, 0);
+  #drawer-toggle{
+    position: fixed;
+    right: -1px;
+    top: 0;
+    .middle {
+    background: rgba(255, 255, 255, 0);
+    }
+    .top {
+      transform: rotate(-45deg) translateY(2px);
+    }
+    .bottom {
+      transform: rotate(45deg) translateY(-3px);
+    }
+  }
+}
+
+/* オーバーレイ表示をするためのCSS */
+.open .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  //親要素の上に表示するためz-indexを指定
+  z-index: 999;
+
+  //親要素一杯に広がるため縦横のサイズを100%に
+  width: 100%;
+  height: 100%;
+
+  //暗くするため黒の透明色を指定
+  background: rgba(0, 0, 0, .5);
+}
+
+#drawer {
+  position: fixed; //常に固定なのでfixed
+  top: 0;
+  right: -75%;  //初期状態では隠すため、横幅のサイズ分だけ画面外に移動する
+  width: 75%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; //スマホでのスクロールに慣性を付ける（デバイス限定
+
+  //アニメーション指定
+  -webkit-transition: all .4s;
+     -moz-transition: all .4s;
+       -o-transition: all .4s;
+          transition: all .4s;
+  .sp_language{
+    width: 100%;
+    height: 40px;
+    background-color: $g__fontColor;
+    p{
+      display: none;
+      // line-height: 40px;
+      // float: right;
+      // margin-right: 21px;
+      // color: #FFFFFF;
+    }
+  }
+  .navBox{
+    height: calc((100% - 40px) - calc((100% - 40px) / 17));
+    margin-top: calc((100vh - 40px) /17);
+    li{
+      padding-left: 30px;
+      line-height: calc((100vh - 40px) / (17 / 2));
+      display: block;
+    }
+    .gNav_sp{
+      height: 75%;
+      li{
+        height: calc(100% * (1/6));
+      }
+    }
+    .pNav_sp{
+      height: 25%;
+      background-color: $bg__color;
+      li{
+        height: calc(100% * (1/2));
+      }
+    }
+  }
+}
+
+#drawer.open {
+    //クラス「open」が付いたら左へ280px移動（画面内へ移動し表示される）
+    -webkit-transform: translate3d(-100%, 0, 0);
+       -moz-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+}
+
 //↑加納↓高居
 
 .lineSpace{
@@ -931,6 +1409,9 @@ footer{
   color: $title__color;
   font-size: $title__fontSize;
   font-weight: 500;
+  @media #{$minimum} {
+    width: 1080px;
+  }
   .titleText{
     border-left: solid 1px $g__fontColor;
     line-height: 63px;
@@ -940,6 +1421,16 @@ footer{
 .archives{
   .headmarkMargin{
     margin: 0 0 24px 24px;
+    @media #{$small} {
+      font-size: 18px;
+      margin: 0 0 27px 16px;
+    }
+  }
+  .linkText{
+    margin-left: 24px;
+    @media #{$small} {
+      margin-left: 16px;
+    }
   }
 }
 
@@ -964,38 +1455,119 @@ footer{
 */
 .radioFont{
   color: $dark__fontColor;
-  margin-right: 60px;
+  @media #{$normal} {
+    margin-right: 60px;
+  }
+}
+
+.form{
+  @include clearfix;
+  @media #{$normal} {
+    float: left;
+    width: calc(75% - (100% * (75 / 1000)));
+  }
 }
 
 .inputForm{
-  th{
-    color: $dark__fontColor;
-    font-size: 13px;
-    text-align: left;
-  }
-  td{
-    input{
-      width: 100%;
+  //.inputBox{
+    float: left;
+    width: 100%;
+    th{
+      color: $dark__fontColor;
+      font-size: 13px;
+      text-align: left;
+      width: 91px;
     }
-  }
+    td{
+      width: calc(100% - 28px);
+      input{
+        width: calc(100% - 28px);
+      }
+    }
+    input{
+      border: none;
+      //background-color: #efefef;
+      color: $dark__fontColor;
+      font-size: $g__fontSize;
+      padding: 11px 14px 11px 14px;
+    }
+    textarea{
+      border: none;
+      //background-color: #efefef;
+      color: $dark__fontColor;
+      font-size: $g__fontSize;
+      padding: 11px 14px 11px 14px;
+      width: calc(100% - 28px);
+    }
+    .textareaLabel{
+      padding-top: 20px;
+      vertical-align: top;
+    }
+    .confirm{
+      width: 88px;
+      height: 36px;
+      border: 1px solid $dark__fontColor;
+      color: $dark__fontColor;
+      font-weight: 400;
+      font-size: $link__fontSize;
+      text-align: center;
+      .sendbutton{
+        background-color: transparent;
+        color: $dark__fontColor;
+        font-weight: 400;
+        font-size: $link__fontSize;
+        padding: 0;
+        line-height: 35px;
+        width: 100%;
+        cursor: pointer;
+      }
+      .backbutton{
+        background-color: transparent;
+        color: #FFFFFF;
+        padding: 0;
+        line-height: 35px;
+        width: 100%;
+        cursor: pointer;
+      }
+      p{
+        display: inline;
+        line-height: 36px;
+      }
+    }
+  //}
+}
+
+.inputBox, .inputBox_sub, .inputBox_sp, .inputBox_sp_b{
   input{
-    border: none;
-    //background-color: #efefef;
-    color: $dark__fontColor;
-    font-size: $g__fontSize;
-    padding: 11px 14px 11px 14px;
+    background-color: #efefef;
   }
   textarea{
-    border: none;
-    //background-color: #efefef;
-    color: $dark__fontColor;
-    font-size: $g__fontSize;
-    padding: 11px 14px 11px 14px;
-    width: 100%;
+    background-color: #efefef;
   }
-  .textareaLabel{
-    padding-top: 8px;
-    vertical-align: top;
+}
+
+.revision{
+  background: $dark__fontColor;
+  //color: #FFF;
+}
+
+.inputForm_sp{
+  .inputBox_sp, .inputBox_conf_sp, .inputBox_sp_b, .inputBox_conf_sp_b{
+    input{
+      //background-color: #efefef;
+      border: none;
+      color: $dark__fontColor;
+      font-size: $g__fontSize;
+    }
+    p{
+      font-size: $cap__fontSize;
+    }
+    textarea{
+      //background-color: #efefef;
+      border: none;
+      color: $dark__fontColor;
+      font-size: $g__fontSize;
+    }
   }
   .confirm{
     width: 88px;
@@ -1012,18 +1584,98 @@ footer{
   }
 }
 
-.inputBox{
-  input{
-    background-color: #efefef;
-  }
-  textarea{
-    background-color: #efefef;
+.accessProcess{
+  @media #{$small} {
+    .accessProcess_sp{
+      .from{
+        border-bottom: dashed 1px $g__fontColor;
+        margin-right: 16px;
+        padding-bottom: 3px;
+      }
+      .route{
+        margin: 20px 16px 36px 0;
+      }
+    }
   }
 }
 
-.revision{
-  background: $dark__fontColor;
-  p{
-    color: white;
+h2.concept_title{
+  font-size: 48px;
+  text-align: center;
+  //margin: 100px auto;
+  margin-bottom: 100px;
+  padding-top: 100px;
+}
+
+.concept{
+  font-size: 16px;
+  margin: 0 auto;
+  max-width: 960px;
+  line-height: 1.8em;
+  h3{
+    text-align: center;
+    margin-bottom: 25px;
+    @media #{$small} {
+      display: none;
+    }
+  }
+  @media #{$small} {
+    margin: 10px;
+  }
+}
+
+.concept_img{
+  max-width: 45%;
+  float: left;
+  img{
+    width: 100%;
+  }
+  @media #{$small} {
+    float: none;
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.concept_text{
+  @media #{$normal}{
+    max-width: 45%;
+    float: left;
+    p{
+      margin-top: calc(960px / 9 * 2 - 16px * 1.5 );
+    }
+  }
+  @media #{$small} {
+    float: none;
+    max-width: 100%;
+  }
+}
+
+@media #{$normal}{
+  .concept_text-left,
+  .concept_img-left{
+    float: left;
+  }
+
+  .concept_text-right,
+  .concept_img-right{
+    float: right;
+    margin-left: 10%;
+  }
+  .concept_sub{
+    @include clearfix;
+    margin-top: 100px;
+  }
+}
+
+.logoApp_h2{
+  margin-top: 100px;
+  text-align: center;
+}
+
+.logoApp_send{
+  text-align: center;
+  a {
+    color: $g__fontColor;
   }
 }
