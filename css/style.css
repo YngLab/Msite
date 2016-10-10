@@ -633,7 +633,6 @@ footer:after {
 }
 @media screen and (max-width: 768px) {
   .autoHeight {
-    min-height: calc(100vh - 155px - 389px);
   }
 }
 
