@@ -40,7 +40,7 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
     display: inline-block;
-    margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px); 
+    margin-right: calc(100% * (32 / 1080) - 1px); 
     //ウィンドウ幅1080px時の32pxからborderを引いている
     position: relative;
     .remaindays_future{
@@ -63,7 +63,7 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-kids;
     display: inline-block;
-    margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
+    margin-right: calc(100% * (32 / 1080) - 1px);
     //ウィンドウ幅1080px時の32pxからborderを引いている
     position: relative;
     .remaindays_kids{
