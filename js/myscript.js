@@ -26,11 +26,11 @@ $(function(){
     $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
   });
   if(w_size <= 768){
-    latestBox_size =  w_size * .925925;
+    latestBox_size =  w_size * 280 / 320; //ウィンドウ幅320px時の280pxの比率をキープ
     $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
     $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
     $(window).resize(function () {
-      latestBox_size =  w_size * .925925;
+      latestBox_size =  w_size * 280 / 320; //ウィンドウ幅320px時の280pxの比率をキープ
       $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
       $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
     });
