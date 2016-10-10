@@ -2541,39 +2541,61 @@ p.company_about {
 }
 
 h2.concept_title {
-  font-size: 48px;
   text-align: center;
-  margin-bottom: 100px;
-  padding-top: 100px;
 }
-
-.concept {
-  font-size: 16px;
-  margin: 0 auto;
-  max-width: 960px;
-  line-height: 1.8em;
-}
-.concept h3 {
-  text-align: center;
-  margin-bottom: 25px;
-}
-@media screen and (max-width: 768px) {
-  .concept h3 {
-    display: none;
+@media screen and (min-width: 769px) {
+  h2.concept_title {
+    font-size: 54px;
+    padding-top: 50px;
   }
 }
 @media screen and (max-width: 768px) {
-  .concept {
+  h2.concept_title {
+    font-size: 48px;
+    margin-bottom: 100px;
+    padding-top: 100px;
+  }
+}
+
+.concept, .concept_img, .concept_text {
+  font-size: 18px;
+  line-height: 1.8em;
+  margin: 20px auto;
+  max-width: 960px;
+  width: calc(100% / 3 * 2);
+  /*h3{
+    text-align: center;
+    margin-bottom: 25px;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }*/
+}
+@media screen and (max-width: 768px) {
+  .concept, .concept_img, .concept_text {
+    font-size: 16px;
     margin: 10px;
   }
 }
 
+.concept {
+  text-align: center;
+}
+
 .concept_img {
   max-width: 45%;
-  float: left;
 }
 .concept_img img {
   width: 100%;
+}
+.concept_img h3 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 768px) {
+  .concept_img h3 {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .concept_img {
@@ -2589,7 +2611,7 @@ h2.concept_title {
     float: left;
   }
   .concept_text p {
-    margin-top: calc(960px / 9 * 2 - 16px * 1.5 );
+    margin-top: calc(960px / 9 * 2 - 16px * 1.5);
   }
 }
 @media screen and (max-width: 768px) {

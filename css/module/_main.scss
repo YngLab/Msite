@@ -1618,35 +1618,58 @@ p.company_about{//別部分がコーディング規約無視しているため�
 }
 
 h2.concept_title{
-  font-size: 48px;
+  //font-size: 48px;
   text-align: center;
-  //margin: 100px auto;
-  margin-bottom: 100px;
-  padding-top: 100px;
+  @media #{$normal} {
+    font-size: 54px;
+    //margin-bottom: 100px;
+    //margin-bottom: 20px;
+    //padding-top: 100px;
+    padding-top: 50px;
+  }
+  @media #{$small} {
+    font-size: 48px;
+    margin-bottom: 100px;
+    padding-top: 100px;
+  }
+}
+
+.concept, .concept_img, .concept_text{
+  //font-size: 16px;
+  font-size: 18px;
+  line-height: 1.8em;
+  margin: 20px auto;
+  max-width: 960px;
+  width: calc(100% / 3 * 2);
+  /*h3{
+    text-align: center;
+    margin-bottom: 25px;
+    @media #{$small} {
+      display: none;
+    }
+  }*/
+  @media #{$small} {
+    font-size: 16px;
+    margin: 10px;
+  }
 }
 
 .concept{
-  font-size: 16px;
-  margin: 0 auto;
-  max-width: 960px;
-  line-height: 1.8em;
+  text-align: center;
+}
+
+.concept_img{
+  max-width: 45%;
+  //float: left;
+  img{
+    width: 100%;
+  }
   h3{
     text-align: center;
     margin-bottom: 25px;
     @media #{$small} {
       display: none;
     }
-  }
-  @media #{$small} {
-    margin: 10px;
-  }
-}
-
-.concept_img{
-  max-width: 45%;
-  float: left;
-  img{
-    width: 100%;
   }
   @media #{$small} {
     float: none;
@@ -1660,7 +1683,7 @@ h2.concept_title{
     max-width: 45%;
     float: left;
     p{
-      margin-top: calc(960px / 9 * 2 - 16px * 1.5 );
+      margin-top: calc(960px / 9 * 2 - 16px * 1.5);
     }
   }
   @media #{$small} {
