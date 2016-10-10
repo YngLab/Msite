@@ -788,7 +788,8 @@ footer{
   position: relative;
   @include clearfix;
   @media #{$small} {
-    margin: 24px 20px 0px 20px;
+    //margin: 24px 20px 0px 20px;
+    margin: 24px calc(100% * 20 / 320) 0px calc(100% * 20 / 320); //ウィンドウ幅320px時の20pxの比率をキープ
   }
   .event_title_future{
     font-size: $h2__fontSize;

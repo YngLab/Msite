@@ -163,7 +163,7 @@ a:hover {
 }
 @media screen and (max-width: 768px) {
   .wrap {
-    width: calc(100% * (728 / 768));
+    width: calc(100% * (280 / 320));
   }
 }
 
@@ -1736,7 +1736,7 @@ footer .copyright p {
 }
 @media screen and (max-width: 768px) {
   .event_textBox {
-    margin: 24px 20px 0px 20px;
+    margin: 24px calc(100% * 20 / 320) 0px calc(100% * 20 / 320);
   }
 }
 .event_textBox .event_title_future {
