@@ -40,8 +40,8 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
     display: inline-block;
-    margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
-    //margin: -1px 2.75% -1px -1px;
+    margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px); 
+    //ウィンドウ幅1080px時の32pxからborderを引いている
     position: relative;
     .remaindays_future{
       background-color: $g__color-future;
@@ -64,7 +64,7 @@
     border: solid 1px $g__color-kids;
     display: inline-block;
     margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
-    //margin: -1px 2.75% -1px -1px;
+    //ウィンドウ幅1080px時の32pxからborderを引いている
     position: relative;
     .remaindays_kids{
       background-color: $g__color-kids;
@@ -83,10 +83,10 @@
     }
   }
   .latestBox_img{
-    height: calc(126 / 226 * 100 %);
+    height: calc(100% * (126 / 224)); //latestBoxが224px(borderは含めず)の時に126pxの比率をキープ
   }
   img{
-    height: calc(126 / 226 * 100 %);
+    height: calc(100% * (126 / 224)); //latestBoxが224px(borderは含めず)の時に126pxの比率をキープ
     width: 100%;
   }
   .eventText{
@@ -211,12 +211,12 @@
   }
   .future_logo{
     border-bottom: solid 1px $g__color-future;
-    height: calc(100vw * (137 / 1080));
-    width: 100%;
+    height: calc(100vw * (137 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
+    width: calc(100% + 2px); //両端のborderも含める
     display: table;
     text-align: center;
     @media #{$small} {
-      height: calc(100vw * 2 * (137 / 1080));
+      height: calc(100vw * 2 * (137 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
     }
     .future_logo_img{
       // position: absolute;
@@ -226,15 +226,11 @@
       display: table-cell;
       vertical-align: middle;
       img{
-        width: calc(100% * (210 / 484));
+        width: calc(100% * (210 / 484)); //future_logo_imgが484pxの時に210pxの比率をキープ
       }
     }
   }
   .future_logo:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity: 0.6;
-    -khtml-opacity: 0.6;
     opacity:0.6;
   }
   .future_contents{
@@ -246,11 +242,7 @@
     }
   }
   .future_contents:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    opacity: 0.6;
   }
   .future_textbox{
     float: left;
@@ -284,11 +276,7 @@
     }
   }
   .future_information:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    opacity: 0.6;
   }
 }
 
@@ -306,12 +294,12 @@
   }
   .kids_logo{
     border-bottom: solid 1px $g__color-kids;
-    height: calc(100vw * (137 / 1080));
-    width: 100%;
+    height: calc(100vw * (137 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
+    width: calc(100% + 2px); //両端のborderも含める
     display: table;
     text-align: center;
     @media #{$small} {
-      height: calc(100vw * 2 * (137 / 1080));
+      height: calc(100vw * 2 * (137 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
     }
     .kids_logo_img{
       // position: absolute;
@@ -321,16 +309,12 @@
       display: table-cell;
       vertical-align: middle;
       img{
-        width: calc(100% * (250 / 484));
+        width: calc(100% * (250 / 484)); //kids_logo_imgが484pxの時に250pxの比率をキープ
       }
     }
   }
   .kids_logo:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    opacity: 0.6;
   }
   .kids_contents{
     border-bottom: solid 1px $g__color-kids;
@@ -341,11 +325,7 @@
     }
   }
   .kids_contents:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    opacity: 0.6;
   }
   .kids_textbox{
     float: left;
@@ -379,11 +359,7 @@
     }
   }
   .kids_information:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    opacity: 0.6;
   }
 }
 
@@ -453,11 +429,7 @@ footer{
     }
   }
   .pagetop:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    opacity: 0.6;
   }
   .foot{
     @include clearfix;
@@ -527,7 +499,7 @@ footer{
   }
   .HMP_logo_vertical{
     position: absolute;
-    height: 67%;
+    height: 67%; //みらい館、キッズプラザよりも縦幅が大きい
     top: 0;
     right: 0;
     bottom: 0;
@@ -816,7 +788,7 @@ footer{
       margin-right: 40px;
     }
     @media #{$small} {
-      padding-bottom: calc(24px + 38px + 40px);
+      padding-bottom: calc(24px + 38px + 40px); //文章からボタンまで + ボタン + ボタンから次のイベント
     }
   }
 }
@@ -952,7 +924,7 @@ footer{
   @media #{$normal} {
     width: 25%;
     float: left;
-    margin-right: calc(100% * (75 / 1000));
+    margin-right: calc(100% * (75 / 1000)); //$normal時はウィンドウ幅1080p時のwrap1000pxと75pxの比率をキープ
   }
   @media #{$small} {
     .eventabout_title{
@@ -969,11 +941,7 @@ footer{
 
 .experiencemenu:hover{
   @media #{$normal} {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    opacity: 0.6;
   }
 }
 */
@@ -992,11 +960,7 @@ footer{
 
 .experiencemenu_FCH:hover, .experiencemenu_KPH:hover{
   @media #{$normal} {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    opacity: 0.6;
   }
 }
 .exmenu_textBox_wrap{
@@ -1061,7 +1025,7 @@ footer{
     font-weight: 400;
     padding-left: 14px;
     padding-top: 17px;
-    width: calc( 215 / 1000 * 100%);
+    width: calc( 100% * (215 / 1000)); //はウィンドウ幅1080p時のwrap1000pxと215pxの比率をキープ
   }
   td{
     background: white;
@@ -1166,11 +1130,7 @@ footer{
     z-index: 10;
   }
   #modal-close img:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    opacity: 0.6;
   }
   .exmenu_slide{
     //height: calc(100% - 115px);
@@ -1382,24 +1342,25 @@ p.company_about{//別部分がコーディング規約無視しているため�
     }
   }
   .navBox{
-    height: calc((100% - 40px) - calc((100% - 40px) / 17));
-    margin-top: calc((100vh - 40px) /17);
+    //(100% - 40px) = 上部の灰色を除いた大きさ,calc((100% - 40px) / 17) = 一つのメニューの高さの半分
+    height: calc((100% - 40px) - calc((100% - 40px) / 17)); //最初のメニュー「ホーム」までのmarginのためその部分小さくしている
+    margin-top: calc((100vh - 40px) /17); //最初のメニュー「ホーム」までのmargin
     li{
       padding-left: 30px;
-      line-height: calc((100vh - 40px) / (17 / 2));
+      line-height: calc((100vh - 40px) / 17 * 2); //一つのメニューの高さ
       display: block;
     }
     .gNav_sp{
       height: 75%;
       li{
-        height: calc(100% * (1/6));
+        height: calc(100% * (1/6)); //gNavのメニュー6個
       }
     }
     .pNav_sp{
       height: 25%;
       background-color: $bg__color;
       li{
-        height: calc(100% * (1/2));
+        height: calc(100% * (1/2)); //pNavのメニュー2個
       }
     }
   }
@@ -1479,6 +1440,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
   @media #{$normal} {
     float: left;
     width: calc(75% - (100% * (75 / 1000)));
+    //$normal時はウィンドウ幅1080px時のwrap1000pxからの75%からイベントについて書かれた幅とのマージンを引いている
   }
 }
 
