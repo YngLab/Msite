@@ -2540,6 +2540,30 @@ p.company_about {
   }
 }
 
+/*.center_line{
+  border: 5px solid $g__fontColor;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  width: 0;
+}*/
+.center_circle {
+  height: calc(100vw * 40 / 1080);
+  margin: 0 auto;
+  min-height: 40px;
+  min-width: 40px;
+  width: calc(100vw * 40 / 1080);
+}
+.center_circle img {
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .center_circle {
+    display: none;
+  }
+}
+
 h2.concept_title {
   text-align: center;
 }
@@ -2562,7 +2586,6 @@ h2.concept_title {
   line-height: 1.8em;
   margin: 20px auto;
   max-width: 960px;
-  width: calc(100% / 3 * 2);
   /*h3{
     text-align: center;
     margin-bottom: 25px;
@@ -2571,6 +2594,11 @@ h2.concept_title {
     }
   }*/
 }
+@media screen and (min-width: 769px) {
+  .concept, .concept_img, .concept_text {
+    width: calc(100% / 3 * 2);
+  }
+}
 @media screen and (max-width: 768px) {
   .concept, .concept_img, .concept_text {
     font-size: 16px;
@@ -2578,8 +2606,10 @@ h2.concept_title {
   }
 }
 
-.concept {
-  text-align: center;
+@media screen and (min-width: 769px) {
+  .concept {
+    text-align: center;
+  }
 }
 
 .concept_img {
@@ -2588,18 +2618,8 @@ h2.concept_title {
 .concept_img img {
   width: 100%;
 }
-.concept_img h3 {
-  text-align: center;
-  margin-bottom: 25px;
-}
-@media screen and (max-width: 768px) {
-  .concept_img h3 {
-    display: none;
-  }
-}
 @media screen and (max-width: 768px) {
   .concept_img {
-    float: none;
     max-width: 100%;
     margin-top: 40px;
   }
@@ -2607,17 +2627,24 @@ h2.concept_title {
 
 @media screen and (min-width: 769px) {
   .concept_text {
-    max-width: 45%;
-    float: left;
-  }
-  .concept_text p {
     margin-top: calc(960px / 9 * 2 - 16px * 1.5);
+    max-width: 455px;
+    /*p{
+      margin-top: calc(960px / 9 * 2 - 16px * 1.5);
+    }*/
+  }
+  .concept_text h3 {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.8em;
   }
 }
 @media screen and (max-width: 768px) {
   .concept_text {
-    float: none;
     max-width: 100%;
+  }
+  .concept_text h3 {
+    display: none;
   }
 }
 
@@ -2625,12 +2652,13 @@ h2.concept_title {
   .concept_text-left,
   .concept_img-left {
     float: left;
+    padding-right: calc(100vw * 40 / 1080);
   }
 
   .concept_text-right,
   .concept_img-right {
     float: right;
-    margin-left: 10%;
+    padding-left: calc(100vw * 40 / 1080);
   }
 
   .concept_sub {

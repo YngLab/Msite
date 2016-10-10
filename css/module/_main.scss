@@ -1617,6 +1617,32 @@ p.company_about{//別部分がコーディング規約無視しているため�
   }
 }
 
+/*.center_line{
+  border: 5px solid $g__fontColor;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  width: 0;
+}*/
+
+.center_circle{
+  height: calc(100vw * 40 / 1080);
+  margin: 0 auto;
+  min-height: 40px;
+  min-width: 40px;
+  //position: absolute;
+  //right: -20px;
+  //top: 50px;
+  width: calc(100vw * 40 / 1080);
+  img{
+    height: 100%;
+    width: 100%;
+  }
+  @media #{$small} {
+    display: none;
+  }
+}
+
 h2.concept_title{
   //font-size: 48px;
   text-align: center;
@@ -1640,7 +1666,6 @@ h2.concept_title{
   line-height: 1.8em;
   margin: 20px auto;
   max-width: 960px;
-  width: calc(100% / 3 * 2);
   /*h3{
     text-align: center;
     margin-bottom: 25px;
@@ -1648,6 +1673,9 @@ h2.concept_title{
       display: none;
     }
   }*/
+  @media #{$normal} {
+    width: calc(100% / 3 * 2);
+  }
   @media #{$small} {
     font-size: 16px;
     margin: 10px;
@@ -1655,7 +1683,9 @@ h2.concept_title{
 }
 
 .concept{
-  text-align: center;
+  @media #{$normal} {
+    text-align: center;
+  }
 }
 
 .concept_img{
@@ -1664,15 +1694,8 @@ h2.concept_title{
   img{
     width: 100%;
   }
-  h3{
-    text-align: center;
-    margin-bottom: 25px;
-    @media #{$small} {
-      display: none;
-    }
-  }
   @media #{$small} {
-    float: none;
+    //float: none;
     max-width: 100%;
     margin-top: 40px;
   }
@@ -1680,15 +1703,25 @@ h2.concept_title{
 
 .concept_text{
   @media #{$normal}{
-    max-width: 45%;
-    float: left;
-    p{
-      margin-top: calc(960px / 9 * 2 - 16px * 1.5);
+    //float: left;
+    margin-top: calc(960px / 9 * 2 - 16px * 1.5);
+    //max-width: 45%;
+    max-width: 455px;
+    h3{
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 1.8em; //ここ改めて書かないと何故か適用されない
     }
+    /*p{
+      margin-top: calc(960px / 9 * 2 - 16px * 1.5);
+    }*/
   }
   @media #{$small} {
-    float: none;
+    //float: none;
     max-width: 100%;
+    h3{
+      display: none;
+    }
   }
 }
 
@@ -1696,12 +1729,14 @@ h2.concept_title{
   .concept_text-left,
   .concept_img-left{
     float: left;
+    padding-right: calc(100vw * 40 / 1080);
   }
 
   .concept_text-right,
   .concept_img-right{
     float: right;
-    margin-left: 10%;
+    //margin-left: 10%;
+    padding-left: calc(100vw * 40 / 1080);
   }
   .concept_sub{
     @include clearfix;
