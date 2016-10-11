@@ -1683,7 +1683,7 @@ h2.concept_title{
   }
 }
 
-@media #{$normal}{
+/*@media #{$normal}{
   .concept_text-left,
   .concept_img-left{
     float: left;
@@ -1698,9 +1698,9 @@ h2.concept_title{
   }
   .concept_sub{
     @include clearfix;
-    margin-top: 100px;
+    //margin-top: 100px;
   }
-}
+}*/
 
 .logoApp_h2{
   margin-top: 100px;

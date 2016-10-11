@@ -2599,28 +2599,24 @@ h2.concept_title {
   }
 }
 
-@media screen and (min-width: 769px) {
+/*@media screen and (min-width: 769px){
   .concept_text-left,
-  .concept_img-left {
+  .concept_img-left{
     float: left;
     padding-right: calc(100vw * 40 / 1080);
   }
 
   .concept_text-right,
-  .concept_img-right {
+  .concept_img-right{
     float: right;
+    //margin-left: 10%;
     padding-left: calc(100vw * 40 / 1080);
   }
-
-  .concept_sub {
-    margin-top: 100px;
+  .concept_sub{
+    @include clearfix;
+    //margin-top: 100px;
   }
-  .concept_sub:after {
-    clear: both;
-    content: "";
-    display: block;
-  }
-}
+}*/
 .logoApp_h2 {
   margin-top: 100px;
   text-align: center;
