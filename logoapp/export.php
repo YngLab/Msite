@@ -32,7 +32,7 @@ body{
 <?
   $data = mysqli_fetch_array($dot);
   while($data != null){
-    echo "<img src=\"upload/dot/" .$data['ID'] .".gif\" class=\"logoapp_sample\">";
+    echo "<img src=\"upload/dot/" .$data['ID'] .".gif\" class=\"logoapp_sample\" id= \"$data[ID]\">";
     $data = mysqli_fetch_array($dot);
   }
 ?>
@@ -42,7 +42,7 @@ body{
 <?
   $data = mysqli_fetch_array($line);
   while($data != null){
-    echo "<img src=\"upload/line/" .$data['ID'] .".gif\" class=\"logoapp_sample\">";
+    echo "<img src=\"upload/line/" .$data['ID'] .".gif\" class=\"logoapp_sample\" id= \"$data[ID]\">";
     $data = mysqli_fetch_array($line);
   }
 ?>
@@ -50,7 +50,7 @@ body{
 <script charset="utf-8">
   $(function(){
     $(".logoapp_sample").on('click',function(){
-      console.log("test");
+      console.log($(this).attr("id"));
     });
   });
 </script>
