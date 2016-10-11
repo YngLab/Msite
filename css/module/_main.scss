@@ -1251,9 +1251,9 @@ p.company_about{//別部分がコーディング規約無視しているため�
           transition: all .4s;
   #drawer-toggle{
     position: fixed;
-    right: 0;
+    right: -1px; //トグルの右に出る隙間を埋める
     top: 0;
-    width: 40px;
+    width: 41px; //隙間を埋めた分の1px分大きく
     height: 23px;
     padding-top: 17px;
     background-color: $g__fontColor;
@@ -1284,7 +1284,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
           transform: translate3d(-75%, 0, 0);
   #drawer-toggle{
     position: fixed;
-    right: 0;
+    right: -1px; //トグルの右に出る隙間を埋める
     top: 0;
     .middle {
     background: rgba(255, 255, 255, 0);
@@ -1371,9 +1371,11 @@ p.company_about{//別部分がコーディング規約無視しているため�
 }
 
 #drawer.open {
-    -webkit-transform: translate3d(-100%, 0, 0);
-       -moz-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+     -moz-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+  background-color: #ffffff;
+  z-index: 10000;
 }
 
 //↑加納↓高居

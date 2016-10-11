@@ -2191,9 +2191,9 @@ p.company_about {
 }
 #wrapper #drawer-toggle {
   position: fixed;
-  right: 0;
+  right: -1px;
   top: 0;
-  width: 40px;
+  width: 41px;
   height: 23px;
   padding-top: 17px;
   background-color: #9fa0a0;
@@ -2222,7 +2222,7 @@ p.company_about {
 }
 #wrapper.open #drawer-toggle {
   position: fixed;
-  right: 0;
+  right: -1px;
   top: 0;
 }
 #wrapper.open #drawer-toggle .middle {
@@ -2295,6 +2295,8 @@ p.company_about {
   -webkit-transform: translate3d(-100%, 0, 0);
   -moz-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
+  background-color: #ffffff;
+  z-index: 10000;
 }
 
 .lineSpace {
