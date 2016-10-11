@@ -84,10 +84,6 @@ a {
 }
 
 a:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.6;
-  -khtml-opacity: 0.6;
   opacity: 0.6;
 }
 
@@ -202,7 +198,7 @@ a:hover {
 }
 
 .latestEvent {
-  margin-right: -3.2%;
+  margin-right: calc(-100% * (32 / 1000));
 }
 
 .nav_TOP {
@@ -238,7 +234,7 @@ a:hover {
   border: solid 1px #f39800;
   float: left;
   margin: -1px;
-  width: 48.4%;
+  width: calc(100% * (484 / 1000));
 }
 @media screen and (max-width: 768px) {
   .future_entrance {
@@ -256,7 +252,7 @@ a:hover {
   border: solid 1px #8fc31f;
   float: right;
   margin: -1px;
-  width: 48.4%;
+  width: calc(100% * (484 / 1000));
 }
 @media screen and (max-width: 768px) {
   .kids_entrance {
@@ -278,7 +274,7 @@ a:hover {
   text-align: center;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
   width: 48.4%;
-  margin-top: 2.9629vw;
+  margin-top: calc(100% * (32 / 1000));
 }
 @media screen and (max-width: 768px) {
   .future_logoapp {
@@ -300,7 +296,7 @@ a:hover {
   text-align: center;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
   width: 48.4%;
-  margin-top: 2.9629vw;
+  margin-top: calc(100% * (32 / 1000));
 }
 @media screen and (max-width: 768px) {
   .kids_logoapp {
@@ -360,17 +356,17 @@ footer:after {
 
 .HMP_logo {
   width: 100%;
-  height: calc(100vh - 174px);
+  height: calc(100vh - 185px);
 }
 
 .FCH_logo {
   width: 100%;
-  height: calc(100vh - 174px);
+  height: calc(100vh - 185px);
 }
 
 .KPH_logo {
   width: 100%;
-  height: calc(100vh - 174px);
+  height: calc(100vh - 185px);
 }
 
 .facility_explain {
@@ -629,7 +625,7 @@ footer:after {
 }
 
 .autoHeight {
-  min-height: calc(100vh - 94px - 115px - 273px);
+  min-height: calc(100vh - 93px - 115px - 273px);
 }
 @media screen and (max-width: 768px) {
   .autoHeight {
@@ -940,7 +936,7 @@ footer:after {
   background-color: #ffffff;
   border: solid 1px #f39800;
   display: inline-block;
-  margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
+  margin-right: calc(100% * (32 / 1080) - 1px);
   position: relative;
 }
 .latestEvent .latestBox_future .remaindays_future {
@@ -962,7 +958,7 @@ footer:after {
   background-color: #ffffff;
   border: solid 1px #8fc31f;
   display: inline-block;
-  margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
+  margin-right: calc(100% * (32 / 1080) - 1px);
   position: relative;
 }
 .latestEvent .latestBox_kids .remaindays_kids {
@@ -981,10 +977,10 @@ footer:after {
   z-index: 10;
 }
 .latestEvent .latestBox_img {
-  height: 55.7522%;
+  height: calc(100% * (126 / 224));
 }
 .latestEvent img {
-  height: 55.7522%;
+  height: calc(100% * (126 / 224));
   width: 100%;
 }
 .latestEvent .eventText {
@@ -1097,7 +1093,7 @@ footer:after {
   float: left;
   font-weight: 400;
   text-align: center;
-  width: calc(16.6667% - 1px);
+  width: calc(100% / 6 - 1px);
 }
 .gNavli a {
   display: block;
@@ -1117,7 +1113,7 @@ footer:after {
 .future_entrance .future_logo {
   border-bottom: solid 1px #f39800;
   height: calc(100vw * (137 / 1080));
-  width: 100%;
+  width: calc(100% + 2px);
   display: table;
   text-align: center;
 }
@@ -1134,10 +1130,6 @@ footer:after {
   width: calc(100% * (210 / 484));
 }
 .future_entrance .future_logo:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.6;
-  -khtml-opacity: 0.6;
   opacity: 0.6;
 }
 .future_entrance .future_contents {
@@ -1149,10 +1141,6 @@ footer:after {
   width: 50%;
 }
 .future_entrance .future_contents:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.6;
-  -khtml-opacity: 0.6;
   opacity: 0.6;
 }
 .future_entrance .future_textbox {
@@ -1191,10 +1179,6 @@ footer:after {
   width: 50%;
 }
 .future_entrance .future_information:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.6;
-  -khtml-opacity: 0.6;
   opacity: 0.6;
 }
 
@@ -1212,7 +1196,7 @@ footer:after {
 .kids_entrance .kids_logo {
   border-bottom: solid 1px #8fc31f;
   height: calc(100vw * (137 / 1080));
-  width: 100%;
+  width: calc(100% + 2px);
   display: table;
   text-align: center;
 }
@@ -1229,10 +1213,6 @@ footer:after {
   width: calc(100% * (250 / 484));
 }
 .kids_entrance .kids_logo:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.6;
-  -khtml-opacity: 0.6;
   opacity: 0.6;
 }
 .kids_entrance .kids_contents {
@@ -1244,10 +1224,6 @@ footer:after {
   float: left;
 }
 .kids_entrance .kids_contents:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.6;
-  -khtml-opacity: 0.6;
   opacity: 0.6;
 }
 .kids_entrance .kids_textbox {
@@ -1286,10 +1262,6 @@ footer:after {
   width: 50%;
 }
 .kids_entrance .kids_information:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.6;
-  -khtml-opacity: 0.6;
   opacity: 0.6;
 }
 
@@ -1354,10 +1326,6 @@ footer .pagetop {
   }
 }
 footer .pagetop:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.6;
-  -khtml-opacity: 0.6;
   opacity: 0.6;
 }
 footer .foot:after {
@@ -1932,11 +1900,7 @@ footer .copyright p {
 
 .experiencemenu:hover{
   @media screen and (min-width: 769px) {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    opacity: 0.6;
   }
 }
 */
@@ -1959,10 +1923,6 @@ footer .copyright p {
 
 @media screen and (min-width: 769px) {
   .experiencemenu_FCH:hover, .experiencemenu_KPH:hover {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity: 0.6;
-    -khtml-opacity: 0.6;
     opacity: 0.6;
   }
 }
@@ -2032,7 +1992,7 @@ footer .copyright p {
   font-weight: 400;
   padding-left: 14px;
   padding-top: 17px;
-  width: 21.5%;
+  width: calc( 100% * (215 / 1000));
 }
 .info_table_FCH td, .info_table_KPH td {
   background: white;
@@ -2115,10 +2075,6 @@ footer .copyright p {
   z-index: 10;
 }
 .modal-content #modal-close img:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.6;
-  -khtml-opacity: 0.6;
   opacity: 0.6;
 }
 
@@ -2214,11 +2170,6 @@ footer .copyright p {
 .movie_wrap .movie_youtube {
   width: 100%;
   height: 450px;
-}
-@media screen and (max-width: 768px) {
-  .movie_wrap .movie_youtube {
-    height: 56.25vw;
-  }
 }
 
 .companyLogo {
@@ -2323,7 +2274,7 @@ p.company_about {
 }
 #drawer .navBox li {
   padding-left: 30px;
-  line-height: calc((100vh - 40px) / (17 / 2));
+  line-height: calc((100vh - 40px) / 17 * 2);
   display: block;
 }
 #drawer .navBox .gNav_sp {
