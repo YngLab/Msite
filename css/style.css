@@ -2491,28 +2491,37 @@ p.company_about {
   }
 }
 
-/*.center_line{
-  border: 5px solid $g__fontColor;
-  height: 100vh;
-  margin: 0 auto;
-  position: relative;
-  width: 0;
-}*/
-.center_circle {
-  height: calc(100vw * 40 / 1080);
-  margin: 0 auto;
-  min-height: 40px;
-  min-width: 40px;
-  width: calc(100vw * 40 / 1080);
+.center_line {
+  background: #9fa0a0;
+  float: left;
+  height: 1761px;
+  margin-left: calc(50% - 2.5px);
+  width: 5px;
 }
-.center_circle img {
-  height: 100%;
-  width: 100%;
+
+.center_circle {
+  position: absolute;
+  height: 61px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, 0);
+  width: 61px;
 }
 @media screen and (max-width: 768px) {
   .center_circle {
     display: none;
   }
+}
+
+/*.concept_describe{
+  position: relative;
+}*/
+.concept_first, .concept_second, .concept_finally {
+  position: relative;
+}
+
+.concept_first {
+  margin-top: calc((455px * 457.5 / 423 / 2) + 114px - (61px / 2));
 }
 
 h2.concept_title {
@@ -2535,7 +2544,6 @@ h2.concept_title {
 .concept, .concept_img, .concept_text {
   font-size: 18px;
   line-height: 1.8em;
-  margin: 20px auto 10px auto;
   max-width: 960px;
   /*h3{
     text-align: center;
@@ -2559,12 +2567,19 @@ h2.concept_title {
 
 @media screen and (min-width: 769px) {
   .concept {
+    margin: 20px auto 10px auto;
     text-align: center;
   }
 }
 
+.concept_text, .concept_img {
+  left: 50%;
+  right: 50%;
+  position: absolute;
+}
+
 .concept_img {
-  max-width: 45%;
+  max-width: calc(455px * 457.5 / 423);
 }
 .concept_img img {
   width: 100%;
@@ -2578,7 +2593,6 @@ h2.concept_title {
 
 @media screen and (min-width: 769px) {
   .concept_text {
-    margin-top: calc(960px / 9 * 2 - 16px * 1.5);
     max-width: 455px;
     /*p{
       margin-top: calc(960px / 9 * 2 - 16px * 1.5);
@@ -2587,7 +2601,8 @@ h2.concept_title {
   .concept_text h3 {
     font-size: 35px;
     font-weight: 400;
-    line-height: 1.8em;
+    line-height: 1em;
+    padding: 13px 0;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2599,24 +2614,24 @@ h2.concept_title {
   }
 }
 
-/*@media screen and (min-width: 769px){
-  .concept_text-left,
-  .concept_img-left{
-    float: left;
-    padding-right: calc(100vw * 40 / 1080);
+@media screen and (min-width: 769px) {
+  .concept_text-left {
+    transform: translate(calc(-100% - 42px), 0);
   }
 
-  .concept_text-right,
-  .concept_img-right{
-    float: right;
-    //margin-left: 10%;
-    padding-left: calc(100vw * 40 / 1080);
+  .concept_text-right {
+    transform: translate(42px, 0);
   }
-  .concept_sub{
+
+  .concept_img-right {
+    transform: translate(42px, calc(-50% + (61px * 0.5)));
+  }
+
+  /*.concept_sub{
     @include clearfix;
     //margin-top: 100px;
-  }
-}*/
+  }*/
+}
 .logoApp_h2 {
   margin-top: 100px;
   text-align: center;
