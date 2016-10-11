@@ -22,6 +22,8 @@ body{
 }
 </style>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
 <h1>一覧表示</h1>
 <a href="#dot">dot</a> / <a href="#line">line</a>
 
@@ -44,3 +46,11 @@ body{
     $data = mysqli_fetch_array($line);
   }
 ?>
+
+<script charset="utf-8">
+  $(function(){
+    $(".logoapp_sample").on('click',function(){
+      console.log("test");
+    });
+  });
+</script>
