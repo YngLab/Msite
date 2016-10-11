@@ -1704,6 +1704,11 @@ footer .copyright p {
   border-bottom: solid 1px #9fa0a0;
   height: 25vw;
 }
+@media screen and (min-width: 1441px) {
+  .eventmenu {
+    height: calc(1440 * .25px);
+  }
+}
 .eventmenu:after {
   clear: both;
   content: "";
