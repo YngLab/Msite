@@ -47,10 +47,14 @@ body{
   }
 ?>
 
-<script charset="utf-8">
+<script>
   $(function(){
     $(".logoapp_sample").on('click',function(){
-      console.log($(this).attr("id"));
+      $num = $(this).attr("id");
+      //console.log($num);
+      <?// $test = "<script>document.write($num);</script>" ?>
+      //console.log(<? $test; ?>);
+      console.log(<?php echo mysqli_fetch_array(mysqli_query($link, "SELECT imgData FROM `line` WHERE `ID` = 1"))['imgData']; ?>); //phpの値をJSに受け渡せた
     });
   });
 </script>
