@@ -2535,7 +2535,7 @@ h2.concept_title {
 .concept, .concept_img, .concept_text {
   font-size: 18px;
   line-height: 1.8em;
-  margin: 20px auto;
+  margin: 20px auto 10px auto;
   max-width: 960px;
   /*h3{
     text-align: center;
