@@ -2498,6 +2498,11 @@ p.company_about {
   margin-left: calc(50% - 2.5px);
   width: 5px;
 }
+@media screen and (max-width: 768px) {
+  .center_line {
+    display: none;
+  }
+}
 
 /*.concept_describe{
   position: relative;
@@ -2512,6 +2517,10 @@ p.company_about {
 
 .concept_second {
   margin-top: calc((114px + 457.5px) + (457.5px / 2) + 80px - (61px / 2));
+}
+
+.concept_finally {
+  margin-top: calc((114px + 80px + 457.5px * 2) + (457.5px / 2) + 80px - (61px / 2));
 }
 
 h2.concept_title {
@@ -2562,10 +2571,12 @@ h2.concept_title {
   }
 }
 
-.center_circle, .concept_text, .concept_img {
-  left: 50%;
-  right: 50%;
-  position: absolute;
+@media screen and (min-width: 769px) {
+  .center_circle, .concept_img, .concept_text {
+    left: 50%;
+    right: 50%;
+    position: absolute;
+  }
 }
 
 .center_circle {
@@ -2576,6 +2587,19 @@ h2.concept_title {
 @media screen and (max-width: 768px) {
   .center_circle {
     display: none;
+  }
+}
+
+.concept_img {
+  width: 457.5px;
+}
+.concept_img img {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .concept_img {
+    max-width: 100%;
+    margin-top: 40px;
   }
 }
 
@@ -2599,19 +2623,6 @@ h2.concept_title {
   }
   .concept_text h3 {
     display: none;
-  }
-}
-
-.concept_img {
-  width: 457.5px;
-}
-.concept_img img {
-  width: 100%;
-}
-@media screen and (max-width: 768px) {
-  .concept_img {
-    max-width: 100%;
-    margin-top: 40px;
   }
 }
 

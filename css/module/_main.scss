@@ -1582,6 +1582,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
   margin-left: calc(50% - 2.5px);
   //position: relative;
   width: 5px;
+  @include only_pc;
 }
 
 /*.concept_describe{
@@ -1598,6 +1599,10 @@ p.company_about{//別部分がコーディング規約無視しているため�
 
 .concept_second{
   margin-top: calc((114px + 457.5px) + (457.5px / 2) + 80px - (61px / 2));
+}
+
+.concept_finally{
+  margin-top: calc((114px + 80px + 457.5px * 2) + (457.5px / 2) + 80px - (61px / 2));
 }
 
 h2.concept_title{
@@ -1646,18 +1651,33 @@ h2.concept_title{
   }
 }
 
-.center_circle, .concept_text, .concept_img{
-  left: 50%;
-  right: 50%;
-  position: absolute;
+.center_circle, .concept_img, .concept_text{
+  @media #{$normal} {
+    left: 50%;
+    right: 50%;
+    position: absolute;
+  }
 }
 
 .center_circle{
   height: 61px;
   transform: translate(-50%, 0);
   width: 61px;
+  @include only_pc;
+}
+
+.concept_img{
+  //max-width: 45%;
+  //max-width: calc(455px * 457.5 / 423); //concept_textのmax_width * カンプ上のオドロクチカラ画像の大きさ / イラレ上のconcept_textのwidth
+  width: 457.5px; //↑が理想だが、現状center_lineが絶対値なのでこちらも絶対値である必要がある
+  //float: left;
+  img{
+    width: 100%;
+  }
   @media #{$small} {
-    display: none;
+    //float: none;
+    max-width: 100%;
+    margin-top: 40px;
   }
 }
 
@@ -1683,21 +1703,6 @@ h2.concept_title{
     h3{
       display: none;
     }
-  }
-}
-
-.concept_img{
-  //max-width: 45%;
-  //max-width: calc(455px * 457.5 / 423); //concept_textのmax_width * カンプ上のオドロクチカラ画像の大きさ / イラレ上のconcept_textのwidth
-  width: 457.5px; //↑が理想だが、現状center_lineが絶対値なのでこちらも絶対値である必要がある
-  //float: left;
-  img{
-    width: 100%;
-  }
-  @media #{$small} {
-    //float: none;
-    max-width: 100%;
-    margin-top: 40px;
   }
 }
 
