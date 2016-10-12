@@ -127,7 +127,7 @@ if(!$_GET){
                 <?php if($_GET[id] == 0){echo '小学生から中学生';
                 }else if($_GET[id] == 1){echo '幼稚園児から小学生';
                 }else if($_GET[id] == 2){echo '子どもから大人まで';
-                }else if($_GET[id] == 3){echo '【第1部】小学生、【第2部、第3部】子どもから大人まで';
+                }else if($_GET[id] == 3){echo '【第1部】小学生<br>【第2部、第3部】子どもから大人まで';
                 }else if($_GET[id] == 4){echo '子どもから大人まで';
                 }
                 ?>
