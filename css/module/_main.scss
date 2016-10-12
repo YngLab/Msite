@@ -1585,26 +1585,6 @@ p.company_about{//別部分がコーディング規約無視しているため�
   @include only_pc;
 }
 
-/*.concept_describe{
-  position: relative;
-}*/
-
-.concept_first, .concept_second, .concept_finally{
-  position: relative;
-}
-
-.concept_first{
-  margin-top: calc((457.5px / 2) + 114px - (61px / 2)); //オドロクチカラ画像の半径 + 加納が測った直上の要素との距離 - ◯の半径
-}
-
-.concept_second{
-  margin-top: calc((114px + 457.5px) + (457.5px / 2) + 80px - (61px / 2));
-}
-
-.concept_finally{
-  margin-top: calc((114px + 80px + 457.5px * 2) + (457.5px / 2) + 80px - (61px / 2));
-}
-
 h2.concept_title{
   //font-size: 48px;
   text-align: center;
@@ -1669,7 +1649,7 @@ h2.concept_title{
 .concept_img{
   //max-width: 45%;
   //max-width: calc(455px * 457.5 / 423); //concept_textのmax_width * カンプ上のオドロクチカラ画像の大きさ / イラレ上のconcept_textのwidth
-  width: 457.5px; //↑が理想だが、現状center_lineが絶対値なのでこちらも絶対値である必要がある
+  max-width: 457.5px; //↑が理想だが、現状center_lineが絶対値なのでこちらも絶対値である必要がある
   //float: left;
   img{
     width: 100%;
@@ -1707,9 +1687,20 @@ h2.concept_title{
 }
 
 @media #{$normal}{
+  .concept_first, .concept_second, .concept_finally{
+    position: relative;
+  }
+  .concept_first{
+    margin-top: calc((457.5px / 2) + 114px - (61px / 2)); //オドロクチカラ画像の半径 + 加納が測った直上の要素との距離 - ◯の半径
+  }
+  .concept_second{
+    margin-top: calc((114px + 457.5px) + (457.5px / 2) + 80px - (61px / 2));
+  }
+  .concept_finally{
+    margin-top: calc((114px + 80px + 457.5px * 2) + (457.5px / 2) + 80px - (61px / 2));
+  }
   .concept_text-left{
     //float: left;
-    //padding-right: calc(100vw * 40 / 1080);
     transform: translate(calc(-100% - 42px), 0);
   }
   .concept_text-right{
@@ -1721,7 +1712,6 @@ h2.concept_title{
   .concept_img-right{
     //float: right;
     //margin-left: 10%;
-    //padding-left: calc(100vw * 40 / 1080);
     transform: translate(42px, calc(-50% + (61px * 0.5)));
   }
   /*.concept_sub{
