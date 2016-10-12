@@ -1584,18 +1584,6 @@ p.company_about{//別部分がコーディング規約無視しているため�
   width: 5px;
 }
 
-.center_circle{
-  position: absolute;
-  height: 61px;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%, 0);
-  width: 61px;
-  @media #{$small} {
-    display: none;
-  }
-}
-
 /*.concept_describe{
   position: relative;
 }*/
@@ -1605,7 +1593,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
 }
 
 .concept_first{
-  margin-top: calc((455px * 457.5 / 423 / 2) + 114px - (61px / 2)); //オドロクチカラ画像の半径 + 加納が測ったパラグラフとの隙間 - ◯の半径
+  margin-top: calc((457.5px / 2) + 114px - (61px / 2)); //オドロクチカラ画像の半径 + 加納が測ったパラグラフとの隙間 - ◯の半径
 }
 
 h2.concept_title{
@@ -1654,23 +1642,18 @@ h2.concept_title{
   }
 }
 
-.concept_text, .concept_img{
+.center_circle, .concept_text, .concept_img{
   left: 50%;
   right: 50%;
   position: absolute;
 }
 
-.concept_img{
-  //max-width: 45%;
-  max-width: calc(455px * 457.5 / 423); //concept_textのmax_width * カンプ上のオドロクチカラ画像の大きさ / イラレ上のconcept_textのwidth
-  //float: left;
-  img{
-    width: 100%;
-  }
+.center_circle{
+  height: 61px;
+  transform: translate(-50%, 0);
+  width: 61px;
   @media #{$small} {
-    //float: none;
-    max-width: 100%;
-    margin-top: 40px;
+    display: none;
   }
 }
 
@@ -1696,6 +1679,21 @@ h2.concept_title{
     h3{
       display: none;
     }
+  }
+}
+
+.concept_img{
+  //max-width: 45%;
+  //max-width: calc(455px * 457.5 / 423); //concept_textのmax_width * カンプ上のオドロクチカラ画像の大きさ / イラレ上のconcept_textのwidth
+  width: 457.5px; //↑が理想だが、現状center_lineが絶対値なのでこちらも絶対値である必要がある
+  //float: left;
+  img{
+    width: 100%;
+  }
+  @media #{$small} {
+    //float: none;
+    max-width: 100%;
+    margin-top: 40px;
   }
 }
 
