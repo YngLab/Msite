@@ -32,7 +32,7 @@ body{
 <?
   $data = mysqli_fetch_array($dot);
   while($data != null){
-    echo "<img src=\"upload/dot/" .$data['ID'] .".gif\" class=\"logoapp_sample\" id= \"$data[ID]\">";
+    echo "<a href=\"test.php?id=".$data['imgData']."\">"."<img src=\"upload/dot/".$data['ID'].".gif\" class=\"logoapp_sample\" id= ".$data['imgData']."\"></a>";
     $data = mysqli_fetch_array($dot);
   }
 ?>
@@ -42,7 +42,7 @@ body{
 <?
   $data = mysqli_fetch_array($line);
   while($data != null){
-    echo "<img src=\"upload/line/" .$data['ID'] .".gif\" class=\"logoapp_sample\" id= \"$data[ID]\">";
+    echo "<a href=\"test.php?id=".$data['imgData']."\">"."<img src=\"upload/line/" .$data['ID'] .".gif\" class=\"logoapp_sample\" id= ".$data['imgData']."\"></a>";
     $data = mysqli_fetch_array($line);
   }
 ?>
@@ -51,10 +51,10 @@ body{
   $(function(){
     $(".logoapp_sample").on('click',function(){
       $num = $(this).attr("id");
-      //console.log($num);
+      console.log($num);
       <?// $test = "<script>document.write($num);</script>" ?>
       //console.log(<? $test; ?>);
-      console.log(<?php echo mysqli_fetch_array(mysqli_query($link, "SELECT imgData FROM `line` WHERE `ID` = 1"))['imgData']; ?>); //phpの値をJSに受け渡せた
+      //console.log(<?php echo mysqli_fetch_array(mysqli_query($link, "SELECT imgData FROM `line` WHERE `ID` = 1"))['imgData']; ?>); //phpの値をJSに受け渡せた
     });
   });
 </script>
