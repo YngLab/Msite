@@ -1671,15 +1671,15 @@ footer .copyright p {
 .eventmenu {
   border-bottom: solid 1px #9fa0a0;
 }
-@media screen and (min-width: 1441px) {
-  .eventmenu {
-    height: calc(1440 * .25px);
-  }
-}
 @media screen and (min-width: 769px) {
   .eventmenu {
     height: 25vw;
     min-height: calc(1080px * .25);
+  }
+}
+@media screen and (min-width: 1441px) {
+  .eventmenu {
+    height: calc(1440 * .25px);
   }
 }
 .eventmenu:after {

@@ -742,12 +742,12 @@ footer{
 
 .eventmenu{
   border-bottom: solid 1px $g__fontColor;
-  @media #{$maximum} {
-    height: calc(1440 * .25px);
-  }
   @media #{$normal} {
     height: 25vw;
     min-height: calc(1080px * .25);
+  }
+  @media #{$maximum} {
+    height: calc(1440 * .25px);
   }
   @include clearfix;
 }
