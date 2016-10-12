@@ -1593,7 +1593,11 @@ p.company_about{//別部分がコーディング規約無視しているため�
 }
 
 .concept_first{
-  margin-top: calc((457.5px / 2) + 114px - (61px / 2)); //オドロクチカラ画像の半径 + 加納が測ったパラグラフとの隙間 - ◯の半径
+  margin-top: calc((457.5px / 2) + 114px - (61px / 2)); //オドロクチカラ画像の半径 + 加納が測った直上の要素との距離 - ◯の半径
+}
+
+.concept_second{
+  margin-top: calc((114px + 457.5px) + (457.5px / 2) + 80px - (61px / 2));
 }
 
 h2.concept_title{
@@ -1707,7 +1711,7 @@ h2.concept_title{
     transform: translate(42px, 0);
   }
   .concept_img-left{
-
+    transform: translate(calc(-100% - 42px), calc(-50% + (61px * 0.5)));
   }
   .concept_img-right{
     //float: right;

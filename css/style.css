@@ -2510,6 +2510,10 @@ p.company_about {
   margin-top: calc((457.5px / 2) + 114px - (61px / 2));
 }
 
+.concept_second {
+  margin-top: calc((114px + 457.5px) + (457.5px / 2) + 80px - (61px / 2));
+}
+
 h2.concept_title {
   text-align: center;
 }
@@ -2618,6 +2622,10 @@ h2.concept_title {
 
   .concept_text-right {
     transform: translate(42px, 0);
+  }
+
+  .concept_img-left {
+    transform: translate(calc(-100% - 42px), calc(-50% + (61px * 0.5)));
   }
 
   .concept_img-right {
