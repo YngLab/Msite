@@ -1018,7 +1018,7 @@ footer:after {
   bottom: -30px;
 }
 .latestEvent .flex-control-paging li a {
-  background-color: #9fa0a0;
+  background-color: #c9caca;
 }
 
 .moreview {
@@ -2885,8 +2885,22 @@ html[xmlns] .flexslider .slides {
   content: '\f003';
 }
 
-.flex-control-nav {
+.modal-content .flex-control-nav {
   display: none;
+}
+
+.latestEvent .flex-control-nav {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  z-index: 10;
+}
+
+.latestEvent .flex-control-nav li {
+  margin: 0 15px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
 }
 
 .flex-control-paging li a {
@@ -2907,12 +2921,12 @@ html[xmlns] .flexslider .slides {
 }
 
 .flex-control-paging li a:hover {
-  background: #727171;
+  background: #9fa0a0;
   /*本来はfuture,kidsで色分けたい*/
 }
 
 .flex-control-paging li a.flex-active {
-  background: #727171;
+  background: #9fa0a0;
   /*本来はfuture,kidsで色分けたい*/
   /*background: rgba(0, 0, 0, 0.9);*/
   cursor: default;
@@ -2946,7 +2960,6 @@ html[xmlns] .flexslider .slides {
   width: 100%;
   height: auto;
   display: block;
-  opacity: .7;
   cursor: pointer;
   -moz-user-select: none;
   -webkit-transition: all 1s ease;
