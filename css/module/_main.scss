@@ -125,7 +125,7 @@
     bottom: -30px;
   }
   .flex-control-paging li a{
-    background-color: $g__fontColor;
+    background-color: #c9caca;
   }
 }
 
@@ -242,7 +242,9 @@
     }
   }
   .future_contents:hover{
-    opacity: 0.6;
+    @media #{$normal} {
+      opacity: .6;
+    }
   }
   .future_textbox{
     float: left;
@@ -276,7 +278,9 @@
     }
   }
   .future_information:hover{
-    opacity: 0.6;
+    @media #{$normal} {
+      opacity: .6;
+    }
   }
 }
 
@@ -314,7 +318,9 @@
     }
   }
   .kids_logo:hover{
-    opacity: 0.6;
+    @media #{$normal} {
+      opacity: .6;
+    }
   }
   .kids_contents{
     border-bottom: solid 1px $g__color-kids;
@@ -325,7 +331,9 @@
     }
   }
   .kids_contents:hover{
-    opacity: 0.6;
+    @media #{$normal} {
+      opacity: .6;
+    }
   }
   .kids_textbox{
     float: left;
@@ -359,7 +367,9 @@
     }
   }
   .kids_information:hover{
-    opacity: 0.6;
+    @media #{$normal} {
+      opacity: .6;
+    }
   }
 }
 
@@ -429,7 +439,9 @@ footer{
     }
   }
   .pagetop:hover{
-    opacity: 0.6;
+    @media #{$normal} {
+      opacity: .6;
+    }
   }
   .foot{
     @include clearfix;
@@ -950,7 +962,7 @@ footer{
 
 .experiencemenu:hover{
   @media #{$normal} {
-    opacity: 0.6;
+    opacity: .6;
   }
 }
 */
@@ -969,7 +981,7 @@ footer{
 
 .experiencemenu_FCH:hover, .experiencemenu_KPH:hover{
   @media #{$normal} {
-    opacity: 0.6;
+    opacity: .6;
   }
 }
 .exmenu_textBox_wrap{
@@ -1142,7 +1154,7 @@ footer{
     z-index: 10;
   }
   #modal-close img:hover{
-    opacity: 0.6;
+    opacity: .6;
   }
   .exmenu_slide{
     //height: calc(100% - 115px);

@@ -46,7 +46,9 @@ a{
 }
 
 a:hover{
-  opacity: 0.6;
+  @media #{$normal} {
+    opacity: .6;
+  }
 }
 
 .futureColor{
