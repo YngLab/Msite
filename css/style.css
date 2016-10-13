@@ -2044,13 +2044,13 @@ footer .copyright p {
 
 .info_table_FCH_label {
   color: #f39800;
-  border-bottom: dashed 1px #f39800;
+  border-bottom: solid 1px #f39800;
   padding-bottom: 3px;
 }
 
 .info_table_KPH_label {
   color: #8fc31f;
-  border-bottom: dashed 1px #8fc31f;
+  border-bottom: solid 1px #8fc31f;
   padding-bottom: 3px;
 }
 
