@@ -2044,13 +2044,13 @@ footer .copyright p {
 
 .info_table_FCH_label {
   color: #f39800;
-  border-bottom: dashed 1px #f39800;
+  border-bottom: solid 1px #f39800;
   padding-bottom: 3px;
 }
 
 .info_table_KPH_label {
   color: #8fc31f;
-  border-bottom: dashed 1px #8fc31f;
+  border-bottom: solid 1px #8fc31f;
   padding-bottom: 3px;
 }
 
@@ -2204,7 +2204,7 @@ p.company_about {
   position: fixed;
   right: -1px;
   top: 0;
-  width: 40px;
+  width: 41px;
   height: 23px;
   padding-top: 17px;
   background-color: #9fa0a0;
@@ -2284,28 +2284,30 @@ p.company_about {
   margin-top: calc((100vh - 40px) /17);
 }
 #drawer .navBox li {
-  padding-left: 30px;
-  line-height: calc((100vh - 40px) / 17 * 2);
+  border-bottom: 1px solid #9fa0a0;
+  padding-top: calc(((100vh - 40px) /17) - 0.875em);
+  margin: 0 30px calc(((100vh - 40px) /17) - 0.875em - 1px) 30px;
+  line-height: 1.75em;
   display: block;
 }
 #drawer .navBox .gNav_sp {
   height: 75%;
 }
-#drawer .navBox .gNav_sp li {
-  height: calc(100% * (1/6));
+#drawer .navBox .gNav_sp li .gNav_sp_ {
+  border-bottom: 1px solid #9fa0a0;
+  height: 70%;
 }
 #drawer .navBox .pNav_sp {
   height: 25%;
   background-color: #f7f8f8;
-}
-#drawer .navBox .pNav_sp li {
-  height: calc(100% * (1/2));
 }
 
 #drawer.open {
   -webkit-transform: translate3d(-100%, 0, 0);
   -moz-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
+  background-color: #ffffff;
+  z-index: 10000;
 }
 
 .lineSpace {
