@@ -466,6 +466,7 @@ footer{
         }
         @media #{$small} {
           //width: 320px;
+          color: $sp__fontColor;
           width: 100%;
           font-size: 12px;
           padding: 12px 0 12px 0;
@@ -807,6 +808,7 @@ footer{
       margin-right: 40px;
     }
     @media #{$small} {
+      color: $sp__fontColor;
       padding-bottom: calc(24px + 38px + 40px); //文章からボタンまで + ボタン + ボタンから次のイベント
     }
   }
@@ -1014,6 +1016,9 @@ footer{
     font-weight: 200;
     margin-top: 30px;
     line-height: 1.75em;
+    @media #{$small} {
+      color: $sp__fontColor;
+    }
   }
 }
 
@@ -1202,9 +1207,6 @@ footer{
   >p{
     font-size: $g__fontSize;
   }
-  .lineSpace{
-    color: $g__fontColor;
-  }
   .KPHaddress{
     margin: 0 0 10px 24px;
     @media #{$small} {
@@ -1221,7 +1223,6 @@ footer{
 
 .parking{
   .lineSpace{
-    color: $g__fontColor;
     font-size: $g__fontSize;
     margin-left: 24px;
     @media #{$small} {
