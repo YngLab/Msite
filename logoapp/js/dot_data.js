@@ -409,15 +409,14 @@ DotAppFramework.prototype.onClickNotCompleteButton = function() {
 	completeDialog.dialog("close");
 };
 DotAppFramework.prototype.onClickUploadButton = function() {
-	return;
+	//画像ファイルここから
+
 	clearInterval(this.completeLoopInterval	);
 	var encoder = new GIFEncoder();
 	encoder.setRepeat(0);
 	encoder.setDelay(100);
-	//ORIGINAL_CANVAS_SIZE
 	encoder.setSize(this.mainView.width, this.mainView.height);
 	encoder.start();
-	//this.arrDotFrame.length
 	for(var i=0; i<this.arrDotFrame.length; i++) {
 		this.completeView.drawBgScale(this.arrDotFrame[i].bgColor, MAIN_SCALE);
 		this.arrDotFrame[i].drawMain(this.completeView, this.isHoverDot, this.hoverDotNum, true);
@@ -428,50 +427,54 @@ DotAppFramework.prototype.onClickUploadButton = function() {
 	var blob = new Blob([bin.buffer], {type:'image/gif'});
 
 	var b64 = window.btoa(encoder.stream().getData());
-	var url2 = 'data:image/gif;base64,'+b64;
+	//画像ファイルここまで
+	//データここから
+	clearInterval(this.completeLoopInterval	);
+	var uploadData = new Array(8);
+	for(var i=0; i<uploadData.length; i++) {
+		uploadData[i] = '';
+		for(var j=0; j<this.arrDotFrame[i].arrDot.length; j++) {
+			if(j!=0) {
+				uploadData[i]+=',';
+			}
 
-	var url = URL.createObjectURL(blob);
-
-/*
-	var image = new Image();
-	var image = document.getElementById('gifimage');
-
-	image.src = url;
-	image.onload = function() {
-		URL.revokeObjectURL(url);
-	};
-*/
-
-	//URL.revokeObjectURL(url);
-
-	//download blob
-	var FileName = "dotanime.gif"
-
+			if(this.arrDotFrame[i].arrDot[j].isDraw) {
+				uploadData[i]+='1';
+			} else {
+				uploadData[i]+='0';
+			}
+		}
+	}
+	//データここまで
 	if (window.navigator.msSaveBlob) {
 		window.navigator.msSaveBlob(blob, FileName);
 	} else {
-		var a = document.createElement("a");
-		a.href = URL.createObjectURL(blob);
-		//a.target   = '_blank';
-		a.download = FileName;
-		document.body.appendChild(a) //  FireFox specification
-		a.click();
-		document.body.removeChild(a) //  FireFox specification
+
+		var form = document.createElement( 'form' );
+    document.body.appendChild( form );
+    var image = document.createElement( 'input' );
+    image.setAttribute( 'type' , 'hidden' );
+    image.setAttribute( 'name' , 'image' );
+    image.setAttribute( 'value' , b64 );
+
+    var data = document.createElement( 'input' );
+    data.setAttribute( 'type' , 'hidden' );
+    data.setAttribute( 'name' , 'data' );
+    data.setAttribute( 'value' , uploadData );
+
+    var type = document.createElement( 'input' );
+    type.setAttribute( 'type' , 'hidden' );
+    type.setAttribute( 'name' , 'type' );
+    type.setAttribute( 'value' , "dot" );
+
+    form.appendChild( image );
+    form.appendChild( data );
+    form.appendChild( type );
+    form.setAttribute( 'action' , 'upload.php' );
+    form.setAttribute( 'method' , 'post' );
+    form.submit();
+
 	}
-
-
-	/*
-	//show blob <img>
-	var image = new Image();
-	var image = document.getElementById('image');
-	//You can also generate DataURL from binary
-	//var b64 = window.btoa(encode.stream().getData());
- 	//image.src = 'data:image/gif;base64,'+b64;
-	image.src = url;
-	image.onload = function() {
-		URL.revokeObjectURL(url);
-	};
-	*/
 
 	completeDialog.dialog("close");
 };
@@ -748,7 +751,7 @@ DotTutorial.prototype.onClickPageButton1 = function() {
 		this.renewImages();
 		this.renewButton(false, false, false, false, false);
 		this.mainView.drawBgScale(this.arrDotFrame[0].bgColor, MAIN_SCALE);
-		document.getElementById('tutorialText').innerHTML='ロゴを使って、アニメーションが作れます。';
+		document.getElementById('tutorialText').innerHTML='作り方：ロゴを使って、アニメーションが作れます。';
 		document.getElementById('tutorialPointer').style.display = 'none';
 		this.time = 0;
 		this.currentFrame = 1;
@@ -774,7 +777,7 @@ DotTutorial.prototype.onClickPageButton2 = function() {
 		this.renewImages();
 		this.renewButton(false, false, false, false, false);
 		this.mainView.drawBgScale(this.arrDotFrame[0].bgColor, MAIN_SCALE);
-		document.getElementById('tutorialText').innerHTML='ロゴのパーツをクリックして色を付けましょう。';
+		document.getElementById('tutorialText').innerHTML='作り方：ロゴのパーツをクリックして色を付けましょう。';
 		document.getElementById('tutorialPointer').style.display = 'block';
 		document.getElementById('tutorialPointer').style.top = '290px';
 		document.getElementById('tutorialPointer').style.left = '485px';
@@ -802,7 +805,7 @@ DotTutorial.prototype.onClickPageButton3 = function() {
 		this.renewImages();
 		this.renewButton(false, false, false, false, false);
 		this.mainView.drawBgScale(this.arrDotFrame[0].bgColor, MAIN_SCALE);
-		document.getElementById('tutorialText').innerHTML='1 コマ目が完成したら、次のコマを選択してください。';
+		document.getElementById('tutorialText').innerHTML='作り方：1 コマ目が完成したら次のコマを選択してください。';
 		document.getElementById('tutorialPointer').style.display = 'block';
 		this.time = 0;
 		this.currentFrame = 1;
@@ -828,7 +831,7 @@ DotTutorial.prototype.onClickPageButton4 = function() {
 		this.renewImages();
 		this.renewButton(true, true, true, true, false);
 		this.mainView.drawBgScale(this.arrDotFrame[0].bgColor, MAIN_SCALE);
-		document.getElementById('tutorialText').innerHTML='右側は便利な機能があるので使ってみてください。';
+		document.getElementById('tutorialText').innerHTML='作り方：右側は便利な機能があるので使ってみてください。';
 		document.getElementById('tutorialPointer').style.display = 'block';
 		document.getElementById('tutorialPointer').style.top = '245px';
 		document.getElementById('tutorialPointer').style.left = '700px';
@@ -856,7 +859,7 @@ DotTutorial.prototype.onClickPageButton5 = function() {
 		this.renewImages();
 		this.renewButton(true, true, true, true, true);
 		this.mainView.drawBgScale(this.arrDotFrame[0].bgColor, MAIN_SCALE);
-		document.getElementById('tutorialText').innerHTML='8 コマできたら完成です。';
+		document.getElementById('tutorialText').innerHTML='作り方：8 コマできたら完成です。';
 		document.getElementById('tutorialPointer').style.display = 'block';
 		document.getElementById('tutorialPointer').style.top = '540px';
 		document.getElementById('tutorialPointer').style.left = '700px';
