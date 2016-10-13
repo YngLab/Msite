@@ -92,7 +92,7 @@ if(!$_GET){
                 <?php if($_GET[id] == 0){echo '10月12日(水)　15:00-18:00';
                 }else if($_GET[id] == 1){echo '10月12日(水)　15:00-18:00';
                 }else if($_GET[id] == 2){echo '10月15日(土)　10:30-12:00';
-                }else if($_GET[id] == 3){echo '10月16日(日)　10:00-16:30';
+                }else if($_GET[id] == 3){echo '10月16日(日)　10:30-16:30';
                 }else if($_GET[id] == 4){echo '10月16日(日)　13:00-14:00';
                 }
                 ?></td>
@@ -127,7 +127,7 @@ if(!$_GET){
                 <?php if($_GET[id] == 0){echo '小学生から中学生';
                 }else if($_GET[id] == 1){echo '幼稚園児から小学生';
                 }else if($_GET[id] == 2){echo '子どもから大人まで';
-                }else if($_GET[id] == 3){echo '子どもから大人まで';
+                }else if($_GET[id] == 3){echo '【第1部】小学生<br>【第2部、第3部】子どもから大人まで';
                 }else if($_GET[id] == 4){echo '子どもから大人まで';
                 }
                 ?>
