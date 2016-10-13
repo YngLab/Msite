@@ -83,8 +83,10 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  opacity: 0.6;
+@media screen and (min-width: 769px) {
+  a:hover {
+    opacity: .6;
+  }
 }
 
 .futureColor {
@@ -1140,8 +1142,10 @@ footer:after {
   float: left;
   width: 50%;
 }
-.future_entrance .future_contents:hover {
-  opacity: 0.6;
+@media screen and (min-width: 769px) {
+  .future_entrance .future_contents:hover {
+    opacity: .6;
+  }
 }
 .future_entrance .future_textbox {
   float: left;
@@ -1178,8 +1182,10 @@ footer:after {
   float: right;
   width: 50%;
 }
-.future_entrance .future_information:hover {
-  opacity: 0.6;
+@media screen and (min-width: 769px) {
+  .future_entrance .future_information:hover {
+    opacity: .6;
+  }
 }
 
 .kids_entrance a:hover {
@@ -1212,8 +1218,10 @@ footer:after {
 .kids_entrance .kids_logo .kids_logo_img img {
   width: calc(100% * (250 / 484));
 }
-.kids_entrance .kids_logo:hover {
-  opacity: 0.6;
+@media screen and (min-width: 769px) {
+  .kids_entrance .kids_logo:hover {
+    opacity: .6;
+  }
 }
 .kids_entrance .kids_contents {
   border-bottom: solid 1px #8fc31f;
@@ -1223,8 +1231,10 @@ footer:after {
   width: 50%;
   float: left;
 }
-.kids_entrance .kids_contents:hover {
-  opacity: 0.6;
+@media screen and (min-width: 769px) {
+  .kids_entrance .kids_contents:hover {
+    opacity: .6;
+  }
 }
 .kids_entrance .kids_textbox {
   float: left;
@@ -1261,8 +1271,10 @@ footer:after {
   float: right;
   width: 50%;
 }
-.kids_entrance .kids_information:hover {
-  opacity: 0.6;
+@media screen and (min-width: 769px) {
+  .kids_entrance .kids_information:hover {
+    opacity: .6;
+  }
 }
 
 .future_logoapp td {
@@ -1325,8 +1337,10 @@ footer .pagetop {
     height: 24px;
   }
 }
-footer .pagetop:hover {
-  opacity: 0.6;
+@media screen and (min-width: 769px) {
+  footer .pagetop:hover {
+    opacity: .6;
+  }
 }
 footer .foot:after {
   clear: both;
@@ -1911,7 +1925,7 @@ footer .copyright p {
 
 .experiencemenu:hover{
   @media screen and (min-width: 769px) {
-    opacity: 0.6;
+    opacity: .6;
   }
 }
 */
@@ -1934,7 +1948,7 @@ footer .copyright p {
 
 @media screen and (min-width: 769px) {
   .experiencemenu_FCH:hover, .experiencemenu_KPH:hover {
-    opacity: 0.6;
+    opacity: .6;
   }
 }
 
@@ -2086,7 +2100,7 @@ footer .copyright p {
   z-index: 10;
 }
 .modal-content #modal-close img:hover {
-  opacity: 0.6;
+  opacity: .6;
 }
 
 #modal-overlay {
