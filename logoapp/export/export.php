@@ -31,9 +31,8 @@ body{
 
 <script src="js/common_data.js"></script>
 <script src="js/dot_data.js"></script>
-<script src="js/dot_js.js"></script>
-
-<script src="js/dot_export.js"></script>
+<script src="js/line_data.js"></script>
+<script src="js/export.js"></script>
 
 
 <h1>一覧表示</h1>
@@ -46,7 +45,7 @@ body{
 <?
   $data = mysqli_fetch_array($dot);
   while($data != null){
-    echo "<a href=\"#\" onclick=\"exportImage('".$data['imgData']."','".$data['ID']."');\">"."<img src=\"../upload/dot/".$data['ID'].".gif\" class=\"logoapp_sample\"></a>";
+    echo "<a href=\"#\" onclick=\"exportDotImage('".$data['imgData']."','".$data['ID']."');\">"."<img src=\"../upload/dot/".$data['ID'].".gif\" class=\"logoapp_sample\"></a>";
     $data = mysqli_fetch_array($dot);
   }
 ?>
@@ -56,7 +55,7 @@ body{
 <?
   $data = mysqli_fetch_array($line);
   while($data != null){
-    echo "<a href=\"#\" onclick=\"exportImage('".$data['imgData']."','".$data['ID']."');\">"."<img src=\"../upload/line/" .$data['ID'] .".gif\" class=\"logoapp_sample\"></a>";
+    echo "<a href=\"#\" onclick=\"exportLineImage('".$data['imgData']."','".$data['ID']."');\">"."<img src=\"../upload/line/" .$data['ID'] .".gif\" class=\"logoapp_sample\"></a>";
     $data = mysqli_fetch_array($line);
   }
 ?>
