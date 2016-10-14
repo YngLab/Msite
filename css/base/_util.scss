@@ -3,6 +3,9 @@
 
 html, input, textarea{
   color: $g__fontColor;
+  @media #{$small} {
+    color: $sp__fontColor;
+  }
   font:{
     family: 'Noto Sans Japanese', sans-serif;
     size: $g__fontSize;
@@ -37,10 +40,15 @@ li{
 a{
   color: $g__fontColor;
   text-decoration: none;
+  @media #{$small} {
+    color: $sp__fontColor;
+  }
 }
 
 a:hover{
-  opacity: 0.6;
+  @media #{$normal} {
+    opacity: .6;
+  }
 }
 
 .futureColor{
