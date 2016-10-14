@@ -398,7 +398,6 @@ footer{
       display: none;
     }
     .accessProcess_sp{
-      margin-left: 16px;
       text-align: left;
     }
   }
@@ -480,7 +479,6 @@ footer{
   }
   .companyLinks{
     @media #{$small} {
-      margin-left: 16px;
       .companyLogo{
         margin-bottom: 40px;
       }
@@ -497,14 +495,6 @@ footer{
     //float: left;
     float: right;
     width: 50%;
-    p{
-      margin-left: 24px;
-    }
-  }
-  @media #{$small} {
-    p{
-      margin-left: 16px;
-    }
   }
   .heading{
     margin-top: 0;
@@ -517,14 +507,6 @@ footer{
     //float: right;
     float: left;
     width: 50%;
-    p{
-      margin-left: 24px;
-    }
-  }
-  @media #{$small} {
-    p{
-      margin-left: 16px;
-    }
   }
   .heading{
     margin-top: 0;

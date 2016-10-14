@@ -559,10 +559,8 @@ footer{
   p{
     color: $h2__color;
     font-size: $h2__fontSize;
-    margin-left: 24px;
     @media #{$small} {
       font-size: 18px;
-      margin-left: 16px;
     }
   }
   @media #{$small} {
@@ -599,7 +597,7 @@ footer{
     .headingTitle{
       color: $h2__color;
       font-size: $h2__fontSize;
-      margin-left: 12px;
+      //margin-left: 12px;
       float: left;
     }
   }
@@ -609,7 +607,6 @@ footer{
     p{
       color: $h2__color;
       font-size: 18px;
-      margin-left: 16px;
     }
   }
 }
@@ -619,12 +616,12 @@ footer{
   p{
     color: $h2__color;
     font-size: $h2__fontSize;
-    margin-left: 24px;
+    //margin-left: 24px;
   }
   @media #{$small} {
     padding: 40px 0 27px 0;
     p{
-      margin-left: 16px;
+      //margin-left: 16px;
       font-size: 18px;
     }
   }
@@ -638,7 +635,7 @@ footer{
   line-height: 1.75em;
   @include smallW;
   @media #{$small} {
-    margin: 0 0 20px 18px;
+    margin: 0 0 20px 0;
   }
   li{
     display: inline;
@@ -665,7 +662,7 @@ footer{
   line-height: 1.75em;
   @include smallW;
   @media #{$small} {
-    margin: 0 0 20px 18px;
+    margin: 0 0 20px 0;
   }
   li{
     display: inline;
@@ -767,7 +764,7 @@ footer{
   position: relative;
   @include clearfix;
   @media #{$small} {
-    margin: 24px 20px 0px 20px;
+    margin: 24px calc(100% * 20 / 768) 0px calc(100% * 20 / 768);
   }
   .event_title_future{
     font-size: $h2__fontSize;
@@ -894,7 +891,7 @@ footer{
   position: absolute;
   @media #{$small} {
     bottom: 40px;
-    left: 20px;
+    left: calc(100% * 20 / 768);
   }
 }
 
@@ -1194,16 +1191,7 @@ footer{
     color: $g__fontColor;
   }
   .KPHaddress{
-    margin: 0 0 10px 24px;
-    @media #{$small} {
-      margin: 0 0 10px 16px;
-    }
-  }
-  .FCHaddress{
-    margin-left: 24px;
-    @media #{$small} {
-      margin-left: 16px;
-    }
+    margin-bottom: 10px;
   }
 }
 
@@ -1211,10 +1199,6 @@ footer{
   .lineSpace{
     color: $g__fontColor;
     font-size: $g__fontSize;
-    margin-left: 24px;
-    @media #{$small} {
-      margin-left: 16px;
-    }
   }
 }
 .movie_wrap{
