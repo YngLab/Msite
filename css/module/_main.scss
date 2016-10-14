@@ -17,13 +17,16 @@
   float: left;
 }
 #indexTitle {
-  background-color: rgba(0, 0, 0, 0.3);
+  //background-color: rgba(0, 0, 0, 0.3);
   width: 60%;
-  border-top: 1px #fff solid;
-  border-bottom: 1px #fff solid;
-  color: #fff;
+  //border-top: 1px #fff solid;
+  //border-bottom: 1px #fff solid;
+  //color: #fff;
   position: absolute;
   text-align: center;
+  img {
+    width: 100%;
+  }
 }
 
 .topcap{
@@ -37,8 +40,8 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
     display: inline-block;
-    margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
-    //margin: -1px 2.75% -1px -1px;
+    margin-right: calc(100% * (32 / 1080) - 1px); 
+    //ウィンドウ幅1080px時の32pxからborderを引いている
     position: relative;
     .remaindays_future{
       background-color: $g__color-future;
@@ -60,8 +63,8 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-kids;
     display: inline-block;
-    margin: calc(1px - 1px) calc(100% * (32 / 1080) - 1px) calc(1px - 1px) calc(1px - 1px);
-    //margin: -1px 2.75% -1px -1px;
+    margin-right: calc(100% * (32 / 1080) - 1px);
+    //ウィンドウ幅1080px時の32pxからborderを引いている
     position: relative;
     .remaindays_kids{
       background-color: $g__color-kids;
@@ -80,10 +83,10 @@
     }
   }
   .latestBox_img{
-    height: 55.7522%;
+    height: calc(100% * (126 / 224)); //latestBoxが224px(borderは含めず)の時に126pxの比率をキープ
   }
   img{
-    height: 55.7522%;
+    height: calc(100% * (126 / 224)); //latestBoxが224px(borderは含めず)の時に126pxの比率をキープ
     width: 100%;
   }
   .eventText{
@@ -122,7 +125,7 @@
     bottom: -30px;
   }
   .flex-control-paging li a{
-    background-color: $g__fontColor;
+    background-color: #c9caca;
   }
 }
 
@@ -187,7 +190,7 @@
   float: left;
   font-weight: 400;
   text-align: center;
-  width: calc(16.6667% - 1px);
+  width: calc(100% / 6 - 1px); //6個のナビゲーション - 1pxの区切りの線
   a{
     display: block;
   }
@@ -208,12 +211,12 @@
   }
   .future_logo{
     border-bottom: solid 1px $g__color-future;
-    height: calc(100vw * (137 / 1080));
-    width: 100%;
+    height: calc(100vw * (137 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
+    width: calc(100% + 2px); //両端のborderも含める
     display: table;
     text-align: center;
     @media #{$small} {
-      height: calc(100vw * 2 * (137 / 1080));
+      height: calc(100vw * 2 * (137 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
     }
     .future_logo_img{
       // position: absolute;
@@ -223,15 +226,11 @@
       display: table-cell;
       vertical-align: middle;
       img{
-        width: calc(100% * (210 / 484));
+        width: calc(100% * (210 / 484)); //future_logo_imgが484pxの時に210pxの比率をキープ
       }
     }
   }
   .future_logo:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
     opacity:0.6;
   }
   .future_contents{
@@ -243,11 +242,9 @@
     }
   }
   .future_contents:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    @media #{$normal} {
+      opacity: .6;
+    }
   }
   .future_textbox{
     float: left;
@@ -281,11 +278,9 @@
     }
   }
   .future_information:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    @media #{$normal} {
+      opacity: .6;
+    }
   }
 }
 
@@ -303,12 +298,12 @@
   }
   .kids_logo{
     border-bottom: solid 1px $g__color-kids;
-    height: calc(100vw * (137 / 1080));
-    width: 100%;
+    height: calc(100vw * (137 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
+    width: calc(100% + 2px); //両端のborderも含める
     display: table;
     text-align: center;
     @media #{$small} {
-      height: calc(100vw * 2 * (137 / 1080));
+      height: calc(100vw * 2 * (137 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
     }
     .kids_logo_img{
       // position: absolute;
@@ -318,16 +313,14 @@
       display: table-cell;
       vertical-align: middle;
       img{
-        width: calc(100% * (250 / 484));
+        width: calc(100% * (250 / 484)); //kids_logo_imgが484pxの時に250pxの比率をキープ
       }
     }
   }
   .kids_logo:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    @media #{$normal} {
+      opacity: .6;
+    }
   }
   .kids_contents{
     border-bottom: solid 1px $g__color-kids;
@@ -338,11 +331,9 @@
     }
   }
   .kids_contents:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    @media #{$normal} {
+      opacity: .6;
+    }
   }
   .kids_textbox{
     float: left;
@@ -376,11 +367,9 @@
     }
   }
   .kids_information:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    @media #{$normal} {
+      opacity: .6;
+    }
   }
 }
 
@@ -435,7 +424,7 @@
     span:after{
       content: "\A";
       white-space: pre;
-    }
+    }//改行を無理矢理挿入するコードです。実はlayoutの関連リンクのところにもあります。
   }
 }
 
@@ -450,11 +439,9 @@ footer{
     }
   }
   .pagetop:hover{
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    @media #{$normal} {
+      opacity: .6;
+    }
   }
   .foot{
     @include clearfix;
@@ -479,6 +466,7 @@ footer{
         }
         @media #{$small} {
           //width: 320px;
+          color: $sp__fontColor;
           width: 100%;
           font-size: 12px;
           padding: 12px 0 12px 0;
@@ -524,7 +512,7 @@ footer{
   }
   .HMP_logo_vertical{
     position: absolute;
-    height: 67%;
+    height: 67%; //みらい館、キッズプラザよりも縦幅が大きい
     top: 0;
     right: 0;
     bottom: 0;
@@ -767,6 +755,13 @@ footer{
 
 .eventmenu{
   border-bottom: solid 1px $g__fontColor;
+  @media #{$normal} {
+    height: 25vw;
+    min-height: calc(1080px * .25);
+  }
+  @media #{$maximum} {
+    height: calc(1440 * .25px);
+  }
   @include clearfix;
 }
 
@@ -813,7 +808,8 @@ footer{
       margin-right: 40px;
     }
     @media #{$small} {
-      padding-bottom: calc(24px + 38px + 40px);
+      color: $sp__fontColor;
+      padding-bottom: calc(24px + 38px + 40px); //文章からボタンまで + ボタン + ボタンから次のイベント
     }
   }
 }
@@ -870,12 +866,19 @@ footer{
 }
 */
 
-.button, .rev_button{
-  border: 1px solid $dark__fontColor;
+.button, .rev_button, .panel{
+  //border: 1px solid $dark__fontColor;
   //color: $dark__fontColor;
   font-weight: 400;
   font-size: $link__fontSize;
-  height: 36px;
+    height: 36px;
+  //text-align: center;
+  //width: 88px;
+}
+
+.button, .rev_button{
+  border: 1px solid $dark__fontColor;
+  cursor: pointer;
   text-align: center;
   width: 88px;
 }
@@ -883,12 +886,20 @@ footer{
 .button{
   background: transparent;
   color: $dark__fontColor;
-  cursor: pointer;
+  //cursor: pointer;
 }
 
 .rev_button{
   background: $dark__fontColor;
   color: #ffffff;
+}
+
+.panel{
+  height: 32px;
+  //padding: 1px 13px;
+  .panelLabel{
+    line-height: 32px;
+  }
 }
 
 .subscription{
@@ -934,7 +945,7 @@ footer{
   @media #{$normal} {
     width: 25%;
     float: left;
-    margin-right: calc(100% * (75 / 1000));
+    margin-right: calc(100% * (75 / 1000)); //$normal時はウィンドウ幅1080p時のwrap1000pxと75pxの比率をキープ
   }
   @media #{$small} {
     .eventabout_title{
@@ -951,11 +962,7 @@ footer{
 
 .experiencemenu:hover{
   @media #{$normal} {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    opacity: .6;
   }
 }
 */
@@ -974,11 +981,7 @@ footer{
 
 .experiencemenu_FCH:hover, .experiencemenu_KPH:hover{
   @media #{$normal} {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    -moz-opacity:0.6;
-    -khtml-opacity: 0.6;
-    opacity:0.6;
+    opacity: .6;
   }
 }
 .exmenu_textBox_wrap{
@@ -1013,6 +1016,9 @@ footer{
     font-weight: 200;
     margin-top: 30px;
     line-height: 1.75em;
+    @media #{$small} {
+      color: $sp__fontColor;
+    }
   }
 }
 
@@ -1043,7 +1049,7 @@ footer{
     font-weight: 400;
     padding-left: 14px;
     padding-top: 17px;
-    width: 21.5%;
+    width: calc( 100% * (215 / 1000)); //はウィンドウ幅1080p時のwrap1000pxと215pxの比率をキープ
   }
   td{
     background: white;
@@ -1085,13 +1091,13 @@ footer{
 
 .info_table_FCH_label{
   color: $g__color-future;
-  border-bottom: dashed 1px $g__color-future;
+  border-bottom: solid 1px $g__color-future;
   padding-bottom: 3px;
 }
 
 .info_table_KPH_label{
   color: $g__color-kids;
-  border-bottom: dashed 1px $g__color-kids;
+  border-bottom: solid 1px $g__color-kids;
   padding-bottom: 3px;
 }
 
@@ -1103,45 +1109,52 @@ footer{
 .modal-content {
   // width: calc(90vh + 400px);
   height: 90%;
-  width: calc(90vh*1.4993);
+  width: calc(90vh * 16 / 9); //写真が16:9
   margin: 0 ;
-  background: #fff;
+  // background: #fff;
   // border: solid 1px $g__color-future;
   position: fixed;
   display: none;
   z-index: 2;
-  overflow: scroll;
+  overflow: hidden;
+  // ↓スライドショーのタイトル
   .exmenu_title_future{
-    width: 100%;
-    position: absolute;
-    font-size: $h3__fontSize;
-    color: $g__color-future;
-    font-weight: 400;
-    text-align: center;
-    top: 4%;
-    left: 0;
-    z-index: 10;
+    display: none;
+    // width: 100%;
+    // position: absolute;
+    // font-size: $h3__fontSize;
+    // color: $g__color-future;
+    // font-weight: 400;
+    // text-align: center;
+    // top: 4%;
+    // left: 0;
+    // z-index: 10;
   }
   .exmenu_title_kids{
-    width: 100%;
-    position: absolute;
-    font-size: $h3__fontSize;
-    color: $g__color-kids;
-    font-weight: 400;
-    text-align: center;
-    top: 4%;
-    left: 0;
-    z-index: 10;
+    display: none;
+    // width: 100%;
+    // position: absolute;
+    // font-size: $h3__fontSize;
+    // color: $g__color-kids;
+    // font-weight: 400;
+    // text-align: center;
+    // top: 4%;
+    // left: 0;
+    // z-index: 10;
+  }
+  #modal-close{
+    cursor: pointer;
   }
   #modal-close img{
     width: 20px;
+    height:20px;
     position: absolute;
     top: 4%;
     right: calc(5% - 10px);
     z-index: 10;
   }
-  #modal-close:hover{
-    opacity: 1;
+  #modal-close img:hover{
+    opacity: .6;
   }
   .exmenu_slide{
     //height: calc(100% - 115px);
@@ -1172,7 +1185,6 @@ footer{
   color: $title__color;
   font-size: $title__fontSize;
   font-weight: 500;
-
   .titleText{
     border-left: solid 1px $g__fontColor;
     line-height: 63px;
@@ -1195,22 +1207,27 @@ footer{
   >p{
     font-size: $g__fontSize;
   }
-  .lineSpace{
-    color: $g__fontColor;
-  }
   .KPHaddress{
     margin: 0 0 10px 24px;
+    @media #{$small} {
+      margin: 0 0 10px 16px;
+    }
   }
   .FCHaddress{
     margin-left: 24px;
+    @media #{$small} {
+      margin-left: 16px;
+    }
   }
 }
 
 .parking{
   .lineSpace{
-    color: $g__fontColor;
     font-size: $g__fontSize;
     margin-left: 24px;
+    @media #{$small} {
+      margin-left: 16px;
+    }
   }
 }
 .movie_wrap{
@@ -1231,9 +1248,6 @@ footer{
   .movie_youtube{
     width: 100%;
     height: 450px;
-    @media #{$small} {
-      height: 56.25vw;
-    }
   }
 }
 
@@ -1257,13 +1271,13 @@ p.company_about{//別部分がコーディング規約無視しているため�
           transition: all .4s;
   #drawer-toggle{
     position: fixed;
-    right: -1px;
+    right: -1px; //トグルの右に出る隙間を埋める
     top: 0;
-    width: 40px;
+    width: 41px; //隙間を埋めた分の1px分大きく
     height: 23px;
     padding-top: 17px;
     background-color: $g__fontColor;
-    z-index: 10;
+    z-index: 1000;
     span{
       margin: 0 auto;
       display: block;
@@ -1284,48 +1298,57 @@ p.company_about{//別部分がコーディング規約無視しているため�
 
 #wrapper.open {
   // position: fixed;
-  //クラス「open」が付いたら左に280px移動
+  //クラス「open」が付いたら左に75%移動
   -webkit-transform: translate3d(-75%, 0, 0);
      -moz-transform: translate3d(-75%, 0, 0);
           transform: translate3d(-75%, 0, 0);
-  // #drawer-toggle{
-  //   position: fixed;
-  //   right: -1px;
-  //   top: 0;
-  // }
+  #drawer-toggle{
+    position: fixed;
+    right: -1px; //トグルの右に出る隙間を埋める
+    top: 0;
+    .middle {
+    background: rgba(255, 255, 255, 0);
+    }
+    .top {
+      transform: rotate(-45deg) translateY(2px);
+    }
+    .bottom {
+      transform: rotate(45deg) translateY(-3px);
+    }
+  }
 }
 
 /* オーバーレイ表示をするためのCSS */
 .open .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    //親要素の上に表示するためz-indexを指定
-    z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  //親要素の上に表示するためz-indexを指定
+  z-index: 999;
 
-    //親要素一杯に広がるため縦横のサイズを100%に
-    width: 100%;
-    height: 100%;
+  //親要素一杯に広がるため縦横のサイズを100%に
+  width: 100%;
+  height: 100%;
 
-    //暗くするため黒の透明色を指定
-    background: rgba(0, 0, 0, .5);
+  //暗くするため黒の透明色を指定
+  background: rgba(0, 0, 0, .5);
 }
 
 #drawer {
-    position: fixed; //常に固定なのでfixed
-    top: 0;
-    right: -75%;  //初期状態では隠すため、横幅のサイズ分だけ画面外に移動する
-    width: 75%;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch; //スマホでのスクロールに慣性を付ける（デバイス限定
+  position: fixed; //常に固定なのでfixed
+  top: 0;
+  right: -75%; //初期状態では隠すため、横幅のサイズ分だけ画面外に移動する
+  width: 75%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; //スマホでのスクロールに慣性を付ける（デバイス限定
 
-    //アニメーション指定
-    -webkit-transition: all .4s;
-       -moz-transition: all .4s;
-         -o-transition: all .4s;
-            transition: all .4s;
+  //アニメーション指定
+  -webkit-transition: all .4s;
+     -moz-transition: all .4s;
+       -o-transition: all .4s;
+          transition: all .4s;
   .sp_language{
     width: 100%;
     height: 40px;
@@ -1339,34 +1362,40 @@ p.company_about{//別部分がコーディング規約無視しているため�
     }
   }
   .navBox{
-    height: calc((100% - 40px) - calc((100% - 40px) / 17));
-    margin-top: calc((100vh - 40px) /17);
+    //(100% - 40px) = 上部の灰色を除いた大きさ,calc((100% - 40px) / 17) = 一つのメニューの高さの半分
+    height: calc((100% - 40px) - calc((100% - 40px) / 17)); //最初のメニュー「ホーム」までのmarginのためその部分小さくしている
+    margin-top: calc((100vh - 40px) /17); //最初のメニュー「ホーム」までのmargin
     li{
-      padding-left: 30px;
-      line-height: calc((100vh - 40px) / (17 / 2));
+      border-bottom: 1px solid $g__fontColor;
+      padding-top: calc(((100vh - 40px) /17) - 0.875em); // (縦幅-上部灰色スペース)/1つのメニューの半分(17)-文字の縦幅の半分(0.875em)
+      margin: 0 30px calc(((100vh - 40px) /17) - 0.875em - 1px) 30px; //上記からborder1pxを引く
+      // line-height: calc((100vh - 40px) / (17 / 2));
+      line-height: 1.75em;
       display: block;
     }
     .gNav_sp{
       height: 75%;
       li{
-        height: calc(100% * (1/6));
+        // height: calc(100% * (1/6));
+        .gNav_sp_{
+          border-bottom: 1px solid $g__fontColor;
+          height: 70%;
+        }
       }
     }
     .pNav_sp{
       height: 25%;
       background-color: $bg__color;
-      li{
-        height: calc(100% * (1/2));
-      }
     }
   }
 }
 
 #drawer.open {
-    //クラス「open」が付いたら左へ280px移動（画面内へ移動し表示される）
-    -webkit-transform: translate3d(-100%, 0, 0);
-       -moz-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
+  -webkit-transform: translate3d(-100%, 0, 0);
+     -moz-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+  background-color: #ffffff;
+  z-index: 10000;
 }
 
 //↑加納↓高居
@@ -1437,6 +1466,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
   @media #{$normal} {
     float: left;
     width: calc(75% - (100% * (75 / 1000)));
+    //$normal時はウィンドウ幅1080px時のwrap1000pxからの75%からイベントについて書かれた幅とのマージンを引いている
   }
 }
 
@@ -1561,10 +1591,11 @@ p.company_about{//別部分がコーディング規約無視しているため�
     .accessProcess_sp{
       .from{
         border-bottom: dashed 1px $g__fontColor;
+        margin-right: 16px;
         padding-bottom: 3px;
       }
       .route{
-        margin: 20px 0 36px 0;
+        margin: 20px 16px 36px 0;
       }
     }
   }
@@ -1573,7 +1604,9 @@ p.company_about{//別部分がコーディング規約無視しているため�
 h2.concept_title{
   font-size: 48px;
   text-align: center;
-  margin: 100px auto;
+  //margin: 100px auto;
+  margin-bottom: 100px;
+  padding-top: 100px;
 }
 
 .concept{
@@ -1602,6 +1635,7 @@ h2.concept_title{
   @media #{$small} {
     float: none;
     max-width: 100%;
+    margin-top: 40px;
   }
 }
 
@@ -1633,5 +1667,17 @@ h2.concept_title{
   .concept_sub{
     @include clearfix;
     margin-top: 100px;
+  }
+}
+
+.logoApp_h2{
+  margin-top: 100px;
+  text-align: center;
+}
+
+.logoApp_send{
+  text-align: center;
+  a {
+    color: $g__fontColor;
   }
 }

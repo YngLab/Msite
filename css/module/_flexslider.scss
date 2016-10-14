@@ -198,22 +198,35 @@ html[xmlns] .flexslider .slides {
 .flex-pauseplay a.flex-play:before {
   content: '\f003';
 }
-.flex-control-nav {
+
+// 下の方にある四角いナビゲーション
+.modal-content .flex-control-nav {
+  display: none;
+  // width: 100%;
+  // position: absolute;
+  // bottom: 10px;
+  // text-align: center;
+  // z-index: 10;
+}
+
+.latestEvent .flex-control-nav {
   width: 100%;
   position: absolute;
-  bottom: 10px;
+  // bottom: 10px;
   text-align: center;
   z-index: 10;
 }
-.flex-control-nav li {
+
+.latestEvent .flex-control-nav li {
   margin: 0 15px;
   display: inline-block;
   zoom: 1;
   *display: inline;
 }
 
-.flex-control-nav li a{
-}
+
+// .flex-control-nav li a{
+// }
 
 .flex-control-paging li a {
   width: 10px;
@@ -232,11 +245,11 @@ html[xmlns] .flexslider .slides {
   border-radius: 20px;*/
 }
 .flex-control-paging li a:hover { 
-  background: #727171;
+  background: #9fa0a0;
   /*本来はfuture,kidsで色分けたい*/
 }
 .flex-control-paging li a.flex-active { 
-  background: #727171;
+  background: #9fa0a0;
   /*本来はfuture,kidsで色分けたい*/
   /*background: rgba(0, 0, 0, 0.9);*/
   cursor: default;
@@ -268,7 +281,7 @@ html[xmlns] .flexslider .slides {
   width: 100%;
   height: auto;
   display: block;
-  opacity: .7;
+  // opacity: .7;
   cursor: pointer;
   -moz-user-select: none;
   -webkit-transition: all 1s ease;

@@ -6,7 +6,7 @@ $(function(){
   if(w_size > 768 && w_size <= 1080){
     w_size = 1080;
   }
-  latestBox_size =  w_size * 226 / 1080;
+  latestBox_size =  w_size * 226 / 1080; //画面幅1080pxの時に226pxの比率をキープ
   institution_size = $(".future_contents").width() * .5;
   $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
   $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
@@ -19,18 +19,18 @@ $(function(){
     if(w_size > 768 && w_size <= 1080){
       w_size = 1080;
     }
-    latestBox_size =  w_size * 226 / 1080;
+    latestBox_size =  w_size * 226 / 1080; //画面幅1080pxの時に226pxの比率をキープ
     institution_size = $(".future_contents").width() * .5;
     $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
     $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
     $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
   });
   if(w_size <= 768){
-    latestBox_size =  w_size * .925925;
+    latestBox_size =  w_size * 728 / 768; //画面幅768pxの時に728pxの比率をキープ
     $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
     $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
     $(window).resize(function () {
-      latestBox_size =  w_size * .925925;
+      latestBox_size =  w_size * 728 / 768; //画面幅768pxの時に728pxの比率をキープ
       $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
       $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
     });
@@ -195,36 +195,39 @@ $(function(){
   //ボタンをタップ、クリックした時
   $button.on('touchstart click', function () {
     if(isOpen) {
+      drawerClose();
       $drawer.removeClass('open');
       $content.removeClass('open');
       isOpen = false;
     } else {
       $drawer.addClass('open');
       $content.addClass('open');
+      current_scrollY = $( window ).scrollTop(); 
+      $("html, body").css({
+        position: 'fixed',
+        width: '100%',
+        top: -1 * current_scrollY
+      });
+      $("#wrapper.open #drawer-toggle").css("top", current_scrollY);
       isOpen = true;
     }
-    // current_scrollY = $( window ).scrollTop(); 
-    // $("html, body").css({
-    //   position: 'fixed',
-    //   width: '100%',
-    //   top: -1 * current_scrollY
-    // });
-    // console.log("aaa");
-    // $("#wrapper.open #drawer-toggle").css("top", current_scrollY);
     return false; //親要素へのイベント伝播、aタグのURLクリックによる画面遷移を防ぐ
   });
 
   //コンテンツ部分をタップ、クリックした時
   $content.on('touchstart click', function (e) {
     e.stopPropagation(); //イベント伝播のみ阻止
-    // return false;
     if(isOpen) {
-      $drawer.removeClass('open');
-      $content.removeClass('open');
+      drawerClose();
       isOpen = false;
     }
-    $("#wrapper #drawer-toggle").css("top", 0);
-    $("body").removeAttr("style");
-    $("html, body").prop({scrollTop: current_scrollY});
   });
+  //ドロワーメニューを閉じる
+  function drawerClose(){
+    $drawer.removeClass('open');
+    $content.removeClass('open');
+    $("#wrapper #drawer-toggle").css("top", 0);
+    $("html, body").removeAttr("style");
+    $("html, body").prop({scrollTop: current_scrollY});
+  }
 });
