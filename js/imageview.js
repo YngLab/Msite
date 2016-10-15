@@ -26,6 +26,7 @@ Block = function(x, y, size) {
 }
 var blockArr = new Array();
 $(window).on('resize', resizeWindow);
+
 function resizeWindow() {
 	fullWidth = imageArea.width();
 	if(fullWidth>768 && fullWidth<1080) {
@@ -46,6 +47,7 @@ function resizeWindow() {
 	var minBlockSize;
 	var imageCount=1;
 	var indexTitle =$('#indexTitle');
+	var indexTitle0 =$('#indexTitle0');
 	if(device=='pc') {
 		minBlockSize = fullWidth*0.125;
 		document.getElementById('imageArea').style.width = '100%';
@@ -56,11 +58,16 @@ function resizeWindow() {
 			document.getElementById('image'+i).style.width = minBlockSize*blockArr[i-1].size+'px';
 			document.getElementById('image'+i).style.height = minBlockSize*blockArr[i-1].size+'px';
 		}
-		document.getElementById('indexTitle').style.width = minBlockSize*3 + 'px';
+		document.getElementById('indexTitle0').style.width = minBlockSize*2 + 'px';
+		document.getElementById('indexTitle0').style.fontSize = fullWidth/32.0 + 'px';
+		document.getElementById('indexTitle0').style.left = fullWidth/4 + 'px';
+		document.getElementById('indexTitle0').style.top = fullWidth/8 + 'px';
+
+		document.getElementById('indexTitle').style.width = minBlockSize*2 + 'px';
 		document.getElementById('indexTitle').style.fontSize = fullWidth/32.0 + 'px';
-		document.getElementById('indexTitle').style.left = fullWidth/2-indexTitle.width()/2 + 'px';
-		document.getElementById('indexTitle').style.top = fullWidth/4-indexTitle.height()/2 + 'px';
-	}
+		document.getElementById('indexTitle').style.left = fullWidth/2 + 'px';
+		document.getElementById('indexTitle').style.top = fullWidth/8 + 'px';
+}
 	else if(device=='sp') {
 		minBlockSize = fullWidth*0.25;
 		document.getElementById('imageArea').style.width = '100%';
@@ -71,13 +78,21 @@ function resizeWindow() {
 			document.getElementById('image'+i).style.width = minBlockSize*blockArr[i-1].size+'px';
 			document.getElementById('image'+i).style.height = minBlockSize*blockArr[i-1].size+'px';
 		}
-		document.getElementById('indexTitle').style.width = minBlockSize*3 + 'px';
+		document.getElementById('indexTitle0').style.width = minBlockSize*2 + 'px';
+		document.getElementById('indexTitle0').style.fontSize = fullWidth/15.0 + 'px';
+		document.getElementById('indexTitle0').style.left = 0 + 'px';
+		document.getElementById('indexTitle0').style.top = minBlockSize*2 + 'px';
+/*	      document.getElementById('indexTitle0').style.top = fullWidth*0.75-indexTitle0.height()/2 + 'px';*/
+
+	 	document.getElementById('indexTitle').style.width = minBlockSize*2 + 'px';
 		document.getElementById('indexTitle').style.fontSize = fullWidth/15.0 + 'px';
-		document.getElementById('indexTitle').style.left = fullWidth/2-indexTitle.width()/2 + 'px';
-		document.getElementById('indexTitle').style.top = fullWidth*0.75-indexTitle.height()/2 + 'px';
+		document.getElementById('indexTitle').style.left = fullWidth/2 + 'px';
+		document.getElementById('indexTitle').style.top = minBlockSize*2 + 'px';
+/*		document.getElementById('indexTitle').style.top = fullWidth*0.75-indexTitle.height()/2 + 'px';*/
 	}
 
 }
+
 
 function shuffleArray(array) {
   var n = array.length, t, i;
