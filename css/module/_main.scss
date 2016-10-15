@@ -211,12 +211,12 @@
   }
   .future_logo{
     border-bottom: solid 1px $g__color-future;
-    height: calc(100vw * (137 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
+    height: calc(100vw * (180 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
     width: calc(100% + 2px); //両端のborderも含める
     display: table;
     text-align: center;
     @media #{$small} {
-      height: calc(100vw * 2 * (137 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
+      height: calc(100vw * 2 * (180 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
     }
     .future_logo_img{
       // position: absolute;
@@ -226,7 +226,7 @@
       display: table-cell;
       vertical-align: middle;
       img{
-        width: calc(100% * (210 / 484)); //future_logo_imgが484pxの時に210pxの比率をキープ
+        width: calc(100% * (252 / 484)); //future_logo_imgが484pxの時に210pxの比率をキープ
       }
     }
   }
@@ -298,12 +298,13 @@
   }
   .kids_logo{
     border-bottom: solid 1px $g__color-kids;
-    height: calc(100vw * (137 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
+    // height: calc(100vw * (137 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
+    height: calc(100vw * (180 / 1080));
     width: calc(100% + 2px); //両端のborderも含める
     display: table;
     text-align: center;
     @media #{$small} {
-      height: calc(100vw * 2 * (137 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
+      height: calc(100vw * 2 * (180 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
     }
     .kids_logo_img{
       // position: absolute;
@@ -313,7 +314,7 @@
       display: table-cell;
       vertical-align: middle;
       img{
-        width: calc(100% * (250 / 484)); //kids_logo_imgが484pxの時に250pxの比率をキープ
+        width: calc(100% * (300 / 484)); //kids_logo_imgが484pxの時に250pxの比率をキープ
       }
     }
   }
@@ -544,8 +545,12 @@ footer{
   line-height: 1.75em;
 }
 
+.facility_detail_sp{
+  line-height: 1.75em;
+}
+
 .facility_explain_sp{
-  font-size: $g__fontSize;
+  font-size: $h3__fontSize;
   line-height: 1.75em;
 }
 
@@ -1011,7 +1016,6 @@ footer{
     margin-top: 19px;
   }
   .exmenu_detail{
-    font-size: $g__fontSize;
     color: $g__fontColor;
     font-weight: 200;
     margin-top: 30px;
