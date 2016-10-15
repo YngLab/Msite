@@ -42,3 +42,15 @@ $accordion__border: #dddddd;
     width: 100%;
   }
 }
+
+@mixin only_pc{
+  @media #{$small} {
+    display: none;
+  }
+}
+
+@mixin only_sp{
+  @media #{$normal} {
+    display: none;
+  }
+}

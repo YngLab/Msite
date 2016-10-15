@@ -577,10 +577,8 @@ footer{
   p{
     color: $h2__color;
     font-size: $h2__fontSize;
-    margin-left: 24px;
     @media #{$small} {
       font-size: 18px;
-      margin-left: 16px;
     }
   }
   @media #{$small} {
@@ -617,7 +615,7 @@ footer{
     .headingTitle{
       color: $h2__color;
       font-size: $h2__fontSize;
-      margin-left: 12px;
+      //margin-left: 12px;
       float: left;
     }
   }
@@ -627,7 +625,6 @@ footer{
     p{
       color: $h2__color;
       font-size: 18px;
-      margin-left: 16px;
     }
   }
 }
@@ -637,12 +634,12 @@ footer{
   p{
     color: $h2__color;
     font-size: $h2__fontSize;
-    margin-left: 24px;
+    //margin-left: 24px;
   }
   @media #{$small} {
     padding: 40px 0 27px 0;
     p{
-      margin-left: 16px;
+      //margin-left: 16px;
       font-size: 18px;
     }
   }
@@ -656,7 +653,7 @@ footer{
   line-height: 1.75em;
   @include smallW;
   @media #{$small} {
-    margin: 0 0 20px 18px;
+    margin: 0 0 20px 0;
   }
   li{
     display: inline;
@@ -683,7 +680,7 @@ footer{
   line-height: 1.75em;
   @include smallW;
   @media #{$small} {
-    margin: 0 0 20px 18px;
+    margin: 0 0 20px 0;
   }
   li{
     display: inline;
@@ -785,7 +782,7 @@ footer{
   position: relative;
   @include clearfix;
   @media #{$small} {
-    margin: 24px 20px 0px 20px;
+    margin: 24px calc(100% * 20 / 768) 0px calc(100% * 20 / 768);
   }
   .event_title_future{
     font-size: $h2__fontSize;
@@ -913,7 +910,7 @@ footer{
   position: absolute;
   @media #{$small} {
     bottom: 40px;
-    left: 20px;
+    left: calc(100% * 20 / 768);
   }
 }
 
@@ -1212,26 +1209,13 @@ footer{
     font-size: $g__fontSize;
   }
   .KPHaddress{
-    margin: 0 0 10px 24px;
-    @media #{$small} {
-      margin: 0 0 10px 16px;
-    }
-  }
-  .FCHaddress{
-    margin-left: 24px;
-    @media #{$small} {
-      margin-left: 16px;
-    }
+    margin-bottom: 10px;
   }
 }
 
 .parking{
   .lineSpace{
     font-size: $g__fontSize;
-    margin-left: 24px;
-    @media #{$small} {
-      margin-left: 16px;
-    }
   }
 }
 .movie_wrap{
@@ -1605,39 +1589,87 @@ p.company_about{//別部分がコーディング規約無視しているため�
   }
 }
 
-h2.concept_title{
-  font-size: 48px;
-  text-align: center;
-  //margin: 100px auto;
-  margin-bottom: 100px;
-  padding-top: 100px;
+.center_line{
+  background: $g__fontColor;
+  float: left;
+  height: 1761px;
+  margin-left: calc(50% - 2.5px);
+  //position: relative;
+  width: 5px;
+  @include only_pc;
 }
 
-.concept{
-  font-size: 16px;
-  margin: 0 auto;
-  max-width: 960px;
+h2.concept_title{
+  //font-size: 48px;
+  text-align: center;
+  @media #{$normal} {
+    font-size: 54px;
+    //margin-bottom: 100px;
+    //margin-bottom: 20px;
+    //padding-top: 100px;
+    padding-top: 50px;
+  }
+  @media #{$small} {
+    font-size: 48px;
+    margin-bottom: 100px;
+    padding-top: 100px;
+  }
+}
+
+.concept, .concept_img, .concept_text{
+  //font-size: 16px;
+  font-size: 18px;
   line-height: 1.8em;
-  h3{
+  //margin: 20px auto 10px auto;
+  max-width: 960px;
+  /*h3{
     text-align: center;
     margin-bottom: 25px;
     @media #{$small} {
       display: none;
     }
+  }*/
+  @media #{$normal} {
+    width: calc(100% / 3 * 2);
   }
   @media #{$small} {
+    font-size: 16px;
     margin: 10px;
   }
 }
 
+.concept{
+  @media #{$normal} {
+    margin: 20px auto 10px auto;
+    text-align: center;
+  }
+}
+
+.center_circle, .concept_img, .concept_text{
+  @media #{$normal} {
+    left: 50%;
+    right: 50%;
+    position: absolute;
+  }
+}
+
+.center_circle{
+  height: 61px;
+  transform: translate(-50%, 0);
+  width: 61px;
+  @include only_pc;
+}
+
 .concept_img{
-  max-width: 45%;
-  float: left;
+  //max-width: 45%;
+  //max-width: calc(455px * 457.5 / 423); //concept_textのmax_width * カンプ上のオドロクチカラ画像の大きさ / イラレ上のconcept_textのwidth
+  max-width: 457.5px; //↑が理想だが、現状center_lineが絶対値なのでこちらも絶対値である必要がある
+  //float: left;
   img{
     width: 100%;
   }
   @media #{$small} {
-    float: none;
+    //float: none;
     max-width: 100%;
     margin-top: 40px;
   }
@@ -1645,33 +1677,61 @@ h2.concept_title{
 
 .concept_text{
   @media #{$normal}{
-    max-width: 45%;
-    float: left;
-    p{
-      margin-top: calc(960px / 9 * 2 - 16px * 1.5 );
+    //float: left;
+    //margin-top: calc(960px / 9 * 2 - 16px * 1.5);
+    //max-width: 45%;
+    max-width: 455px; //イラレだと423px、とあるが35pxの文字13個分は物理的に格納できないので増やした
+    h3{
+      font-size: 35px; //ここフォントサイズを35pxに指定しているのに領域が32pxしか確保されない
+      font-weight: 400;
+      line-height: 1em; //なのでこの一見意味がなさそうなクソコードが必要になる
+      padding: 13px 0;
     }
+    /*p{
+      margin-top: calc(960px / 9 * 2 - 16px * 1.5);
+    }*/
   }
   @media #{$small} {
-    float: none;
+    //float: none;
     max-width: 100%;
+    h3{
+      display: none;
+    }
   }
 }
 
 @media #{$normal}{
-  .concept_text-left,
+  .concept_first, .concept_second, .concept_finally{
+    position: relative;
+  }
+  .concept_first{
+    margin-top: calc((457.5px / 2) + 114px - (61px / 2)); //オドロクチカラ画像の半径 + 加納が測った直上の要素との距離 - ◯の半径
+  }
+  .concept_second{
+    margin-top: calc((114px + 457.5px) + (457.5px / 2) + 80px - (61px / 2));
+  }
+  .concept_finally{
+    margin-top: calc((114px + 80px + 457.5px * 2) + (457.5px / 2) + 80px - (61px / 2));
+  }
+  .concept_text-left{
+    //float: left;
+    transform: translate(calc(-100% - 42px), 0);
+  }
+  .concept_text-right{
+    transform: translate(42px, 0);
+  }
   .concept_img-left{
-    float: left;
+    transform: translate(calc(-100% - 42px), calc(-50% + (61px * 0.5)));
   }
-
-  .concept_text-right,
   .concept_img-right{
-    float: right;
-    margin-left: 10%;
+    //float: right;
+    //margin-left: 10%;
+    transform: translate(42px, calc(-50% + (61px * 0.5)));
   }
-  .concept_sub{
+  /*.concept_sub{
     @include clearfix;
-    margin-top: 100px;
-  }
+    //margin-top: 100px;
+  }*/
 }
 
 .logoApp_h2{
