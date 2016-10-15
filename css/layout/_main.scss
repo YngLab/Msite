@@ -654,3 +654,18 @@ footer{
     }
   }
 }
+
+.HMP_movie{
+  text-align: center;
+  h3{
+    padding: 50px 0 30px 0;
+  }
+  .movie_youtube{
+    height: 800px / 16 * 9;
+    width: 800px;
+    @include smallW;
+    @media #{$small} {
+      height: 100vw * 728 / 768 / 16 * 9;
+    }
+  }
+}

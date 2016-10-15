@@ -14,7 +14,7 @@ $cap__fontSize: 13px;
 $link__fontSize: 15px;
 $link__fontColor: #595757;
 $dark__fontColor: #727171;
-
+$sp__fontColor: #727171;
 $bg__color: #f7f8f8;
 
 $g__color-kids: #8fc31f;
@@ -39,5 +39,17 @@ $accordion__border: #dddddd;
 @mixin smallW{
   @media #{$small} {
     width: 100%;
+  }
+}
+
+@mixin only_pc{
+  @media #{$small} {
+    display: none;
+  }
+}
+
+@mixin only_sp{
+  @media #{$normal} {
+    display: none;
   }
 }
