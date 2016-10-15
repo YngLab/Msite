@@ -138,8 +138,15 @@
   }
 }
 
+header a{
+  color: $dark__fontColor;
+}
+
 .nav_TOP{
   background-color: $boxcolor;
+  a{
+    color: $dark__fontColor;
+  }
 }
 
 .gNav_container{

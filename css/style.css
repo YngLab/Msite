@@ -1048,8 +1048,15 @@ footer:after {
   }
 }
 
+header a {
+  color: #727171;
+}
+
 .nav_TOP {
   background-color: #ffffff;
+}
+.nav_TOP a {
+  color: #727171;
 }
 
 .gNav_container {
