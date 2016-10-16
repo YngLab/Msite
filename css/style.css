@@ -937,6 +937,14 @@ footer:after {
   width: 100%;
 }
 
+.index_openExplain {
+  font-size: 32px;
+  line-height: 1.75em;
+  margin: 32px 0;
+  text-align: center;
+  color: #3e3a39;
+}
+
 .topcap {
   text-align: center;
 }
