@@ -29,6 +29,45 @@
   }
 }
 
+.indexTop_logo{
+  opacity: 1 !important;//コーディング規約違反
+  position: absolute;
+  height: 25vw;//縦・横幅1/4を維持
+  width: 25%;
+  top: 12.5vw;//小さい画像１つ分あける
+  z-index: 50;
+  img{
+    height: 70%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  @media #{$small} {
+    height: 50vw;
+    width: 50%;
+    top: 50vw;
+  }
+}
+
+.indexTop_logo-future{
+  left: 25%;
+  background-color: $g__color-future;
+  @media #{$small} {
+    left: 0;
+  }
+}
+
+.indexTop_logo-kids{
+  right: 25%;
+  background-color: $g__color-kids;
+  @media #{$small} {
+    right: 0;
+  }
+}
+
 .topcap{
   text-align: center;
 }

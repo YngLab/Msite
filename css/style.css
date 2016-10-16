@@ -942,6 +942,51 @@ footer:after {
   width: 100%;
 }
 
+.indexTop_logo {
+  opacity: 1 !important;
+  position: absolute;
+  height: 25vw;
+  width: 25%;
+  top: 12.5vw;
+  z-index: 50;
+}
+.indexTop_logo img {
+  height: 70%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  .indexTop_logo {
+    height: 50vw;
+    width: 50%;
+    top: 50vw;
+  }
+}
+
+.indexTop_logo-future {
+  left: 25%;
+  background-color: #f39800;
+}
+@media screen and (max-width: 768px) {
+  .indexTop_logo-future {
+    left: 0;
+  }
+}
+
+.indexTop_logo-kids {
+  right: 25%;
+  background-color: #8fc31f;
+}
+@media screen and (max-width: 768px) {
+  .indexTop_logo-kids {
+    right: 0;
+  }
+}
+
 .topcap {
   text-align: center;
 }
