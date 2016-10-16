@@ -942,8 +942,14 @@ footer:after {
   width: 100%;
 }
 
+#logoArea a {
+  transition: .2s;
+}
+#logoArea a:hover {
+  opacity: .8;
+}
+
 .indexTop_logo {
-  opacity: 1 !important;
   position: absolute;
   height: 25vw;
   width: 25%;

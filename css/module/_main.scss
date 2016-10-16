@@ -29,8 +29,16 @@
   }
 }
 
+#logoArea{
+  a{
+    transition: .2s;
+    &:hover{
+      opacity: .8;
+    }
+  }
+}
+
 .indexTop_logo{
-  opacity: 1 !important;//コーディング規約違反
   position: absolute;
   height: 25vw;//縦・横幅1/4を維持
   width: 25%;
