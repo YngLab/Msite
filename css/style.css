@@ -59,6 +59,11 @@ html, input, textarea {
     color: #727171;
   }
 }
+@media screen and (max-width: 768px) {
+  html, input, textarea {
+    font-size: 16px;
+  }
+}
 
 header {
   color: #9fa0a0;
@@ -945,6 +950,63 @@ footer:after {
   color: #3e3a39;
 }
 
+#logoArea a {
+  transition: .2s;
+}
+#logoArea a:hover {
+  opacity: .8;
+}
+
+.indexTop_logo {
+  position: absolute;
+  height: 25vw;
+  width: 25%;
+  top: 12.5vw;
+  z-index: 50;
+}
+.indexTop_logo img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  .indexTop_logo {
+    height: 50vw;
+    width: 50%;
+    top: 50vw;
+  }
+}
+
+.indexTop_logo-future {
+  left: 25%;
+  background-color: #f39800;
+}
+@media screen and (max-width: 768px) {
+  .indexTop_logo-future {
+    left: 0;
+  }
+}
+.indexTop_logo-future img {
+  top: 2%;
+  height: 58%;
+}
+
+.indexTop_logo-kids {
+  right: 25%;
+  background-color: #8fc31f;
+}
+@media screen and (max-width: 768px) {
+  .indexTop_logo-kids {
+    right: 0;
+  }
+}
+.indexTop_logo-kids img {
+  top: 0;
+  height: 60%;
+}
+
 .topcap {
   text-align: center;
 }
@@ -1051,8 +1113,15 @@ footer:after {
   }
 }
 
+header a {
+  color: #727171;
+}
+
 .nav_TOP {
   background-color: #ffffff;
+}
+.nav_TOP a {
+  color: #727171;
 }
 
 .gNav_container {
@@ -1133,14 +1202,14 @@ footer:after {
 }
 .future_entrance .future_logo {
   border-bottom: solid 1px #f39800;
-  height: calc(100vw * (137 / 1080));
+  height: calc(100vw * (180 / 1080));
   width: calc(100% + 2px);
   display: table;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
   .future_entrance .future_logo {
-    height: calc(100vw * 2 * (137 / 1080));
+    height: calc(100vw * 2 * (180 / 1080));
   }
 }
 .future_entrance .future_logo .future_logo_img {
@@ -1148,7 +1217,7 @@ footer:after {
   vertical-align: middle;
 }
 .future_entrance .future_logo .future_logo_img img {
-  width: calc(100% * (210 / 484));
+  width: calc(100% * (252 / 484));
 }
 .future_entrance .future_logo:hover {
   opacity: 0.6;
@@ -1220,14 +1289,14 @@ footer:after {
 }
 .kids_entrance .kids_logo {
   border-bottom: solid 1px #8fc31f;
-  height: calc(100vw * (137 / 1080));
+  height: calc(100vw * (180 / 1080));
   width: calc(100% + 2px);
   display: table;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
   .kids_entrance .kids_logo {
-    height: calc(100vw * 2 * (137 / 1080));
+    height: calc(100vw * 2 * (180 / 1080));
   }
 }
 .kids_entrance .kids_logo .kids_logo_img {
@@ -1235,7 +1304,7 @@ footer:after {
   vertical-align: middle;
 }
 .kids_entrance .kids_logo .kids_logo_img img {
-  width: calc(100% * (250 / 484));
+  width: calc(100% * (300 / 484));
 }
 @media screen and (min-width: 769px) {
   .kids_entrance .kids_logo:hover {
@@ -1465,8 +1534,12 @@ footer .copyright p {
   line-height: 1.75em;
 }
 
+.facility_detail_sp {
+  line-height: 1.75em;
+}
+
 .facility_explain_sp {
-  font-size: 14px;
+  font-size: 21px;
   line-height: 1.75em;
 }
 
@@ -1995,7 +2068,6 @@ footer .copyright p {
   margin-top: 19px;
 }
 .exmenu_textBox .exmenu_detail {
-  font-size: 14px;
   color: #9fa0a0;
   font-weight: 200;
   margin-top: 30px;
