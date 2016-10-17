@@ -1831,12 +1831,17 @@ footer .copyright p {
   font-weight: 400;
   margin-bottom: 24px;
 }
+.event_textBox .event_detail {
+  width: calc(100% - 300px);
+}
+.event_textBox .event_detail-short {
+  width: calc(100% - 450px);
+}
 .event_textBox .event_detail, .event_textBox .event_detail-short {
   font-size: 14px;
   color: #9fa0a0;
   font-weight: 200;
   line-height: 1.75em;
-  width: calc(100% - 300px);
 }
 @media screen and (max-width: 768px) {
   .event_textBox .event_detail, .event_textBox .event_detail-short {
@@ -1853,14 +1858,6 @@ footer .copyright p {
   .event_textBox .event_detail, .event_textBox .event_detail-short {
     color: #727171;
     padding-bottom: calc(24px + 38px + 40px);
-  }
-}
-.event_textBox .event_detail-short {
-  width: calc(100% - 450px);
-}
-@media screen and (max-width: 768px) {
-  .event_textBox .event_detail-short {
-    width: 100%;
   }
 }
 
