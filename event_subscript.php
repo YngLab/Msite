@@ -8,7 +8,7 @@ if(!$_GET){
 <meta charset = "utf-8">
 <meta name = "viewport" content="width=device-width,initial-scale=1.0" />
 <meta name = "keywords" content="はこだてみらいプロジェクト,はこだてみらい館,はこだてキッズプラザ,函館,未来館,future center,kids plaza,施設">
-<meta name = "description" content="はこだてみらいプロジェクトは、オドロクチカラを育む施設「はこだてみらい館」「はこだてキッズプラザ」を中心に、函館の街の明るい未来につながるアイデアをみんなで実現するプロジェクトです。">
+<meta name = "description" content="オドロクチカラを育む施設「はこだてみらい館」「はこだてキッズプラザ」を通して、函館の街の明るい未来につながるアイデアをみんなで実現するプロジェクトが「はこだてみらいプロジェクト」です。">
 <title>はこだてみらいプロジェクト</title>
 <link rel = "stylesheet" href="css/style.css">
 <link rel = "shortcut icon" href="images/common/hmp.ico">
@@ -42,13 +42,13 @@ if(!$_GET){
             <a href="event.html">イベント</a>
           </li>
           <li class = "gNavli">
-            <a href="HMP.html">みらいプロジェクト</a>
-          </li>
-          <li class = "gNavli">
             <a href="FCH.html">はこだてみらい館</a>
           </li>
           <li class = "gNavli">
             <a href="KPH.html">はこだてキッズプラザ</a>
+          </li>
+          <li class = "gNavli">
+            <a href="HMP.html">みらいプロジェクト</a>
           </li>
         </div>
       </div>
@@ -234,9 +234,9 @@ if(!$_GET){
       <a href = "index.html"><li>ホーム</li></a>
       <a href = "concept.html"><li>コンセプト</li></a>
       <a href = "event.html"><li>イベント</li></a>
-      <a href = "HMP.html"><li>みらいプロジェクト</li></a>
       <a href = "FCH.html"><li>はこだてみらい館</li></a>
       <a href = "KPH.html"><li>はこだてキッズプラザ</li></a>
+      <a href = "HMP.html"><li>みらいプロジェクト</li></a>
     </ul>
     <ul class = "pNav_sp">
       <a href = "access.html"><li>アクセス</li></a>
