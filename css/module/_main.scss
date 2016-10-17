@@ -871,7 +871,7 @@ footer{
     line-height: 1.75em;
     //float: right;
     //margin-right: 40px;
-    width: calc(100% - 300px);
+    width: calc(100% - 300px); //この300pxはいったい何者なんだ・・・
     @include smallW;
     @media #{$normal} {
       float: right;
