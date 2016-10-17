@@ -1194,14 +1194,14 @@ header a {
   filter: alpha(opacity=100);
 }
 .future_entrance .openclose {
-  background-color: #f39800;
-  color: #ffffff;
+  color: #f39800;
   height: 26px;
   line-height: 26px;
   text-align: center;
 }
 .future_entrance .future_logo {
   border-bottom: solid 1px #f39800;
+  background-color: #f39800;
   height: calc(100vw * (180 / 1080));
   width: calc(100% + 2px);
   display: table;
@@ -1281,14 +1281,14 @@ header a {
   filter: alpha(opacity=100);
 }
 .kids_entrance .openclose {
-  background-color: #8fc31f;
   text-align: center;
-  color: #ffffff;
+  color: #8fc31f;
   height: 26px;
   line-height: 26px;
 }
 .kids_entrance .kids_logo {
   border-bottom: solid 1px #8fc31f;
+  background-color: #8fc31f;
   height: calc(100vw * (180 / 1080));
   width: calc(100% + 2px);
   display: table;

@@ -271,14 +271,14 @@ header a{
     filter: alpha(opacity=100);
   }
   .openclose{
-    background-color: $g__color-future;
-    color: #ffffff;
+    color: $g__color-future;
     height: 26px;
     line-height: 26px;
     text-align: center;
   }
   .future_logo{
     border-bottom: solid 1px $g__color-future;
+    background-color: $g__color-future;
     height: calc(100vw * (180 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
     width: calc(100% + 2px); //両端のborderも含める
     display: table;
@@ -358,14 +358,14 @@ header a{
     filter: alpha(opacity=100);
   }
   .openclose{
-    background-color: $g__color-kids;
     text-align: center;
-    color: #ffffff;
+    color: $g__color-kids;
     height: 26px;
     line-height: 26px;
   }
   .kids_logo{
     border-bottom: solid 1px $g__color-kids;
+    background-color: $g__color-kids;
     // height: calc(100vw * (137 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
     height: calc(100vw * (180 / 1080));
     width: calc(100% + 2px); //両端のborderも含める
