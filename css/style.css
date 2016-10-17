@@ -1889,6 +1889,11 @@ footer .copyright p {
 .event_textBox .event_detail-short {
   width: calc(100% - 450px);
 }
+@media screen and (max-width: 768px) {
+  .event_textBox .event_detail-short {
+    width: 100%;
+  }
+}
 
 .event_point {
   line-height: 1.75em;

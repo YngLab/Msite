@@ -907,6 +907,7 @@ footer{
   }
   .event_detail-short{
     width: calc(100% - 450px); //event_datail-shortまでどのイベントでも左に450pxのmarginを取る
+    @include smallW;
   }
 }
 .event_point{
