@@ -875,6 +875,7 @@ footer{
     color: $g__fontColor;
     font-weight: 200;
     line-height: 1.75em;
+    overflow-x: hidden;
     //float: right;
     //margin-right: 40px;
     @include smallW;
@@ -885,6 +886,16 @@ footer{
     @media #{$small} {
       color: $sp__fontColor;
       padding-bottom: calc(24px + 38px + 40px); //文章からボタンまで + ボタン + ボタンから次のイベント
+    }
+    .eventDetail_picBox{
+      margin-right: -20px;
+      @include clearfix;
+      .eventDetail_pic{
+        width: calc((100% / 3) - 20px);
+        margin-right: 20px;
+        display: block;
+        float: left;
+      }
     }
   }
 }
