@@ -70,6 +70,7 @@ if(!$_GET){
         }else if($_GET[id] == 2){echo '"images/sq_event2_FCH.jpg" alt = "トークセッション"';
         }else if($_GET[id] == 3){echo '"images/sq_event3_FCH.jpg"  alt = "井上涼さんアニメーションワークショップ"';
         }else if($_GET[id] == 4){echo '"images/sq_event2_KPH.jpg"  alt = "Whiteaフリースタイルパフォーマンス"';
+        }else if($_GET[id] == 5){echo '"images/sq_event4_FCH.jpg" alt = "親子ワークショップ「光を感じよう！」"';
         }
         ?>>
         <p class = "FCHcolor eventabout_title">
@@ -78,6 +79,7 @@ if(!$_GET){
         }else if($_GET[id] == 2){echo 'オドロクチカラ トークセッション';
         }else if($_GET[id] == 3){echo '井上涼さんアニメーションワークショップ';
         }else if($_GET[id] == 4){echo 'Whiteaフリースタイルパフォーマンス';
+        }else if($_GET[id] == 5){echo '親子ワークショップ「光を感じよう！~見える？見えない？光と色~」';
         }
         ?></p>
         <div class = "event_point">
@@ -90,6 +92,7 @@ if(!$_GET){
                 }else if($_GET[id] == 2){echo '10月15日(土)　10:30-12:00';
                 }else if($_GET[id] == 3){echo '10月16日(日)　10:30-16:30';
                 }else if($_GET[id] == 4){echo '10月16日(日)　13:00-14:00';
+                }else if($_GET[id] == 5){echo '10月23日(日) 10:30-12:30(1回目)14:00-16:00(2回目)';
                 }
                 ?></td>
             </tr>
@@ -101,6 +104,7 @@ if(!$_GET){
                 }else if($_GET[id] == 2){echo 'はこだてみらい館';
                 }else if($_GET[id] == 3){echo 'はこだてみらい館';
                 }else if($_GET[id] == 4){echo 'はこだてキッズプラザ';
+                }else if($_GET[id] == 5){echo 'はこだてみらい館';
                 }
                 ?>
               </td>
@@ -113,6 +117,7 @@ if(!$_GET){
                 }else if($_GET[id] == 2){echo '無料';
                 }else if($_GET[id] == 3){echo '無料';
                 }else if($_GET[id] == 4){echo '無料';
+                }else if($_GET[id] == 5){echo '300円(別途入場料がかかります)';
                 }
                 ?>
               </td>
@@ -125,6 +130,7 @@ if(!$_GET){
                 }else if($_GET[id] == 2){echo '子どもから大人まで';
                 }else if($_GET[id] == 3){echo '【第1部】小学生<br>【第2部、第3部】子どもから大人まで';
                 }else if($_GET[id] == 4){echo '子どもから大人まで';
+                }else if($_GET[id] == 5){echo '小学生～中学生 ※保護者同伴必須';
                 }
                 ?>
               </td>
@@ -142,6 +148,14 @@ if(!$_GET){
                 <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
               </td>
             </tr>
+             <!-- 電話番号 -->
+            <tr>
+              <th>電話番号</th>
+              <td>
+                <input type = "tel" name ="tel" maxlength = "255" placeholder="0123-45-6789 or 090-XXXX-XXXX" required>
+              </td>
+            </tr>
+            <!-- ここまで -->
             <tr>
               <th>メールアドレス</th>
               <td>
@@ -178,6 +192,12 @@ if(!$_GET){
             <p>お名前</p>
             <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎">
           </div>
+          <!-- 電話番号 -->
+          <div class = "inputBox_sp">
+            <p>電話番号</p>
+            <input type = "tel" name ="email" maxlength = "255" placeholder="0123-45-6789 or 090-XXXX-XXXX" required>
+          </div>
+          <!-- ここまで -->
           <div class = "inputBox_sp">
             <p>メールアドレス</p>
             <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
