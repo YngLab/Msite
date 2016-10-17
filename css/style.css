@@ -956,6 +956,15 @@ footer:after {
 #logoArea a:hover {
   opacity: .8;
 }
+@media screen and (max-width: 768px) {
+  #logoArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
 
 .indexTop_logo {
   position: absolute;
@@ -976,6 +985,10 @@ footer:after {
     height: 50vw;
     width: 50%;
     top: 50vw;
+  }
+  .indexTop_logo img {
+    height: 100%;
+    width: 100%;
   }
 }
 

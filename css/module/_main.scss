@@ -44,6 +44,13 @@
       opacity: .8;
     }
   }
+  @media #{$small} {//android-chrome対策
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .indexTop_logo{
@@ -63,6 +70,10 @@
     height: 50vw;
     width: 50%;
     top: 50vw;
+    img{//android-chrome対策
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
