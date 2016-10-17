@@ -957,9 +957,7 @@ footer:after {
   z-index: 50;
 }
 .indexTop_logo img {
-  height: 70%;
   position: absolute;
-  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -982,6 +980,10 @@ footer:after {
     left: 0;
   }
 }
+.indexTop_logo-future img {
+  top: 2%;
+  height: 58%;
+}
 
 .indexTop_logo-kids {
   right: 25%;
@@ -991,6 +993,10 @@ footer:after {
   .indexTop_logo-kids {
     right: 0;
   }
+}
+.indexTop_logo-kids img {
+  top: 0;
+  height: 60%;
 }
 
 .topcap {

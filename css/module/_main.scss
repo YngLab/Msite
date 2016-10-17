@@ -45,9 +45,7 @@
   top: 12.5vw;//小さい画像１つ分あける
   z-index: 50;
   img{
-    height: 70%;
     position: absolute;
-    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
@@ -66,6 +64,10 @@
   @media #{$small} {
     left: 0;
   }
+  img{
+    top: 2%;
+    height: 58%;
+  }
 }
 
 .indexTop_logo-kids{
@@ -73,6 +75,10 @@
   background-color: $g__color-kids;
   @media #{$small} {
     right: 0;
+  }
+  img{
+    top: 0;
+    height: 60%;
   }
 }
 
