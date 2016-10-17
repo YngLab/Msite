@@ -1,0 +1,9 @@
+event.html：一覧表示。
+　　　　　　コメントにidを割り当てておく。このidに直近のイベントをリンク。
+↓get送信
+event_subscript.php：メール文面入力画面。
+　　　　　　　　　　　イベント情報はget受信のidで分岐。
+↓post送信
+confirm_event.php：メールの文面確認。
+　　　　　　　　　　イベントの情報id、メール内容をpostで受け取る。
+send_event.php：メール送信。
