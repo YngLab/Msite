@@ -1867,6 +1867,9 @@ footer .copyright p {
     float: left;
     margin-bottom: 7px;
   }
+  .event_point .event_point_contents-text {
+    width: calc(300px - 42px - 14px - 40px);
+  }
 }
 .event_point .event_point_cap {
   font-weight: 400;

@@ -891,6 +891,9 @@ footer{
   @media #{$normal} {
     float: left;
     margin-bottom: 7px;
+    .event_point_contents-text{ //tdのテキスト自動折り返しのために追加したクラス
+      width: calc(300px - 42px - 14px - 40px); //874行目のヤツに合わせた結果です。　式：謎の300px - th - tdのpadding-left - event_detailのmargin-right
+    }
   }
   .event_point_cap{
     font-weight: 400;
