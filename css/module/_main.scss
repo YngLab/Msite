@@ -864,7 +864,7 @@ footer{
     font-weight: 400;
     margin-bottom: 24px;
   }
-  .event_detail{
+  .event_detail, .event_detail-short{
     font-size: $g__fontSize;
     color: $g__fontColor;
     font-weight: 200;
@@ -883,20 +883,7 @@ footer{
     }
   }
   .event_detail-short{
-    font-size: $g__fontSize;
-    color: $g__fontColor;
-    font-weight: 200;
-    line-height: 1.75em;
     width: calc(100% - 450px); //event_datail-shortまでどのイベントでも左に450pxのmarginを取る
-    @include smallW;
-    @media #{$normal} {
-      float: right;
-      margin-right: 40px;
-    }
-    @media #{$small} {
-      color: $sp__fontColor;
-      padding-bottom: calc(24px + 38px + 40px); //文章からボタンまで + ボタン + ボタンから次のイベント
-    }
   }
 }
 .event_point{
