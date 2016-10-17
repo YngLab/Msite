@@ -980,6 +980,13 @@ footer:after {
   right: 0;
   margin: auto;
 }
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .indexTop_logo {
+    height: calc(1080px / 4);
+    width: calc(1080px / 4);
+    top: calc(1080px / 8);
+  }
+}
 @media screen and (max-width: 768px) {
   .indexTop_logo {
     height: 50vw;
@@ -996,6 +1003,11 @@ footer:after {
   left: 25%;
   background-color: #f39800;
 }
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .indexTop_logo-future {
+    left: calc(1080px / 4);
+  }
+}
 @media screen and (max-width: 768px) {
   .indexTop_logo-future {
     left: 0;
@@ -1009,6 +1021,12 @@ footer:after {
 .indexTop_logo-kids {
   right: 25%;
   background-color: #8fc31f;
+}
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .indexTop_logo-kids {
+    left: calc(1080px / 4 * 2);
+    right: auto;
+  }
 }
 @media screen and (max-width: 768px) {
   .indexTop_logo-kids {
