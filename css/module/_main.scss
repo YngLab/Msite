@@ -871,7 +871,23 @@ footer{
     line-height: 1.75em;
     //float: right;
     //margin-right: 40px;
-    width: calc(100% - 300px); //この300pxはいったい何者なんだ・・・
+    width: calc(100% - 300px); //event_datailまでどのイベントでも左に300pxのmarginを取る
+    @include smallW;
+    @media #{$normal} {
+      float: right;
+      margin-right: 40px;
+    }
+    @media #{$small} {
+      color: $sp__fontColor;
+      padding-bottom: calc(24px + 38px + 40px); //文章からボタンまで + ボタン + ボタンから次のイベント
+    }
+  }
+  .event_detail-short{
+    font-size: $g__fontSize;
+    color: $g__fontColor;
+    font-weight: 200;
+    line-height: 1.75em;
+    width: calc(100% - 450px); //event_datail-shortまでどのイベントでも左に450pxのmarginを取る
     @include smallW;
     @media #{$normal} {
       float: right;
@@ -891,9 +907,9 @@ footer{
   @media #{$normal} {
     float: left;
     margin-bottom: 7px;
-    .event_point_contents-text{ //tdのテキスト自動折り返しのために追加したクラス
-      width: calc(300px - 42px - 14px - 40px); //874行目のヤツに合わせた結果です。　式：謎の300px - th - tdのpadding-left - event_detailのmargin-right
-    }
+    // .event_point_contents-text{ //tdのテキスト自動折り返しのために追加したクラス
+    //   width: calc(300px - 42px - 14px - 40px); //874行目のヤツに合わせた結果です。　式：謎の300px - th - tdのpadding-left - event_detailのmargin-right
+    // }
   }
   .event_point_cap{
     font-weight: 400;
