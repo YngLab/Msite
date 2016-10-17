@@ -15,9 +15,11 @@ if($_SESSION['id'] == "0"){
   $about = "井上涼さんアニメーションワークショップ";
 }else if($_SESSION['id'] == "4"){
   $about = "Whiteaフリースタイルパフォーマンス";
+}else if($_SESSION['id'] == "5"){
+  $about = "親子ワークショップ「光を感じよう！~見える？見えない？光と色~」";
 }
 
-if(isset($_SESSION['old'])){
+if(isset($_SESSION['old'])){//年齢入力があればメールに入れる
   $old = "
 ご年齢：
 ".$_SESSION['old']."
@@ -26,20 +28,32 @@ if(isset($_SESSION['old'])){
   $old = "";
 }
 
-if($_SESSION[id] == 0){$date = '
+if(isset($_SESSION['tel'])){//電話番号入力あればメールに入れる
+  $tel = "
+お電話番号：
+".$_SESSION['tel']."
+";
+}else{
+  $tel = "";
+}
+
+if($_SESSION['id'] == 0){$date = '
 日時：10月12日(水)　15:00-18:00
 ';
-}else if($_SESSION[id] == 1){$date = '
+}else if($_SESSION['id'] == 1){$date = '
 日時：10月12日(水)　15:00-18:00
 ';
-}else if($_SESSION[id] == 2){$date = '
+}else if($_SESSION['id'] == 2){$date = '
 日時：10月15日(土)　10:30-12:00
 ';
-}else if($_SESSION[id] == 3){$date = '
+}else if($_SESSION['id'] == 3){$date = '
 日時：10月16日(日)　10:30-16:30
 ';
-}else if($_SESSION[id] == 4){$date = '
+}else if($_SESSION['id'] == 4){$date = '
 日時：10月16日(日)　13:00-14:00
+';
+}else if($_SESSION['id'] == 5){$date = '
+日時：10月23日(日) 10:30-12:30(1回目)14:00-16:00(2回目)
 ';
 }
 
@@ -55,6 +69,7 @@ $return =<<<HTML
 {$old}
 E_mail：
 {$_SESSION['email']}
+{$tel}
 
 お問い合わせ内容：
 {$_SESSION['comment']}
@@ -81,6 +96,7 @@ $message =<<<HTML
 {$old}
 E_mail：
 {$_SESSION['email']}
+{$tel}
 
 お問い合わせ内容：
 {$_SESSION['comment']}
