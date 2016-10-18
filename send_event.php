@@ -101,13 +101,14 @@ E_mail：
 お問い合わせ内容：
 {$_SESSION['comment']}
 
-内容確認後、処理をお願いします。
+----------
+【自動追加】内容確認後、処理をお願いします。
 HTML;
 
 mb_language("ja");
 mb_internal_encoding("UTF-8");
 
-if(mb_send_mail($_SESSION['email'],"【イベント申込】".$about,$return,$add_header)&&mb_send_mail('info@hakodate-miraiproject.jp',"イベントを申し込み頂きありがとうございます。",$message,$add_header)){
+if(mb_send_mail($_SESSION['email'],"イベントを申し込み頂きありがとうございます。",$return,$add_header)&&mb_send_mail('info@hakodate-miraiproject.jp',"【イベント申込】".$about,$message,$add_header)){
 header('Location: recieve_contact.html');
 session_destroy();
 }else{
