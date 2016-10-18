@@ -151,13 +151,13 @@ $_SESSION = $_POST;
             </td>
           </tr>
           <!-- 電話番号 -->
-            <tr>
-              <th>電話番号</th>
-              <td>
-                <input type = "tel" name ="tel" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['tel']);?>>
-              </td>
-            </tr>
-            <!-- ここまで -->
+          <tr>
+            <th>電話番号</th>
+            <td>
+              <input type = "tel" name ="tel" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['tel']);?>>
+            </td>
+          </tr>
+          <!-- ここまで -->
           <tr>
             <th>メールアドレス</th>
             <td>
@@ -198,6 +198,12 @@ $_SESSION = $_POST;
             <p>お名前</p>
             <input type="text" name ="name" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['name']);?>>
           </div>
+          <!-- 電話番号 -->
+          <div class = "inputBox_sp">
+            <p>電話番号</p>
+            <input type = "tel" name ="email" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['tel']);?>>
+          </div>
+          <!-- ここまで -->
           <div class = "inputBox_conf_sp">
             <p>メールアドレス</p>
             <input type = "email" name ="email" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['email']);?>>
