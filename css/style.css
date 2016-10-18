@@ -1034,7 +1034,7 @@ footer:after {
   color: #ffffff;
   height: 26px;
   line-height: 26px;
-  padding-left: 18px;
+  text-align: center;
   z-index: 10;
 }
 .latestEvent .latestBox_kids {
@@ -1056,7 +1056,7 @@ footer:after {
   color: #ffffff;
   height: 26px;
   line-height: 26px;
-  padding-left: 18px;
+  text-align: center;
   z-index: 10;
 }
 .latestEvent .latestBox_img {
