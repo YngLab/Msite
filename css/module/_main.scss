@@ -44,13 +44,6 @@
       opacity: .8;
     }
   }
-  @media #{$small} {//android-chrome対策
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
 }
 
 .indexTop_logo{
@@ -66,28 +59,16 @@
     right: 0;
     margin: auto;
   }
-  @media #{$minimum} {
-    height: calc(1080px / 4);
-    width: calc(1080px / 4);
-    top: calc(1080px / 8);
-  }
   @media #{$small} {
     height: 50vw;
     width: 50%;
     top: 50vw;
-    img{//android-chrome対策
-      height: 100%;
-      width: 100%;
-    }
   }
 }
 
 .indexTop_logo-future{
   left: 25%;
   background-color: $g__color-future;
-  @media #{$minimum} {
-    left: calc(1080px / 4);
-  }
   @media #{$small} {
     left: 0;
   }
@@ -100,10 +81,6 @@
 .indexTop_logo-kids{
   right: 25%;
   background-color: $g__color-kids;
-  @media #{$minimum} {
-    left: calc(1080px / 4 * 2);
-    right: auto;
-  }
   @media #{$small} {
     right: 0;
   }
@@ -888,13 +865,19 @@ footer{
     margin-bottom: 24px;
   }
   .event_detail{
+    width: calc(100% - 300px); //event_datailまでどのイベントでも左に300pxのmarginを取る
+  }
+  .event_detail-short{
+    width: calc(100% - 450px); //event_datail-shortまでどのイベントでも左に450pxのmarginを取る
+  }
+  .event_detail, .event_detail-short{
     font-size: $g__fontSize;
     color: $g__fontColor;
     font-weight: 200;
     line-height: 1.75em;
+    overflow-x: hidden;
     //float: right;
     //margin-right: 40px;
-    width: calc(100% - 300px);
     @include smallW;
     @media #{$normal} {
       float: right;
@@ -903,6 +886,16 @@ footer{
     @media #{$small} {
       color: $sp__fontColor;
       padding-bottom: calc(24px + 38px + 40px); //文章からボタンまで + ボタン + ボタンから次のイベント
+    }
+    .eventDetail_picBox{
+      margin-right: -20px;
+      @include clearfix;
+      .eventDetail_pic{
+        width: calc((100% / 3) - 20px);
+        margin-right: 20px;
+        display: block;
+        float: left;
+      }
     }
   }
 }
@@ -914,6 +907,9 @@ footer{
   @media #{$normal} {
     float: left;
     margin-bottom: 7px;
+    // .event_point_contents-text{ //tdのテキスト自動折り返しのために追加したクラス
+    //   width: calc(300px - 42px - 14px - 40px); //874行目のヤツに合わせた結果です。　式：謎の300px - th - tdのpadding-left - event_detailのmargin-right
+    // }
   }
   .event_point_cap{
     font-weight: 400;
