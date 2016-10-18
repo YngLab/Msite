@@ -1872,6 +1872,7 @@ footer .copyright p {
 .event_textBox .event_detail .eventDetail_picBox .eventDetail_pic, .event_textBox .event_detail-short .eventDetail_picBox .eventDetail_pic {
   width: calc((100% / 3) - 20px);
   margin-right: 20px;
+  margin-top: 1em;
   display: block;
   float: left;
 }
