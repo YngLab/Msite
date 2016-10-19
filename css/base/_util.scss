@@ -11,6 +11,9 @@ html, input, textarea{
     size: $g__fontSize;
     weight: 200;
   }
+  @media #{$small} {
+    font-size: $sp__fontSize;
+  }
   line-height: 1.75em;
 }
 

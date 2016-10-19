@@ -29,6 +29,67 @@
   }
 }
 
+.index_openExplain{
+  font-size: 32px;
+  line-height: 1.75em;
+  margin: 32px 0;
+  text-align: center;
+  color: $title__color;
+}
+
+#logoArea{
+  a{
+    transition: .2s;
+    &:hover{
+      opacity: .8;
+    }
+  }
+}
+
+.indexTop_logo{
+  position: absolute;
+  height: 25vw;//縦・横幅1/4を維持
+  width: 25%;
+  top: 12.5vw;//小さい画像１つ分あける
+  z-index: 50;
+  img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  @media #{$small} {
+    height: 50vw;
+    width: 50%;
+    top: 50vw;
+  }
+}
+
+.indexTop_logo-future{
+  left: 25%;
+  background-color: $g__color-future;
+  @media #{$small} {
+    left: 0;
+  }
+  img{
+    top: 2%;
+    height: 58%;
+  }
+}
+
+.indexTop_logo-kids{
+  right: 25%;
+  background-color: $g__color-kids;
+  @media #{$small} {
+    right: 0;
+  }
+  img{
+    top: 0;
+    height: 60%;
+  }
+}
+
 .topcap{
   text-align: center;
 }
@@ -54,7 +115,7 @@
         color: #ffffff;
         height: 26px;
         line-height: 26px;
-        padding-left: 18px;
+        text-align: center;
         z-index: 10;
       }
     }
@@ -77,7 +138,7 @@
         color: #ffffff;
         height: 26px;
         line-height: 26px;
-        padding-left: 18px;
+        text-align: center;
         z-index: 10;
       }
     }
@@ -138,8 +199,15 @@
   }
 }
 
+header a{
+  color: $dark__fontColor;
+}
+
 .nav_TOP{
   background-color: $boxcolor;
+  a{
+    color: $dark__fontColor;
+  }
 }
 
 .gNav_container{
@@ -203,20 +271,20 @@
     filter: alpha(opacity=100);
   }
   .openclose{
-    background-color: $g__color-future;
-    color: #ffffff;
+    color: $g__color-future;
     height: 26px;
     line-height: 26px;
     text-align: center;
   }
   .future_logo{
     border-bottom: solid 1px $g__color-future;
-    height: calc(100vw * (137 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
+    background-color: $g__color-future;
+    height: calc(100vw * (180 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
     width: calc(100% + 2px); //両端のborderも含める
     display: table;
     text-align: center;
     @media #{$small} {
-      height: calc(100vw * 2 * (137 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
+      height: calc(100vw * 2 * (180 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
     }
     .future_logo_img{
       // position: absolute;
@@ -226,7 +294,7 @@
       display: table-cell;
       vertical-align: middle;
       img{
-        width: calc(100% * (210 / 484)); //future_logo_imgが484pxの時に210pxの比率をキープ
+        width: calc(100% * (252 / 484)); //future_logo_imgが484pxの時に210pxの比率をキープ
       }
     }
   }
@@ -290,20 +358,21 @@
     filter: alpha(opacity=100);
   }
   .openclose{
-    background-color: $g__color-kids;
     text-align: center;
-    color: #ffffff;
+    color: $g__color-kids;
     height: 26px;
     line-height: 26px;
   }
   .kids_logo{
     border-bottom: solid 1px $g__color-kids;
-    height: calc(100vw * (137 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
+    background-color: $g__color-kids;
+    // height: calc(100vw * (137 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
+    height: calc(100vw * (180 / 1080));
     width: calc(100% + 2px); //両端のborderも含める
     display: table;
     text-align: center;
     @media #{$small} {
-      height: calc(100vw * 2 * (137 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
+      height: calc(100vw * 2 * (180 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
     }
     .kids_logo_img{
       // position: absolute;
@@ -313,7 +382,7 @@
       display: table-cell;
       vertical-align: middle;
       img{
-        width: calc(100% * (250 / 484)); //kids_logo_imgが484pxの時に250pxの比率をキープ
+        width: calc(100% * (300 / 484)); //kids_logo_imgが484pxの時に250pxの比率をキープ
       }
     }
   }
@@ -544,8 +613,12 @@ footer{
   line-height: 1.75em;
 }
 
+.facility_detail_sp{
+  line-height: 1.75em;
+}
+
 .facility_explain_sp{
-  font-size: $g__fontSize;
+  font-size: $h3__fontSize;
   line-height: 1.75em;
 }
 
@@ -792,13 +865,19 @@ footer{
     margin-bottom: 24px;
   }
   .event_detail{
+    width: calc(100% - 300px); //event_datailまでどのイベントでも左に300pxのmarginを取る
+  }
+  .event_detail-short{
+    width: calc(100% - 450px); //event_datail-shortまでどのイベントでも左に450pxのmarginを取る
+  }
+  .event_detail, .event_detail-short{
     font-size: $g__fontSize;
     color: $g__fontColor;
     font-weight: 200;
     line-height: 1.75em;
+    overflow-x: hidden;
     //float: right;
     //margin-right: 40px;
-    width: calc(100% - 300px);
     @include smallW;
     @media #{$normal} {
       float: right;
@@ -807,6 +886,17 @@ footer{
     @media #{$small} {
       color: $sp__fontColor;
       padding-bottom: calc(24px + 38px + 40px); //文章からボタンまで + ボタン + ボタンから次のイベント
+    }
+    .eventDetail_picBox{
+      margin-right: -20px;
+      @include clearfix;
+      .eventDetail_pic{
+        width: calc((100% / 3) - 20px);
+        margin-right: 20px;
+        margin-top: 1em;
+        display: block;
+        float: left;
+      }
     }
   }
 }
@@ -818,6 +908,9 @@ footer{
   @media #{$normal} {
     float: left;
     margin-bottom: 7px;
+    // .event_point_contents-text{ //tdのテキスト自動折り返しのために追加したクラス
+    //   width: calc(300px - 42px - 14px - 40px); //874行目のヤツに合わせた結果です。　式：謎の300px - th - tdのpadding-left - event_detailのmargin-right
+    // }
   }
   .event_point_cap{
     font-weight: 400;
@@ -1008,7 +1101,6 @@ footer{
     margin-top: 19px;
   }
   .exmenu_detail{
-    font-size: $g__fontSize;
     color: $g__fontColor;
     font-weight: 200;
     margin-top: 30px;

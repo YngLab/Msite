@@ -9,14 +9,10 @@ $_SESSION = $_POST;
 
 <!DOCTYPE html>
 <meta charset = "utf-8">
-<meta name = "viewport" content="width=device-width,initial-scale=1.0" />  <!-- なんだこの宣言文は -->
-
-<!-- 以下多分テキスト変えたほうがいいよね案件 -->
+<meta name = "viewport" content="width=device-width,initial-scale=1.0" />
 <meta name = "keywords" content="はこだてみらいプロジェクト,はこだてみらい館,はこだてキッズプラザ,函館,未来館,future center,kids plaza,施設">
-<meta name = "description" content="はこだてみらいプロジェクトは、オドロクチカラを育む施設「はこだてみらい館」「はこだてキッズプラザ」を中心に、函館の街の明るい未来につながるアイデアをみんなで実現するプロジェクトです。">
+<meta name = "description" content="オドロクチカラを育む施設「はこだてみらい館」「はこだてキッズプラザ」を通して、函館の街の明るい未来につながるアイデアをみんなで実現するプロジェクトが「はこだてみらいプロジェクト」です。">
 <title>はこだてみらいプロジェクト</title>
-<!-- たぶんここまで -->
-
 <link rel = "stylesheet" href="css/style.css">
 <link rel = "shortcut icon" href="images/common/hmp.ico">
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -49,13 +45,13 @@ $_SESSION = $_POST;
             <a href="event.html">イベント</a>
           </li>
           <li class = "gNavli">
-            <a href="HMP.html">みらいプロジェクト</a>
-          </li>
-          <li class = "gNavli">
             <a href="FCH.html">はこだてみらい館</a>
           </li>
           <li class = "gNavli">
             <a href="KPH.html">はこだてキッズプラザ</a>
+          </li>
+          <li class = "gNavli">
+            <a href="HMP.html">みらいプロジェクト</a>
           </li>
         </div>
       </div>
@@ -72,19 +68,21 @@ $_SESSION = $_POST;
       <div class = "eventabout">
         <!-- ここからイベント情報 -->
         <img src = 
-        <?php if($_POST[id] == 0){echo '"images/sq_event1_FCH.jpg"  alt = "先行体験会"';
-        }else if($_POST[id] == 1){echo '"images/sq_event1_KPH.jpg"  alt = "先行体験会"';
-        }else if($_POST[id] == 2){echo '"images/sq_event2_FCH.jpg" alt = "トークセッション"';
-        }else if($_POST[id] == 3){echo '"images/sq_event3_FCH.jpg"  alt = "井上涼さんアニメーションワークショップ"';
-        }else if($_POST[id] == 4){echo '"images/sq_event2_KPH.jpg"  alt = "Whiteaフリースタイルパフォーマンス"';
+        <?php if($_POST['id'] == 0){echo '"images/sq_event1_FCH.jpg"  alt = "先行体験会"';
+        }else if($_POST['id'] == 1){echo '"images/sq_event1_KPH.jpg"  alt = "先行体験会"';
+        }else if($_POST['id'] == 2){echo '"images/sq_event2_FCH.jpg" alt = "トークセッション"';
+        }else if($_POST['id'] == 3){echo '"images/sq_event3_FCH.jpg"  alt = "井上涼さんアニメーションワークショップ"';
+        }else if($_POST['id'] == 4){echo '"images/sq_event2_KPH.jpg"  alt = "Whiteaフリースタイルパフォーマンス"';
+        }else if($_POST['id'] == 5){echo '"images/sq_event4_FCH.jpg" alt = "親子ワークショップ「光を感じよう！」"';
         }
         ?>>
         <p class = "FCHcolor eventabout_title">
-        <?php if($_POST[id] == 0){echo 'はこだてみらい 館先行体験会';
-        }else if($_POST[id] == 1){echo 'はこだてキッズプラザ 先行体験会';
-        }else if($_POST[id] == 2){echo 'オドロクチカラ トークセッション';
-        }else if($_POST[id] == 3){echo '井上涼さんアニメーションワークショップ';
-        }else if($_POST[id] == 4){echo 'Whiteaフリースタイルパフォーマンス';
+        <?php if($_POST['id'] == 0){echo 'はこだてみらい館 先行体験会';
+        }else if($_POST['id'] == 1){echo 'はこだてキッズプラザ 先行体験会';
+        }else if($_POST['id'] == 2){echo 'オドロクチカラ トークセッション';
+        }else if($_POST['id'] == 3){echo '井上涼さんアニメーションワークショップ';
+        }else if($_POST['id'] == 4){echo 'Whiteaフリースタイルパフォーマンス';
+        }else if($_POST['id'] == 5){echo '親子ワークショップ「光を感じよう！~見える？見えない？光と色~」';
         }
         ?></p>
         <div class = "event_point">
@@ -92,22 +90,24 @@ $_SESSION = $_POST;
             <tr>
               <th class = "event_point_cap">日時</th>
               <td class = "event_point_contents">
-                <?php if($_POST[id] == 0){echo '10月12日(水)　15:00-18:00';
-                }else if($_POST[id] == 1){echo '10月12日(水)　15:00-18:00';
-                }else if($_POST[id] == 2){echo '10月15日(土)　10:30-12:00';
-                }else if($_POST[id] == 3){echo '10月16日(日)　10:30-16:30';
-                }else if($_POST[id] == 4){echo '10月16日(日)　13:00-14:00';
+                <?php if($_POST['id'] == 0){echo '10月12日(水)　15:00-18:00';
+                }else if($_POST['id'] == 1){echo '10月12日(水)　15:00-18:00';
+                }else if($_POST['id'] == 2){echo '10月15日(土)　10:30-12:00';
+                }else if($_POST['id'] == 3){echo '10月16日(日)　10:30-16:30';
+                }else if($_POST['id'] == 4){echo '10月16日(日)　13:00-14:00';
+                }else if($_POST['id'] == 5){echo '10月23日(日) 10:30-12:30(1回目)14:00-16:00(2回目)';
                 }
                 ?></td>
             </tr>
             <tr>
               <th class = "event_point_cap">会場</th>
               <td class = "event_point_contents">
-                <?php if($_POST[id] == 0){echo 'はこだてみらい館';
-                }else if($_POST[id] == 1){echo 'はこだてキッズプラザ';
-                }else if($_POST[id] == 2){echo 'はこだてみらい館';
-                }else if($_POST[id] == 3){echo 'はこだてみらい館';
-                }else if($_POST[id] == 4){echo 'はこだてキッズプラザ';
+                <?php if($_POST['id'] == 0){echo 'はこだてみらい館';
+                }else if($_POST['id'] == 1){echo 'はこだてキッズプラザ';
+                }else if($_POST['id'] == 2){echo 'はこだてみらい館';
+                }else if($_POST['id'] == 3){echo 'はこだてみらい館';
+                }else if($_POST['id'] == 4){echo 'はこだてキッズプラザ';
+                }else if($_POST['id'] == 5){echo 'はこだてみらい館';
                 }
                 ?>
               </td>
@@ -115,11 +115,12 @@ $_SESSION = $_POST;
             <tr>
               <th class = "event_point_cap">参加費</th>
               <td class = "event_point_contents">
-                <?php if($_POST[id] == 0){echo '無料';
-                }else if($_POST[id] == 1){echo '無料';
-                }else if($_POST[id] == 2){echo '無料';
-                }else if($_POST[id] == 3){echo '無料';
-                }else if($_POST[id] == 4){echo '無料';
+                <?php if($_POST['id'] == 0){echo '無料';
+                }else if($_POST['id'] == 1){echo '無料';
+                }else if($_POST['id'] == 2){echo '無料';
+                }else if($_POST['id'] == 3){echo '無料';
+                }else if($_POST['id'] == 4){echo '無料';
+                }else if($_POST['id'] == 5){echo '300円(別途入場料がかかります)';
                 }
                 ?>
               </td>
@@ -127,11 +128,12 @@ $_SESSION = $_POST;
             <tr>
               <th class = "event_point_cap">対象</th>
               <td class = "event_point_contents">
-                <?php if($_POST[id] == 0){echo '小学生から中学生';
-                }else if($_POST[id] == 1){echo '幼稚園児から小学生';
-                }else if($_POST[id] == 2){echo '子どもから大人まで';
-                }else if($_POST[id] == 3){echo '【第1部】小学生<br>【第2部、第3部】子どもから大人まで';
-                }else if($_POST[id] == 4){echo '子どもから大人まで';
+                <?php if($_POST['id'] == 0){echo '小学生から中学生';
+                }else if($_POST['id'] == 1){echo '幼稚園児から小学生';
+                }else if($_POST['id'] == 2){echo '子どもから大人まで';
+                }else if($_POST['id'] == 3){echo '【第1部】小学生<br>【第2部、第3部】子どもから大人まで';
+                }else if($_POST['id'] == 4){echo '子どもから大人まで';
+                }else if($_POST['id'] == 5){echo '小学生～中学生 ※保護者同伴必須';
                 }
                 ?>
               </td>
@@ -148,6 +150,14 @@ $_SESSION = $_POST;
               <input type="text" name ="name" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['name']);?>>
             </td>
           </tr>
+          <!-- 電話番号 -->
+          <tr>
+            <th>電話番号</th>
+            <td>
+              <input type = "tel" name ="tel" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['tel']);?>>
+            </td>
+          </tr>
+          <!-- ここまで -->
           <tr>
             <th>メールアドレス</th>
             <td>
@@ -188,6 +198,12 @@ $_SESSION = $_POST;
             <p>お名前</p>
             <input type="text" name ="name" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['name']);?>>
           </div>
+          <!-- 電話番号 -->
+          <div class = "inputBox_sp">
+            <p>電話番号</p>
+            <input type = "tel" name ="email" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['tel']);?>>
+          </div>
+          <!-- ここまで -->
           <div class = "inputBox_conf_sp">
             <p>メールアドレス</p>
             <input type = "email" name ="email" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['email']);?>>
@@ -250,9 +266,9 @@ $_SESSION = $_POST;
       <a href = "index.html"><li>ホーム</li></a>
       <a href = "concept.html"><li>コンセプト</li></a>
       <a href = "event.html"><li>イベント</li></a>
-      <a href = "HMP.html"><li>みらいプロジェクト</li></a>
       <a href = "FCH.html"><li>はこだてみらい館</li></a>
       <a href = "KPH.html"><li>はこだてキッズプラザ</li></a>
+      <a href = "HMP.html"><li>みらいプロジェクト</li></a>
     </ul>
     <ul class = "pNav_sp">
       <a href = "access.html"><li>アクセス</li></a>
