@@ -1340,7 +1340,8 @@ p.company_about{//別部分がコーディング規約無視しているため�
 .g_drawerWrap{
   //オーバーレイをabsolute指定するため必要
   position: relative;
-  @include clearfix;
+  //padding: 1px 0;
+  float: inherit;
   //アニメーションの指定
   -webkit-transition: all .4s;
      -moz-transition: all .4s;

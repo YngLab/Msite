@@ -2294,15 +2294,11 @@ p.company_about {
 
 .g_drawerWrap {
   position: relative;
+  float: inherit;
   -webkit-transition: all .4s;
   -moz-transition: all .4s;
   -o-transition: all .4s;
   transition: all .4s;
-}
-.g_drawerWrap:after {
-  clear: both;
-  content: "";
-  display: block;
 }
 
 .g_drawerWrap.open {

@@ -191,9 +191,6 @@ $(function(){
   $button.on('touchstart click', function () {
     if(isOpen) {
       drawerClose();
-      $drawer.removeClass('open');
-      $content.removeClass('open');
-      $button.removeClass('open');
       isOpen = false;
     } else {
       $drawer.addClass('open');
@@ -205,7 +202,6 @@ $(function(){
         width: '100%',
         top: -1 * current_scrollY
       });
-      // $(".g_drawerWrap.open .drawer-toggle.open").css("top", current_scrollY);
       isOpen = true;
     }
     return false; //親要素へのイベント伝播、aタグのURLクリックによる画面遷移を防ぐ
@@ -213,9 +209,9 @@ $(function(){
 
   //コンテンツ部分をタップ、クリックした時
   $content.on('touchstart click', function (e) {
-    e.stopPropagation(); //イベント伝播のみ阻止
     if(isOpen) {
       drawerClose();
+      e.preventDefault();
       isOpen = false;
     }
   });
@@ -224,7 +220,6 @@ $(function(){
     $drawer.removeClass('open');
     $content.removeClass('open');
     $button.removeClass('open');
-    $(".drawer-toggle").css("top", 0);
     $("html, body").removeAttr("style");
     $("html, body").prop({scrollTop: current_scrollY});
   }
