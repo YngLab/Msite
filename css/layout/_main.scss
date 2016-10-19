@@ -19,12 +19,7 @@
   }
 }
 
-#wrapper{
-  #header{
-    @media #{$normal} {
-      display: none;
-    }
-  }
+.g_drawerWrap{
   #header_sp{
     @media #{$normal} {
       display: none;

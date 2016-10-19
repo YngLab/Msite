@@ -187,10 +187,10 @@ $(function(){
     $(nowModalSyncer).css({"left": ((w - cw)/2) + "px", "top": 5 + "%"});
   }
 
-  var $content = $('#wrapper'),
-        $drawer = $('#drawer'),
-        $button = $('#drawer-toggle'),
-        isOpen = false;
+  var $content = $('.g_drawerWrap'),
+      $drawer = $('.drawer'),
+      $button = $('.drawer-toggle'),
+      isOpen = false;
     
   //ボタンをタップ、クリックした時
   $button.on('touchstart click', function () {
@@ -198,17 +198,19 @@ $(function(){
       drawerClose();
       $drawer.removeClass('open');
       $content.removeClass('open');
+      $button.removeClass('open');
       isOpen = false;
     } else {
       $drawer.addClass('open');
       $content.addClass('open');
+      $button.addClass('open');
       current_scrollY = $( window ).scrollTop(); 
       $("html, body").css({
         position: 'fixed',
         width: '100%',
         top: -1 * current_scrollY
       });
-      $("#wrapper.open #drawer-toggle").css("top", current_scrollY);
+      // $(".g_drawerWrap.open .drawer-toggle.open").css("top", current_scrollY);
       isOpen = true;
     }
     return false; //親要素へのイベント伝播、aタグのURLクリックによる画面遷移を防ぐ
@@ -226,7 +228,8 @@ $(function(){
   function drawerClose(){
     $drawer.removeClass('open');
     $content.removeClass('open');
-    $("#wrapper #drawer-toggle").css("top", 0);
+    $button.removeClass('open');
+    $(".drawer-toggle").css("top", 0);
     $("html, body").removeAttr("style");
     $("html, body").prop({scrollTop: current_scrollY});
   }

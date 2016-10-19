@@ -1245,60 +1245,75 @@ p.company_about{//別部分がコーディング規約無視しているため�
   font-size: 14px;
 }
 
-#wrapper {
+.g_drawerWrap{
   //オーバーレイをabsolute指定するため必要
   position: relative;
+  @include clearfix;
   //アニメーションの指定
   -webkit-transition: all .4s;
      -moz-transition: all .4s;
        -o-transition: all .4s;
           transition: all .4s;
-  #drawer-toggle{
-    position: fixed;
-    right: -1px; //トグルの右に出る隙間を埋める
-    top: 0;
-    width: 41px; //隙間を埋めた分の1px分大きく
-    height: 23px;
-    padding-top: 17px;
-    background-color: $g__fontColor;
-    z-index: 1000;
-    span{
-      margin: 0 auto;
-      display: block;
-      height: 2px;
-      background-color: #FFFFFF;
-      width: 20px;
-      transition: all .4s;
-      transform: rotate(0deg);
-    }
-    .top {
-      transform: translateY(-4px);
-    }
-    .bottom {
-      transform: translateY(4px);
-    }
-  }
 }
 
-#wrapper.open {
-  // position: fixed;
+.g_drawerWrap.open{
   //クラス「open」が付いたら左に75%移動
   -webkit-transform: translate3d(-75%, 0, 0);
      -moz-transform: translate3d(-75%, 0, 0);
           transform: translate3d(-75%, 0, 0);
-  #drawer-toggle{
-    position: fixed;
-    right: -1px; //トグルの右に出る隙間を埋める
-    top: 0;
-    .middle {
-    background: rgba(255, 255, 255, 0);
-    }
-    .top {
-      transform: rotate(-45deg) translateY(2px);
-    }
-    .bottom {
-      transform: rotate(45deg) translateY(-3px);
-    }
+}
+
+.drawer-toggle{
+  position: fixed;
+  right: -1px; //トグルの右に出る隙間を埋める
+  top: 0;
+  width: 41px; //隙間を埋めた分の1px分大きく
+  height: 23px;
+  padding-top: 17px;
+  background-color: $g__fontColor;
+  z-index: 1000;
+  //アニメーションの指定
+  -webkit-transition: all .4s;
+     -moz-transition: all .4s;
+       -o-transition: all .4s;
+          transition: all .4s;
+  @media #{$normal} {
+    display: none;
+  }
+  span{
+    margin: 0 auto;
+    display: block;
+    height: 2px;
+    background-color: #FFFFFF;
+    width: 20px;
+    transition: all .4s;
+    transform: rotate(0deg);
+  }
+  .top {
+    transform: translateY(-4px);
+  }
+  .bottom {
+    transform: translateY(4px);
+  }
+}
+
+.drawer-toggle.open{
+  position: fixed;
+  right: -1px; //トグルの右に出る隙間を埋める
+  top: 0;
+  z-index: 1000;
+  //クラス「open」が付いたら左に75%移動
+  -webkit-transform: translate3d(-75vw, 0, 0);
+     -moz-transform: translate3d(-75vw, 0, 0);
+          transform: translate3d(-75vw, 0, 0);
+  .middle {
+  background: rgba(255, 255, 255, 0);
+  }
+  .top {
+    transform: rotate(-45deg) translateY(2px);
+  }
+  .bottom {
+    transform: rotate(45deg) translateY(-3px);
   }
 }
 
@@ -1318,7 +1333,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
   background: rgba(0, 0, 0, .5);
 }
 
-#drawer {
+.drawer {
   position: fixed; //常に固定なのでfixed
   top: 0;
   right: -75%; //初期状態では隠すため、横幅のサイズ分だけ画面外に移動する
@@ -1374,7 +1389,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
   }
 }
 
-#drawer.open {
+.drawer.open {
   -webkit-transform: translate3d(-100%, 0, 0);
      -moz-transform: translate3d(-100%, 0, 0);
           transform: translate3d(-100%, 0, 0);

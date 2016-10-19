@@ -182,17 +182,12 @@ a {
 }
 
 @media screen and (min-width: 769px) {
-  #wrapper #header {
-    display: none;
-  }
-}
-@media screen and (min-width: 769px) {
-  #wrapper #header_sp {
+  .g_drawerWrap #header_sp {
     display: none;
   }
 }
 @media screen and (max-width: 768px) {
-  #wrapper #header_sp {
+  .g_drawerWrap #header_sp {
     background: #9fa0a0;
     font-size: 40px;
     margin-bottom: 12px;
@@ -2196,14 +2191,26 @@ p.company_about {
   font-size: 14px;
 }
 
-#wrapper {
+.g_drawerWrap {
   position: relative;
   -webkit-transition: all .4s;
   -moz-transition: all .4s;
   -o-transition: all .4s;
   transition: all .4s;
 }
-#wrapper #drawer-toggle {
+.g_drawerWrap:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.g_drawerWrap.open {
+  -webkit-transform: translate3d(-75%, 0, 0);
+  -moz-transform: translate3d(-75%, 0, 0);
+  transform: translate3d(-75%, 0, 0);
+}
+
+.drawer-toggle {
   position: fixed;
   right: -1px;
   top: 0;
@@ -2212,8 +2219,17 @@ p.company_about {
   padding-top: 17px;
   background-color: #9fa0a0;
   z-index: 1000;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
 }
-#wrapper #drawer-toggle span {
+@media screen and (min-width: 769px) {
+  .drawer-toggle {
+    display: none;
+  }
+}
+.drawer-toggle span {
   margin: 0 auto;
   display: block;
   height: 2px;
@@ -2222,30 +2238,29 @@ p.company_about {
   transition: all .4s;
   transform: rotate(0deg);
 }
-#wrapper #drawer-toggle .top {
+.drawer-toggle .top {
   transform: translateY(-4px);
 }
-#wrapper #drawer-toggle .bottom {
+.drawer-toggle .bottom {
   transform: translateY(4px);
 }
 
-#wrapper.open {
-  -webkit-transform: translate3d(-75%, 0, 0);
-  -moz-transform: translate3d(-75%, 0, 0);
-  transform: translate3d(-75%, 0, 0);
-}
-#wrapper.open #drawer-toggle {
+.drawer-toggle.open {
   position: fixed;
   right: -1px;
   top: 0;
+  z-index: 1000;
+  -webkit-transform: translate3d(-75vw, 0, 0);
+  -moz-transform: translate3d(-75vw, 0, 0);
+  transform: translate3d(-75vw, 0, 0);
 }
-#wrapper.open #drawer-toggle .middle {
+.drawer-toggle.open .middle {
   background: rgba(255, 255, 255, 0);
 }
-#wrapper.open #drawer-toggle .top {
+.drawer-toggle.open .top {
   transform: rotate(-45deg) translateY(2px);
 }
-#wrapper.open #drawer-toggle .bottom {
+.drawer-toggle.open .bottom {
   transform: rotate(45deg) translateY(-3px);
 }
 
@@ -2260,7 +2275,7 @@ p.company_about {
   background: rgba(0, 0, 0, 0.5);
 }
 
-#drawer {
+.drawer {
   position: fixed;
   top: 0;
   right: -75%;
@@ -2274,38 +2289,38 @@ p.company_about {
   -o-transition: all .4s;
   transition: all .4s;
 }
-#drawer .sp_language {
+.drawer .sp_language {
   width: 100%;
   height: 40px;
   background-color: #9fa0a0;
 }
-#drawer .sp_language p {
+.drawer .sp_language p {
   display: none;
 }
-#drawer .navBox {
+.drawer .navBox {
   height: calc((100% - 40px) - calc((100% - 40px) / 17));
   margin-top: calc((100vh - 40px) /17);
 }
-#drawer .navBox li {
+.drawer .navBox li {
   border-bottom: 1px solid #9fa0a0;
   padding-top: calc(((100vh - 40px) /17) - 0.875em);
   margin: 0 30px calc(((100vh - 40px) /17) - 0.875em - 1px) 30px;
   line-height: 1.75em;
   display: block;
 }
-#drawer .navBox .gNav_sp {
+.drawer .navBox .gNav_sp {
   height: 75%;
 }
-#drawer .navBox .gNav_sp li .gNav_sp_ {
+.drawer .navBox .gNav_sp li .gNav_sp_ {
   border-bottom: 1px solid #9fa0a0;
   height: 70%;
 }
-#drawer .navBox .pNav_sp {
+.drawer .navBox .pNav_sp {
   height: 25%;
   background-color: #f7f8f8;
 }
 
-#drawer.open {
+.drawer.open {
   -webkit-transform: translate3d(-100%, 0, 0);
   -moz-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
