@@ -214,6 +214,18 @@ a {
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  .index_openExplain {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .index_openExplain_sp {
+    display: none;
+  }
+}
+
 .latestEvent {
   margin-right: calc(-100% * (32 / 1000));
 }
@@ -942,12 +954,20 @@ footer:after {
   width: 100%;
 }
 
-.index_openExplain {
-  font-size: 32px;
+.index_openExplain,
+.index_openExplain_sp {
   line-height: 1.75em;
   margin: 32px 0;
   text-align: center;
   color: #3e3a39;
+}
+
+.index_openExplain {
+  font-size: 32px;
+}
+
+.index_openExplain_sp {
+  font-size: 20px;
 }
 
 #logoArea a {
