@@ -190,7 +190,7 @@ if(!$_GET){
               <th>　</th>
               <td>
                 <div class = "confirm">
-                  <input type="hidden" name="id" value="<?php echo $_GET[id];?>">
+                  <input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
                   <input type="submit" value="確認" class = "sendbutton">
                 </div>
               </td>
@@ -220,7 +220,7 @@ if(!$_GET){
           </div>
           <div>
             <div>
-              <input type="hidden" name="id" value="<?php echo $_GET[id];?>">
+              <input type="hidden" name="id" value="<?php echo $_GET['id'];?>">
               <input type="submit" value="確認" class = "button">
             </div>
           </div>
