@@ -74,6 +74,8 @@ $_SESSION = $_POST;
         }else if($_POST['id'] == 3){echo '"images/sq_event3_FCH.jpg"  alt = "井上涼さんアニメーションワークショップ"';
         }else if($_POST['id'] == 4){echo '"images/sq_event2_KPH.jpg"  alt = "Whiteaフリースタイルパフォーマンス"';
         }else if($_POST['id'] == 5){echo '"images/sq_event4_FCH.jpg" alt = "親子ワークショップ「光を感じよう！」"';
+        }else if($_POST['id'] == 6){echo '"images/sq_event6_FCH.jpg" alt = "FabLabワークショップ"';
+        }else if($_POST['id'] == 7){echo '"images/sq_event7_FCH.jpg" alt = "せかいをはかるワークショップ"';
         }
         ?>>
         <p class = "FCHcolor eventabout_title">
@@ -83,6 +85,8 @@ $_SESSION = $_POST;
         }else if($_POST['id'] == 3){echo '井上涼さんアニメーションワークショップ';
         }else if($_POST['id'] == 4){echo 'Whiteaフリースタイルパフォーマンス';
         }else if($_POST['id'] == 5){echo '親子ワークショップ「光を感じよう！~見える？見えない？光と色~」';
+        }else if($_POST['id'] == 6){echo 'FabLabワークショップ';
+        }else if($_POST['id'] == 7){echo 'せかいをはかるワークショップ';
         }
         ?></p>
         <div class = "event_point">
@@ -96,6 +100,8 @@ $_SESSION = $_POST;
                 }else if($_POST['id'] == 3){echo '10月16日(日)　10:30-16:30';
                 }else if($_POST['id'] == 4){echo '10月16日(日)　13:00-14:00';
                 }else if($_POST['id'] == 5){echo '10月23日(日) 10:30-12:30(1回目)14:00-16:00(2回目)';
+                }else if($_POST['id'] == 6){echo '10月29日(土) 10:00-15:00 ハロウィンキャンドル<br>10月30日(日) 10:00-15:00 ボトルキャップ';
+                }else if($_POST['id'] == 7){echo '10月29日(土) 30日(日)10:30-12:30(1回目) 14:00-16:00(2回目)';
                 }
                 ?></td>
             </tr>
@@ -108,6 +114,8 @@ $_SESSION = $_POST;
                 }else if($_POST['id'] == 3){echo 'はこだてみらい館';
                 }else if($_POST['id'] == 4){echo 'はこだてキッズプラザ';
                 }else if($_POST['id'] == 5){echo 'はこだてみらい館';
+                }else if($_POST['id'] == 6){echo 'はこだてみらい館';
+                }else if($_POST['id'] == 7){echo 'はこだてみらい館';
                 }
                 ?>
               </td>
@@ -121,6 +129,8 @@ $_SESSION = $_POST;
                 }else if($_POST['id'] == 3){echo '無料';
                 }else if($_POST['id'] == 4){echo '無料';
                 }else if($_POST['id'] == 5){echo '300円(別途入場料がかかります)';
+                }else if($_POST['id'] == 6){echo '無料';
+                }else if($_POST['id'] == 7){echo '無料';
                 }
                 ?>
               </td>
@@ -134,6 +144,8 @@ $_SESSION = $_POST;
                 }else if($_POST['id'] == 3){echo '【第1部】小学生<br>【第2部、第3部】子どもから大人まで';
                 }else if($_POST['id'] == 4){echo '子どもから大人まで';
                 }else if($_POST['id'] == 5){echo '小学生～中学生 ※保護者同伴必須';
+                }else if($_POST['id'] == 6){echo '小学生以上 ※保護者同伴必須';
+                }else if($_POST['id'] == 7){echo '小学生以上 ※保護者同伴必須';
                 }
                 ?>
               </td>
