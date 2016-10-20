@@ -7,3 +7,9 @@ event_subscript.php：メール文面入力画面。
 confirm_event.php：メールの文面確認。
 　　　　　　　　　　イベントの情報id、メール内容をpostで受け取る。
 send_event.php：メール送信。
+
+イベント追加方法
+event.html：inputタグ内のidをイベントに当てはめる
+event_subscript：イベント各情報を入れる
+confirm_event：上のコピペ後、GETをPOSTに書き換える
+send_event：例に習って書き換え
