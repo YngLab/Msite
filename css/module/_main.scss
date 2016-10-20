@@ -852,17 +852,13 @@ footer{
   @media #{$small} {
     margin: 24px calc(100% * 20 / 768) 0px calc(100% * 20 / 768);
   }
-  .event_title_future{
+  .event_title{
     font-size: $h2__fontSize;
-    color: $g__color-future;
     font-weight: 400;
     margin-bottom: 24px;
-  }
-  .event_title_kids{
-    font-size: $h2__fontSize;
-    color: $g__color-kids;
-    font-weight: 400;
-    margin-bottom: 24px;
+    @media #{$small} {
+      line-height: 1.4em;
+    }
   }
   .event_detail{
     width: calc(100% - 300px); //event_datailまでどのイベントでも左に300pxのmarginを取る
