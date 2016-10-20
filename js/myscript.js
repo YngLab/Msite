@@ -6,9 +6,9 @@ $(function(){
   if(w_size > 768 && w_size <= 1080){
     w_size = 1080;
   }
-  latestBox_size =  w_size * 226 / 1080; //画面幅1080pxの時に226pxの比率をキープ
+  latestBox_size =  w_size * 226 / 1080 - 2; //画面幅1080pxの時に226pxの比率から四方のborderを引いている
   if(w_size <= 768){
-    latestBox_size =  w_size * 728 / 768; //画面幅768pxの時に728pxの比率をキープ
+    latestBox_size =  w_size * 728 / 768 - 2; //画面幅768pxの時に728pxの比率から四方のborderを引いている
   }
   institution_size = $(".future_contents").width() * .5;
   $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
@@ -22,9 +22,9 @@ $(function(){
     if(w_size > 768 && w_size <= 1080){
       w_size = 1080;
     }
-    latestBox_size =  w_size * 226 / 1080; //画面幅1080pxの時に226pxの比率をキープ
+    latestBox_size =  w_size * 226 / 1080 - 2; //画面幅1080pxの時に226pxの比率から四方のborderを引いている
     if(w_size <= 768){
-      latestBox_size =  w_size * 728 / 768; //画面幅768pxの時に728pxの比率をキープ
+      latestBox_size =  w_size * 728 / 768 -2; //画面幅768pxの時に728pxの比率から四方のborderを引いている
     }
     institution_size = $(".future_contents").width() * .5;
     $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
@@ -182,9 +182,9 @@ $(function(){
     $(nowModalSyncer).css({"left": ((w - cw)/2) + "px", "top": 5 + "%"});
   }
 
-  var $content = $('.g_drawerWrap'),
-      $drawer = $('.drawer'),
-      $button = $('.drawer-toggle'),
+  var $content = $('.g_allArea'),
+      $drawer = $('.g_drawer'),
+      $button = $('.g_drawerToggle'),
       isOpen = false;
     
   //ボタンをタップ、クリックした時

@@ -1,25 +1,28 @@
 @charset "UTF-8";
 
-.wrap{
-  margin: 0 auto;
-  //width: calc(100% * (1000 / 1080));
-  @include clearfix;
-  @media #{$normal} {
-    max-width: 1440px;
-    min-width: 1080px;
-  }
-  @media #{$small} {
-    width: calc(100% * (728 / 768)); //$small時は画面幅768pxの時に728pxの比率をキープ
-  }
-}
+// .wrap{
+//   margin: 0 auto;
+//   //width: calc(100% * (1000 / 1080));
+//   @include clearfix;
+//   @media #{$normal} {
+//     max-width: 1440px;
+//     min-width: 1080px;
+//   }
+//   @media #{$small} {
+//     width: calc(100% * (728 / 768)); //$small時は画面幅768pxの時に728pxの比率をキープ
+//   }
+// }
 
-.autoMargin{
-  @media #{$normal} {
-    margin: 0 calc(100% * (40 / 1080)) 0 calc(100% * (40 / 1080)); //$normal時は画面幅1080pxの時に40pxの比率をキープ
-  }
-}
 
-.g_drawerWrap{
+// .autoMargin{
+//   @media #{$normal} {
+//     margin: 0 calc(100% * (40 / 1080)) 0 calc(100% * (40 / 1080)); //$normal時は画面幅1080pxの時に40pxの比率をキープ
+//   }
+// }
+
+//wrapとautoMarginは使用禁止
+
+.g_allArea{
   #header_sp{
     @media #{$normal} {
       display: none;
@@ -42,12 +45,22 @@
 }
 
 .latestEvent{
+  //wrapの内容とautoMarginの内容を追記
   margin-right: calc(-100% * (32 / 1000)); //画面幅1080xのwrapの幅1000pxと32pxの比率をキープ
+  @include clearfix;
+  @media #{$normal}{
+    max-width: 1440px;
+    min-width: 1080px;
+    margin: 0 calc(100% * (8 / 1080)) 40px calc(100% * (40 / 1080)); //$normal時は画面幅1080pxの時に40pxの比率をキープ
+  }
+  @media #{$small}{
+    width: calc(100% * (728 / 768)); //$small時は画面幅768pxの時に728pxの比率をキープ
+  }
 }
 
 .nav_TOP{
   height: 70px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto;
   @media #{$small} {
     display: none;
   }
@@ -67,27 +80,30 @@
   }
 }
 
-.future_entrance{
+.future_entrance,
+.kids_entrance{
   background-color: $boxcolor;
-  border: solid 1px $g__color-future;
-  float:left;
-  margin: -1px;
-  width: calc(100% * (484 / 1000)); //画面幅1080xのwrapの幅1000pxと484pxの比率をキープ
+  margin-top: 50px;
+  width: calc(100% * (484 / 1080) - 2px); //画面幅1080xと484pxの比率をキープ - 左右borderの2px
   @include smallW;
   @media #{$small} {
-    margin-bottom: 20px;
+    margin: 0 0 20px calc(100% * (20 / 768)); //左には画面幅768xと20pxの比率をキープ
+  }
+}
+
+.future_entrance{
+  border: solid 1px $g__color-future;
+  float: left;
+  @media #{$normal} {
+    margin-left: calc(100% * (40 / 1080)); //画面幅1080xと40pxの比率をキープ
   }
 }
 
 .kids_entrance{
-  background-color: $boxcolor;
   border: solid 1px $g__color-kids;
-  float: right;
-  margin: -1px;
-  width: calc(100% * (484 / 1000)); //画面幅1080xのwrapの幅1000pxと484pxの比率をキープ
-  @include smallW;
-  @media #{$small} {
-    margin-bottom: 20px;
+  @media #{$normal} {
+    float: right;
+    margin-right: calc(100% * (40 / 1080)); //画面幅1080xと40pxの比率をキープ
   }
 }
 
@@ -99,27 +115,37 @@
   position: relative;
   text-align: center;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
-  width: 48.4%;
-  margin-top: calc(100% * (32 / 1000)); //画面幅1080xのwrapの幅1000pxと32pxの比率をキープ
+  @media #{$normal} {
+    width: calc(100% * 484 / 1080); //画面幅1080xと484pxの比率をキープ
+    margin-top: calc(100% * (32 / 1080)); //画面幅1080xと32pxの比率をキープ
+    margin-bottom: calc(100% * (32 / 1080)); //画面幅1080xと40pxの比率をキープ
+    margin-left: calc(100% * (40 / 1080)); //画面幅1080xと40pxの比率をキープ
+  }
   @include smallW;
   @media #{$small} {
-    margin-bottom: 20px;
+    margin: calc(100% * (20 / 768)) 0 20px calc(100% * (20 / 768)); //画面幅768xと20pxの比率をキープ
   }
 }
 
 .kids_logoapp{
   background-color: $g__color-kids;
   color: white;
-  float: right;
   height: auto;
   position: relative;
   text-align: center;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
-  width: 48.4%;
-  margin-top: calc(100% * (32 / 1000)); //画面幅1080xのwrapの幅1000pxと32pxの比率をキープ
+  @media #{$normal} {
+    float: right;
+    width: calc(100% * 484 / 1080); //画面幅1080xと484pxの比率をキープ
+    margin-top: calc(100% * (32 / 1080)); //画面幅1080xと32pxの比率をキープ
+    margin-bottom: calc(100% * (32 / 1080)); //画面幅1080xと40pxの比率をキープ
+    margin-right: calc(100% * (40 / 1080)); //画面幅1080xと40pxの比率をキープ
+  }
   @include smallW;
   @media #{$small} {
+    float: left;
     margin-top: 0;
+    margin-left: calc(100% * (20 / 768)); //画面幅768xと20pxの比率をキープ
   }
 }
 
@@ -137,13 +163,9 @@
 
 footer{
   width: 100%;
-  margin-top: 60px;
-  .foot{
-    @media #{$normal} {
-      height: 96px;
-    }
-    width: 100%;
-    @include clearfix;
+  padding-top: 60px;
+  @media #{$normal} {
+    height: 96px;
   }
   .copyright{
     background: #9fa0a0;
@@ -586,10 +608,9 @@ footer{
 
 .logoApp_exampleTable{
   float: right;
-  height: 1080px / 2;
-  margin-bottom: 20px;
-  width: 1080px / 2;
-  @include smallW;
+  // height: 1080px / 2;
+  // width: 1080px / 2;
+  // @include smallW;
   @media #{$small} {
     height: auto;
     margin-bottom: 0;

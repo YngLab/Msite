@@ -32,7 +32,7 @@
 .index_openExplain{
   font-size: 32px;
   line-height: 1.75em;
-  margin: 32px 0;
+  padding: 32px 0;
   text-align: center;
   color: $title__color;
 }
@@ -101,9 +101,12 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
     display: inline-block;
-    margin-right: calc(100% * (32 / 1080) - 1px); 
-    //ウィンドウ幅1080px時の32pxからborderを引いている
+    margin-right: calc(100% * (32 / 1080)); 
+    //ウィンドウ幅1080px時の32pxの比率をキープ
     position: relative;
+    @media #{$small} {
+      margin-left: calc(100% * (20 / 768));
+    }
     .remaindays_future{
       background-color: $g__color-future;
       height: 26px;
@@ -191,11 +194,10 @@
 }
 
 .moreview{
-  margin-bottom: 50px;
+  padding: 0 calc(100% * (40 / 1080)) 50px 0; //画面幅1080pxの時に40pxの比率をキープ
   text-align: right;
-  width: 100%;
   @media #{$small} {
-    margin: 10px 0 40px 0;
+    padding: 10px calc(100% * (20 / 768)) 40px 0; //画面幅768pxの時に20pxの比率をキープ
   }
 }
 
@@ -212,6 +214,8 @@ header a{
 
 .gNav_container{
   padding-top: 28px;
+  width: calc(100% * 1000 / 1080); //画面幅1080pxの時に1000pxの比率をキープ
+  margin: 0 auto;
 }
 
 .gNav_TOP{
@@ -498,6 +502,7 @@ header a{
 }
 
 footer{
+  @include clearfix;
   .pagetop{
     height: 20px;
     margin: 0 auto;
@@ -512,47 +517,44 @@ footer{
       opacity: .6;
     }
   }
-  .foot{
+  .footerLinks{
+    margin: 46px 0;
+    text-align: center;
     @include clearfix;
-    .footerLinks{
-      margin: 46px 0;
-      text-align: center;
-      @include clearfix;
+    @media #{$normal} {
+      //width: 504px;
+    }
+    @media #{$small} {
+      margin: 14px 0 24px 0;
+    }
+    .links{
+      color: $g__fontColor;
+      text-decoration: none;
       @media #{$normal} {
-        //width: 504px;
+        font-size: $g__fontSize;
+        padding: 14px;
+        //margin: 46px 0;
+        //float: left;
       }
       @media #{$small} {
-        margin: 14px 0 24px 0;
-      }
-      .links{
-        color: $g__fontColor;
-        text-decoration: none;
-        @media #{$normal} {
-          font-size: $g__fontSize;
-          padding: 14px;
-          //margin: 46px 0;
-          //float: left;
-        }
-        @media #{$small} {
-          //width: 320px;
-          color: $sp__fontColor;
-          width: 100%;
-          font-size: 12px;
-          padding: 12px 0 12px 0;
-          margin: 0 auto;
-          display: block;
-        }
+        //width: 320px;
+        color: $sp__fontColor;
+        width: 100%;
+        font-size: 12px;
+        padding: 12px 0 12px 0;
+        margin: 0 auto;
+        display: block;
       }
     }
-    .SNSbutton{
-      width: 49px; // facebookiconの17px+margin16*2px
-      margin: 0 auto 30px auto;
-      img{
-        height: 32px;
-        margin: 0 16px;
-        //margin-left: 30px;
-        //margin-top: 25px;
-      }
+  }
+  .SNSbutton{
+    width: 49px; // facebookiconの17px+margin16*2px
+    margin: 0 auto 30px auto;
+    img{
+      height: 32px;
+      margin: 0 16px;
+      //margin-left: 30px;
+      //margin-top: 25px;
     }
   }
   .copyright{
@@ -1337,11 +1339,10 @@ p.company_about{//別部分がコーディング規約無視しているため�
   font-size: 14px;
 }
 
-.g_drawerWrap{
+.g_allArea{
   //オーバーレイをabsolute指定するため必要
   position: relative;
-  //padding: 1px 0;
-  float: inherit;
+  @include clearfix;
   //アニメーションの指定
   -webkit-transition: all .4s;
      -moz-transition: all .4s;
@@ -1349,14 +1350,20 @@ p.company_about{//別部分がコーディング規約無視しているため�
           transition: all .4s;
 }
 
-.g_drawerWrap.open{
+.g_allArea-bgcolor{
+  @media #{$normal} {
+    background-color: $bg__color;
+  }
+}
+
+.g_allArea.open{
   //クラス「open」が付いたら左に75%移動
   -webkit-transform: translate3d(-75%, 0, 0);
      -moz-transform: translate3d(-75%, 0, 0);
           transform: translate3d(-75%, 0, 0);
 }
 
-.drawer-toggle{
+.g_drawerToggle{
   position: fixed;
   right: -1px; //トグルの右に出る隙間を埋める
   top: 0;
@@ -1390,7 +1397,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
   }
 }
 
-.drawer-toggle.open{
+.g_drawerToggle.open{
   position: fixed;
   right: -1px; //トグルの右に出る隙間を埋める
   top: 0;
@@ -1426,7 +1433,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
   background: rgba(0, 0, 0, .5);
 }
 
-.drawer {
+.g_drawer{
   position: fixed; //常に固定なのでfixed
   top: 0;
   right: -75%; //初期状態では隠すため、横幅のサイズ分だけ画面外に移動する
@@ -1435,7 +1442,6 @@ p.company_about{//別部分がコーディング規約無視しているため�
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; //スマホでのスクロールに慣性を付ける（デバイス限定
-
   //アニメーション指定
   -webkit-transition: all .4s;
      -moz-transition: all .4s;
@@ -1482,7 +1488,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
   }
 }
 
-.drawer.open {
+.g_drawer.open {
   -webkit-transform: translate3d(-100%, 0, 0);
      -moz-transform: translate3d(-100%, 0, 0);
           transform: translate3d(-100%, 0, 0);
