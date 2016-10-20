@@ -5,18 +5,14 @@ $add_header = "From: info@hakodate-miraiproject.jp\n";//送信者の情報(メ�
 $add_header .= "Reply-to: info@hakodate-miraiproject.jp\n";//送信者の情報(メールヘッダー)
 $add_header .= "X-Mailer: PHP/". phpversion();
 
-if($_SESSION['id'] == "0"){
-  $about = "はこだてみらい館 先行体験会";
-}else if($_SESSION['id'] == "1"){
-  $about = "はこだてキッズプラザ 先行体験会";
-}else if($_SESSION['id'] == "2"){
-  $about = "オドロクチカラ トークセッション";
-}else if($_SESSION['id'] == "3"){
-  $about = "井上涼さんアニメーションワークショップ";
-}else if($_SESSION['id'] == "4"){
-  $about = "Whiteaフリースタイルパフォーマンス";
-}else if($_SESSION['id'] == "5"){
-  $about = "親子ワークショップ「光を感じよう！~見える？見えない？光と色~」";
+if($_SESSION['id'] == "0"){ $about = "はこだてみらい館 先行体験会";
+}else if($_SESSION['id'] == "1"){ $about = "はこだてキッズプラザ 先行体験会";
+}else if($_SESSION['id'] == "2"){ $about = "オドロクチカラ トークセッション";
+}else if($_SESSION['id'] == "3"){ $about = "井上涼さんアニメーションワークショップ";
+}else if($_SESSION['id'] == "4"){ $about = "Whiteaフリースタイルパフォーマンス";
+}else if($_SESSION['id'] == "5"){ $about = "親子ワークショップ「光を感じよう！~見える？見えない？光と色~」";
+}else if($_SESSION['id'] == "6"){ $about = "FabLabワークショップ";
+}else if($_SESSION['id'] == "7"){ $about = "せかいをはかるワークショップ";
 }
 
 if(isset($_SESSION['old'])){//年齢入力があればメールに入れる
@@ -54,6 +50,12 @@ if($_SESSION['id'] == 0){$date = '
 ';
 }else if($_SESSION['id'] == 5){$date = '
 日時：10月23日(日) 10:30-12:30(1回目)14:00-16:00(2回目)
+';
+}else if($_SESSION['id'] == 6){$date = '
+日時：10月29日(土) 10:00-15:00 ハロウィンキャンドル 10月30日(日) 10:00-15:00 ボトルキャップ
+';
+}else if($_SESSION['id'] == 7){$date = '
+日時：10月29日(土) 30日(日)10:30-12:30(1回目) 14:00-16:00(2回目)
 ';
 }
 

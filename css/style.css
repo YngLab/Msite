@@ -1812,17 +1812,15 @@ footer .copyright p {
     margin: 24px calc(100% * 20 / 768) 0px calc(100% * 20 / 768);
   }
 }
-.event_textBox .event_title_future {
+.event_textBox .event_title {
   font-size: 24px;
-  color: #f39800;
   font-weight: 400;
   margin-bottom: 24px;
 }
-.event_textBox .event_title_kids {
-  font-size: 24px;
-  color: #8fc31f;
-  font-weight: 400;
-  margin-bottom: 24px;
+@media screen and (max-width: 768px) {
+  .event_textBox .event_title {
+    line-height: 1.4em;
+  }
 }
 .event_textBox .event_detail {
   width: calc(100% - 300px);
