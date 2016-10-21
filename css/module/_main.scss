@@ -64,6 +64,10 @@
     width: 50%;
     top: 50vw;
   }
+  @media #{$minimum} {
+    height: calc(1080px / 4); //横幅を1080pxに固定した場合の高さ
+    top: calc(1080px / 8); //横幅を1080pxに固定した場合の縦位置
+  }
 }
 
 .indexTop_logo-future{
