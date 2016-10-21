@@ -1014,6 +1014,11 @@ footer:after {
     margin-left: calc(100% * (20 / 768));
   }
 }
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .latestEvent .latestBox_future {
+    margin-right: 32px;
+  }
+}
 .latestEvent .latestBox_future .remaindays_future {
   background-color: #f39800;
   height: 26px;

@@ -72,10 +72,19 @@ $(function(){
         $(this).css({visibility:"visible"});
     }
   });
+
+  //pcビューの時latestEventを一覧表示に
+  if(w_size > 768){
+    $(".latestEvent .flexslider .slides").unwrap();
+    $(".latestEvent .slides li").unwrap();
+    $(".latestEvent li a").unwrap();
+  }
+
   //ページトップに戻るボタン
   $(".move-page-top").click(function(){
     $("html, body").animate({scrollTop:0},"slow");
   });
+
   //アコーディオンの中身の縦幅を取得して開く長さを指定
   $(".Panel1").on('click',function(){
     $(".Panel1 .menu_text").toggleClass("active").slideToggle(400);

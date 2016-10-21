@@ -105,11 +105,13 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
     display: inline-block;
-    margin-right: calc(100vw * (32 / 1080)); 
-    //ウィンドウ幅1080px時の32pxの比率をキープ
+    margin-right: calc(100vw * (32 / 1080)); //ウィンドウ幅1080px時の32pxの比率をキープ
     position: relative;
     @media #{$small} {
       margin-left: calc(100% * (20 / 768));
+    }
+    @media #{$minimum} {
+      margin-right: 32px; //ウィンドウ幅1080px固定の時はの32pxに
     }
     .remaindays_future{
       background-color: $g__color-future;
