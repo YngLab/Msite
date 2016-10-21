@@ -182,7 +182,7 @@ $(function(){
     $(nowModalSyncer).css({"left": ((w - cw)/2) + "px", "top": 5 + "%"});
   }
 
-  var $content = $('.g_allArea'),
+  var $content = $('.g_allArea, footer'),
       $drawer = $('.g_drawer'),
       $button = $('.g_drawerToggle'),
       isOpen = false;

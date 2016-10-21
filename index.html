@@ -18,12 +18,15 @@
     animation: "slide"
   });
 </script>
-<div class = "g_drawerToggle">
+<div class = "g_drawerToggle"><!-- 切り替えボタン -->
   <span class="top"></span>
   <span class="middle"></span>
   <span class="bottom"></span>
 </div>
-<div class = "g_allArea">
+<div class = "g_allArea g_allArea-fullWidth">
+  <!-- g_allAreaで画面幅いっぱいのコンテンツを囲う -->
+  <!-- 機能はspビューの時黒のオーバーレイをかけて左にスライド -->
+  <!-- g_allArea-fullWidthはmaxmumの機能を使いたくない時用 -->
   <div class="imageContainer">
     <div id="imageArea"></div>
     <div id="logoArea">
@@ -40,6 +43,7 @@
     </div>
   </div>
   <div class = "overlay"></div>
+  <!-- g_allAreaを閉じる直前にoverlayのdivを記述 -->
 </div>
 <div class = "g_allArea">
   <div class = "index_openExplain">
@@ -48,6 +52,7 @@
   <div class = "overlay"></div>
 </div>
 <div class = "g_allArea g_allArea-bgcolor">
+  <!-- g_allArea-bgcolorは#f7f8f8の背景色のとき -->
   <h2 class = "topcap">
     直近のイベント
   </h2>
@@ -343,33 +348,28 @@
   <script>updateImageView();</script>
   <div class = "overlay"></div>
 </div>
-<div class = "g_allArea">
-  <footer>
-    <div class = "wrap">
-      <div class = "autoMargin">
-        <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
-        <div class ="footerLinks">
-          <!--<a href = "member.html" class="links">メンバー</a>-->
-          <a href = "notice.html" class="links">お知らせ</a>
-          <a href = "recruit.html" class="links">求人情報</a>
-          <!--<a href = "FAQ.html" class="links">よくあるご質問</a> -->
-          <a href = "relatedlinks.html" class="links">関連リンク</a>
-          <a href = "sitemap.html" class="links">サイトマップ</a>
-          <a href = "sitepolicy.html" class="links">サイトポリシー</a>
-        </div>
-        <div class = "SNSbutton">
-          <a href = "https://www.facebook.com/hakodatemiraiproject/" target="_blank">
-            <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class = "copyright">
-      <p>@2016 Hakodate Mirai Project</p>
-    </div>
-  </footer>
+<footer>
+  <!-- footer用のg_allAreaの代用を記述したのでfooterはこのまま -->
+  <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
+  <div class ="footerLinks">
+    <!--<a href = "member.html" class="links">メンバー</a>-->
+    <a href = "notice.html" class="links">お知らせ</a>
+    <a href = "recruit.html" class="links">求人情報</a>
+    <!--<a href = "FAQ.html" class="links">よくあるご質問</a> -->
+    <a href = "relatedlinks.html" class="links">関連リンク</a>
+    <a href = "sitemap.html" class="links">サイトマップ</a>
+    <a href = "sitepolicy.html" class="links">サイトポリシー</a>
+  </div>
+  <div class = "SNSbutton">
+    <a href = "https://www.facebook.com/hakodatemiraiproject/" target="_blank">
+      <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
+    </a>
+  </div>
+  <div class = "copyright">
+    <p>@2016 Hakodate Mirai Project</p>
+  </div>
   <div class = "overlay"></div>
-</div>
+</footer>
 <div class = "g_drawer">
   <!-- ドロワー部分 -->
   <div class = "sp_language">

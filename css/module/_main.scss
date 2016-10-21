@@ -101,7 +101,7 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
     display: inline-block;
-    margin-right: calc(100% * (32 / 1080)); 
+    margin-right: calc(100vw * (32 / 1080)); 
     //ウィンドウ幅1080px時の32pxの比率をキープ
     position: relative;
     @media #{$small} {
@@ -127,8 +127,8 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-kids;
     display: inline-block;
-    margin-right: calc(100% * (32 / 1080) - 1px);
-    //ウィンドウ幅1080px時の32pxからborderを引いている
+    margin-right: calc(100vw * (32 / 1080));
+    //ウィンドウ幅1080px時の32pxの比率をキープ
     position: relative;
     .remaindays_kids{
       background-color: $g__color-kids;
@@ -502,6 +502,13 @@ header a{
 }
 
 footer{
+  //オーバーレイをabsolute指定するため必要
+  position: relative;
+  //アニメーションの指定
+  -webkit-transition: all .4s;
+     -moz-transition: all .4s;
+       -o-transition: all .4s;
+          transition: all .4s;
   @include clearfix;
   .pagetop{
     height: 20px;
@@ -565,6 +572,13 @@ footer{
       text-align: center;
     }
   }
+}
+
+footer.open{
+  //クラス「open」が付いたら左に75%移動
+  -webkit-transform: translate3d(-75%, 0, 0);
+     -moz-transform: translate3d(-75%, 0, 0);
+          transform: translate3d(-75%, 0, 0);
 }
 
 .logoContainer{
@@ -1339,6 +1353,11 @@ p.company_about{//別部分がコーディング規約無視しているため�
   //オーバーレイをabsolute指定するため必要
   position: relative;
   @include clearfix;
+  margin: 0 auto;
+  @media #{$normal} {
+    max-width: 1440px;
+    min-width: 1080px;
+  }
   //アニメーションの指定
   -webkit-transition: all .4s;
      -moz-transition: all .4s;
@@ -1350,6 +1369,14 @@ p.company_about{//別部分がコーディング規約無視しているため�
   @media #{$normal} {
     background-color: $bg__color;
   }
+  @media #{$maximum} {
+    padding: 0 calc((100vw - 1440px) / 2); 
+    //背景色を画面幅いっぱいにするため、maximumのとき画面幅からコンテンツ幅を引き2で割った値を指定
+  }
+}
+
+.g_allArea-fullWidth{
+  max-width: initial;
 }
 
 .g_allArea.open{

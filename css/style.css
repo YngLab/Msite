@@ -193,8 +193,6 @@ a {
 }
 @media screen and (min-width: 769px) {
   .latestEvent {
-    max-width: 1440px;
-    min-width: 1080px;
     margin: 0 calc(100% * (8 / 1080)) 40px calc(100% * (40 / 1080));
   }
 }
@@ -348,6 +346,7 @@ footer {
 @media screen and (min-width: 769px) {
   footer {
     height: 96px;
+    min-width: 1080px;
   }
 }
 footer .copyright {
@@ -1006,7 +1005,7 @@ footer:after {
   background-color: #ffffff;
   border: solid 1px #f39800;
   display: inline-block;
-  margin-right: calc(100% * (32 / 1080));
+  margin-right: calc(100vw * (32 / 1080));
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -1033,7 +1032,7 @@ footer:after {
   background-color: #ffffff;
   border: solid 1px #8fc31f;
   display: inline-block;
-  margin-right: calc(100% * (32 / 1080) - 1px);
+  margin-right: calc(100vw * (32 / 1080));
   position: relative;
 }
 .latestEvent .latestBox_kids .remaindays_kids {
@@ -1407,6 +1406,13 @@ header a {
   }
 }
 
+footer {
+  position: relative;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
 footer:after {
   clear: both;
   content: "";
@@ -1475,6 +1481,12 @@ footer .copyright p {
   font-size: 10px;
   line-height: 24px;
   text-align: center;
+}
+
+footer.open {
+  -webkit-transform: translate3d(-75%, 0, 0);
+  -moz-transform: translate3d(-75%, 0, 0);
+  transform: translate3d(-75%, 0, 0);
 }
 
 .logoContainer {
@@ -2290,6 +2302,7 @@ p.company_about {
 
 .g_allArea {
   position: relative;
+  margin: 0 auto;
   -webkit-transition: all .4s;
   -moz-transition: all .4s;
   -o-transition: all .4s;
@@ -2300,11 +2313,26 @@ p.company_about {
   content: "";
   display: block;
 }
+@media screen and (min-width: 769px) {
+  .g_allArea {
+    max-width: 1440px;
+    min-width: 1080px;
+  }
+}
 
 @media screen and (min-width: 769px) {
   .g_allArea-bgcolor {
     background-color: #f7f8f8;
   }
+}
+@media screen and (min-width: 1441px) {
+  .g_allArea-bgcolor {
+    padding: 0 calc((100vw - 1440px) / 2);
+  }
+}
+
+.g_allArea-fullWidth {
+  max-width: initial;
 }
 
 .g_allArea.open {

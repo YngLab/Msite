@@ -49,8 +49,6 @@
   margin-right: calc(-100% * (32 / 1000)); //画面幅1080xのwrapの幅1000pxと32pxの比率をキープ
   @include clearfix;
   @media #{$normal}{
-    max-width: 1440px;
-    min-width: 1080px;
     margin: 0 calc(100% * (8 / 1080)) 40px calc(100% * (40 / 1080)); //$normal時は画面幅1080pxの時に40pxの比率をキープ
   }
   @media #{$small}{
@@ -166,14 +164,15 @@ footer{
   padding-top: 60px;
   @media #{$normal} {
     height: 96px;
+    min-width: 1080px;
   }
   .copyright{
     background: #9fa0a0;
     height: 24px;
+    width: 100%;
     @media #{$minimum} {
       width: 1080px;
     }
-    width: 100%;
   }
   @include clearfix;
 }
