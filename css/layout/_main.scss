@@ -64,12 +64,13 @@
   }
 }
 
-.gHeader{
-  height: 81px;
-  @media #{$small} {
-    display: none;
-  }
-}
+// .gHeader{
+//   height: 81px;
+//   @media #{$small} {
+//     display: none;
+//   }
+// }
+//headerにまとめる
 
 .topcap{
   padding: 50px 0 40px 0;

@@ -201,8 +201,19 @@
   }
 }
 
-header a{
-  color: $dark__fontColor;
+header{
+  height: 81px;
+  @media #{$normal} {
+    max-width: 1440px;
+    min-width: 1080px;
+  }
+  @media #{$small} {
+    display: none;
+  }
+  margin: 0 auto;
+  a{
+    color: $dark__fontColor;
+  }
 }
 
 .nav_TOP{
@@ -227,14 +238,15 @@ header a{
   @include clearfix;
 }
 
-.gHeader{
-  background-color: $boxcolor;
-}
+// .gHeader{
+//   background-color: $boxcolor;
+// }
+//headerにまとめる
 
 .pNav{
   font-size: 12px;
   font-weight: 200;
-  margin-top: 13px;
+  margin: 13px calc(-100% * (40 / 1080)); //画面幅1080pxの時に40pxの比率をキープ
   width: 100%;
   @include clearfix;
 }
@@ -251,9 +263,9 @@ header a{
 
 .gNav{
   color: $g__fontColor;
-  margin-top: 28px;
+  margin: 28px auto 0 auto;
   border-right: 1px solid $g__fontColor;
-  width: 100%;
+  width: calc(100% * (1000 / 1080)); //画面幅1080pxの時に1000pxの比率をキープ
   @include clearfix;
 }
 
