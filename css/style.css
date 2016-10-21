@@ -1056,9 +1056,6 @@ footer:after {
   text-align: center;
   z-index: 10;
 }
-.latestEvent .latestBox_img {
-  height: calc(100% * (126 / 224));
-}
 .latestEvent img {
   height: calc(100% * (126 / 224));
   width: 100%;
@@ -2234,6 +2231,9 @@ footer.open {
 .modal-content #modal-close img:hover {
   opacity: .6;
 }
+.modal-content .flexslider .slides img {
+  height: 100%;
+}
 
 #modal-overlay {
   z-index: 1;
@@ -2961,7 +2961,6 @@ h2.concept_title {
 
 .flexslider .slides img {
   /*width: 100%;*/
-  height: 100%;
   display: block;
   margin: 0 auto;
 }
@@ -3007,7 +3006,6 @@ html[xmlns] .flexslider .slides {
 }
 
 .flexslider .slides img {
-  height: 100%;
   -moz-user-select: none;
 }
 

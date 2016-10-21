@@ -14,6 +14,12 @@ $(function(){
   $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
   $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
   $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
+  //pcビューの時latestEventを一覧表示に
+  if(w_size > 768){
+    $(".latestEvent .flexslider .slides").unwrap();
+    $(".latestEvent .slides li").unwrap();
+    $(".latestEvent li a").unwrap();
+  }
   $(window).resize(function () {
     w_size = $(window).width();
     if(w_size >= 1440){
@@ -30,6 +36,12 @@ $(function(){
     $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
     $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
     $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
+      //pcビューの時latestEventを一覧表示に
+    if(w_size > 768){
+      $(".latestEvent .flexslider .slides").unwrap();
+      $(".latestEvent .slides li").unwrap();
+      $(".latestEvent li a").unwrap();
+    }
   });
 
   // スクロールしたら発動
@@ -72,13 +84,6 @@ $(function(){
         $(this).css({visibility:"visible"});
     }
   });
-
-  //pcビューの時latestEventを一覧表示に
-  if(w_size > 768){
-    $(".latestEvent .flexslider .slides").unwrap();
-    $(".latestEvent .slides li").unwrap();
-    $(".latestEvent li a").unwrap();
-  }
 
   //ページトップに戻るボタン
   $(".move-page-top").click(function(){

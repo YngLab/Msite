@@ -152,9 +152,9 @@
       }
     }
   }
-  .latestBox_img{
-    height: calc(100% * (126 / 224)); //latestBoxが224px(borderは含めず)の時に126pxの比率をキープ
-  }
+  // .latestBox_img{
+  //   height: calc(100% * (126 / 224)); //latestBoxが224px(borderは含めず)の時に126pxの比率をキープ
+  // }
   img{
     height: calc(100% * (126 / 224)); //latestBoxが224px(borderは含めず)の時に126pxの比率をキープ
     width: 100%;
@@ -1284,6 +1284,9 @@ footer.open{
     // left: 0px;
     // position: absolute;
     // margin: calc(4% + 31px) auto auto auto;
+  }
+  .flexslider .slides img{
+    height: 100%;
   }
 }
 
