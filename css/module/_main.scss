@@ -308,6 +308,12 @@ header{
     @media #{$small} {
       height: calc(100vw * 2 * (180 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
     }
+    @media #{$minimum} {
+      height: 180px; //画面幅1080pxの時は180pxに固定
+    }
+    @media #{$maximum} {
+      height: 240px; //画面幅1440pxの時は240pxに固定
+    }
     .future_logo_img{
       // position: absolute;
       // top: 50%;
@@ -395,6 +401,12 @@ header{
     text-align: center;
     @media #{$small} {
       height: calc(100vw * 2 * (180 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
+    }
+    @media #{$minimum} {
+      height: 180px; //画面幅1080pxの時は180pxに固定
+    }
+    @media #{$maximum} {
+      height: 240px; //画面幅1440pxの時は240pxに固定
     }
     .kids_logo_img{
       // position: absolute;

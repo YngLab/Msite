@@ -1220,6 +1220,16 @@ header a {
     height: calc(100vw * 2 * (180 / 1080));
   }
 }
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .future_entrance .future_logo {
+    height: 180px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .future_entrance .future_logo {
+    height: 240px;
+  }
+}
 .future_entrance .future_logo .future_logo_img {
   display: table-cell;
   vertical-align: middle;
@@ -1305,6 +1315,16 @@ header a {
 @media screen and (max-width: 768px) {
   .kids_entrance .kids_logo {
     height: calc(100vw * 2 * (180 / 1080));
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .kids_entrance .kids_logo {
+    height: 180px;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .kids_entrance .kids_logo {
+    height: 240px;
   }
 }
 .kids_entrance .kids_logo .kids_logo_img {
