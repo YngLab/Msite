@@ -99,7 +99,7 @@
 }
 .latestEvent{
   font-size: 0;
-  padding-bottom: 40px;
+  //padding-bottom: 40px;
   //margin-top: 40px;
   .latestBox_future{
     background-color: $boxcolor;
@@ -112,6 +112,9 @@
     }
     @media #{$minimum} {
       margin-right: 32px; //ウィンドウ幅1080px固定の時はの32pxに
+    }
+    @media #{$maximum} {
+      margin-right: calc(1440px * (32 / 1080)); //ウィンドウ幅1080px時の32pxの比率をキープ
     }
     .remaindays_future{
       background-color: $g__color-future;
@@ -133,9 +136,17 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-kids;
     display: inline-block;
-    margin-right: calc(100vw * (32 / 1080));
-    //ウィンドウ幅1080px時の32pxの比率をキープ
+    margin-right: calc(100vw * (32 / 1080)); //ウィンドウ幅1080px時の32pxの比率をキープ
     position: relative;
+    @media #{$small} {
+      margin-left: calc(100% * (20 / 768));
+    }
+    @media #{$minimum} {
+      margin-right: 32px; //ウィンドウ幅1080px固定の時はの32pxに
+    }
+    @media #{$maximum} {
+      margin-right: calc(1440px * (32 / 1080)); //ウィンドウ幅1080px時の32pxの比率をキープ
+    }
     .remaindays_kids{
       background-color: $g__color-kids;
       height: 26px;
