@@ -104,11 +104,11 @@ a {
   }
 }
 
-.futureColor {
+.FCHcolor {
   color: #f39800;
 }
 
-.kidsColor {
+.KPHcolor {
   color: #8fc31f;
 }
 
@@ -654,9 +654,7 @@ footer:after {
     left: 50%;
     position: absolute;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     text-align: left;
   }
 }
@@ -838,8 +836,7 @@ footer:after {
   margin: auto;
   padding: 15px;
   text-align: center;
-  -webkit-transition: .1s;
-          transition: .1s;
+  transition: .1s;
 }
 .logoApp_linkButton:hover {
   background-color: #9fa0a0;
@@ -931,8 +928,7 @@ footer:after {
 }
 
 #logoArea a {
-  -webkit-transition: .2s;
-          transition: .2s;
+  transition: .2s;
 }
 #logoArea a:hover {
   opacity: .8;
@@ -1065,11 +1061,9 @@ footer:after {
   left: 16px;
   position: absolute;
   top: 80%;
-  -webkit-transform: translate(0%, -50%);
-      -ms-transform: translate(0%, -50%);
-          transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
   text-align: left;
-  width: calc(100% - 32px)
+  width: calc(100% - 32px);
   /*
   .eventsch{
     margin: calc(100% * (23 / 280.616)) 0 0 0;
@@ -1445,6 +1439,8 @@ header a {
 footer {
   position: relative;
   -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
   transition: all .4s;
 }
 footer:after {
@@ -1519,6 +1515,7 @@ footer .copyright p {
 
 footer.open {
   -webkit-transform: translate3d(-75%, 0, 0);
+  -moz-transform: translate3d(-75%, 0, 0);
   transform: translate3d(-75%, 0, 0);
 }
 
@@ -2136,14 +2133,6 @@ footer.open {
   }
 }
 
-.FCHcolor {
-  color: #f39800;
-}
-
-.KPHcolor {
-  color: #8fc31f;
-}
-
 .info_table_FCH, .info_table_KPH {
   text-align: left;
   width: 100%;
@@ -2340,6 +2329,8 @@ p.company_about {
   position: relative;
   margin: 0 auto;
   -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
   transition: all .4s;
 }
 .g_allArea:after {
@@ -2371,6 +2362,7 @@ p.company_about {
 
 .g_allArea.open {
   -webkit-transform: translate3d(-75%, 0, 0);
+  -moz-transform: translate3d(-75%, 0, 0);
   transform: translate3d(-75%, 0, 0);
 }
 
@@ -2384,6 +2376,8 @@ p.company_about {
   background-color: #9fa0a0;
   z-index: 1000;
   -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
   transition: all .4s;
 }
 @media screen and (min-width: 769px) {
@@ -2397,21 +2391,14 @@ p.company_about {
   height: 2px;
   background-color: #FFFFFF;
   width: 20px;
-  -webkit-transition: all .4s;
-          transition: all .4s;
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transition: all .4s;
+  transform: rotate(0deg);
 }
 .g_drawerToggle .top {
-  -webkit-transform: translateY(-4px);
-      -ms-transform: translateY(-4px);
-          transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 .g_drawerToggle .bottom {
-  -webkit-transform: translateY(4px);
-      -ms-transform: translateY(4px);
-          transform: translateY(4px);
+  transform: translateY(4px);
 }
 
 .g_drawerToggle.open {
@@ -2420,20 +2407,17 @@ p.company_about {
   top: 0;
   z-index: 1000;
   -webkit-transform: translate3d(-75vw, 0, 0);
+  -moz-transform: translate3d(-75vw, 0, 0);
   transform: translate3d(-75vw, 0, 0);
 }
 .g_drawerToggle.open .middle {
   background: rgba(255, 255, 255, 0);
 }
 .g_drawerToggle.open .top {
-  -webkit-transform: rotate(-45deg) translateY(2px);
-      -ms-transform: rotate(-45deg) translateY(2px);
-          transform: rotate(-45deg) translateY(2px);
+  transform: rotate(-45deg) translateY(2px);
 }
 .g_drawerToggle.open .bottom {
-  -webkit-transform: rotate(45deg) translateY(-3px);
-      -ms-transform: rotate(45deg) translateY(-3px);
-          transform: rotate(45deg) translateY(-3px);
+  transform: rotate(45deg) translateY(-3px);
 }
 
 /* オーバーレイ表示をするためのCSS */
@@ -2457,6 +2441,8 @@ p.company_about {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
   transition: all .4s;
 }
 .g_drawer .sp_language {
@@ -2492,6 +2478,7 @@ p.company_about {
 
 .g_drawer.open {
   -webkit-transform: translate3d(-100%, 0, 0);
+  -moz-transform: translate3d(-100%, 0, 0);
   transform: translate3d(-100%, 0, 0);
   background-color: #ffffff;
   z-index: 10000;
@@ -2724,7 +2711,7 @@ h2.concept_title {
 .concept, .concept_img, .concept_text {
   font-size: 18px;
   line-height: 1.8em;
-  max-width: 960px
+  max-width: 960px;
   /*h3{
     text-align: center;
     margin-bottom: 25px;
@@ -2762,9 +2749,7 @@ h2.concept_title {
 
 .center_circle {
   height: 61px;
-  -webkit-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
   width: 61px;
 }
 @media screen and (max-width: 768px) {
@@ -2788,7 +2773,7 @@ h2.concept_title {
 
 @media screen and (min-width: 769px) {
   .concept_text {
-    max-width: 455px
+    max-width: 455px;
     /*p{
       margin-top: calc(960px / 9 * 2 - 16px * 1.5);
     }*/
@@ -2827,27 +2812,19 @@ h2.concept_title {
   }
 
   .concept_text-left {
-    -webkit-transform: translate(calc(-100% - 42px), 0);
-        -ms-transform: translate(calc(-100% - 42px), 0);
-            transform: translate(calc(-100% - 42px), 0);
+    transform: translate(calc(-100% - 42px), 0);
   }
 
   .concept_text-right {
-    -webkit-transform: translate(42px, 0);
-        -ms-transform: translate(42px, 0);
-            transform: translate(42px, 0);
+    transform: translate(42px, 0);
   }
 
   .concept_img-left {
-    -webkit-transform: translate(calc(-100% - 42px), calc(-50% + (61px * 0.5)));
-        -ms-transform: translate(calc(-100% - 42px), calc(-50% + (61px * 0.5)));
-            transform: translate(calc(-100% - 42px), calc(-50% + (61px * 0.5)));
+    transform: translate(calc(-100% - 42px), calc(-50% + (61px * 0.5)));
   }
 
   .concept_img-right {
-    -webkit-transform: translate(42px, calc(-50% + (61px * 0.5)));
-        -ms-transform: translate(42px, calc(-50% + (61px * 0.5)));
-            transform: translate(42px, calc(-50% + (61px * 0.5)));
+    transform: translate(42px, calc(-50% + (61px * 0.5)));
   }
 
   /*.concept_sub{
@@ -2914,8 +2891,7 @@ h2.concept_title {
 }
 
 .menu .active .btn {
-  -ms-transform: rotate(180deg);
-      transform: rotate(180deg);
+  transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
 }
 
@@ -3015,7 +2991,11 @@ html[xmlns] .flexslider .slides {
   /*border: 4px solid #fff;*/
   position: relative;
   zoom: 1;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
+  -webkit-box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
   -o-box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
   box-shadow: "" 0 1px 4px rgba(0, 0, 0, 0.2);
 }
@@ -3032,6 +3012,9 @@ html[xmlns] .flexslider .slides {
 .flex-viewport {
   max-height: 2000px;
   -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -3058,7 +3041,7 @@ html[xmlns] .flexslider .slides {
   z-index: 10;
   overflow: hidden;
   /*opacity: 0;*/
-  cursor: pointer
+  cursor: pointer;
   /*color: rgba(0, 0, 0, 0.8);*/
   /*text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
   -webkit-transition: all 0.3s ease-in-out;
@@ -3159,7 +3142,7 @@ html[xmlns] .flexslider .slides {
   background: #FFFFFF;
   /*background: rgba(0, 0, 0, 0.5);*/
   cursor: pointer;
-  text-indent: -9999px
+  text-indent: -9999px;
   /*-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
   -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
@@ -3170,7 +3153,7 @@ html[xmlns] .flexslider .slides {
 }
 
 .flex-control-paging li a:hover {
-  background: #9fa0a0
+  background: #9fa0a0;
   /*本来はfuture,kidsで色分けたい*/
 }
 
@@ -3212,6 +3195,9 @@ html[xmlns] .flexslider .slides {
   cursor: pointer;
   -moz-user-select: none;
   -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 
