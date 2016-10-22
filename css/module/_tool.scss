@@ -4,8 +4,10 @@
 .menu{
   float: left;
   width: 70%;
+  margin-left: calc(100% * 40 / 1080);
   @media #{$small} {
-    width: 100%;
+    width: calc(100% * 728 / 768);
+    margin-left: calc(100% * 20 / 768);
   }
   // ul{
   //   -webkit-transition: all 0.5s;

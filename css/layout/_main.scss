@@ -451,27 +451,40 @@ footer{
   }
 }
 */
-.p-layout{
-  @media #{$normal} {
-    position: relative;
-    width: 100%;
-  }
-}
+// .p-layout{
+//   @media #{$normal} {
+//     position: relative;
+//     width: 100%;
+//   }
+// }
 
-.p-centering{
+// .p-centering{
+//   @media #{$normal} {
+//     left: 50%;
+//     position: absolute;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     text-align: left;
+//   }
+// }
+
+// .topMargin{
+//   @media #{$normal} {
+//     top: calc(50% - 50px);
+//   }
+// }
+//上3つを.recruite_textBoxにまとめた
+
+.recruite_textBox{
   @media #{$normal} {
     left: 50%;
     position: absolute;
-    top: 50%;
+    top: calc(50% - 50px);
     transform: translate(-50%, -50%);
     text-align: left;
   }
-}
-
-.topMargin{
-  @media #{$normal} {
-    top: calc(50% - 50px);
-  }
+  margin: 0 auto;
+  @include smallW;
 }
 
 .p-margin{
@@ -479,14 +492,23 @@ footer{
 }
 
 .sponsor{
+  @media #{$normal} {
+    width: calc(100% * (1000 / 1080));
+    margin-left: calc(100% * (40 / 1080));
+  }
+  @media #{$small} {
+    width: calc(100% * (728 / 768));
+    margin-left: calc(100% * (20 / 768));
+  }
   .heading{
     margin-top: 0;
     width: 100%;
+    padding: 50px 0 24px 0;
     @media #{$small} {
-      padding: 0;
+      padding: 40px 0 27px 0; //デザインカンプの通りに、元のデザインから修正
     }
   }
-  p{
+  .company_about{
     margin-bottom: 40px;
   }
   .companyLinks{
@@ -506,11 +528,20 @@ footer{
   @media #{$normal} {
     //float: left;
     float: right;
-    width: 50%;
+    width: calc(100% * (1000 / 1080) / 2);
+    margin-right: calc(100% * (40 / 1080));
+  }
+  @media #{$small} {
+    width: calc(100% * (728 / 768));
+    margin-left: calc(100% * (20 / 768));
   }
   .heading{
     margin-top: 0;
-    padding-bottom: 24px;
+    padding: 50px 0 24px 0; 
+    //.headingが左にpaddingをとっていたので.touristOfficeのheadingにpadding指定してます。
+    @media #{$small} {
+      padding: 40px 0 27px 0; //デザインカンプの通りに、元のデザインから修正
+    }
   }
 }
 
@@ -518,11 +549,19 @@ footer{
   @media #{$normal} {
     //float: right;
     float: left;
-    width: 50%;
+    width: calc(100% * (1000 / 1080) / 2);
+    margin-left: calc(100% * (40 / 1080));
+  }
+  @media #{$small} {
+    width: calc(100% * (728 / 768));
+    margin-left: calc(100% * (20 / 768));
   }
   .heading{
     margin-top: 0;
-    padding-bottom: 24px;
+    padding: 50px 0 24px 0; //.headingが左にpaddingをとっていたので.touristGuideのheadingにpadding指定してます。
+    @media #{$small} {
+      padding: 40px 0 27px 0; //デザインカンプの通りに、元のデザインから修正
+    }
   }
 }
 

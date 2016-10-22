@@ -530,6 +530,9 @@ header{
       }
     }
   }
+  @media #{$normal} {
+    margin-left: calc(100% * (40 / 1080));
+  }
   @media #{$small} {
     span{
       display: block;
@@ -539,6 +542,8 @@ header{
       content: "\A";
       white-space: pre;
     }//改行を無理矢理挿入するコードです。実はlayoutの関連リンクのところにもあります。
+    width: calc(100% * (728 / 768));
+    margin: 0 auto;
   }
 }
 
@@ -1411,6 +1416,13 @@ p.company_about{//別部分がコーディング規約無視しているため�
 
 .g_allArea-fullWidth{
   max-width: initial;
+}
+
+.g_allArea-shortPage{
+  min-height: calc(100vh - 93px - 115px - 273px); //画面表示高さ - ヘッダー - 見出し - フッター
+  @media #{$small} {
+    min-height: calc(100vh - 52px - 115px - 389px); //画面表示高さ - ヘッダー - 見出し - フッター
+  }
 }
 
 .g_allArea.open{

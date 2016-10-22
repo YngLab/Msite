@@ -641,28 +641,23 @@ footer:after {
   }
 }
 */
-@media screen and (min-width: 769px) {
-  .p-layout {
-    position: relative;
-    width: 100%;
-  }
+.recruite_textBox {
+  margin: 0 auto;
 }
-
 @media screen and (min-width: 769px) {
-  .p-centering {
+  .recruite_textBox {
     left: 50%;
     position: absolute;
-    top: 50%;
+    top: calc(50% - 50px);
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     text-align: left;
   }
 }
-
-@media screen and (min-width: 769px) {
-  .topMargin {
-    top: calc(50% - 50px);
+@media screen and (max-width: 768px) {
+  .recruite_textBox {
+    width: calc(100% * (728 / 768));
   }
 }
 
@@ -670,16 +665,29 @@ footer:after {
   margin-top: 41px;
 }
 
+@media screen and (min-width: 769px) {
+  .sponsor {
+    width: calc(100% * (1000 / 1080));
+    margin-left: calc(100% * (40 / 1080));
+  }
+}
+@media screen and (max-width: 768px) {
+  .sponsor {
+    width: calc(100% * (728 / 768));
+    margin-left: calc(100% * (20 / 768));
+  }
+}
 .sponsor .heading {
   margin-top: 0;
   width: 100%;
+  padding: 50px 0 24px 0;
 }
 @media screen and (max-width: 768px) {
   .sponsor .heading {
-    padding: 0;
+    padding: 40px 0 27px 0;
   }
 }
-.sponsor p {
+.sponsor .company_about {
   margin-bottom: 40px;
 }
 @media screen and (max-width: 768px) {
@@ -695,23 +703,47 @@ footer:after {
 @media screen and (min-width: 769px) {
   .touristOffice {
     float: right;
-    width: 50%;
+    width: calc(100% * (1000 / 1080) / 2);
+    margin-right: calc(100% * (40 / 1080));
+  }
+}
+@media screen and (max-width: 768px) {
+  .touristOffice {
+    width: calc(100% * (728 / 768));
+    margin-left: calc(100% * (20 / 768));
   }
 }
 .touristOffice .heading {
   margin-top: 0;
-  padding-bottom: 24px;
+  padding: 50px 0 24px 0;
+}
+@media screen and (max-width: 768px) {
+  .touristOffice .heading {
+    padding: 40px 0 27px 0;
+  }
 }
 
 @media screen and (min-width: 769px) {
   .touristGuide {
     float: left;
-    width: 50%;
+    width: calc(100% * (1000 / 1080) / 2);
+    margin-left: calc(100% * (40 / 1080));
+  }
+}
+@media screen and (max-width: 768px) {
+  .touristGuide {
+    width: calc(100% * (728 / 768));
+    margin-left: calc(100% * (20 / 768));
   }
 }
 .touristGuide .heading {
   margin-top: 0;
-  padding-bottom: 24px;
+  padding: 50px 0 24px 0;
+}
+@media screen and (max-width: 768px) {
+  .touristGuide .heading {
+    padding: 40px 0 27px 0;
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -1449,7 +1481,16 @@ header a {
     margin-right: 30px;
   }
 }
+@media screen and (min-width: 769px) {
+  .siteMap {
+    margin-left: calc(100% * (40 / 1080));
+  }
+}
 @media screen and (max-width: 768px) {
+  .siteMap {
+    width: calc(100% * (728 / 768));
+    margin: 0 auto;
+  }
   .siteMap span {
     display: block;
     margin-bottom: 30px;
@@ -2376,6 +2417,15 @@ p.company_about {
   max-width: initial;
 }
 
+.g_allArea-shortPage {
+  min-height: calc(100vh - 93px - 115px - 273px);
+}
+@media screen and (max-width: 768px) {
+  .g_allArea-shortPage {
+    min-height: calc(100vh - 52px - 115px - 389px);
+  }
+}
+
 .g_allArea.open {
   -webkit-transform: translate3d(-75%, 0, 0);
   transform: translate3d(-75%, 0, 0);
@@ -2882,10 +2932,12 @@ h2.concept_title {
 .menu {
   float: left;
   width: 70%;
+  margin-left: calc(100% * 40 / 1080);
 }
 @media screen and (max-width: 768px) {
   .menu {
-    width: 100%;
+    width: calc(100% * 728 / 768);
+    margin-left: calc(100% * 20 / 768);
   }
 }
 
