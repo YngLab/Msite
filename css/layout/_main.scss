@@ -25,9 +25,11 @@
   #header_sp{
     @include only_sp; //@mediaでdisplay:noneするとき用にmixin作ってるので、ぜひ使ってください。
     @media #{$small} {
-      background: $g__fontColor;
+      border-top: 40px solid $g__fontColor;
+      height: 12px;
+      /*background: $g__fontColor;
       font-size: 40px;
-      margin-bottom: 12px;
+      margin-bottom: 12px;*/
     }
   }
 }
@@ -414,7 +416,6 @@ footer{
 //pageTitleの命名を変えました。pageTitle_event → event_pageTitle, pageTitle → g_pageTitle
 .event_pageTitle, .g_pageTitle{ //機能の共通部分をまとめました。
   .titleText{
-    margin-left: calc((100% * (1000 / 1080)) * (40 / 1080));
     padding-left: 24px;
   }
 }

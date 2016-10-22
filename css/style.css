@@ -167,9 +167,11 @@ a {
 }
 @media screen and (max-width: 768px) {
   .g_allArea #header_sp {
-    background: #9fa0a0;
+    border-top: 40px solid #9fa0a0;
+    height: 12px;
+    /*background: $g__fontColor;
     font-size: 40px;
-    margin-bottom: 12px;
+    margin-bottom: 12px;*/
   }
 }
 
@@ -600,7 +602,6 @@ footer:after {
 }
 
 .event_pageTitle .titleText, .g_pageTitle .titleText {
-  margin-left: calc((100% * (1000 / 1080)) * (40 / 1080));
   padding-left: 24px;
 }
 
@@ -1609,7 +1610,7 @@ footer.open {
 @media screen and (max-width: 768px) {
   .heading {
     font-size: 18px;
-    padding: 20px 0 27px 0;
+    padding: 20px 0 27px calc(100% * 20 / 768);
   }
   .heading .addPadding {
     padding-top: 20px;
@@ -1640,7 +1641,7 @@ footer.open {
 
 @media screen and (min-width: 769px) {
   .heading-lineup {
-    padding: 10px 0 40px 40px;
+    padding: 10px 0 40px calc(100% * (40 / 1080));
   }
   .heading-lineup .headingTitle {
     color: #727171;
@@ -1650,7 +1651,7 @@ footer.open {
 @media screen and (max-width: 768px) {
   .heading-lineup {
     font-size: 18px;
-    padding: 40px 0 27px 0;
+    padding: 40px 0 27px calc(100% * 20 / 768);
   }
   .heading-lineup p {
     color: #727171;
@@ -2026,11 +2027,16 @@ footer.open {
 }
 
 .collectevent {
-  margin-top: 40px;
+  padding: 40px 0 0 calc(100% * (40 / 1080));
   line-height: 1.75em;
 }
 .collectevent .form_guide {
   margin-top: 24px;
+}
+@media screen and (max-width: 768px) {
+  .collectevent {
+    padding-left: calc(100% * 20 / 768);
+  }
 }
 
 .eventabout img {
@@ -2336,8 +2342,14 @@ p.company_about {
 }
 @media screen and (min-width: 1441px) {
   .g_allArea-bgcolor {
-    padding: 0 calc((100vw - 1440px) / 2);
+    padding: 0 calc((100% - 1440px) / 2);
   }
+}
+
+.g_allArea-pagetitle {
+  background: white;
+  border-bottom: solid 1px #9fa0a0;
+  border-top: solid 1px #9fa0a0;
 }
 
 .g_allArea-fullWidth {
@@ -2473,8 +2485,6 @@ p.company_about {
 }
 
 .event_pageTitle, .g_pageTitle {
-  border-bottom: solid 1px #9fa0a0;
-  border-top: solid 1px #9fa0a0;
   color: #3e3a39;
   font-size: 21px;
   font-weight: 500;
@@ -2489,6 +2499,11 @@ p.company_about {
 .event_pageTitle .titleText, .g_pageTitle .titleText {
   border-left: solid 1px #9fa0a0;
   line-height: 63px;
+}
+@media screen and (max-width: 768px) {
+  .event_pageTitle, .g_pageTitle {
+    padding-left: calc(100% * 20 / 768);
+  }
 }
 
 .archives .headmarkMargin {
