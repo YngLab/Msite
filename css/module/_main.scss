@@ -697,7 +697,7 @@ footer.open{
   }
   @media #{$small} {
     font-size: 18px;
-    padding: 20px 0 27px calc(100% * 20 / 768);
+    padding: 20px 0 27px calc(100% * 20 / 768); //スマホモードに対応するためのcalcです。これ、g_allArea系に書きたかったんですが、そこに書いちゃうと元々の役割の都合上左右幅を取りたくないところにもかかってしまうので、個別に指定する他無いんですねぇ・・・。
     .addPadding{
       padding-top: 20px;
     }
