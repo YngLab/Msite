@@ -21,12 +21,9 @@
 // }
 
 //wrapとautoMarginは使用禁止
-
 .g_allArea{
   #header_sp{
-    @media #{$normal} {
-      display: none;
-    }
+    @include only_sp; //@mediaでdisplay:noneするとき用にmixin作ってるので、ぜひ使ってください。
     @media #{$small} {
       background: $g__fontColor;
       font-size: 40px;
@@ -345,13 +342,6 @@ footer{
   @include clearfix;
 }
 
-.pageTitle_event{
-  //margin: 12px 0 0 0;
-  .titleText{
-    padding-left: 24px;
-  }
-}
-
 .map_container{
   position: relative;
   padding-top: 60vh;
@@ -421,12 +411,16 @@ footer{
 }
 
 //↑加納↓高居
-
-.pageTitle{
-  margin-bottom: 50px;
+//pageTitleの命名を変えました。pageTitle_event → event_pageTitle, pageTitle → g_pageTitle
+.event_pageTitle, .g_pageTitle{ //機能の共通部分をまとめました。
   .titleText{
+    margin-left: calc((100% * (1000 / 1080)) * (40 / 1080));
     padding-left: 24px;
   }
+}
+
+.g_pageTitle{ //両者の違いはこれのあるなしだけでした。
+  margin-bottom: 50px;
 }
 
 .archives{

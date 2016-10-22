@@ -42,7 +42,7 @@ $accordion__border: #dddddd;
 @mixin smallW{
   // @media #{$small} {
   //   width: 100%;
-  // } 
+  // }
   // wrapを使わないため変更
   @media #{$small} {
     width: calc(100% * (728 / 768));
