@@ -704,13 +704,13 @@ footer.open{
 
 .heading{
   padding: 50px 0 40px calc(100% * (40 / 1080));
-  p{
+  //p{ なんでpタグに指定してたんや？？
     color: $h2__color;
     font-size: $h2__fontSize;
     @media #{$small} {
       font-size: 18px;
     }
-  }
+  //}
   @media #{$small} {
     font-size: 18px;
     padding: 20px 0 27px calc(100% * 20 / 768); //スマホモードに対応するためのcalcです。これ、g_allArea系に書きたかったんですが、そこに書いちゃうと元々の役割の都合上左右幅を取りたくないところにもかかってしまうので、個別に指定する他無いんですねぇ・・・。
@@ -740,7 +740,7 @@ footer.open{
 
 .heading-lineup{
   @media #{$normal} {
-    padding: 10px 0 40px calc(100% * (40 / 1080)); //改変後のlatestEventが下にpadding40 + margin40取ってたので、それに合わせて上のpaddingを40削りました。
+    padding: 50px 0 40px calc(100% * (40 / 1080)); //padding_topもどしました。
     //float: left; お前はなんで浮いてたんだ？
     .headingTitle{
       color: $h2__color;
