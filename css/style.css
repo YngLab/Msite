@@ -992,6 +992,15 @@ footer:after {
 #logoArea a:hover {
   opacity: .8;
 }
+@media screen and (max-width: 768px) {
+  #logoArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
 
 .indexTop_logo {
   position: absolute;
@@ -1007,11 +1016,22 @@ footer:after {
   right: 0;
   margin: auto;
 }
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .indexTop_logo {
+    height: calc(1080px / 4);
+    width: calc(1080px / 4);
+    top: calc(1080px / 8);
+  }
+}
 @media screen and (max-width: 768px) {
   .indexTop_logo {
     height: 50vw;
     width: 50%;
     top: 50vw;
+  }
+  .indexTop_logo img {
+    height: 100%;
+    width: 100%;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1080px) {
@@ -1024,6 +1044,11 @@ footer:after {
 .indexTop_logo-future {
   left: 25%;
   background-color: #f39800;
+}
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .indexTop_logo-future {
+    left: calc(1080px / 4);
+  }
 }
 @media screen and (max-width: 768px) {
   .indexTop_logo-future {
@@ -1038,6 +1063,12 @@ footer:after {
 .indexTop_logo-kids {
   right: 25%;
   background-color: #8fc31f;
+}
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .indexTop_logo-kids {
+    left: calc(1080px / 4 * 2);
+    right: auto;
+  }
 }
 @media screen and (max-width: 768px) {
   .indexTop_logo-kids {
