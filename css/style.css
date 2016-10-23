@@ -565,21 +565,33 @@ footer:after {
 
 @media screen and (min-width: 769px) {
   .adress {
-    width: 50%;
+    width: calc(100% * (1000 / 1080) / 2);
     float: left;
   }
   .adress .heading > p {
     margin-bottom: 24px;
   }
 }
+@media screen and (max-width: 768px) {
+  .adress {
+    width: calc(100% * (728 / 768));
+    margin: 0 calc(100% * (20 / 768));
+  }
+}
 
 @media screen and (min-width: 769px) {
   .parking {
-    width: 50%;
+    width: calc(100% * (1000 / 1080) / 2);
     float: left;
   }
   .parking .heading > p {
     margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .parking {
+    width: calc(100% * (728 / 768));
+    margin: 0 calc(100% * (20 / 768));
   }
 }
 
@@ -595,7 +607,8 @@ footer:after {
   width: 100%;
 }
 .accessProcess img {
-  width: 100%;
+  width: calc(100% * (1000 / 1080));
+  margin: 0 calc(100% * (40 / 1080));
 }
 @media screen and (min-width: 769px) {
   .accessProcess {
@@ -2394,6 +2407,11 @@ footer.open {
   color: #f39800;
 }
 
+@media screen and (min-width: 769px) {
+  .adress {
+    margin-left: calc(100% * (40 / 1080));
+  }
+}
 .adress > p {
   font-size: 14px;
 }
@@ -2401,6 +2419,11 @@ footer.open {
   margin-bottom: 10px;
 }
 
+@media screen and (min-width: 769px) {
+  .parking {
+    margin-left: calc(100% * (40 / 1080));
+  }
+}
 .parking .lineSpace {
   font-size: 14px;
 }
@@ -2822,9 +2845,12 @@ p.company_about {
 }
 
 @media screen and (max-width: 768px) {
+  .accessProcess {
+    width: calc(100% * (728 /768));
+    margin: 0 calc(100% * (20 /768));
+  }
   .accessProcess .accessProcess_sp .from {
     border-bottom: dashed 1px #9fa0a0;
-    margin-right: 16px;
     padding-bottom: 3px;
   }
   .accessProcess .accessProcess_sp .route {

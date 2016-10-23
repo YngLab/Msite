@@ -553,7 +553,7 @@ header{
     }
   }
   @media #{$normal} {
-    margin-left: calc(100% * (40 / 1080));
+    margin-left: calc(100% * (40 / 1080)); //ウィンドウ幅1080pxと40px比率をキープ
   }
   @media #{$small} {
     span{
@@ -1366,6 +1366,9 @@ footer.open{
 }
 
 .adress{
+  @media #{$normal} {
+    margin-left: calc(100% * (40 / 1080)); //ウィンドウ幅1080pxと40px比率をキープ
+  }
   >p{
     font-size: $g__fontSize;
   }
@@ -1375,6 +1378,9 @@ footer.open{
 }
 
 .parking{
+  @media #{$normal} {
+    margin-left: calc(100% * (40 / 1080)); //ウィンドウ幅1080pxと40px比率をキープ
+  }
   .lineSpace{
     font-size: $g__fontSize;
   }
@@ -1797,10 +1803,11 @@ p.company_about{//別部分がコーディング規約無視しているため�
 
 .accessProcess{
   @media #{$small} {
+    width: calc(100% * (728 /768));
+    margin: 0 calc(100% * (20 /768));
     .accessProcess_sp{
       .from{
         border-bottom: dashed 1px $g__fontColor;
-        margin-right: 16px;
         padding-bottom: 3px;
       }
       .route{

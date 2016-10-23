@@ -367,7 +367,7 @@ footer{
 
 .adress{
   @media #{$normal} {
-    width: 50%;
+    width: calc(100% * (1000 / 1080) / 2); //左右のマージンを引いてから2で割る
     float: left;
     .heading{
       >p{
@@ -375,17 +375,25 @@ footer{
       }
     }
   }
+  @media #{$small} {
+    width: calc(100% * (728 / 768)); //左右のマージン分小さく
+    margin: 0 calc(100% * (20 / 768)); //左右のマージン
+  }
 }
 
 .parking{
   @media #{$normal} {
-    width: 50%;
+    width: calc(100% * (1000 / 1080) / 2); //左右のマージンを引いてから2で割る
     float: left;
     .heading{
       >p{
         margin-bottom: 24px;
       }
     }
+  }
+  @media #{$small} {
+    width: calc(100% * (728 / 768)); //左右のマージン分小さく
+    margin: 0 calc(100% * (20 / 768)); //左右のマージン
   }
 }
 
@@ -402,7 +410,8 @@ footer{
 .accessProcess{
   width: 100%;
   img{
-    width: 100%;
+    width: calc(100% * (1000 / 1080)); //左右のマージン分小さく
+    margin: 0 calc(100% * (40 / 1080)); //左右のマージン
   }
   @media #{$normal} {
     float: left;

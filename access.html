@@ -52,127 +52,115 @@
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyClT_6y9GTq8Z1cBSUMuTGon6DyCldyqww"></script>
 </script>
 <body onload="initialize();">
-<div id="wrapper">
-  <div id = "header_sp">　</div>
-  <div id="header">
-    <div id="drawer-toggle">
-      <span class="top"></span>
-      <span class="middle"></span>
-      <span class="bottom"></span>
-    </div>
-  </div>
-  <header>
-    <div class = "gHeader">
-      <div class = "wrap">
-        <div class = "autoMargin">
-          <div class = "pNav">
-            <a href = "http://hakodate-miraiproject.jp/" class="pNavli language">JP | EN</a>
-            <a href = "contact.html" class="pNavli rightpNav">お問い合わせ</a>
-            <a href = "access.html" class="pNavli rightpNav">アクセス</a>
-          </div>
-          <div class = "gNav">
-            <li class = "gNavli">
-              <a href="index.html">ホーム</a>
-            </li>
-            <li class = "gNavli">
-              <a href="concept.html">コンセプト</a>
-            </li>
-            <li class = "gNavli">
-              <a href="event.html">イベント</a>
-            </li>
-            <li class = "gNavli">
-              <a href="FCH.html">はこだてみらい館</a>
-            </li>
-            <li class = "gNavli">
-              <a href="KPH.html">はこだてキッズプラザ</a>
-            </li>
-            <li class = "gNavli">
-              <a href="HMP.html">みらいプロジェクト</a>
-            </li>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class = "pageTitle">
-    <div class = "wrap">
-      <div class = "autoMargin">
-        <p class = "titleText">アクセス</p>
-      </div>
-    </div>
-  </div>
-  <div class = "wrap map_container">
-    <div class = "autoMargin">
-      <div id = "map_canvas"></div>
-    </div>
-  </div>
-  <div class = "wrap">
-    <div class = "autoMargin">
-      <div class = "adress">
-        <div class = "heading-paragraph">
-          <p>住所</p>
-        </div>
-        <div class = "KPHaddress">
-          <p class = "KPHcolor">はこだてキッズプラザ</p>
-          <p class = "lineSpace">函館市若松町20番1号 キラリス函館4階</p>
-        </div>
-        <div class = "FCHaddress">
-          <p class = "FCHcolor">はこだてみらい館</p>
-          <p class = "lineSpace">函館市若松町20番1号 キラリス函館3階</p>
-        </div>
-      </div>
-      <div class = "parking">
-        <div class = "heading-paragraph">
-          <p>駐車場</p>
-        </div>
-        <p class = "lineSpace">199台　施設利用者は2時間まで無料（両施設共通）</p>
-      </div>
-      <div class = "accessProcess">
-        <div class = "heading">
-          <div class = "addPadding">
-            <p>施設までのアクセス</p>
-          </div>
-        </div>
-        <img src = "images/access/access.png">
-        <div class = "accessProcess_sp">
-          <p class = "from">東京から</p>
-          <p class = "route lineSpace">新幹線に乗車、新函館北斗駅に停車。JR特急に乗車、約15 分でJR 函館駅に停車。徒歩3 分で到着。飛行機に乗車、函館空港に停車。シャトルバスに乗車、約20 分で函館駅前バスターミナルに停車。徒歩1 分で到着。</p>
-          <p class = "from">函館市内から</p>
-          <p class = "route lineSpace">市バスに乗車、函館駅前バスターミナルに停車。徒歩1 分で到着。市電に乗車、函館駅前電停に停車。徒歩1分で到着。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- ここまで -->
-  <footer>
-    <div class = "foot">
-      <div class = "wrap">
-        <div class = "autoMargin">
-          <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
-          <div class ="footerLinks">
-            <!--<a href = "member.html" class="links">メンバー</a>-->
-            <a href = "notice.html" class="links">お知らせ</a>
-            <a href = "recruit.html" class="links">求人情報</a>
-            <!--<a href = "FAQ.html" class="links">よくあるご質問</a> -->
-            <a href = "relatedlinks.html" class="links">関連リンク</a>
-            <a href = "sitemap.html" class="links">サイトマップ</a>
-            <a href = "sitepolicy.html" class="links">サイトポリシー</a>
-          </div>
-          <div class = "SNSbutton">
-            <a href = "https://www.facebook.com/hakodatemiraiproject/" target="_blank">
-              <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class = "copyright">
-        <p>@2016 Hakodate Mirai Project</p>
-      </div>
-    </div>
-  </footer>
+<div class="g_allArea">
+  <div id = "header_sp"></div>
   <div class="overlay"></div>
 </div>
-<div id="drawer">
+<div class = "g_drawerToggle">
+  <span class="top"></span>
+  <span class="middle"></span>
+  <span class="bottom"></span>
+</div>
+<header>
+  <div class = "pNav">
+    <a href = "http://hakodate-miraiproject.jp/" class="pNavli language">JP | EN</a>
+    <a href = "contact.html" class="pNavli rightpNav">お問い合わせ</a>
+    <a href = "access.html" class="pNavli rightpNav">アクセス</a>
+  </div>
+  <div class = "gNav">
+    <li class = "gNavli">
+      <a href="index.html">ホーム</a>
+    </li>
+    <li class = "gNavli">
+      <a href="concept.html">コンセプト</a>
+    </li>
+    <li class = "gNavli">
+      <a href="event.html">イベント</a>
+    </li>
+    <li class = "gNavli">
+      <a href="FCH.html">はこだてみらい館</a>
+    </li>
+    <li class = "gNavli">
+      <a href="KPH.html">はこだてキッズプラザ</a>
+    </li>
+    <li class = "gNavli">
+      <a href="HMP.html">みらいプロジェクト</a>
+    </li>
+  </div>
+</header>
+<div class = "g_allArea g_allArea-bgcolor g_allArea-pagetitle">
+  <div class="event_pageTitle">
+    <p class = "titleText">アクセス</p>
+  </div>
+  <div class = "overlay"></div>
+</div>
+<div class = "g_allArea">
+  <div class = "map_container">
+      <div id = "map_canvas"></div>
+  </div>
+  <div class = "overlay"></div>
+</div>
+<div class = "g_allArea">
+  <div class = "adress">
+    <div class = "heading-paragraph">
+      <p>住所</p>
+    </div>
+    <div class = "KPHaddress">
+      <p class = "KPHcolor">はこだてキッズプラザ</p>
+      <p class = "lineSpace">函館市若松町20番1号 キラリス函館4階</p>
+    </div>
+    <div class = "FCHaddress">
+      <p class = "FCHcolor">はこだてみらい館</p>
+      <p class = "lineSpace">函館市若松町20番1号 キラリス函館3階</p>
+    </div>
+  </div>
+  <div class = "parking">
+    <div class = "heading-paragraph">
+      <p>駐車場</p>
+    </div>
+    <p class = "lineSpace">199台　施設利用者は2時間まで無料（両施設共通）</p>
+  </div>
+  <div class = "accessProcess">
+    <div class = "heading">
+      <div class = "addPadding">
+        <p>施設までのアクセス</p>
+      </div>
+    </div>
+    <img src = "images/access/access.png">
+    <div class = "accessProcess_sp">
+      <p class = "from">東京から</p>
+      <p class = "route lineSpace">新幹線に乗車、新函館北斗駅に停車。JR特急に乗車、約15 分でJR 函館駅に停車。徒歩3 分で到着。飛行機に乗車、函館空港に停車。シャトルバスに乗車、約20 分で函館駅前バスターミナルに停車。徒歩1 分で到着。</p>
+      <p class = "from">函館市内から</p>
+      <p class = "route lineSpace">市バスに乗車、函館駅前バスターミナルに停車。徒歩1 分で到着。市電に乗車、函館駅前電停に停車。徒歩1分で到着。</p>
+    </div>
+  </div>
+</div>
+<!-- 共通部分ここから -->
+<footer>
+  <!-- footer用のg_allAreaの代用を記述したのでfooterはこのまま -->
+  <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
+  <div class ="footerLinks">
+    <!--<a href = "member.html" class="links">メンバー</a>-->
+    <a href = "notice.html" class="links">お知らせ</a>
+    <a href = "recruit.html" class="links">求人情報</a>
+    <!--<a href = "FAQ.html" class="links">よくあるご質問</a> -->
+    <a href = "relatedlinks.html" class="links">関連リンク</a>
+    <a href = "sitemap.html" class="links">サイトマップ</a>
+    <a href = "sitepolicy.html" class="links">サイトポリシー</a>
+  </div>
+  <div class = "SNSbutton">
+    <a href = "https://www.facebook.com/hakodatemiraiproject/" target="_blank">
+      <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
+    </a>
+  </div>
+  <div class = "copyright">
+    <p>@2016 Hakodate Mirai Project</p>
+  </div>
+  <div class = "overlay"></div>
+</footer>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
+<div class = "g_drawer">
   <!-- ドロワー部分 -->
   <div class = "sp_language">
     <p><a href = "#">English</p></a>
@@ -192,4 +180,4 @@
     </ul>
   </div>
 </div>
-</body>
+<!-- 共通部分ここまで -->
