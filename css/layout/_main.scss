@@ -44,15 +44,11 @@
 }
 
 .index_openExplain{
-  @media #{$small} {
-    display: none;
-  }
+  @include only_pc;
 }
 
 .index_openExplain_sp{
-  @media #{$normal} {
-    display: none;
-  }
+  @include only_sp;
 }
 
 .latestEvent{
