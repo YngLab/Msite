@@ -43,6 +43,18 @@
   position: relative;
 }
 
+.index_openExplain{
+  @media #{$small} {
+    display: none;
+  }
+}
+
+.index_openExplain_sp{
+  @media #{$normal} {
+    display: none;
+  }
+}
+
 .latestEvent{
   //wrapの内容とautoMarginの内容を追記
   margin-right: calc(-100% * (32 / 1000)); //画面幅1080xのwrapの幅1000pxと32pxの比率をキープ

@@ -29,13 +29,21 @@
   }
 }
 
-.index_openExplain{
-  font-size: 32px;
+.index_openExplain,
+.index_openExplain_sp{
   line-height: 1.75em;
   padding: 32px 0;
   text-align: center;
   color: $title__color;
   @include smallM;
+}
+
+.index_openExplain{
+  font-size: 32px;
+}
+
+.index_openExplain_sp{
+  font-size: 20px;
 }
 
 #logoArea{
