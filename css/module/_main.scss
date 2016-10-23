@@ -35,6 +35,7 @@
   padding: 32px 0;
   text-align: center;
   color: $title__color;
+  @include smallM;
 }
 
 #logoArea{
@@ -214,8 +215,8 @@
   padding: 0 calc(100% * (40 / 1080)) 50px 0; //画面幅1080pxの時に40pxの比率をキープ
   text-align: right;
   @media #{$small} {
-    padding: 10px calc(100% * (20 / 768)) 40px 0; //画面幅768pxの時に20pxの比率をキープ
-  }
+    padding: 50px calc(100% * (20 / 768)) 40px 0; //画面幅768pxの時に20pxの比率をキープ
+  } //moreviewがlatestEventに埋まってたので上のpaddingを40増やしました。
 }
 
 header{
@@ -487,17 +488,7 @@ header{
   }
 }
 
-.future_logoapp{
-  td{
-    margin: 0;
-    width: 25%;
-    img{
-      width: 100%;
-    }
-  }
-}
-
-.kids_logoapp{
+.future_logoapp, .kids_logoapp{
   td{
     margin: 0;
     width: 25%;
@@ -707,13 +698,14 @@ footer.open{
   //p{ なんでpタグに指定してたんや？？
     color: $h2__color;
     font-size: $h2__fontSize;
-    @media #{$small} {
+    /*@media #{$small} { これいらんやんけ。
       font-size: 18px;
-    }
+    }*/
   //}
+  @include smallM;
   @media #{$small} {
     font-size: 18px;
-    padding: 20px 0 27px calc(100% * 20 / 768); //スマホモードに対応するためのcalcです。これ、g_allArea系に書きたかったんですが、そこに書いちゃうと元々の役割の都合上左右幅を取りたくないところにもかかってしまうので、個別に指定する他無いんですねぇ・・・。
+    padding: 20px 0 27px 0; //smallM導入により、スッキリしました。
     .addPadding{
       padding-top: 20px;
     }
@@ -739,6 +731,7 @@ footer.open{
 }
 
 .heading-lineup{
+  @include smallM;
   @media #{$normal} {
     padding: 50px 0 40px calc(100% * (40 / 1080)); //padding_topもどしました。
     //float: left; お前はなんで浮いてたんだ？
@@ -751,7 +744,7 @@ footer.open{
   }
   @media #{$small} {
     font-size: 18px;
-    padding: 40px 0 27px calc(100% * 20 / 768);
+    padding: 40px 0 27px 0;
     p{
       color: $h2__color;
       font-size: 18px;
@@ -772,6 +765,12 @@ footer.open{
       //margin-left: 16px;
       font-size: 18px;
     }
+  }
+}
+
+.heading-top{ //更に余白が必要な見出しに強引にそれを追加するためだけのクラスです。
+  @media #{$small} {
+    padding-top: 40px;
   }
 }
 
@@ -1074,15 +1073,13 @@ footer.open{
 }
 
 .collectevent{
-  //margin-top: 40px;
-  padding: 40px 0 0 calc(100% * (40 / 1080));
+  padding-top: 40px;
+  margin: 0 calc(100% * (40 / 1080));
   line-height: 1.75em;
   .form_guide{
     margin-top: 24px;
   }
-  @media #{$small} {
-    padding-left: calc(100% * 20 / 768);
-  }
+  @include smallM;
 }
 
 .eventabout{
@@ -1385,8 +1382,9 @@ p.company_about{//別部分がコーディング規約無視しているため�
 .g_allArea{
   //オーバーレイをabsolute指定するため必要
   position: relative;
-  @include clearfix;
   margin: 0 auto;
+  @include clearfix;
+  @include smallW;
   @media #{$normal} {
     max-width: 1440px;
     min-width: 1080px;
@@ -1410,8 +1408,10 @@ p.company_about{//別部分がコーディング規約無視しているため�
 
 .g_allArea-pagetitle{
   background: white;
-  border-bottom: solid 1px $g__fontColor;
-  border-top: solid 1px $g__fontColor;
+  @media #{$normal} { //PC/SPでボーダーを引くクラスが変わるようにしました。こいつはPC時にボーダーを引きます。
+    border-bottom: solid 1px $g__fontColor;
+    border-top: solid 1px $g__fontColor;
+  }
 }
 
 .g_allArea-fullWidth{
@@ -1430,6 +1430,12 @@ p.company_about{//別部分がコーディング規約無視しているため�
   -webkit-transform: translate3d(-75%, 0, 0);
      -moz-transform: translate3d(-75%, 0, 0);
           transform: translate3d(-75%, 0, 0);
+}
+
+.sp_under-space{ //indexのentranceとlogoappの間のスペースにoverlayがかかるようにするためだけのクラスです。
+  @media #{$small} {
+    padding-bottom: 20px;
+  }
 }
 
 .g_drawerToggle{
@@ -1572,8 +1578,6 @@ p.company_about{//別部分がコーディング規約無視しているため�
 }
 
 .event_pageTitle, .g_pageTitle{ //全く同じ機能だったのでまとめました。
-  //border-bottom: solid 1px $g__fontColor;
-  //border-top: solid 1px $g__fontColor;
   color: $title__color;
   font-size: $title__fontSize;
   font-weight: 500;
@@ -1586,7 +1590,9 @@ p.company_about{//別部分がコーディング規約無視しているため�
     border-left: solid 1px $g__fontColor;
     line-height: 63px;
   }
-  @media #{$small} {
+  @media #{$small} { //PC/SPでボーダーを引くクラスが変わるようにしました。こいつはSP時にボーダーを引きます。
+    border-bottom: solid 1px $g__fontColor;
+    border-top: solid 1px $g__fontColor;
     padding-left: calc(100% * 20 / 768);
   }
 }

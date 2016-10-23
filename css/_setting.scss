@@ -40,12 +40,15 @@ $accordion__border: #dddddd;
 }
 
 @mixin smallW{
-  // @media #{$small} {
-  //   width: 100%;
-  // }
-  // wrapを使わないため変更
   @media #{$small} {
-    width: calc(100% * (728 / 768));
+    width: 100%; //逆にこっちじゃないと困ります。
+  }
+}
+
+@mixin smallM{ //増やしました。こいつを適用させるために他のコードめっちゃ変わってます。
+  @media #{$small} {
+    margin-left: calc(100% * 20 / 768);
+    margin-right: calc(100% * 20 / 768);
   }
 }
 

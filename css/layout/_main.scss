@@ -81,18 +81,17 @@
 .future_entrance,
 .kids_entrance{
   background-color: $boxcolor;
-  margin-top: 50px;
-  width: calc(100% * (484 / 1080) - 2px); //画面幅1080xと484pxの比率をキープ - 左右borderの2px
-  @include smallW;
-  @media #{$small} {
-    margin: 0 0 20px calc(100% * (20 / 768)); //左には画面幅768xと20pxの比率をキープ
+  @include smallM;
+  @media #{$normal} {
+    margin-top: 50px;
+    width: calc(100% * (484 / 1080) - 2px); //画面幅1080xと484pxの比率をキープ - 左右borderの2px
   }
 }
 
 .future_entrance{
   border: solid 1px $g__color-future;
-  float: left;
   @media #{$normal} {
+    float: left;
     margin-left: calc(100% * (40 / 1080)); //画面幅1080xと40pxの比率をキープ
   }
 }
@@ -103,47 +102,48 @@
     float: right;
     margin-right: calc(100% * (40 / 1080)); //画面幅1080xと40pxの比率をキープ
   }
+  @media #{$small} {
+    margin-bottom: 20px; //smallMを導入したのでこれで十分かと思います。
+  }
 }
 
-.future_logoapp{
-  background-color: $g__color-future;
+.future_logoapp, .kids_logoapp{
   color: white;
-  float: left;
   height: auto;
   position: relative;
   text-align: center;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
+  @include smallM;
   @media #{$normal} {
     width: calc(100% * 484 / 1080); //画面幅1080xと484pxの比率をキープ
     margin-top: calc(100% * (32 / 1080)); //画面幅1080xと32pxの比率をキープ
     margin-bottom: calc(100% * (32 / 1080)); //画面幅1080xと40pxの比率をキープ
+  }
+}
+
+.future_logoapp{
+  background-color: $g__color-future;
+  @media #{$normal} {
+    float: left;
     margin-left: calc(100% * (40 / 1080)); //画面幅1080xと40pxの比率をキープ
   }
-  @include smallW;
   @media #{$small} {
-    margin: calc(100% * (20 / 768)) 0 20px calc(100% * (20 / 768)); //画面幅768xと20pxの比率をキープ
+    float: right;
+    margin-top: calc(100% * 20 / 768);
+    margin-bottom: 20px;
   }
 }
 
 .kids_logoapp{
   background-color: $g__color-kids;
-  color: white;
-  height: auto;
-  position: relative;
-  text-align: center;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
   @media #{$normal} {
     float: right;
-    width: calc(100% * 484 / 1080); //画面幅1080xと484pxの比率をキープ
-    margin-top: calc(100% * (32 / 1080)); //画面幅1080xと32pxの比率をキープ
-    margin-bottom: calc(100% * (32 / 1080)); //画面幅1080xと40pxの比率をキープ
     margin-right: calc(100% * (40 / 1080)); //画面幅1080xと40pxの比率をキープ
   }
-  @include smallW;
   @media #{$small} {
     float: left;
     margin-top: 0;
-    margin-left: calc(100% * (20 / 768)); //画面幅768xと20pxの比率をキープ
+    //margin-left: calc(100% * (20 / 768)); //画面幅768xと20pxの比率をキープ
   }
 }
 
@@ -537,7 +537,7 @@ footer{
   }
   .heading{
     margin-top: 0;
-    padding: 50px 0 24px 0; 
+    padding: 50px 0 24px 0;
     //.headingが左にpaddingをとっていたので.touristOfficeのheadingにpadding指定してます。
     @media #{$small} {
       padding: 40px 0 27px 0; //デザインカンプの通りに、元のデザインから修正
