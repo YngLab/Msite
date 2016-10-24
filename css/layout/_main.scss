@@ -449,9 +449,9 @@ footer{
 }
 
 .autoHeight{
-  min-height: calc(100vh - 93px - 115px - 273px); //画面表示高さ - ヘッダー - 見出し - フッター
+  min-height: calc(100vh - 93px - 115px - 273px + 50px); //画面表示高さ - ヘッダー - 見出し - フッター + formのpadding
   @media #{$small} {
-    min-height: calc(100vh - 52px - 115px - 389px); //画面表示高さ - ヘッダー - 見出し - フッター
+    min-height: calc(100vh - 52px - 115px - 389px + 50px); //画面表示高さ - ヘッダー - 見出し - フッター + formのpadding
   }
 } //減算したヘッダー・見出し・フッターの領域はmarginを含む
 /*

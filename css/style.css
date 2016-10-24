@@ -659,11 +659,11 @@ footer:after {
 }
 
 .autoHeight {
-  min-height: calc(100vh - 93px - 115px - 273px);
+  min-height: calc(100vh - 93px - 115px - 273px + 50px);
 }
 @media screen and (max-width: 768px) {
   .autoHeight {
-    min-height: calc(100vh - 52px - 115px - 389px);
+    min-height: calc(100vh - 52px - 115px - 389px + 50px);
   }
 }
 
