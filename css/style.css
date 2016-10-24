@@ -2204,6 +2204,12 @@ footer.open {
     margin: 24px 0 24px 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .eventabout {
+    margin-left: calc(100% * 20 / 768);
+    margin-right: calc(100% * 20 / 768);
+  }
+}
 
 /*
 .experiencemenu{
@@ -2754,14 +2760,17 @@ p.company_about {
 }
 @media screen and (max-width: 768px) {
   .form {
-    padding-top: 50px;
+    padding-top: 40px;
   }
+}
+
+.contact_form {
+  padding: 0 calc(100% * (40 / 1080));
+  padding-top: 50px;
 }
 
 .inputForm {
   float: left;
-  width: calc(100% * (1000 / 1080));
-  margin: 0 calc(100% * (40 / 1080));
 }
 .inputForm th {
   color: #727171;

@@ -60,100 +60,97 @@ $_SESSION = $_POST;
   <div class = "overlay"></div>
 </div>
 <div class = "g_allArea g_allArea-shortPage">
-  <div class = "inputForm">
-    <form class = "form" action = "send_contact.php" method = "post">
-      <div class = "radio">
-        <input type = "radio" name = "radio" id = "fch" value = "fch" readonly <?php if($_POST['radio'] == fch)echo "checked"; ?>>
-          <label for = "fch"><span class = "radioFont">はこだてみらい館</span></label>
-        <input type = "radio" name = "radio" id = "hkp" value = "hkp" readonly <?php if($_POST['radio'] == hkp)echo "checked"; ?>>
-          <label for = "hkp"><span class = "radioFont">はこだてキッズプラザ</span></label>
-        <input type = "radio" name = "radio" id = "both" value = "both" readonly <?php if($_POST['radio'] == both)echo "checked"; ?>>
-          <label for = "both"><span class = "radioFont">どちらとも</span></label>
-      </div>
-      <table class = "inputBox_conf">
-        <tr>
-          <th>お名前</th>
-          <td>
-            <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['name']);?> readonly>
-          </td>
-        </tr>
-        <tr>
-          <th>メールアドレス</th>
-          <td>
-            <input type = "email" name ="email" maxlength = "255" value=<?php echo htmlspecialchars($_POST['email']);?> readonly>
-          </td>
-        </tr>
-        <tr>
-          <th class = "textareaLabel">問い合わせ内容</th>
-          <td>
-            <textarea name = "comment" id = "comment" cols = "40" rows = "5" readonly><?php echo htmlspecialchars($_POST['comment']);?></textarea>
-          </td>
-        </tr>
-        <tr>
-          <th>
-            <a href = "javascript:history.back();">
-              <div class = "confirm revision">
-                <input type="button" value="訂正" class = "backbutton">
-              </div>
-            </a>
-          </th>
-          <td>
-            <div class = "confirm">
-              <input type="submit" value="送信" class = "sendbutton">
+  <!-- inputFormが色々な場所あったのでformのclassに統一しました -->
+  <form class = "inputForm form" action = "send_contact.php" method = "post">
+    <div class = "radio">
+      <input type = "radio" name = "radio" id = "fch" value = "fch" readonly <?php if($_POST['radio'] == fch)echo "checked"; ?>>
+        <label for = "fch"><span class = "radioFont">はこだてみらい館</span></label>
+      <input type = "radio" name = "radio" id = "hkp" value = "hkp" readonly <?php if($_POST['radio'] == hkp)echo "checked"; ?>>
+        <label for = "hkp"><span class = "radioFont">はこだてキッズプラザ</span></label>
+      <input type = "radio" name = "radio" id = "both" value = "both" readonly <?php if($_POST['radio'] == both)echo "checked"; ?>>
+        <label for = "both"><span class = "radioFont">どちらとも</span></label>
+    </div>
+    <table class = "inputBox_conf">
+      <tr>
+        <th>お名前</th>
+        <td>
+          <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['name']);?> readonly>
+        </td>
+      </tr>
+      <tr>
+        <th>メールアドレス</th>
+        <td>
+          <input type = "email" name ="email" maxlength = "255" value=<?php echo htmlspecialchars($_POST['email']);?> readonly>
+        </td>
+      </tr>
+      <tr>
+        <th class = "textareaLabel">問い合わせ内容</th>
+        <td>
+          <textarea name = "comment" id = "comment" cols = "40" rows = "5" readonly><?php echo htmlspecialchars($_POST['comment']);?></textarea>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <a href = "javascript:history.back();">
+            <div class = "confirm revision">
+              <input type="button" value="訂正" class = "backbutton">
             </div>
-          </td>
-        </tr>
-      </table>
-    </form>
-  </div>
-  <div class = "inputForm_sp">
-    <form class = "form" action = "send_contact.php" method = "post">
-      <div class = "radio">
-        <span class = "radioElement">
-          <input type = "radio" name = "radio" id = "fch" value = "fch" readonly <?php if($_POST['radio'] == fch)echo "checked"; ?>>
-          <label for = "fch">
-            <span class = "radioFont">はこだてみらい館</span>
-          </label>
-        </span>
-        <span class = "radioElement">
-          <input type = "radio" name = "radio" id = "hkp" value = "hkp" readonly <?php if($_POST['radio'] == hkp)echo "checked"; ?>>
-          <label for = "hkp">
-            <span class = "radioFont">はこだてキッズプラザ</span>
-          </label>
-        </span>
-        <span class = "radioElement">
-          <input type = "radio" name = "radio" id = "both" value = "both" readonly <?php if($_POST['radio'] == both)echo "checked"; ?>>
-          <label for = "both">
-            <span class = "radioFont">どちらとも</span>
-          </label>
-        </span>
-      </div>
-      <div class = "inputBox_conf_sp">
-        <p>お名前</p>
-        <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['name']);?> readonly>
-      </div>
-      <div class = "inputBox_conf_sp">
-        <p>メールアドレス</p>
-        <input type = "email" name ="email" maxlength = "255" value=<?php echo htmlspecialchars($_POST['email']);?> readonly>
-      </div>
-      <div class = "inputBox_conf_sp_b">
-        <p>問い合わせ内容</p>
-        <textarea name = "comment" id = "comment" cols = "40" rows = "5" readonly><?php echo htmlspecialchars($_POST['comment']);?></textarea>
-      </div>
-      <table>
-        <tr>
-          <th>
-            <a href = "javascript:history.back();">
-              <input type="button" value="訂正" class = "rev_button">
-            </a>
-          </th>
-          <td class = "send">
-            <input type="submit" value="送信" class = "button">
-          </td>
-        </tr>
-      </table>
-    </form>
-  </div>
+          </a>
+        </th>
+        <td>
+          <div class = "confirm">
+            <input type="submit" value="送信" class = "sendbutton">
+          </div>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <form class = "inputForm_sp form" action = "send_contact.php" method = "post">
+    <div class = "radio">
+      <span class = "radioElement">
+        <input type = "radio" name = "radio" id = "fch" value = "fch" readonly <?php if($_POST['radio'] == fch)echo "checked"; ?>>
+        <label for = "fch">
+          <span class = "radioFont">はこだてみらい館</span>
+        </label>
+      </span>
+      <span class = "radioElement">
+        <input type = "radio" name = "radio" id = "hkp" value = "hkp" readonly <?php if($_POST['radio'] == hkp)echo "checked"; ?>>
+        <label for = "hkp">
+          <span class = "radioFont">はこだてキッズプラザ</span>
+        </label>
+      </span>
+      <span class = "radioElement">
+        <input type = "radio" name = "radio" id = "both" value = "both" readonly <?php if($_POST['radio'] == both)echo "checked"; ?>>
+        <label for = "both">
+          <span class = "radioFont">どちらとも</span>
+        </label>
+      </span>
+    </div>
+    <div class = "inputBox_conf_sp">
+      <p>お名前</p>
+      <input type="text" name ="name" maxlength = "255" value=<?php echo htmlspecialchars($_POST['name']);?> readonly>
+    </div>
+    <div class = "inputBox_conf_sp">
+      <p>メールアドレス</p>
+      <input type = "email" name ="email" maxlength = "255" value=<?php echo htmlspecialchars($_POST['email']);?> readonly>
+    </div>
+    <div class = "inputBox_conf_sp_b">
+      <p>問い合わせ内容</p>
+      <textarea name = "comment" id = "comment" cols = "40" rows = "5" readonly><?php echo htmlspecialchars($_POST['comment']);?></textarea>
+    </div>
+    <table>
+      <tr>
+        <th>
+          <a href = "javascript:history.back();">
+            <input type="button" value="訂正" class = "rev_button">
+          </a>
+        </th>
+        <td class = "send">
+          <input type="submit" value="送信" class = "button">
+        </td>
+      </tr>
+    </table>
+  </form>
 </div>
 <!-- 共通部分ここから -->
 <footer>

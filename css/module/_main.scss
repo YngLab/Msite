@@ -1120,6 +1120,7 @@ footer.open{
     }
     padding-top: 40px;
   }
+  @include smallM;
 }
 /*
 .experiencemenu{
@@ -1672,15 +1673,19 @@ p.company_about{//別部分がコーディング規約無視しているため�
     padding-top: 50px;
   }
   @media #{$small} {
-    padding-top: 50px; //ここたぶん50pxだと思うんです。
+    // padding-top: 50px; //ここたぶん50pxだと思うんです。
+    padding-top: 40px; //カンプを確認して見たら40pxでした。
   }
+}
+
+.contact_form{
+  padding: 0 calc(100% * (40 / 1080));
+  padding-top: 50px;
 }
 
 .inputForm{
   //.inputBox{
   float: left;
-  width: calc(100% * (1000 / 1080));
-  margin: 0 calc(100% * (40 / 1080));
   th{
     color: $dark__fontColor;
     font-size: 13px;
