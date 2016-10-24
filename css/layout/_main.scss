@@ -432,7 +432,7 @@ footer{
 }
 
 .g_pageTitle{ //両者の違いはこれのあるなしだけでした。
-  margin-bottom: 50px;
+  //margin-bottom: 50px; 要らない説濃厚です。最後まで開発して、問題が出なければまるっと削除してg_pageTitleに統一しましょう。
 }
 
 .archives{
@@ -594,9 +594,7 @@ footer{
 }
 
 .inputForm{
-  @media #{$small} {
-    display: none;
-  }
+  @include only_pc;
 }
 
 .inputBox, .inputBox_sub, .inputBox_conf, .inputBox_Econf{
@@ -619,9 +617,7 @@ footer{
 }
 
 .inputForm_sp{
-  @media #{$normal} {
-    display: none;
-  }
+  @include only_sp;
   .inputBox_sp, .inputBox_conf_sp, .inputBox_sp_b, .inputBox_conf_sp_b,{
     margin-bottom: 20px;
     input{
