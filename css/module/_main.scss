@@ -753,7 +753,7 @@ footer.open{
     .headingTitle{
       color: $h2__color;
       font-size: $h2__fontSize;
-      //margin-top: 40px;
+      //margin-left: 12px;
       //float: left;
     }
   }
@@ -1852,7 +1852,7 @@ h2.concept_title{
   }
   @media #{$small} {
     font-size: 16px;
-    margin: 10px;
+    padding: 10px;
   }
 }
 

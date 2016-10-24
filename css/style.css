@@ -2932,7 +2932,7 @@ h2.concept_title {
 @media screen and (max-width: 768px) {
   .concept, .concept_img, .concept_text {
     font-size: 16px;
-    margin: 10px;
+    padding: 10px;
   }
 }
 
