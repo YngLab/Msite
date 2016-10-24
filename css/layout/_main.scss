@@ -493,9 +493,14 @@ footer{
     top: calc(50% - 50px);
     transform: translate(-50%, -50%);
     text-align: left;
+    padding-top: 50px;
   }
+  @media #{$small} {
+    width: calc(100% * (728 / 768));
+  }
+  @include smallM;
+  padding-top: 40px; //前とは違うけどデザインカンプに基づいて
   margin: 0 auto;
-  @include smallW;
 }
 
 .p-margin{
@@ -551,7 +556,7 @@ footer{
     padding: 50px 0 24px 0;
     //.headingが左にpaddingをとっていたので.touristOfficeのheadingにpadding指定してます。
     @media #{$small} {
-      padding: 40px 0 27px 0; //デザインカンプの通りに、元のデザインから修正
+      margin: 0; //headingがtouristOfice内で、親要素がで左にはmarginを取っているのでここでは0
     }
   }
 }
@@ -571,7 +576,7 @@ footer{
     margin-top: 0;
     padding: 50px 0 24px 0; //.headingが左にpaddingをとっていたので.touristGuideのheadingにpadding指定してます。
     @media #{$small} {
-      padding: 40px 0 27px 0; //デザインカンプの通りに、元のデザインから修正
+      margin: 0; //headingがtouristOfice内で、親要素がで左にはmarginを取っているのでここでは0
     }
   }
 }

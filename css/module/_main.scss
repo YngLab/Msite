@@ -554,11 +554,12 @@ header{
   }
   @media #{$normal} {
     margin-left: calc(100% * (40 / 1080)); //ウィンドウ幅1080pxと40px比率をキープ
+    padding-top: 50px;
   }
   @media #{$small} {
     span{
       display: block;
-      margin-bottom: 30px;
+      padding-bottom: 30px;
     }
     span:after{
       content: "\A";
@@ -566,6 +567,7 @@ header{
     }//改行を無理矢理挿入するコードです。実はlayoutの関連リンクのところにもあります。
     width: calc(100% * (728 / 768));
     margin: 0 auto;
+    padding-top: 40px;
   }
 }
 
@@ -739,7 +741,8 @@ footer.open{
   @include smallM;
   @media #{$small} {
     font-size: 18px;
-    padding: 20px 0 27px 0; //smallM導入により、スッキリしました。
+    // padding: 20px 0 27px 0; //smallM導入により、スッキリしました。
+    padding: 40px 0 27px 0; //デザインカンプの通りに修正
     .addPadding{
       padding-top: 20px;
     }
@@ -1397,6 +1400,7 @@ footer.open{
 p.company_about{//別部分がコーディング規約無視しているためコーディング規約無視せざるを得ない
   margin-left: 0;
   font-size: 14px;
+  line-height: 1.75;
 }
 
 .g_allArea{
@@ -1439,9 +1443,9 @@ p.company_about{//別部分がコーディング規約無視しているため�
 }
 
 .g_allArea-shortPage{
-  min-height: calc(100vh - 93px - 115px - 273px); //画面表示高さ - ヘッダー - 見出し - フッター
+  min-height: calc(100vh - 93px - 65px - 273px); //画面表示高さ - ヘッダー - 見出し - フッター
   @media #{$small} {
-    min-height: calc(100vh - 52px - 115px - 389px); //画面表示高さ - ヘッダー - 見出し - フッター
+    min-height: calc(100vh - 52px - 65px - 389px); //画面表示高さ - ヘッダー - 見出し - フッター
   }
 }
 

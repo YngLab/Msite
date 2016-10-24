@@ -4,10 +4,11 @@
 .menu{
   float: left;
   width: 70%;
-  margin-left: calc(100% * 40 / 1080);
+  margin: 50px 0 0 calc(100% * 40 / 1080);
   @media #{$small} {
     width: calc(100% * 728 / 768);
-    margin-left: calc(100% * 20 / 768);
+    // margin-left: calc(100% * 20 / 768);
+    margin: 40px calc(100% * 20 / 768) 0 calc(100% * 20 / 768);
   }
   // ul{
   //   -webkit-transition: all 0.5s;
