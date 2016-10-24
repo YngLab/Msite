@@ -725,36 +725,21 @@ footer.open{
 }
 
 .heading{
+  color: $h2__color;
+  font-size: $h2__fontSize;
+}
+
+.concierge{
+  color: $g__color-kids;
+  font-size: $h3__fontSize;
+}
+
+.heading, .concierge{ //まとめました。
   padding: 50px 0 40px calc(100% * (40 / 1080));
-  //p{ なんでpタグに指定してたんや？？
-    color: $h2__color;
-    font-size: $h2__fontSize;
-    /*@media #{$small} { これいらんやんけ。
-      font-size: 18px;
-    }*/
-  //}
   @include smallM;
   @media #{$small} {
     font-size: 18px;
     padding: 20px 0 27px 0; //smallM導入により、スッキリしました。
-    .addPadding{
-      padding-top: 20px;
-    }
-  }
-}
-
-.concierge{
-  padding: 50px 0 40px 0;
-  p{
-    color: $g__color-kids;
-    font-size: $h3__fontSize;
-    @media #{$small} {
-      font-size: 18px;
-    }
-  }
-  @media #{$small} {
-    font-size: 18px;
-    padding: 20px 0 27px 0;
     .addPadding{
       padding-top: 20px;
     }
