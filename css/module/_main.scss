@@ -1108,14 +1108,17 @@ footer.open{
     margin-bottom: 6px;
   }
   @media #{$normal} {
-    width: 25%;
+    width: calc(25% * (1000 / 1080));
     float: left;
     margin-right: calc(100% * (75 / 1000)); //$normal時はウィンドウ幅1080p時のwrap1000pxと75pxの比率をキープ
+    margin-left: calc(100% * (40 / 1080));
+    padding-top: 50px;
   }
   @media #{$small} {
     .eventabout_title{
       margin: 24px 0 24px 0;
     }
+    padding-top: 40px;
   }
 }
 /*
@@ -1665,9 +1668,8 @@ p.company_about{//別部分がコーディング規約無視しているため�
   @include smallM;
   @media #{$normal} {
     float: left;
-    width: calc(75% - (100% * (75 / 1000)));
+    width: calc(75% * (1000 / 1080) - (100% * (75 / 1000)));
     //$normal時はウィンドウ幅1080px時のwrap1000pxからの75%からイベントについて書かれた幅とのマージンを引いている
-    margin: 0 calc(100% * (40 / 1080));
     padding-top: 50px;
   }
   @media #{$small} {
@@ -1678,7 +1680,8 @@ p.company_about{//別部分がコーディング規約無視しているため�
 .inputForm{
   //.inputBox{
   float: left;
-  width: 100%;
+  width: calc(100% * (1000 / 1080));
+  margin: 0 calc(100% * (40 / 1080));
   th{
     color: $dark__fontColor;
     font-size: 13px;

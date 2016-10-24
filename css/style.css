@@ -2193,12 +2193,17 @@ footer.open {
 }
 @media screen and (min-width: 769px) {
   .eventabout {
-    width: 25%;
+    width: calc(25% * (1000 / 1080));
     float: left;
     margin-right: calc(100% * (75 / 1000));
+    margin-left: calc(100% * (40 / 1080));
+    padding-top: 50px;
   }
 }
 @media screen and (max-width: 768px) {
+  .eventabout {
+    padding-top: 40px;
+  }
   .eventabout .eventabout_title {
     margin: 24px 0 24px 0;
   }
@@ -2754,8 +2759,7 @@ p.company_about {
 @media screen and (min-width: 769px) {
   .form {
     float: left;
-    width: calc(75% - (100% * (75 / 1000)));
-    margin: 0 calc(100% * (40 / 1080));
+    width: calc(75% * (1000 / 1080) - (100% * (75 / 1000)));
     padding-top: 50px;
   }
 }
@@ -2767,7 +2771,8 @@ p.company_about {
 
 .inputForm {
   float: left;
-  width: 100%;
+  width: calc(100% * (1000 / 1080));
+  margin: 0 calc(100% * (40 / 1080));
 }
 .inputForm th {
   color: #727171;
