@@ -1753,10 +1753,7 @@ footer.open {
 @media screen and (max-width: 768px) {
   .heading, .concierge {
     font-size: 18px;
-    padding: 20px 0 27px 0;
-  }
-  .heading .addPadding, .concierge .addPadding {
-    padding-top: 20px;
+    padding: 40px 0 27px 0;
   }
 }
 
@@ -1780,9 +1777,10 @@ footer.open {
     font-size: 18px;
     padding: 40px 0 27px 0;
   }
-  .heading-lineup p {
+  .heading-lineup .headingTitle {
     color: #727171;
     font-size: 18px;
+    margin-top: 40px;
   }
 }
 
@@ -1802,12 +1800,13 @@ footer.open {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .heading-top {
+/*
+.heading-top{ //更に余白が必要な見出しに強引にそれを追加するためだけのクラスです。
+  @media screen and (max-width: 768px) {
     padding-top: 40px;
   }
 }
-
+*/
 .monthSort {
   float: left;
   margin: 50px 0 40px 100px;
