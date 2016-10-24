@@ -1836,8 +1836,8 @@ h2.concept_title{
   }
   @media #{$small} {
     font-size: 48px;
-    margin-bottom: 100px;
-    padding-top: 100px;
+    //margin-bottom: 100px;
+    padding: 100px 0;
   }
 }
 
@@ -1854,12 +1854,13 @@ h2.concept_title{
       display: none;
     }
   }*/
+  @include smallM;
   @media #{$normal} {
     width: calc(100% / 3 * 2);
   }
   @media #{$small} {
     font-size: 16px;
-    padding: 10px;
+    padding: 0 10px;
   }
 }
 
@@ -1896,7 +1897,8 @@ h2.concept_title{
   @media #{$small} {
     //float: none;
     max-width: 100%;
-    margin-top: 40px;
+    padding-bottom: 10px; //上の方にまとめて宣言してある　padding: 0 10px;を
+    padding-top: 40px;    //邪魔しないために、分けて宣言しています。
   }
 }
 

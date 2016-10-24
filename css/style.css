@@ -2910,8 +2910,7 @@ h2.concept_title {
 @media screen and (max-width: 768px) {
   h2.concept_title {
     font-size: 48px;
-    margin-bottom: 100px;
-    padding-top: 100px;
+    padding: 100px 0;
   }
 }
 
@@ -2927,6 +2926,12 @@ h2.concept_title {
     }
   }*/
 }
+@media screen and (max-width: 768px) {
+  .concept, .concept_img, .concept_text {
+    margin-left: calc(100% * 20 / 768);
+    margin-right: calc(100% * 20 / 768);
+  }
+}
 @media screen and (min-width: 769px) {
   .concept, .concept_img, .concept_text {
     width: calc(100% / 3 * 2);
@@ -2935,7 +2940,7 @@ h2.concept_title {
 @media screen and (max-width: 768px) {
   .concept, .concept_img, .concept_text {
     font-size: 16px;
-    padding: 10px;
+    padding: 0 10px;
   }
 }
 
@@ -2974,7 +2979,8 @@ h2.concept_title {
 @media screen and (max-width: 768px) {
   .concept_img {
     max-width: 100%;
-    margin-top: 40px;
+    padding-bottom: 10px;
+    padding-top: 40px;
   }
 }
 
