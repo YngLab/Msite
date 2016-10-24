@@ -2745,10 +2745,23 @@ p.company_about {
   content: "";
   display: block;
 }
+@media screen and (max-width: 768px) {
+  .form {
+    margin-left: calc(100% * 20 / 768);
+    margin-right: calc(100% * 20 / 768);
+  }
+}
 @media screen and (min-width: 769px) {
   .form {
     float: left;
     width: calc(75% - (100% * (75 / 1000)));
+    margin: 0 calc(100% * (40 / 1080));
+    padding-top: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .form {
+    padding-top: 40px;
   }
 }
 
@@ -2865,7 +2878,7 @@ p.company_about {
     padding-bottom: 3px;
   }
   .accessProcess .accessProcess_sp .route {
-    margin: 20px 16px 36px 0;
+    padding: 20px 16px 36px 0;
   }
 }
 
