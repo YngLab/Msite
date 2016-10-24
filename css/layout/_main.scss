@@ -349,6 +349,12 @@ footer{
 .map_container{
   position: relative;
   padding-top: 60vh;
+  @media #{$normal} {
+    margin-top: 50px;
+  }
+  @media #{$small} {
+    border-top: solid 40px #ffffff;
+  }
 }
 
 #map_canvas{
@@ -544,12 +550,12 @@ footer{
   @media #{$normal} {
     //float: left;
     float: right;
-    width: calc(100% * (1000 / 1080) / 2);
-    margin-right: calc(100% * (40 / 1080));
+    width: calc(100% * (1000 / 1080) / 2); //ウィンドウ幅1080pxの時に1000pxの比率の半分
+    margin-right: calc(100% * (40 / 1080)); //右にウィンドウ幅1080pxの時に40pxの比率のマージン
   }
   @media #{$small} {
-    width: calc(100% * (728 / 768));
-    margin-left: calc(100% * (20 / 768));
+    width: calc(100% * (728 / 768)); //ウィンドウ幅768pxの時に728pxの比率をキープ
+    margin-left: calc(100% * (20 / 768)); //ウィンドウ幅768pxの時に20pxの比率をキープ
   }
   .heading{
     margin-top: 0;
@@ -565,12 +571,12 @@ footer{
   @media #{$normal} {
     //float: right;
     float: left;
-    width: calc(100% * (1000 / 1080) / 2);
-    margin-left: calc(100% * (40 / 1080));
+    width: calc(100% * (1000 / 1080) / 2); //ウィンドウ幅1080pxの時に1000pxの比率の半分
+    margin-left: calc(100% * (40 / 1080)); //左にウィンドウ幅1080pxの時に40pxの比率のマージン
   }
   @media #{$small} {
-    width: calc(100% * (728 / 768));
-    margin-left: calc(100% * (20 / 768));
+    width: calc(100% * (728 / 768)); //ウィンドウ幅768pxの時に728pxの比率をキープ
+    margin-left: calc(100% * (20 / 768)); //ウィンドウ幅768pxの時に20pxの比率をキープ
   }
   .heading{
     margin-top: 0;

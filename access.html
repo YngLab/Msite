@@ -52,15 +52,20 @@
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyClT_6y9GTq8Z1cBSUMuTGon6DyCldyqww"></script>
 </script>
 <body onload="initialize();">
+<!-- pageTitleが存在するページの共通部分 -->
 <div class="g_allArea">
   <div id = "header_sp"></div>
   <div class="overlay"></div>
 </div>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
 <div class = "g_drawerToggle">
   <span class="top"></span>
   <span class="middle"></span>
   <span class="bottom"></span>
 </div>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
 <header>
   <div class = "pNav">
     <a href = "http://hakodate-miraiproject.jp/" class="pNavli language">JP | EN</a>
@@ -88,15 +93,18 @@
     </li>
   </div>
 </header>
+<!-- 共通部分ここまで -->
+<!-- pageTitleが存在するページの共通部分(titleTextの中身は異なる) -->
 <div class = "g_allArea g_allArea-fullWidth">
   <div class="event_pageTitle">
     <p class = "titleText">アクセス</p>
   </div>
   <div class = "overlay"></div>
 </div>
+<!-- 共通部分ここまで -->
 <div class = "g_allArea">
   <div class = "map_container">
-      <div id = "map_canvas"></div>
+    <div id = "map_canvas"></div>
   </div>
   <div class = "overlay"></div>
 </div>
@@ -139,7 +147,6 @@
 </div>
 <!-- 共通部分ここから -->
 <footer>
-  <!-- footer用のg_allAreaの代用を記述したのでfooterはこのまま -->
   <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
   <div class ="footerLinks">
     <!--<a href = "member.html" class="links">メンバー</a>-->

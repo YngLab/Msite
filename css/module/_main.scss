@@ -140,7 +140,7 @@
     margin-right: calc(100vw * (32 / 1080)); //ウィンドウ幅1080px時の32pxの比率をキープ
     position: relative;
     @media #{$small} {
-      margin-left: calc(100% * (20 / 768));
+      margin-left: calc(100% * (20 / 768)); //ウィンドウ幅768px時の20pxの比率をキープ
     }
     @media #{$minimum} {
       margin-right: 32px; //ウィンドウ幅1080px固定の時はの32pxに
@@ -171,7 +171,7 @@
     margin-right: calc(100vw * (32 / 1080)); //ウィンドウ幅1080px時の32pxの比率をキープ
     position: relative;
     @media #{$small} {
-      margin-left: calc(100% * (20 / 768));
+      margin-left: calc(100% * (20 / 768)); //ウィンドウ幅768px時の20pxの比率をキープ
     }
     @media #{$minimum} {
       margin-right: 32px; //ウィンドウ幅1080px固定の時はの32pxに
@@ -344,12 +344,12 @@ header{
   .future_logo{
     border-bottom: solid 1px $g__color-future;
     background-color: $g__color-future;
-    height: calc(100vw * (180 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
+    height: calc(100vw * (180 / 1080)); //画面幅1080pxの時に180pxの比率をキープ
     width: calc(100% + 2px); //両端のborderも含める
     display: table;
     text-align: center;
     @media #{$small} {
-      height: calc(100vw * 2 * (180 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
+      height: calc(100vw * 2 * (180 / 1080)); //画面幅1080pxの時に180pxの比率の2倍をキープ
     }
     @media #{$minimum} {
       height: 180px; //画面幅1080pxの時は180pxに固定
@@ -365,7 +365,7 @@ header{
       display: table-cell;
       vertical-align: middle;
       img{
-        width: calc(100% * (252 / 484)); //future_logo_imgが484pxの時に210pxの比率をキープ
+        width: calc(100% * (252 / 484)); //future_logo_imgが484pxの時に252pxの比率をキープ
       }
     }
   }
@@ -437,13 +437,12 @@ header{
   .kids_logo{
     border-bottom: solid 1px $g__color-kids;
     background-color: $g__color-kids;
-    // height: calc(100vw * (137 / 1080)); //画面幅1080pxの時に137pxの比率をキープ
-    height: calc(100vw * (180 / 1080));
+    height: calc(100vw * (180 / 1080));//画面幅1080pxの時に180pxの比率をキープ
     width: calc(100% + 2px); //両端のborderも含める
     display: table;
     text-align: center;
     @media #{$small} {
-      height: calc(100vw * 2 * (180 / 1080)); //画面幅1080pxの時に137pxの比率の2倍をキープ
+      height: calc(100vw * 2 * (180 / 1080)); //画面幅1080pxの時に180pxの比率の2倍をキープ
     }
     @media #{$minimum} {
       height: 180px; //画面幅1080pxの時は180pxに固定
@@ -459,7 +458,7 @@ header{
       display: table-cell;
       vertical-align: middle;
       img{
-        width: calc(100% * (300 / 484)); //kids_logo_imgが484pxの時に250pxの比率をキープ
+        width: calc(100% * (300 / 484)); //kids_logo_imgが484pxの時に300pxの比率をキープ
       }
     }
   }
@@ -565,7 +564,7 @@ header{
       content: "\A";
       white-space: pre;
     }//改行を無理矢理挿入するコードです。実はlayoutの関連リンクのところにもあります。
-    width: calc(100% * (728 / 768));
+    width: calc(100% * (728 / 768)); //画面幅768pxの時に728pxの比率をキープ
     margin: 0 auto;
     padding-top: 40px;
   }
@@ -935,7 +934,7 @@ footer.open{
   position: relative;
   @include clearfix;
   @media #{$small} {
-    margin: 24px calc(100% * 20 / 768) 0px calc(100% * 20 / 768);
+    margin: 24px calc(100% * 20 / 768) 0px calc(100% * 20 / 768); //両サイドにcalc(100% * 20 / 768)のマージン
   }
   .event_title{
     font-size: $h2__fontSize;
@@ -1079,7 +1078,7 @@ footer.open{
   position: absolute;
   @media #{$small} {
     bottom: 40px;
-    left: calc(100% * 20 / 768);
+    left: calc(100% * 20 / 768); //ウィンドウ幅768pxの時に20pxの比率をキープ
   }
 }
 
@@ -1098,7 +1097,7 @@ footer.open{
 
 .collectevent{
   padding-top: 40px;
-  margin: 0 calc(100% * (40 / 1080));
+  margin: 0 calc(100% * (40 / 1080)); //ウィンドウ幅1080pxの時に4 //ウィンドウ幅768pxの時に20pxの比率をキープ0pxの比率をキープ
   line-height: 1.75em;
   .form_guide{
     margin-top: 24px;
@@ -1119,7 +1118,7 @@ footer.open{
     width: calc(25% * (1000 / 1080));
     float: left;
     margin-right: calc(100% * (75 / 1000)); //$normal時はウィンドウ幅1080p時のwrap1000pxと75pxの比率をキープ
-    margin-left: calc(100% * (40 / 1080));
+    margin-left: calc(100% * (40 / 1080)); //ウィンドウ幅1080pxの時に40pxの比率をキープ
     padding-top: 50px;
   }
   @media #{$small} {
@@ -1199,7 +1198,7 @@ footer.open{
 }
 
 .info_table_FCH, .info_table_KPH{
-  margin: 0 calc(100% * 40 / 1080);
+  margin: 0 calc(100% * 40 / 1080); //ウィンドウ幅1080pxの時に40pxの比率をキープ
   text-align: left;
   width: calc(100% - 100% * 80 / 1080); //いろいろめんどくさくなってcalc使いました。
   @include only_pc;
