@@ -643,10 +643,6 @@ footer:after {
   padding-left: 24px;
 }
 
-.g_pageTitle {
-  margin-bottom: 50px;
-}
-
 @media screen and (min-width: 769px) {
   .archives {
     float: right;
@@ -663,11 +659,11 @@ footer:after {
 }
 
 .autoHeight {
-  min-height: calc(100vh - 93px - 115px - 273px);
+  min-height: calc(100vh - 93px - 115px - 273px + 50px);
 }
 @media screen and (max-width: 768px) {
   .autoHeight {
-    min-height: calc(100vh - 52px - 115px - 389px);
+    min-height: calc(100vh - 52px - 115px - 389px + 50px);
   }
 }
 
@@ -2517,16 +2513,6 @@ p.company_about {
   }
 }
 
-.g_allArea-pagetitle {
-  background: white;
-}
-@media screen and (min-width: 769px) {
-  .g_allArea-pagetitle {
-    border-bottom: solid 1px #9fa0a0;
-    border-top: solid 1px #9fa0a0;
-  }
-}
-
 .g_allArea-fullWidth {
   max-width: initial;
 }
@@ -2675,25 +2661,28 @@ p.company_about {
 }
 
 .event_pageTitle, .g_pageTitle {
+  background: white;
+  border-bottom: solid 1px #9fa0a0;
+  border-top: solid 1px #9fa0a0;
   color: #3e3a39;
   font-size: 21px;
   font-weight: 500;
-  padding-left: calc(100% * (40 / 1080));
-  max-width: 100%;
-}
-@media screen and (min-width: 769px) and (max-width: 1080px) {
-  .event_pageTitle, .g_pageTitle {
-    padding-left: 40px;
-  }
+  padding: 0 calc((100% - 1440px) / 2);
+  /*@media screen and (min-width: 769px) and (max-width: 1080px) {
+    padding-left: 40px; //絶対値に上書きして、それ以上paddingが小さくならないようにしています。
+  }*/
 }
 .event_pageTitle .titleText, .g_pageTitle .titleText {
   border-left: solid 1px #9fa0a0;
   line-height: 63px;
 }
+@media screen and (min-width: 769px) {
+  .event_pageTitle .titleText, .g_pageTitle .titleText {
+    margin-left: calc(100% * (40 / 1080));
+  }
+}
 @media screen and (max-width: 768px) {
   .event_pageTitle, .g_pageTitle {
-    border-bottom: solid 1px #9fa0a0;
-    border-top: solid 1px #9fa0a0;
     padding-left: calc(100% * 20 / 768);
   }
 }
@@ -2765,7 +2754,7 @@ p.company_about {
 }
 @media screen and (max-width: 768px) {
   .form {
-    padding-top: 40px;
+    padding-top: 50px;
   }
 }
 
@@ -2937,7 +2926,7 @@ h2.concept_title {
 @media screen and (max-width: 768px) {
   .concept, .concept_img, .concept_text {
     font-size: 16px;
-    margin: 10px;
+    padding: 10px;
   }
 }
 

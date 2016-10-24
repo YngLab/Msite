@@ -753,7 +753,7 @@ footer.open{
     .headingTitle{
       color: $h2__color;
       font-size: $h2__fontSize;
-      //margin-top: 40px;
+      //margin-left: 12px;
       //float: left;
     }
   }
@@ -1430,14 +1430,6 @@ p.company_about{//別部分がコーディング規約無視しているため�
   }
 }
 
-.g_allArea-pagetitle{
-  background: white;
-  @media #{$normal} { //PC/SPでボーダーを引くクラスが変わるようにしました。こいつはPC時にボーダーを引きます。
-    border-bottom: solid 1px $g__fontColor;
-    border-top: solid 1px $g__fontColor;
-  }
-}
-
 .g_allArea-fullWidth{
   max-width: initial;
 }
@@ -1602,21 +1594,28 @@ p.company_about{//別部分がコーディング規約無視しているため�
 }
 
 .event_pageTitle, .g_pageTitle{ //全く同じ機能だったのでまとめました。
+  background: white;
+  border-bottom: solid 1px $g__fontColor;
+  border-top: solid 1px $g__fontColor;
   color: $title__color;
   font-size: $title__fontSize;
   font-weight: 500;
-  padding-left: calc(100% * (40 / 1080));
-  max-width: 100%; //g_allAreaのmax-width設定を強引に潰してます。
-  @media #{$minimum} {
+  //padding-left: calc(100% * (40 / 1080));
+  //max-width: 100%; //g_allAreaのmax-width設定を強引に潰してます。
+  //@media #{$maximum} {
+    padding: 0 calc((100% - 1440px) / 2);
+  //}
+  /*@media #{$minimum} {
     padding-left: 40px; //絶対値に上書きして、それ以上paddingが小さくならないようにしています。
-  }
+  }*/
   .titleText{
     border-left: solid 1px $g__fontColor;
     line-height: 63px;
+    @media #{$normal} {
+      margin-left: calc(100% * (40 / 1080));
+    }
   }
-  @media #{$small} { //PC/SPでボーダーを引くクラスが変わるようにしました。こいつはSP時にボーダーを引きます。
-    border-bottom: solid 1px $g__fontColor;
-    border-top: solid 1px $g__fontColor;
+  @media #{$small} {
     padding-left: calc(100% * 20 / 768);
   }
 }
@@ -1673,7 +1672,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
     padding-top: 50px;
   }
   @media #{$small} {
-    padding-top: 40px;
+    padding-top: 50px; //ここたぶん50pxだと思うんです。
   }
 }
 
@@ -1855,7 +1854,7 @@ h2.concept_title{
   }
   @media #{$small} {
     font-size: 16px;
-    margin: 10px;
+    padding: 10px;
   }
 }
 

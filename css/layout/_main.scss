@@ -432,7 +432,7 @@ footer{
 }
 
 .g_pageTitle{ //両者の違いはこれのあるなしだけでした。
-  margin-bottom: 50px;
+  //margin-bottom: 50px; 要らない説濃厚です。最後まで開発して、問題が出なければまるっと削除してg_pageTitleに統一しましょう。
 }
 
 .archives{
@@ -449,9 +449,9 @@ footer{
 }
 
 .autoHeight{
-  min-height: calc(100vh - 93px - 115px - 273px); //画面表示高さ - ヘッダー - 見出し - フッター
+  min-height: calc(100vh - 93px - 115px - 273px + 50px); //画面表示高さ - ヘッダー - 見出し - フッター + formのpadding
   @media #{$small} {
-    min-height: calc(100vh - 52px - 115px - 389px); //画面表示高さ - ヘッダー - 見出し - フッター
+    min-height: calc(100vh - 52px - 115px - 389px + 50px); //画面表示高さ - ヘッダー - 見出し - フッター + formのpadding
   }
 } //減算したヘッダー・見出し・フッターの領域はmarginを含む
 /*
@@ -594,9 +594,7 @@ footer{
 }
 
 .inputForm{
-  @media #{$small} {
-    display: none;
-  }
+  @include only_pc;
 }
 
 .inputBox, .inputBox_sub, .inputBox_conf, .inputBox_Econf{
@@ -619,9 +617,7 @@ footer{
 }
 
 .inputForm_sp{
-  @media #{$normal} {
-    display: none;
-  }
+  @include only_sp;
   .inputBox_sp, .inputBox_conf_sp, .inputBox_sp_b, .inputBox_conf_sp_b,{
     margin-bottom: 20px;
     input{
