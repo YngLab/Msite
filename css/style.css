@@ -409,6 +409,12 @@ footer:after {
     display: none;
   }
 }
+@media screen and (max-width: 768px) {
+  .facility_explain_sp {
+    margin-left: calc(100% * 20 / 768);
+    margin-right: calc(100% * 20 / 768);
+  }
+}
 
 .facility_detail_sp {
   padding: 16px 0 20px 0;
@@ -416,6 +422,12 @@ footer:after {
 @media screen and (min-width: 769px) {
   .facility_detail_sp {
     display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .facility_detail_sp {
+    margin-left: calc(100% * 20 / 768);
+    margin-right: calc(100% * 20 / 768);
   }
 }
 
@@ -2276,8 +2288,9 @@ footer.open {
 }
 
 .info_table_FCH, .info_table_KPH {
+  margin: 0 calc(100% * 40 / 1080);
   text-align: left;
-  width: 100%;
+  width: calc(100% - 100% * 80 / 1080);
 }
 @media screen and (max-width: 768px) {
   .info_table_FCH, .info_table_KPH {
@@ -2308,11 +2321,16 @@ footer.open {
 
 .info_table_FCH_sp, .info_table_KPH_sp {
   text-align: left;
-  width: 100%;
 }
 @media screen and (min-width: 769px) {
   .info_table_FCH_sp, .info_table_KPH_sp {
     display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info_table_FCH_sp, .info_table_KPH_sp {
+    margin-left: calc(100% * 20 / 768);
+    margin-right: calc(100% * 20 / 768);
   }
 }
 
@@ -2349,7 +2367,7 @@ footer.open {
 }
 
 .info_table_data {
-  margin: 20px 0 36px 0;
+  padding: 20px 0 36px 0;
 }
 
 /* modal-contentのCSS */

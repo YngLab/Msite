@@ -202,30 +202,24 @@ footer{
 
 .facility_explain{
   padding: 50px 0 20px 0;
-  @media #{$small} {
-    display: none;
-  }
+  @include only_pc;
 }
 
 .facility_detail{
-  @media #{$small} {
-    display: none;
-  }
+  @include only_pc;
 }
 
 .facility_explain_sp{
   padding: 16px 0 20px 0;
-  @media #{$normal} {
-    display: none;
-  }
+  @include only_sp;
+  @include smallM;
 }
 
 .facility_detail_sp{
   padding: 16px 0 20px 0;
-  @media #{$normal} {
-    display: none;
-  }
-}
+  @include only_sp;
+  @include smallM;
+} //かなりスッキリしたとは思いませんか？？（自画自賛
 
 .event_textBox_wrap, .event_pic,
 .exmenu_textBox_wrap, .exmenu_pic,

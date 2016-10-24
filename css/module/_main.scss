@@ -1202,11 +1202,10 @@ footer.open{
 }
 
 .info_table_FCH, .info_table_KPH{
+  margin: 0 calc(100% * 40 / 1080);
   text-align: left;
-  width: 100%;
-  @media #{$small} {
-    display: none;
-  }
+  width: calc(100% - 100% * 80 / 1080); //いろいろめんどくさくなってcalc使いました。
+  @include only_pc;
   tr{
     height: 50px;
     width: 100%;
@@ -1232,10 +1231,9 @@ footer.open{
 
 .info_table_FCH_sp, .info_table_KPH_sp{
   text-align: left;
-  width: 100%;
-  @media #{$normal} {
-    display: none;
-  }
+  //width: 100%; g_allAreaにsmallWが効いてるので、ここの構文が削除できるのですなぁ
+  @include only_sp;
+  @include smallM;
 }
 
 .info_table_FCH{
@@ -1273,7 +1271,7 @@ footer.open{
 }
 
 .info_table_data{
-  margin: 20px 0 36px 0;
+  padding: 20px 0 36px 0; //overlayをかけるためにpaddingに変更しました。
 }
 
 /* modal-contentのCSS */
