@@ -14,15 +14,20 @@ if(!$_GET){
 <link rel = "shortcut icon" href="images/common/hmp.ico">
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
+<!-- pageTitleが存在するページの共通部分 -->
 <div class="g_allArea">
   <div id = "header_sp"></div>
   <div class="overlay"></div>
 </div>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
 <div class = "g_drawerToggle">
   <span class="top"></span>
   <span class="middle"></span>
   <span class="bottom"></span>
 </div>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
 <header>
   <div class = "pNav">
     <a href = "http://hakodate-miraiproject.jp/" class="pNavli language">JP | EN</a>
@@ -50,6 +55,7 @@ if(!$_GET){
     </li>
   </div>
 </header>
+<!-- 共通部分ここまで -->
 <div class = "g_allArea g_allArea-fullWidth">
   <div class="g_pageTitle">
     <p class = "titleText">イベントの申し込み</p>

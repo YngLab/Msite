@@ -566,6 +566,16 @@ footer:after {
   position: relative;
   padding-top: 60vh;
 }
+@media screen and (min-width: 769px) {
+  .map_container {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .map_container {
+    border-top: solid 40px #ffffff;
+  }
+}
 
 #map_canvas {
   position: absolute;

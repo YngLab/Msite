@@ -8,15 +8,20 @@
 <link rel = "shortcut icon" href="images/common/hmp.ico">
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
+<!-- pageTitleが存在するページの共通部分 -->
 <div class="g_allArea">
   <div id = "header_sp"></div>
   <div class="overlay"></div>
 </div>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
 <div class = "g_drawerToggle">
   <span class="top"></span>
   <span class="middle"></span>
   <span class="bottom"></span>
 </div>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
 <header>
   <div class = "pNav">
     <a href = "http://hakodate-miraiproject.jp/" class="pNavli language">JP | EN</a>
@@ -44,14 +49,17 @@
     </li>
   </div>
 </header>
+<!-- pageTitleが存在するページの共通部分(titleTextの中身は異なる) -->
 <div class = "g_allArea g_allArea-fullWidth">
   <div class="g_pageTitle">
     <p class = "titleText">お問い合わせの確認</p>
   </div>
   <div class = "overlay"></div>
 </div>
+<!-- 共通部分ここまで -->
 <div class = "g_allArea g_allArea-shortPage">
   <!-- inputForm, inputForm_spが色々な場所あったのでformのclassに統一しました -->
+  <!-- お問い合わせ、お問い合わせの確認のみcontact_formあり -->
   <form class = "form inputForm contact_form" action = "php/hoge.php" method = "post">
     <div class = "radio">
       <input type = "radio" name = "radio" id = "fch" value = "fch" checked>
@@ -96,7 +104,7 @@
       </tr>
     </table>
   </form>
-  <form class = "form inputForm_sp" action = "confirm_contact.php" method = "post">
+  <form class = "inputForm_sp form" action = "confirm_contact.php" method = "post">
     <div class = "radio">
       <span class = "radioElement">
         <input type = "radio" name = "radio" id = "fch" value = "fch">

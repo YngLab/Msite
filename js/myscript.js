@@ -16,6 +16,7 @@ $(function(){
   $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
   //pcビューの時latestEventを一覧表示に
   if(w_size > 768){
+    //直近のイベントをスライドショーから一覧表示にするための処理
     $(".latestEvent .flexslider .slides").unwrap();
     $(".latestEvent .slides li").unwrap();
     $(".latestEvent li a").unwrap();

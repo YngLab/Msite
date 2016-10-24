@@ -17,15 +17,20 @@ $_SESSION = $_POST;
 <link rel = "shortcut icon" href="images/common/hmp.ico">
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
+<!-- pageTitleが存在するページの共通部分 -->
 <div class="g_allArea">
   <div id = "header_sp"></div>
   <div class="overlay"></div>
 </div>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
 <div class = "g_drawerToggle">
   <span class="top"></span>
   <span class="middle"></span>
   <span class="bottom"></span>
 </div>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
 <header>
   <div class = "pNav">
     <a href = "http://hakodate-miraiproject.jp/" class="pNavli language">JP | EN</a>
@@ -53,12 +58,15 @@ $_SESSION = $_POST;
     </li>
   </div>
 </header>
-<div class = "g_allArea g_allArea-bgcolor g_allArea-pagetitle">
+<!-- 共通部分ここまで -->
+<!-- pageTitleが存在するページの共通部分(titleTextの中身は異なる) -->
+<div class = "g_allArea g_allArea-pagetitle">
   <div class="event_pageTitle">
     <p class = "titleText">お問い合わせの確認</p>
   </div>
   <div class = "overlay"></div>
 </div>
+<!-- 共通部分ここまで -->
 <div class = "g_allArea g_allArea-shortPage">
   <!-- inputFormが色々な場所あったのでformのclassに統一しました -->
   <form class = "inputForm form" action = "send_contact.php" method = "post">
@@ -154,7 +162,6 @@ $_SESSION = $_POST;
 </div>
 <!-- 共通部分ここから -->
 <footer>
-  <!-- footer用のg_allAreaの代用を記述したのでfooterはこのまま -->
   <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
   <div class ="footerLinks">
     <!--<a href = "member.html" class="links">メンバー</a>-->
