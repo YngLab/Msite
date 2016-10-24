@@ -1549,7 +1549,7 @@ header a {
 }
 @media screen and (min-width: 769px) {
   .siteMap .linkGroup {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
   }
   .siteMap .linkGroup .linkText {
     margin-right: 30px;

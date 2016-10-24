@@ -546,7 +546,7 @@ header{
     text-align: left;
     font-weight: 400;
     @media #{$normal} {
-      margin-bottom: 30px;
+      padding-bottom: 30px;
       .linkText{
         margin-right: 30px;
       }
