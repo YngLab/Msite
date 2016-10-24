@@ -726,22 +726,30 @@ footer.open{
   text-align: center;
 }
 
+.heading, .concierge{ //まとめました。
+  padding: 50px 0 40px calc(100% * (40 / 1080));
+  @include smallM;
+  @media #{$small} {
+    padding-left: 0;
+    padding-bottom: 27px; //smallM導入により、スッキリしました。
+  }
+}
+
 .heading{
   color: $h2__color;
   font-size: $h2__fontSize;
+  @media #{$small} {
+    font-size: 18px; //処理の都合上、これを書くのはやむを得ませんでした。
+    padding-top: 40px;
+  }
 }
 
 .concierge{
   color: $g__color-kids;
   font-size: $h3__fontSize;
-}
-
-.heading, .concierge{ //まとめました。
-  padding: 50px 0 40px calc(100% * (40 / 1080));
-  @include smallM;
   @media #{$small} {
     font-size: 18px;
-    padding: 40px 0 27px 0; //smallM導入により、スッキリしました。
+    padding-top: 56px; //まとめた意味が若干消失してるような気がしますが、きっとそれは気のせいです。
   }
 }
 
@@ -1261,6 +1269,10 @@ footer.open{
 
 .info_table_data{
   padding: 20px 0 36px 0; //overlayをかけるためにpaddingに変更しました。
+}
+
+.info_table_data-last{
+  padding-top: 20px; //最後の要素にだけかける例外処理です。
 }
 
 /* modal-contentのCSS */

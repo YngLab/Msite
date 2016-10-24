@@ -216,7 +216,7 @@ footer{
 }
 
 .facility_detail_sp{
-  padding: 16px 0 20px 0;
+  padding-top: 16px; //直下のheading（体験メニュー）のpadding-top:40pxとかちあって、余計なスペースが生まれていたので、padding-bottomを削りました。
   @include only_sp;
   @include smallM;
 } //かなりスッキリしたとは思いませんか？？（自画自賛

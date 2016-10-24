@@ -417,7 +417,7 @@ footer:after {
 }
 
 .facility_detail_sp {
-  padding: 16px 0 20px 0;
+  padding-top: 16px;
 }
 @media screen and (min-width: 769px) {
   .facility_detail_sp {
@@ -1737,16 +1737,6 @@ footer.open {
   text-align: center;
 }
 
-.heading {
-  color: #727171;
-  font-size: 24px;
-}
-
-.concierge {
-  color: #8fc31f;
-  font-size: 21px;
-}
-
 .heading, .concierge {
   padding: 50px 0 40px calc(100% * (40 / 1080));
 }
@@ -1758,8 +1748,30 @@ footer.open {
 }
 @media screen and (max-width: 768px) {
   .heading, .concierge {
+    padding-left: 0;
+    padding-bottom: 27px;
+  }
+}
+
+.heading {
+  color: #727171;
+  font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+  .heading {
     font-size: 18px;
-    padding: 40px 0 27px 0;
+    padding-top: 40px;
+  }
+}
+
+.concierge {
+  color: #8fc31f;
+  font-size: 21px;
+}
+@media screen and (max-width: 768px) {
+  .concierge {
+    font-size: 18px;
+    padding-top: 56px;
   }
 }
 
@@ -2367,6 +2379,10 @@ footer.open {
 
 .info_table_data {
   padding: 20px 0 36px 0;
+}
+
+.info_table_data-last {
+  padding-top: 20px;
 }
 
 /* modal-contentのCSS */
