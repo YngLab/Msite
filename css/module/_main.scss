@@ -741,11 +741,7 @@ footer.open{
   @include smallM;
   @media #{$small} {
     font-size: 18px;
-    // padding: 20px 0 27px 0; //smallM導入により、スッキリしました。
-    padding: 40px 0 27px 0; //デザインカンプの通りに修正
-    .addPadding{
-      padding-top: 20px;
-    }
+    padding: 40px 0 27px 0; //smallM導入により、スッキリしました。
   }
 }
 
@@ -757,16 +753,17 @@ footer.open{
     .headingTitle{
       color: $h2__color;
       font-size: $h2__fontSize;
-      //margin-left: 12px;
+      //margin-top: 40px;
       //float: left;
     }
   }
   @media #{$small} {
     font-size: 18px;
     padding: 40px 0 27px 0;
-    p{
+    .headingTitle{
       color: $h2__color;
       font-size: 18px;
+      margin-top: 40px; //heading-topの代わりになるものです。
     }
   }
 }
@@ -786,13 +783,13 @@ footer.open{
     }
   }
 }
-
+/*
 .heading-top{ //更に余白が必要な見出しに強引にそれを追加するためだけのクラスです。
   @media #{$small} {
     padding-top: 40px;
   }
 }
-
+*/
 .monthSort{
   float: left;
   margin: 50px 0 40px 100px;
