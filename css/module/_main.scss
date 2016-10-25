@@ -1415,7 +1415,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
   line-height: 1.75;
 }
 
-.g_allArea{
+.g_allArea{ //g_allAreaで画面幅いっぱいのコンテンツを囲う
   //オーバーレイをabsolute指定するため必要
   position: relative;
   margin: 0 auto;
@@ -1425,14 +1425,14 @@ p.company_about{//別部分がコーディング規約無視しているため�
     max-width: 1440px;
     min-width: 1080px;
   }
-  //アニメーションの指定
+  //アニメーションの指定 機能はspビューの時黒のオーバーレイをかけて左にスライド
   -webkit-transition: all .4s;
      -moz-transition: all .4s;
        -o-transition: all .4s;
           transition: all .4s;
 }
 
-.g_allArea-bgcolor{
+.g_allArea-bgcolor{ //g_allArea-bgcolorは#f7f8f8の背景色のとき
   @media #{$normal} {
     background-color: $bg__color;
   }
@@ -1442,11 +1442,11 @@ p.company_about{//別部分がコーディング規約無視しているため�
   }
 }
 
-.g_allArea-fullWidth{
+.g_allArea-fullWidth{ //g_allArea-fullWidthはmaxmumの機能を使いたくない時用
   max-width: initial;
 }
 
-.g_allArea-shortPage{
+.g_allArea-shortPage{ //コンテンツの縦幅が短いコンテンツにはg_allArea-shortPageを指定
   min-height: calc(100vh - 93px - 65px - 273px); //画面表示高さ - ヘッダー - 見出し - フッター
   @media #{$small} {
     min-height: calc(100vh - 52px - 65px - 389px); //画面表示高さ - ヘッダー - 見出し - フッター
@@ -1605,7 +1605,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
   line-height: 1.75em;
 }
 
-.event_pageTitle, .g_pageTitle{ //全く同じ機能だったのでまとめました。
+.event_pageTitle, .g_pageTitle{ //全く同じ機能だったのでまとめました。 現在はpageTitleの縦幅が未確定のため崩れる？
   background: white;
   border-bottom: solid 1px $g__fontColor;
   border-top: solid 1px $g__fontColor;
@@ -1689,12 +1689,12 @@ p.company_about{//別部分がコーディング規約無視しているため�
   }
 }
 
-.contact_form{
+.contact_form{ //お問い合わせ、お問い合わせの確認のみcontact_formあり
   padding: 0 calc(100% * (40 / 1080));
   padding-top: 50px;
 }
 
-.inputForm{
+.inputForm{ //inputForm, inputForm_spが色々な場所あったのでformのclassに統一しました
   //.inputBox{
   float: left;
   th{
