@@ -15,320 +15,76 @@
     animation: "slide"
   });
 </script>
-<div id="wrapper">
-  <div id = "header_sp">　</div>
-  <div id="header">
-    <div id="drawer-toggle">
-      <span class="top"></span>
-      <span class="middle"></span>
-      <span class="bottom"></span>
-    </div>
+<!-- pageTitleが存在するページの共通部分 -->
+<div class="g_allArea">
+  <div id = "header_sp"></div>
+  <div class="overlay"></div>
+</div>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
+<div class = "g_drawerToggle">
+  <span class="top"></span>
+  <span class="middle"></span>
+  <span class="bottom"></span>
+</div>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
+<header>
+  <div class = "pNav">
+    <a href = "http://hakodate-miraiproject.jp/" class="pNavli language">JP | EN</a>
+    <a href = "contact.html" class="pNavli rightpNav">お問い合わせ</a>
+    <a href = "access.html" class="pNavli rightpNav">アクセス</a>
   </div>
-  <header>
-    <div class = "gHeader">
-      <div class = "wrap">
-        <div class = "autoMargin">
-          <div class = "pNav">
-            <a href = "http://hakodate-miraiproject.jp/" class="pNavli language">JP | EN</a>
-            <a href = "contact.html" class="pNavli rightpNav">お問い合わせ</a>
-            <a href = "access.html" class="pNavli rightpNav">アクセス</a>
-          </div>
-          <div class = "gNav">
-            <li class = "gNavli">
-              <a href="index.html">ホーム</a>
-            </li>
-            <li class = "gNavli">
-              <a href="concept.html">コンセプト</a>
-            </li>
-            <li class = "gNavli">
-              <a href="event.html">イベント</a>
-            </li>
-            <li class = "gNavli">
-              <a href="FCH.html">はこだてみらい館</a>
-            </li>
-            <li class = "gNavli">
-              <a href="KPH.html">はこだてキッズプラザ</a>
-            </li>
-            <li class = "gNavli">
-              <a href="HMP.html">みらいプロジェクト</a>
-            </li>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class = "pageTitle_event">
-    <div class = "wrap">
-      <div class = "autoMargin">
-        <p class = "titleText">イベント</p>
-      </div>
-    </div>
+  <div class = "gNav">
+    <li class = "gNavli">
+      <a href="index.html">ホーム</a>
+    </li>
+    <li class = "gNavli">
+      <a href="concept.html">コンセプト</a>
+    </li>
+    <li class = "gNavli">
+      <a href="event.html">イベント</a>
+    </li>
+    <li class = "gNavli">
+      <a href="FCH.html">はこだてみらい館</a>
+    </li>
+    <li class = "gNavli">
+      <a href="KPH.html">はこだてキッズプラザ</a>
+    </li>
+    <li class = "gNavli">
+      <a href="HMP.html">みらいプロジェクト</a>
+    </li>
   </div>
-  <div class = "bgcolor">
-    <div class = "wrap">
-      <div class = "autoMargin">
-        <div class = "latestEvent only_sp">
-          <div class = "heading">
-            <div class = "addPadding">
-              <p>
-                直近のイベント
-              </p>
-            </div>
-          </div>
-          <div class = "flexslider">
-            <ul class = "slides">
-              <!-- <li>
-                <a href = "#0">
-                  <div class = "latestBox_future">
-                    <div class = "remaindays_future">
-                      <div class = "caption">
-                        あと<script>document.write(12 - new Date().getDate());</script>日
-                      </div>
-                    </div>
-                    <div class = "latestBox_img">
-                      <img src="images/event1_FCH.jpg" alt="イベント1">
-                    </div>
-                    <div class = "eventText">
-                      <p class = "eventsch caption FCHcolor">
-                        10/12(水)
-                      </p>
-                      <p class = "eventtitle">はこだてみらい館 先行体験会</p>
-                      <p class = "eventplace caption">
-                        みらい館
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href = "#1">
-                  <div class = "latestBox_kids">
-                    <div class = "remaindays_kids">
-                      <div class = "caption">
-                        あと<script>document.write(12 - new Date().getDate());</script>日
-                      </div>
-                    </div>
-                    <div class = "latestBox_img">
-                      <img src="images/event1_KPH.jpg" alt="イベント2">
-                    </div>
-                    <div class = "eventText">
-                      <p class = "eventsch caption KPHcolor">
-                        10/12(水)
-                      </p>
-                      <p class = "eventtitle">はこだてキッズプラザ 先行体験会</p>
-                      <p class = "eventplace caption">
-                        キッズプラザ
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li> -->
-              <!-- <li>
-                <a href = "#5">
-                  <div class = "latestBox_future">
-                    <div class = "remaindays_future">
-                      <div class = "caption">
-                        あと<script>document.write(23 - new Date().getDate());</script>日
-                      </div>
-                    </div>
-                    <div class = "latestBox_img">
-                      <img src="images/event4_FCH.jpg" alt="イベント2">
-                    </div>
-                    <div class = "eventText">
-                      <p class = "eventsch caption FCHcolor">
-                        10/23(日)
-                      </p>
-                      <p class = "eventtitle">親子ワークショップ「光を感じよう！~見える？見えない？光と色~」</p>
-                      <p class = "eventplace caption">
-                        みらい館
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li> -->
-              <li>
-                <a href = "6">
-                  <div class = "latestBox_future">
-                    <div class = "remaindays_future">
-                      <div class = "caption">
-                        あと<script>document.write(29 - new Date().getDate());</script>日
-                      </div>
-                    </div>
-                    <div class = "latestBox_img">
-                      <img src="images/event6_FCH.jpg" alt="イベント6">
-                    </div>
-                    <div class = "eventText">
-                      <p class = "eventsch caption FCHcolor">
-                        10/29(土) 30(日)
-                      </p>
-                      <p class = "eventtitle">FabLab ワークショップ</p>
-                      <p class = "eventplace caption">
-                        みらい館
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href = "#7">
-                  <div class = "latestBox_future">
-                    <div class = "remaindays_future">
-                      <div class = "caption">
-                        あと<script>document.write(29 - new Date().getDate());</script>日
-                      </div>
-                    </div>
-                    <div class = "latestBox_img">
-                      <img src="images/event7_FCH.jpg" alt="イベント7">
-                    </div>
-                    <div class = "eventText">
-                      <p class = "eventsch caption FCHcolor">
-                        10/29(土) 30(日)
-                      </p>
-                      <p class = "eventtitle">せかいをはかるワークショップ</p>
-                      <p class = "eventplace caption">
-                        みらい館
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class = "latestEvent only_pc">
-          <div class = "heading">
-            <p>
-              直近のイベント
-            </p>
-          </div>
-          <!-- <a href = "#0">
-            <div class = "latestBox_future">
-              <div class = "remaindays_future">
-                <div class = "caption">
-                  あと<script>document.write(12 - new Date().getDate());</script>日
-                </div>
-              </div>
-              <img src="images/event1_FCH.jpg" alt="イベント1">
-              <div class = "eventText">
-                <p class = "eventsch caption FCHcolor">
-                  10/12(水)
-                </p>
-                <p class = "eventtitle">はこだてみらい館 先行体験会</p>
-                <p class = "eventplace caption">
-                  みらい館
-                </p>
-              </div>
-            </div>
-          </a>
-          <a href = "#1">
-            <div class = "latestBox_kids">
-              <div class = "remaindays_kids">
-                <div class = "caption">
-                  あと<script>document.write(12 - new Date().getDate());</script>日
-                </div>
-              </div>
-              <img src="images/event1_KPH.jpg" alt="イベント2">
-              <div class = "eventText">
-                <p class = "eventsch caption KPHcolor">
-                  10/12(水)
-                </p>
-                <p class = "eventtitle">はこだてキッズプラザ 先行体験会</p>
-                <p class = "eventplace caption">
-                  キッズプラザ
-                </p>
-              </div>
-            </div>
-          </a> -->
-          <!-- <a href = "#2">
-            <div class = "latestBox_future">
-              <div class = "remaindays_future">
-                <div class = "caption">
-                  あと<script>document.write(15 - new Date().getDate());</script>日
-                  終了
-                </div>
-              </div>
-              <img src="images/event2_FCH.jpg" alt="イベント3">
-              <div class = "eventText">
-                <p class = "eventsch caption FCHcolor">
-                  10/15(土)
-                </p>
-                <p class = "eventtitle">オドロクチカラ トークセッション</p>
-                <p class = "eventplace caption">
-                  みらい館
-                </p>
-              </div>
-            </div>
-          </a> -->
-          <!-- <a href = "#3">
-            <div class = "latestBox_future">
-              <div class = "remaindays_future">
-                <div class = "caption">
-                  あと<script>document.write(16 - new Date().getDate());</script>日
-                  終了
-                </div>
-              </div>
-              <img src="images/event3_FCH.jpg" alt="イベント4">
-              <div class = "eventText">
-                <p class = "eventsch caption FCHcolor">
-                  10/16(日)
-                </p>
-                <p class = "eventtitle">井上涼さんアニメーションワークショップ</p>
-                <p class = "eventplace caption">
-                  みらい館
-                </p>
-              </div>
-            </div>
-          </a> -->
-          <!-- <a href = "#4">
-            <div class = "latestBox_kids">
-              <div class = "remaindays_kids">
-                <div class = "caption">
-                  あと<script>document.write(16 - new Date().getDate());</script>日
-                  終了
-                </div>
-              </div>
-              <img src="images/event2_KPH.jpg" alt="イベント2">
-              <div class = "eventText">
-                <p class = "eventsch caption KPHcolor">
-                  10/16(日)
-                </p>
-                <p class = "eventtitle">Whiteaフリースタイルパフォーマンス</p>
-                <p class = "eventplace caption">
-                  キッズプラザ
-                </p>
-              </div>
-            </div>
-          </a> -->
-          <!-- <a href = "#5">
-            <div class = "latestBox_future">
-              <div class = "remaindays_future">
-                <div class = "caption">
-                  あと<script>document.write(23 - new Date().getDate());</script>日
-                </div>
-              </div>
-              <img src="images/event4_FCH.jpg" alt="イベント2">
-              <div class = "eventText">
-                <p class = "eventsch caption FCHcolor">
-                  10/23(日)
-                </p>
-                <p class = "eventtitle">親子ワークショップ「光を感じよう！~見える？見えない？光と色~」</p>
-                <p class = "eventplace caption">
-                  みらい館
-                </p>
-              </div>
-            </div>
-          </a> -->
-          <a href = "#6">
+</header>
+<!-- 共通部分ここまで -->
+<div class = "g_allArea g_allArea-fullWidth">
+  <div class="event_pageTitle">
+    <p class = "titleText">イベント</p>
+  </div>
+  <div class = "overlay"></div>
+</div>
+<div class = "g_allArea g_allArea-bgcolor">
+  <p class = "heading">
+    直近のイベント
+  </p>
+  <!-- event.htmlの直近のイベントと共通部ここから -->
+  <div class = "latestEvent">
+    <div class = "flexslider">
+      <ul class = "slides">
+        <li>
+          <a href = "event.html#6">
             <div class = "latestBox_future">
               <div class = "remaindays_future">
                 <div class = "caption">
                   あと<script>document.write(29 - new Date().getDate());</script>日
                 </div>
               </div>
-              <img src="images/event6_FCH.jpg" alt="イベント6">
+              <!-- <div class = "latestBox_img"> -->
+                <img src="images/event6_FCH.jpg" alt="イベント6">
+              <!-- </div> -->
               <div class = "eventText">
                 <p class = "eventsch caption FCHcolor">
-                  10/29(土) 30(土)
+                  10/29(土) 30(日)
                 </p>
                 <p class = "eventtitle">FabLab ワークショップ</p>
                 <p class = "eventplace caption">
@@ -337,14 +93,18 @@
               </div>
             </div>
           </a>
-          <a href = "#7">
+        </li>
+        <li>
+          <a href = "event.html#7">
             <div class = "latestBox_future">
               <div class = "remaindays_future">
                 <div class = "caption">
                   あと<script>document.write(29 - new Date().getDate());</script>日
                 </div>
               </div>
-              <img src="images/event7_FCH.jpg" alt="イベント7">
+              <!-- <div class = "latestBox_img"> -->
+                <img src="images/event7_FCH.jpg" alt="イベント7">
+              <!-- </div> -->
               <div class = "eventText">
                 <p class = "eventsch caption FCHcolor">
                   10/29(土) 30(日)
@@ -356,472 +116,237 @@
               </div>
             </div>
           </a>
-        </div>
-      </div>
-    </div>
-    <div class = "wrap">
-      <div class = "autoMargin">
-        <div class = "heading-lineup">
-          <p class = "headingTitle">
-            今後のイベント
-          </p>
-        </div>
-        <!-- <div class = "monthSort">
-          <p>
-            今後のイベント
-          </p>
-          <ul>
-            <li class = "active">
-              10
-            </li>
-            <li>
-              <a href = "#" class = "linkText_">
-                11
-              </a>
-            </li>
-            <li>
-              <a href = "#" class = "linkText_">
-                12
-              </a>
-            </li>
-          </ul>
-        </div> -->
-        <!-- <div class = "archive">
-          <p>
-            今までのイベント
-          </p>
-          <ul>
-            <li class = "archive_year">
-                2016年
-            </li>
-            <li>
-              <a href = "#" class = "linkText_">
-                7
-              </a>
-            </li>
-            <li>
-                <a href = "#" class = "linkText_">
-                8
-              </a>
-            </li>
-            <li>
-              <a href = "#" class = "linkText_">
-                9
-              </a>
-            </li>
-          </ul>
-        </div> -->
-      </div>
-    </div>
-    <div id = "all_eventmenu">
-      <!-- <div class = "eventmenu" id="0">
-        <img class = "event_pic only_pc" src = "images/sq_event1_FCH.jpg"  alt = "先行体験会">
-        <img class = "event_pic only_sp" src = "images/event1_FCH.jpg"  alt = "先行体験会">
-        <div class = "event_textBox_wrap">
-          <div class = "event_textBox">
-            <div class = "event_title FCHcolor">
-              はこだてみらい館 先行体験会
-            </div>
-            <div class = "event_point">
-              <table>
-                <tr>
-                  <th class = "event_point_cap">日時</th>
-                  <td class = "event_point_contents">10月12日(水)　15:00-18:00</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">会場</th>
-                  <td class = "event_point_contents">はこだてみらい館</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">参加費</th>
-                  <td class = "event_point_contents">無料</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">対象</th>
-                  <td class = "event_point_contents">小学生から中学生</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">定員</th>
-                  <td class = "event_point_contents">100名（保護者を除く）</td>
-                </tr>
-              </table>
-            </div>
-            <div class = "event_detail">
-              幅15mの巨大な映像、360度全周映像、そして天井や床に映し出される映像が、センサー技術によって人の動きに反応するなど、先端的な技術を取り入れた様々なコンテンツが体験できます。また、アナログからデジタルまで多彩なワークショップを数多く実施し、未来を担う子どもたちの創造力を養います。
-            </div>
-          </div>
-          <form action = "event_subscript.php" method = "get">
-            <div class = "subscription">
-              <div class = "panel">
-                <p class = "panelLabel">応募終了</p>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class = "eventmenu" id="1">
-        <img class = "event_pic only_pc" src = "images/sq_event1_KPH.jpg"  alt = "先行体験会">
-        <img class = "event_pic only_sp" src = "images/event1_KPH.jpg"  alt = "先行体験会">
-        <div class = "event_textBox_wrap">
-          <div class = "event_textBox">
-            <div class = "event_title KPHcolor">
-              はこだてキッズプラザ 先行体験会
-            </div>
-            <div class = "event_point">
-              <table>
-                <tr>
-                  <th class = "event_point_cap">日時</th>
-                  <td class = "event_point_contents">10月12日(水)　15:00-18:00</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">会場</th>
-                  <td class = "event_point_contents">はこだてキッズプラザ</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">参加費</th>
-                  <td class = "event_point_contents">無料</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">対象</th>
-                  <td class = "event_point_contents">幼稚園児から小学生</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">定員</th>
-                  <td class = "event_point_contents">100名（保護者を除く）</td>
-                </tr>
-              </table>
-            </div>
-            <div class = "event_detail">
-              おもいっきり体を動かして、自由に遊ぶことが出来る全天候型のプレイグランドです。超巨大なネット遊具や、飛び跳ねると風が吹く丘、ふれると色が変わる池など、ちょっと不思議な仕掛けが子ども達の好奇心を刺激します。また、乳幼児の遊び場や託児室、育児相談室を設置し、子育てを頑張るお父さんお母さんを応援します。
-            </div>
-          </div>
-          <form action = "event_subscript.php" method = "get">
-            <div class = "subscription">
-              <div class = "panel">
-                <p class = "panelLabel">応募終了</p>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class = "eventmenu" id="2">
-        <img class = "event_pic only_pc" src = "images/sq_event2_FCH.jpg" alt = "トークセッション">
-        <img class = "event_pic only_sp" src = "images/event2_FCH.jpg" alt = "トークセッション">
-        <div class = "event_textBox_wrap">
-          <div class = "event_textBox">
-            <div class = "event_title FCHcolor">
-              オドロクチカラ トークセッション
-            </div>
-            <div class = "event_point">
-              <table>
-                <tr>
-                  <th class = "event_point_cap">日時</th>
-                  <td class = "event_point_contents">10月15日(土)　10:30-12:00</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">会場</th>
-                  <td class = "event_point_contents">はこだてみらい館</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">参加費</th>
-                  <td class = "event_point_contents">無料</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">対象</th>
-                  <td class = "event_point_contents">子どもから大人まで</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">定員</th>
-                  <td class = "event_point_contents">50名</td>
-                </tr>
-              </table>
-            </div>
-            <div class = "event_detail">
-              日本を代表するAI（人工知能）の研究者、中島秀之さんと松原仁さんが、脳科学者の茂木健一郎さんをスペシャルゲストにむかえ、はこだてみらい館・はこだてキッズプラザが大切にしている「オドロクチカラ」とは何なのかを語り合います。<br>
-              <br>
-              ※応募者多数の場合は抽選となります。
-              抽選結果は14日（金）までに、当選者のみメールにてご連絡させていただきます。
-            </div>
-          </div>
-          <form action = "event_subscript.php" method = "get">
-            <div class = "subscription">
-              <div class = "panel">
-                <p class = "panelLabel">応募終了</p>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class = "eventmenu" id="3">
-        <img class = "event_pic only_pc" src = "images/sq_event3_FCH.jpg"  alt = "井上涼さんアニメーションワークショップ">
-        <img class = "event_pic only_sp" src = "images/event3_FCH.jpg"  alt = "井上涼さんアニメーションワークショップ">
-        <div class = "event_textBox_wrap">
-          <div class = "event_textBox">
-            <div class = "event_title FCHcolor">
-              井上涼さんアニメーションワークショップ
-            </div>
-            <div class = "event_point">
-              <table>
-                <tr>
-                  <th class = "event_point_cap">日時</th>
-                  <td class = "event_point_contents">10月16日(日)　10:30-16:30</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">会場</th>
-                  <td class = "event_point_contents">はこだてみらい館</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">参加費</th>
-                  <td class = "event_point_contents">無料</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">対象</th>
-                  <td class = "event_point_contents">小学生</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">定員</th>
-                  <td class = "event_point_contents">20名</td>
-                </tr>
-              </table>
-            </div>
-            <div class = "event_detail event_detail-overflow">
-              NHK Eテレ「びじゅチューン」を手がける映像作家、井上涼さんと一緒に、はこだてみらい館のオリジナルアニメ作品「ハコダテミュージカル」のスペシャルVer.を作ろう！<br>
-              第1部：オリジナルイカを作ろう！【10:30-12:00　場所：シアター】<br>
-              ハコダテミュージカルに登場する踊るイカに色を塗って自分だけのイカを作ります。<br>
-              第2部：アニメができたら歌をつけよう！【13:30-15:00　場所：シアター 】<br>
-              みんなのイカが井上さんの手によってアニメ作品になるまでをはこだて未来大学の柳英克さんと一緒に解説してくれます。また、ハコダテミュージカルの歌をみんなで歌って映像にくっつけます。※第1部の参加者以外も参加いただけます。<br>
-              第3部：完成作品をみんなで見よう！【15:30-16:30　場所：メディアウォール 】<br>
-              みんなで作ったイカがみんなの歌声に合わせて超巨大画面メディアウォールの海を泳ぎまわります！最後はみんなで記念写真をします。※第1部の参加者以外も参加いただけます。
-            </div>
-          </div>
-          <form action = "event_subscript.php" method = "get">
-            <div class = "subscription">
-              <div class = "panel">
-                <p class = "panelLabel">応募終了</p>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class = "eventmenu" id="4">
-        <img class = "event_pic only_pc" src = "images/sq_event2_KPH.jpg"  alt = "Whiteaフリースタイルパフォーマンス">
-        <img class = "event_pic only_sp" src = "images/event2_KPH.jpg"  alt = "Whiteaフリースタイルパフォーマンス">
-        <div class = "event_textBox_wrap">
-          <div class = "event_textBox">
-            <div class = "event_title KPHcolor">
-              Whiteaフリースタイルパフォーマンス
-            </div>
-            <div class = "event_point">
-              <table>
-                <tr>
-                  <th class = "event_point_cap">日時</th>
-                  <td class = "event_point_contents">10月16日(日)　13:00-14:00</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">会場</th>
-                  <td class = "event_point_contents">はこだてキッズプラザ</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">参加費</th>
-                  <td class = "event_point_contents">無料</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">対象</th>
-                  <td class = "event_point_contents">子どもから大人まで</td>
-                </tr>
-              </table>
-            </div>
-            <div class = "event_detail">
-              レバンガ北海道フリースタイルバスケットボーラーWhitea（ホワイティ）が音楽に合わせて華麗なパフォーマンスを披露してくれます！パフォーマンス後、子どもたちとふれ合いの時間があります。
-            </div>
-          </div>
-          <form action = "event_subscript.php" method = "get">
-            <div class = "subscription">
-              <input type="hidden" name="id" value="4">
-              <input type="submit" value="申し込む" class = "button">
-              <div class = "panel">
-                <p class = "panelLabel">※事前申込不要</p>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div> -->
-      <!-- 以下新イベント追加分 -->
-      <div class = "eventmenu" id="6">
-        <img class = "event_pic only_pc" src = "images/sq_event6_FCH.jpg"  alt = "FabLabワークショップ">
-        <img class = "event_pic only_sp" src = "images/event6_FCH.jpg" alt = "FabLabワークショップ">
-        <div class = "event_textBox_wrap">
-          <div class = "event_textBox">
-            <div class = "event_title FCHcolor">
-              FabLabワークショップ
-            </div>
-            <div class = "event_point">
-              <table>
-                <tr>
-                  <th class = "event_point_cap">日時</th>
-                  <td class = "event_point_contents">
-                    <div class="event_point_contents-text">
-                      10月29日(土) 10:00-15:00 ハロウィンキャンドル<br>10月30日(日) 10:00-15:00 ボトルキャップ
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">会場</th>
-                  <td class = "event_point_contents">はこだてみらい館</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">参加費</th>
-                  <td class = "event_point_contents">
-                    <div class="event_point_contents-text">
-                      無料
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">対象</th>
-                  <td class = "event_point_contents">
-                    <div class="event_point_contents-text">
-                      小学生以上 ※保護者同伴可
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class = "event_detail-short">
-              はこだてみらい館のラボラトリーにFab Labがオープンします！3D プリンターを使ったモノづくりを体験しよう！
-            </div>
-          </div>
-          <form action = "event_subscript.php" method = "get">
-            <div class = "subscription">
-              <!-- <input type="hidden" name="id" value="6">
-              <input type="submit" value="申し込む" class = "button"> -->
-              <div class = "panel">
-                <p class = "panelLabel">※事前申込不要</p>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class = "eventmenu" id="7">
-        <img class = "event_pic only_pc" src = "images/sq_event7_FCH.jpg"  alt = "せかいをはかるワークショップ">
-        <img class = "event_pic only_sp" src = "images/event7_FCH.jpg" alt = "せかいをはかるワークショップ">
-        <div class = "event_textBox_wrap">
-          <div class = "event_textBox">
-            <div class = "event_title FCHcolor">
-              せかいをはかるワークショップ
-            </div>
-            <div class = "event_point">
-              <table>
-                <tr>
-                  <th class = "event_point_cap">日時</th>
-                  <td class = "event_point_contents">
-                    <div class="event_point_contents-text">
-                      10月29日(土) 30日(日)<br>
-                      10:30-12:30(1回目) 14:00-16:00(2回目)
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">会場</th>
-                  <td class = "event_point_contents">はこだてみらい館</td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">参加費</th>
-                  <td class = "event_point_contents">
-                    <div class="event_point_contents-text">
-                      無料
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">対象</th>
-                  <td class = "event_point_contents">
-                    <div class="event_point_contents-text">
-                      小学生以上 ※保護者同伴可
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th class = "event_point_cap">定員</th>
-                  <td class = "event_point_contents">
-                    <div class="event_point_contents-text">
-                      各回15名(合計30 名)
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div class = "event_detail-short event_detail-overflow">
-              大きい、小さい。高い、低い。広い、狭い。「じぶんものさし」を作って、みらい館をはかってみよう！メディアウォールはどのくらいの大きさだろう？<br>
-              ※参加をご希望の方は、申し込みフォームの「その他ご質問等」に、ご希望の参加日時を明記してください。
-              <div class = "eventDetail_picBox">
-                <img class = "eventDetail_pic" src = "images/sq_event7_FCH1.jpg">
-                <img class = "eventDetail_pic" src = "images/sq_event7_FCH2.jpg">
-                <img class = "eventDetail_pic" src = "images/sq_event7_FCH3.jpg">
-              </div>
-            </div>
-          </div>
-          <form action = "event_subscript.php" method = "get">
-            <div class = "subscription">
-              <input type="hidden" name="id" value="7">
-              <input type="submit" value="申し込む" class = "button">
-              <!--<div class = "panel">
-                <p class = "panelLabel">応募終了</p>
-              </div>-->
-            </div>
-          </form>
-        </div>
-      </div>
-      <!-- 追加分ここまで -->
+        </li>
+      </ul>
     </div>
   </div>
-  <div class = "wrap">
-    <div class = "autoMargin">
-      <div class = "collectevent">
-        <p>
-          はこだてみらいプロジェクトではイベントの開催者を募集しています。<br>
-          開催希望の方は、下記フォームからご連絡お願いいたします。
-        </p>
-        <p class = "form_guide">
-          <a href = "contact.html" class = "linkText">
-            お問い合わせフォーム
-          </a>
-        </p>
-      </div>
-    </div>
+  <!-- event.htmlの直近のイベントと共通部ここまで -->
+  <div class = "heading-lineup">
+    <p class = "headingTitle">
+      今後のイベント
+    </p>
   </div>
-  <footer>
-    <div class = "foot">
-      <div class = "wrap">
-        <div class = "autoMargin">
-          <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
-          <div class ="footerLinks">
-            <!--<a href = "member.html" class="links">メンバー</a>-->
-            <a href = "notice.html" class="links">お知らせ</a>
-            <a href = "recruit.html" class="links">求人情報</a>
-            <!--<a href = "FAQ.html" class="links">よくあるご質問</a> -->
-            <a href = "relatedlinks.html" class="links">関連リンク</a>
-            <a href = "sitemap.html" class="links">サイトマップ</a>
-            <a href = "sitepolicy.html" class="links">サイトポリシー</a>
+  <!-- <div class = "monthSort">
+    <p>
+      今後のイベント
+    </p>
+    <ul>
+      <li class = "active">
+        10
+      </li>
+      <li>
+        <a href = "#" class = "linkText_">
+          11
+        </a>
+      </li>
+      <li>
+        <a href = "#" class = "linkText_">
+          12
+        </a>
+      </li>
+    </ul>
+  </div> -->
+  <!-- <div class = "archive">
+    <p>
+      今までのイベント
+    </p>
+    <ul>
+      <li class = "archive_year">
+          2016年
+      </li>
+      <li>
+        <a href = "#" class = "linkText_">
+          7
+        </a>
+      </li>
+      <li>
+          <a href = "#" class = "linkText_">
+          8
+        </a>
+      </li>
+      <li>
+        <a href = "#" class = "linkText_">
+          9
+        </a>
+      </li>
+    </ul>
+  </div> -->
+  <div class = "overlay"></div>
+</div>
+<div class="g_allArea g_allArea-bgcolor">
+  <div id = "all_eventmenu">
+    <!-- 以下新イベント追加分 -->
+    <div class = "eventmenu" id="6">
+      <img class = "event_pic only_pc" src = "images/sq_event6_FCH.jpg"  alt = "FabLabワークショップ">
+      <img class = "event_pic only_sp" src = "images/event6_FCH.jpg" alt = "FabLabワークショップ">
+      <div class = "event_textBox_wrap">
+        <div class = "event_textBox">
+          <div class = "event_title FCHcolor">
+            FabLabワークショップ
           </div>
-          <div class = "SNSbutton">
-            <a href = "https://www.facebook.com/hakodatemiraiproject/" target="_blank">
-              <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
-            </a>
+          <div class = "event_point">
+            <table>
+              <tr>
+                <th class = "event_point_cap">日時</th>
+                <td class = "event_point_contents">
+                  <div class="event_point_contents-text">
+                    10月29日(土) 10:00-15:00 ハロウィンキャンドル<br>10月30日(日) 10:00-15:00 ボトルキャップ
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">会場</th>
+                <td class = "event_point_contents">はこだてみらい館</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">参加費</th>
+                <td class = "event_point_contents">
+                  <div class="event_point_contents-text">
+                    無料
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">対象</th>
+                <td class = "event_point_contents">
+                  <div class="event_point_contents-text">
+                    小学生以上 ※保護者同伴可
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class = "event_detail-short">
+            はこだてみらい館のラボラトリーにFab Labがオープンします！3D プリンターを使ったモノづくりを体験しよう！
           </div>
         </div>
-      </div>
-      <div class = "copyright">
-        <p>@2016 Hakodate Mirai Project</p>
+        <form action = "event_subscript.php" method = "get">
+          <div class = "subscription">
+            <!-- <input type="hidden" name="id" value="6">
+            <input type="submit" value="申し込む" class = "button"> -->
+            <div class = "panel">
+              <p class = "panelLabel">※事前申込不要</p>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
-  </footer>
+    <div class = "eventmenu" id="7">
+      <img class = "event_pic only_pc" src = "images/sq_event7_FCH.jpg"  alt = "せかいをはかるワークショップ">
+      <img class = "event_pic only_sp" src = "images/event7_FCH.jpg" alt = "せかいをはかるワークショップ">
+      <div class = "event_textBox_wrap">
+        <div class = "event_textBox">
+          <div class = "event_title FCHcolor">
+            せかいをはかるワークショップ
+          </div>
+          <div class = "event_point">
+            <table>
+              <tr>
+                <th class = "event_point_cap">日時</th>
+                <td class = "event_point_contents">
+                  <div class="event_point_contents-text">
+                    10月29日(土) 30日(日)<br>
+                    10:30-12:30(1回目) 14:00-16:00(2回目)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">会場</th>
+                <td class = "event_point_contents">はこだてみらい館</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">参加費</th>
+                <td class = "event_point_contents">
+                  <div class="event_point_contents-text">
+                    無料
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">対象</th>
+                <td class = "event_point_contents">
+                  <div class="event_point_contents-text">
+                    小学生以上 ※保護者同伴可
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">定員</th>
+                <td class = "event_point_contents">
+                  <div class="event_point_contents-text">
+                    各回15名(合計30 名)
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class = "event_detail-short event_detail-overflow">
+            大きい、小さい。高い、低い。広い、狭い。「じぶんものさし」を作って、みらい館をはかってみよう！メディアウォールはどのくらいの大きさだろう？<br>
+            ※参加をご希望の方は、申し込みフォームの「その他ご質問等」に、ご希望の参加日時を明記してください。
+            <div class = "eventDetail_picBox">
+              <img class = "eventDetail_pic" src = "images/sq_event7_FCH1.jpg">
+              <img class = "eventDetail_pic" src = "images/sq_event7_FCH2.jpg">
+              <img class = "eventDetail_pic" src = "images/sq_event7_FCH3.jpg">
+            </div>
+          </div>
+        </div>
+        <form action = "event_subscript.php" method = "get">
+          <div class = "subscription">
+            <input type="hidden" name="id" value="7">
+            <input type="submit" value="申し込む" class = "button">
+            <!--<div class = "panel">
+              <p class = "panelLabel">応募終了</p>
+            </div>-->
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 追加分ここまで -->
+  </div>
   <div class="overlay"></div>
 </div>
-<div id="drawer">
+<div class = "g_allArea">
+  <div class = "collectevent">
+    <p>
+      はこだてみらいプロジェクトではイベントの開催者を募集しています。<br>
+      開催希望の方は、下記フォームからご連絡お願いいたします。
+    </p>
+    <p class = "form_guide">
+      <a href = "contact.html" class = "linkText">
+        お問い合わせフォーム
+      </a>
+    </p>
+  </div>
+  <div class="overlay"></div>
+</div>
+<!-- 共通部分ここから -->
+<footer>
+  <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
+  <div class ="footerLinks">
+    <!--<a href = "member.html" class="links">メンバー</a>-->
+    <a href = "notice.html" class="links">お知らせ</a>
+    <a href = "recruit.html" class="links">求人情報</a>
+    <!--<a href = "FAQ.html" class="links">よくあるご質問</a> -->
+    <a href = "relatedlinks.html" class="links">関連リンク</a>
+    <a href = "sitemap.html" class="links">サイトマップ</a>
+    <a href = "sitepolicy.html" class="links">サイトポリシー</a>
+  </div>
+  <div class = "SNSbutton">
+    <a href = "https://www.facebook.com/hakodatemiraiproject/" target="_blank">
+      <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
+    </a>
+  </div>
+  <div class = "copyright">
+    <p>@2016 Hakodate Mirai Project</p>
+  </div>
+  <div class = "overlay"></div>
+</footer>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
+<div class = "g_drawer">
   <!-- ドロワー部分 -->
   <div class = "sp_language">
-    <p><a href = "#">English</a></p>
+    <p><a href = "#">English</p></a>
   </div>
   <div class = "navBox">
     <ul class = "gNav_sp">
@@ -838,3 +363,4 @@
     </ul>
   </div>
 </div>
+<!-- 共通部分ここまで -->

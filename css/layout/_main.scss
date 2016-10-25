@@ -1,38 +1,35 @@
 @charset "UTF-8";
 
-.wrap{
-  margin: 0 auto;
-  //width: calc(100% * (1000 / 1080));
-  @include clearfix;
-  @media #{$normal} {
-    max-width: 1440px;
-    min-width: 1080px;
-  }
-  @media #{$small} {
-    width: calc(100% * (728 / 768)); //$small時は画面幅768pxの時に728pxの比率をキープ
-  }
-}
+// .wrap{
+//   margin: 0 auto;
+//   //width: calc(100% * (1000 / 1080));
+//   @include clearfix;
+//   @media #{$normal} {
+//     max-width: 1440px;
+//     min-width: 1080px;
+//   }
+//   @media #{$small} {
+//     width: calc(100% * (728 / 768)); //$small時は画面幅768pxの時に728pxの比率をキープ
+//   }
+// }
 
-.autoMargin{
-  @media #{$normal} {
-    margin: 0 calc(100% * (40 / 1080)) 0 calc(100% * (40 / 1080)); //$normal時は画面幅1080pxの時に40pxの比率をキープ
-  }
-}
 
-#wrapper{
-  #header{
-    @media #{$normal} {
-      display: none;
-    }
-  }
+// .autoMargin{
+//   @media #{$normal} {
+//     margin: 0 calc(100% * (40 / 1080)) 0 calc(100% * (40 / 1080)); //$normal時は画面幅1080pxの時に40pxの比率をキープ
+//   }
+// }
+
+//wrapとautoMarginは使用禁止
+.g_allArea{
   #header_sp{
-    @media #{$normal} {
-      display: none;
-    }
+    @include only_sp; //@mediaでdisplay:noneするとき用にmixin作ってるので、ぜひ使ってください。
     @media #{$small} {
-      background: $g__fontColor;
+      border-top: 40px solid $g__fontColor;
+      height: 12px;
+      /*background: $g__fontColor;
       font-size: 40px;
-      margin-bottom: 12px;
+      margin-bottom: 12px;*/
     }
   }
 }
@@ -47,35 +44,40 @@
 }
 
 .index_openExplain{
-  @media #{$small} {
-    display: none;
-  }
+  @include only_pc;
 }
 
 .index_openExplain_sp{
-  @media #{$normal} {
-    display: none;
-  }
+  @include only_sp;
 }
 
 .latestEvent{
+  //wrapの内容とautoMarginの内容を追記
   margin-right: calc(-100% * (32 / 1000)); //画面幅1080xのwrapの幅1000pxと32pxの比率をキープ
+  @include clearfix;
+  @media #{$normal}{
+    margin: 0 calc(100% * (8 / 1080)) 40px calc(100% * (40 / 1080)); //$normal時は画面幅1080pxの時に40pxの比率をキープ
+  }
+  @media #{$small}{
+    width: calc(100% * (728 / 768)); //$small時は画面幅768pxの時に728pxの比率をキープ
+  }
 }
 
 .nav_TOP{
   height: 70px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto;
   @media #{$small} {
     display: none;
   }
 }
 
-.gHeader{
-  height: 81px;
-  @media #{$small} {
-    display: none;
-  }
-}
+// .gHeader{
+//   height: 81px;
+//   @media #{$small} {
+//     display: none;
+//   }
+// }
+//headerにまとめる
 
 .topcap{
   padding: 50px 0 40px 0;
@@ -84,59 +86,72 @@
   }
 }
 
-.future_entrance{
+.future_entrance,
+.kids_entrance{
   background-color: $boxcolor;
+  @include smallM;
+  @media #{$normal} {
+    margin-top: 50px;
+    width: calc(100% * (484 / 1080) - 2px); //画面幅1080xと484pxの比率をキープ - 左右borderの2px
+  }
+}
+
+.future_entrance{
   border: solid 1px $g__color-future;
-  float:left;
-  margin: -1px;
-  width: calc(100% * (484 / 1000)); //画面幅1080xのwrapの幅1000pxと484pxの比率をキープ
-  @include smallW;
-  @media #{$small} {
-    margin-bottom: 20px;
+  @media #{$normal} {
+    float: left;
+    margin-left: calc(100% * (40 / 1080)); //画面幅1080xと40pxの比率をキープ
   }
 }
 
 .kids_entrance{
-  background-color: $boxcolor;
   border: solid 1px $g__color-kids;
-  float: right;
-  margin: -1px;
-  width: calc(100% * (484 / 1000)); //画面幅1080xのwrapの幅1000pxと484pxの比率をキープ
-  @include smallW;
+  @media #{$normal} {
+    float: right;
+    margin-right: calc(100% * (40 / 1080)); //画面幅1080xと40pxの比率をキープ
+  }
   @media #{$small} {
-    margin-bottom: 20px;
+    margin-bottom: 20px; //smallMを導入したのでこれで十分かと思います。
+  }
+}
+
+.future_logoapp, .kids_logoapp{
+  color: white;
+  height: auto;
+  position: relative;
+  text-align: center;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
+  @include smallM;
+  @media #{$normal} {
+    width: calc(100% * 484 / 1080); //画面幅1080xと484pxの比率をキープ
+    margin-top: calc(100% * (32 / 1080)); //画面幅1080xと32pxの比率をキープ
+    margin-bottom: calc(100% * (32 / 1080)); //画面幅1080xと40pxの比率をキープ
   }
 }
 
 .future_logoapp{
   background-color: $g__color-future;
-  color: white;
-  float: left;
-  height: auto;
-  position: relative;
-  text-align: center;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
-  width: 48.4%;
-  margin-top: calc(100% * (32 / 1000)); //画面幅1080xのwrapの幅1000pxと32pxの比率をキープ
-  @include smallW;
+  @media #{$normal} {
+    float: left;
+    margin-left: calc(100% * (40 / 1080)); //画面幅1080xと40pxの比率をキープ
+  }
   @media #{$small} {
+    float: right;
+    margin-top: calc(100% * 20 / 768);
     margin-bottom: 20px;
   }
 }
 
 .kids_logoapp{
   background-color: $g__color-kids;
-  color: white;
-  float: right;
-  height: auto;
-  position: relative;
-  text-align: center;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, .16);
-  width: 48.4%;
-  margin-top: calc(100% * (32 / 1000)); //画面幅1080xのwrapの幅1000pxと32pxの比率をキープ
-  @include smallW;
+  @media #{$normal} {
+    float: right;
+    margin-right: calc(100% * (40 / 1080)); //画面幅1080xと40pxの比率をキープ
+  }
   @media #{$small} {
+    float: left;
     margin-top: 0;
+    //margin-left: calc(100% * (20 / 768)); //画面幅768xと20pxの比率をキープ
   }
 }
 
@@ -154,21 +169,18 @@
 
 footer{
   width: 100%;
-  margin-top: 60px;
-  .foot{
-    @media #{$normal} {
-      height: 96px;
-    }
-    width: 100%;
-    @include clearfix;
+  padding-top: 60px;
+  @media #{$normal} {
+    height: 96px;
+    min-width: 1080px;
   }
   .copyright{
     background: #9fa0a0;
     height: 24px;
+    width: 100%;
     @media #{$minimum} {
       width: 1080px;
     }
-    width: 100%;
   }
   @include clearfix;
 }
@@ -190,30 +202,24 @@ footer{
 
 .facility_explain{
   padding: 50px 0 20px 0;
-  @media #{$small} {
-    display: none;
-  }
+  @include only_pc;
 }
 
 .facility_detail{
-  @media #{$small} {
-    display: none;
-  }
+  @include only_pc;
 }
 
 .facility_explain_sp{
   padding: 16px 0 20px 0;
-  @media #{$normal} {
-    display: none;
-  }
+  @include only_sp;
+  @include smallM;
 }
 
 .facility_detail_sp{
-  padding: 16px 0 20px 0;
-  @media #{$normal} {
-    display: none;
-  }
-}
+  padding-top: 16px; //直下のheading（体験メニュー）のpadding-top:40pxとかちあって、余計なスペースが生まれていたので、padding-bottomを削りました。
+  @include only_sp;
+  @include smallM;
+} //かなりスッキリしたとは思いませんか？？（自画自賛
 
 .event_textBox_wrap, .event_pic,
 .exmenu_textBox_wrap, .exmenu_pic,
@@ -340,16 +346,15 @@ footer{
   @include clearfix;
 }
 
-.pageTitle_event{
-  //margin: 12px 0 0 0;
-  .titleText{
-    padding-left: 24px;
-  }
-}
-
 .map_container{
   position: relative;
   padding-top: 60vh;
+  @media #{$normal} {
+    margin-top: 50px;
+  }
+  @media #{$small} {
+    border-top: solid 40px #ffffff;
+  }
 }
 
 #map_canvas{
@@ -362,7 +367,7 @@ footer{
 
 .adress{
   @media #{$normal} {
-    width: 50%;
+    width: calc(100% * (1000 / 1080) / 2); //左右のマージンを引いてから2で割る
     float: left;
     .heading{
       >p{
@@ -370,17 +375,25 @@ footer{
       }
     }
   }
+  @media #{$small} {
+    width: calc(100% * (728 / 768)); //左右のマージン分小さく
+    margin: 0 calc(100% * (20 / 768)); //左右のマージン
+  }
 }
 
 .parking{
   @media #{$normal} {
-    width: 50%;
+    width: calc(100% * (1000 / 1080) / 2); //左右のマージンを引いてから2で割る
     float: left;
     .heading{
       >p{
         margin-bottom: 24px;
       }
     }
+  }
+  @media #{$small} {
+    width: calc(100% * (728 / 768)); //左右のマージン分小さく
+    margin: 0 calc(100% * (20 / 768)); //左右のマージン
   }
 }
 
@@ -397,7 +410,8 @@ footer{
 .accessProcess{
   width: 100%;
   img{
-    width: 100%;
+    width: calc(100% * (1000 / 1080)); //左右のマージン分小さく
+    margin: 0 calc(100% * (40 / 1080)); //左右のマージン
   }
   @media #{$normal} {
     float: left;
@@ -416,12 +430,15 @@ footer{
 }
 
 //↑加納↓高居
-
-.pageTitle{
-  margin-bottom: 50px;
+//pageTitleの命名を変えました。pageTitle_event → event_pageTitle, pageTitle → g_pageTitle
+.event_pageTitle, .g_pageTitle{ //機能の共通部分をまとめました。
   .titleText{
     padding-left: 24px;
   }
+}
+
+.g_pageTitle{ //両者の違いはこれのあるなしだけでした。
+  //margin-bottom: 50px; 要らない説濃厚です。最後まで開発して、問題が出なければまるっと削除してg_pageTitleに統一しましょう。
 }
 
 .archives{
@@ -438,9 +455,9 @@ footer{
 }
 
 .autoHeight{
-  min-height: calc(100vh - 93px - 115px - 273px); //画面表示高さ - ヘッダー - 見出し - フッター
+  min-height: calc(100vh - 93px - 115px - 273px + 50px); //画面表示高さ - ヘッダー - 見出し - フッター + formのpadding
   @media #{$small} {
-    min-height: calc(100vh - 52px - 115px - 389px); //画面表示高さ - ヘッダー - 見出し - フッター
+    min-height: calc(100vh - 52px - 115px - 389px + 50px); //画面表示高さ - ヘッダー - 見出し - フッター + formのpadding
   }
 } //減算したヘッダー・見出し・フッターの領域はmarginを含む
 /*
@@ -451,27 +468,45 @@ footer{
   }
 }
 */
-.p-layout{
-  @media #{$normal} {
-    position: relative;
-    width: 100%;
-  }
-}
+// .p-layout{
+//   @media #{$normal} {
+//     position: relative;
+//     width: 100%;
+//   }
+// }
 
-.p-centering{
+// .p-centering{
+//   @media #{$normal} {
+//     left: 50%;
+//     position: absolute;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//     text-align: left;
+//   }
+// }
+
+// .topMargin{
+//   @media #{$normal} {
+//     top: calc(50% - 50px);
+//   }
+// }
+//上3つを.recruite_textBoxにまとめた
+
+.recruite_textBox{
   @media #{$normal} {
     left: 50%;
     position: absolute;
-    top: 50%;
+    top: calc(50% - 50px);
     transform: translate(-50%, -50%);
     text-align: left;
+    padding-top: 50px;
   }
-}
-
-.topMargin{
-  @media #{$normal} {
-    top: calc(50% - 50px);
+  @media #{$small} {
+    width: calc(100% * (728 / 768));
   }
+  @include smallM;
+  padding-top: 40px; //前とは違うけどデザインカンプに基づいて
+  margin: 0 auto;
 }
 
 .p-margin{
@@ -479,14 +514,23 @@ footer{
 }
 
 .sponsor{
+  @media #{$normal} {
+    width: calc(100% * (1000 / 1080));
+    margin-left: calc(100% * (40 / 1080));
+  }
+  @media #{$small} {
+    width: calc(100% * (728 / 768));
+    margin-left: calc(100% * (20 / 768));
+  }
   .heading{
     margin-top: 0;
     width: 100%;
+    padding: 50px 0 24px 0;
     @media #{$small} {
-      padding: 0;
+      padding: 40px 0 27px 0; //デザインカンプの通りに、元のデザインから修正
     }
   }
-  p{
+  .company_about{
     margin-bottom: 40px;
   }
   .companyLinks{
@@ -506,11 +550,20 @@ footer{
   @media #{$normal} {
     //float: left;
     float: right;
-    width: 50%;
+    width: calc(100% * (1000 / 1080) / 2); //ウィンドウ幅1080pxの時に1000pxの比率の半分
+    margin-right: calc(100% * (40 / 1080)); //右にウィンドウ幅1080pxの時に40pxの比率のマージン
+  }
+  @media #{$small} {
+    width: calc(100% * (728 / 768)); //ウィンドウ幅768pxの時に728pxの比率をキープ
+    margin-left: calc(100% * (20 / 768)); //ウィンドウ幅768pxの時に20pxの比率をキープ
   }
   .heading{
     margin-top: 0;
-    padding-bottom: 24px;
+    padding: 50px 0 24px 0;
+    //.headingが左にpaddingをとっていたので.touristOfficeのheadingにpadding指定してます。
+    @media #{$small} {
+      margin: 0; //headingがtouristOfice内で、親要素がで左にはmarginを取っているのでここでは0
+    }
   }
 }
 
@@ -518,11 +571,19 @@ footer{
   @media #{$normal} {
     //float: right;
     float: left;
-    width: 50%;
+    width: calc(100% * (1000 / 1080) / 2); //ウィンドウ幅1080pxの時に1000pxの比率の半分
+    margin-left: calc(100% * (40 / 1080)); //左にウィンドウ幅1080pxの時に40pxの比率のマージン
+  }
+  @media #{$small} {
+    width: calc(100% * (728 / 768)); //ウィンドウ幅768pxの時に728pxの比率をキープ
+    margin-left: calc(100% * (20 / 768)); //ウィンドウ幅768pxの時に20pxの比率をキープ
   }
   .heading{
     margin-top: 0;
-    padding-bottom: 24px;
+    padding: 50px 0 24px 0; //.headingが左にpaddingをとっていたので.touristGuideのheadingにpadding指定してます。
+    @media #{$small} {
+      margin: 0; //headingがtouristOfice内で、親要素がで左にはmarginを取っているのでここでは0
+    }
   }
 }
 
@@ -539,9 +600,7 @@ footer{
 }
 
 .inputForm{
-  @media #{$small} {
-    display: none;
-  }
+  @include only_pc;
 }
 
 .inputBox, .inputBox_sub, .inputBox_conf, .inputBox_Econf{
@@ -564,9 +623,7 @@ footer{
 }
 
 .inputForm_sp{
-  @media #{$normal} {
-    display: none;
-  }
+  @include only_sp;
   .inputBox_sp, .inputBox_conf_sp, .inputBox_sp_b, .inputBox_conf_sp_b,{
     margin-bottom: 20px;
     input{
@@ -603,10 +660,9 @@ footer{
 
 .logoApp_exampleTable{
   float: right;
-  height: 1080px / 2;
-  margin-bottom: 20px;
-  width: 1080px / 2;
-  @include smallW;
+  // height: 1080px / 2;
+  // width: 1080px / 2;
+  // @include smallW;
   @media #{$small} {
     height: auto;
     margin-bottom: 0;

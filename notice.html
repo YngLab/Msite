@@ -8,58 +8,55 @@
 <link rel = "shortcut icon" href="images/common/hmp.ico">
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
-<div id="wrapper">
-  <div id = "header_sp">　</div>
-  <div id="header">
-    <div id="drawer-toggle">
-      <span class="top"></span>
-      <span class="middle"></span>
-      <span class="bottom"></span>
-    </div>
+<!-- pageTitleが存在するページの共通部分 -->
+<div class="g_allArea">
+  <div id = "header_sp"></div>
+  <div class="overlay"></div>
+</div>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
+<div class = "g_drawerToggle">
+  <span class="top"></span>
+  <span class="middle"></span>
+  <span class="bottom"></span>
+</div>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
+<header>
+  <div class = "pNav">
+    <a href = "http://hakodate-miraiproject.jp/" class="pNavli language">JP | EN</a>
+    <a href = "contact.html" class="pNavli rightpNav">お問い合わせ</a>
+    <a href = "access.html" class="pNavli rightpNav">アクセス</a>
   </div>
-  <header>
-    <div class = "gHeader">
-      <div class = "wrap">
-        <div class = "autoMargin">
-          <div class = "pNav">
-            <a href = "http://hakodate-miraiproject.jp/" class="pNavli language">JP | EN</a>
-            <a href = "contact.html" class="pNavli rightpNav">お問い合わせ</a>
-            <a href = "access.html" class="pNavli rightpNav">アクセス</a>
-          </div>
-          <div class = "gNav">
-            <li class = "gNavli">
-              <a href="index.html">ホーム</a>
-            </li>
-            <li class = "gNavli">
-              <a href="concept.html">コンセプト</a>
-            </li>
-            <li class = "gNavli">
-              <a href="event.html">イベント</a>
-            </li>
-            <li class = "gNavli">
-              <a href="FCH.html">はこだてみらい館</a>
-            </li>
-            <li class = "gNavli">
-              <a href="KPH.html">はこだてキッズプラザ</a>
-            </li>
-            <li class = "gNavli">
-              <a href="HMP.html">みらいプロジェクト</a>
-            </li>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class = "pageTitle">
-    <div class = "wrap">
-      <div class = "autoMargin">
-        <p class = "titleText">お知らせ</p>
-      </div>
-    </div>
+  <div class = "gNav">
+    <li class = "gNavli">
+      <a href="index.html">ホーム</a>
+    </li>
+    <li class = "gNavli">
+      <a href="concept.html">コンセプト</a>
+    </li>
+    <li class = "gNavli">
+      <a href="event.html">イベント</a>
+    </li>
+    <li class = "gNavli">
+      <a href="FCH.html">はこだてみらい館</a>
+    </li>
+    <li class = "gNavli">
+      <a href="KPH.html">はこだてキッズプラザ</a>
+    </li>
+    <li class = "gNavli">
+      <a href="HMP.html">みらいプロジェクト</a>
+    </li>
   </div>
-  <div class = "wrap">
-    <div class = "autoHeight autoMargin">
-    <!-- 以下body -->
+</header>
+<!-- 共通部分ここまで -->
+<div class = "g_allArea g_allArea-fullWidth">
+  <div class="event_pageTitle">
+    <p class = "titleText">お知らせ</p>
+  </div>
+  <div class = "overlay"></div>
+</div>
+    <!-- <div class = "autoHeight autoMargin"> -->
     <!--
       <div class = "archives">
         <div class = "archiveLayout">
@@ -69,55 +66,51 @@
         </div>
       </div>
       -->
-      <div class = "menu">
-        <div class = "Panel1" class = "on-off">
-          <div class = "element">
-            <label for = "Panel1">
-              <div class = "labelArea">
-                <p class = "lineSpace">2016年10月3日（月）</p>
-                <h2>サイトリニューアルのお知らせ</h2>
-              </div>
-              <img src = "images/common/arrow_down.png" class = "btn">
-            </label>
-            <div class ="menu_text">
-              はこだてみらいプロジェクトのウェブサイトをリニューアルしました。
-            </div>
+<div class = "g_allArea g_allArea-shortPage">
+  <div class = "menu">
+    <div class = "Panel1" class = "on-off">
+      <div class = "element">
+        <label for = "Panel1">
+          <div class = "labelArea">
+            <p class = "lineSpace">2016年10月3日（月）</p>
+            <h2>サイトリニューアルのお知らせ</h2>
           </div>
+          <img src = "images/common/arrow_down.png" class = "btn">
+        </label>
+        <div class ="menu_text">
+          はこだてみらいプロジェクトのウェブサイトをリニューアルしました。
         </div>
-        <div class = "borderLine"></div>
       </div>
-      <!-- ここまで -->
     </div>
+    <div class = "borderLine"></div>
   </div>
-  <footer>
-    <div class = "foot">
-      <div class = "wrap">
-        <div class = "autoMargin">
-          <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
-          <div class ="footerLinks">
-            <!--<a href = "member.html" class="links">メンバー</a>-->
-            <a href = "notice.html" class="links">お知らせ</a>
-            <a href = "recruit.html" class="links">求人情報</a>
-            <!--<a href = "FAQ.html" class="links">よくあるご質問</a> -->
-            <a href = "relatedlinks.html" class="links">関連リンク</a>
-            <a href = "sitemap.html" class="links">サイトマップ</a>
-            <a href = "sitepolicy.html" class="links">サイトポリシー</a>
-          </div>
-          <div class = "SNSbutton">
-            <a href = "https://www.facebook.com/hakodatemiraiproject/" target="_blank">
-              <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class = "copyright">
-        <p>@2016 Hakodate Mirai Project</p>
-      </div>
-    </div>
-  </footer>
-  <div class="overlay"></div>
+  <div class = "overlay"></div>
 </div>
-<div id="drawer">
+<!-- 共通部分ここから -->
+<footer>
+  <img src = "images/common/pagetop.png" class = "pagetop move-page-top" alt = "ページトップに戻る">
+  <div class ="footerLinks">
+    <!--<a href = "member.html" class="links">メンバー</a>-->
+    <a href = "notice.html" class="links">お知らせ</a>
+    <a href = "recruit.html" class="links">求人情報</a>
+    <!--<a href = "FAQ.html" class="links">よくあるご質問</a> -->
+    <a href = "relatedlinks.html" class="links">関連リンク</a>
+    <a href = "sitemap.html" class="links">サイトマップ</a>
+    <a href = "sitepolicy.html" class="links">サイトポリシー</a>
+  </div>
+  <div class = "SNSbutton">
+    <a href = "https://www.facebook.com/hakodatemiraiproject/" target="_blank">
+      <img src = "images/common/fb.png" alt="公式Facebook" class = "SNS">
+    </a>
+  </div>
+  <div class = "copyright">
+    <p>@2016 Hakodate Mirai Project</p>
+  </div>
+  <div class = "overlay"></div>
+</footer>
+<!-- 共通部分ここまで -->
+<!-- 共通部分ここから -->
+<div class = "g_drawer">
   <!-- ドロワー部分 -->
   <div class = "sp_language">
     <p><a href = "#">English</p></a>
@@ -137,3 +130,4 @@
     </ul>
   </div>
 </div>
+<!-- 共通部分ここまで -->

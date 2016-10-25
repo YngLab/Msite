@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 $small: "screen and (max-width: 768px)";
 $normal: "screen and (min-width: 769px)";
 $maximum: "screen and (min-width: 1441px)";
@@ -39,7 +41,14 @@ $accordion__border: #dddddd;
 
 @mixin smallW{
   @media #{$small} {
-    width: 100%;
+    width: 100%; //逆にこっちじゃないと困ります。
+  }
+}
+
+@mixin smallM{ //増やしました。こいつを適用させるために他のコードめっちゃ変わってます。
+  @media #{$small} {
+    margin-left: calc(100% * 20 / 768);
+    margin-right: calc(100% * 20 / 768);
   }
 }
 

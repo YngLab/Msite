@@ -6,14 +6,21 @@ $(function(){
   if(w_size > 768 && w_size <= 1080){
     w_size = 1080;
   }
-  latestBox_size =  w_size * 226 / 1080; //画面幅1080pxの時に226pxの比率をキープ
+  latestBox_size =  w_size * 226 / 1080 - 2; //画面幅1080pxの時に226pxの比率から四方のborderを引いている
   if(w_size <= 768){
-    latestBox_size =  w_size * 728 / 768; //画面幅768pxの時に728pxの比率をキープ
+    latestBox_size =  w_size * 728 / 768 - 2; //画面幅768pxの時に728pxの比率から四方のborderを引いている
   }
   institution_size = $(".future_contents").width() * .5;
   $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
   $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
   $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
+  //pcビューの時latestEventを一覧表示に
+  if(w_size > 768){
+    //直近のイベントをスライドショーから一覧表示にするための処理
+    $(".latestEvent .flexslider .slides").unwrap();
+    $(".latestEvent .slides li").unwrap();
+    $(".latestEvent li a").unwrap();
+  }
   $(window).resize(function () {
     w_size = $(window).width();
     if(w_size >= 1440){
@@ -22,14 +29,20 @@ $(function(){
     if(w_size > 768 && w_size <= 1080){
       w_size = 1080;
     }
-    latestBox_size =  w_size * 226 / 1080; //画面幅1080pxの時に226pxの比率をキープ
+    latestBox_size =  w_size * 226 / 1080 - 2; //画面幅1080pxの時に226pxの比率から四方のborderを引いている
     if(w_size <= 768){
-      latestBox_size =  w_size * 728 / 768; //画面幅768pxの時に728pxの比率をキープ
+      latestBox_size =  w_size * 728 / 768 -2; //画面幅768pxの時に728pxの比率から四方のborderを引いている
     }
     institution_size = $(".future_contents").width() * .5;
     $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
     $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
     $(".future_contents, .future_informaion, .kids_contents, .kids_informaion").css("height", institution_size + "px");
+      //pcビューの時latestEventを一覧表示に
+    if(w_size > 768){
+      $(".latestEvent .flexslider .slides").unwrap();
+      $(".latestEvent .slides li").unwrap();
+      $(".latestEvent li a").unwrap();
+    }
   });
 
   // スクロールしたら発動
@@ -72,10 +85,12 @@ $(function(){
         $(this).css({visibility:"visible"});
     }
   });
+
   //ページトップに戻るボタン
   $(".move-page-top").click(function(){
     $("html, body").animate({scrollTop:0},"slow");
   });
+
   //アコーディオンの中身の縦幅を取得して開く長さを指定
   $(".Panel1").on('click',function(){
     $(".Panel1 .menu_text").toggleClass("active").slideToggle(400);
@@ -182,28 +197,26 @@ $(function(){
     $(nowModalSyncer).css({"left": ((w - cw)/2) + "px", "top": 5 + "%"});
   }
 
-  var $content = $('#wrapper'),
-        $drawer = $('#drawer'),
-        $button = $('#drawer-toggle'),
-        isOpen = false;
+  var $content = $('.g_allArea, footer'),
+      $drawer = $('.g_drawer'),
+      $button = $('.g_drawerToggle'),
+      isOpen = false;
     
   //ボタンをタップ、クリックした時
   $button.on('touchstart click', function () {
     if(isOpen) {
       drawerClose();
-      $drawer.removeClass('open');
-      $content.removeClass('open');
       isOpen = false;
     } else {
       $drawer.addClass('open');
       $content.addClass('open');
+      $button.addClass('open');
       current_scrollY = $( window ).scrollTop(); 
       $("html, body").css({
         position: 'fixed',
         width: '100%',
         top: -1 * current_scrollY
       });
-      $("#wrapper.open #drawer-toggle").css("top", current_scrollY);
       isOpen = true;
     }
     return false; //親要素へのイベント伝播、aタグのURLクリックによる画面遷移を防ぐ
@@ -211,9 +224,9 @@ $(function(){
 
   //コンテンツ部分をタップ、クリックした時
   $content.on('touchstart click', function (e) {
-    e.stopPropagation(); //イベント伝播のみ阻止
     if(isOpen) {
       drawerClose();
+      e.preventDefault();
       isOpen = false;
     }
   });
@@ -221,7 +234,7 @@ $(function(){
   function drawerClose(){
     $drawer.removeClass('open');
     $content.removeClass('open');
-    $("#wrapper #drawer-toggle").css("top", 0);
+    $button.removeClass('open');
     $("html, body").removeAttr("style");
     $("html, body").prop({scrollTop: current_scrollY});
   }
