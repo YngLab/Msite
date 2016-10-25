@@ -1521,7 +1521,7 @@ p.company_about{//別部分がコーディング規約無視しているため�
 }
 
 /* オーバーレイ表示をするためのCSS */
-.open .overlay {
+.open .overlay { //g_allAreaを閉じる直前にoverlayのdivを記述
   position: absolute;
   top: 0;
   left: 0;

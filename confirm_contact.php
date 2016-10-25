@@ -68,7 +68,6 @@ $_SESSION = $_POST;
 </div>
 <!-- 共通部分ここまで -->
 <div class = "g_allArea g_allArea-shortPage">
-  <!-- inputFormが色々な場所あったのでformのclassに統一しました -->
   <form class = "inputForm form" action = "send_contact.php" method = "post">
     <div class = "radio">
       <input type = "radio" name = "radio" id = "fch" value = "fch" readonly <?php if($_POST['radio'] == fch)echo "checked"; ?>>
