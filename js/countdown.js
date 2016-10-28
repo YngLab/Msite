@@ -1,3 +1,7 @@
+/*
+ * auther: sKawashima
+ * 引数にイベントの日にちを入れる（月越しは未対応）
+ */
 function countdown() {
   today = new Date().getDate();
   for (var i = 0; i < arguments.length; i++) {//複数日程指定時
