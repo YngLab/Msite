@@ -1,3 +1,6 @@
-function countdown(x) {
-  document.write(x - new Date().getDate());
+function countdown(eventDate) {
+  today = new Date().getDate();
+  if(eventDate > today){
+    document.write(eventDate - today);
+  }
 }
