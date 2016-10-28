@@ -12,6 +12,7 @@
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src = "js/myscript.js"></script>
 <script src="js/jquery.flexslider.js"></script>
+<script src="js/countdown.js"></script>
 <script charset="utf-8">
   $(window).load(function() {
     $(".flexslider").flexslider();
@@ -73,7 +74,7 @@
             <div class = "latestBox_future">
               <div class = "remaindays_future">
                 <div class = "caption">
-                  あと<script>document.write(29 - new Date().getDate());</script>日
+                  あと<script>countdown(29);</script>日
                 </div>
               </div>
               <!-- <div class = "latestBox_img"> -->
