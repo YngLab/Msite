@@ -1,6 +1,7 @@
 /*
  * auther: sKawashima
- * 引数にイベントの日にちを入れる（月越しは未対応）
+ * 引数はyyyymmddで入力
+ * 例）20170101
  */
 function countdown() {
   for (var i = 0; i < arguments.length; i++) {//複数日程指定時
