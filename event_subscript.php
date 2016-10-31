@@ -203,7 +203,7 @@ if(!$_GET){
     <!-- 電話番号 -->
     <div class = "inputBox_sp">
       <p>電話番号</p>
-      <input type = "tel" name = "email" maxlength = "255" placeholder="0123-45-6789 or 090-XXXX-XXXX（必須）" required>
+      <input type = "tel" name = "tel" maxlength = "255" placeholder="0123-45-6789 or 090-XXXX-XXXX（必須）" required>
     </div>
     <!-- ここまで -->
     <div class = "inputBox_sp">
