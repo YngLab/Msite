@@ -57,6 +57,18 @@ if($_SESSION['id'] == 0){$date = '
 }else if($_SESSION['id'] == 7){$date = '
 日時：10月29日(土) 30日(日)10:30-12:30(1回目) 14:00-16:00(2回目)
 ';
+}else if($_SESSION['id'] == 8){
+  if($_SESSION['date'] == 1){$date = '
+日時：11月12日(土) 10:30-12:30(1回目)
+';}else if($_SESSION['date'] == 2){$date = '
+日時：11月12日(土) 14:00-16:00(2回目)
+';}
+}else if($_SESSION['id'] == 10){
+  if($_SESSION['date'] == 1){$date = '
+日時：11月27日(日) 10:30-12:30(1回目)
+';}else if($_SESSION['date'] == 2){$date = '
+日時：11月27日(日) 14:00-16:00(2回目)
+';}
 }
 
 $return =<<<HTML
