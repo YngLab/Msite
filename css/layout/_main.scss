@@ -631,6 +631,11 @@ footer{
       height: 36px;
       width: 100%;
     }
+    select{
+      border: 0;
+      outline: 1px solid #efefef;
+      outline-offset: -1px;
+    }
     p{
       margin-bottom: 13px;
     }

@@ -847,6 +847,11 @@ footer:after {
   height: 36px;
   width: 100%;
 }
+.inputForm_sp .inputBox_sp select, .inputForm_sp .inputBox_conf_sp select, .inputForm_sp .inputBox_sp_b select, .inputForm_sp .inputBox_conf_sp_b select {
+  border: 0;
+  outline: 1px solid #efefef;
+  outline-offset: -1px;
+}
 .inputForm_sp .inputBox_sp p, .inputForm_sp .inputBox_conf_sp p, .inputForm_sp .inputBox_sp_b p, .inputForm_sp .inputBox_conf_sp_b p {
   margin-bottom: 13px;
 }
