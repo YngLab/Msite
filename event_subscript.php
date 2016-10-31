@@ -74,6 +74,7 @@ if(!$_GET){
     }else if($_GET['id'] == 5){echo '"images/sq_event4_FCH.jpg" alt = "親子ワークショップ「光を感じよう！」"';
     }else if($_GET['id'] == 6){echo '"images/sq_event6_FCH.jpg" alt = "FabLabワークショップ"';
     }else if($_GET['id'] == 7){echo '"images/sq_event7_FCH.jpg" alt = "せかいをはかるワークショップ"';
+    }else if($_GET['id'] == 8){echo '"images/event/sq_event8_FCH.gif" alt = "おもしろ写真deアニメーション"';
     }
     ?>>
     <p class = "FCHcolor eventabout_title">
@@ -85,6 +86,7 @@ if(!$_GET){
     }else if($_GET['id'] == 5){echo '親子ワークショップ「光を感じよう！~見える？見えない？光と色~」';
     }else if($_GET['id'] == 6){echo 'FabLabワークショップ';
     }else if($_GET['id'] == 7){echo 'せかいをはかるワークショップ';
+    }else if($_GET['id'] == 8){echo 'おもしろ写真deアニメーション';
     }
     ?></p>
     <div class = "event_point">
@@ -100,6 +102,7 @@ if(!$_GET){
             }else if($_GET['id'] == 5){echo '10月23日(日) 10:30-12:30(1回目)14:00-16:00(2回目)';
             }else if($_GET['id'] == 6){echo '10月29日(土) 10:00-15:00 ハロウィンキャンドル<br>10月30日(日) 10:00-15:00 ボトルキャップ';
             }else if($_GET['id'] == 7){echo '10月29日(土) 30日(日)<br>10:30-12:30(1回目) 14:00-16:00(2回目)';
+            }else if($_GET['id'] == 8){echo '11月12日(土)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
             }
             ?></td>
         </tr>
@@ -114,6 +117,7 @@ if(!$_GET){
             }else if($_GET['id'] == 5){echo 'はこだてみらい館';
             }else if($_GET['id'] == 6){echo 'はこだてみらい館';
             }else if($_GET['id'] == 7){echo 'はこだてみらい館';
+            }else if($_GET['id'] == 8){echo 'はこだてみらい館';
             }
             ?>
           </td>
@@ -121,14 +125,8 @@ if(!$_GET){
         <tr>
           <th class = "event_point_cap">参加費</th>
           <td class = "event_point_contents">
-            <?php if($_GET['id'] == 0){echo '無料';
-            }else if($_GET['id'] == 1){echo '無料';
-            }else if($_GET['id'] == 2){echo '無料';
-            }else if($_GET['id'] == 3){echo '無料';
-            }else if($_GET['id'] == 4){echo '無料';
-            }else if($_GET['id'] == 5){echo '300円(別途入場料がかかります)';
-            }else if($_GET['id'] == 6){echo '無料';
-            }else if($_GET['id'] == 7){echo '無料';
+            <?php if($_GET['id'] == 5){echo '300円(別途入場料がかかります)';//無料のとき以外は料金をidと追記
+            }else{echo '無料';//
             }
             ?>
           </td>
@@ -144,6 +142,7 @@ if(!$_GET){
             }else if($_GET['id'] == 5){echo '小学生～中学生 ※保護者同伴必須';
             }else if($_GET['id'] == 6){echo '小学生以上 ※保護者同伴必須';
             }else if($_GET['id'] == 7){echo '小学生以上 ※保護者同伴必須';
+            }else if($_GET['id'] == 8){echo '小学生以上 ※保護者同伴も可';
             }
             ?>
           </td>
