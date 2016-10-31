@@ -13,6 +13,8 @@ if($_SESSION['id'] == "0"){ $about = "はこだてみらい館 先行体験会";
 }else if($_SESSION['id'] == "5"){ $about = "親子ワークショップ「光を感じよう！~見える？見えない？光と色~」";
 }else if($_SESSION['id'] == "6"){ $about = "FabLabワークショップ";
 }else if($_SESSION['id'] == "7"){ $about = "せかいをはかるワークショップ";
+}else if($_SESSION['id'] == "8"){ $about = "おもしろ写真deアニメーション";
+}else if($_SESSION['id'] == "10"){ $about = "「空気を感じよう！」〜大気圧ってスゴい〜";
 }
 
 if(isset($_SESSION['old'])){//年齢入力があればメールに入れる
