@@ -157,27 +157,25 @@ if(!$_GET){
       <tr>
         <th>お名前</th>
         <td>
-          <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎（必須）">
+          <input type="text" name = "name" maxlength = "255" placeholder = "未来太郎（必須）">
         </td>
       </tr>
-       <!-- 電話番号 -->
       <tr>
         <th>電話番号</th>
         <td>
-          <input type = "tel" name ="tel" maxlength = "255" placeholder="0123-45-6789 or 090-XXXX-XXXX（必須）" required>
+          <input type = "tel" name = "tel" maxlength = "255" placeholder="0123-45-6789 or 090-XXXX-XXXX（必須）" required>
         </td>
       </tr>
-      <!-- ここまで -->
       <tr>
         <th>メールアドレス</th>
         <td>
-          <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com（必須）">
+          <input type = "email" name = "email" maxlength = "255" placeholder="miraiproject@sample.com（必須）">
         </td>
       </tr>
       <tr>
         <th>参加者の年齢</th>
         <td>
-          <input type = "text" name ="old" maxlength = "255" placeholder="10歳（必須）">
+          <input type = "text" name = "old" maxlength = "255" placeholder="10歳（必須）">
         </td>
       </tr>
       <tr>
@@ -200,17 +198,21 @@ if(!$_GET){
   <form class = "inputForm_sp form" action = "confirm_event.php" method = "post">
     <div class = "inputBox_sp">
       <p>お名前</p>
-      <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎（必須）">
+      <input type="text" name = "name" maxlength = "255" placeholder = "未来太郎（必須）">
     </div>
     <!-- 電話番号 -->
     <div class = "inputBox_sp">
       <p>電話番号</p>
-      <input type = "tel" name ="email" maxlength = "255" placeholder="0123-45-6789 or 090-XXXX-XXXX（必須）" required>
+      <input type = "tel" name = "email" maxlength = "255" placeholder="0123-45-6789 or 090-XXXX-XXXX（必須）" required>
     </div>
     <!-- ここまで -->
     <div class = "inputBox_sp">
       <p>メールアドレス</p>
-      <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com（必須）">
+      <input type = "email" name = "email" maxlength = "255" placeholder="miraiproject@sample.com（必須）">
+    </div>
+    <div class = "inputBox_sp">
+      <p>参加者の年齢</p>
+      <input type = "text" name = "old" maxlength = "255" placeholder="10歳">
     </div>
     <div class = "inputBox_sp_b">
       <p>その他ご質問等</p>

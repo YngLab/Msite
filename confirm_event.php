@@ -212,15 +212,17 @@ $_SESSION = $_POST;
       <p>お名前</p>
       <input type="text" name ="name" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['name']);?>>
     </div>
-    <!-- 電話番号 -->
-    <div class = "inputBox_sp">
+    <div class = "inputBox_conf_sp">
       <p>電話番号</p>
-      <input type = "tel" name ="email" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['tel']);?>>
+      <input type = "tel" name ="tel" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['tel']);?>>
     </div>
-    <!-- ここまで -->
     <div class = "inputBox_conf_sp">
       <p>メールアドレス</p>
       <input type = "email" name ="email" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['email']);?>>
+    </div>
+    <div class = "inputBox_conf_sp">
+      <p>参加者の年齢</p>
+      <input type = "text" name = "old" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['old']);?>>
     </div>
     <div class = "inputBox_conf_sp_b">
       <p>その他ご質問等</p>
