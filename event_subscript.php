@@ -179,7 +179,7 @@ if(!$_GET){
         </td>
       </tr>
       <?php
-      if($_GET['id'] == 7){
+      if($_GET['id'] == 0){
         echo '
           <tr>
             <th>参加日時</th>
@@ -232,7 +232,7 @@ if(!$_GET){
       <input type = "text" name = "old" maxlength = "255" placeholder="10歳">
     </div>
     <?php
-      if($_GET['id'] == 7){
+      if($_GET['id'] == 0){
         echo '
         <div class = "inputBox_sp">
           <p>参加日時</p>

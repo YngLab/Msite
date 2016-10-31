@@ -186,7 +186,7 @@ $_SESSION = $_POST;
         </td>
       </tr>
       <?php
-      if($_POST['id'] == 7){
+      if($_POST['id'] == 0){
         echo '
           <tr>
             <th>参加日時</th>
@@ -242,7 +242,7 @@ $_SESSION = $_POST;
       <input type = "text" name = "old" maxlength = "255" readonly value=<?php echo htmlspecialchars($_POST['old']);?>>
     </div>
     <?php
-      if($_POST['id'] == 7){
+      if($_POST['id'] == 0){
         echo '
         <div class = "inputBox_sp">
           <p>参加日時</p>
