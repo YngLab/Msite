@@ -178,6 +178,23 @@ if(!$_GET){
           <input type = "text" name = "old" maxlength = "255" placeholder="10歳（必須）">
         </td>
       </tr>
+      <?php
+      if($_GET['id'] == 0){
+        echo '
+          <tr>
+            <th>参加日時</th>
+            <td>
+              <select name="date" placeholder="日時を選択してください。">
+                <option value="161031a">10月31日（月） 13:00-14:00</option>
+                <option value="161031b">10月31日（月） 15:00-14:00</option>
+                <option value="161032a">10月32日（虚） 13:00-14:00</option>
+                <option value="161032b">10月32日（虚） 15:00-14:00</option>
+              </select>
+            </td>
+          </tr>
+        ';
+      }
+      ?>
       <tr>
         <th class = "textareaLabel">その他ご質問等</th>
         <td>
@@ -214,6 +231,20 @@ if(!$_GET){
       <p>参加者の年齢</p>
       <input type = "text" name = "old" maxlength = "255" placeholder="10歳">
     </div>
+    <?php
+      if($_GET['id'] == 0){
+        echo '
+        <div class = "inputBox_sp">
+          <p>参加日時</p>
+            <select name="date" placeholder="日時を選択してください。">
+              <option value="161031a">10月31日（月） 13:00-14:00</option>
+              <option value="161031b">10月31日（月） 15:00-14:00</option>
+              <option value="161032a">10月32日（虚） 13:00-14:00</option>
+              <option value="161032b">10月32日（虚） 15:00-14:00</option>
+            </select>
+        </div>';
+      }
+    ?>
     <div class = "inputBox_sp_b">
       <p>その他ご質問等</p>
       <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
