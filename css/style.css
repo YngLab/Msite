@@ -851,6 +851,7 @@ footer:after {
   border: 0;
   outline: 1px solid #efefef;
   outline-offset: -1px;
+  font-size: .9em;
 }
 .inputForm_sp .inputBox_sp p, .inputForm_sp .inputBox_conf_sp p, .inputForm_sp .inputBox_sp_b p, .inputForm_sp .inputBox_conf_sp_b p {
   margin-bottom: 13px;
@@ -2832,6 +2833,7 @@ p.company_about {
   border: 0;
   outline: 1px solid #efefef;
   outline-offset: -1px;
+  font-size: 100%;
 }
 .inputForm textarea {
   border: none;
