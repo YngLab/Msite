@@ -1653,7 +1653,7 @@ footer .footerLinks .links {
   footer .footerLinks .links {
     color: #727171;
     width: 100%;
-    font-size: 12px;
+    font-size: 13px;
     padding: 12px 0 12px 0;
     margin: 0 auto;
     display: block;
@@ -2038,7 +2038,6 @@ footer.open {
   width: calc(100% - 450px);
 }
 .event_textBox .event_detail, .event_textBox .event_detail-short {
-  font-size: 14px;
   color: #9fa0a0;
   font-weight: 200;
   line-height: 1.75em;
@@ -2476,9 +2475,9 @@ footer.open {
   .parking {
     margin-left: calc(100% * (40 / 1080));
   }
-}
-.parking .lineSpace {
-  font-size: 14px;
+  .parking .lineSpace {
+    font-size: 14px;
+  }
 }
 
 .movie_wrap {
@@ -2515,7 +2514,6 @@ footer.open {
 
 p.company_about {
   margin-left: 0;
-  font-size: 14px;
   line-height: 1.75;
 }
 
@@ -2900,6 +2898,11 @@ p.company_about {
 }
 .inputForm_sp .inputBox_sp p, .inputForm_sp .inputBox_conf_sp p, .inputForm_sp .inputBox_sp_b p, .inputForm_sp .inputBox_conf_sp_b p {
   font-size: 13px;
+}
+@media screen and (max-width: 768px) {
+  .inputForm_sp .inputBox_sp p, .inputForm_sp .inputBox_conf_sp p, .inputForm_sp .inputBox_sp_b p, .inputForm_sp .inputBox_conf_sp_b p {
+    font-size: 15px;
+  }
 }
 .inputForm_sp .inputBox_sp textarea, .inputForm_sp .inputBox_conf_sp textarea, .inputForm_sp .inputBox_sp_b textarea, .inputForm_sp .inputBox_conf_sp_b textarea {
   border: none;

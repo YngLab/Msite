@@ -616,7 +616,7 @@ footer{
         //width: 320px;
         color: $sp__fontColor;
         width: 100%;
-        font-size: 12px;
+        font-size: 13px;
         padding: 12px 0 12px 0;
         margin: 0 auto;
         display: block;
@@ -951,7 +951,6 @@ footer.open{
     width: calc(100% - 450px); //event_datail-shortまでどのイベントでも左に450pxのmarginを取る
   }
   .event_detail, .event_detail-short{
-    font-size: $g__fontSize;
     color: $g__fontColor;
     font-weight: 200;
     line-height: 1.75em;
@@ -1378,9 +1377,9 @@ footer.open{
 .parking{
   @media #{$normal} {
     margin-left: calc(100% * (40 / 1080)); //ウィンドウ幅1080pxと40px比率をキープ
-  }
-  .lineSpace{
-    font-size: $g__fontSize;
+    .lineSpace{
+      font-size: $g__fontSize; 
+    }
   }
 }
 .movie_wrap{
@@ -1411,7 +1410,6 @@ footer.open{
 
 p.company_about{//別部分がコーディング規約無視しているためコーディング規約無視せざるを得ない
   margin-left: 0;
-  font-size: 14px;
   line-height: 1.75;
 }
 
@@ -1796,6 +1794,9 @@ p.company_about{//別部分がコーディング規約無視しているため�
     }
     p{
       font-size: $cap__fontSize;
+      @media #{$small} {
+        font-size: 15px;
+      }
     }
     textarea{
       //background-color: #efefef;
