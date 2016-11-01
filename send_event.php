@@ -13,6 +13,8 @@ if($_SESSION['id'] == "0"){ $about = "はこだてみらい館 先行体験会";
 }else if($_SESSION['id'] == "5"){ $about = "親子ワークショップ「光を感じよう！~見える？見えない？光と色~」";
 }else if($_SESSION['id'] == "6"){ $about = "FabLabワークショップ";
 }else if($_SESSION['id'] == "7"){ $about = "せかいをはかるワークショップ";
+}else if($_SESSION['id'] == "8"){ $about = "おもしろ写真deアニメーション";
+}else if($_SESSION['id'] == "10"){ $about = "「空気を感じよう！」〜大気圧ってスゴい〜";
 }
 
 if(isset($_SESSION['old'])){//年齢入力があればメールに入れる
@@ -57,6 +59,18 @@ if($_SESSION['id'] == 0){$date = '
 }else if($_SESSION['id'] == 7){$date = '
 日時：10月29日(土) 30日(日)10:30-12:30(1回目) 14:00-16:00(2回目)
 ';
+}else if($_SESSION['id'] == 8){
+  if($_SESSION['date'] == 1){$date = '
+日時：11月12日(土) 10:30-12:30(1回目)
+';}else if($_SESSION['date'] == 2){$date = '
+日時：11月12日(土) 14:00-16:00(2回目)
+';}
+}else if($_SESSION['id'] == 10){
+  if($_SESSION['date'] == 1){$date = '
+日時：11月27日(日) 10:30-12:30(1回目)
+';}else if($_SESSION['date'] == 2){$date = '
+日時：11月27日(日) 14:00-16:00(2回目)
+';}
 }
 
 $return =<<<HTML
@@ -111,7 +125,7 @@ mb_language("ja");
 mb_internal_encoding("UTF-8");
 
 if(mb_send_mail($_SESSION['email'],"イベントを申し込み頂きありがとうございます。",$return,$add_header)&&mb_send_mail('info@hakodate-miraiproject.jp',"【イベント申込】".$about,$message,$add_header)){
-header('Location: recieve_contact.html');
+header('Location: recieve_join.html');
 session_destroy();
 }else{
   echo "error";

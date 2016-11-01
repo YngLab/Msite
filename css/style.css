@@ -853,6 +853,10 @@ footer:after {
   outline-offset: -1px;
   font-size: .9em;
 }
+.inputForm_sp .inputBox_sp select.select-confirm, .inputForm_sp .inputBox_conf_sp select.select-confirm, .inputForm_sp .inputBox_sp_b select.select-confirm, .inputForm_sp .inputBox_conf_sp_b select.select-confirm {
+  outline: none;
+  background-color: #fff;
+}
 .inputForm_sp .inputBox_sp p, .inputForm_sp .inputBox_conf_sp p, .inputForm_sp .inputBox_sp_b p, .inputForm_sp .inputBox_conf_sp_b p {
   margin-bottom: 13px;
 }
@@ -2834,6 +2838,10 @@ p.company_about {
   outline: 1px solid #efefef;
   outline-offset: -1px;
   font-size: 100%;
+}
+.inputForm select.select-confirm {
+  outline: none;
+  background-color: #fff;
 }
 .inputForm textarea {
   border: none;

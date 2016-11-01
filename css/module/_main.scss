@@ -1725,6 +1725,10 @@ p.company_about{//別部分がコーディング規約無視しているため�
     outline-offset: -1px;
     font-size: 100%;
   }
+  select.select-confirm{
+    outline: none;
+    background-color: #fff;
+  }
   textarea{
     border: none;
     //background-color: #efefef;
