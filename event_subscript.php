@@ -74,6 +74,8 @@ if(!$_GET){
     }else if($_GET['id'] == 5){echo '"images/sq_event4_FCH.jpg" alt = "親子ワークショップ「光を感じよう！」"';
     }else if($_GET['id'] == 6){echo '"images/sq_event6_FCH.jpg" alt = "FabLabワークショップ"';
     }else if($_GET['id'] == 7){echo '"images/sq_event7_FCH.jpg" alt = "せかいをはかるワークショップ"';
+    }else if($_GET['id'] == 8){echo '"images/event/sq_event8_FCH.gif" alt = "おもしろ写真deアニメーション"';
+    }else if($_GET['id'] == 10){echo '"images/event/c-inoue/02.jpg" alt = "「空気を感じよう！」〜大気圧ってスゴい〜"';
     }
     ?>>
     <p class = "FCHcolor eventabout_title">
@@ -85,6 +87,8 @@ if(!$_GET){
     }else if($_GET['id'] == 5){echo '親子ワークショップ「光を感じよう！~見える？見えない？光と色~」';
     }else if($_GET['id'] == 6){echo 'FabLabワークショップ';
     }else if($_GET['id'] == 7){echo 'せかいをはかるワークショップ';
+    }else if($_GET['id'] == 8){echo 'おもしろ写真deアニメーション';
+    }else if($_GET['id'] == 10){echo '「空気を感じよう！」〜大気圧ってスゴい〜';
     }
     ?></p>
     <div class = "event_point">
@@ -92,14 +96,16 @@ if(!$_GET){
         <tr>
           <th class = "event_point_cap">日時</th>
           <td class = "event_point_contents">
-            <?php if($_GET['id'] == 0){echo '10月12日(水)　15:00-18:00';
-            }else if($_GET['id'] == 1){echo '10月12日(水)　15:00-18:00';
-            }else if($_GET['id'] == 2){echo '10月15日(土)　10:30-12:00';
-            }else if($_GET['id'] == 3){echo '10月16日(日)　10:30-16:30';
-            }else if($_GET['id'] == 4){echo '10月16日(日)　13:00-14:00';
+            <?php if($_GET['id'] == 0){echo '10月12日(水) 15:00-18:00';
+            }else if($_GET['id'] == 1){echo '10月12日(水) 15:00-18:00';
+            }else if($_GET['id'] == 2){echo '10月15日(土) 10:30-12:00';
+            }else if($_GET['id'] == 3){echo '10月16日(日) 10:30-16:30';
+            }else if($_GET['id'] == 4){echo '10月16日(日) 13:00-14:00';
             }else if($_GET['id'] == 5){echo '10月23日(日) 10:30-12:30(1回目)14:00-16:00(2回目)';
             }else if($_GET['id'] == 6){echo '10月29日(土) 10:00-15:00 ハロウィンキャンドル<br>10月30日(日) 10:00-15:00 ボトルキャップ';
             }else if($_GET['id'] == 7){echo '10月29日(土) 30日(日)<br>10:30-12:30(1回目) 14:00-16:00(2回目)';
+            }else if($_GET['id'] == 8){echo '11月12日(土)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
+            }else if($_GET['id'] == 10){echo '11月27日(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
             }
             ?></td>
         </tr>
@@ -114,6 +120,8 @@ if(!$_GET){
             }else if($_GET['id'] == 5){echo 'はこだてみらい館';
             }else if($_GET['id'] == 6){echo 'はこだてみらい館';
             }else if($_GET['id'] == 7){echo 'はこだてみらい館';
+            }else if($_GET['id'] == 8){echo 'はこだてみらい館';
+            }else if($_GET['id'] == 10){echo 'はこだてみらい館';
             }
             ?>
           </td>
@@ -121,14 +129,9 @@ if(!$_GET){
         <tr>
           <th class = "event_point_cap">参加費</th>
           <td class = "event_point_contents">
-            <?php if($_GET['id'] == 0){echo '無料';
-            }else if($_GET['id'] == 1){echo '無料';
-            }else if($_GET['id'] == 2){echo '無料';
-            }else if($_GET['id'] == 3){echo '無料';
-            }else if($_GET['id'] == 4){echo '無料';
-            }else if($_GET['id'] == 5){echo '300円(別途入場料がかかります)';
-            }else if($_GET['id'] == 6){echo '無料';
-            }else if($_GET['id'] == 7){echo '無料';
+            <?php if($_GET['id'] == 5){echo '300円(別途入場料がかかります)';//無料のとき以外は料金をidと追記
+            }else if($_GET['id'] == 8){echo '300円(材料費)';
+            }else{ echo '無料';//
             }
             ?>
           </td>
@@ -144,6 +147,8 @@ if(!$_GET){
             }else if($_GET['id'] == 5){echo '小学生～中学生 ※保護者同伴必須';
             }else if($_GET['id'] == 6){echo '小学生以上 ※保護者同伴必須';
             }else if($_GET['id'] == 7){echo '小学生以上 ※保護者同伴必須';
+            }else if($_GET['id'] == 8){echo '小学生以上 ※保護者同伴も可';
+            }else if($_GET['id'] == 10){echo '小学生～中学生 ※保護者同伴必須';
             }
             ?>
           </td>
@@ -178,17 +183,27 @@ if(!$_GET){
           <input type = "text" name = "old" maxlength = "255" placeholder="10歳（必須）">
         </td>
       </tr>
-      <?php
-      if($_GET['id'] == 0){
+      <?php //日時選択
+      if($_GET['id'] == 8){
         echo '
           <tr>
             <th>参加日時</th>
             <td>
-              <select name="date" placeholder="日時を選択してください。">
-                <option value="161031a">10月31日（月） 13:00-14:00</option>
-                <option value="161031b">10月31日（月） 15:00-14:00</option>
-                <option value="161032a">10月32日（虚） 13:00-14:00</option>
-                <option value="161032b">10月32日（虚） 15:00-14:00</option>
+              <select name="date">
+                <option value="1">11月12日(土) 10:30-12:30(1回目)</option>
+                <option value="2">11月12日(土) 14:00-16:00(2回目)</option>
+              </select>
+            </td>
+          </tr>
+        ';
+      }else if($_GET['id'] == 10){
+        echo '
+          <tr>
+            <th>参加日時</th>
+            <td>
+              <select name="date">
+                <option value="1">11月27日(日) 10:30-12:30(1回目)</option>
+                <option value="2">11月27日(日) 14:00-16:00(2回目)</option>
               </select>
             </td>
           </tr>
@@ -231,16 +246,23 @@ if(!$_GET){
       <p>参加者の年齢</p>
       <input type = "text" name = "old" maxlength = "255" placeholder="10歳">
     </div>
-    <?php
-      if($_GET['id'] == 0){
+    <?php //日時選択
+      if($_GET['id'] == 8){
         echo '
         <div class = "inputBox_sp">
           <p>参加日時</p>
-            <select name="date" placeholder="日時を選択してください。">
-              <option value="161031a">10月31日（月） 13:00-14:00</option>
-              <option value="161031b">10月31日（月） 15:00-14:00</option>
-              <option value="161032a">10月32日（虚） 13:00-14:00</option>
-              <option value="161032b">10月32日（虚） 15:00-14:00</option>
+            <select name="date">
+              <option value="1">11月12日(土) 10:30-12:30(1回目)</option>
+              <option value="2">11月12日(土) 14:00-16:00(2回目)</option>
+            </select>
+        </div>';
+      }else if($_GET['id'] == 10){
+        echo '
+        <div class = "inputBox_sp">
+          <p>参加日時</p>
+            <select name="date">
+              <option value="1">11月27日(日) 10:30-12:30(1回目)</option>
+              <option value="2">11月27日(日) 14:00-16:00(2回目)</option>
             </select>
         </div>';
       }
