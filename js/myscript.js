@@ -11,9 +11,9 @@ $(function(){
   if(w_size <= 768){
     latestBox_size =  w_size * 728 / 768 - 2; //画面幅768pxの時に728pxの比率から四方のborderを引いている
   }
-  latestBox_size = latestBox_size * 100;
-  latestBox_size = Math.floor( latestBox_size );
-  latestBox_size = latestBox_size / 100;
+  latestBox_size = latestBox_size * 10; //1度、値を10倍にする
+  latestBox_size = Math.floor( latestBox_size ); //少数を切り捨てる
+  latestBox_size = latestBox_size / 10; //1/10にして少数第3位が切り捨てられた値になる
   institution_size = $(".future_contents").width() * .5;
   $(".latestBox_future, .latestBox_kids").css("width", latestBox_size + "px");
   $(".latestBox_future, .latestBox_kids").css("height", latestBox_size + "px");
