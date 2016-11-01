@@ -225,6 +225,9 @@
       color: $dark__fontColor;
       height: 21px;
       visibility: hidden;
+      @media #{$small} {
+        color: $sp__fontColor;
+      }
     }
     .eventplace{
       margin-top: 16px;
@@ -738,6 +741,7 @@ footer.open{
   color: $h2__color;
   font-size: $h2__fontSize;
   @media #{$small} {
+    color: $sp__fontColor;
     font-size: 18px; //処理の都合上、これを書くのはやむを得ませんでした。
     padding-top: 40px;
   }
@@ -1047,6 +1051,9 @@ footer.open{
 
 .button, .rev_button{
   border: 1px solid $dark__fontColor;
+  @media #{$small} {
+    border: 1px solid $sp__fontColor;
+  }
   cursor: pointer;
   text-align: center;
   width: 88px;
@@ -1055,6 +1062,9 @@ footer.open{
 .button{
   background: transparent;
   color: $dark__fontColor;
+  @media #{$small} {
+    color: $sp__fontColor;
+  }
   //cursor: pointer;
 }
 

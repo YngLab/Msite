@@ -56,7 +56,7 @@ html, input, textarea {
 }
 @media screen and (max-width: 768px) {
   html, input, textarea {
-    color: #727171;
+    color: #595757;
   }
 }
 @media screen and (max-width: 768px) {
@@ -94,7 +94,7 @@ a {
 }
 @media screen and (max-width: 768px) {
   a {
-    color: #727171;
+    color: #595757;
   }
 }
 
@@ -1236,6 +1236,11 @@ footer:after {
   height: 21px;
   visibility: hidden;
 }
+@media screen and (max-width: 768px) {
+  .latestEvent .eventText .eventtitle {
+    color: #595757;
+  }
+}
 .latestEvent .eventText .eventplace {
   margin-top: 16px;
   color: #9fa0a0;
@@ -1651,7 +1656,7 @@ footer .footerLinks .links {
 }
 @media screen and (max-width: 768px) {
   footer .footerLinks .links {
-    color: #727171;
+    color: #595757;
     width: 100%;
     font-size: 13px;
     padding: 12px 0 12px 0;
@@ -1779,6 +1784,7 @@ footer.open {
 }
 @media screen and (max-width: 768px) {
   .heading {
+    color: #595757;
     font-size: 18px;
     padding-top: 40px;
   }
@@ -2056,7 +2062,7 @@ footer.open {
 }
 @media screen and (max-width: 768px) {
   .event_textBox .event_detail, .event_textBox .event_detail-short {
-    color: #727171;
+    color: #595757;
     padding-bottom: calc(24px + 38px + 40px);
   }
 }
@@ -2150,10 +2156,20 @@ footer.open {
   text-align: center;
   width: 88px;
 }
+@media screen and (max-width: 768px) {
+  .button, .rev_button {
+    border: 1px solid #595757;
+  }
+}
 
 .button {
   background: transparent;
   color: #727171;
+}
+@media screen and (max-width: 768px) {
+  .button {
+    color: #595757;
+  }
 }
 
 .rev_button {
@@ -2313,7 +2329,7 @@ footer.open {
 }
 @media screen and (max-width: 768px) {
   .exmenu_textBox .exmenu_detail {
-    color: #727171;
+    color: #595757;
   }
 }
 
