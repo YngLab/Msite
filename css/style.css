@@ -839,9 +839,19 @@ footer:after {
 .inputForm_sp .inputBox_sp, .inputForm_sp .inputBox_conf_sp, .inputForm_sp .inputBox_sp_b, .inputForm_sp .inputBox_conf_sp_b {
   margin-bottom: 20px;
 }
-.inputForm_sp .inputBox_sp input, .inputForm_sp .inputBox_conf_sp input, .inputForm_sp .inputBox_sp_b input, .inputForm_sp .inputBox_conf_sp_b input {
+.inputForm_sp .inputBox_sp input,
+.inputForm_sp .inputBox_sp select, .inputForm_sp .inputBox_conf_sp input,
+.inputForm_sp .inputBox_conf_sp select, .inputForm_sp .inputBox_sp_b input,
+.inputForm_sp .inputBox_sp_b select, .inputForm_sp .inputBox_conf_sp_b input,
+.inputForm_sp .inputBox_conf_sp_b select {
   height: 36px;
   width: 100%;
+}
+.inputForm_sp .inputBox_sp select, .inputForm_sp .inputBox_conf_sp select, .inputForm_sp .inputBox_sp_b select, .inputForm_sp .inputBox_conf_sp_b select {
+  border: 0;
+  outline: 1px solid #efefef;
+  outline-offset: -1px;
+  font-size: .9em;
 }
 .inputForm_sp .inputBox_sp p, .inputForm_sp .inputBox_conf_sp p, .inputForm_sp .inputBox_sp_b p, .inputForm_sp .inputBox_conf_sp_b p {
   margin-bottom: 13px;
@@ -2810,11 +2820,20 @@ p.company_about {
 .inputForm td input {
   width: calc(100% - 28px);
 }
-.inputForm input {
+.inputForm input,
+.inputForm select {
   border: none;
   color: #727171;
   font-size: 14px;
   padding: 11px 14px 11px 14px;
+}
+.inputForm select {
+  width: 100%;
+  height: 44px;
+  border: 0;
+  outline: 1px solid #efefef;
+  outline-offset: -1px;
+  font-size: 100%;
 }
 .inputForm textarea {
   border: none;
@@ -2859,7 +2878,11 @@ p.company_about {
   line-height: 36px;
 }
 
-.inputBox input, .inputBox_sub input, .inputBox_sp input, .inputBox_sp_b input {
+.inputBox input,
+.inputBox select, .inputBox_sub input,
+.inputBox_sub select, .inputBox_sp input,
+.inputBox_sp select, .inputBox_sp_b input,
+.inputBox_sp_b select {
   background-color: #efefef;
 }
 .inputBox textarea, .inputBox_sub textarea, .inputBox_sp textarea, .inputBox_sp_b textarea {

@@ -107,7 +107,18 @@
       <tr>
         <th>参加者の年齢</th>
         <td>
-          <input type = "text" name ="email" maxlength = "255" placeholder="10歳">
+          <input type = "text" name = "old" maxlength = "255" placeholder="10歳">
+        </td>
+      </tr>
+      <tr>
+        <th>参加日時</th>
+        <td>
+          <select name="date" placeholder="日時を選択してください。">
+            <option value="161031a">10月31日（月） 13:00-14:00</option>
+            <option value="161031b">10月31日（月） 15:00-14:00</option>
+            <option value="161032a">10月32日（虚） 13:00-14:00</option>
+            <option value="161032b">10月32日（虚） 15:00-14:00</option>
+          </select>
         </td>
       </tr>
       <tr>
@@ -131,17 +142,28 @@
   <form class = "inputForm_sp form" action = "event_subscript.php" method = "post">
     <div class = "inputBox_sp">
       <p>お名前</p>
-      <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎" required>
+      <input type="text" name = "name" maxlength = "255" placeholder = "未来太郎" required>
     </div>
-    <!-- 電話番号 -->
     <div class = "inputBox_sp">
       <p>電話番号</p>
-      <input type = "tel" name ="email" maxlength = "255" placeholder="0123-45-6789 or 090-XXXX-XXXX" required>
+      <input type = "tel" name = "tel" maxlength = "255" placeholder="0123-45-6789 or 090-XXXX-XXXX" required>
     </div>
-    <!-- ここまで -->
     <div class = "inputBox_sp">
       <p>メールアドレス</p>
-      <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com">
+      <input type = "email" name = "email" maxlength = "255" placeholder="miraiproject@sample.com">
+    </div>
+    <div class = "inputBox_sp">
+      <p>参加者の年齢</p>
+      <input type = "text" name = "old" maxlength = "255" placeholder="10歳">
+    </div>
+    <div class = "inputBox_sp">
+      <p>参加日時</p>
+        <select name="date" placeholder="日時を選択してください。">
+          <option value="161031a">10月31日（月） 13:00-14:00</option>
+          <option value="161031b">10月31日（月） 15:00-14:00</option>
+          <option value="161032a">10月32日（虚） 13:00-14:00</option>
+          <option value="161032b">10月32日（虚） 15:00-14:00</option>
+        </select>
     </div>
     <div class = "inputBox_sp_b">
       <p>その他ご質問等</p>

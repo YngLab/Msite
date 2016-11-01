@@ -626,9 +626,16 @@ footer{
   @include only_sp;
   .inputBox_sp, .inputBox_conf_sp, .inputBox_sp_b, .inputBox_conf_sp_b,{
     margin-bottom: 20px;
-    input{
+    input,
+    select{
       height: 36px;
       width: 100%;
+    }
+    select{
+      border: 0;
+      outline: 1px solid #efefef;
+      outline-offset: -1px;
+      font-size: .9em;
     }
     p{
       margin-bottom: 13px;

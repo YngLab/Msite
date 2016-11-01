@@ -157,29 +157,44 @@ if(!$_GET){
       <tr>
         <th>お名前</th>
         <td>
-          <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎（必須）">
+          <input type="text" name = "name" maxlength = "255" placeholder = "未来太郎（必須）">
         </td>
       </tr>
-       <!-- 電話番号 -->
       <tr>
         <th>電話番号</th>
         <td>
-          <input type = "tel" name ="tel" maxlength = "255" placeholder="0123-45-6789 or 090-XXXX-XXXX（必須）" required>
+          <input type = "tel" name = "tel" maxlength = "255" placeholder="0123-45-6789 or 090-XXXX-XXXX（必須）" required>
         </td>
       </tr>
-      <!-- ここまで -->
       <tr>
         <th>メールアドレス</th>
         <td>
-          <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com（必須）">
+          <input type = "email" name = "email" maxlength = "255" placeholder="miraiproject@sample.com（必須）">
         </td>
       </tr>
       <tr>
         <th>参加者の年齢</th>
         <td>
-          <input type = "text" name ="old" maxlength = "255" placeholder="10歳（必須）">
+          <input type = "text" name = "old" maxlength = "255" placeholder="10歳（必須）">
         </td>
       </tr>
+      <?php
+      if($_GET['id'] == 0){
+        echo '
+          <tr>
+            <th>参加日時</th>
+            <td>
+              <select name="date" placeholder="日時を選択してください。">
+                <option value="161031a">10月31日（月） 13:00-14:00</option>
+                <option value="161031b">10月31日（月） 15:00-14:00</option>
+                <option value="161032a">10月32日（虚） 13:00-14:00</option>
+                <option value="161032b">10月32日（虚） 15:00-14:00</option>
+              </select>
+            </td>
+          </tr>
+        ';
+      }
+      ?>
       <tr>
         <th class = "textareaLabel">その他ご質問等</th>
         <td>
@@ -200,18 +215,36 @@ if(!$_GET){
   <form class = "inputForm_sp form" action = "confirm_event.php" method = "post">
     <div class = "inputBox_sp">
       <p>お名前</p>
-      <input type="text" name ="name" maxlength = "255" placeholder = "未来太郎（必須）">
+      <input type="text" name = "name" maxlength = "255" placeholder = "未来太郎（必須）">
     </div>
     <!-- 電話番号 -->
     <div class = "inputBox_sp">
       <p>電話番号</p>
-      <input type = "tel" name ="email" maxlength = "255" placeholder="0123-45-6789 or 090-XXXX-XXXX（必須）" required>
+      <input type = "tel" name = "tel" maxlength = "255" placeholder="0123-45-6789 or 090-XXXX-XXXX（必須）" required>
     </div>
     <!-- ここまで -->
     <div class = "inputBox_sp">
       <p>メールアドレス</p>
-      <input type = "email" name ="email" maxlength = "255" placeholder="miraiproject@sample.com（必須）">
+      <input type = "email" name = "email" maxlength = "255" placeholder="miraiproject@sample.com（必須）">
     </div>
+    <div class = "inputBox_sp">
+      <p>参加者の年齢</p>
+      <input type = "text" name = "old" maxlength = "255" placeholder="10歳">
+    </div>
+    <?php
+      if($_GET['id'] == 0){
+        echo '
+        <div class = "inputBox_sp">
+          <p>参加日時</p>
+            <select name="date" placeholder="日時を選択してください。">
+              <option value="161031a">10月31日（月） 13:00-14:00</option>
+              <option value="161031b">10月31日（月） 15:00-14:00</option>
+              <option value="161032a">10月32日（虚） 13:00-14:00</option>
+              <option value="161032b">10月32日（虚） 15:00-14:00</option>
+            </select>
+        </div>';
+      }
+    ?>
     <div class = "inputBox_sp_b">
       <p>その他ご質問等</p>
       <textarea name = "comment" id = "comment" cols = "40" rows = "5" placeholder = "ご不明点やご意見、ご要望などご自由にお書きください。"></textarea>
