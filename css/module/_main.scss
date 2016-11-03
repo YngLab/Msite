@@ -137,16 +137,19 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
     display: inline-block;
-    margin-right: calc(100vw * (32 / 1080)); //ウィンドウ幅1080px時の32pxの比率をキープ
+    //margin-right: calc(100vw * (32 / 1080)); //ウィンドウ幅1080px時の32pxの比率をキープ
+    margin-right: calc(100vw * (31 / 1080)); //応急処置
     position: relative;
     @media #{$small} {
       margin-left: calc(100% * (20 / 768)); //ウィンドウ幅768px時の20pxの比率をキープ
     }
     @media #{$minimum} {
-      margin-right: 32px; //ウィンドウ幅1080px固定の時はの32pxに
+      //margin-right: 32px; //ウィンドウ幅1080px固定の時はの32pxに
+      margin-right: 31px; //応急処置
     }
     @media #{$maximum} {
-      margin-right: calc(1440px * (32 / 1080)); //ウィンドウ幅1080px時の32pxの比率をキープ
+      //margin-right: calc(1440px * (32 / 1080)); //ウィンドウ幅1080px時の32pxの比率をキープ
+      margin-right: calc(1440px * (31 / 1080)); //応急処置
     }
     .remaindays_future{
       background-color: $g__color-future;

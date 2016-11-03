@@ -198,7 +198,8 @@ a {
 }
 
 .latestEvent {
-  margin-right: calc(-100% * (32 / 1000));
+  margin-right: calc(-100% * (32 / 1080));
+  margin-right: calc(-100% * (31 / 1080));
 }
 .latestEvent:after {
   clear: both;
@@ -1144,7 +1145,7 @@ footer:after {
   background-color: #ffffff;
   border: solid 1px #f39800;
   display: inline-block;
-  margin-right: calc(100vw * (32 / 1080));
+  margin-right: calc(100vw * (31 / 1080));
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -1154,12 +1155,12 @@ footer:after {
 }
 @media screen and (min-width: 769px) and (max-width: 1080px) {
   .latestEvent .latestBox_future {
-    margin-right: 32px;
+    margin-right: 31px;
   }
 }
 @media screen and (min-width: 1441px) {
   .latestEvent .latestBox_future {
-    margin-right: calc(1440px * (32 / 1080));
+    margin-right: calc(1440px * (31 / 1080));
   }
 }
 .latestEvent .latestBox_future .remaindays_future {

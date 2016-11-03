@@ -53,7 +53,8 @@
 
 .latestEvent{
   //wrapの内容とautoMarginの内容を追記
-  margin-right: calc(-100% * (32 / 1000)); //画面幅1080xのwrapの幅1000pxと32pxの比率をキープ
+  margin-right: calc(-100% * (32 / 1080)); //画面幅1080xのwrapの幅1000pxと32pxの比率をキープ
+  margin-right: calc(-100% * (31 / 1080)); //応急処置で31に
   @include clearfix;
   @media #{$normal}{
     margin: 0 calc(100% * (8 / 1080)) 40px calc(100% * (40 / 1080)); //$normal時は画面幅1080pxの時に40pxの比率をキープ
