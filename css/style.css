@@ -1817,6 +1817,7 @@ footer.open {
   }
   .heading-lineup .event_schedule {
     padding-top: 8px;
+    cursor: pointer;
   }
 }
 @media screen and (max-width: 768px) {
