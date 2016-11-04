@@ -759,21 +759,29 @@ footer.open{
   @include smallM;
   @media #{$normal} {
     padding: 50px 0 40px calc(100% * (40 / 1080)); //padding_topもどしました。
-    //float: left; お前はなんで浮いてたんだ？
+    float: left; //lineupはコンテンツを横に並べる
     .headingTitle{
       color: $h2__color;
       font-size: $h2__fontSize;
       //margin-left: 12px;
       //float: left;
     }
+    .event_schedule{
+      margin-top: 8px;
+      cursor: pointer;
+    }
   }
   @media #{$small} {
     font-size: 18px;
-    padding: 40px 0 27px 0;
     .headingTitle{
       color: $h2__color;
       font-size: 18px;
       margin-top: 40px; //heading-topの代わりになるものです。
+      padding: 40px 0 27px 0;
+    }
+    .event_schedule{
+      padding-top: 8px;
+      padding: 0 0 27px 0;
     }
   }
 }

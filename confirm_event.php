@@ -110,7 +110,7 @@ $_SESSION = $_POST;
             }else if($_POST['id'] == 5){echo '10月23日(日) 10:30-12:30(1回目)14:00-16:00(2回目)';
             }else if($_POST['id'] == 6){echo '10月29日(土) 10:00-15:00 ハロウィンキャンドル<br>10月30日(日) 10:00-15:00 ボトルキャップ';
             }else if($_POST['id'] == 7){echo '10月29日(土) 30日(日)<br>10:30-12:30(1回目) 14:00-16:00(2回目)';
-            }else if($_POST['id'] == 8){echo '11月12日(土)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
+            }else if($_POST['id'] == 8){echo '11月12日(土) 13(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
             }else if($_POST['id'] == 10){echo '11月27日(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
             }
             ?></td>
@@ -200,6 +200,8 @@ $_SESSION = $_POST;
               <select name="date" disabled class="select-confirm">
                 <option value="1"'; if($_POST['date'] == 1){ echo " selected ";} echo '>11月12日(土) 10:30-12:30(1回目)</option>
                 <option value="2"'; if($_POST['date'] == 2){ echo " selected ";} echo '>11月12日(土) 14:00-16:00(2回目)</option>
+                <option value="3"'; if($_POST['date'] == 3){ echo " selected ";} echo '>11月13日(日) 10:30-12:30(3回目)</option>
+                <option value="4"'; if($_POST['date'] == 4){ echo " selected ";} echo '>11月13日(日) 14:00-16:00(4回目)</option>
               </select>
             </td>
           </tr>
