@@ -136,7 +136,7 @@ $_SESSION = $_POST;
           <th class = "event_point_cap">参加費</th>
           <td class = "event_point_contents">
             <?php if($_POST['id'] == 5){echo '300円(別途入場料がかかります)';//無料のとき以外は料金をidと追記
-            }else if($_POST['id'] == 8){echo '300円(材料費)';
+            }else if($_POST['id'] == 10){echo '300円(材料費)';
             }else{echo '無料';//
             }
             ?>
