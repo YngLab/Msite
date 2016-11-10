@@ -257,6 +257,8 @@ if(!$_GET){
             <select name="date">
               <option value="1">11月12日(土) 10:30-12:30(1回目)</option>
               <option value="2">11月12日(土) 14:00-16:00(2回目)</option>
+              <option value="3">11月13日(日) 10:30-12:30(1回目)</option>
+              <option value="4">11月13日(日) 14:00-16:00(2回目)</option>
             </select>
         </div>';
       }else if($_GET['id'] == 10){
