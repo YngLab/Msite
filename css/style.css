@@ -374,17 +374,32 @@ footer:after {
 
 .HMP_logo {
   width: 100%;
-  height: calc(100vh - 185px);
+  height: 50vh;
+}
+@media screen and (max-width: 768px) {
+  .HMP_logo {
+    height: calc(100vh - 185px);
+  }
 }
 
 .FCH_logo {
   width: 100%;
-  height: calc(100vh - 185px);
+  height: 50vh;
+}
+@media screen and (max-width: 768px) {
+  .FCH_logo {
+    height: calc(100vh - 185px);
+  }
 }
 
 .KPH_logo {
   width: 100%;
-  height: calc(100vh - 185px);
+  height: 50vh;
+}
+@media screen and (max-width: 768px) {
+  .KPH_logo {
+    height: calc(100vh - 185px);
+  }
 }
 
 .facility_explain {
