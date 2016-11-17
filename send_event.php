@@ -142,16 +142,16 @@ E_mail：
 【自動追加】内容確認後、処理をお願いします。
 HTML;
 
-echo $return;
+// echo $return;
 
-// mb_language("ja");
-// mb_internal_encoding("UTF-8");
+mb_language("ja");
+mb_internal_encoding("UTF-8");
 
-// if(mb_send_mail($_SESSION['email'],"イベントを申し込み頂きありがとうございます。",$return,$add_header)&&mb_send_mail('info@hakodate-miraiproject.jp',"【イベント申込】".$about,$message,$add_header)){
-// header('Location: recieve_join.html');
-// session_destroy();
-// }else{
-//   echo "error";
-//   session_destroy();
-// }
+if(mb_send_mail($_SESSION['email'],"イベントを申し込み頂きありがとうございます。",$return,$add_header)&&mb_send_mail('info@hakodate-miraiproject.jp',"【イベント申込】".$about,$message,$add_header)){
+header('Location: recieve_join.html');
+session_destroy();
+}else{
+  echo "error";
+  session_destroy();
+}
 ?>
