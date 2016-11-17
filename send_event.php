@@ -77,6 +77,24 @@ if($_SESSION['id'] == 0){$date = '
 ';}
 }
 
+if($_SESSION['id'] == 0){$place = 'はこだてみらい館';
+}else if($_SESSION['id'] == 1){$place = 'はこだてキッズプラザ';
+}else if($_SESSION['id'] == 2){$place = 'はこだてみらい館';
+}else if($_SESSION['id'] == 3){$place = 'はこだてみらい館';
+}else if($_SESSION['id'] == 4){$place = 'はこだてキッズプラザ';
+}else if($_SESSION['id'] == 5){$place = 'はこだてみらい館';
+}else if($_SESSION['id'] == 6){$place = 'はこだてみらい館';
+}else if($_SESSION['id'] == 7){$place = 'はこだてみらい館';
+}else if($_SESSION['id'] == 8){$place = 'はこだてみらい館';
+}else if($_SESSION['id'] == 10){$place = 'はこだてみらい館';
+}
+
+if($place == 'はこだてみらい館'){
+  $f = '3F';
+}else{
+  $f = '4F';
+}
+
 $return =<<<HTML
 イベントを申し込み頂き、ありがとうございます。
 
@@ -97,9 +115,8 @@ E_mail：
 内容確認後、担当者より折り返しご連絡をさせていただきます。
 
 -----
-はこだてみらいプロジェクト（はこだてみらい館・はこだてキッズプラザ）
-
-〒040-0063函館市若松町20番1号 キラリス函館
+{$place}
+〒040-0063函館市若松町20番1号 キラリス函館{$f}
 TEL : 0138-23-1131(NAアーバンデベロップメント)
 E-Mail : info@hakodate-miraiproject.jp
 HTML;
@@ -124,6 +141,8 @@ E_mail：
 ----------
 【自動追加】内容確認後、処理をお願いします。
 HTML;
+
+// echo $return;
 
 mb_language("ja");
 mb_internal_encoding("UTF-8");
