@@ -4,15 +4,16 @@
 <meta name = "keywords" content="はこだてみらいプロジェクト,はこだてみらい館,はこだてキッズプラザ,函館,未来館,future center,kids plaza,施設">
 <meta name = "description" content="オドロクチカラを育む施設「はこだてみらい館」「はこだてキッズプラザ」を通して、函館の街の明るい未来につながるアイデアをみんなで実現するプロジェクトが「はこだてみらいプロジェクト」です。">
 <title>はこだてみらいプロジェクト</title>
-<link rel = "stylesheet" href="css/style.css">
+<link rel = "stylesheet" href = "css/style.css">
 <link rel = "shortcut icon" href="images/common/hmp.ico">
-<!--ランダム画像のjs-->
-<script src="js/jquery.js"></script>
-<script src="js/imageview.js"></script>
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src = "js/myscript.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/countdown.js"></script>
+<script src = "js/drawer.js"></script>
+<script src = "js/pageTop.js"></script>
+<script src = "js/jquery.flexslider.js"></script>
+<script src = "js/fixSize.js"></script>
+<script src = "js/cutSentence.js"></script>
+<script src = "js/countdown.js"></script>
+<script src = "js/imageview.js"></script>
 <script charset="utf-8">
   $(window).load(function() {
     $(".flexslider").flexslider();
@@ -44,23 +45,21 @@
   </div>
   <div class = "overlay"></div>
 </div>
-<div class = "g_allArea">
+<!-- <div class = "g_allArea">
   <div class = "index_openExplain">
     <p>
-      はこだてみらい館・はこだてキッズプラザ<br>
-      Kiralis函館(旧和光ビル) 3階・4階に10月15日オープン！
+      11月9日（水）は定期点検（毎月第二水曜日）のため、<br>
+      はこだてみらい館・はこだてキッズプラザは休館となります。
     </p>
   </div>
   <div class = "index_openExplain_sp">
     <p>
-      はこだてみらい館<br>
-      はこだてキッズプラザ<br>
-      Kiralis函館(旧和光ビル) 3階・4階に<br>
-      10月15日オープン！
+      11月9日（水）は定期点検（毎月第二水曜日）のため、
+      はこだてみらい館・はこだてキッズプラザは休館となります。
     </p>
   </div>
   <div class = "overlay"></div>
-</div>
+</div> -->
 <div class = "g_allArea g_allArea-bgcolor">
   <h2 class = "topcap">
     直近のイベント
@@ -70,27 +69,6 @@
     <div class = "flexslider">
       <ul class = "slides">
         <li>
-          <a href = "event.html#8">
-            <div class = "latestBox_future">
-              <div class = "remaindays_future">
-                <div class = "caption">
-                <script>countdown(20161112);</script>
-                </div>
-              </div>
-              <img src="images/event/sq_event8_FCH-thumb.gif" alt="イベント7">
-              <div class = "eventText">
-                <p class = "eventsch caption FCHcolor">
-                  11/12(土)
-                </p>
-                <p class = "eventtitle">おもしろ写真deアニメーション</p>
-                <p class = "eventplace caption">
-                  みらい館
-                </p>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li>
           <a href = "event.html#9">
             <div class = "latestBox_future">
               <div class = "remaindays_future">
@@ -98,14 +76,14 @@
                 <script>countdown(20161119,20161120);</script>
                 </div>
               </div>
-              <img src="images/event/Fablab-thumb.jpg" alt="イベント7">
+              <img src="images/event/event9.jpg" alt="FabLabワークショップ">
               <div class = "eventText">
                 <p class = "eventsch caption FCHcolor">
                   11/19(土) 20(日)
                 </p>
                 <p class = "eventtitle">FabLabワークショップ</p>
                 <p class = "eventplace caption">
-                  みらい館
+                  はこだてみらい館
                 </p>
               </div>
             </div>
@@ -119,14 +97,35 @@
                 <script>countdown(20161127);</script>
                 </div>
               </div>
-              <img src="images/event/c-inoue/02-thumb.jpg" alt="イベント7">
+              <img src="images/event/event10.jpg" alt="親子ワークショップ　「空気を感じよう！」〜大気圧ってスゴい〜">
               <div class = "eventText">
                 <p class = "eventsch caption FCHcolor">
                   11/27(日)
                 </p>
-                <p class = "eventtitle">「空気を感じよう！」〜大気圧ってスゴい〜</p>
+                <p class = "eventtitle">親子ワークショップ　「空気を感じよう！」〜大気圧ってスゴい〜</p>
                 <p class = "eventplace caption">
-                  みらい館
+                  はこだてみらい館
+                </p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href = "event.html#13">
+            <div class = "latestBox_kids">
+              <div class = "remaindays_kids">
+                <div class = "caption">
+                <script>countdown(20161128);</script>
+                </div>
+              </div>
+              <img src="images/event/event13.jpg" alt="スライムで遊ぼう">
+              <div class = "eventText">
+                <p class = "eventsch caption KPHcolor">
+                  11月28日(月)
+                </p>
+                <p class = "eventtitle">スライムで遊ぼう</p>
+                <p class = "eventplace caption">
+                  はこだてキッズプラザ
                 </p>
               </div>
             </div>

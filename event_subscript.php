@@ -13,7 +13,8 @@ if(!$_GET){
 <link rel = "stylesheet" href="css/style.css">
 <link rel = "shortcut icon" href="images/common/hmp.ico">
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src = "js/myscript.js"></script>
+<script src = "js/drawer.js"></script>
+<script src = "js/pageTop.js"></script>
 <!-- pageTitleが存在するページの共通部分 -->
 <div class="g_allArea">
   <div id = "header_sp"></div>
@@ -104,7 +105,7 @@ if(!$_GET){
             }else if($_GET['id'] == 5){echo '10月23日(日) 10:30-12:30(1回目)14:00-16:00(2回目)';
             }else if($_GET['id'] == 6){echo '10月29日(土) 10:00-15:00 ハロウィンキャンドル<br>10月30日(日) 10:00-15:00 ボトルキャップ';
             }else if($_GET['id'] == 7){echo '10月29日(土) 30日(日)<br>10:30-12:30(1回目) 14:00-16:00(2回目)';
-            }else if($_GET['id'] == 8){echo '11月12日(土)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
+            }else if($_GET['id'] == 8){echo '11月12日(土) 13(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
             }else if($_GET['id'] == 10){echo '11月27日(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
             }
             ?></td>
@@ -130,7 +131,7 @@ if(!$_GET){
           <th class = "event_point_cap">参加費</th>
           <td class = "event_point_contents">
             <?php if($_GET['id'] == 5){echo '300円(別途入場料がかかります)';//無料のとき以外は料金をidと追記
-            }else if($_GET['id'] == 8){echo '300円(材料費)';
+            }else if($_GET['id'] == 10){echo '300円(材料費)';
             }else{ echo '無料';//
             }
             ?>
@@ -192,6 +193,8 @@ if(!$_GET){
               <select name="date">
                 <option value="1">11月12日(土) 10:30-12:30(1回目)</option>
                 <option value="2">11月12日(土) 14:00-16:00(2回目)</option>
+                <option value="3">11月13日(日) 10:30-12:30(1回目)</option>
+                <option value="4">11月13日(日) 14:00-16:00(2回目)</option>
               </select>
             </td>
           </tr>
@@ -254,6 +257,8 @@ if(!$_GET){
             <select name="date">
               <option value="1">11月12日(土) 10:30-12:30(1回目)</option>
               <option value="2">11月12日(土) 14:00-16:00(2回目)</option>
+              <option value="3">11月13日(日) 10:30-12:30(1回目)</option>
+              <option value="4">11月13日(日) 14:00-16:00(2回目)</option>
             </select>
         </div>';
       }else if($_GET['id'] == 10){

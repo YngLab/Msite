@@ -137,16 +137,19 @@
     background-color: $boxcolor;
     border: solid 1px $g__color-future;
     display: inline-block;
-    margin-right: calc(100vw * (32 / 1080)); //ウィンドウ幅1080px時の32pxの比率をキープ
+    //margin-right: calc(100vw * (32 / 1080)); //ウィンドウ幅1080px時の32pxの比率をキープ
+    margin-right: calc(100vw * (31 / 1080)); //応急処置
     position: relative;
     @media #{$small} {
       margin-left: calc(100% * (20 / 768)); //ウィンドウ幅768px時の20pxの比率をキープ
     }
     @media #{$minimum} {
-      margin-right: 32px; //ウィンドウ幅1080px固定の時はの32pxに
+      //margin-right: 32px; //ウィンドウ幅1080px固定の時はの32pxに
+      margin-right: 31px; //応急処置
     }
     @media #{$maximum} {
-      margin-right: calc(1440px * (32 / 1080)); //ウィンドウ幅1080px時の32pxの比率をキープ
+      //margin-right: calc(1440px * (32 / 1080)); //ウィンドウ幅1080px時の32pxの比率をキープ
+      margin-right: calc(1440px * (31 / 1080)); //応急処置
     }
     .remaindays_future{
       background-color: $g__color-future;
@@ -756,21 +759,29 @@ footer.open{
   @include smallM;
   @media #{$normal} {
     padding: 50px 0 40px calc(100% * (40 / 1080)); //padding_topもどしました。
-    //float: left; お前はなんで浮いてたんだ？
+    float: left; //lineupはコンテンツを横に並べる
     .headingTitle{
       color: $h2__color;
       font-size: $h2__fontSize;
       //margin-left: 12px;
       //float: left;
     }
+    .event_schedule{
+      margin-top: 8px;
+      cursor: pointer;
+    }
   }
   @media #{$small} {
     font-size: 18px;
-    padding: 40px 0 27px 0;
     .headingTitle{
       color: $h2__color;
       font-size: 18px;
       margin-top: 40px; //heading-topの代わりになるものです。
+      padding: 40px 0 27px 0;
+    }
+    .event_schedule{
+      padding-top: 8px;
+      padding: 0 0 27px 0;
     }
   }
 }

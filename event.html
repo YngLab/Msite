@@ -5,11 +5,14 @@
 <title>イベント - はこだてみらいプロジェクト</title>
 <meta name = "description" content="オドロクチカラを育む施設「はこだてみらい館」「はこだてキッズプラザ」を通して、函館の街の明るい未来につながるアイデアをみんなで実現するプロジェクトが「はこだてみらいプロジェクト」です。">
 <link rel = "stylesheet" href="css/style.css">
-<link rel = "shortcut icon" href="images/common/hmp.ico">
+<link rel = "shortcut icon" href = "images/common/hmp.ico">
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src = "js/myscript.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/countdown.js"></script>
+<script src = "js/drawer.js"></script>
+<script src = "js/pageTop.js"></script>
+<script src = "js/jquery.flexslider.js"></script>
+<script src = "js/fixSize.js"></script>
+<script src = "js/cutSentence.js"></script>
+<script src = "js/countdown.js"></script>
 <script charset="utf-8">
   $(window).load(function() {
     $(".flexslider").flexslider();
@@ -73,27 +76,6 @@
     <div class = "flexslider">
       <ul class = "slides">
         <li>
-          <a href = "event.html#8">
-            <div class = "latestBox_future">
-              <div class = "remaindays_future">
-                <div class = "caption">
-                <script>countdown(20161112);</script>
-                </div>
-              </div>
-              <img src="images/event/sq_event8_FCH-thumb.gif" alt="イベント7">
-              <div class = "eventText">
-                <p class = "eventsch caption FCHcolor">
-                  11/12(土)
-                </p>
-                <p class = "eventtitle">おもしろ写真deアニメーション</p>
-                <p class = "eventplace caption">
-                  みらい館
-                </p>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li>
           <a href = "event.html#9">
             <div class = "latestBox_future">
               <div class = "remaindays_future">
@@ -101,14 +83,14 @@
                 <script>countdown(20161119,20161120);</script>
                 </div>
               </div>
-              <img src="images/event/Fablab-thumb.jpg" alt="イベント7">
+              <img src="images/event/event9.jpg" alt="FabLabワークショップ">
               <div class = "eventText">
                 <p class = "eventsch caption FCHcolor">
                   11/19(土) 20(日)
                 </p>
                 <p class = "eventtitle">FabLabワークショップ</p>
                 <p class = "eventplace caption">
-                  みらい館
+                  はこだてみらい館
                 </p>
               </div>
             </div>
@@ -122,14 +104,35 @@
                 <script>countdown(20161127);</script>
                 </div>
               </div>
-              <img src="images/event/c-inoue/02-thumb.jpg" alt="イベント7">
+              <img src="images/event/event10.jpg" alt="親子ワークショップ　「空気を感じよう！」〜大気圧ってスゴい〜">
               <div class = "eventText">
                 <p class = "eventsch caption FCHcolor">
                   11/27(日)
                 </p>
-                <p class = "eventtitle">「空気を感じよう！」〜大気圧ってスゴい〜</p>
+                <p class = "eventtitle">親子ワークショップ　「空気を感じよう！」〜大気圧ってスゴい〜</p>
                 <p class = "eventplace caption">
-                  みらい館
+                  はこだてみらい館
+                </p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href = "event.html#13">
+            <div class = "latestBox_kids">
+              <div class = "remaindays_kids">
+                <div class = "caption">
+                <script>countdown(20161128);</script>
+                </div>
+              </div>
+              <img src="images/event/event13.jpg" alt="スライムで遊ぼう">
+              <div class = "eventText">
+                <p class = "eventsch caption KPHcolor">
+                  11月28日(月)
+                </p>
+                <p class = "eventtitle">スライムで遊ぼう</p>
+                <p class = "eventplace caption">
+                  はこだてキッズプラザ
                 </p>
               </div>
             </div>
@@ -142,6 +145,20 @@
   <div class = "heading-lineup">
     <p class = "headingTitle">
       今後のイベント
+    </p>
+  </div>
+  <div class = "heading-lineup">
+    <p class = "event_schedule">
+      <a href = "images/event/wsSchedule_FCH-201611.pdf" class = "linkText" target = "_blank">
+        ▶︎みらい館の今月のカレンダー
+      </a>
+    </p>
+  </div>
+  <div class = "heading-lineup">
+    <p class = "event_schedule">
+      <a href = "images/event/wsSchedule_KPH-201611.pdf" class = "linkText" target = "_blank">
+        ▶︎キッズプラザの今月のカレンダー
+      </a>
     </p>
   </div>
   <!-- <div class = "monthSort">
@@ -194,80 +211,9 @@
 <div class="g_allArea g_allArea-bgcolor">
   <div id = "all_eventmenu">
     <!-- 以下新イベント追加分 -->
-    <div class = "eventmenu" id="8">
-      <img class = "event_pic only_pc" src = "images/event/sq_event8_FCH.gif"  alt = "おもしろ写真deアニメーション">
-      <img class = "event_pic only_sp" src = "images/event/sq_event8_FCH-thumb.gif" alt = "おもしろ写真deアニメーション">
-      <div class = "event_textBox_wrap">
-        <div class = "event_textBox">
-          <div class = "event_title FCHcolor">
-            おもしろ写真deアニメーション
-          </div>
-          <div class = "event_point">
-            <table>
-              <tr>
-                <th class = "event_point_cap">日時</th>
-                <td class = "event_point_contents">
-                  <div class="event_point_contents-text">
-                    11月12日(土)<br>
-                    10:30-12:30(1回目)14:00-16:00(2回目)
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th class = "event_point_cap">会場</th>
-                <td class = "event_point_contents">はこだてみらい館</td>
-              </tr>
-              <tr>
-                <th class = "event_point_cap">参加費</th>
-                <td class = "event_point_contents">
-                  <div class="event_point_contents-text">
-                    無料
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th class = "event_point_cap">対象</th>
-                <td class = "event_point_contents">
-                  <div class="event_point_contents-text">
-                    小学生以上　※保護者同伴も可
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <th class = "event_point_cap">定員</th>
-                <td class = "event_point_contents">
-                  <div class="event_point_contents-text">
-                    各回20名
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div class = "event_detail-short event_detail-overflow">
-            写真のおもしろさは、ただ記録することだけじゃありません。<br>
-            何気ない風景も、写真にすれば工夫次第で別世界に！<br>
-            はこだてみらい館で撮影したおもしろ写真に動きをつけて<br>
-            世界で一つのアニメーション作品を作ってみよう！<br>
-            ・監修：原田泰さん(公立はこだて未来大学教授)
-            <div class = "eventDetail_picBox">
-              <img class = "eventDetail_pic" src = "images/event/sq_event8_FCH1.gif">
-            </div>
-          </div>
-        </div>
-        <form action = "event_subscript.php" method = "get">
-          <div class = "subscription">
-            <input type="hidden" name="id" value="8">
-            <input type="submit" value="申し込む" class = "button">
-            <!--<div class = "panel">
-              <p class = "panelLabel">応募終了</p>
-            </div>-->
-          </div>
-        </form>
-      </div>
-    </div>
     <div class = "eventmenu" id="9">
-      <img class = "event_pic only_pc" src = "images/event/Fablab.jpg"  alt = "FabLabワークショップ">
-      <img class = "event_pic only_sp" src = "images/event/Fablab-thumb.jpg" alt = "FabLabワークショップ">
+      <img class = "event_pic only_pc" src = "images/event/sq_event9.jpg"  alt = "FabLabワークショップ">
+      <img class = "event_pic only_sp" src = "images/event/event9.jpg" alt = "FabLabワークショップ">
       <div class = "event_textBox_wrap">
         <div class = "event_textBox">
           <div class = "event_title FCHcolor">
@@ -300,13 +246,13 @@
                 <th class = "event_point_cap">対象</th>
                 <td class = "event_point_contents">
                   <div class="event_point_contents-text">
-                    小学生以上　※保護者同伴可
+                    小学生から大人まで　※保護者同伴可
                   </div>
                 </td>
               </tr>
             </table>
           </div>
-          <div class = "event_detail">
+          <div class = "event_detail-short">
             はこだて未来大学のプロジェクトメンバーが中心のFabLabHakodateβによるワークショップ。<br>
             はこだてみらい館のラボラトリーでデジタル工作機器を使ったモノづくりを体験しよう！
           </div>
@@ -321,12 +267,12 @@
       </div>
     </div>
     <div class = "eventmenu" id="10">
-      <img class = "event_pic only_pc" src = "images/event/c-inoue/02.jpg" alt = "「空気を感じよう！」〜大気圧ってスゴい〜">
-      <img class = "event_pic only_sp" src = "images/event/c-inoue/02-thumb.jpg" alt = "「空気を感じよう！」〜大気圧ってスゴい〜">
+      <img class = "event_pic only_pc" src = "images/event/sq_event10.jpg" alt = "親子ワークショップ　「空気を感じよう！」〜大気圧ってスゴい〜">
+      <img class = "event_pic only_sp" src = "images/event/event10.jpg" alt = "親子ワークショップ　「空気を感じよう！」〜大気圧ってスゴい〜">
       <div class = "event_textBox_wrap">
         <div class = "event_textBox">
           <div class = "event_title FCHcolor">
-            「空気を感じよう！」〜大気圧ってスゴい〜
+            親子ワークショップ　「空気を感じよう！」〜大気圧ってスゴい〜
           </div>
           <div class = "event_point">
             <table>
@@ -335,7 +281,7 @@
                 <td class = "event_point_contents">
                   <div class="event_point_contents-text">
                     11月27日(日)<br>
-                    10:30-12:30(1回目)14:00-16:00(2回目)
+                    10:30-12:30(1回目)　14:00-16:00(2回目)
                   </div>
                 </td>
               </tr>
@@ -375,8 +321,8 @@
             空気の重さを感じたり、普段は感じることのできない大気圧をいろんな実験で体感します。空気砲などを使って、空気の動きを一緒に解明してみましょう！<br>
             ・講師：井上 千加子さん（サイエンス・サポート函館科学楽しみ隊）
             <div class = "eventDetail_picBox">
-              <img class = "eventDetail_pic" src = "images/event/c-inoue/01.jpg">
-              <img class = "eventDetail_pic" src = "images/event/c-inoue/03.jpg">
+              <img class = "eventDetail_pic" src = "images/event/c-event10/01.jpg">
+              <img class = "eventDetail_pic" src = "images/event/c-event10/02.jpg">
             </div>
           </div>
         </div>
@@ -387,6 +333,63 @@
             <!--<div class = "panel">
               <p class = "panelLabel">応募終了</p>
             </div>-->
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class = "eventmenu" id="13">
+      <img class = "event_pic only_pc" src = "images/event/sq_event13.jpg"  alt = "スライムで遊ぼう">
+      <img class = "event_pic only_sp" src = "images/event/event13.jpg" alt = "スライムで遊ぼう">
+      <div class = "event_textBox_wrap">
+        <div class = "event_textBox">
+          <div class = "event_title KPHcolor">
+            スライムで遊ぼう
+          </div>
+          <div class = "event_point">
+            <table>
+              <tr>
+                <th class = "event_point_cap">日時</th>
+                <td class = "event_point_contents">
+                  <div class="event_point_contents-text">
+                    11月28日(月)<br>
+                    12:00-12:15(1回目)　15:00-15:15(2回目)
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">会場</th>
+                <td class = "event_point_contents">はこだてキッズプラザ　まるひろば</td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">参加費</th>
+                <td class = "event_point_contents">
+                  <div class="event_point_contents-text">
+                    無料
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class = "event_point_cap">対象</th>
+                <td class = "event_point_contents">
+                  <div class="event_point_contents-text">
+                    小さい子から大きい子まで
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class = "event_detail-short">
+            水・PVA洗濯のり・ホウ砂水溶液を使ってスライムをつくる実験です！<br>
+            直接手にふれないようビニール袋を使うので手が汚れません。<br>
+            小さい子から大きい子まで楽しめます！<br>
+            できたものは持ち帰って家で遊んでください。<br>
+          </div>
+        </div>
+        <form action = "event_subscript.php" method = "get">
+          <div class = "subscription">
+            <div class = "panel">
+              <p class = "panelLabel">※事前申込不要</p>
+            </div>
           </div>
         </form>
       </div>
