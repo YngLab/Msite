@@ -188,17 +188,26 @@ footer{
 
 .HMP_logo{
   width: 100%;
-  height: calc(100vh - 185px); //画面の縦幅 - ヘッダー(93px) - 見出しのマージン(50px) - 見出しと行間(42px)
+  height: 50vh;
+  @media #{$small}{
+    height: calc(100vh - 185px); //画面の縦幅 - ヘッダー(93px) - 見出しのマージン(50px) - 見出しと行間(42px)
+  }
 }
 
 .FCH_logo{
   width: 100%;
-  height: calc(100vh - 185px); //画面の縦幅 - ヘッダー(93px) - 見出しのマージン(50px) - 見出しと行間(42px)
+  height: 50vh;
+  @media #{$small}{
+    height: calc(100vh - 185px); //画面の縦幅 - ヘッダー(93px) - 見出しのマージン(50px) - 見出しと行間(42px)
+  }
 }
 
 .KPH_logo{
   width: 100%;
-  height: calc(100vh - 185px); //画面の縦幅 - ヘッダー(93px) - 見出しのマージン(50px) - 見出しと行間(42px)
+  height: 50vh;
+  @media #{$small}{
+    height: calc(100vh - 185px); //画面の縦幅 - ヘッダー(93px) - 見出しのマージン(50px) - 見出しと行間(42px)
+  }
 }
 
 .facility_explain{
