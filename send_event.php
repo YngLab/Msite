@@ -117,7 +117,7 @@ E_mail：
 -----
 {$place}
 〒040-0063函館市若松町20番1号 キラリス函館{$f}
-TEL : 0138-23-1131(NAアーバンデベロップメント)
+TEL : 0138-26-6000
 E-Mail : info@hakodate-miraiproject.jp
 HTML;
 
