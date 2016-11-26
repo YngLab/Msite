@@ -82,6 +82,7 @@ $_SESSION = $_POST;
     }else if($_POST['id'] == 7){echo '"images/sq_event7_FCH.jpg" alt = "せかいをはかるワークショップ"';
     }else if($_POST['id'] == 8){echo '"images/event/sq_event8_FCH.gif" alt = "おもしろ写真deアニメーション"';
     }else if($_POST['id'] == 10){echo '"images/event/c-inoue/02.jpg" alt = "「空気を感じよう！」〜大気圧ってスゴい〜"';
+    }else if($_POST['id'] == 14){echo '"images/event/sq_event14.jpg" alt = "親子ワークショップ「レンズのしくみを調べよう！」"';
     }
     ?>>
     <p class = "FCHcolor eventabout_title">
@@ -95,6 +96,7 @@ $_SESSION = $_POST;
     }else if($_POST['id'] == 7){echo 'せかいをはかるワークショップ';
     }else if($_POST['id'] == 8){echo 'おもしろ写真deアニメーション';
     }else if($_POST['id'] == 10){echo '「空気を感じよう！」〜大気圧ってスゴい〜';
+    }else if($_POST['id'] == 14){echo '親子ワークショップ「レンズのしくみを調べよう！」';
     }
     ?></p>
     <div class = "event_point">
@@ -112,6 +114,7 @@ $_SESSION = $_POST;
             }else if($_POST['id'] == 7){echo '10月29日(土) 30日(日)<br>10:30-12:30(1回目) 14:00-16:00(2回目)';
             }else if($_POST['id'] == 8){echo '11月12日(土) 13(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
             }else if($_POST['id'] == 10){echo '11月27日(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
+            }else if($_POST['id'] == 14){echo '12月25日(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
             }
             ?></td>
         </tr>
@@ -128,6 +131,7 @@ $_SESSION = $_POST;
             }else if($_POST['id'] == 7){echo 'はこだてみらい館';
             }else if($_POST['id'] == 8){echo 'はこだてみらい館';
             }else if($_POST['id'] == 10){echo 'はこだてみらい館';
+            }else if($_POST['id'] == 14){echo 'はこだてみらい館';
             }
             ?>
           </td>
@@ -137,6 +141,7 @@ $_SESSION = $_POST;
           <td class = "event_point_contents">
             <?php if($_POST['id'] == 5){echo '300円(別途入場料がかかります)';//無料のとき以外は料金をidと追記
             }else if($_POST['id'] == 10){echo '300円(材料費)';
+            }else if($_POST['id'] == 14){echo '300円(材料費)';
             }else{echo '無料';//
             }
             ?>
@@ -155,6 +160,7 @@ $_SESSION = $_POST;
             }else if($_POST['id'] == 7){echo '小学生以上 ※保護者同伴必須';
             }else if($_POST['id'] == 8){echo '小学生以上 ※保護者同伴も可';
             }else if($_POST['id'] == 10){echo '小学生～中学生 ※保護者同伴必須';
+            }else if($_POST['id'] == 14){echo '小学生～中学生 ※保護者同伴必須';
             }
             ?>
           </td>
@@ -214,6 +220,18 @@ $_SESSION = $_POST;
               <select name="date" disabled class="select-confirm">
                 <option value="1"'; if($_POST['date'] == 1){ echo " selected ";} echo '>11月27日(日) 10:30-12:30(1回目)</option>
                 <option value="2"'; if($_POST['date'] == 2){ echo " selected ";} echo '>11月27日(日) 14:00-16:00(2回目)</option>
+              </select>
+            </td>
+          </tr>
+        ';
+      }else if($_POST['id'] == 14){
+        echo '
+          <tr>
+            <th>参加日時</th>
+            <td>
+              <select name="date" disabled class="select-confirm">
+                <option value="1"'; if($_POST['date'] == 1){ echo " selected ";} echo '>12月25日(日) 10:30-12:30(1回目)</option>
+                <option value="2"'; if($_POST['date'] == 2){ echo " selected ";} echo '>12月25日(日) 14:00-16:00(2回目)</option>
               </select>
             </td>
           </tr>
@@ -278,6 +296,15 @@ $_SESSION = $_POST;
             <select name="date" disabled class="select-confirm">
               <option value="1"'; if($_POST['date'] == 1){ echo " selected ";} echo '>11月27日(日) 10:30-12:30(1回目)</option>
               <option value="2"'; if($_POST['date'] == 2){ echo " selected ";} echo '>11月27日(日) 14:00-16:00(2回目)</option>
+            </select>
+        </div>';
+      }else if($_POST['id'] == 14){
+        echo '
+        <div class = "inputBox_sp">
+          <p>参加日時</p>
+            <select name="date" disabled class="select-confirm">
+              <option value="1"'; if($_POST['date'] == 1){ echo " selected ";} echo '>12月25日(日) 10:30-12:30(1回目)</option>
+              <option value="2"'; if($_POST['date'] == 2){ echo " selected ";} echo '>12月25日(日) 14:00-16:00(2回目)</option>
             </select>
         </div>';
       }

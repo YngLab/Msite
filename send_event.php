@@ -15,6 +15,7 @@ if($_SESSION['id'] == "0"){ $about = "はこだてみらい館 先行体験会";
 }else if($_SESSION['id'] == "7"){ $about = "せかいをはかるワークショップ";
 }else if($_SESSION['id'] == "8"){ $about = "おもしろ写真deアニメーション";
 }else if($_SESSION['id'] == "10"){ $about = "「空気を感じよう！」〜大気圧ってスゴい〜";
+}else if($_SESSION['id'] == "14"){ $about = "親子ワークショップ「レンズのしくみを調べよう！」";
 }
 
 if(isset($_SESSION['old'])){//年齢入力があればメールに入れる
@@ -75,6 +76,12 @@ if($_SESSION['id'] == 0){$date = '
 ';}else if($_SESSION['date'] == 2){$date = '
 日時：11月27日(日) 14:00-16:00(2回目)
 ';}
+}else if($_SESSION['id'] == 14){
+  if($_SESSION['date'] == 1){$date = '
+日時：12月25日(日) 10:30-12:30(1回目)
+';}else if($_SESSION['date'] == 2){$date = '
+日時：12月25日(日) 14:00-16:00(2回目)
+';}
 }
 
 if($_SESSION['id'] == 0){$place = 'はこだてみらい館';
@@ -87,6 +94,7 @@ if($_SESSION['id'] == 0){$place = 'はこだてみらい館';
 }else if($_SESSION['id'] == 7){$place = 'はこだてみらい館';
 }else if($_SESSION['id'] == 8){$place = 'はこだてみらい館';
 }else if($_SESSION['id'] == 10){$place = 'はこだてみらい館';
+}else if($_SESSION['id'] == 14){$place = 'はこだてみらい館';
 }
 
 if($place == 'はこだてみらい館'){
