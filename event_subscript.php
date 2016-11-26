@@ -126,7 +126,7 @@ if(!$_GET){
             }else if($_GET['id'] == 7){echo 'はこだてみらい館';
             }else if($_GET['id'] == 8){echo 'はこだてみらい館';
             }else if($_GET['id'] == 10){echo 'はこだてみらい館';
-            }else if($_GET['id'] == 10){echo 'はこだてみらい館';
+            }else if($_GET['id'] == 14){echo 'はこだてみらい館';
             }
             ?>
           </td>
