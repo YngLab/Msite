@@ -75,7 +75,8 @@ if($_SESSION['id'] == 0){$date = '
 日時：11月27日(日) 10:30-12:30(1回目)
 ';}else if($_SESSION['date'] == 2){$date = '
 日時：11月27日(日) 14:00-16:00(2回目)
-';}else if($_SESSION['id'] == 14){
+';}
+}else if($_SESSION['id'] == 14){
   if($_SESSION['date'] == 1){$date = '
 日時：12月25日(日) 10:30-12:30(1回目)
 ';}else if($_SESSION['date'] == 2){$date = '
