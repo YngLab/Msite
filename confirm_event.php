@@ -135,7 +135,7 @@ $_SESSION = $_POST;
             }else if($_POST['id'] == 8){echo 'はこだてみらい館';
             }else if($_POST['id'] == 10){echo 'はこだてみらい館';
             }else if($_POST['id'] == 14){echo 'はこだてみらい館';
-            }else if($_POST['id'] == 14){echo 'はこだてみらい館　シアター';
+            }else if($_POST['id'] == 18){echo 'はこだてみらい館　シアター';
             }
             ?>
           </td>
