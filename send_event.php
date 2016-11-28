@@ -99,7 +99,7 @@ if($_SESSION['id'] == 0){$place = 'はこだてみらい館';
 }else if($_SESSION['id'] == 8){$place = 'はこだてみらい館';
 }else if($_SESSION['id'] == 10){$place = 'はこだてみらい館';
 }else if($_SESSION['id'] == 14){$place = 'はこだてみらい館';
-}else if($_SESSION['id'] == 18){$place = 'はこだてみらい館　シアター';
+}else if($_SESSION['id'] == 18){$place = 'はこだてみらい館';
 }
 
 if($place == 'はこだてみらい館'){
