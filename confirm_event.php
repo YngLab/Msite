@@ -83,6 +83,7 @@ $_SESSION = $_POST;
     }else if($_POST['id'] == 8){echo '"images/event/sq_event8_FCH.gif" alt = "おもしろ写真deアニメーション"';
     }else if($_POST['id'] == 10){echo '"images/event/c-inoue/02.jpg" alt = "「空気を感じよう！」〜大気圧ってスゴい〜"';
     }else if($_POST['id'] == 14){echo '"images/event/sq_event14.jpg" alt = "親子ワークショップ「レンズのしくみを調べよう！」"';
+    }else if($_POST['id'] == 18){echo '"images/event/sq_event18.jpg" alt = "遊びで学ぶワークショップ「新聞紙で遊ぼう！～ヒーローに変身～ 」"';
     }
     ?>>
     <p class = "FCHcolor eventabout_title">
@@ -97,6 +98,7 @@ $_SESSION = $_POST;
     }else if($_POST['id'] == 8){echo 'おもしろ写真deアニメーション';
     }else if($_POST['id'] == 10){echo '「空気を感じよう！」〜大気圧ってスゴい〜';
     }else if($_POST['id'] == 14){echo '親子ワークショップ「レンズのしくみを調べよう！」';
+    }else if($_POST['id'] == 14){echo '遊びで学ぶワークショップ「新聞紙で遊ぼう！～ヒーローに変身～ 」';
     }
     ?></p>
     <div class = "event_point">
@@ -115,6 +117,7 @@ $_SESSION = $_POST;
             }else if($_POST['id'] == 8){echo '11月12日(土) 13(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
             }else if($_POST['id'] == 10){echo '11月27日(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
             }else if($_POST['id'] == 14){echo '12月25日(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
+            }else if($_POST['id'] == 18){echo '12月3日(土) 13:00-14:30';
             }
             ?></td>
         </tr>
@@ -132,6 +135,7 @@ $_SESSION = $_POST;
             }else if($_POST['id'] == 8){echo 'はこだてみらい館';
             }else if($_POST['id'] == 10){echo 'はこだてみらい館';
             }else if($_POST['id'] == 14){echo 'はこだてみらい館';
+            }else if($_POST['id'] == 14){echo 'はこだてみらい館　シアター';
             }
             ?>
           </td>
@@ -161,6 +165,7 @@ $_SESSION = $_POST;
             }else if($_POST['id'] == 8){echo '小学生以上 ※保護者同伴も可';
             }else if($_POST['id'] == 10){echo '小学生～中学生 ※保護者同伴必須';
             }else if($_POST['id'] == 14){echo '小学生～中学生 ※保護者同伴必須';
+            }else if($_POST['id'] == 18){echo '5歳～小学生 ※親子参加可';
             }
             ?>
           </td>
