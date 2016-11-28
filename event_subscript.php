@@ -77,6 +77,8 @@ if(!$_GET){
     }else if($_GET['id'] == 7){echo '"images/sq_event7_FCH.jpg" alt = "せかいをはかるワークショップ"';
     }else if($_GET['id'] == 8){echo '"images/event/sq_event8_FCH.gif" alt = "おもしろ写真deアニメーション"';
     }else if($_GET['id'] == 10){echo '"images/event/c-inoue/02.jpg" alt = "「空気を感じよう！」〜大気圧ってスゴい〜"';
+    }else if($_GET['id'] == 14){echo '"images/event/sq_event14.jpg" alt = "親子ワークショップ「レンズのしくみを調べよう！」"';
+    }else if($_GET['id'] == 18){echo '"images/event/sq_event18.jpg" alt = "遊びで学ぶワークショップ「新聞紙で遊ぼう！～ヒーローに変身～ 」"';
     }
     ?>>
     <p class = "FCHcolor eventabout_title">
@@ -90,6 +92,8 @@ if(!$_GET){
     }else if($_GET['id'] == 7){echo 'せかいをはかるワークショップ';
     }else if($_GET['id'] == 8){echo 'おもしろ写真deアニメーション';
     }else if($_GET['id'] == 10){echo '「空気を感じよう！」〜大気圧ってスゴい〜';
+    }else if($_GET['id'] == 14){echo '親子ワークショップ「レンズのしくみを調べよう！」';
+    }else if($_GET['id'] == 18){echo '遊びで学ぶワークショップ「新聞紙で遊ぼう！～ヒーローに変身～ 」';
     }
     ?></p>
     <div class = "event_point">
@@ -107,6 +111,8 @@ if(!$_GET){
             }else if($_GET['id'] == 7){echo '10月29日(土) 30日(日)<br>10:30-12:30(1回目) 14:00-16:00(2回目)';
             }else if($_GET['id'] == 8){echo '11月12日(土) 13(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
             }else if($_GET['id'] == 10){echo '11月27日(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
+            }else if($_GET['id'] == 14){echo '12月25日(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
+            }else if($_GET['id'] == 18){echo '12月3日(土) 13:00-14:30';
             }
             ?></td>
         </tr>
@@ -123,6 +129,8 @@ if(!$_GET){
             }else if($_GET['id'] == 7){echo 'はこだてみらい館';
             }else if($_GET['id'] == 8){echo 'はこだてみらい館';
             }else if($_GET['id'] == 10){echo 'はこだてみらい館';
+            }else if($_GET['id'] == 14){echo 'はこだてみらい館';
+            }else if($_GET['id'] == 14){echo 'はこだてみらい館　シアター';
             }
             ?>
           </td>
@@ -132,6 +140,7 @@ if(!$_GET){
           <td class = "event_point_contents">
             <?php if($_GET['id'] == 5){echo '300円(別途入場料がかかります)';//無料のとき以外は料金をidと追記
             }else if($_GET['id'] == 10){echo '300円(材料費)';
+            }else if($_GET['id'] == 14){echo '300円(材料費)';
             }else{ echo '無料';//
             }
             ?>
@@ -150,6 +159,8 @@ if(!$_GET){
             }else if($_GET['id'] == 7){echo '小学生以上 ※保護者同伴必須';
             }else if($_GET['id'] == 8){echo '小学生以上 ※保護者同伴も可';
             }else if($_GET['id'] == 10){echo '小学生～中学生 ※保護者同伴必須';
+            }else if($_GET['id'] == 14){echo '小学生～中学生 ※保護者同伴必須';
+            }else if($_GET['id'] == 18){echo '5歳～小学生 ※親子参加可';
             }
             ?>
           </td>
@@ -211,6 +222,18 @@ if(!$_GET){
             </td>
           </tr>
         ';
+      }else if($_GET['id'] == 14){
+        echo '
+          <tr>
+            <th>参加日時</th>
+            <td>
+              <select name="date">
+                <option value="1">12月25日(日) 10:30-12:30(1回目)</option>
+                <option value="2">12月25日(日) 14:00-16:00(2回目)</option>
+              </select>
+            </td>
+          </tr>
+        ';
       }
       ?>
       <tr>
@@ -262,6 +285,15 @@ if(!$_GET){
             </select>
         </div>';
       }else if($_GET['id'] == 10){
+        echo '
+        <div class = "inputBox_sp">
+          <p>参加日時</p>
+            <select name="date">
+              <option value="1">11月27日(日) 10:30-12:30(1回目)</option>
+              <option value="2">11月27日(日) 14:00-16:00(2回目)</option>
+            </select>
+        </div>';
+      }else if($_GET['id'] == 14){
         echo '
         <div class = "inputBox_sp">
           <p>参加日時</p>
