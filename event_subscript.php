@@ -80,6 +80,7 @@ if(!$_GET){
     }else if($_GET['id'] == 14){echo '"images/event/sq_event14.jpg" alt = "親子ワークショップ「レンズのしくみを調べよう！」"';
     }else if($_GET['id'] == 18){echo '"images/event/sq_event18.jpg" alt = "キャンパスワークショップ「新聞紙で遊ぼう！～ヒーローに変身～ 」"';
     }else if($_GET['id'] == 19){echo '"images/event/sq_event19.jpg" alt = "第1回　おとなの学び講座「やさいのふしぎ」"';
+    }else if($_GET['id'] == 21){echo '"images/event/sq_event21.jpg" alt = "「マッチ棒の構造」"';
     }
     ?>>
     <p class = "FCHcolor eventabout_title">
@@ -96,6 +97,7 @@ if(!$_GET){
     }else if($_GET['id'] == 14){echo '親子ワークショップ「レンズのしくみを調べよう！」';
     }else if($_GET['id'] == 18){echo 'キャンパスワークショップ「新聞紙で遊ぼう！～ヒーローに変身～ 」';
     }else if($_GET['id'] == 19){echo '第1回　おとなの学び講座「やさいのふしぎ」';
+    }else if($_GET['id'] == 21){echo '「マッチ棒の構造」';
     }
     ?></p>
     <div class = "event_point">
@@ -117,6 +119,7 @@ if(!$_GET){
             }else if($_GET['id'] == 18){echo '12月3日(土) 13:00-14:30';
             }else if($_GET['id'] == 19){echo '12/23（金）10:30-12:30';
             }else if($_GET['id'] == 20){echo '12/27、29<br>11:00-12:30（1回目）14:00-15:30（2回目）';
+            }else if($_GET['id'] == 20){echo '12/11（土） 11:00-12:00、14:00-15:00';
             }
             ?></td>
         </tr>
@@ -137,6 +140,7 @@ if(!$_GET){
             }else if($_GET['id'] == 18){echo 'はこだてみらい館　シアター';
             }else if($_GET['id'] == 19){echo 'はこだてみらい館　シアター';
             }else if($_GET['id'] == 20){echo 'はこだてみらい館';
+            }else if($_GET['id'] == 21){echo 'はこだてみらい館　シアター';
             }
             ?>
           </td>
@@ -169,6 +173,7 @@ if(!$_GET){
             }else if($_GET['id'] == 18){echo '5歳～小学生 ※親子参加可';
             }else if($_GET['id'] == 19){echo '中高生～大人まで';
             }else if($_GET['id'] == 20){echo '小学生～大人まで';
+            }else if($_GET['id'] == 21){echo '小学生～大人まで　※親子参加可';
             }
             ?>
           </td>
@@ -242,7 +247,7 @@ if(!$_GET){
             </td>
           </tr>
         ';
-      }if($_GET['id'] == 20){
+      }else if($_GET['id'] == 20){
         echo '
           <tr>
             <th>参加日時</th>
@@ -252,6 +257,18 @@ if(!$_GET){
                 <option value="2">12/27 14:00-15:30（2回目）</option>
                 <option value="3">12/29 11:00-12:30（1回目）</option>
                 <option value="4">12/29 14:00-15:30（2回目）</option>
+              </select>
+            </td>
+          </tr>
+        ';
+      }else if($_GET['id'] == 21){
+        echo '
+          <tr>
+            <th>参加日時</th>
+            <td>
+              <select name="date">
+                <option value="1">12/11（土）11:00-12:00</option>
+                <option value="2">12/11（土）14:00-15:00</option>
               </select>
             </td>
           </tr>
@@ -334,6 +351,15 @@ if(!$_GET){
               <option value="3">12/29 11:00-12:30（1回目）</option>
               <option value="4">12/29 14:00-15:30（2回目）</option>
             </select>
+        </div>';
+      }else if($_GET['id'] == 21){
+        echo '
+        <div class = "inputBox_sp">
+          <p>参加日時</p>
+            <select name="date">
+                <option value="1">12/11（土）11:00-12:00</option>
+                <option value="2">12/11（土）14:00-15:00</option>
+              </select>
         </div>';
       }
     ?>
