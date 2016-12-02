@@ -298,8 +298,8 @@ if(!$_GET){
         <div class = "inputBox_sp">
           <p>参加日時</p>
             <select name="date">
-              <option value="1">11月27日(日) 10:30-12:30(1回目)</option>
-              <option value="2">11月27日(日) 14:00-16:00(2回目)</option>
+              <option value="1">12月25日(日) 10:30-12:30(1回目)</option>
+              <option value="2">12月25日(日) 14:00-16:00(2回目)</option>
             </select>
         </div>';
       }
