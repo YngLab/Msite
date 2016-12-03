@@ -78,7 +78,7 @@ if(!$_GET){
     }else if($_GET['id'] == 8){echo '"images/event/sq_event8_FCH.gif" alt = "おもしろ写真deアニメーション"';
     }else if($_GET['id'] == 10){echo '"images/event/c-inoue/02.jpg" alt = "「空気を感じよう！」〜大気圧ってスゴい〜"';
     }else if($_GET['id'] == 14){echo '"images/event/sq_event14.jpg" alt = "親子ワークショップ「レンズのしくみを調べよう！」"';
-    }else if($_GET['id'] == 18){echo '"images/event/sq_event18.jpg" alt = "遊びで学ぶワークショップ「新聞紙で遊ぼう！～ヒーローに変身～ 」"';
+    }else if($_GET['id'] == 18){echo '"images/event/sq_event18.jpg" alt = "キャンパスワークショップ「新聞紙で遊ぼう！～ヒーローに変身～ 」"';
     }
     ?>>
     <p class = "FCHcolor eventabout_title">
@@ -93,7 +93,7 @@ if(!$_GET){
     }else if($_GET['id'] == 8){echo 'おもしろ写真deアニメーション';
     }else if($_GET['id'] == 10){echo '「空気を感じよう！」〜大気圧ってスゴい〜';
     }else if($_GET['id'] == 14){echo '親子ワークショップ「レンズのしくみを調べよう！」';
-    }else if($_GET['id'] == 18){echo '遊びで学ぶワークショップ「新聞紙で遊ぼう！～ヒーローに変身～ 」';
+    }else if($_GET['id'] == 18){echo 'キャンパスワークショップ「新聞紙で遊ぼう！～ヒーローに変身～ 」';
     }
     ?></p>
     <div class = "event_point">
@@ -130,7 +130,7 @@ if(!$_GET){
             }else if($_GET['id'] == 8){echo 'はこだてみらい館';
             }else if($_GET['id'] == 10){echo 'はこだてみらい館';
             }else if($_GET['id'] == 14){echo 'はこだてみらい館';
-            }else if($_GET['id'] == 14){echo 'はこだてみらい館　シアター';
+            }else if($_GET['id'] == 18){echo 'はこだてみらい館　シアター';
             }
             ?>
           </td>
@@ -298,8 +298,8 @@ if(!$_GET){
         <div class = "inputBox_sp">
           <p>参加日時</p>
             <select name="date">
-              <option value="1">11月27日(日) 10:30-12:30(1回目)</option>
-              <option value="2">11月27日(日) 14:00-16:00(2回目)</option>
+              <option value="1">12月25日(日) 10:30-12:30(1回目)</option>
+              <option value="2">12月25日(日) 14:00-16:00(2回目)</option>
             </select>
         </div>';
       }
