@@ -119,10 +119,10 @@ if(!$_GET){
             }else if($_GET['id'] == 10){echo '11月27日(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
             }else if($_GET['id'] == 14){echo '12月25日(日)<br>10:30-12:30(1回目)14:00-16:00(2回目)';
             }else if($_GET['id'] == 18){echo '12月3日(土) 13:00-14:30';
-            }else if($_GET['id'] == 19){echo '12/23（金）10:30-12:30';
-            }else if($_GET['id'] == 20){echo '12/27、29<br>11:00-12:30（1回目）14:00-15:30（2回目）';
-            }else if($_GET['id'] == 21){echo '12/11（日） 11:00-12:00、14:00-15:00';
-            }else if($_GET['id'] == 22){echo '12/10（土） 10:30-12:30、14:00-16:00';
+            }else if($_GET['id'] == 19){echo '12月23日(金)10:30-12:30';
+            }else if($_GET['id'] == 20){echo '12月27日(火) 、29日(木)<br>11:00-12:30（1回目）14:00-15:30（2回目）';
+            }else if($_GET['id'] == 21){echo '12月11日(日) 11:00-12:00、14:00-15:00';
+            }else if($_GET['id'] == 22){echo '12月10日(土) 10:30-12:30、14:00-16:00';
             }
             ?></td>
         </tr>
@@ -258,10 +258,10 @@ if(!$_GET){
             <th>参加日時</th>
             <td>
               <select name="date">
-                <option value="1">12/27 11:00-12:30（1回目）</option>
-                <option value="2">12/27 14:00-15:30（2回目）</option>
-                <option value="3">12/29 11:00-12:30（1回目）</option>
-                <option value="4">12/29 14:00-15:30（2回目）</option>
+                <option value="1">12月27日(火)  11:00-12:30（1回目）</option>
+                <option value="2">12月27日(火)  14:00-15:30（2回目）</option>
+                <option value="3">12月29日(木) 11:00-12:30（1回目）</option>
+                <option value="4">12月29日(木) 14:00-15:30（2回目）</option>
               </select>
             </td>
           </tr>
@@ -272,8 +272,8 @@ if(!$_GET){
             <th>参加日時</th>
             <td>
               <select name="date">
-                <option value="1">12/11（日）11:00-12:00</option>
-                <option value="2">12/11（日）14:00-15:00</option>
+                <option value="1">12月11日(日)11:00-12:00</option>
+                <option value="2">12月11日(日)14:00-15:00</option>
               </select>
             </td>
           </tr>
@@ -284,8 +284,8 @@ if(!$_GET){
             <th>参加日時</th>
             <td>
               <select name="date">
-                <option value="1">12/10（土）10:30-12:30</option>
-                <option value="2">12/10（土）14:00-16:00</option>
+                <option value="1">12月10日(土)10:30-12:30</option>
+                <option value="2">12月10日(土)14:00-16:00</option>
               </select>
             </td>
           </tr>
@@ -363,10 +363,10 @@ if(!$_GET){
         <div class = "inputBox_sp">
           <p>参加日時</p>
             <select name="date">
-              <option value="1">12/27 11:00-12:30（1回目）</option>
-              <option value="2">12/27 14:00-15:30（2回目）</option>
-              <option value="3">12/29 11:00-12:30（1回目）</option>
-              <option value="4">12/29 14:00-15:30（2回目）</option>
+              <option value="1">12月27日(火)  11:00-12:30（1回目）</option>
+              <option value="2">12月27日(火)  14:00-15:30（2回目）</option>
+              <option value="3">12月29日(木) 11:00-12:30（1回目）</option>
+              <option value="4">12月29日(木) 14:00-15:30（2回目）</option>
             </select>
         </div>';
       }else if($_GET['id'] == 21){
@@ -374,8 +374,8 @@ if(!$_GET){
         <div class = "inputBox_sp">
           <p>参加日時</p>
             <select name="date">
-              <option value="1">12/11（日）11:00-12:00</option>
-              <option value="2">12/11（日）14:00-15:00</option>
+              <option value="1">12月11日(日)11:00-12:00</option>
+              <option value="2">12月11日(日)14:00-15:00</option>
             </select>
         </div>';
       }else if($_GET['id'] == 22){
@@ -383,8 +383,8 @@ if(!$_GET){
         <div class = "inputBox_sp">
           <p>参加日時</p>
             <select name="date">
-              <option value="1">12/10（土）10:30-12:30</option>
-              <option value="2">12/10（土）14:00-16:00</option>
+              <option value="1">12月10日(土)10:30-12:30</option>
+              <option value="2">12月10日(土)14:00-16:00</option>
             </select>
         </div>';
       }
