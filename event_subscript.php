@@ -173,7 +173,7 @@ if(!$_GET){
             }else if($_GET['id'] == 7){echo '小学生以上 ※保護者同伴必須';
             }else if($_GET['id'] == 8){echo '小学生以上 ※保護者同伴も可';
             }else if($_GET['id'] == 10){echo '小学生～中学生 ※保護者同伴必須';
-            }else if($_GET['id'] == 14){echo '小学生～中学生 ※保護者同伴必須';
+            }else if($_GET['id'] == 14){echo '小学生～中学生 ※保護者同伴必須<br>14時からの回は満席となりました。';
             }else if($_GET['id'] == 18){echo '5歳～小学生 ※親子参加可';
             }else if($_GET['id'] == 19){echo '中学生～大人まで';
             }else if($_GET['id'] == 20){echo '小学生～大人まで';
@@ -247,11 +247,11 @@ if(!$_GET){
             <td>
               <select name="date">
                 <option value="1">12月25日(日) 10:30-12:30(1回目)</option>
-                <option value="2">12月25日(日) 14:00-16:00(2回目)</option>
               </select>
             </td>
           </tr>
         ';
+                // <option value="2">12月25日(日) 14:00-16:00(2回目)</option>
       }else if($_GET['id'] == 20){
         echo '
           <tr>
@@ -355,9 +355,9 @@ if(!$_GET){
           <p>参加日時</p>
             <select name="date">
               <option value="1">12月25日(日) 10:30-12:30(1回目)</option>
-              <option value="2">12月25日(日) 14:00-16:00(2回目)</option>
             </select>
         </div>';
+              // <option value="2">12月25日(日) 14:00-16:00(2回目)</option>
       }else if($_GET['id'] == 20){
         echo '
         <div class = "inputBox_sp">
