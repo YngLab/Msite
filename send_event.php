@@ -102,17 +102,20 @@ if($_SESSION['id'] == 0){$date = '
 日時：12月29日(木) 11:00-12:30（1回目）
 ';}else if($_SESSION['date'] == 4){$date = '
 日時：12月29日(木) 14:00-15:30（2回目）
-';}else if($_SESSION['id'] == 21){
+';}
+}else if($_SESSION['id'] == 21){
   if($_SESSION['date'] == 1){$date = '
 日時：12月11日(日)11:00-12:00(1回目)
 ';}else if($_SESSION['date'] == 2){$date = '
 日時：12月11日(日)14:00-15:00（2回目）
-';}else if($_SESSION['id'] == 22){
+';}
+}else if($_SESSION['id'] == 22){
   if($_SESSION['date'] == 1){$date = '
 日時：12月10日(土)10:30-12:30(1回目)
 ';}else if($_SESSION['date'] == 2){$date = '
 日時：12月10日(土)14:00-16:00（2回目）
 ';}
+}
 
 if($_SESSION['id'] == 0){$place = 'はこだてみらい館';
 }else if($_SESSION['id'] == 1){$place = 'はこだてキッズプラザ';
